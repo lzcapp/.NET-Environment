@@ -15,3 +15,4 @@
 - .NET Framework 4.5
 - .NET Framework 4.0
 - .NET Framework 3.5 SP1
+- .NET Framework 2.0
