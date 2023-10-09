@@ -1,5 +1,7 @@
 # .NET Environment
 
+Place under `C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework`
+
 ## .NET Framework
 
 - .NET Framework 4.8.1
