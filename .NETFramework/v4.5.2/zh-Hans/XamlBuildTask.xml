@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>XamlBuildTask</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Build.Tasks.Xaml.AttributeData">
+      <summary>指定属性数据。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.AttributeData.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Xaml.AttributeData" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.AttributeData.Parameters">
+      <summary>获取属性数据参数。</summary>
+      <returns>属性数据参数。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.AttributeData.Properties">
+      <summary>获取属性数据特性。</summary>
+      <returns>属性数据特性。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.AttributeData.Type">
+      <summary>获取或设置属性数据类型。</summary>
+      <returns>属性数据类型。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.AttributeParameterData">
+      <summary>属性指定参数数据。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.AttributeParameterData.#ctor(System.Xaml.XamlType,System.Collections.Generic.IEnumerable{Microsoft.Build.Tasks.Xaml.AttributeParameterData})">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Xaml.AttributeParameterData" /> 类的新实例使用指定的类型和数组内容的。</summary>
+      <param name="type">数据的类型。</param>
+      <param name="arrayContents">数组内容。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.AttributeParameterData.#ctor(System.Xaml.XamlType,System.Object)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Xaml.AttributeParameterData" /> 类的新实例使用指定的类型和值。</summary>
+      <param name="type">数据的类型。</param>
+      <param name="value">数据的值。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.AttributeParameterData.#ctor(System.Xaml.XamlType,System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Xaml.AttributeParameterData" /> 类的新实例使用指定的类型和文本的值。</summary>
+      <param name="type">数据的类型。</param>
+      <param name="textValue">文本值。</param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.AttributeParameterData.ArrayContents">
+      <summary>获取特性参数数据的数组内容。</summary>
+      <returns>属性参数数据的数组内容。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.AttributeParameterData.TextValue">
+      <summary>获取或设置属性参数数据的文本值。</summary>
+      <returns>特性参数数据的文本值。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.AttributeParameterData.Type">
+      <summary>获取或设置属性参数数据的 XAML 类型。</summary>
+      <returns>特性参数数据的 XAML 类型。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.AttributeParameterData.Value">
+      <summary>获取或设置属性参数数据的值。</summary>
+      <returns>特性参数数据的值。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.BuildExtensionContext">
+      <summary>为生成扩展上下文指定设置。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.AddGeneratedFile(System.String)">
+      <summary>生成编译扩展上下文的文件。</summary>
+      <param name="fileName">生成的文件的名称。</param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.AddGeneratedResourceFile(System.String)">
+      <summary>生成编译扩展上下文的资源文件。</summary>
+      <param name="fileName">生成的资源文件的文件名。</param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.AssemblyName">
+      <summary>获取或设置程序集名称生成扩展上下文。</summary>
+      <returns>程序集名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.GeneratedFiles">
+      <summary>获取生成扩展上下文中生成的文件集合。</summary>
+      <returns>生成文件的集合。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.GeneratedResourceFiles">
+      <summary>获取生成扩展上下文中生成的资源文件的集合。</summary>
+      <returns>生成的资源文件的集合。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.IsInProcessXamlMarkupCompile">
+      <summary>获取或设置生成扩展上下文是在可扩展应用程序标记语言生成过程中。</summary>
+      <returns>True ，如果生成扩展上下文是在可扩展应用程序标记语言生成过程中;否则， false。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.Language">
+      <summary>获取或设置生成扩展上下文语言。</summary>
+      <returns>生成扩展上下文语言</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.LocalAssembly">
+      <summary>获取或设置生成扩展上下文的本地定义的程序集。</summary>
+      <returns>生成扩展上下文的本地定义的程序集。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.OutputPath">
+      <summary>获取或设置生成扩展上下文输出路径。</summary>
+      <returns>输出路径。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.References">
+      <summary>获取扩展的上下文集合引用。</summary>
+      <returns>扩展上下文的引用的集合。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.RootNamespace">
+      <summary>获取或设置扩展上下文根命名空间。</summary>
+      <returns>扩展上下文根命名空间。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.SourceCodeFiles">
+      <summary>获取生成扩展上下文的源代码文件的集合。</summary>
+      <returns>生成扩展上下文的源代码文件的集合。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.BuildExtensionContext.XamlBuildLogger">
+      <summary>获取或设置 XAML 生成记录器。</summary>
+      <returns>XAML 生成记录器。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.ClassData">
+      <summary>指定类数据设置。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.ClassData.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Xaml.ClassData" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.ClassData.Attributes">
+      <summary>获取类数据特性。</summary>
+      <returns>类数据特性。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.ClassData.BaseType">
+      <summary>获取或设置类数据库类型。</summary>
+      <returns>类数据库类型。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.ClassData.CodeSnippets">
+      <summary>获取类数据代码段列表。</summary>
+      <returns>类数据代码段列表。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.ClassData.EmbeddedResourceFileName">
+      <summary>获取或设置类数据的嵌入资源文件名。</summary>
+      <returns>类数据的嵌入资源文件名。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.ClassData.EmbeddedResourceXaml">
+      <summary>获取或设置类数据的嵌入资源 XAML。</summary>
+      <returns>类数据的嵌入资源 XAML。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.ClassData.FileName">
+      <summary>获取或设置用于类数据的文件名。</summary>
+      <returns>在类中数据的文件名。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.ClassData.HelperClassFullName">
+      <summary>获取或设置用于类数据的帮助器类的全名。</summary>
+      <returns>在类中数据的帮助器类的全名。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.ClassData.IsPublic">
+      <summary>获取或设置类数据是否是公共类。</summary>
+      <returns> 类数据的True 是公共类;否则， false。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.ClassData.Name">
+      <summary>获取或设置表示类数据的名称的字符串。</summary>
+      <returns>表示类数据的名称的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.ClassData.NamedObjects">
+      <summary>获取命名对象列表。</summary>
+      <returns>命名对象列表。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.ClassData.Namespace">
+      <summary>获取或设置类数据所属的命名空间。</summary>
+      <returns>命名空间类数据所属的位置。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.ClassData.Properties">
+      <summary>获取类数据特性的集合。</summary>
+      <returns>类数据特性的集合。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.CompilationPass2Task">
+      <summary>表示验证的 MS build 任务在原始输入 XAML 文件中引用的所有类型解析。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Xaml.CompilationPass2Task" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.ApplicationMarkup">
+      <summary>获取或设置 XAML 文件进程列表，填充由 MS build。</summary>
+      <returns>要处理的 XAML 文件的列表。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.ApplicationMarkupWithTypeName">
+      <summary>获取或设置用于从的项目中排除生成临时程序集的应用程序标记文件的生成操作。</summary>
+      <returns>应用程序标记文件的生成操作。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.AssemblyName">
+      <summary>获取或设置要生成的程序集的名称。</summary>
+      <returns>程序集的名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.BuildTaskPath">
+      <summary>获取或设置此生成任务的程序集的路径。 </summary>
+      <returns>程序集路径。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.Execute">
+      <summary>由 MS Build 调用，用于执行任务。</summary>
+      <returns>true ，如果任务成功执行;否则， false。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.ExtensionGeneratedCodeFiles">
+      <summary>获取或设置代码文件集合该扩展生成的。</summary>
+      <returns>代码文件集合扩展生成的。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.IsInProcessXamlMarkupCompile">
+      <summary>是否在生成 XAML 标记的过程中获取或设置任务。</summary>
+      <returns>在生成 XAML 标记的过程中，则为 true; 任务。否则，错误。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.Language">
+      <summary>获取或设置用于任务的语言。</summary>
+      <returns>用于任务的语言。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.LocalAssemblyReference">
+      <summary>获取或设置生成的临时程序集的路径。</summary>
+      <returns>生成的临时程序集的路径。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.MSBuildProjectDirectory">
+      <summary>获取或设置 MS build 项目的目录。</summary>
+      <returns>MS build 项目的目录。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.OutputPath">
+      <summary>获取或设置要放置生成的文件的目录。</summary>
+      <returns>将生成文件的内容。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.References">
+      <summary>获取或设置要在编译过程中引用的程序集的列表。 </summary>
+      <returns>要在编译过程中引用的程序集的列表。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.RootNamespace">
+      <summary>获取或设置项目的根命名空间。</summary>
+      <returns>根命名空间。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.SourceCodeFiles">
+      <summary>获取或设置项目中源代码文件的列表。</summary>
+      <returns>源代码文件列表位于项目的。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.CompilationPass2Task.XamlBuildTypeInspectionExtensionNames">
+      <summary>获取或设置扩展名称 XAML 生成类型测试。</summary>
+      <returns>扩展名称 XAML 生成类型测试。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask">
+      <summary>一个 MS Build 任务，该任务通过编译 <see cref="T:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask" /> 生成的源文件来生成临时程序集。 </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.ApplicationMarkupTypeName">
+      <summary>获取或设置应用程序标记文件的生成操作，在用于生成临时程序集的项目中，已排除了这些标记文件。</summary>
+      <returns>应用程序标记类型名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.AssemblyName">
+      <summary>获取或设置生成的程序集的名称。</summary>
+      <returns>程序集名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.CompileTargetName">
+      <summary>获取或设置要在所产生的项目文件（用于生成所产生的临时程序集）中生成的编译目标名称。</summary>
+      <returns>编译目标名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.CurrentProject">
+      <summary>获取或设置当前项目文件名。</summary>
+      <returns>当前项目。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.Execute">
+      <summary>由 MS Build 调用，用于执行任务。</summary>
+      <returns>true ，如果代码成功生成;否则， false。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.GeneratedResourcesFiles">
+      <summary>获取或设置 XAML 文件的列表，这些文件包含用于实例化新生成的类型的标记（每个输入文件各有一个 XAML 文件）。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.Framework.ITaskItem" /> 的列表，它表示生成的 XAML 文件。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.OutputPath">
+      <summary>获取或设置要在其中放置生成的文件的目录。</summary>
+      <returns>存储生成的文件的目录。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.ReferencePaths">
+      <summary>获取或设置在项目中指定的任何引用的程序集的路径。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.Framework.ITaskItem" /> 的列表，它表示引用的程序集的路径。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.GenerateTemporaryAssemblyTask.SourceCodeFiles">
+      <summary>获取或设置要编译到临时程序集中的源代码文件的列表。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.Framework.ITaskItem" /> 的列表，它表示源代码文件。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.IXamlBuildTypeGenerationExtension">
+      <summary>指定有关 XAML 生成类型生成扩展的信息。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.IXamlBuildTypeGenerationExtension.Execute(Microsoft.Build.Tasks.Xaml.ClassData,Microsoft.Build.Tasks.Xaml.XamlBuildTypeGenerationExtensionContext)">
+      <summary>指示 XAML 生成类型生成扩展是否执行。</summary>
+      <returns>True ，如果 XAML 生成类型生成扩展实现;否则， false。</returns>
+      <param name="classData">类数据。</param>
+      <param name="buildContext">生成上下文。</param>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.IXamlBuildTypeInspectionExtension">
+      <summary>指定有关 XAML 生成类型测试扩展的信息。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.IXamlBuildTypeInspectionExtension.Execute(Microsoft.Build.Tasks.Xaml.XamlBuildTypeInspectionExtensionContext)">
+      <summary>指示 XAML 生成类型测试扩展是否执行。</summary>
+      <returns>，如果 XAML 生成类型测试扩展实现，则为 true;否则，错误。</returns>
+      <param name="buildContext">扩展的生成上下文。</param>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.MemberVisibility">
+      <summary>指定成员可见性选项。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.Assembly">
+      <summary>程序集可见性。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.Family">
+      <summary>系列可见性。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.FamilyAndAssembly">
+      <summary>family 和 assembly 可见性。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.FamilyOrAssembly">
+      <summary>family 或 assembly 可见性。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.Private">
+      <summary>私有可见性。</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.Public">
+      <summary>公共可见性。</summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.NamedObject">
+      <summary>表示命名对象。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.NamedObject.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Xaml.NamedObject" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.NamedObject.Name">
+      <summary>获取或设置表示命名对象的名称的字符串。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.NamedObject.Type">
+      <summary>获取或设置一个名为对象类型。</summary>
+      <returns>名为对象类型。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.NamedObject.Visibility">
+      <summary>获取或设置命名对象可见性。</summary>
+      <returns>命名对象可见性。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask">
+      <summary>定义类型的访问 XAML 文件 (与 x:Class) 和生成可以编译到程序集中的相应源代码。 </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.ApplicationMarkup">
+      <summary>获取或设置 XAML 文件进程列表，填充由 MS build。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.Framework.ITaskItem" /> 的列表，它表示要处理的 XAML 文件。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.AssemblyName">
+      <summary>获取或设置正在编译的程序集的名称。</summary>
+      <returns>正在编译的程序集的名称。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.BuildTaskPath">
+      <summary>获取或设置包含此生成任务的程序集的路径。 </summary>
+      <returns>生成任务路径。</returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.Execute">
+      <summary>由 MS Build 调用，用于执行代码生成任务。</summary>
+      <returns>true ，如果代码成功生成;否则， false。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.GeneratedCodeFiles">
+      <summary>获取或设置生成的代码文件的列表，每个输入文件各有一个代码文件。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.Framework.ITaskItem" /> 的列表，它表示源 XAML 文件。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.GeneratedResources">
+      <summary>获取或设置 XAML 文件的列表，这些文件包含用于实例化新生成的类型的标记（每个输入文件各有一个 XAML 文件）。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.Framework.ITaskItem" /> 的列表，它表示生成的 XAML 文件。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.GeneratedSourceExtension">
+      <summary>获取或设置要添加到生成的源文件的文件扩展名。</summary>
+      <returns>文件扩展名。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.IsInProcessXamlMarkupCompile">
+      <summary>获取或设置 XAML 标记的生成是否处理。</summary>
+      <returns>，如果 XAML 标记的生成进程，则为 true;否则，错误。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.KnownReferencePaths">
+      <summary>获取或设置已知的引用路径。</summary>
+      <returns>已知的引用路径。 </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.Language">
+      <summary>获取或设置要用于生成源代码的语言。</summary>
+      <returns>要用于生成源代码的语言。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.MSBuildProjectDirectory">
+      <summary>获取或设置 MS build 项目目录。</summary>
+      <returns>MS build 项目目录。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.OutputPath">
+      <summary>获取或设置要放置生成的文件的目录。</summary>
+      <returns>存储生成的文件的目录。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.References">
+      <summary>获取或设置要引用的程序集的列表。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.Framework.ITaskItem" /> 的列表，它表示引用的程序集。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.RequiresCompilationPass2">
+      <summary>获取或设置一个值，该值指示此项目是否需要执行 <see cref="T:Microsoft.Build.Tasks.Xaml.CompilationPass2Task" /> 任务。</summary>
+      <returns>true ，如果具有无法解析的类型;否则， false。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.RootNamespace">
+      <summary>获取或设置项目的根命名空间。</summary>
+      <returns>根命名空间。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.SourceCodeFiles">
+      <summary>获取或设置项目中源代码文件的列表。</summary>
+      <returns>
+        <see cref="T:Microsoft.Build.Framework.ITaskItem" /> 的列表，它表示项目中的源代码文件。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.XamlBuildTypeGenerationExtensionNames">
+      <summary>获取或设置扩展名称的集合在 XAML 生成类型的生成。</summary>
+      <returns>扩展名称的集合使用的。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PartialClassGenerationTask.XamlBuildTypeInspectionExtensionNames">
+      <summary>获取或设置扩展名称的集合在 XAML 生成类型的测试。</summary>
+      <returns>扩展名称的集合使用的。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.PropertyData">
+      <summary>指定属性数据。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.PropertyData.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Xaml.PropertyData" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PropertyData.Attributes">
+      <summary>获取属性数据特性。</summary>
+      <returns>属性数据特性。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PropertyData.Name">
+      <summary>获取或设置属性数据的名称。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PropertyData.Type">
+      <summary>获取或设置属性数据类型。</summary>
+      <returns>属性数据类型。</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.PropertyData.Visibility">
+      <summary>获取或设置属性数据可见性。</summary>
+      <returns>属性数据可见性。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.XamlBuildTypeGenerationExtensionContext">
+      <summary>用于生成类型生成扩展上下文指定设置。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.XamlBuildTypeGenerationExtensionContext.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Xaml.XamlBuildTypeGenerationExtensionContext" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.XamlBuildTypeGenerationExtensionContext.InputTaskItem">
+      <summary>获取或设置 XAML 生成类型的生成扩展上下文输入任务项。</summary>
+      <returns>XAML 生成类型的生成扩展上下文输入任务项。</returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Xaml.XamlBuildTypeInspectionExtensionContext">
+      <summary>指定有关 XAML 生成类型测试上下文的信息。</summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Xaml.XamlBuildTypeInspectionExtensionContext.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Build.Tasks.Xaml.XamlBuildTypeInspectionExtensionContext" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Xaml.XamlBuildTypeInspectionExtensionContext.MarkupItemsByTypeName">
+      <summary>通过类型名称获取标记项目的集合 XAML 生成类型的测试上下文。</summary>
+      <returns>标记项目的集合。</returns>
+    </member>
+  </members>
+</doc>

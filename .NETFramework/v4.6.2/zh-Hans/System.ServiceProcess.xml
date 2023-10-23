@@ -1,0 +1,832 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ServiceProcess</name>
+  </assembly>
+  <members>
+    <member name="F:System.ServiceProcess.ServiceBase.MaxNameLength">
+      <summary>指示服务名称的最大大小。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.Design.ServiceInstallerDialog.#ctor">
+      <summary>初始化服务帐户窗体的新实例。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.Design.ServiceInstallerDialog.Main">
+      <summary>开始运行一个标准应用程序消息循环并显示服务帐户窗体。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.#ctor">
+      <summary>创建 <see cref="T:System.ServiceProcess.ServiceBase" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.Dispose(System.Boolean)">
+      <summary>处置由 <see cref="T:System.ServiceProcess.ServiceBase" /> 占用的资源（内存除外）。</summary>
+      <param name="disposing">若要释放托管资源和非托管资源，则为 true；若仅释放非托管资源，则为 false。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnContinue">
+      <summary>在派生类中实现时 <see cref="M:System.ServiceProcess.ServiceBase.OnContinue" /> 时继续命令发送到服务的服务控制管理器 (SCM) 运行。 指定当某个服务后继续正常工作正在暂停时要执行的操作。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnCustomCommand(System.Int32)">
+      <summary>在派生类中实现时 <see cref="M:System.ServiceProcess.ServiceBase.OnCustomCommand(System.Int32)" /> 服务控制管理器 (SCM) 向服务传递自定义命令时执行。 指定具有指定的参数值的命令发生时要采取的操作。</summary>
+      <param name="command">发送到服务的命令消息。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnPause">
+      <summary>派生类中实现时，暂停命令发送到服务的服务控制管理器 (SCM) 时执行。 指定当服务就会暂停时要执行的操作。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnPowerEvent(System.ServiceProcess.PowerBroadcastStatus)">
+      <summary>派生类中实现时，在计算机的电源状态已发生更改时执行。 这适用于便携式计算机，当他们进入挂起模式，这不是系统关闭相同。</summary>
+      <param name="powerStatus">一个 <see cref="T:System.ServiceProcess.PowerBroadcastStatus" /> ，该值指示系统有关电源状态的通知。</param>
+      <returns>派生类中实现时，应用程序需要确定要返回的值。 例如，如果 QuerySuspend 广播的状态一起传递，则可能会导致您的应用程序通过返回拒绝查询 false。</returns>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnSessionChange(System.ServiceProcess.SessionChangeDescription)">
+      <summary>在终端服务器会话中接收的更改事件时执行。</summary>
+      <param name="changeDescription">标识更改类型的结构。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnShutdown">
+      <summary>派生类中实现时，在系统关闭时执行。 指定在系统关闭之前应该发生什么。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnStart(System.String[])">
+      <summary>派生类中实现时，在由服务控制管理器 (SCM) 或在操作系统启动时 （对于自动启动的服务） 时，将启动命令发送到服务时执行。 指定当服务启动时要执行的操作。</summary>
+      <param name="args">启动命令所传递的数据。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnStop">
+      <summary>派生类中实现时，停止命令发送到服务的服务控制管理器 (SCM) 时执行。 指定当服务停止运行时要执行的操作。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.RequestAdditionalTime(System.Int32)">
+      <summary>挂起的操作的请求更多时间。</summary>
+      <param name="milliseconds">请求的时间，以毫秒为单位。</param>
+      <exception cref="T:System.InvalidOperationException">该服务未处于挂起状态中。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase)">
+      <summary>与服务控制管理器 (SCM) 注册服务的可执行文件。</summary>
+      <param name="service">一个 <see cref="T:System.ServiceProcess.ServiceBase" /> 指示要启动的服务。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="service" /> 为 null。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase[])">
+      <summary>注册多个服务的可执行文件与服务控制管理器 (SCM)。</summary>
+      <param name="services">指示服务与要启动的 ServiceBase 实例的数组。</param>
+      <exception cref="T:System.ArgumentException">未提供要启动的服务。 该数组可能为 null 或为空。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.ServiceMainCallback(System.Int32,System.IntPtr)">
+      <summary>注册命令处理程序，然后启动该服务。</summary>
+      <param name="argCount">参数数组中的参数的数目。</param>
+      <param name="argPointer">
+        <see cref="T:System.IntPtr" /> 指向参数的数组的结构。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.Stop">
+      <summary>停止正在执行的服务。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.#ctor">
+      <summary>新实例初始化 <see cref="T:System.ServiceProcess.ServiceController" /> 不与特定服务相关联的类。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.#ctor(System.String)">
+      <summary>新实例初始化 <see cref="T:System.ServiceProcess.ServiceController" /> 与本地计算机上的现有服务关联的类。</summary>
+      <param name="name">向系统标识该服务的名称。 这也可以是服务的显示名称。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 无效。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.#ctor(System.String,System.String)">
+      <summary>新实例初始化 <see cref="T:System.ServiceProcess.ServiceController" /> 与指定的计算机上的现有服务关联的类。</summary>
+      <param name="name">向系统标识该服务的名称。 这也可以是服务的显示名称。</param>
+      <param name="machineName">服务所驻留的计算机。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> 无效。- 或 - <paramref name="machineName" /> 无效。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Close">
+      <summary>断开此连接 <see cref="T:System.ServiceProcess.ServiceController" /> 从服务实例，并释放此实例分配的所有资源。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Continue">
+      <summary>在服务暂停后继续该服务。</summary>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Dispose(System.Boolean)">
+      <summary>释放由 <see cref="T:System.ServiceProcess.ServiceController" /> 占用的非托管资源，还可以另外再释放托管资源。</summary>
+      <param name="disposing">若要释放托管资源和非托管资源，则为 true；若仅释放非托管资源，则为 false。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.ExecuteCommand(System.Int32)">
+      <summary>对服务执行自定义命令。</summary>
+      <param name="command">应用程序定义的命令标志，指示要执行的自定义命令。 此值必须介于 128 和 256 之间（均含）。</param>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.GetDevices">
+      <summary>检索本地计算机上的设备驱动程序服务。</summary>
+      <returns>类型的数组 <see cref="T:System.ServiceProcess.ServiceController" /> 其中的每个元素均与本地计算机上的设备驱动程序服务关联。</returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.GetDevices(System.String)">
+      <summary>检索指定计算机上的设备驱动程序服务。</summary>
+      <param name="machineName">要从中检索设备驱动程序服务计算机。</param>
+      <returns>类型的数组 <see cref="T:System.ServiceProcess.ServiceController" /> 其中的每个元素均与指定的计算机上的设备驱动程序服务关联。</returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="machineName" /> 参数具有无效的语法。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.GetServices">
+      <summary>检索本地计算机上的所有服务（设备驱动程序服务除外）。</summary>
+      <returns>类型的数组 <see cref="T:System.ServiceProcess.ServiceController" /> 每个元素均与本地计算机上的服务相关联。</returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.GetServices(System.String)">
+      <summary>检索指定计算机上的所有服务（设备驱动程序服务除外）。</summary>
+      <param name="machineName">要从中检索服务计算机。</param>
+      <returns>类型的数组 <see cref="T:System.ServiceProcess.ServiceController" /> 每个元素均与指定计算机上的服务相关联。</returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="machineName" /> 参数具有无效的语法。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Pause">
+      <summary>挂起服务的操作。</summary>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Refresh">
+      <summary>通过将属性重置为其当前值来刷新属性值。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Start">
+      <summary>启动服务，不传递任何参数。</summary>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Start(System.String[])">
+      <summary>启动服务，传递指定的参数。</summary>
+      <param name="args">在服务启动时传递给它的参数数组。</param>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">无法启动该服务。</exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="args" /> 为 null。- 或 -该数组的成员是 null。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Stop">
+      <summary>停止该服务以及任何依赖于该服务的服务。</summary>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.WaitForStatus(System.ServiceProcess.ServiceControllerStatus)">
+      <summary>无休止的等待服务达到指定状态。</summary>
+      <param name="desiredStatus">要等待的状态。</param>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+        <paramref name="desiredStatus" /> 参数不是任何中定义的值 <see cref="T:System.ServiceProcess.ServiceControllerStatus" /> 枚举。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.WaitForStatus(System.ServiceProcess.ServiceControllerStatus,System.TimeSpan)">
+      <summary>等待服务达到指定状态或等待指定的超时过期。</summary>
+      <param name="desiredStatus">要等待的状态。</param>
+      <param name="timeout">一个 <see cref="T:System.TimeSpan" /> 对象，它指定等待服务达到指定的状态的时间量。</param>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+        <paramref name="desiredStatus" /> 参数不是任何中定义的值 <see cref="T:System.ServiceProcess.ServiceControllerStatus" /> 枚举。</exception>
+      <exception cref="T:System.ServiceProcess.TimeoutException">为指定的值 <paramref name="timeout" /> 参数过期。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermission.#ctor">
+      <summary>初始化 <see cref="T:System.ServiceProcess.ServiceControllerPermission" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermission.#ctor(System.Security.Permissions.PermissionState)">
+      <summary>新实例初始化 <see cref="T:System.ServiceProcess.ServiceControllerPermission" /> 类，具有指定资源的访问权限。</summary>
+      <param name="state">
+        <see cref="T:System.Security.Permissions.PermissionState" /> 值之一。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="state" /> 参数不是 <see cref="T:System.Security.Permissions.PermissionState" /> 的有效值。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermission.#ctor(System.ServiceProcess.ServiceControllerPermissionAccess,System.String,System.String)">
+      <summary>新实例初始化 <see cref="T:System.ServiceProcess.ServiceControllerPermission" /> 类，具有指定的权限访问级别，该服务驻留的计算机的名称和向系统标识该服务的短名称。</summary>
+      <param name="permissionAccess">
+        <see cref="T:System.ServiceProcess.ServiceControllerPermissionAccess" /> 值之一。</param>
+      <param name="machineName">该服务所驻留的计算机的名称。</param>
+      <param name="serviceName">向系统标识该服务短名称。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermission.#ctor(System.ServiceProcess.ServiceControllerPermissionEntry[])">
+      <summary>新实例初始化 <see cref="T:System.ServiceProcess.ServiceControllerPermission" /> 类，具有指定的权限项。</summary>
+      <param name="permissionAccessEntries">一个 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 对象数组。<see cref="P:System.ServiceProcess.ServiceControllerPermission.PermissionEntries" /> 属性设置为此值。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="permissionAccessEntries " />是 null。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)">
+      <summary>初始化 <see cref="T:System.ServiceProcess.ServiceControllerPermissionAttribute" /> 类的新实例。</summary>
+      <param name="action">
+        <see cref="T:System.Security.Permissions.SecurityAction" /> 值之一。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionAttribute.CreatePermission">
+      <summary>创建基于请求的访问级别，通过设置权限 <see cref="P:System.ServiceProcess.ServiceControllerPermissionAttribute.PermissionAccess" /> 特性上的属性。</summary>
+      <returns>
+        <see cref="T:System.Security.IPermission" /> 表示创建的权限。</returns>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntry.#ctor">
+      <summary>初始化 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntry.#ctor(System.ServiceProcess.ServiceControllerPermissionAccess,System.String,System.String)">
+      <summary>新实例初始化 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 包含类的指定的权限的访问级别的计算机的名称，标识该服务的短名。</summary>
+      <param name="permissionAccess">
+        <see cref="T:System.ServiceProcess.ServiceControllerPermissionAccess" /> 值之一。</param>
+      <param name="machineName">该服务所驻留的计算机的名称。</param>
+      <param name="serviceName">向系统标识该服务短名称。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serviceName" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="machineName " />是无效的。- 或 -<paramref name="serviceName " />是无效的。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.Add(System.ServiceProcess.ServiceControllerPermissionEntry)">
+      <summary>添加指定 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 到此集合。</summary>
+      <param name="value">要添加的 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 对象。</param>
+      <returns>所添加的从零开始的索引 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 对象。</returns>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.AddRange(System.ServiceProcess.ServiceControllerPermissionEntry[])">
+      <summary>将一组指定的权限条目追加到此集合。</summary>
+      <param name="value">类型的数组 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 对象，它包含要添加的权限项。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="value" /> 为 null。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.AddRange(System.ServiceProcess.ServiceControllerPermissionEntryCollection)">
+      <summary>将一组指定的权限条目追加到此集合。</summary>
+      <param name="value">一个 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntryCollection" /> ，包含要添加的权限项。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="value" /> 为 null。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.Contains(System.ServiceProcess.ServiceControllerPermissionEntry)">
+      <summary>确定此集合是否包含指定 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 对象。</summary>
+      <param name="value">要查找的 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 对象。</param>
+      <returns>true 如果指定 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 对象属于该集合; 否则为 false。</returns>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.CopyTo(System.ServiceProcess.ServiceControllerPermissionEntry[],System.Int32)">
+      <summary>将权限项从此集合复制到数组，从该数组的某个特定索引处开始。</summary>
+      <param name="array">类型的数组 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 接收复制的权限条目。</param>
+      <param name="index">从此处开始复制的权限项从零开始的索引。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.IndexOf(System.ServiceProcess.ServiceControllerPermissionEntry)">
+      <summary>确定此集合中指定的权限项的索引。</summary>
+      <param name="value">要搜索的权限项。</param>
+      <returns>指定的权限条目，则为-1 如果集合中找不到权限项的从零开始的索引。</returns>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.Insert(System.Int32,System.ServiceProcess.ServiceControllerPermissionEntry)">
+      <summary>指定索引处插入到此集合的权限条目。</summary>
+      <param name="index">集合中要插入权限项的从零开始的索引。</param>
+      <param name="value">要插入到此集合的权限项。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.OnClear">
+      <summary>清除集合的内容后执行其他自定义进程。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.OnInsert(System.Int32,System.Object)">
+      <summary>新建建权限条目插入到集合之前，请执行其他自定义进程。</summary>
+      <param name="index">从零开始的索引，在其中插入 <paramref name="value" />。</param>
+      <param name="value">处的权限项的新值 <paramref name="index" />。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.OnRemove(System.Int32,System.Object)">
+      <summary>当从集合中移除新建建权限条目时，请执行其他自定义进程。</summary>
+      <param name="index">从零开始的索引，到 <paramref name="value" /> 找不到。</param>
+      <param name="value">要移除的权限项 <paramref name="index" />。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.OnSet(System.Int32,System.Object,System.Object)">
+      <summary>在集合中设置一个值之前执行其他自定义进程。</summary>
+      <param name="index">从零开始的索引，到 <paramref name="oldValue" /> 找不到。</param>
+      <param name="oldValue">要替换的值 <paramref name="newValue" />。</param>
+      <param name="newValue">处的权限项的新值 <paramref name="index" />。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.Remove(System.ServiceProcess.ServiceControllerPermissionEntry)">
+      <summary>从此集合中移除指定的权限条目。</summary>
+      <param name="value">要删除的权限项。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceInstaller.#ctor">
+      <summary>初始化 <see cref="T:System.ServiceProcess.ServiceInstaller" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceInstaller.CopyFromComponent(System.ComponentModel.IComponent)">
+      <summary>将实例的属性复制 <see cref="T:System.ServiceProcess.ServiceBase" /> 到此安装程序。</summary>
+      <param name="component">
+        <see cref="T:System.ComponentModel.IComponent" /> 从中进行复制。</param>
+      <exception cref="T:System.ArgumentException">您要与该安装程序相关联的组件不继承 <see cref="T:System.ServiceProcess.ServiceBase" />。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceInstaller.Install(System.Collections.IDictionary)">
+      <summary>安装程序服务应用程序信息写入注册表的服务。 此方法旨在可供安装工具，自动处理相应的方法。</summary>
+      <param name="stateSaver">
+        <see cref="T:System.Collections.IDictionary" /> ，包含与安装相关联的上下文信息。</param>
+      <exception cref="T:System.InvalidOperationException">安装不包含 <see cref="T:System.ServiceProcess.ServiceProcessInstaller" /> 可执行文件。- 或 - 程序集的文件名是 null 或空字符串。- 或 - 服务名称无效。- 或 - 无法打开服务控制管理器。</exception>
+      <exception cref="T:System.ArgumentException">该服务的显示名称的长度超过 255 个字符。</exception>
+      <exception cref="T:System.ComponentModel.Win32Exception">系统无法生成该服务的句柄。- 或 -已安装具有该名称的服务。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)">
+      <summary>指示两个安装程序是否会安装相同的服务。</summary>
+      <param name="otherInstaller">一个 <see cref="T:System.Configuration.Install.ComponentInstaller" /> 在比较当前的安装程序。</param>
+      <returns>true 如果调用 <see cref="M:System.ServiceProcess.ServiceInstaller.Install(System.Collections.IDictionary)" /> 这两个安装程序将导致安装同一服务; 否则为 false。</returns>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceInstaller.Rollback(System.Collections.IDictionary)">
+      <summary>回滚由安装过程写入注册表的服务应用程序信息。 此方法旨在可供安装工具，自动处理相应的方法。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" /> ，包含与安装相关联的上下文信息。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceInstaller.Uninstall(System.Collections.IDictionary)">
+      <summary>通过从注册表中删除有关它的信息来卸载服务。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" /> ，包含与安装相关联的上下文信息。</param>
+      <exception cref="T:System.ComponentModel.Win32Exception">无法打开服务控制管理器。- 或 - 系统无法获取服务的句柄。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceProcessDescriptionAttribute.#ctor(System.String)">
+      <summary>新实例初始化 <see cref="T:System.ServiceProcess.ServiceProcessDescriptionAttribute" /> 类，使用指定的说明。</summary>
+      <param name="description">应用程序定义的说明文本。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceProcessInstaller.#ctor">
+      <summary>创建 <see cref="T:System.ServiceProcess.ServiceProcessInstaller" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceProcessInstaller.CopyFromComponent(System.ComponentModel.IComponent)">
+      <summary>实现的基类 <see cref="M:System.Configuration.Install.ComponentInstaller.CopyFromComponent(System.ComponentModel.IComponent)" /> 方法没有 <see cref="T:System.ServiceProcess.ServiceProcessInstaller" /> 类特定的行为。</summary>
+      <param name="comp">
+        <see cref="T:System.ComponentModel.IComponent" /> 表示服务进程。</param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceProcessInstaller.Install(System.Collections.IDictionary)">
+      <summary>将服务应用程序信息写入注册表。 此方法旨在可供安装工具，它们可自动调用适当的方法。</summary>
+      <param name="stateSaver">
+        <see cref="T:System.Collections.IDictionary" /> ，包含与安装相关联的上下文信息。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="stateSaver" /> 为 null。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceProcessInstaller.Rollback(System.Collections.IDictionary)">
+      <summary>回滚由安装过程写入注册表的服务应用程序信息。 此方法旨在可供安装工具，自动处理相应的方法。</summary>
+      <param name="savedState">
+        <see cref="T:System.Collections.IDictionary" /> ，包含与安装相关联的上下文信息。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="savedState" /> 为 null。- 或 - <paramref name="savedState" /> 已损坏或不存在。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.SessionChangeDescription.Equals(System.Object)">
+      <summary>确定指定的对象是否等于当前会话更改说明。</summary>
+      <param name="obj">要与当前 <see cref="T:System.ServiceProcess.SessionChangeDescription" /> 结构进行比较的对象。</param>
+      <returns>如果 <paramref name="obj" /> 等于当前的 <see cref="T:System.ServiceProcess.SessionChangeDescription" /> 结构，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:System.ServiceProcess.SessionChangeDescription.Equals(System.ServiceProcess.SessionChangeDescription)">
+      <summary>确定指定的会话更改描述是否等于当前会话更改描述。</summary>
+      <param name="changeDescription">要与当前 <see cref="T:System.ServiceProcess.SessionChangeDescription" /> 结构进行比较的 <see cref="T:System.ServiceProcess.SessionChangeDescription" /> 结构。</param>
+      <returns>如果 <paramref name="changeDescription" /> 等于当前的 <see cref="T:System.ServiceProcess.SessionChangeDescription" /> 结构，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:System.ServiceProcess.SessionChangeDescription.GetHashCode">
+      <summary>获取当前会话更改描述的哈希代码。</summary>
+      <returns>当前会话更改描述的哈希代码。</returns>
+    </member>
+    <member name="M:System.ServiceProcess.SessionChangeDescription.op_Equality(System.ServiceProcess.SessionChangeDescription,System.ServiceProcess.SessionChangeDescription)">
+      <summary>返回一个值，该值指示两个 <see cref="T:System.ServiceProcess.SessionChangeDescription" /> 结构是否相等。</summary>
+      <param name="a">
+        <see cref="T:System.ServiceProcess.SessionChangeDescription" /> 结构。</param>
+      <param name="b">
+        <see cref="T:System.ServiceProcess.SessionChangeDescription" /> 结构。</param>
+      <returns>如果 <paramref name="a" /> 和 <paramref name="b" /> 相等，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:System.ServiceProcess.SessionChangeDescription.op_Inequality(System.ServiceProcess.SessionChangeDescription,System.ServiceProcess.SessionChangeDescription)">
+      <summary>返回一个值，该值表示两个 <see cref="T:System.ServiceProcess.SessionChangeDescription" /> 结构是否不相等。</summary>
+      <param name="a">
+        <see cref="T:System.ServiceProcess.SessionChangeDescription" /> 结构。</param>
+      <param name="b">
+        <see cref="T:System.ServiceProcess.SessionChangeDescription" /> 结构。</param>
+      <returns>如果 <paramref name="a" /> 和 <paramref name="b" /> 不相等，则为 true；否则为 false。</returns>
+    </member>
+    <member name="M:System.ServiceProcess.TimeoutException.#ctor">
+      <summary>初始化不带消息文本的 <see cref="T:System.ServiceProcess.TimeoutException" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ServiceProcess.TimeoutException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>使用指定的序列化信息和上下文初始化 <see cref="T:System.ServiceProcess.TimeoutException" /> 类的新实例。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它保存关于所引发异常的序列化对象数据。</param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含关于源或目标的上下文信息。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="info" /> 参数为 null。</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">类名为 null 或者 <see cref="P:System.Exception.HResult" /> 为零 (0)。</exception>
+    </member>
+    <member name="M:System.ServiceProcess.TimeoutException.#ctor(System.String)">
+      <summary>使用指定的消息文本初始化 <see cref="T:System.ServiceProcess.TimeoutException" /> 类的新实例。</summary>
+      <param name="message">描述异常的类型或源的文本。</param>
+    </member>
+    <member name="M:System.ServiceProcess.TimeoutException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的消息文本和内部异常，初始化 <see cref="T:System.ServiceProcess.TimeoutException" /> 类的新实例。</summary>
+      <param name="message">描述异常的类型或源的文本。</param>
+      <param name="innerException">引发当前异常的异常。</param>
+    </member>
+    <member name="P:System.ServiceProcess.Design.ServiceInstallerDialog.Password">
+      <summary>获取或设置服务帐户窗体的密码。</summary>
+      <returns>一个字符串，表示服务帐户窗体中的密码。 默认值为空字符串("")。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.Design.ServiceInstallerDialog.Result">
+      <summary>获取服务帐户窗体的对话框结果。</summary>
+      <returns>指示用户响应对话框的 <see cref="T:System.ServiceProcess.Design.ServiceInstallerDialogResult" />。 默认值为 OK。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.Design.ServiceInstallerDialog.Username">
+      <summary>获取或设置服务帐户窗体的用户名。</summary>
+      <returns>一个字符串，表示服务帐户窗体中的用户名。 默认值为空字符串("")。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.AutoLog">
+      <summary>指示是否报表在事件日志中的启动、 停止、 暂停和继续命令。</summary>
+      <returns>true 在事件日志中; 中的报告信息否则为 false。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.CanHandlePowerEvent">
+      <summary>获取或设置一个值，该值指示服务是否可以处理计算机电源状态更改的通知。</summary>
+      <returns>true 如果该服务将处理计算机电源状态更改中所示 <see cref="T:System.ServiceProcess.PowerBroadcastStatus" /> 类，否则为 false。</returns>
+      <exception cref="T:System.InvalidOperationException">服务已启动后，修改此属性。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.CanHandleSessionChangeEvent">
+      <summary>获取或设置一个值，指示服务是否可以处理会话从终端服务器会话接收到的更改事件。</summary>
+      <returns>true 如果该服务可以处理终端服务器会话更改事件;，否则为 false。</returns>
+      <exception cref="T:System.InvalidOperationException">服务已启动后，修改此属性。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.CanPauseAndContinue">
+      <summary>获取或设置一个值，该值指示是否可以暂停和恢复该服务。</summary>
+      <returns>true 如果可以暂停服务;否则为 false。</returns>
+      <exception cref="T:System.InvalidOperationException">服务已启动。<see cref="P:System.ServiceProcess.ServiceBase.CanPauseAndContinue" /> 服务启动后无法更改属性。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.CanShutdown">
+      <summary>获取或设置一个值，该值在系统关闭时是否应通知服务。</summary>
+      <returns>true 如果系统正在关闭; 时，应通知服务否则为 false。  默认值为 false。</returns>
+      <exception cref="T:System.InvalidOperationException">服务已启动。<see cref="P:System.ServiceProcess.ServiceBase.CanShutdown" /> 服务启动后无法更改属性。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.CanStop">
+      <summary>获取或设置一个值，指示它启动后是否可以停止服务。</summary>
+      <returns>true 如果可以停止服务和 <see cref="M:System.ServiceProcess.ServiceBase.OnStop" /> 方法调用; 否则为 false。</returns>
+      <exception cref="T:System.InvalidOperationException">服务已启动。<see cref="P:System.ServiceProcess.ServiceBase.CanStop" /> 服务启动后无法更改属性。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.EventLog">
+      <summary>获取可用于写入应用程序事件日志服务命令调用，如启动和停止通知事件日志。</summary>
+      <returns>
+        <see cref="T:System.Diagnostics.EventLog" /> 其源注册到应用程序日志的实例。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.ExitCode">
+      <summary>获取或设置该服务的退出代码。</summary>
+      <returns>该服务退出代码。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.ServiceHandle">
+      <summary>获取服务的服务控制句柄。</summary>
+      <returns>
+        <see cref="T:System.IntPtr" /> 结构，其中包含该服务的服务控制句柄。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.ServiceName">
+      <summary>获取或设置用于标识服务对系统的短名称。</summary>
+      <returns>服务的名称。</returns>
+      <exception cref="T:System.InvalidOperationException">服务已启动。<see cref="P:System.ServiceProcess.ServiceBase.ServiceName" /> 服务启动后无法更改属性。</exception>
+      <exception cref="T:System.ArgumentException">指定的名称是一个零长度字符串或者长度超过 <see cref="F:System.ServiceProcess.ServiceBase.MaxNameLength" />, ，或指定的名称包含正斜杠或反斜杠字符。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.CanPauseAndContinue">
+      <summary>获取一个值，该值指示是否可以暂停和继续服务。</summary>
+      <returns>true 如果可以暂停服务;否则为 false。</returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.CanShutdown">
+      <summary>获取一个值，该值指示在系统关闭时是否应通知服务。</summary>
+      <returns>true 如果系统正在关闭; 时，应通知服务否则为 false。</returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.CanStop">
+      <summary>获取一个值，该值指示服务在启动后是否可以停止。</summary>
+      <returns>true 如果可以停止服务和 <see cref="M:System.ServiceProcess.ServiceBase.OnStop" /> 方法调用; 否则为 false。</returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.DependentServices">
+      <summary>获取与此关联的服务所依赖的服务集 <see cref="T:System.ServiceProcess.ServiceController" /> 实例。</summary>
+      <returns>一个数组 <see cref="T:System.ServiceProcess.ServiceController" /> 其中每个都是与服务依赖于此服务关联的实例。</returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.DisplayName">
+      <summary>获取或设置服务的友好名称。</summary>
+      <returns>服务的友好名称，可用于标识该服务。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <see cref="P:System.ServiceProcess.ServiceController.DisplayName" /> 为 null。</exception>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.MachineName">
+      <summary>获取或设置此服务所驻留的计算机的名称。</summary>
+      <returns>正在运行与此关联的服务的计算机的名称 <see cref="T:System.ServiceProcess.ServiceController" /> 实例。 默认为本地计算机 (".")。</returns>
+      <exception cref="T:System.ArgumentException">
+        <see cref="P:System.ServiceProcess.ServiceController.MachineName" /> 的语法不正确。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.ServiceHandle">
+      <summary>获取服务的句柄。</summary>
+      <returns>一个 <see cref="T:System.Runtime.InteropServices.SafeHandle" /> 包含服务的句柄。</returns>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.ServiceName">
+      <summary>获取或设置对此实例引用的服务进行标识的名称。</summary>
+      <returns>标识的服务的名称指示此 <see cref="T:System.ServiceProcess.ServiceController" /> 实例引用。 默认值为空字符串("")。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <see cref="P:System.ServiceProcess.ServiceController.ServiceName" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">语法 <see cref="P:System.ServiceProcess.ServiceController.ServiceName" /> 属性无效。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.ServicesDependedOn">
+      <summary>此服务所依赖的服务集。</summary>
+      <returns>一个数组 <see cref="T:System.ServiceProcess.ServiceController" /> 其中每个都是与此服务才能运行，必须运行的服务相关联的实例。</returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.ServiceType">
+      <summary>获取此对象引用的服务类型。</summary>
+      <returns>其中一个 <see cref="T:System.ServiceProcess.ServiceType" /> 值，用于指示网络服务类型。</returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.StartType">
+      <summary>获取一个值，该值指示 <see cref="T:System.ServiceProcess.ServiceController" /> 对象表示的服务是如何启动的。</summary>
+      <returns>一个值，指示该服务的启动方式。</returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.Status">
+      <summary>获取由此实例引用的服务的状态。</summary>
+      <returns>其中一个 <see cref="T:System.ServiceProcess.ServiceControllerStatus" /> 值，该值指示是否正在运行服务，已停止还是已暂停，或是否启动、 停止、 暂停或继续命令处于挂起状态。</returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">访问 API 时出错。</exception>
+      <exception cref="T:System.InvalidOperationException">找不到该服务。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermission.PermissionEntries">
+      <summary>获取此权限请求的权限项集合。</summary>
+      <returns>一个 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntryCollection" /> ，它包含此权限请求权限项。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionAttribute.MachineName">
+      <summary>获取或设置服务所驻留的计算机的名称。</summary>
+      <returns>正在运行与关联的服务的计算机的名称 <see cref="T:System.ServiceProcess.ServiceController" />。</returns>
+      <exception cref="T:System.ArgumentException">
+        <see cref="P:System.ServiceProcess.ServiceControllerPermissionAttribute.MachineName" /> 的语法不正确。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionAttribute.PermissionAccess">
+      <summary>获取或设置权限请求中使用的访问级别。</summary>
+      <returns>
+        <see cref="T:System.ServiceProcess.ServiceControllerPermissionAccess" /> 值的按位组合。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionAttribute.ServiceName">
+      <summary>获取或设置向系统标识该服务的短名称。</summary>
+      <returns>服务的名称。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <see cref="P:System.ServiceProcess.ServiceControllerPermissionAttribute.ServiceName" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">语法 <see cref="P:System.ServiceProcess.ServiceControllerPermissionAttribute.ServiceName" /> 属性无效。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionEntry.MachineName">
+      <summary>获取服务所驻留的计算机的名称。</summary>
+      <returns>正在运行与关联的服务的计算机的名称 <see cref="T:System.ServiceProcess.ServiceController" />。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionEntry.PermissionAccess">
+      <summary>获取使用权限请求中的访问级别。</summary>
+      <returns>
+        <see cref="T:System.ServiceProcess.ServiceControllerPermissionAccess" /> 值的按位组合。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionEntry.ServiceName">
+      <summary>获取向系统标识该服务的短名称。</summary>
+      <returns>服务的名称。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionEntryCollection.Item(System.Int32)">
+      <summary>获取或设置指定索引处的对象。</summary>
+      <param name="index">集合中的从零开始索引。</param>
+      <returns>
+        <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 存在的指定索引处的对象。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceInstaller.DelayedAutoStart">
+      <summary>获取或设置一个值，该值指示服务是否应推迟之前运行其他自动启动的服务无法启动。</summary>
+      <returns>true 对延迟自动启动服务;否则为 false。 默认值为 false。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceInstaller.Description">
+      <summary>获取或设置服务的说明。</summary>
+      <returns>服务的说明。 默认值为空字符串("")。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceInstaller.DisplayName">
+      <summary>指示向用户标识该服务的友好名称。</summary>
+      <returns>与该服务，通常用于交互式工具关联的名称。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceInstaller.ServiceName">
+      <summary>指示系统用来标识此服务的名称。 此属性必须等于 <see cref="P:System.ServiceProcess.ServiceBase.ServiceName" /> 你想要安装的服务。</summary>
+      <returns>要安装的服务的名称。 必须先安装实用程序尝试安装该服务设置此值。</returns>
+      <exception cref="T:System.ArgumentException">
+        <see cref="P:System.ServiceProcess.ServiceInstaller.ServiceName" /> 属性无效。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceInstaller.ServicesDependedOn">
+      <summary>指示此服务才能运行，必须运行的服务。</summary>
+      <returns>与此安装程序关联的服务可以运行之前必须运行的服务数组。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceInstaller.StartType">
+      <summary>指示如何以及何时启动此服务。</summary>
+      <returns>一个 <see cref="T:System.ServiceProcess.ServiceStartMode" /> ，它表示该服务已启动的方式。 默认值是 Manual, ，它指定，该服务不会自动启动后重新启动。</returns>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">启动模式不是值为 <see cref="T:System.ServiceProcess.ServiceStartMode" /> 枚举。</exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceProcessDescriptionAttribute.Description">
+      <summary>获取与服务进程相关联的说明文字。</summary>
+      <returns>应用程序定义的描述。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceProcessInstaller.Account">
+      <summary>获取或设置要运行此服务应用程序在其下的帐户的类型。</summary>
+      <returns>一个 <see cref="T:System.ServiceProcess.ServiceAccount" /> 定义系统运行此服务帐户的类型。 默认值为 User。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceProcessInstaller.HelpText">
+      <summary>获取帮助服务安装选项的显示文本。</summary>
+      <returns>帮助提供的步骤说明为了运行特定帐户下的服务设置的用户名和密码的文本。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceProcessInstaller.Password">
+      <summary>获取或设置与在其下运行服务应用程序的用户帐户关联的密码。</summary>
+      <returns>与该服务应运行的帐户关联的密码。 默认值为空字符串("")。 该属性不是公共的并从来不序列化。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceProcessInstaller.Username">
+      <summary>获取或设置将在其下运行服务应用程序的用户帐户。</summary>
+      <returns>该服务应运行的帐户。 默认值为空字符串("")。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.SessionChangeDescription.Reason">
+      <summary>获取会话更改的原因。</summary>
+      <returns>
+        <see cref="T:System.ServiceProcess.SessionChangeReason" /> 值之一。</returns>
+    </member>
+    <member name="P:System.ServiceProcess.SessionChangeDescription.SessionId">
+      <summary>获取关联会话的会话 ID。</summary>
+      <returns>关联会话的会话 ID。</returns>
+    </member>
+    <member name="T:System.ServiceProcess.Design.ServiceInstallerDialog">
+      <summary>提供一个对话框，该对话框提示输入 Windows 服务应用程序的帐户信息。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.Design.ServiceInstallerDialogResult">
+      <summary>指定 <see cref="T:System.ServiceProcess.Design.ServiceInstallerDialog" /> 窗体的返回值。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.Design.ServiceInstallerDialogResult.OK">
+      <summary>对话框返回值为 OK。 这个值通常指示用户确认了帐户属性并按下了 OK 按钮来关闭对话框。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.Design.ServiceInstallerDialogResult.UseSystem">
+      <summary>使用系统帐户而不是用户帐户来安装服务。 这个值通常指示没有向用户显示对话框。 例如，将 <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Account" /> 属性设置为 User 以外的值。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.Design.ServiceInstallerDialogResult.Canceled">
+      <summary>对话框返回值为 Canceled。 这个值通常指示用户未设置帐户字段就退出了对话框。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.PowerBroadcastStatus">
+      <summary>指示系统电源状态。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.BatteryLow">
+      <summary>电池电量不足。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.OemEvent">
+      <summary>高级电源管理 (APM) BIOS 用信号通知 APM OEM 事件。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.PowerStatusChange">
+      <summary>检测到的计算机的电源状态中的更改，如从电池电源切换到交流电源。 剩余电池电量降至用户指定的阈值时，或按指定的百分比更改电池电量，系统还会广播此事件。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.QuerySuspend">
+      <summary>系统已请求挂起计算机的权限。 授予权限的应用程序应在返回前执行将其挂起的准备工作。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.QuerySuspendFailed">
+      <summary>若要挂起计算机的权限被拒绝，系统。 将广播该状态，如果任何应用程序或驱动程序拒绝了上一个 QuerySuspend 状态。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.ResumeAutomatic">
+      <summary>计算机已自动唤醒用于处理一个事件。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.ResumeCritical">
+      <summary>系统已恢复后电池故障引起的严重挂起操作。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.ResumeSuspend">
+      <summary>系统已恢复后被挂起操作。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.Suspend">
+      <summary>计算机即将进入暂停的状态。 当所有应用程序和可安装驱动程序已返回时，此事件通常广播 true 作为上一次 QuerySuspend 状态。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceAccount">
+      <summary>指定服务的安全上下文，定义其登录类型。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceAccount.LocalService">
+      <summary>一个可用作本地计算机上的非特权用户，并向任意远程服务器提供匿名凭据的帐户。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceAccount.NetworkService">
+      <summary>提供多种本地特权，并提供给所有远程服务器的计算机的凭据的帐户。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceAccount.LocalSystem">
+      <summary>一个帐户，使用服务控制管理器，该本地计算机上拥有许多特权并作为网络上的计算机。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceAccount.User">
+      <summary>定义特定用户在网络上的帐户。 指定 User 为 <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Account" /> 成员会导致系统提示输入有效的用户名和密码时安装了服务，除非您将值设置为 <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Username" /> 和 <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Password" /> 属性您 <see cref="T:System.ServiceProcess.ServiceProcessInstaller" /> 实例。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceBase">
+      <summary>将作为一个服务应用程序的一部分存在的服务提供基类。<see cref="T:System.ServiceProcess.ServiceBase" /> 必须派生自创建新的服务类时。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceController">
+      <summary>表示 Windows 服务并允许连接到正在运行或者已停止的服务、对其进行操作或获取有关它的信息。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceControllerPermission">
+      <summary>允许代码访问控制服务控制器的安全权限。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceControllerPermissionAccess">
+      <summary>定义使用的访问级别 <see cref="T:System.ServiceProcess.ServiceController" /> 权限类。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerPermissionAccess.None">
+      <summary>
+        <see cref="T:System.ServiceProcess.ServiceController" /> 不具有任何权限。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerPermissionAccess.Browse">
+      <summary>
+        <see cref="T:System.ServiceProcess.ServiceController" /> 能够连接到，但无法控制的现有服务。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerPermissionAccess.Control">
+      <summary>
+        <see cref="T:System.ServiceProcess.ServiceController" /> 可以连接到并控制现有的服务。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceControllerPermissionAttribute">
+      <summary>允许声明性服务控制器权限检查。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceControllerPermissionEntry">
+      <summary>定义为设置的代码访问安全权限的最小单位 <see cref="T:System.ServiceProcess.ServiceController" />。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceControllerPermissionEntryCollection">
+      <summary>包含 <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> 对象的强类型集合。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceControllerStatus">
+      <summary>指示该服务的当前状态。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.ContinuePending">
+      <summary>服务继续处于挂起状态。 这对应于 Win32 SERVICE_CONTINUE_PENDING 常量，它定义为 0x00000005。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.Paused">
+      <summary>服务已暂停。 这对应于 Win32 SERVICE_PAUSED 常量，它定义为 0x00000007。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.PausePending">
+      <summary>服务暂停处于挂起状态。 这对应于 Win32 SERVICE_PAUSE_PENDING 常量，它定义为 0x00000006。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.Running">
+      <summary>该服务正在运行。 这对应于 Win32 SERVICE_RUNNING 常量，它定义为 0x00000004。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.StartPending">
+      <summary>服务正在启动。 这对应于 Win32 SERVICE_START_PENDING 常量，它定义为 0x00000002。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.Stopped">
+      <summary>服务未运行。 这对应于 Win32 SERVICE_STOPPED 常量，它定义为 0x00000001。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.StopPending">
+      <summary>服务正在停止。 这对应于 Win32 SERVICE_STOP_PENDING 常量，它定义为 0x00000003。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceInstaller">
+      <summary>安装扩展的类的 <see cref="T:System.ServiceProcess.ServiceBase" /> 来实现服务。 在安装服务应用程序时，将由安装实用工具调用此类。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceProcessDescriptionAttribute">
+      <summary>指定属性或事件的描述。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceProcessInstaller">
+      <summary>安装包含扩展的类的可执行文件 <see cref="T:System.ServiceProcess.ServiceBase" />。 在安装服务应用程序时，将由安装实用程序，例如 InstallUtil.exe，调用此类。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceStartMode">
+      <summary>指示服务的启动模式。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceStartMode.Manual">
+      <summary>指示服务仅由用户（使用服务控制管理器）或应用程序以手动方式启动。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceStartMode.Automatic">
+      <summary>指示服务将由（或已由）操作系统在系统启动时启动。 如果一个自动启动的服务依赖于手动启动的服务，则该手动启动的服务也会在系统启动时自动启动。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceStartMode.Disabled">
+      <summary>指示服务已禁用，因此无法由用户或应用程序启用。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceStartMode.Boot">
+      <summary>指示该服务是由系统加载程序启动的设备驱动程序。 此值仅对设备驱动程序有效。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceStartMode.System">
+      <summary>指示该服务是由 IOInitSystem 函数启动的设备驱动程序。 此值仅对设备驱动程序有效。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceType">
+      <summary>表示服务的类型。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.Adapter">
+      <summary>针对需要其自己的驱动程序的硬件设备的服务。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.FileSystemDriver">
+      <summary>文件系统驱动程序，也是内核设备驱动程序。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.InteractiveProcess">
+      <summary>一种可以与桌面进行通信的服务。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.KernelDriver">
+      <summary>内核设备驱动程序，例如硬盘或其他低级别的硬件设备驱动程序。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.RecognizerDriver">
+      <summary>在启动时使用的文件系统驱动程序，用于确定在系统中存在的文件系统。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.Win32OwnProcess">
+      <summary>可由服务控制器启动，并且遵从服务控制协议的 Win32 程序。 此类型的 Win32 服务在某个进程中单独运行。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.Win32ShareProcess">
+      <summary>可与其他 Win32 服务共享一个进程的 Win32 服务。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.SessionChangeDescription">
+      <summary>确认终端服务会话更改的原因。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.SessionChangeReason">
+      <summary>指定终端服务会话更改通知的原因。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.ConsoleConnect">
+      <summary>控制台会话已连接。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.ConsoleDisconnect">
+      <summary>控制台会话已断开连接。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.RemoteConnect">
+      <summary>远程会话已连接。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.RemoteDisconnect">
+      <summary>远程会话已断开连接。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.SessionLogon">
+      <summary>用户已登录到会话。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.SessionLogoff">
+      <summary>用户已从会话注销。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.SessionLock">
+      <summary>会话已锁定。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.SessionUnlock">
+      <summary>会话已解锁。</summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.SessionRemoteControl">
+      <summary>会话的远程控制状态已更改。</summary>
+    </member>
+    <member name="T:System.ServiceProcess.TimeoutException">
+      <summary>当指定的超时时间已过时引发的异常。</summary>
+    </member>
+  </members>
+</doc>

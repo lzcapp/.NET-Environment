@@ -1,0 +1,2311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.DynamicData</name>
+  </assembly>
+  <members>
+    <member name="E:System.Web.DynamicData.DynamicFilter.FilterChanged">
+      <summary>发生时用户选择外键的值。</summary>
+    </member>
+    <member name="E:System.Web.DynamicData.QueryableFilterUserControl.FilterChanged">
+      <summary>发生时 <see cref="M:System.Web.DynamicData.QueryableFilterUserControl.OnFilterChanged" /> 调用方法。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.ContextConfiguration.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.ContextConfiguration" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.ControlFilterExpression.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.ControlFilterExpression" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.ControlFilterExpression.GetQueryable(System.Linq.IQueryable)">
+      <summary>获取要修改的数据源查询。</summary>
+      <param name="source">要修改的数据源查询。</param>
+      <returns>对象，表示此修改的数据源查询 <see cref="T:System.Web.DynamicData.ControlFilterExpression" /> 实例。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ControlFilterExpression.LoadViewState(System.Object)">
+      <summary>还原以前保存的视图状态。</summary>
+      <param name="savedState">要还原的状态。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.ControlFilterExpression.SaveViewState">
+      <summary>将视图状态后页上已发布到服务器所做的更改进行保存。</summary>
+      <returns>包含视图状态更改的对象。 如果没有与对象关联的视图状态，则此方法返回 null。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ControlFilterExpression.SetContext(System.Web.UI.Control,System.Web.HttpContext,System.Web.UI.WebControls.IQueryableDataSource)">
+      <summary>初始化具有数据源信息的筛选器表达式。</summary>
+      <param name="owner">在其中控件 <see cref="T:System.Web.DynamicData.ControlFilterExpression" /> 包含实例，如 <see cref="T:System.Web.UI.WebControls.QueryExtender" /> 控件。</param>
+      <param name="context">应用程序的当前 <see cref="T:System.Web.HttpContext" /> 对象。</param>
+      <param name="dataSource">目标数据源 <see cref="T:System.Web.DynamicData.ControlFilterExpression" /> 实例。 如果 <see cref="T:System.Web.DynamicData.DynamicFilterExpression" /> 实例包含在 <see cref="T:System.Web.UI.WebControls.QueryExtender" /> 的数据源控件，此参数是 <see cref="T:System.Web.UI.WebControls.QueryExtender" /> 指的是控件</param>
+    </member>
+    <member name="M:System.Web.DynamicData.ControlFilterExpression.TrackViewState">
+      <summary>导致 <see cref="T:System.Web.DynamicData.ControlFilterExpression" /> 对象跟踪其视图状态以便将它们存储在该控件的视图状态对象的更改并在同一页的请求之间得以保持。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DataControlReference.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DataControlReference" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DataControlReference.ToString">
+      <summary>获取的文字字符串 DataControl:  具有的值， <see cref="P:System.Web.DynamicData.DataControlReference.ControlID" /> 追加到该控件。</summary>
+      <returns>文字字符串 DataControl:  具有的值， <see cref="P:System.Web.DynamicData.DataControlReference.ControlID" /> 属性追加到该日志。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DataControlReferenceCollection.#ctor(System.Web.DynamicData.DynamicDataManager)">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DataControlReferenceCollection" /> 类的新实例。</summary>
+      <param name="owner">容器对象。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="owner" /> 参数为 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.DataControlReferenceCollection.InsertItem(System.Int32,System.Web.DynamicData.DataControlReference)">
+      <summary>将数据控件引用插入到数据控件引用集合。</summary>
+      <param name="index">指示要插入的数据控件的位置的索引。</param>
+      <param name="item">要插入的数据控件。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DataControlReferenceCollection.RemoveItem(System.Int32)">
+      <summary>从集合中移除的数据控件引用。</summary>
+      <param name="index">要删除的数据控件引用的索引。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DataControlReferenceCollection.SetItem(System.Int32,System.Web.DynamicData.DataControlReference)">
+      <summary>集 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 包含数据控件引用的控件。</summary>
+      <param name="index">要设置的数据控件引用的索引。</param>
+      <param name="item">数据控件中。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DefaultAutoFieldGenerator.#ctor(System.Web.DynamicData.MetaTable)">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DefaultAutoFieldGenerator" /> 类的新实例。</summary>
+      <param name="table">要生成动态字段的表的元数据。</param>
+      <exception cref="T:System.ArgumentNullException">此表是 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.DefaultAutoFieldGenerator.CreateField(System.Web.DynamicData.MetaColumn,System.Web.DynamicData.ContainerType,System.Web.UI.WebControls.DataBoundControlMode)">
+      <summary>生成一个动态数据字段。</summary>
+      <param name="column">要创建的动态字段的列元数据。</param>
+      <param name="containerType">包含动态字段的数据绑定控件。</param>
+      <param name="mode">动态字段的访问模式。</param>
+      <returns>要创建的动态字段。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DefaultAutoFieldGenerator.GenerateFields(System.Web.UI.Control)">
+      <summary>生成 <see cref="T:System.Web.DynamicData.DynamicField" /> 对象基于表的元数据信息。</summary>
+      <param name="control">包含动态数据字段的数据绑定控件。</param>
+      <returns>
+        <see cref="T:System.Web.DynamicData.DynamicField" /> 对象的集合。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicControl.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DynamicControl" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicControl.#ctor(System.Web.UI.WebControls.DataBoundControlMode)">
+      <summary>用指定的模式初始化 <see cref="T:System.Web.DynamicData.DynamicControl" /> 类的新实例。</summary>
+      <param name="mode">指定控件模式的枚举值之一。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicControl.GetAttribute(System.String)">
+      <summary>使用指定键来检索特性值。</summary>
+      <param name="key">属性名。</param>
+      <returns>属性的值。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicControl.OnInit(System.EventArgs)">
+      <summary>引发 <see cref="E:System.Web.UI.Control.Init" /> 事件。</summary>
+      <param name="e">事件数据。</param>
+      <exception cref="T:System.InvalidOperationException">未设置 <see cref="P:System.Web.DynamicData.DynamicControl.DataField" /> 属性。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicControl.Render(System.Web.UI.HtmlTextWriter)">
+      <summary>使用指定的 <see cref="T:System.Web.UI.HtmlTextWriter" /> 对象，将 <see cref="T:System.Web.DynamicData.DynamicControl" /> 控件内容呈现给客户端浏览器。</summary>
+      <param name="writer">用于在客户端浏览器上呈现 <see cref="T:System.Web.DynamicData.DynamicControl" /> 控件内容的对象。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicControl.SetAttribute(System.String,System.String)">
+      <summary>将指定的特性设置为指定的值。</summary>
+      <param name="key">要设置的特性的名称。</param>
+      <param name="value">分配给属性的值。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicControlParameter.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DynamicControlParameter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicControlParameter.#ctor(System.String)">
+      <summary>新实例初始化 <see cref="System.Web.DynamicData.DynamicControlParameter" /> 绑定到指定控件的类。</summary>
+      <param name="controlId">该参数表示其值的控件的 ID。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicControlParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)">
+      <summary>引发 <see cref="T:System.InvalidOperationException" /> 异常以指示 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 控件是缺失。</summary>
+      <param name="context">HTTP 上下文中。</param>
+      <param name="control">动态控制参数中。</param>
+      <returns>一个 <see cref="T:System.InvalidOperationException" /> 对象，它指示 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 控件是缺失。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicControlParameter.GetWhereParameters(System.Web.DynamicData.IDynamicDataSource)">
+      <summary>返回的用来创建的参数集合 Where 查询数据源时的子句。</summary>
+      <param name="dataSource">
+        <see cref="T:System.Web.DynamicData.IDynamicDataSource" /> 实例，以获取从的参数。</param>
+      <returns>一套 <see cref="T:System.Web.UI.WebControls.Parameter" /> 对象，表示为指定的查询参数 <see cref="T:System.Web.DynamicData.IDynamicDataSource" /> 实例。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.ConvertEditedValue(System.Web.DynamicData.IFieldFormattingOptions,System.String)">
+      <summary>返回用户所验证的控件提供的值。</summary>
+      <param name="formattingOptions">按照定义的格式选项对象， <see cref="T:System.Web.DynamicData.IFieldFormattingOptions" /> 对象。</param>
+      <param name="value">要转换的输入的值。</param>
+      <returns>null 如果 <paramref name="value" /> 是 null 或空字符串和 <see cref="P:System.Web.DynamicData.IFieldFormattingOptions.ConvertEmptyStringToNull" /> 属性 <paramref name="formattingOptions" /> 是 true; null 如果 <paramref name="value" /> 不是 null 或为空字符串匹配并且 <see cref="P:System.Web.DynamicData.IFieldFormattingOptions.NullDisplayText" /> 属性 <paramref name="formattingOptions" />; 否则为为的未更改的值 <paramref name="value" />。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection(System.Web.UI.WebControls.BaseDataBoundControl)">
+      <summary>使所选内容将保留在支持所选内容和分页的数据控件。</summary>
+      <param name="dataBoundControl">数据绑定控件。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.ExpandDynamicWhereParameters(System.Web.DynamicData.IDynamicDataSource)">
+      <summary>将扩展到的动态筛选器 Where 使用数据源可用的参数。</summary>
+      <param name="dataSource">数据源对象。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.FindDataSourceControl(System.Web.UI.Control)">
+      <summary>返回与指定控件的数据控件相关联的数据源。</summary>
+      <param name="current">要查找其包含控制您的数据绑定控件的层次结构内的控件。</param>
+      <returns>与指定控件的数据控件相关联的数据源。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.FindFieldTemplate(System.Web.UI.Control,System.String)">
+      <summary>返回指定控件中的指定列的字段模板的命名容器。</summary>
+      <param name="control">包含控件中。</param>
+      <param name="columnName">列的名称。</param>
+      <returns>用于指定的控件的命名容器中的指定列的字段模板。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.FindMetaTable(System.Web.UI.Control)">
+      <summary>返回包含的数据控件的元表对象。</summary>
+      <param name="current">当前的控件。</param>
+      <returns>包含的数据控件元表对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.FormatEditValue(System.Web.DynamicData.IFieldFormattingOptions,System.Object)">
+      <summary>使用指定的格式设置选项设置格式指定的字段值。</summary>
+      <param name="formattingOptions">要使用的 <see cref="T:System.Web.DynamicData.IFieldFormattingOptions" /> 实例。</param>
+      <param name="fieldValue">若要设置格式的字段值。</param>
+      <returns>使用指定的格式设置选项已格式化字段值。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.FormatValue(System.Web.DynamicData.IFieldFormattingOptions,System.Object)">
+      <summary>使用指定的格式设置选项设置格式指定的字段值。</summary>
+      <param name="formattingOptions">要使用的 <see cref="T:System.Web.DynamicData.IFieldFormattingOptions" /> 实例。</param>
+      <param name="fieldValue">若要设置格式的字段值。</param>
+      <returns>使用指定的格式设置选项已格式化字段值。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.GetDefaultValues(System.Web.UI.IDataSource)">
+      <summary>获取指定的数据源的默认值的集合。</summary>
+      <param name="dataSource">为其获取默认值的数据源。</param>
+      <returns>与之关联的默认值的集合 <see cref="T:System.Web.UI.IDataSource" /> 对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.GetDefaultValues(System.Web.UI.INamingContainer)">
+      <summary>获取指定的数据控件的默认值的集合。</summary>
+      <param name="control">为其获取默认值的数据控件。</param>
+      <returns>与之关联的默认值的集合 <see cref="T:System.Web.UI.INamingContainer" /> 对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.GetEnumType(System.Web.DynamicData.MetaColumn)">
+      <summary>获取表示列的枚举的类型。</summary>
+      <param name="column">要获取的枚举类型的列。</param>
+      <returns>如果基础类型为枚举，则表示列的枚举类型否则为 null。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.GetMetaTable(System.Web.UI.IDataSource)">
+      <summary>获取指定的数据源对象中的表的元数据。</summary>
+      <param name="dataSource">数据源为其获取表元数据的对象。</param>
+      <returns>表元数据与关联 <see cref="T:System.Web.UI.IDataSource" /> 对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.GetMetaTable(System.Web.UI.INamingContainer)">
+      <summary>获取指定的数据控件则表元数据。</summary>
+      <param name="control">为其获取表元数据的数据控件。</param>
+      <returns>与之关联的表元数据 <see cref="T:System.Web.UI.INamingContainer" /> 对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.GetTable(System.Web.DynamicData.IDynamicDataSource)">
+      <summary>返回 <see cref="T:System.Web.DynamicData.MetaTable" /> 与指定的数据源控件相关联的对象。</summary>
+      <param name="dataSource">数据源控件。</param>
+      <returns>使用指定的数据相关联的表源控件。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:System.Web.DynamicData.IDynamicDataSource.EntitySetName" /> 属性 <paramref name="dataSource" /> 是 null。- 或 -<see cref="P:System.Web.DynamicData.IDynamicDataSource.ContextType" /> 属性 <paramref name="dataSource" /> 是 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.LoadWith``1(System.Web.UI.WebControls.LinqDataSource)">
+      <summary>集 <see cref="T:System.Data.Linq.DataLoadOptions" /> LINQ 到 SQL 数据源以强制所有外键实体要加载的值。</summary>
+      <param name="dataSource">要加载的外键的 LINQ 数据源。</param>
+      <typeparam name="TEntity">使用数据源返回的实体的类型。</typeparam>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.LoadWithForeignKeys(System.Web.UI.WebControls.LinqDataSource,System.Type)">
+      <summary>集 <see cref="T:System.Data.Linq.DataLoadOptions" /> LINQ 到 SQL 数据源以强制所有外键实体要加载的值。</summary>
+      <param name="dataSource">要加载的外键的 LINQ 数据源。</param>
+      <param name="rowType">使用数据源返回的实体的类型。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.SetMetaTable(System.Web.UI.INamingContainer,System.Web.DynamicData.MetaTable)">
+      <summary>设置指定的数据控件则表元数据。</summary>
+      <param name="control">
+        <see cref="T:System.Web.UI.INamingContainer" /> 包含的表的对象。</param>
+      <param name="table">表元数据。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.SetMetaTable(System.Web.UI.INamingContainer,System.Web.DynamicData.MetaTable,System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>设置表的元数据和默认值映射为指定的数据控件。</summary>
+      <param name="control">
+        <see cref="T:System.Web.UI.INamingContainer" /> 包含的表的对象。</param>
+      <param name="table">表元数据。</param>
+      <param name="defaultValues">默认值映射。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.SetMetaTable(System.Web.UI.INamingContainer,System.Web.DynamicData.MetaTable,System.Object)">
+      <summary>设置表的元数据和默认值映射为指定的数据控件。</summary>
+      <param name="control">
+        <see cref="T:System.Web.UI.INamingContainer" /> 包含的表的对象。</param>
+      <param name="table">表元数据。</param>
+      <param name="defaultValues">默认值映射。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.TryGetMetaTable(System.Web.UI.IDataSource,System.Web.DynamicData.MetaTable@)">
+      <summary>确定表元数据是否可用。</summary>
+      <param name="dataSource">数据源包含的表。</param>
+      <param name="table">此方法返回时，包含表元数据。 此参数未经初始化即被传递。</param>
+      <returns>true 如果可用，则表元数据否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataExtensions.TryGetMetaTable(System.Web.UI.INamingContainer,System.Web.DynamicData.MetaTable@)">
+      <summary>确定表元数据是否可用。</summary>
+      <param name="control">
+        <see cref="T:System.Web.UI.INamingContainer" /> 包含的表的对象。</param>
+      <param name="table">此方法返回时，包含表元数据。 此参数未经初始化即被传递。</param>
+      <returns>true 如果可用，则表元数据否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataManager.#ctor">
+      <summary>新实例初始化 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 控件。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataManager.OnInit(System.EventArgs)">
+      <summary>引发 <see cref="E:System.Web.UI.Control.Init" /> 事件。</summary>
+      <param name="e">事件数据。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataManager.OnLoad(System.EventArgs)">
+      <summary>引发 <see cref="E:System.Web.UI.Control.Load" /> 事件。</summary>
+      <param name="e">事件数据。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataManager.RegisterControl(System.Web.UI.Control)">
+      <summary>将控件注册 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 控件。</summary>
+      <param name="control">要注册的数据控件。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataManager.RegisterControl(System.Web.UI.Control,System.Boolean)">
+      <summary>将控件注册 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 控件。</summary>
+      <param name="control">要注册的数据控件。</param>
+      <param name="setSelectionFromUrl">true 若要使用的主键值设置所选的项目;否则，不设置选定的项。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRoute.#ctor(System.String)">
+      <summary>新实例初始化 <see cref="T:System.Web.DynamicData.DynamicDataRoute" /> 类通过使用指定的 URL 模式。</summary>
+      <param name="url">Url 模式。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRoute.GetActionFromRouteData(System.Web.Routing.RouteData)">
+      <summary>返回从操作 <see cref="T:System.Web.Routing.RouteData" /> 当前的动态数据 Web 请求的对象。</summary>
+      <param name="routeData">适用于当前的请求路由数据。 有关详细信息，请参阅<see cref="M:System.Web.DynamicData.DynamicDataRoute.GetRouteData(System.Web.HttpContextBase)" />。</param>
+      <returns>操作本身。 有关可能的值的列表，请参阅 <see cref="T:System.Web.DynamicData.PageAction" />。</returns>
+      <exception cref="T:System.InvalidOperationException">在 Web 请求路由信息中找不到该操作。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRoute.GetRouteData(System.Web.HttpContextBase)">
+      <summary>返回一个路由为特定的 Web 请求的信息。</summary>
+      <param name="httpContext">包含有关 Web 请求的信息。</param>
+      <returns>Web 请求的路由信息。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRoute.GetTableFromRouteData(System.Web.Routing.RouteData)">
+      <summary>标识与动态数据网站页面请求相关联的表。</summary>
+      <param name="routeData">适用于当前的请求路由数据。 有关详细信息，请参阅<see cref="M:System.Web.DynamicData.DynamicDataRoute.GetRouteData(System.Web.HttpContextBase)" />。</param>
+      <returns>描述动态数据将显示一个表的元数据。</returns>
+      <exception cref="T:System.InvalidOperationException">在 Web 请求路由信息中找不到表。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRoute.GetVirtualPath(System.Web.Routing.RequestContext,System.Web.Routing.RouteValueDictionary)">
+      <summary>返回一个路由的虚拟路径。</summary>
+      <param name="requestContext">包含有关 Web 请求的信息。</param>
+      <param name="values">当前应用程序的 route 对象的集合。</param>
+      <returns>虚拟路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRouteHandler.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DynamicDataRouteHandler" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRouteHandler.CreateHandler(System.Web.DynamicData.DynamicDataRoute,System.Web.DynamicData.MetaTable,System.String)">
+      <summary>创建一个处理程序来处理请求。</summary>
+      <param name="route">匹配的路由。</param>
+      <param name="table">包含在路由元数据表。</param>
+      <param name="action">包含在路由操作。</param>
+      <returns>可以处理的请求处理程序。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRouteHandler.GetCustomPageVirtualPath(System.Web.DynamicData.MetaTable,System.String)">
+      <summary>创建自定义页的虚拟路径。</summary>
+      <param name="table">页面代表数据模型元数据表。</param>
+      <param name="viewName">视图操作，这是不带".aspx"文件扩展名的页名称的名称。</param>
+      <returns>自定义页上的虚拟路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRouteHandler.GetRequestContext(System.Web.HttpContext)">
+      <summary>返回 <see cref="T:System.Web.Routing.RequestContext" /> 当前 Web 请求的实例。</summary>
+      <param name="httpContext">程序与 Web 请求上下文信息。</param>
+      <returns>Web 请求的请求上下文。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="httpContext" /> 为 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRouteHandler.GetRequestMetaTable(System.Web.HttpContext)">
+      <summary>返回 <see cref="T:System.Web.DynamicData.MetaTable" /> 对象从 <see cref="T:System.Web.HttpContext" /> 对象。</summary>
+      <param name="httpContext">程序与 Web 请求上下文信息。</param>
+      <returns>与当前的 Web 请求相关联的数据模型元数据表或 null 如果请求不是动态数据请求</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="httpContext" /> 为 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRouteHandler.GetScaffoldPageVirtualPath(System.Web.DynamicData.MetaTable,System.String)">
+      <summary>返回为动态数据启用的页的虚拟路径。</summary>
+      <param name="table">页面仅针对元数据表。</param>
+      <param name="viewName">视图操作，这是不带".aspx"文件扩展名的页名称的名称。</param>
+      <returns>页的虚拟路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRouteHandler.SetRequestMetaTable(System.Web.HttpContext,System.Web.DynamicData.MetaTable)">
+      <summary>集 <see cref="T:System.Web.DynamicData.MetaTable" /> 对象，该程序与当前对象 <see cref="T:System.Web.HttpRequest" /> 对象。</summary>
+      <param name="httpContext">程序与 Web 请求上下文信息。</param>
+      <param name="table">与当前的请求相关联的元表。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicDataRouteHandler.System#Web#Routing#IRouteHandler#GetHttpHandler(System.Web.Routing.RequestContext)">
+      <summary>返回的处理程序处理 ASP.NET 动态数据路由模式。</summary>
+      <param name="requestContext">程序与 Web 请求上下文信息。</param>
+      <returns>处理 ASP.NET 动态数据路由模式处理程序。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicEntity.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DynamicEntity" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicEntity.OnLoad(System.EventArgs)">
+      <summary>引发 <see cref="E:System.Web.UI.Control.Load" /> 事件。</summary>
+      <param name="e">事件数据。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicEntity.Render(System.Web.UI.HtmlTextWriter)">
+      <summary>将服务器控件内容发送到指定 <see cref="T:System.Web.UI.HtmlTextWriter" /> 对象，用于呈现内容。</summary>
+      <param name="writer">用于接收服务器控件内容的 <see cref="T:System.Web.UI.HtmlTextWriter" /> 对象。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicField.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DynamicField" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicField.ConfigureDynamicControl(System.Web.DynamicData.DynamicControl)">
+      <summary>提供了一种机制来修改 <see cref="T:System.Web.DynamicData.DynamicControl" /> 对象，它由 <see cref="M:System.Web.DynamicData.DynamicField.InitializeCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType,System.Web.UI.WebControls.DataControlRowState,System.Int32)" /> 方法。</summary>
+      <param name="control">要修改的控件。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicField.CopyProperties(System.Web.UI.WebControls.DataControlField)">
+      <summary>仪表板复制属性当前 <see cref="T:System.Web.DynamicData.DynamicField" /> 对象传递给指定 <see cref="T:System.Web.UI.WebControls.DataControlField" /> 对象。</summary>
+      <param name="newField">
+        <see cref="T:System.Web.UI.WebControls.DataControlField" /> 要复制的当前属性 <see cref="T:System.Web.DynamicData.DynamicField" /> 到。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicField.CreateDynamicControl">
+      <summary>提供用于从派生类的机制 <see cref="T:System.Web.DynamicData.DynamicField" /> 重写如何 <see cref="T:System.Web.DynamicData.DynamicControl" /> 创建对象。</summary>
+      <returns>新的动态控件。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicField.CreateField">
+      <summary>创建并返回的新实例 <see cref="T:System.Web.DynamicData.DynamicField" /> 类。</summary>
+      <returns>
+        <see cref="T:System.Web.DynamicData.DynamicField" /> 类的新实例。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicField.ExtractValuesFromCell(System.Collections.Specialized.IOrderedDictionary,System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlRowState,System.Boolean)">
+      <summary>从当前的表单元格中提取的数据字段的值并将值添加到指定的字典。</summary>
+      <param name="dictionary">将保留的单元格中值的字典。</param>
+      <param name="cell">包含文本或控件的单元格 <see cref="T:System.Web.DynamicData.DynamicField" /> 对象。</param>
+      <param name="rowState">指定行状态的枚举值之一。</param>
+      <param name="includeReadOnly">true 若要包括在只读字段的值 <paramref name="dictionary" />; 否则为 false。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicField.GetAttribute(System.String)">
+      <summary>检索指定的属性值。</summary>
+      <param name="key">要获取的属性的键。</param>
+      <returns>属性的值。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicField.InitializeCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType,System.Web.UI.WebControls.DataControlRowState,System.Int32)">
+      <summary>添加文本或控件到指定的单元格。</summary>
+      <param name="cell">对象，其中包含文本或控件 <see cref="T:System.Web.DynamicData.DynamicField" /> 对象。</param>
+      <param name="cellType">指定的函数的枚举值之一 <paramref name="cell" /> 对象。</param>
+      <param name="rowState">指定行状态的枚举值之一。</param>
+      <param name="rowIndex">行的索引， <paramref name="cell" /> 对象是否包含在。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicField.SetAttribute(System.String,System.String)">
+      <summary>设置与之关联的属性 <see cref="T:System.Web.DynamicData.DynamicField" /> 对象。</summary>
+      <param name="key">要设置的属性的名称。</param>
+      <param name="value">特性值。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicFilter.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DynamicFilter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicFilter.Render(System.Web.UI.HtmlTextWriter)">
+      <summary>将服务器控件内容发送到指定 <see cref="T:System.Web.UI.HtmlTextWriter" /> 对象。</summary>
+      <param name="writer">接收服务器控制内容的对象。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicFilter.System#Web#DynamicData#IFilterExpressionProvider#GetQueryable(System.Linq.IQueryable)">
+      <summary>获取使用当前的筛选器值的修改后的查询。</summary>
+      <param name="source">数据源查询。</param>
+      <returns>筛选器。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicFilter.System#Web#DynamicData#IFilterExpressionProvider#Initialize(System.Web.UI.WebControls.IQueryableDataSource)">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DynamicFilter" /> 类的新实例。</summary>
+      <param name="dataSource">数据源。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicFilterExpression.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DynamicFilterExpression" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicFilterExpression.GetQueryable(System.Linq.IQueryable)">
+      <summary>获取使用当前的筛选器值的修改后的查询。</summary>
+      <param name="source">要修改的数据源查询。</param>
+      <returns>中包含的当前值可通过修改的数据源查询 <see cref="T:System.Web.DynamicData.DynamicFilterExpression" /> 实例。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicFilterExpression.SetContext(System.Web.UI.Control,System.Web.HttpContext,System.Web.UI.WebControls.IQueryableDataSource)">
+      <summary>初始化表达式与数据源信息。</summary>
+      <param name="owner">包含的控件 <see cref="T:System.Web.DynamicData.DynamicFilterExpression" /> 实例，如 <see cref="T:System.Web.UI.WebControls.QueryExtender" /> 控件。</param>
+      <param name="context">当前的 <see cref="T:System.Web.HttpContext" /> 对象。</param>
+      <param name="dataSource">目标数据源 <see cref="T:System.Web.DynamicData.DynamicFilterExpression" /> 实例。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicHyperLink.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DynamicHyperLink" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicHyperLink.OnDataBinding(System.EventArgs)">
+      <summary>引发 <see cref="E:System.Web.UI.Control.DataBinding" /> 事件。</summary>
+      <param name="e">事件数据。</param>
+      <exception cref="T:System.InvalidOperationException">尝试在数据绑定过程中设置的表和数据上下文。- 或 -尝试将绑定到 null 数据字段。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicHyperLink.OnPreRender(System.EventArgs)">
+      <summary>引发 <see cref="E:System.Web.UI.Control.PreRender" /> 事件。</summary>
+      <param name="e">事件数据。</param>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="T:System.Web.DynamicData.DynamicHyperLink" /> 对象不能确定要链接到的数据表。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicHyperLink.System#Web#UI#IAttributeAccessor#GetAttribute(System.String)">
+      <summary>检索指定应用于的属性的值 <see cref="T:System.Web.DynamicData.DynamicHyperLink" /> 控件。</summary>
+      <param name="key">要检索的属性的名称。</param>
+      <returns>指定的特性应用于链接。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicHyperLink.System#Web#UI#IAttributeAccessor#SetAttribute(System.String,System.String)">
+      <summary>定义一个属性和它的值将应用于 <see cref="T:System.Web.DynamicData.DynamicHyperLink" /> 控件。</summary>
+      <param name="key">属性名。</param>
+      <param name="value">分配给属性的值。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicQueryStringParameter.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DynamicQueryStringParameter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicQueryStringParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)">
+      <summary>引发 <see cref="T:System.InvalidOperationException" /> 在所有情况下的异常。</summary>
+      <param name="context">有关 HTTP 请求的信息。</param>
+      <param name="control">控制参数绑定到。</param>
+      <returns>引发 <see cref="T:System.InvalidOperationException" /> 在所有情况下的异常。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicQueryStringParameter.GetWhereParameters(System.Web.DynamicData.IDynamicDataSource)">
+      <summary>返回的集合 <see cref="T:System.Web.UI.WebControls.Parameter" /> 通过自动生成的表的列检索的对象查询字符串值。</summary>
+      <param name="dataSource">数据源对象。</param>
+      <returns>通过自动生成的表的列检索查询字符串值的参数的集合</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicRouteExpression.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DynamicRouteExpression" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicRouteExpression.GetQueryable(System.Linq.IQueryable)">
+      <summary>获取从数据源的查询...</summary>
+      <param name="source">要修改的查询。</param>
+      <returns>修改后的查询实例。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicRouteExpression.SetContext(System.Web.UI.Control,System.Web.HttpContext,System.Web.UI.WebControls.IQueryableDataSource)">
+      <summary>设置的 HTTP 上下文 <see cref="T:System.Web.DynamicData.DynamicRouteExpression" /> 对象。</summary>
+      <param name="owner">包含的控件 <see cref="T:System.Web.DynamicData.DynamicRouteExpression" /> 实例。 这是 <see cref="T:System.Web.UI.WebControls.QueryExtender" /> 控件。</param>
+      <param name="context">Web 请求上下文。</param>
+      <param name="dataSource">目标数据源 <see cref="T:System.Web.DynamicData.DynamicRouteExpression" /> 实例。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicValidator.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.DynamicValidator" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicValidator.ControlPropertiesValid">
+      <summary>指示是否指定的属性 <see cref="T:System.Web.DynamicData.DynamicValidator" /> 控件都有效。</summary>
+      <returns>true, 如果指定的验证控件的属性是有效，则为否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicValidator.EvaluateIsValid">
+      <summary>确定要验证的输入控件中的值是否有效。</summary>
+      <returns>true 如果验证控件进行求值是有效，则为否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicValidator.OnInit(System.EventArgs)">
+      <summary>引发 Init 事件以初始化 <see cref="T:System.Web.DynamicData.DynamicValidator" /> 控件。</summary>
+      <param name="e">事件数据。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.DynamicValidator.ValidateException(System.Exception)">
+      <summary>设置验证异常，如果数据模型中发生异常。</summary>
+      <param name="exception">则会引发异常。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.EntityTemplate.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.EntityTemplate" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.EntityTemplateFactory.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.EntityTemplateFactory" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.EntityTemplateFactory.BuildEntityTemplateVirtualPath(System.String,System.Web.UI.WebControls.DataBoundControlMode)">
+      <summary>生成指定的表的实体模板的路径。</summary>
+      <param name="templateName">为其生成路径实体模板的名称。</param>
+      <param name="mode">实体模板显示模式。</param>
+      <returns>指定表的实体模板的路径。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="templateName" /> 是 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.EntityTemplateFactory.CreateEntityTemplate(System.Web.DynamicData.MetaTable,System.Web.UI.WebControls.DataBoundControlMode,System.String)">
+      <summary>创建指定的表的实体模板实例。</summary>
+      <param name="table">实体模板应用于表的元数据。</param>
+      <param name="mode">实体模板显示模式。</param>
+      <param name="uiHint">要使用的模板的名称。</param>
+      <returns>
+        <see cref="T:System.Web.DynamicData.EntityTemplateUserControl" /> 类的实例。</returns>
+      <exception cref="T:System.ArgumentNullException">此表是 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.EntityTemplateFactory.GetEntityTemplateVirtualPath(System.Web.DynamicData.MetaTable,System.Web.UI.WebControls.DataBoundControlMode,System.String)">
+      <summary>获取指定的表实体模板的虚拟路径。</summary>
+      <param name="table">实体模板应用于表的元数据。</param>
+      <param name="mode">实体模板显示模式。</param>
+      <param name="uiHint">要使用的模板的名称。</param>
+      <returns>指定表的实体模板虚拟路径。</returns>
+      <exception cref="T:System.ArgumentNullException">此表是 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.EntityTemplateUserControl.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.EntityTemplateUserControl" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateFactory.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.FieldTemplateFactory" /> 类的实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateFactory.BuildVirtualPath(System.String,System.Web.DynamicData.MetaColumn,System.Web.UI.WebControls.DataBoundControlMode)">
+      <summary>生成基于字段模板的名称和模式的字段模板的虚拟路径。</summary>
+      <param name="templateName">要使用的模板的名称。</param>
+      <param name="column">指定的字段模板应用于的数据列。</param>
+      <param name="mode">指定的字段模板的显示模式。</param>
+      <returns>字段模板的虚拟路径。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="templateName" /> 为 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateFactory.CreateFieldTemplate(System.Web.DynamicData.MetaColumn,System.Web.UI.WebControls.DataBoundControlMode,System.String)">
+      <summary>创建的字段模板使用一个实例 <see cref="T:System.Web.DynamicData.MetaColumn" /> 类， <see cref="T:System.Web.UI.WebControls.DataBoundControlMode" /> 类和 <see cref="P:System.Web.DynamicData.MetaColumn.UIHint" /> 属性。</summary>
+      <param name="column">指定的字段模板应用于的数据列。</param>
+      <param name="mode">指定的字段模板的显示模式。</param>
+      <param name="uiHint">指定要使用的字段模板。</param>
+      <returns>接口的实例， <see cref="T:System.Web.DynamicData.FieldTemplateFactory" /> 类实现。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateFactory.GetFieldTemplateVirtualPath(System.Web.DynamicData.MetaColumn,System.Web.UI.WebControls.DataBoundControlMode,System.String)">
+      <summary>确定字段模板的虚拟路径。</summary>
+      <param name="column">指定的字段模板应用于的数据列。</param>
+      <param name="mode">指定显示模式下显示的字段模板的只读、 编辑或插入。</param>
+      <param name="uiHint">指定要使用的字段模板。 此字段模板查找参数影响。</param>
+      <returns>字段模板的虚拟路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateFactory.Initialize(System.Web.DynamicData.MetaModel)">
+      <summary>将相关联 <see cref="T:System.Web.DynamicData.MetaModel" /> 与 <see cref="T:System.Web.DynamicData.FieldTemplateFactory" />。</summary>
+      <param name="model">指定要将与相关联的数据模型 <see cref="T:System.Web.DynamicData.FieldTemplateFactory" />。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateFactory.PreprocessMode(System.Web.DynamicData.MetaColumn,System.Web.UI.WebControls.DataBoundControlMode)">
+      <summary>更改数据列的模式。</summary>
+      <param name="column">为其所需的字段模板的列。</param>
+      <param name="mode">模式 （只读访问权限、 编辑或插入） 更改为。</param>
+      <returns>列呈现模式。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.FieldTemplateUserControl" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.BuildChildrenPath(System.String)">
+      <summary>获取的 URL 链接到网页，可显示子实体的列表并允许重写路径。</summary>
+      <param name="path">要重写的路径。</param>
+      <returns>将显示的页面链接到子页面 URL。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.BuildForeignKeyPath(System.String)">
+      <summary>获取当前页面链接到显示外键的实体的详细信息，并允许重写路径的页面的 URL。</summary>
+      <param name="path">要重写的路径。</param>
+      <returns>链接到显示外键页面的详细信息的页面 URL。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.ConvertEditedValue(System.String)">
+      <summary>获取输入的值或 null 基于 <see cref="P:System.Web.DynamicData.MetaColumn.ConvertEmptyStringToNull" /> 和 <see cref="P:System.Web.DynamicData.DynamicField.NullDisplayText" />。</summary>
+      <param name="value">输入的值。</param>
+      <returns>转换后的值。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.ExtractForeignKey(System.Collections.IDictionary,System.String)">
+      <summary>将保存的外键的值。</summary>
+      <param name="dictionary">包含所有新的值的字典。</param>
+      <param name="selectedValue">要保存的值。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.ExtractValues(System.Collections.Specialized.IOrderedDictionary)">
+      <summary>提供对当前行中的所有数据的字典访问。</summary>
+      <param name="dictionary">包含所有新的值的字典。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.FindOtherFieldTemplate(System.String)">
+      <summary>确定用于呈现指定的数据列的字段模板。</summary>
+      <param name="columnName">呈现的数据列的字段模板。</param>
+      <returns>用于呈现指定的数据列的字段模板。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.FormatFieldValue(System.Object)">
+      <summary>应用 HTML 编码和格式设置为一个字符串，将显示。</summary>
+      <param name="fieldValue">从要设置格式的数据字段的值。</param>
+      <returns>格式化的值。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.GetColumnValue(System.Web.DynamicData.MetaColumn)">
+      <summary>获取当前行中指定列的值。</summary>
+      <param name="column">要获取的值的列。</param>
+      <returns>一个对象，表示当前行中指定列的值。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.GetSelectedValueString">
+      <summary>返回列的值的字符串表示。</summary>
+      <returns>如果列的当前值为外键列或枚举列的字符串表示形式的所选的值;否则为 null。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.IgnoreModelValidationAttribute(System.Type)">
+      <summary>允许 <see cref="T:System.Web.DynamicData.DynamicValidator" /> 忽略特定类型的模型验证特性。</summary>
+      <param name="attributeType">要忽略的属性。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.PopulateListControl(System.Web.UI.WebControls.ListControl)">
+      <summary>填充列表控件，与父表中的所有值。</summary>
+      <param name="listControl">要填充的列表控件。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.SetUpValidator(System.Web.UI.WebControls.BaseValidator)">
+      <summary>设置 <see cref="P:System.Web.DynamicData.IFieldTemplateHost.ValidationGroup" /> 对所有验证控件。</summary>
+      <param name="validator">要设置的验证控件。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.SetUpValidator(System.Web.UI.WebControls.BaseValidator,System.Web.DynamicData.MetaColumn)">
+      <summary>设置 <see cref="T:System.Web.DynamicData.DynamicValidator" /> 使用验证器和列的类型进行验证。</summary>
+      <param name="validator">若要设置的验证程序的类型。</param>
+      <param name="column">设置为其验证的列。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.System#Web#DynamicData#IFieldTemplate#SetHost(System.Web.DynamicData.IFieldTemplateHost)">
+      <summary>将控制如何使用的字段模板的对象，与关联的字段模板。</summary>
+      <param name="host">承载字段模板类的对象。 控制使用的字段模板。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FieldTemplateUserControl.System#Web#UI#IBindableControl#ExtractValues(System.Collections.Specialized.IOrderedDictionary)">
+      <summary>检索要在字段模板控件中实现双向数据绑定的名称/值对一组。</summary>
+      <param name="dictionary">字典，其中包含名称/值对。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterFactory.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.FilterFactory" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterFactory.CreateFilterControl(System.Web.DynamicData.MetaColumn,System.String)">
+      <summary>创建筛选器模板的实例。</summary>
+      <param name="column">筛选器模板应用的数据列。</param>
+      <param name="filterUIHint">要使用的筛选器模板的名称。</param>
+      <returns>
+        <see cref="T:System.Web.DynamicData.QueryableFilterUserControl" /> 类的实例。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="column" /> 为 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterFactory.GetFilterVirtualPath(System.Web.DynamicData.MetaColumn,System.String)">
+      <summary>获取筛选器模板的虚拟路径。</summary>
+      <param name="column">筛选器模板应用的数据列。</param>
+      <param name="filterUIHint">要使用的筛选器模板。</param>
+      <returns>筛选器模板的虚拟路径。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="column" /> 为 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterRepeater.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.FilterRepeater" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterRepeater.DataBind">
+      <summary>将绑定 <see cref="T:System.Web.DynamicData.FilterRepeater" /> 控件添加到从数据源检索的数据。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterRepeater.GetFilteredColumns">
+      <summary>返回属于程序与当前表的排序列的枚举 <see cref="T:System.Web.DynamicData.FilterRepeater" /> 控件。</summary>
+      <returns>枚举属于程序与当前表的排序列的 <see cref="T:System.Web.DynamicData.FilterRepeater" /> 控件。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterRepeater.GetWhereParameters(System.Web.DynamicData.IDynamicDataSource)">
+      <summary>获取的列表 Where 参数将添加到 Where 参数集合 <see cref="T:System.Web.DynamicData.FilterRepeater" /> 控件。</summary>
+      <param name="dataSource">数据源的 Where 参数。</param>
+      <returns>一份 Where 参数。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterRepeater.OnFilterItemCreated(System.Web.UI.WebControls.RepeaterItem)">
+      <summary>为每个项目和交替项模板进行实例化，此调用 <see cref="T:System.Web.DynamicData.FilterRepeater" /> 期间数据绑定控件。</summary>
+      <param name="item">项模板的内容。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterRepeater.OnInit(System.EventArgs)">
+      <summary>引发 <see cref="E:System.Web.UI.Control.Init" /> 事件以初始化 <see cref="T:System.Web.DynamicData.FilterRepeater" /> 控件。</summary>
+      <param name="e">事件数据。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterRepeater.OnItemCreated(System.Web.UI.WebControls.RepeaterItemEventArgs)">
+      <summary>引发 <see cref="E:System.Web.UI.WebControls.Repeater.ItemCreated" /> 事件。</summary>
+      <param name="e">事件数据。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterUserControlBase.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.FilterUserControlBase" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterUserControlBase.PopulateListControl(System.Web.UI.WebControls.ListControl)">
+      <summary>填充 <see cref="T:System.Web.UI.WebControls.ListControl" /> 与数据表中，通过外键与当前表相关的所有项的对象。</summary>
+      <param name="listControl">要填充的控件。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.FilterUserControlBase.System#Web#DynamicData#IControlParameterTarget#GetPropertyNameExpression(System.String)">
+      <summary>获取筛选后的列的名称。</summary>
+      <param name="columnName">已筛选的列。</param>
+      <returns>已筛选的列。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.IControlParameterTarget.GetPropertyNameExpression(System.String)">
+      <summary>获取可用作控件参数的属性名称的表达式。</summary>
+      <param name="columnName">列的名称。</param>
+      <returns>一个表达式，可用作控件参数的属性名称。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.IFieldTemplate.SetHost(System.Web.DynamicData.IFieldTemplateHost)">
+      <summary>将与控制其使用的对象关联的字段模板。</summary>
+      <param name="host">控制使用的字段模板的对象。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.IFieldTemplateFactory.CreateFieldTemplate(System.Web.DynamicData.MetaColumn,System.Web.UI.WebControls.DataBoundControlMode,System.String)">
+      <summary>创建的字段模板使用一个实例 <see cref="T:System.Web.DynamicData.MetaColumn" /> 类， <see cref="T:System.Web.UI.WebControls.DataBoundControlMode" /> 类和 <see cref="P:System.Web.DynamicData.MetaColumn.UIHint" /> 属性。</summary>
+      <param name="column">指定要用于显示的字段模板的数据列。</param>
+      <param name="mode">指定的字段模板的显示模式。</param>
+      <param name="uiHint">指定要使用的字段模板。</param>
+      <returns>一个实例 <see cref="T:System.Web.DynamicData.FieldTemplateFactory" /> 对象类中实现时。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.IFieldTemplateFactory.Initialize(System.Web.DynamicData.MetaModel)">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.FieldTemplateFactory" /> 使用指定的数据模型。</summary>
+      <param name="model">指定的字段模板使用的数据模型。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.IFilterExpressionProvider.GetQueryable(System.Linq.IQueryable)">
+      <summary>返回筛选器 repeater。</summary>
+      <param name="source">数据源查询。</param>
+      <returns>筛选器。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.IFilterExpressionProvider.Initialize(System.Web.UI.WebControls.IQueryableDataSource)">
+      <summary>初始化数据源。</summary>
+      <param name="dataSource">数据源。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.IWhereParametersProvider.GetWhereParameters(System.Web.DynamicData.IDynamicDataSource)">
+      <summary>获取的列表 Where 应添加到参数 Where 参数集合。</summary>
+      <param name="dataSource">参数的源。</param>
+      <returns>参数的列表。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaChildrenColumn.#ctor(System.Web.DynamicData.MetaTable,System.Web.DynamicData.ModelProviders.ColumnProvider)">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.MetaChildrenColumn" /> 类的新实例。</summary>
+      <param name="table">元表中。</param>
+      <param name="entityMember">列提供程序。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaChildrenColumn.GetChildrenListPath(System.Object)">
+      <summary>获取子表列表操作页上的路径。</summary>
+      <param name="row">包含外键字段的行。</param>
+      <returns>为子表的列表操作页的路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaChildrenColumn.GetChildrenPath(System.String,System.Object)">
+      <summary>获取子表的指定的操作页的路径。</summary>
+      <param name="action">目标操作。</param>
+      <param name="row">包含外键字段的行。</param>
+      <returns>子表的指定的操作页的路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaChildrenColumn.GetChildrenPath(System.String,System.Object,System.String)">
+      <summary>获取子表的指定的操作页的路径。</summary>
+      <param name="action">目标操作。</param>
+      <param name="row">包含外键字段的行。</param>
+      <param name="path">目标页中。</param>
+      <returns>子表的指定的操作页的路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaChildrenColumn.Initialize">
+      <summary>初始化时调用的构造函数可能不可用的数据。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaColumn.#ctor(System.Web.DynamicData.MetaTable,System.Web.DynamicData.ModelProviders.ColumnProvider)">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.MetaColumn" /> 类的新实例。</summary>
+      <param name="table">包含的列元表。</param>
+      <param name="columnProvider">列提供程序。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaColumn.BuildAttributeCollection">
+      <summary>获取属性集合。</summary>
+      <returns>特性集合。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaColumn.Initialize">
+      <summary>初始化时调用的构造函数可能不可用的数据。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaColumn.ResetMetadata">
+      <summary>清除缓存的列元数据。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaColumn.ToString">
+      <summary>获取数据字段名称。</summary>
+      <returns>数据字段名称的字符串表示的列。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaForeignKeyColumn.#ctor(System.Web.DynamicData.MetaTable,System.Web.DynamicData.ModelProviders.ColumnProvider)">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.MetaForeignKeyColumn" /> 类的新实例。</summary>
+      <param name="table">实体元表。</param>
+      <param name="entityMember">实体列提供程序。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaForeignKeyColumn.ExtractForeignKey(System.Collections.IDictionary,System.String)">
+      <summary>将外键的值保存在指定的字典。</summary>
+      <param name="dictionary">一个包含数据字段的新值的字典对象。</param>
+      <param name="value">外键的值。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaForeignKeyColumn.GetFilterExpression(System.String)">
+      <summary>返回映射到外键的备用名称。</summary>
+      <param name="foreignKeyName">外键的名称。</param>
+      <returns>映射到外键替换名称。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyDetailsPath(System.Object)">
+      <summary>获取指定的外键字段的父表的详细信息操作页面的路径。</summary>
+      <param name="row">包含外键字段的行。</param>
+      <returns>指定外键字段的父表的详细信息操作页面的路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyPath(System.String,System.Object)">
+      <summary>获取指定的外键字段的父表的指定的操作页的路径。</summary>
+      <param name="action">目标操作。</param>
+      <param name="row">包含外键字段的行。</param>
+      <returns>指定的操作页的父表的指定外键字段的路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyPath(System.String,System.Object,System.String)">
+      <summary>获取指定的外键字段的父表的指定的操作页的路径。</summary>
+      <param name="action">目标操作。</param>
+      <param name="row">包含外键字段的行。</param>
+      <param name="path">目标页中。</param>
+      <returns>指定的操作页的父表的指定外键字段的路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyString(System.Object)">
+      <summary>检索表示外键，用于指定行的值以逗号分隔列表。</summary>
+      <param name="row">要检索的外键值的行。</param>
+      <returns>以逗号分隔列表表示的指定行的外键的值。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaForeignKeyColumn.GetForeignKeyValues(System.Object)">
+      <summary>检索表示指定的行的外键的值的集合。</summary>
+      <param name="row">要检索的外键值的行。</param>
+      <returns>表示指定的行的外键的值的集合。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaForeignKeyColumn.Initialize">
+      <summary>初始化时调用的构造函数可能不可用的数据。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.#ctor">
+      <summary>实例化 <see cref="T:System.Web.DynamicData.MetaModel" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.#ctor(System.Boolean)">
+      <summary>实例化 <see cref="T:System.Web.DynamicData.MetaModel" /> 类的新实例。</summary>
+      <param name="registerGlobally">true 若要指示全局; 注册模型否则为 false。 默认值为 true。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.CreateTable(System.Web.DynamicData.ModelProviders.TableProvider)">
+      <summary>实例化 <see cref="T:System.Web.DynamicData.MetaTable" /> 对象。</summary>
+      <param name="provider">表的提供程序。</param>
+      <returns>表的新实例。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.GetActionPath(System.String,System.String,System.Object)">
+      <summary>返回与特定表相关联的操作路径。</summary>
+      <param name="tableName">操作适用于表的名称。</param>
+      <param name="action">要应用于表的操作。</param>
+      <param name="row">一个表示表中的数据的单个行的对象。<paramref name="row" /> 用于为查询字符串参数提供值。</param>
+      <returns>是与路由关联的 URL。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.GetModel(System.Type)">
+      <summary>返回指定的上下文的数据模型实例。</summary>
+      <param name="contextType">数据上下文的数据模型中定义的类型。</param>
+      <returns>它与指定的上下文类型相关联的数据模型。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.GetTable(System.String)">
+      <summary>返回与指定的表相关联的元数据。</summary>
+      <param name="uniqueTableName">标识数据模型中的表的名称。</param>
+      <returns>描述指定的表的元数据。</returns>
+      <exception cref="T:System.ArgumentException">数据模型中未找到的名称。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.GetTable(System.String,System.Type)">
+      <summary>返回描述指定的表的元数据。</summary>
+      <param name="tableName">表的名称。</param>
+      <param name="contextType">要搜索的表的数据上下文。</param>
+      <returns>描述指定的表的元数据。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="tablename" /> 或 <paramref name="contextType" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">未注册上下文或表不存在的数据上下文中。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.GetTable(System.Type)">
+      <summary>返回描述指定的表的元数据。</summary>
+      <param name="entityType">标识数据模型中的表类型。</param>
+      <returns>描述指定的表的元数据。</returns>
+      <exception cref="T:System.ArgumentNullException">数据模型中找不到该类型。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Func{System.Object})">
+      <summary>注册上下文工厂指定的数据上下文。</summary>
+      <param name="contextFactory">用于实例化的数据上下文工厂。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Func{System.Object},System.Web.DynamicData.ContextConfiguration)">
+      <summary>通过使用指定的上下文配置并启用自定义的构造函数，请注册数据上下文实例。</summary>
+      <param name="contextFactory">一个用来实例化的数据模型上下文的委托。</param>
+      <param name="configuration">按照定义的上下文信息 <see cref="T:System.Web.DynamicData.ContextConfiguration" /> 类。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="contextFactory" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="contextType" /> ，通过实例化 <paramref name="contextFactory" /> 无效。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Type)">
+      <summary>注册数据上下文实例。</summary>
+      <param name="contextType">数据上下文的数据模型中定义的类型。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Type,System.Web.DynamicData.ContextConfiguration)">
+      <summary>通过使用指定的上下文配置注册的数据上下文实例。</summary>
+      <param name="contextType">数据上下文的数据模型中定义的类型。</param>
+      <param name="configuration">上下文中，按照定义的配置信息 <see cref="T:System.Web.DynamicData.ContextConfiguration" /> 类。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="contextType" /> 为 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Web.DynamicData.ModelProviders.DataModelProvider)">
+      <summary>通过使用数据模型提供程序注册数据上下文实例。</summary>
+      <param name="dataModelProvider">一个提供程序的数据模型。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Web.DynamicData.ModelProviders.DataModelProvider,System.Web.DynamicData.ContextConfiguration)">
+      <summary>通过使用指定的上下文配置并启用数据模型提供程序注册的数据上下文实例。</summary>
+      <param name="dataModelProvider">一个提供程序的数据模型。</param>
+      <param name="configuration">按照定义的上下文信息 <see cref="T:System.Web.DynamicData.ContextConfiguration" /> 类。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="dataModelProvider" /> 或 <paramref name="configuration" /> 为 null。</exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="contextType" /> 已注册。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.ResetRegistrationException">
+      <summary>重置可能已经发生任何以前的上下文注册错误。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.TryGetTable(System.String,System.Web.DynamicData.MetaTable@)">
+      <summary>尝试获取与指定的表相关联的元数据。</summary>
+      <param name="uniqueTableName">唯一标识表名称。</param>
+      <param name="table">当此方法返回时，以及它所找到请求的表，包含该表的元数据。 此参数未经初始化即被传递。</param>
+      <returns>true 如果找到，则表元数据则否则为 false。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="uniqueTableName" /> 为 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaModel.TryGetTable(System.Type,System.Web.DynamicData.MetaTable@)">
+      <summary>尝试获取与指定的表相关联的元数据。</summary>
+      <param name="entityType">表类型中。</param>
+      <param name="table">当此方法返回时，并且如果未找到请求的表，包含指定的表的元数据。 此参数未经初始化即被传递。</param>
+      <returns>true 如果找到，则表元数据则否则为 false。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="entityType" /> 为 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.#ctor(System.Web.DynamicData.MetaModel,System.Web.DynamicData.ModelProviders.TableProvider)">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.MetaTable" /> 类的新实例。</summary>
+      <param name="metaModel">实体元模型。</param>
+      <param name="tableProvider">实体模型提供程序。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.BuildAttributeCollection">
+      <summary>创建的属性集合。</summary>
+      <returns>特性集合。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.CanDelete(System.Security.Principal.IPrincipal)">
+      <summary>获取一个值，该值指示是否允许指定的用户来执行删除操作。</summary>
+      <param name="principal">用户的安全上下文。</param>
+      <returns>true 如果允许用户执行，删除操作;否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.CanInsert(System.Security.Principal.IPrincipal)">
+      <summary>获取一个值，该值指示是否允许指定的用户执行插入操作。</summary>
+      <param name="principal">用户的安全上下文。</param>
+      <returns>true 如果允许用户执行，插入操作;否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.CanRead(System.Security.Principal.IPrincipal)">
+      <summary>获取一个值，该值指示是否允许指定的用户执行读取的操作。</summary>
+      <param name="principal">用户的安全上下文。</param>
+      <returns>true 如果用户允许执行，读取操作;否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.CanUpdate(System.Security.Principal.IPrincipal)">
+      <summary>获取一个值，该值指示是否允许指定的用户来执行更新操作。</summary>
+      <param name="principal">用户的安全上下文。</param>
+      <returns>true 如果允许用户执行更新操作;否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.CreateChildrenColumn(System.Web.DynamicData.ModelProviders.ColumnProvider)">
+      <summary>创建一个新的 <see cref="T:System.Web.DynamicData.MetaChildrenColumn" /> 对象。</summary>
+      <param name="columnProvider">列提供程序。</param>
+      <returns>新的子元列对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.CreateColumn(System.Web.DynamicData.ModelProviders.ColumnProvider)">
+      <summary>创建一个 <see cref="T:System.Web.DynamicData.MetaColumn" /> 对象。</summary>
+      <param name="columnProvider">列提供程序。</param>
+      <returns>新的元列对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.CreateContext">
+      <summary>返回表的数据上下文。</summary>
+      <returns>表数据上下文。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.CreateForeignKeyColumn(System.Web.DynamicData.ModelProviders.ColumnProvider)">
+      <summary>创建包含外键的元数据的对象。</summary>
+      <param name="columnProvider">列提供程序。</param>
+      <returns>一个包含外键的元数据的对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.CreateTable(System.ComponentModel.ICustomTypeDescriptor)">
+      <summary>创建指定的表的元数据。</summary>
+      <param name="typeDescriptor">有关表类型的信息。</param>
+      <returns>一个包含表元数据的对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.CreateTable(System.Type)">
+      <summary>创建指定的表的元数据。</summary>
+      <param name="entityType">为其生成的元数据的表类型。</param>
+      <returns>一个包含表元数据的对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetActionPath(System.String)">
+      <summary>返回当前表与指定的操作的操作路径。</summary>
+      <param name="action">操作的名称。</param>
+      <returns>指定操作的操作路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetActionPath(System.String,System.Collections.Generic.IList{System.Object})">
+      <summary>返回当前表、 指定的操作和指定为主键的操作路径。</summary>
+      <param name="action">操作的名称。</param>
+      <param name="primaryKeyValues">构成了主键的列的值的列表。</param>
+      <returns>指定的操作和 primary key 操作路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetActionPath(System.String,System.Collections.Generic.IList{System.Object},System.String)">
+      <summary>基于指定的主键和虚拟路径的操作路径追加查询字符串。</summary>
+      <param name="action">操作的名称。</param>
+      <param name="primaryKeyValues">构成了主键的列的值的列表。</param>
+      <param name="path">操作的虚拟路径。</param>
+      <returns>指定的主键和虚拟路径，对于使用查询字符串值追加到该操作路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetActionPath(System.String,System.Object)">
+      <summary>通过使用操作的名称返回指定行的操作路径。</summary>
+      <param name="action">操作的名称。</param>
+      <param name="row">要获取的操作路径的行。</param>
+      <returns>指定行的操作路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetActionPath(System.String,System.Object,System.String)">
+      <summary>返回指定行的操作路径使用的操作的名称和操作的虚拟路径。</summary>
+      <param name="action">操作的名称。</param>
+      <param name="row">一个包含操作路径的行的对象。</param>
+      <param name="path">操作的虚拟路径。</param>
+      <returns>指定行的操作路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetActionPath(System.String,System.Web.Routing.RouteValueDictionary)">
+      <summary>返回操作路径为当前表和指定的操作和路由。</summary>
+      <param name="action">操作的名称。</param>
+      <param name="routeValues">为该操作的路由的列表。</param>
+      <returns>指定的操作和路由操作路径。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetColumn(System.String)">
+      <summary>返回指定列的元数据。</summary>
+      <param name="columnName">要获取其元数据的列的名称。</param>
+      <returns>列元数据。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetColumnValuesFromRoute(System.Web.HttpContext)">
+      <summary>获取列的值的集合。</summary>
+      <param name="context">指定的 Web 请求的上下文。</param>
+      <returns>列的值的集合。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetDataKeyFromRoute">
+      <summary>从路由值检索该实体的主键。</summary>
+      <returns>如果可以找到这些标识符; 实体主键值否则为 null。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetDisplayString(System.Object)">
+      <summary>返回要用作显示字符串的实例的行的外键关系中使用行时的值。</summary>
+      <param name="row">要获取的显示字符串的行。</param>
+      <returns>显示名称的某一行的实例。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetFilteredColumns">
+      <summary>检索可筛选的列的列表。</summary>
+      <returns>可筛选的列的列表。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetPrimaryKeyDictionary(System.Object)">
+      <summary>检索指定的行的主键名称和值的字典。</summary>
+      <param name="row">一个行。</param>
+      <returns>主键名称和值的字典。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetPrimaryKeyString(System.Collections.Generic.IList{System.Object})">
+      <summary>返回表示指定的行的主键的列的值的以逗号分隔列表。</summary>
+      <param name="primaryKeyValues">构成了主键的列的值的列表。</param>
+      <returns>逗号分隔的列的值列表。 如果列表为空，则返回空字符串。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetPrimaryKeyString(System.Object)">
+      <summary>返回表示指定的行的主键的列的值的以逗号分隔列表。</summary>
+      <param name="row">要获取的主键的行。</param>
+      <returns>逗号分隔的表示行的主键的列的值列表。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetPrimaryKeyValues(System.Object)">
+      <summary>返回表示指定的行的主键的列的值的集合。</summary>
+      <param name="row">要获取的主键的行。</param>
+      <returns>表示行的主键的列的值的集合。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetQuery">
+      <summary>返回 <see cref="T:System.Linq.IQueryable" /> 表示表的实体类型的实例。</summary>
+      <returns>
+        <see cref="T:System.Linq.IQueryable" /> 实体类型的实例。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetQuery(System.Object)">
+      <summary>返回 <see cref="T:System.Linq.IQueryable" /> 使用的数据上下文来表示表的实体类型的实例。</summary>
+      <param name="context">上下文 <see cref="T:System.Web.DynamicData.MetaTable" /> 对象。</param>
+      <returns>
+        <see cref="T:System.Linq.IQueryable" /> 表示数据上下文中的表的实体类型的实例。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetScaffoldColumns(System.Web.UI.WebControls.DataBoundControlMode,System.Web.DynamicData.ContainerType)">
+      <summary>返回要显示通过使用基架的列的列表。</summary>
+      <param name="mode">数据绑定控件模式中。</param>
+      <param name="containerType">一个值，该值指示表是否显示为单独的实体或实体的列表的一部分。</param>
+      <returns>要通过使用基架显示的列列表。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.GetTable(System.Type)">
+      <summary>检索与指定的类型相关联的元表。</summary>
+      <param name="entityType">实体的类型。</param>
+      <returns>使用指定的类型相关联的元表。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="M:System.Web.DynamicData.MetaTable.TryGetTable(System.Type,System.Web.DynamicData.MetaTable@)" /> 由此方法调用的方法返回 false。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.Initialize">
+      <summary>初始化时调用的构造函数可能不可用的数据。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.ResetMetadata">
+      <summary>重置缓存的元数据的表。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.ToString">
+      <summary>返回的表的名称。</summary>
+      <returns>表的名称。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.TryGetColumn(System.String,System.Web.DynamicData.MetaColumn@)">
+      <summary>返回一个值，该值指示是否可以找到指定的列。</summary>
+      <param name="columnName">要查找的列的名称。</param>
+      <param name="column">此方法返回时，包含 MetaColumn 对象 <paramref name="columnName" />。 此参数未经初始化即被传递。</param>
+      <returns>true 如果找不到指定的列;否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.MetaTable.TryGetTable(System.Type,System.Web.DynamicData.MetaTable@)">
+      <summary>检索与指定的类型和表相关联的元表。</summary>
+      <param name="entityType">实体的类型。</param>
+      <param name="table">此方法返回时，包含与指定的类型相关联的元表。 此参数未经初始化即被传递。</param>
+      <returns>与之关联的元给指定和表。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="entityType" /> 为 null。</exception>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.AssociationProvider.#ctor">
+      <summary>新实例初始化 <see cref="T:System.Web.DynamicData.ModelProviders.AssociationProvider" /> 以供继承的类实例使用的类。 此构造函数只能由继承的类调用。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.AssociationProvider.GetSortExpression(System.Web.DynamicData.ModelProviders.ColumnProvider)">
+      <summary>返回表示由关联的列的排序表达式。</summary>
+      <param name="sortColumn">要排序的实体的列。</param>
+      <returns>如果 <see cref="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsSortable" /> 返回 true, ，表示通过关联; 否则为列的排序表达式 null。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.ColumnProvider.#ctor(System.Web.DynamicData.ModelProviders.TableProvider)">
+      <summary>初始化该类供继承的类实例使用。 此构造函数只能由继承的类调用。</summary>
+      <param name="table">包含列的表。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.ColumnProvider.AddDefaultAttributes(System.Web.DynamicData.ModelProviders.ColumnProvider,System.ComponentModel.AttributeCollection)">
+      <summary>将添加默认属性。</summary>
+      <param name="columnProvider">列提供程序。</param>
+      <param name="attributes">特性集合。</param>
+      <returns>特性集合。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.ColumnProvider.ToString">
+      <summary>返回 <see cref="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Name" /> 属性。</summary>
+      <returns>
+        <see cref="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Name" /> 属性或该对象的字符串表示如果 <see cref="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Name" /> 属性是 null。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.DataModelProvider.#ctor">
+      <summary>新实例初始化 <see cref="T:System.Web.DynamicData.ModelProviders.DataModelProvider" /> 以供继承的类实例使用的类。 此构造函数只能由继承的类调用。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.DataModelProvider.CreateContext">
+      <summary>当在派生类中重写时创建数据上下文的实例。</summary>
+      <returns>数据上下文的实例。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.TableProvider.#ctor(System.Web.DynamicData.ModelProviders.DataModelProvider)">
+      <summary>新实例初始化 <see cref="T:System.Web.DynamicData.ModelProviders.TableProvider" /> 以供继承的类实例使用的类。 此构造函数只能由继承的类调用。</summary>
+      <param name="model">此表所属的模型。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.TableProvider.CanDelete(System.Security.Principal.IPrincipal)">
+      <summary>获取一个值，该值指示是否允许用户从表中删除项。</summary>
+      <param name="principal">用户。</param>
+      <returns>true 如果允许用户从表中; 删除项否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.TableProvider.CanInsert(System.Security.Principal.IPrincipal)">
+      <summary>获取一个值，该值指示是否允许用户将项插入到表。</summary>
+      <param name="principal">用户。</param>
+      <returns>true 如果允许用户将项插入表;否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.TableProvider.CanRead(System.Security.Principal.IPrincipal)">
+      <summary>获取一个值，该值指示是否允许用户读取表中的项。</summary>
+      <param name="principal">用户。</param>
+      <returns>true 如果允许用户读取表; 中的项否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.TableProvider.CanUpdate(System.Security.Principal.IPrincipal)">
+      <summary>获取一个值，该值指示是否允许用户更新表中的项。</summary>
+      <param name="principal">用户。</param>
+      <returns>true 如果允许用户以更新表; 中的项否则为 false。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.TableProvider.EvaluateForeignKey(System.Object,System.String)">
+      <summary>返回指定行的外键的值。</summary>
+      <param name="row">要获取的外键值的行。</param>
+      <param name="foreignKeyName">外键列的名称。</param>
+      <returns>外键。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.TableProvider.GetQuery(System.Object)">
+      <summary>当在派生类中重写返回 <see cref="T:System.Linq.IQueryable" /> 又会返回表中的元素的对象。</summary>
+      <param name="context">表数据上下文。</param>
+      <returns>
+        <see cref="T:System.Linq.IQueryable" /> 返回元素的表的对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.TableProvider.GetTypeDescriptor">
+      <summary>获取表的类型描述符。</summary>
+      <returns>针对表的类型描述符。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.ModelProviders.TableProvider.ToString">
+      <summary>返回 <see cref="P:System.Web.DynamicData.ModelProviders.TableProvider.Name" /> 属性 <see cref="T:System.Web.DynamicData.ModelProviders.TableProvider" /> 实例。</summary>
+      <returns>名称 <see cref="T:System.Web.DynamicData.ModelProviders.TableProvider" /> 实例。 如果 <see cref="P:System.Web.DynamicData.ModelProviders.TableProvider.Name" /> 属性是 null, ，基类 Name 返回属性。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.QueryableFilterRepeater.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.QueryableFilterRepeater" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.QueryableFilterRepeater.OnPreRender(System.EventArgs)">
+      <summary>验证控件是否包含数据字段筛选器。</summary>
+      <param name="e">事件数据。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.QueryableFilterRepeater.System#Web#DynamicData#IFilterExpressionProvider#GetQueryable(System.Linq.IQueryable)">
+      <summary>获取使用当前的筛选器值的修改后的查询。</summary>
+      <param name="source">数据源查询。</param>
+      <returns>筛选器。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.QueryableFilterRepeater.System#Web#DynamicData#IFilterExpressionProvider#Initialize(System.Web.UI.WebControls.IQueryableDataSource)">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.QueryableFilterRepeater" /> 类的新实例。</summary>
+      <param name="dataSource">数据源。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.QueryableFilterUserControl.#ctor">
+      <summary>初始化 <see cref="T:System.Web.DynamicData.QueryableFilterUserControl" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.QueryableFilterUserControl.ApplyEqualityFilter(System.Linq.IQueryable,System.String,System.Object)">
+      <summary>获取已转换 <see cref="T:System.Linq.IQueryable" /> 从源对象 <see cref="T:System.Linq.IQueryable" /> 对象。</summary>
+      <param name="source">源 <see cref="T:System.Linq.IQueryable" /> 对象。</param>
+      <param name="propertyName">属性的名称。</param>
+      <param name="value">值为 <paramref name="propertyName" /> 参数。</param>
+      <returns>已转换 <see cref="T:System.Linq.IQueryable" /> 从源对象 <see cref="T:System.Linq.IQueryable" /> 对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.QueryableFilterUserControl.GetQueryable(System.Linq.IQueryable)">
+      <summary>获取已转换 <see cref="T:System.Linq.IQueryable" /> 从源对象 <see cref="T:System.Linq.IQueryable" /> 对象。</summary>
+      <param name="source">源 <see cref="T:System.Linq.IQueryable" /> 对象。</param>
+      <returns>已转换 <see cref="T:System.Linq.IQueryable" /> 从源对象 <see cref="T:System.Linq.IQueryable" /> 对象。</returns>
+    </member>
+    <member name="M:System.Web.DynamicData.QueryableFilterUserControl.OnFilterChanged">
+      <summary>引发 <see cref="E:System.Web.DynamicData.QueryableFilterUserControl.FilterChanged" /> 事件。</summary>
+    </member>
+    <member name="M:System.Web.DynamicData.QueryableFilterUserControl.PopulateListControl(System.Web.UI.WebControls.ListControl)">
+      <summary>填充列表控件，与所有外键的元素或表中的布尔元素。</summary>
+      <param name="listControl">列表控件。</param>
+    </member>
+    <member name="M:System.Web.DynamicData.TableNameAttribute.#ctor(System.String)">
+      <summary>新实例初始化 <see cref="T:System.Web.DynamicData.TableNameAttribute" /> 类具有指定名称的表。</summary>
+      <param name="name">将显示该表中的名称。</param>
+    </member>
+    <member name="M:System.Web.UI.DataControlExtensions.EnableDynamicData(System.Web.UI.INamingContainer,System.Type)">
+      <summary>启用指定的数据控件的动态数据行为。</summary>
+      <param name="control">要启用动态数据行为的数据控件。</param>
+      <param name="entityType">要用于元数据的类型。</param>
+    </member>
+    <member name="M:System.Web.UI.DataControlExtensions.EnableDynamicData(System.Web.UI.INamingContainer,System.Type,System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>启用指定的数据控件的动态数据行为。</summary>
+      <param name="control">要启用动态数据行为的数据控件。</param>
+      <param name="entityType">要用于元数据的类型。</param>
+      <param name="defaultValues">若要使用的默认值 <see cref="T:System.Web.UI.INamingContainer" /> 对象。</param>
+    </member>
+    <member name="M:System.Web.UI.DataControlExtensions.EnableDynamicData(System.Web.UI.INamingContainer,System.Type,System.Object)">
+      <summary>启用指定的数据控件的动态数据行为。</summary>
+      <param name="control">要启用动态数据行为的数据控件。</param>
+      <param name="entityType">表示要显示的表的类型。</param>
+      <param name="defaults">若要使用的默认值 <see cref="T:System.Web.UI.INamingContainer" /> 对象。</param>
+    </member>
+    <member name="P:System.Web.DynamicData.ContextConfiguration.MetadataProviderFactory">
+      <summary>获取或设置元数据提供程序。</summary>
+      <returns>元数据提供程序的类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ContextConfiguration.ScaffoldAllTables">
+      <summary>获取或设置一个值，该值指示是否启用基架。</summary>
+      <returns>true 如果启用了基架;否则为 false。 默认值为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ControlFilterExpression.Column">
+      <summary>获取或设置查询所基于的列的名称。</summary>
+      <returns>基于查询的列的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ControlFilterExpression.ControlID">
+      <summary>获取或设置源的数据绑定控件的 ID。</summary>
+      <returns>源数据绑定控件的 ID。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DataControlReference.ControlID">
+      <summary>获取由管理的数据绑定控件的 ID <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 控件。</summary>
+      <returns>由管理的数据绑定控件的 ID <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 控件。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DataControlReference.Owner">
+      <summary>获取 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 包含数据控件的控件。</summary>
+      <returns>
+        <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 包含数据控件的控件。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DataControlReferenceCollection.Owner">
+      <summary>获取 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 包含数据控件的控件。</summary>
+      <returns>
+        <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 包含数据控件的控件。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.ApplyFormatInEditMode">
+      <summary>获取或设置一个值，该值指示字段处于编辑模式时，是否将 <see cref="P:System.Web.DynamicData.DynamicControl.DataFormatString" /> 属性指定的格式设置字符串应用于字段值。</summary>
+      <returns>如果应用格式设置字符串，则为 true；否则为 false。 默认值为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.Column">
+      <summary>获取或设置与控件关联的列对象。</summary>
+      <returns>与控件关联的列对象。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.ConvertEmptyStringToNull">
+      <summary>获取或设置一个值，该值指示在数据源中更新数据字段时是否将空字符串值 ("") 自动转换为 null 值。</summary>
+      <returns>如果将空字符串值自动转换为 null 值，则为 true；否则为 false。 默认值为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.CssClass">
+      <summary>获取或设置级联样式表 (CSS) 类，该类指定 <see cref="T:System.Web.DynamicData.DynamicControl" /> 控件内容的显示样式。</summary>
+      <returns>CSS 类的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.DataField">
+      <summary>获取或设置 <see cref="T:System.Web.DynamicData.DynamicControl" /> 控件绑定到的数据字段的名称。</summary>
+      <returns>要将 <see cref="T:System.Web.DynamicData.DynamicControl" /> 控件绑定到的数据字段的名称。 默认值为空字符串 ("")，表示尚未设置此属性。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.DataFormatString">
+      <summary>获取或设置一个字符串，该字符串指定字段值的显示格式。</summary>
+      <returns>指定字段值的显示格式的格式化字符串。 默认值为空字符串 ("")，表示尚无特殊格式设置应用于该字段值。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.FieldTemplate">
+      <summary>获取为 <see cref="T:System.Web.DynamicData.DynamicControl" /> 控件创建的字段模板。</summary>
+      <returns>为 <see cref="T:System.Web.DynamicData.DynamicControl" /> 控件创建的字段模板。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.HtmlEncode">
+      <summary>获取或设置一个值，该值指示控件的数据在呈现之前是否经过 HTML 编码。</summary>
+      <returns>如果控件的数据在呈现之前经过 HTML 编码，则为 true；否则为 false。 默认值为 true。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.Mode">
+      <summary>获取或设置呈现模式。</summary>
+      <returns>指定控件的呈现模式的枚举值之一。 默认值为 <see cref="F:System.Web.UI.WebControls.DataBoundControlMode.ReadOnly" />。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.NullDisplayText">
+      <summary>获取或设置当字段值为 null 时，为数据字段显示的标题。</summary>
+      <returns>当字段值为 null 时，为数据字段显示的标题。 默认值为空字符串 ("")，表示尚未设置此属性。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.System#Web#DynamicData#IFieldTemplateHost#FormattingOptions">
+      <summary>有关此成员的说明，请参阅 <see cref="P:System.Web.DynamicData.IFieldTemplateHost.FormattingOptions" />。</summary>
+      <returns>将应用于字段模板的格式设置选项。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.Table">
+      <summary>获取与控件关联的表对象。</summary>
+      <returns>与控件关联的表对象。</returns>
+      <exception cref="T:System.Exception">
+        <see cref="T:System.Web.DynamicData.DynamicControl" /> 控件位于未绑定到数据源控件实现的数据绑定控件 <see cref="T:System.Web.DynamicData.IDynamicDataSource" /> 接口。</exception>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.UIHint">
+      <summary>获取或设置用于呈现数据字段的字段模板的名称。</summary>
+      <returns>用于呈现数据字段的字段模板的名称。 默认值是空字符串 ("")，指示将基于数据字段类型或应用于数据模型的元数据信息，来呈现字段模板。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControl.ValidationGroup">
+      <summary>获取或设置控件的验证组名称。</summary>
+      <returns>控件的验证组名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicControlParameter.ControlId">
+      <summary>获取或设置控件的唯一标识符， <see cref="T:System.Web.DynamicData.DynamicControlParameter" /> 对象绑定到。</summary>
+      <returns>向其控件的唯一标识符 <see cref="T:System.Web.DynamicData.DynamicControlParameter" /> 对象获取其数据。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicDataManager.AutoLoadForeignKeys">
+      <summary>获取或设置一个值，该值指示是否为 LINQ 到 SQL 数据上下文自动加载的外键。</summary>
+      <returns>true 如果自动加载的外键;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicDataManager.ClientID">
+      <summary>获取 <see cref="P:System.Web.UI.Control.ClientID" /> 由 ASP.NET 生成的属性。</summary>
+      <returns>
+        <see cref="P:System.Web.UI.Control.ClientID" /> 由 ASP.NET 生成的属性。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicDataManager.ClientIDMode">
+      <summary>获取用于生成中的值的算法 <see cref="P:System.Web.UI.Control.ClientID" /> 属性。</summary>
+      <returns>一个值，指示如何 <see cref="P:System.Web.UI.Control.ClientID" /> 生成属性。 不能设置此属性。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicDataManager.DataControls">
+      <summary>获取数据控件中的引用列表 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 控件。</summary>
+      <returns>数据控件中的引用列表 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 控件。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicDataManager.Visible">
+      <summary>获取一个值，该值指示是否 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 控件是否可见。</summary>
+      <returns>true 如果 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 可见; 否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicDataRoute.Action">
+      <summary>获取或设置路由操作的名称。</summary>
+      <returns>路由操作名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicDataRoute.Model">
+      <summary>获取或设置路由应用的数据模型。</summary>
+      <returns>路由应用于数据模型元数据。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicDataRoute.RouteHandler">
+      <summary>获取或设置处理路由的请求的对象。</summary>
+      <returns>用于处理请求路由处理程序。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicDataRoute.Table">
+      <summary>获取或设置路由表的名称。</summary>
+      <returns>是与路由关联的表的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicDataRoute.ViewName">
+      <summary>获取或设置与路由关联的.aspx 页的名称。</summary>
+      <returns>是与路由关联.aspx 页的名称。 如果未指定页为路由，该属性返回的值 <see cref="P:System.Web.DynamicData.DynamicDataRoute.Action" /> 具有".aspx"追加到该属性。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicDataRouteHandler.Model">
+      <summary>获取或设置 <see cref="T:System.Web.DynamicData.MetaModel" /> 对象 <see cref="T:System.Web.DynamicData.DynamicDataRouteHandler" /> 类关联。</summary>
+      <returns>在数据模型 <see cref="T:System.Web.DynamicData.DynamicDataRouteHandler" /> 类关联。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicEntity.Mode">
+      <summary>获取或设置 <see cref="T:System.Web.UI.WebControls.DataBoundControlMode" /> 值 <see cref="T:System.Web.DynamicData.DynamicEntity" /> 控件。</summary>
+      <returns>模式。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicEntity.UIHint">
+      <summary>获取或设置 <see cref="T:System.ComponentModel.DataAnnotations.UIHintAttribute" /> 实体属性。</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.DataAnnotations.UIHintAttribute" /> 实体属性。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicEntity.ValidationGroup">
+      <summary>获取或设置的验证组 <see cref="T:System.Web.DynamicData.DynamicEntity" /> 控件。</summary>
+      <returns>验证组中。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.ApplyFormatInEditMode">
+      <summary>获取或设置一个值，该值指示是否带格式的字符串指定的 <see cref="P:System.Web.DynamicData.DynamicField.DataFormatString" /> 数据字段处于编辑模式时，将属性应用于字段值。</summary>
+      <returns>true 如果 <see cref="T:System.Web.DynamicData.DynamicField" /> 应用格式设置处于编辑模式; 否则为 false。 默认值为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.Column">
+      <summary>获取 <see cref="T:System.Web.DynamicData.MetaColumn" /> 对象此 <see cref="T:System.Web.DynamicData.DynamicField" /> 对象与之关联。</summary>
+      <returns>元列中。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.ConvertEmptyStringToNull">
+      <summary>获取或设置一个值，该值指示在数据源中更新数据字段时是否将空字符串值 ("") 自动转换为 null 值。</summary>
+      <returns>true 若要将空字符串值自动转换为 null 值;否则为 false。 默认值为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.DataField">
+      <summary>获取或设置要绑定的数据字段的名称 <see cref="T:System.Web.DynamicData.DynamicField" /> 对象传递给。</summary>
+      <returns>数据的名称字段 <see cref="T:System.Web.DynamicData.DynamicField" /> 绑定到对象。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.DataFormatString">
+      <summary>获取或设置指定数据字段的值的显示格式的字符串。</summary>
+      <returns>一个指定数据字段的值的显示格式的格式设置字符串。 默认值为空字符串 ("")，表示尚无特殊格式设置应用到的值。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.HeaderText">
+      <summary>获取或设置包含的数据绑定控件的标头中显示的文本 <see cref="T:System.Web.DynamicData.DynamicField" /> 对象。</summary>
+      <returns>标头包含的数据绑定控件中显示的文本 <see cref="T:System.Web.DynamicData.DynamicField" /> 对象。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="T:System.Web.DynamicData.DynamicField" /> 对象位于未绑定到数据源控件实现的数据绑定控件 <see cref="T:System.Web.DynamicData.IDynamicDataSource" /> 接口。</exception>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.HtmlEncode">
+      <summary>获取或设置一个值，指示数据字段值是否经过 HTML 编码才能显示在 <see cref="T:System.Web.DynamicData.DynamicField" /> 对象。</summary>
+      <returns>true 如果字段值进行 HTML 编码才能显示;否则为 false。 默认值为 true。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.NullDisplayText">
+      <summary>获取或设置当字段值为 null 时，为数据字段显示的标题。</summary>
+      <returns>当字段值为 null 时，为数据字段显示的标题。 默认值为空字符串 ("")，表示尚未设置此属性。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.ReadOnly">
+      <summary>获取动态字段的只读状态。</summary>
+      <returns>动态字段的只读状态。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.SortExpression">
+      <summary>获取或设置数据字段使用的数据源进行排序时将使用的排序表达式。</summary>
+      <returns>数据字段使用的数据源进行排序时将使用排序表达式。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="T:System.Web.DynamicData.DynamicField" /> 对象位于未绑定到数据源控件实现的数据绑定控件 <see cref="T:System.Web.DynamicData.IDynamicDataSource" /> 接口。</exception>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.UIHint">
+      <summary>获取或设置要用于显示数据字段的字段模板。</summary>
+      <returns>要用于显示数据字段的字段模板的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.ValidateRequestMode">
+      <summary>获取或设置一个值，指定控件是否验证客户端的输入。</summary>
+      <returns>true 如果该控件验证客户端输入;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicField.ValidationGroup">
+      <summary>获取 <see cref="P:System.Web.DynamicData.DynamicControl.ValidationGroup" /> 对象此 <see cref="T:System.Web.DynamicData.DynamicField" /> 对象与之关联。</summary>
+      <returns>此验证控件所属的验证组名称。 默认值为空字符串 ("")，表示尚未设置此属性。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicFilter.Column">
+      <summary>获取或设置要用于筛选的表列。</summary>
+      <returns>要用于筛选的表列。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicFilter.DataField">
+      <summary>获取或设置要用于筛选表行的列的名称。</summary>
+      <returns>用于筛选表行的列的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicFilter.FilterTemplate">
+      <summary>获取与此控件的当前实例相关联的筛选器模板。</summary>
+      <returns>筛选器模板与此控件的当前实例相关联。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicFilter.FilterUIHint">
+      <summary>获取或设置用于创建用户界面的筛选器模板的名称。</summary>
+      <returns>筛选器模板的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicFilterExpression.ControlID">
+      <summary>获取或设置筛选器控件标识符。</summary>
+      <returns>筛选器控件标识符。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicHyperLink.Action">
+      <summary>获取或设置与链接相关联的操作。</summary>
+      <returns>与链接相关联的操作。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicHyperLink.ContextTypeName">
+      <summary>获取或设置此链接将应用于的数据模型的数据上下文。</summary>
+      <returns>适用于链接数据上下文。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicHyperLink.DataField">
+      <summary>获取或设置此链接显示文本。</summary>
+      <returns>链接显示文本。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicHyperLink.TableName">
+      <summary>获取或设置链接操作的表。</summary>
+      <returns>链接操作表的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicRouteExpression.ColumnName">
+      <summary>获取或设置包含用于查询数据源的外键的列的名称。</summary>
+      <returns>外键列的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicValidator.Column">
+      <summary>获取或设置要验证的列。</summary>
+      <returns>若要验证，该列或 null 如果验证数据实体。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicValidator.ColumnName">
+      <summary>获取要验证的列的名称。</summary>
+      <returns>若要验证，列的名称或 null 如果验证数据实体。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.DynamicValidator.ValidationException">
+      <summary>获取或设置在验证过程中发生验证异常。</summary>
+      <returns>则会引发验证异常。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.EntityTemplate.ItemTemplate">
+      <summary>获取或设置中的数据项的自定义内容 <see cref="T:System.Web.DynamicData.EntityTemplate" /> 控件。</summary>
+      <returns>中的数据项的自定义内容 <see cref="T:System.Web.DynamicData.EntityTemplate" /> 控件。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.EntityTemplateUserControl.ContainerType">
+      <summary>获取包含此实体模板的数据绑定控件的类型。</summary>
+      <returns>包含的模板类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.EntityTemplateUserControl.Mode">
+      <summary>获取实体的数据呈现模式。</summary>
+      <returns>实体数据呈现模式。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.EntityTemplateUserControl.Table">
+      <summary>获取实体模板所应用到的表。</summary>
+      <returns>实体模板应用于表。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.EntityTemplateUserControl.ValidationGroup">
+      <summary>获取要应用于实体控件组的验证。</summary>
+      <returns>要应用于实体控件组的验证。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateFactory.Model">
+      <summary>获取或设置 <see cref="T:System.Web.DynamicData.MetaModel" /> 关联 <see cref="T:System.Web.DynamicData.FieldTemplateFactory" /> 类 </summary>
+      <returns>与之关联的模型 <see cref="T:System.Web.DynamicData.FieldTemplateFactory" />。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateFactory.TemplateFolderVirtualPath">
+      <summary>获取或设置要在其中创建的字段模板的文件夹。</summary>
+      <returns> 指向包含的字段模板的文件夹路径。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.ChildrenColumn">
+      <summary>获取 <see cref="T:System.Web.DynamicData.MetaChildrenColumn" /> 与字段模板关联的对象。</summary>
+      <returns>表示一个对多关系的列。</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <see cref="P:System.Web.DynamicData.FieldTemplateUserControl.ChildrenColumn" /> 为 null。</exception>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.ChildrenPath">
+      <summary>获取的 URL 链接到一个页面，显示子实体的列表。</summary>
+      <returns>所显示的页面链接到子实体的 URL。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.Column">
+      <summary>获取 <see cref="T:System.Web.DynamicData.MetaColumn" /> 与字段模板关联。</summary>
+      <returns>一个表示数据库列的对象。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.ContainerType">
+      <summary>获取包含的数据绑定控件的类型 <see cref="T:System.Web.DynamicData.FieldTemplateUserControl" /> 类。</summary>
+      <returns>容器控件类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.DataControl">
+      <summary>获取处理中的字段模板的数据字段的数据控件。</summary>
+      <returns>处理字段模板中的数据字段的数据控件。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.FieldValue">
+      <summary>获取或设置当前行中的列的值。</summary>
+      <returns>一个对象，表示当前行中的列的值。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.FieldValueEditString">
+      <summary>获取列的值的字符串表示当前行中，当行是处于编辑模式。</summary>
+      <returns>在编辑的行中列的值。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.FieldValueString">
+      <summary>获取当前行中的带格式的字符串表示形式的列的值。</summary>
+      <returns>当前行中列的格式化的值。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.ForeignKeyColumn">
+      <summary>获取 <see cref="T:System.Web.DynamicData.MetaForeignKeyColumn" /> 的外键列与该键相关联。</summary>
+      <returns>表示多对一关系的列。</returns>
+      <exception cref="T:System.Exception">如果 <see cref="T:System.Web.DynamicData.MetaForeignKeyColumn" /> 不是外键列。</exception>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.ForeignKeyPath">
+      <summary>获取的 URL 链接当前页以显示外键的实体的详细信息的页面。</summary>
+      <returns>链接到外键的数据的详细信息的 URL。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.FormattingOptions">
+      <summary>获取或设置 HTML 编码和格式设置选项以应用于字段模板。</summary>
+      <returns>接口，公开的 HTML 编码和格式设置选项以应用于字段模板。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.Host">
+      <summary>获取或设置提供了与此上下文的主机 <see cref="T:System.Web.DynamicData.FieldTemplateUserControl" /> 类。</summary>
+      <returns>提供与此字段的模板类的上下文的对象。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.MetadataAttributes">
+      <summary>获取将应用于当前列的元数据特性的集合。</summary>
+      <returns>应用于列的元数据特性的集合。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.Mode">
+      <summary>获取字段模板使用的模式。  </summary>
+      <returns>当前的字段模板的模式。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.Row">
+      <summary>获取当前数据行对象。</summary>
+      <returns>当前数据行对象。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FieldTemplateUserControl.Table">
+      <summary>获取 <see cref="T:System.Web.DynamicData.MetaTable" /> 属于字段模板的列。</summary>
+      <returns>与字段模板相关联的列所属的表。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterRepeater.ContextTypeName">
+      <summary>获取或设置要用于检索数据的数据源对象的名称。</summary>
+      <returns>要用于检索数据的数据源对象的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterRepeater.DynamicFilterContainerId">
+      <summary>获取或设置的 ID <see cref="T:System.Web.DynamicData.FilterRepeater" /> 控制 <see cref="P:System.Web.UI.WebControls.TemplateColumn.ItemTemplate" /> 实例。</summary>
+      <returns>用来显示筛选器用户界面控件的 ID 在 <see cref="P:System.Web.UI.WebControls.TemplateColumn.ItemTemplate" /> 实例，如果 ID 是指定; 否则为"DynamicFilter"。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterRepeater.Table">
+      <summary>获取与之关联的表 <see cref="T:System.Web.DynamicData.FilterRepeater" /> 控件。</summary>
+      <returns>与之关联的表 <see cref="T:System.Web.DynamicData.FilterRepeater" /> 控件。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterRepeater.TableName">
+      <summary>获取要筛选的表的名称。</summary>
+      <returns>要筛选的表的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterRepeater.Visible">
+      <summary>获取或设置一个值，指定是否显示控件。</summary>
+      <returns>true 如果显示该控件;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterUserControlBase.Column">
+      <summary>获取筛选器应用到的列。</summary>
+      <returns>列筛选器适用于。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterUserControlBase.ContextTypeName">
+      <summary>获取或设置表或数据列属于的上下文的类型。</summary>
+      <returns>要用于检索数据的数据源对象的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterUserControlBase.DataField">
+      <summary>获取或设置要筛选的列的名称。</summary>
+      <returns>要筛选的列的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterUserControlBase.InitialValue">
+      <summary>获取筛选器的初始值时填充该筛选器。</summary>
+      <returns>筛选器的初始值。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterUserControlBase.SelectedDataKey">
+      <summary>获取选定项的数据键。</summary>
+      <returns>选定项的键。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterUserControlBase.SelectedValue">
+      <summary>下拉列表框控件中获取所选的值。</summary>
+      <returns>下拉列表框控件中当前选定的值。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterUserControlBase.System#Web#DynamicData#IControlParameterTarget#FilteredColumn">
+      <summary>获取筛选后的数据列。</summary>
+      <returns>筛选数据列。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterUserControlBase.System#Web#DynamicData#IControlParameterTarget#Table">
+      <summary>获取筛选后的表。</summary>
+      <returns>已筛选的表。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.FilterUserControlBase.TableName">
+      <summary>获取或设置筛选器使用的数据表的名称。</summary>
+      <returns>筛选器使用的数据表的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.IControlParameterTarget.FilteredColumn">
+      <summary>如果可用，请获取向其应用参数的列。</summary>
+      <returns>向其应用参数，如果可用列。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.IControlParameterTarget.Table">
+      <summary>获取此提供程序所提供的数据的类型。</summary>
+      <returns>此提供程序所提供的数据类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.IFieldFormattingOptions.ApplyFormatInEditMode">
+      <summary>获取一个值，该值指示是否的格式设置字符串，由指定 <see cref="P:System.Web.DynamicData.IFieldFormattingOptions.DataFormatString" /> 在字段处于编辑模式时，将属性应用于字段值。</summary>
+      <returns>true 如果在应用格式设置字符串，则在编辑模式;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.IFieldFormattingOptions.ConvertEmptyStringToNull">
+      <summary>获取一个值，该值指示是否将空字符串值 ("") 自动转换为 null 值在数据源中更新数据字段时。</summary>
+      <returns>如果将空字符串值自动转换为 null 值，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.IFieldFormattingOptions.DataFormatString">
+      <summary>获取指定字段的值的显示格式的字符串。</summary>
+      <returns>指定字段值的显示格式的格式化字符串。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.IFieldFormattingOptions.HtmlEncode">
+      <summary>获取一个值，该值指示是否为该控件的数据经过 HTML 编码呈现之前就进行。</summary>
+      <returns>true 如果控件的数据经过 HTML 编码，呈现之前就进行;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.IFieldFormattingOptions.NullDisplayText">
+      <summary>字段值时获取显示的标题字段 null。</summary>
+      <returns>字段值时，为字段显示的标题 null。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.IFieldTemplateHost.Column">
+      <summary>获取与关联的字段模板的列。</summary>
+      <returns>与关联的字段模板的列。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.IFieldTemplateHost.FormattingOptions">
+      <summary>获取将应用于字段模板的格式设置选项。</summary>
+      <returns>将应用于字段模板的格式设置选项。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.IFieldTemplateHost.Mode">
+      <summary>获取字段模板的呈现模式。</summary>
+      <returns>指定的字段模板的呈现模式的枚举值之一。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.IFieldTemplateHost.ValidationGroup">
+      <summary>获取字段模板的验证组名称。</summary>
+      <returns>字段模板的验证组名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaChildrenColumn.ChildTable">
+      <summary>获取表示一种一对多关系的子表的对象。</summary>
+      <returns>一个表示一种一对多关系的子表的对象。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaChildrenColumn.ColumnInOtherTable">
+      <summary>获取一个对象，表示子表中的外键字段。</summary>
+      <returns>一个表示子表中的外键字段的对象。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaChildrenColumn.IsManyToMany">
+      <summary>获取一个值，该值指示列的多对多关系状态。</summary>
+      <returns>true 如果列关系是多对多;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.AllowInitialValue">
+      <summary>获取或设置一个值，指定某个列是否允许进行插入的值。</summary>
+      <returns>true 如果列允许值要插入;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.ApplyFormatInEditMode">
+      <summary>获取一个值，该值指示指定的格式设置字符串 <see cref="P:System.Web.DynamicData.MetaColumn.DataFormatString" /> 属性应用于字段值时，包含由表示的数据字段的数据绑定控件 <see cref="T:System.Web.DynamicData.MetaColumn" /> 对象处于编辑模式。</summary>
+      <returns>true 如果指定的格式设置字符串 <see cref="P:System.Web.DynamicData.MetaColumn.DataFormatString" /> 属性应用于字段值时，包含由表示的数据字段的数据绑定控件 <see cref="T:System.Web.DynamicData.MetaColumn" /> 对象处于编辑模式; 否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.Attributes">
+      <summary>获取将应用于所表示的数据字段的元数据特性的集合 <see cref="T:System.Web.DynamicData.MetaColumn" /> 对象。</summary>
+      <returns>适用于所表示的数据字段的元数据属性的集合 <see cref="T:System.Web.DynamicData.MetaColumn" /> 对象。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.ColumnType">
+      <summary>获取数据字段类型。</summary>
+      <returns>数据字段类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.ConvertEmptyStringToNull">
+      <summary>获取一个值，该值指示是否将空字符串值 ("") 自动转换为 null 值在数据源中更新数据字段时。</summary>
+      <returns>true 如果空字符串值自动转换为 null 值在数据字段是数据源中更新; 否则为时 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.DataFormatString">
+      <summary>获取指定的字段值的显示格式的字符串。</summary>
+      <returns>指定的字段值的显示格式的字符串。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.DataTypeAttribute">
+      <summary>获取 <see cref="T:System.ComponentModel.DataAnnotations.DataTypeAttribute" /> 应用到数据字段的特性。</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.DataAnnotations.DataTypeAttribute" /> 应用到数据字段的特性。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.DefaultValue">
+      <summary>获取为数据字段的默认值。</summary>
+      <returns>数据字段的默认值。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.Description">
+      <summary>获取为数据字段的说明。</summary>
+      <returns>数据字段的说明。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.DisplayName">
+      <summary>获取数据字段的显示名称。</summary>
+      <returns>数据字段的显示名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.EntityTypeProperty">
+      <summary>获取一个对象，包含表示实体类型中的数据字段属性的特性。</summary>
+      <returns>一个对象，其中包含表示实体类型中的数据字段的属性的特性。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.FilterUIHint">
+      <summary>获取 <see cref="P:System.ComponentModel.DataAnnotations.FilterUIHintAttribute.FilterUIHint" /> 用于列的值。</summary>
+      <returns>
+        <see cref="P:System.ComponentModel.DataAnnotations.FilterUIHintAttribute.FilterUIHint" /> 用于列的值。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.HtmlEncode">
+      <summary>获取一个值，该值指示字段值是否经过 HTML 编码它们中才会显示数据绑定控件。</summary>
+      <returns>在所有情况下均为 true。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.IsBinaryData">
+      <summary>获取一个值，该值指示数据字段是否包含二进制数据。</summary>
+      <returns>true 如果数据字段包含二进制数据;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.IsCustomProperty">
+      <summary>获取一个值，该值指示是否在数据库中存在的数据字段。</summary>
+      <returns>true 如果数据字段不存在在数据库中，否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.IsFloatingPoint">
+      <summary>获取一个值，该值指示数据字段是否为浮点型。</summary>
+      <returns>true 如果数据字段是一个浮点类型;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.IsForeignKeyComponent">
+      <summary>获取一个值，该值指示数据字段是否为外键的一部分。</summary>
+      <returns>true 如果数据字段是外键; 的一部分否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.IsGenerated">
+      <summary>获取一个值，该值指示是否在数据库中自动生成的数据字段值。</summary>
+      <returns>true 如果将数据字段值中将自动生成该数据库。否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.IsInteger">
+      <summary>获取一个值，该值指示数据字段类型是否为整数类型。</summary>
+      <returns>true 如果数据字段类型是整数类型;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.IsLongString">
+      <summary>获取一个值，该值指示是否数据字段类型可以包含长字符串。</summary>
+      <returns>true 如果数据字段类型可以包含长字符串;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.IsPrimaryKey">
+      <summary>获取一个值，该值指示数据字段是否为表的主键的一部分。</summary>
+      <returns>true 如果数据字段是属于表的主键;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.IsReadOnly">
+      <summary>获取一个值，该值指示数据字段是只读的。</summary>
+      <returns>true 如果数据字段是只读的;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.IsRequired">
+      <summary>获取一个值，该值指示是否数据字段需要值。</summary>
+      <returns>true 如果数据字段需要一个值;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.IsString">
+      <summary>获取一个值，该值指示数据字段类型是否为字符串类型。</summary>
+      <returns>true 如果数据字段类型是字符串类型;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.MaxLength">
+      <summary>获取一个值，指示可以在数据字段中存储数据的最大长度。</summary>
+      <returns>可以在数据字段中存储的数据最大长度。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.Model">
+      <summary>获取 <see cref="T:System.Web.DynamicData.MetaModel" /> 对象，表示此数据字段所属的数据模型。</summary>
+      <returns>一个对象，表示此数据字段所属的数据模型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.Name">
+      <summary>获取数据字段的名称。</summary>
+      <returns>数据字段的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.NullDisplayText">
+      <summary>该字段的值时获取显示的标题字段 null。</summary>
+      <returns>该字段的值时，为字段显示的标题 null。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.Prompt">
+      <summary>获取一个值，可用作水印的 UI 绑定到列中的数据。</summary>
+      <returns>一个值，可用作水印的 UI 绑定到列中的数据。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.Provider">
+      <summary>获取用于生成的抽象提供程序对象 <see cref="T:System.Web.DynamicData.MetaColumn" /> 对象。</summary>
+      <returns>用于生成的抽象提供程序对象 <see cref="T:System.Web.DynamicData.MetaColumn" /> 对象。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.RequiredErrorMessage">
+      <summary>获取数据字段需要一个值，但其值为空时显示的错误消息。</summary>
+      <returns>数据字段需要一个值，但其值为空时显示错误消息。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.Scaffold">
+      <summary>获取一个值，该值指示是否应显示的数据字段。</summary>
+      <returns>true 如果应显示的数据字段;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.ShortDisplayName">
+      <summary>获取列的短名称。</summary>
+      <returns>列的短名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.SortExpression">
+      <summary>获取用于确定数据字段的排序顺序的表达式。</summary>
+      <returns>用来确定数据字段的排序顺序的表达式。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.Table">
+      <summary>获取 <see cref="T:System.Web.DynamicData.MetaTable" /> 表示数据字段所属的表的对象。</summary>
+      <returns>一个对象，表示数据字段所属的表。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.TypeCode">
+      <summary>获取数据字段的类型。</summary>
+      <returns>数据字段的类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaColumn.UIHint">
+      <summary>获取指定的数据字段的字段模板的名称。</summary>
+      <returns>指定的数据字段的字段模板的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaForeignKeyColumn.ForeignKeyNames">
+      <summary>获取一个集合，包含表示数据库关系的关联中的外键的名称。</summary>
+      <returns>包含外键的名称的集合。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaForeignKeyColumn.IsPrimaryKeyInThisTable">
+      <summary>获取一个值，该值指示外键字段是否为表的主键的一部分。</summary>
+      <returns>true 如果外键字段属于主键的表;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaForeignKeyColumn.ParentTable">
+      <summary>获取的父表的外键字段。</summary>
+      <returns>父字段的表的外键。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaModel.Default">
+      <summary>获取应用程序创建的数据模型的第一个实例。</summary>
+      <returns>数据模型实例中。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaModel.DynamicDataFolderVirtualPath">
+      <summary>获取或设置 Web 站点中的 DynamicData 文件夹的虚拟路径。</summary>
+      <returns>DynamicData 文件夹的虚拟路径。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaModel.EntityTemplateFactory">
+      <summary>获取或设置 <see cref="T:System.Web.DynamicData.EntityTemplateFactory" /> 与模型关联的对象。</summary>
+      <returns>一个实例 <see cref="T:System.Web.DynamicData.EntityTemplateFactory" /> 与模型关联的对象。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaModel.FieldTemplateFactory">
+      <summary>获取或设置一个自定义 <see cref="T:System.Web.DynamicData.IFieldTemplateFactory" /> 接口。</summary>
+      <returns>
+        <see cref="T:System.Web.DynamicData.IFieldTemplateFactory" /> 接口。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaModel.FilterFactory">
+      <summary>获取或设置 <see cref="T:System.Web.DynamicData.FilterFactory" /> 与模型关联的对象。</summary>
+      <returns>一个实例 <see cref="T:System.Web.DynamicData.FilterFactory" /> 与模型关联的对象。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaModel.Tables">
+      <summary>获取作为数据模型的一部分的所有表的集合。</summary>
+      <returns>包含属于数据模型的表的集合。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaModel.VisibleTables">
+      <summary>数据模型中获取可见表的集合。</summary>
+      <returns>可见表引用的表启用了基架。 这意味着它是 List.aspx 页面存在的表。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.Attributes">
+      <summary>获取与表相关联的属性。</summary>
+      <returns>一个包含表的属性的集合。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.Columns">
+      <summary>获取表的列集合。</summary>
+      <returns>一个包含表的列的集合。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.DataContextPropertyName">
+      <summary>获取表的名称。</summary>
+      <returns>表的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.DataContextType">
+      <summary>获取与表相关联的数据上下文的类型。</summary>
+      <returns>数据上下文的类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.DisplayColumn">
+      <summary>获取用于在此表中的条目用作外键关系中的父级时显示的值的列。</summary>
+      <returns>用于在此表中的条目用作外键关系中的父级时显示的值的列。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.DisplayName">
+      <summary>获取用户友好的格式的表的名称。</summary>
+      <returns>表示表的用户友好名称的字符串。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.EntityType">
+      <summary>获取表示表的实体类型。</summary>
+      <returns>表示实体类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.ForeignKeyColumnsNames">
+      <summary>获取外键名称的以逗号分隔列表。</summary>
+      <returns>逗号分隔的外键名称列表。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.HasPrimaryKey">
+      <summary>获取一个值，该值指示表是否具有主键。</summary>
+      <returns>true 如果表具有主键;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.IsReadOnly">
+      <summary>获取一个指示表是否为只读的值。</summary>
+      <returns>true 如果表是只读的;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.ListActionPath">
+      <summary>获取表的列表操作的操作路径。</summary>
+      <returns>表列表操作操作路径中。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.Model">
+      <summary>获取此表所属的元模型。</summary>
+      <returns>此表所属的元模型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.Name">
+      <summary>获取表的唯一名称。</summary>
+      <returns>表的唯一名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.PrimaryKeyColumns">
+      <summary>获取用于定义为主键列的集合。</summary>
+      <returns>包含主键列的集合。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.Provider">
+      <summary>获取提供程序表。</summary>
+      <returns>表的提供程序。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.RootEntityType">
+      <summary>获取实体的继承层次结构的根类型。</summary>
+      <returns>实体的继承层次结构的根类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.Scaffold">
+      <summary>获取或设置一个值，该值指示是否应显示表。</summary>
+      <returns>true 如果应显示表;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.SortColumn">
+      <summary>获取 <see cref="T:System.Web.DynamicData.MetaColumn" /> 排序表依据的值。</summary>
+      <returns>表排序依据的列。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.MetaTable.SortDescending">
+      <summary>获取一个值，该值指示项用作外键关系中的父级时按降序顺序进行排序。</summary>
+      <returns>true 如果条目将按降序顺序排列。否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.AssociationProvider.Direction">
+      <summary>获取或设置关联的类型。</summary>
+      <returns>关联的类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.AssociationProvider.ForeignKeyNames">
+      <summary>获取或设置组成此关联的外键的名称。</summary>
+      <returns>组成此关联的外键的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.AssociationProvider.FromColumn">
+      <summary>获取或设置关联的源列。</summary>
+      <returns>关联的源列。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.AssociationProvider.IsPrimaryKeyInThisTable">
+      <summary>获取或设置一个值，该值指示是否为主键的 From 列部分为表中。</summary>
+      <returns>true 如果为主键的 From 列部分位于表;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.AssociationProvider.ToColumn">
+      <summary>获取或设置关联的目标列。</summary>
+      <returns>关联的目标列。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.AssociationProvider.ToTable">
+      <summary>获取关联的目标表。</summary>
+      <returns>关联的目标表。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Association">
+      <summary>获取提供程序列所表示的表。</summary>
+      <returns>列表示，如果其中一个存在，则表的提供程序否则为 null。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Attributes">
+      <summary>获取此提供程序表示的列定义的属性。</summary>
+      <returns>特性集合。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.ColumnType">
+      <summary>获取或设置列的类型。</summary>
+      <returns>列的类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.EntityTypeProperty">
+      <summary>获取或设置 <see cref="T:System.Reflection.PropertyInfo" /> 表示实体类型中的列的属性值。</summary>
+      <returns>
+        <see cref="T:System.Reflection.PropertyInfo" /> 表示实体类型中的列的属性值。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsCustomProperty">
+      <summary>获取或设置一个值，该值指示列是否不在该模型的数据上下文的其他属性。</summary>
+      <returns>true 如果列是不是模型的数据上下文; 中的其他属性否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsForeignKeyComponent">
+      <summary>获取或设置一个值，该值指示列是否为外键的一部分。</summary>
+      <returns>true 如果列是外键; 的一部分否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsGenerated">
+      <summary>获取或设置一个值，该值指示是否由数据库自动生成列的值。</summary>
+      <returns>true 如果列的值自动生成的数据库;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsPrimaryKey">
+      <summary>获取或设置一个值，该值指示列是否为表主键的一部分。</summary>
+      <returns>true 如果列是表; 的主键的一部分否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsReadOnly">
+      <summary>获取一个值，该值指示列是否为只读的。</summary>
+      <returns>true 如果列是 read-only; 否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsSortable">
+      <summary>当在派生类中重写，获取或设置一个值，该值指示数据模型是否支持按该列排序表。</summary>
+      <returns>true 如果数据模型支持对表进行排序，按此列;，否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.MaxLength">
+      <summary>获取或设置此列所允许的最大长度。</summary>
+      <returns>此列所允许的最大长度。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Name">
+      <summary>获取或设置列名称。</summary>
+      <returns>列的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Nullable">
+      <summary>获取或设置一个值，该值指示列是否接受 null 值。</summary>
+      <returns>true 如果列接受 null 值;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.ColumnProvider.Table">
+      <summary>获取或设置该列所属的表。</summary>
+      <returns>该列所属的表。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.DataModelProvider.ContextType">
+      <summary>获取数据上下文的类型。</summary>
+      <returns>数据上下文的类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.DataModelProvider.Tables">
+      <summary>当在派生类中重写时获取由数据模型公开的表的列表。</summary>
+      <returns>由数据模型公开的表的列表。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.TableProvider.Attributes">
+      <summary>获取此提供程序表示的表定义的属性。</summary>
+      <returns>特性集合。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.TableProvider.Columns">
+      <summary>当在派生类中重写，获取此表中的列的集合。</summary>
+      <returns>此表中列的集合。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.TableProvider.DataContextPropertyName">
+      <summary>获取数据上下文中的表的名称。</summary>
+      <returns>表的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.TableProvider.DataModel">
+      <summary>获取 <see cref="T:System.Web.DynamicData.ModelProviders.DataModelProvider" /> 对象。</summary>
+      <returns>
+        <see cref="T:System.Web.DynamicData.ModelProviders.DataModelProvider" /> 对象。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.TableProvider.EntityType">
+      <summary>获取或设置表示表的类型。</summary>
+      <returns>表示表类型。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.TableProvider.Name">
+      <summary>获取表的名称。</summary>
+      <returns>表的名称。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.TableProvider.ParentEntityType">
+      <summary>获取父类型。</summary>
+      <returns>父类型，如果该实体具有父;否则为实例 <see cref="T:System.Data.Metadata.Edm.EntityType" /> 类。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.ModelProviders.TableProvider.RootEntityType">
+      <summary>获取此实体的根类型。</summary>
+      <returns>如果该实体具有父; 此实体的根类型否则为实例 <see cref="T:System.Data.Metadata.Edm.EntityType" /> 类。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.PageAction.Details">
+      <summary>获取一个显示数据项目的详细信息页面的操作名称。</summary>
+      <returns>文本值"详细信息"。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.PageAction.Edit">
+      <summary>获取用于编辑数据项的页面的操作名称。</summary>
+      <returns>文本值"编辑"。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.PageAction.Insert">
+      <summary>获取用于将数据的项的页面的操作名称。</summary>
+      <returns>文本值"插入"。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.PageAction.List">
+      <summary>获取显示表中的数据的页面的操作名称。</summary>
+      <returns>文本值"列表"。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.QueryableFilterRepeater.DynamicFilterContainerId">
+      <summary>获取或设置的 ID <see cref="T:System.Web.DynamicData.DynamicFilter" /> 配置某一列的筛选器的模板内的控制。</summary>
+      <returns>ID <see cref="T:System.Web.DynamicData.DynamicFilter" /> 配置某一列的筛选器的模板内的控制。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.QueryableFilterRepeater.ItemTemplate">
+      <summary>获取或设置填充控件 <see cref="T:System.Web.DynamicData.QueryableFilterRepeater" /> 类。</summary>
+      <returns>一个对象，定义如何中的项 <see cref="T:System.Web.DynamicData.QueryableFilterRepeater" /> 显示控件。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.QueryableFilterUserControl.Column">
+      <summary>获取要用于筛选的列。</summary>
+      <returns>要用于筛选的列。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.QueryableFilterUserControl.DefaultValue">
+      <summary>获取表映射的默认值。</summary>
+      <returns>为表映射的默认值。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.QueryableFilterUserControl.DefaultValues">
+      <summary>获取表映射的默认值。</summary>
+      <returns>为表映射的默认值。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.QueryableFilterUserControl.FilterControl">
+      <summary>获取处理筛选器模板中的筛选器的数据控件。</summary>
+      <returns>处理筛选器的数据控件。</returns>
+    </member>
+    <member name="P:System.Web.DynamicData.TableNameAttribute.Name">
+      <summary>获取或设置表的名称。</summary>
+      <returns>与表相关联的名称。</returns>
+    </member>
+    <member name="T:System.Web.DynamicData.ContainerType">
+      <summary>指定的数据控件容器类型。</summary>
+    </member>
+    <member name="F:System.Web.DynamicData.ContainerType.List">
+      <summary>指示列表实现的容器， <see cref="T:System.Web.UI.WebControls.IDataBoundListControl" /> 接口，如 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件， <see cref="T:System.Web.UI.WebControls.GridView" /> 控件，或 <see cref="T:System.Web.UI.WebControls.Repeater" /> 控件。</summary>
+    </member>
+    <member name="F:System.Web.DynamicData.ContainerType.Item">
+      <summary>指示项目容器实现 <see cref="T:System.Web.UI.WebControls.IDataBoundItemControl" /> 接口，如 <see cref="T:System.Web.UI.WebControls.DetailsView" /> 控件或 <see cref="T:System.Web.UI.WebControls.FormView" /> 控件。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.ContextConfiguration">
+      <summary>为了允许自定义提供数据上下文实例的信息。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.ControlFilterExpression">
+      <summary>通过使用在数据绑定控件中选定的项的数据键来修改数据库查询。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DataControlReference">
+      <summary>使 <see cref="T:System.Web.DynamicData.DynamicDataManager" /> 以声明方式定义它管理的数据控件。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DataControlReferenceCollection">
+      <summary>表示 <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> 对象集合。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DefaultAutoFieldGenerator">
+      <summary>将自动生成数据绑定控件的动态数据字段 （列）。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicControl">
+      <summary>使用 ASP.NET 动态数据功能，在模板化数据绑定控件中显示为字段定义的内容。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicControlParameter">
+      <summary>表示一个用于主/详细信息筛选器的参数，在这些筛选器中，数据源从另一个数据控件中获取信息。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicDataExtensions">
+      <summary>提供 ASP.NET 动态数据使用的扩展方法。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicDataManager">
+      <summary>启用支持 ASP.NET 动态数据的 ASP.NET Web 控件的动态行为。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicDataRoute">
+      <summary>表示 ASP.NET 动态数据使用的路由。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicDataRouteHandler">
+      <summary>进程 ASP.NET 动态数据路由模式。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicEntity">
+      <summary>提供表示实体的 ASP.NET 控件，以供 ASP.NET 动态数据使用。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicField">
+      <summary>表示一个数据字段，该字段显示在使用 ASP.NET 动态数据功能的数据绑定控件中。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicFilter">
+      <summary>显示用于使用指定列筛选表行的 UI。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicFilterExpression">
+      <summary>使用指定筛选器控件中的值修改数据库查询。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicHyperLink">
+      <summary>显示指向表操作（如编辑、删除和插入）的链接。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicQueryStringParameter">
+      <summary>通过检索查询字符串值，自动生成用于为数据源控件创建 Where 子句的参数集合。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicRouteExpression">
+      <summary>从路由信息获取主键以执行数据筛选。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.DynamicValidator">
+      <summary>强制执行和捕获在数据模型中引发的异常并显示错误。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.EntityTemplate">
+      <summary>使用 ASP.NET 动态数据功能，显示为实体模板数据绑定控件中的实体定义的内容。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.EntityTemplateFactory">
+      <summary>创建实体模板。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.EntityTemplateUserControl">
+      <summary>定义实体模板的基类。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.FieldTemplateFactory">
+      <summary>创建的字段模板。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.FieldTemplateUserControl">
+      <summary>表示所有字段模板控件的基类。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.FilterFactory">
+      <summary>创建一个筛选器模板。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.FilterRepeater">
+      <summary>表示一个控件，该控件枚举可筛选的表列。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.FilterUserControlBase">
+      <summary>为用于筛选数据表中数据的用户控件提供基类。 此类用于显示筛选器选择器。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.IControlParameterTarget">
+      <summary>定义的类必须实现以便向提供数据的实例的成员 <see cref="T:System.Web.DynamicData.DynamicControlParameter" /> 类。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.IFieldFormattingOptions">
+      <summary>定义用于常见的格式设置选项属性要应用于字段模板用户控件的接口。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.IFieldTemplate">
+      <summary>定义的类必须实现以便识别为字段模板的成员。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.IFieldTemplateFactory">
+      <summary>定义创建的字段模板的对象来实现的接口。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.IFieldTemplateHost">
+      <summary>定义必须由管理的字段模板用户控件使用的类实现的成员。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.IFilterExpressionProvider">
+      <summary>提供一个接口来创建筛选器重复字符。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.IWhereParametersProvider">
+      <summary>提供一或多个参数类实现了 Where 参数。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.MetaChildrenColumn">
+      <summary>表示一个指示一对多关系的数据库字段。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.MetaColumn">
+      <summary>表示动态数据使用的数据库列。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.MetaForeignKeyColumn">
+      <summary>表示 ASP.NET 动态数据使用的数据库外键字段。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.MetaModel">
+      <summary>表示 ASP.NET 动态数据使用的一个或多个数据库。</summary>
+      <exception cref="T:System.InvalidOperationException">如果已数据上下文注册错误，可能会通过任何方法引发。</exception>
+    </member>
+    <member name="T:System.Web.DynamicData.MetaTable">
+      <summary>表示供动态数据页描述用于表的元数据。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.ModelProviders.AssociationDirection">
+      <summary>指示两个实体之间的关系。</summary>
+    </member>
+    <member name="F:System.Web.DynamicData.ModelProviders.AssociationDirection.OneToOne">
+      <summary>表示一对一关系。</summary>
+    </member>
+    <member name="F:System.Web.DynamicData.ModelProviders.AssociationDirection.OneToMany">
+      <summary>指示一个对多关系。</summary>
+    </member>
+    <member name="F:System.Web.DynamicData.ModelProviders.AssociationDirection.ManyToOne">
+      <summary>指示多对一关系。</summary>
+    </member>
+    <member name="F:System.Web.DynamicData.ModelProviders.AssociationDirection.ManyToMany">
+      <summary>指示多对多关系。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.ModelProviders.AssociationProvider">
+      <summary>为列关联提供程序提供的基类。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.ModelProviders.ColumnProvider">
+      <summary>为列提供程序提供基本类。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.ModelProviders.DataModelProvider">
+      <summary>提供对动态数据模型提供程序的基类。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.ModelProviders.TableProvider">
+      <summary>为动态数据表提供程序提供基本类。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.PageAction">
+      <summary>指定的路由机制在 ASP.NET 动态数据应用程序中使用的默认操作值。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.QueryableFilterRepeater">
+      <summary>提供一个模板化控件，该控件可自动生成 UI 以针对支持的列类型筛选表行。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.QueryableFilterUserControl">
+      <summary>为筛选器控件提供基类。</summary>
+    </member>
+    <member name="T:System.Web.DynamicData.TableNameAttribute">
+      <summary>提供的特性来更改表的显示的名称。</summary>
+    </member>
+    <member name="T:System.Web.UI.DataControlExtensions">
+      <summary>提供 ASP.NET 动态数据使用的扩展方法。</summary>
+    </member>
+  </members>
+</doc>

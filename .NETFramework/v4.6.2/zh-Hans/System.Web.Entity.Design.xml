@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.Entity.Design</name>
+  </assembly>
+  <members>
+    <member name="M:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.#ctor">
+      <summary>创建 <see cref="T:System.Web.UI.Design.WebControls.EntityDataSourceDesigner" /> 的新实例。</summary>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.Configure">
+      <summary>启动设计宿主中的数据源配置实用工具。</summary>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.GetView(System.String)">
+      <summary>返回具有指定的名称的数据源视图。</summary>
+      <param name="viewName">要返回的视图的名称。</param>
+      <returns>一个 <see cref="T:System.Web.UI.WebControls.Design.EntityDesignerDataSourceView" /> 具有指定名称的对象 <paramref name="viewName" />。</returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.GetViewNames">
+      <summary>获取可用视图的列表。</summary>
+      <returns>具有包含"默认视图"的名称的一个元素的集合。</returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.Initialize(System.ComponentModel.IComponent)">
+      <summary>初始化控件设计器，并加载指定的组件。</summary>
+      <param name="component">
+        <see cref="T:System.ComponentModel.IComponent" /> 对象来初始化。</param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.PreFilterProperties(System.Collections.IDictionary)">
+      <summary>由设计器用于将属性添加或移除属性在属性网格中，或者隐藏关联控件的属性。</summary>
+      <param name="properties">要筛选的属性。</param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.RefreshSchema(System.Boolean)">
+      <summary>从基础数据源刷新架构。</summary>
+      <param name="preferSilent">true 若要取消所有数据源事件，直到架构进行刷新。</param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.EntityDesignerDataSourceView.#ctor(System.Web.UI.Design.WebControls.EntityDataSourceDesigner)">
+      <summary>创建的新实例 <see cref="T:System.Web.UI.WebControls.Design.EntityDesignerDataSourceView" /> 使用提供的数据源设计器。</summary>
+      <param name="owner">父 <see cref="T:System.Web.UI.Design.WebControls.EntityDataSourceDesigner" /> 对象。</param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.EntityDesignerDataSourceView.GetDesignTimeData(System.Int32,System.Boolean@)">
+      <summary>获取与关联的数据源控件的架构匹配使用指定的行数的设计时数据。</summary>
+      <param name="minimumRows">要返回的最小行数。</param>
+      <param name="isSampleData">若要指示返回的数据是示例数据，则为 true；若要指示返回的数据是实时数据，则为 false。</param>
+      <returns>要在设计时显示的数据。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.CanConfigure">
+      <summary>获取一个值，该值指示是否 <see cref="M:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.Configure" /> 设计宿主可以调用方法。</summary>
+      <returns>true 如果 <see cref="M:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.Configure" /> 方法可以调用; 否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.CanRefreshSchema">
+      <summary>获取一个值，该值指示是否 <see cref="M:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.RefreshSchema(System.Boolean)" /> 设计宿主可以调用方法。</summary>
+      <returns>true 如果 <see cref="M:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.RefreshSchema(System.Boolean)" /> 方法可以调用; 否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.CommandText">
+      <summary>获取或设置 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件的 <see cref="P:System.Web.UI.WebControls.EntityDataSource.CommandText" /> 属性。</summary>
+      <returns>
+        <see cref="P:System.Web.UI.WebControls.EntityDataSource.CommandText" /> 属性的值。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.ConnectionString">
+      <summary>获取或设置 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件的 <see cref="P:System.Web.UI.WebControls.EntityDataSource.ConnectionString" /> 属性。</summary>
+      <returns>
+        <see cref="P:System.Web.UI.WebControls.EntityDataSource.ConnectionString" /> 属性的值。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.DefaultContainerName">
+      <summary>获取或设置 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件的 <see cref="P:System.Web.UI.WebControls.EntityDataSource.DefaultContainerName" /> 属性。</summary>
+      <returns>
+        <see cref="P:System.Web.UI.WebControls.EntityDataSource.DefaultContainerName" /> 属性的值。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.EntitySetName">
+      <summary>获取或设置 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件的 <see cref="P:System.Web.UI.WebControls.EntityDataSource.EntitySetName" /> 属性。</summary>
+      <returns>
+        <see cref="P:System.Web.UI.WebControls.EntityDataSource.EntitySetName" /> 属性的值。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.EntityTypeFilter">
+      <summary>获取或设置 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件的 <see cref="P:System.Web.UI.WebControls.EntityDataSource.EntityTypeFilter" /> 属性。</summary>
+      <returns>
+        <see cref="P:System.Web.UI.WebControls.EntityDataSource.EntityTypeFilter" /> 属性的值。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.OrderBy">
+      <summary>获取或设置 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件的 <see cref="P:System.Web.UI.WebControls.EntityDataSource.OrderBy" /> 属性。</summary>
+      <returns>
+        <see cref="P:System.Web.UI.WebControls.EntityDataSource.OrderBy" /> 属性的值。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.Select">
+      <summary>获取或设置 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件的 <see cref="P:System.Web.UI.WebControls.EntityDataSource.Select" /> 属性。</summary>
+      <returns>
+        <see cref="P:System.Web.UI.WebControls.EntityDataSource.Select" /> 属性的值。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDataSourceDesigner.Where">
+      <summary>获取或设置 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件的 <see cref="P:System.Web.UI.WebControls.EntityDataSource.Where" /> 属性。</summary>
+      <returns>
+        <see cref="P:System.Web.UI.WebControls.EntityDataSource.Where" /> 属性的值。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDesignerDataSourceView.CanDelete">
+      <summary>获取一个值，该值指示是否 <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> 对象，该程序与当前对象 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件支持删除操作。</summary>
+      <returns>true 如果删除操作都受支持;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDesignerDataSourceView.CanInsert">
+      <summary>获取一个值，该值指示是否 <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> 对象，该程序与当前对象 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件支持插入。</summary>
+      <returns>true 如果插入受支持;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDesignerDataSourceView.CanPage">
+      <summary>获取一个值，该值指示是否 <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> 对象，该程序与当前对象 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件支持分页查询所返回的数据。</summary>
+      <returns>true 如果支持分页;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDesignerDataSourceView.CanSort">
+      <summary>获取一个值，该值指示是否 <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> 对象，该程序与当前对象 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件支持的基础数据源的排序的视图。</summary>
+      <returns>true 如果支持排序，则否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDesignerDataSourceView.CanUpdate">
+      <summary>获取一个值，该值指示是否 <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> 对象，该程序与当前对象 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件支持更新。</summary>
+      <returns>true 如果支持更新;否则为 false。</returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.EntityDesignerDataSourceView.Schema">
+      <summary>获取描述当前的视图对象表示的数据源视图的架构。</summary>
+      <returns>一个对象，表示该架构。</returns>
+    </member>
+    <member name="T:System.Web.UI.Design.WebControls.EntityDataSourceDesigner">
+      <summary>在可视化设计器中为 <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> 控件提供设计时支持。</summary>
+    </member>
+    <member name="T:System.Web.UI.Design.WebControls.EntityDesignerDataSourceView">
+      <summary>提供设计时视图的数据的 <see cref="T:System.Web.UI.Design.WebControls.EntityDataSourceDesigner" /> 类。</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,1272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Drawing.Design</name>
+  </assembly>
+  <members>
+    <member name="M:System.Drawing.Design.BitmapEditor.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Drawing.Design.BitmapEditor" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.BitmapEditor.GetExtensions">
+      <summary>
+              获取位图编辑器最初将用来筛选文件列表的文件列表筛选器的扩展。
+            </summary>
+      <returns>
+              默认的文件扩展名用来筛选文件列表集合。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.BitmapEditor.GetFileDialogDescription">
+      <summary>
+              获取此编辑器所提供的默认文件列表筛选器的说明。
+            </summary>
+      <returns>
+              对文件进行筛选的文件列表的默认类型的说明。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.BitmapEditor.LoadFromStream(System.IO.Stream)">
+      <summary>
+              从指定的流加载图像。
+            </summary>
+      <param name="stream">
+                要从其中加载图像流。
+              </param>
+      <returns>
+              <see cref="T:System.Drawing.Image" /> 从流加载。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ColorEditor.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Drawing.Design.ColorEditor" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.ColorEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+      <summary>
+              编辑给定的对象值，使用所提供的编辑器样式 <see cref="M:System.Drawing.Design.ColorEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" /> 方法。
+            </summary>
+      <param name="context">
+                可用于获取附加上下文信息的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。
+              </param>
+      <param name="provider">
+                <see cref="T:System.IServiceProvider" /> 通过它可能获得编辑服务。
+              </param>
+      <param name="value">
+                正在编辑的值的实例。
+              </param>
+      <returns>
+              对象的新值。
+               如果尚未更改对象的值，则它返回的对象应与传递给它的对象相同。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ColorEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              获取编辑方法的编辑样式。
+               如果不支持的方法，这将返回 <see cref="F:System.Drawing.Design.UITypeEditorEditStyle.None" />。
+            </summary>
+      <param name="context">
+                可用于获取附加上下文信息的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。
+              </param>
+      <returns>
+              枚举值，该值指示提供的编辑样式。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ColorEditor.GetPaintValueSupported(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              获取一个值，该值指示该编辑器是否支持绘制对象的值的表示形式。
+            </summary>
+      <param name="context">
+                可用于获取附加上下文信息的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。
+              </param>
+      <returns>
+              <see langword="true" /> 如果 <see cref="Overload:System.Drawing.Design.ColorEditor.PaintValue" /> 实现; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ColorEditor.PaintValue(System.Drawing.Design.PaintValueEventArgs)">
+      <summary>
+              绘制代表提供的画布上的给定对象的值。
+            </summary>
+      <param name="e">
+                绘制内容和绘制位置。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ContentAlignmentEditor.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Drawing.Design.ContentAlignmentEditor" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.ContentAlignmentEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+      <summary>
+              编辑给定的对象值，使用所提供的编辑器样式 <see cref="Overload:System.Drawing.Design.ContentAlignmentEditor.GetEditStyle" /> 方法。
+            </summary>
+      <param name="context">
+                可用于获取附加上下文信息的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。
+              </param>
+      <param name="provider">
+                <see cref="T:System.IServiceProvider" /> 通过它可能获得编辑服务。
+              </param>
+      <param name="value">
+                正在编辑的值的实例。
+              </param>
+      <returns>
+              对象的新值。
+               如果尚未更改对象的值，则它返回的对象应与传递给它的对象相同。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ContentAlignmentEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              获取的编辑样式 <see cref="Overload:System.Drawing.Design.ContentAlignmentEditor.EditValue" /> 方法。
+            </summary>
+      <param name="context">
+                可用于获取附加上下文信息的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> 值，该值指示提供的编辑样式。
+               如果要检索的编辑样式的方法不支持，这将返回 <see cref="F:System.Drawing.Design.UITypeEditorEditStyle.None" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.CursorEditor.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Drawing.Design.CursorEditor" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.CursorEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+      <summary>
+              编辑给定的对象值，使用所提供的编辑器样式 <see cref="Overload:System.Drawing.Design.CursorEditor.GetEditStyle" /> 方法。
+            </summary>
+      <param name="context">
+                一个用于提供其他上下文信息的类型描述符上下文。
+              </param>
+      <param name="provider">
+                通过它可能获得编辑服务的服务提供程序对象。
+              </param>
+      <param name="value">
+                正在编辑的值的实例。
+              </param>
+      <returns>
+              对象的新值。
+               如果尚未更改对象的值，则它返回的对象应与传递给它的对象相同。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.CursorEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              检索的编辑样式 <see cref="Overload:System.Drawing.Design.CursorEditor.EditValue" /> 方法。
+            </summary>
+      <param name="context">
+                一个用于提供其他上下文信息的类型描述符上下文。
+              </param>
+      <returns>
+              枚举值，该值指示提供的编辑样式。
+               如果不支持的方法，这将返回 <see cref="F:System.Drawing.Design.UITypeEditorEditStyle.None" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.FontEditor.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Drawing.Design.FontEditor" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.FontEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+      <summary>
+              使用 <see cref="M:System.Drawing.Design.FontEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" /> 指示的编辑器样式编辑指定对象的值。
+            </summary>
+      <param name="context">
+                可用于获取附加上下文信息的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。
+              </param>
+      <param name="provider">
+                <see cref="T:System.IServiceProvider" /> 此编辑器可以用来获取服务。
+              </param>
+      <param name="value">
+                要编辑的对象。
+              </param>
+      <returns>
+              对象的新值。
+               如果该对象的值未更改，这应返回相同的对象传递给它。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.FontEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              获取使用的编辑器样式 <see cref="M:System.Drawing.Design.FontEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" /> 方法。
+            </summary>
+      <param name="context">
+                可用于获取附加上下文信息的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> 值，该值指示 <see cref="M:System.Drawing.Design.FontEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" /> 使用的编辑器的样式。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.FontNameEditor.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Drawing.Design.FontNameEditor" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.FontNameEditor.GetPaintValueSupported(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              确定此编辑器是否支持绘制对象的值的表示形式。
+            </summary>
+      <param name="context">
+                一个用于提供其他上下文信息的类型描述符上下文。
+              </param>
+      <returns>
+              <see langword="true" /> 如果 <see cref="Overload:System.Drawing.Design.FontNameEditor.PaintValue" /> 实现; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.FontNameEditor.PaintValue(System.Drawing.Design.PaintValueEventArgs)">
+      <summary>
+              绘制代表提供的画布上的给定对象的值。
+               应提供的矩形的边界内完成绘制。
+            </summary>
+      <param name="e">
+                绘制内容和绘制位置。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.IconEditor.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Drawing.Design.IconEditor" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.IconEditor.CreateExtensionsString(System.String[],System.String)">
+      <summary>
+              创建一个表示图标的有效文件扩展名的字符串。
+            </summary>
+      <param name="extensions">
+                一个包含有效的文件扩展名的字符串数组。
+              </param>
+      <param name="sep">
+                一个字符串，指定的分隔符字符。
+              </param>
+      <returns>
+              包含图标文件扩展名的字符串或 <see langword="null" /> 如果 <paramref name="extensions" /> 是 <see langword="null" /> 或为空。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.IconEditor.CreateFilterEntry(System.Drawing.Design.IconEditor)">
+      <summary>
+              创建文件对话框中的筛选器字符串。
+            </summary>
+      <param name="e">
+                <see cref="T:System.Drawing.Design.IconEditor" /> 创建筛选器字符串。
+              </param>
+      <returns>
+              从返回的字符串创建的筛选器字符串 <see cref="M:System.Drawing.Design.IconEditor.CreateExtensionsString(System.String[],System.String)" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.IconEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+      <summary>
+              编辑给定的对象值，使用所提供的编辑器样式 <see cref="M:System.Drawing.Design.IconEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" /> 方法。
+            </summary>
+      <param name="context">
+                一个用于提供其他上下文信息的类型描述符上下文。
+              </param>
+      <param name="provider">
+                通过它可能获得编辑服务的服务提供程序对象。
+              </param>
+      <param name="value">
+                正在编辑的值的实例。
+              </param>
+      <returns>
+              对象的新值。
+               如果尚未更改对象的值，则它返回的对象应与传递给它的对象相同。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.IconEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              检索的编辑样式 <see cref="Overload:System.Drawing.Design.IconEditor.EditValue" /> 方法。
+            </summary>
+      <param name="context">
+                一个用于提供其他上下文信息的类型描述符上下文。
+              </param>
+      <returns>
+              其中一个 <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> 值，该值指示所提供的编辑样式。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.IconEditor.GetExtensions">
+      <summary>
+              检索图标的有效的文件扩展名的数组。
+            </summary>
+      <returns>
+              图标的有效的文件扩展名的数组。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.IconEditor.GetFileDialogDescription">
+      <summary>
+              获取此编辑器所提供的默认文件列表筛选器的说明。
+            </summary>
+      <returns>
+              对文件进行筛选的文件列表的默认类型的说明。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.IconEditor.GetPaintValueSupported(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              确定此编辑器是否支持绘制对象的值的表示形式。
+            </summary>
+      <param name="context">
+                一个用于提供其他上下文信息的类型描述符上下文。
+              </param>
+      <returns>
+              <see langword="true" /> 如果 <see cref="Overload:System.Drawing.Design.UITypeEditor.PaintValue" /> 实现; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.IconEditor.LoadFromStream(System.IO.Stream)">
+      <summary>
+              创建一个新 <see cref="T:System.Drawing.Icon" /> 从给定的流。
+            </summary>
+      <param name="stream">
+                将从其创建图标的源流。
+              </param>
+      <returns>
+              新创建的 <see cref="T:System.Drawing.Icon" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.IconEditor.PaintValue(System.Drawing.Design.PaintValueEventArgs)">
+      <summary>
+              绘制代表提供的画布上的给定对象的值。
+            </summary>
+      <param name="e">
+                绘制内容和绘制位置。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ImageEditor.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Drawing.Design.ImageEditor" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.ImageEditor.CreateExtensionsString(System.String[],System.String)">
+      <summary>
+              创建文件的字符串使用指定的文件扩展名的数组和指定的分隔符的扩展名。
+            </summary>
+      <param name="extensions">
+                若要筛选的扩展。
+              </param>
+      <param name="sep">
+                要使用的分隔符。
+              </param>
+      <returns>
+              一个包含指定的文件扩展名的字符串，彼此间用指定的分隔符。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ImageEditor.CreateFilterEntry(System.Drawing.Design.ImageEditor)">
+      <summary>
+              创建文件对话框中的文件列表的筛选器条目。
+            </summary>
+      <param name="e">
+                <see cref="T:System.Drawing.Design.ImageEditor" /> 以获取从筛选器条目。
+              </param>
+      <returns>
+              新的筛选器条目字符串。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ImageEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+      <summary>
+              编辑指定的对象值，使用所提供的编辑样式 <see cref="M:System.Drawing.Design.ImageEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" /> 方法。
+            </summary>
+      <param name="context">
+                可用于获取附加上下文信息的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。
+              </param>
+      <param name="provider">
+                <see cref="T:System.IServiceProvider" /> 通过它可以获得编辑服务。
+              </param>
+      <param name="value">
+                <see cref="T:System.Object" /> 正在编辑。
+              </param>
+      <returns>
+              <see cref="T:System.Object" /> 表示新值。
+               如果该对象的值未更改， <see cref="M:System.Drawing.Design.ImageEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" /> 返回传递给它的对象。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ImageEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              获取的编辑样式 <see cref="M:System.Drawing.Design.ImageEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" /> 方法。
+            </summary>
+      <param name="context">
+                可用于获取附加上下文信息的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。
+              </param>
+      <returns>
+              其中一个 <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> 值，该值指示所支持的编辑样式。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ImageEditor.GetExtensions">
+      <summary>
+              获取此编辑器最初用来筛选文件列表的文件列表筛选器的扩展。
+            </summary>
+      <returns>
+              用于筛选文件列表的一组文件扩展名。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ImageEditor.GetFileDialogDescription">
+      <summary>
+              获取该编辑器所提供的默认文件列表筛选器的描述。
+            </summary>
+      <returns>
+              对默认文件列表筛选器的描述。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ImageEditor.GetImageExtenders">
+      <summary>
+              获取受支持的图像类型的数组。
+            </summary>
+      <returns>
+              一个数组 <see cref="T:System.Type" /> 表示支持的图像类型。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ImageEditor.GetPaintValueSupported(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              获取一个值，该值指示该编辑器是否支持绘制对象的值的表示形式。
+            </summary>
+      <param name="context">
+                可用于获取附加上下文信息的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。
+              </param>
+      <returns>
+              <see langword="true" /> 如果 <see cref="M:System.Drawing.Design.ImageEditor.PaintValue(System.Drawing.Design.PaintValueEventArgs)" /> 实现; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ImageEditor.LoadFromStream(System.IO.Stream)">
+      <summary>
+              从指定的流加载图像。
+            </summary>
+      <param name="stream">
+                一个 <see cref="T:System.IO.Stream" /> ，包含要加载的图像。
+              </param>
+      <returns>
+              <see cref="T:System.Drawing.Image" /> 加载的。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ImageEditor.PaintValue(System.Drawing.Design.PaintValueEventArgs)">
+      <summary>
+              绘制由指定所指示的值 <see cref="T:System.Drawing.Design.PaintValueEventArgs" />。
+            </summary>
+      <param name="e">
+                一个 <see cref="T:System.Drawing.Design.PaintValueEventArgs" /> ，该值指示绘制内容和绘制位置。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.MetafileEditor.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Drawing.Design.MetafileEditor" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.MetafileEditor.GetExtensions">
+      <summary>
+              获取此编辑器最初用来筛选文件列表的文件列表筛选器的扩展。
+            </summary>
+      <returns>
+              用于筛选文件列表的一组文件扩展名。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.MetafileEditor.GetFileDialogDescription">
+      <summary>
+              获取该编辑器所提供的默认文件列表筛选器的描述。
+            </summary>
+      <returns>
+              对默认文件列表筛选器的描述。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.MetafileEditor.LoadFromStream(System.IO.Stream)">
+      <summary>
+              从指定的流加载图像。
+            </summary>
+      <param name="stream">
+                一个 <see cref="T:System.IO.Stream" />，包含要加载的图像。
+              </param>
+      <returns>
+              已加载的 <see cref="T:System.Drawing.Image" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxItemContainer.#ctor(System.Drawing.Design.ToolboxItem)">
+      <summary>
+              新实例初始化 <see cref="T:System.Drawing.Design.ToolboxItemContainer" /> 类 <see cref="T:System.Drawing.Design.ToolboxItem" />。
+            </summary>
+      <param name="item">
+                <see cref="T:System.Drawing.Design.ToolboxItem" /> 要为其创建 <see cref="T:System.Drawing.Design.ToolboxItemContainer" />。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxItemContainer.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              新实例初始化 <see cref="T:System.Drawing.Design.ToolboxItemContainer" /> 中序列化流的类。
+            </summary>
+      <param name="info">
+                反序列化时序列化程序传递的序列化信息 <see cref="T:System.Drawing.Design.ToolboxItemContainer" />。
+              </param>
+      <param name="context">
+                反序列化时序列化程序传入的流上下文 <see cref="T:System.Drawing.Design.ToolboxItemContainer" />。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxItemContainer.#ctor(System.Windows.Forms.IDataObject)">
+      <summary>
+              新实例初始化 <see cref="T:System.Drawing.Design.ToolboxItemContainer" /> 类 <see cref="T:System.Windows.Forms.IDataObject" />。
+            </summary>
+      <param name="data">
+                数据对象，表示 <see cref="T:System.Drawing.Design.ToolboxItemContainer" />。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxItemContainer.Equals(System.Object)">
+      <summary>
+              确定两个 <see cref="T:System.Drawing.Design.ToolboxItemContainer" /> 实例是否相等。
+            </summary>
+      <param name="obj">
+                要与当前的 <see cref="T:System.Drawing.Design.ToolboxItemContainer" /> 进行比较的 <see cref="T:System.Drawing.Design.ToolboxItemContainer" />。
+              </param>
+      <returns>
+              如果指定的 <see langword="true" /> 等于当前的 <see cref="T:System.Drawing.Design.ToolboxItemContainer" />，则为 <see cref="T:System.Drawing.Design.ToolboxItemContainer" />；否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxItemContainer.GetFilter(System.Collections.ICollection)">
+      <summary>
+              返回的集合 <see cref="T:System.ComponentModel.ToolboxItemFilterAttribute" /> 这些对象表示的当前筛选器 <see cref="T:System.Drawing.Design.ToolboxItem" />。
+            </summary>
+      <param name="creators">
+                <see cref="T:System.Drawing.Design.ToolboxItemCreator" /> 对象的集合。
+              </param>
+      <returns>
+              <see cref="T:System.ComponentModel.ToolboxItemFilterAttribute" /> 对象的集合。
+               该值绝不会返回 <see langword="null" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxItemContainer.GetHashCode">
+      <summary>
+              返回此实例的哈希代码。
+            </summary>
+      <returns>
+              当前 <see cref="T:System.Drawing.Design.ToolboxItemContainer" /> 的哈希代码。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxItemContainer.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              保存该对象的序列化状态。
+            </summary>
+      <param name="info">
+                在序列化此对象时序列化程序传递的序列化信息。
+              </param>
+      <param name="context">
+                在序列化此对象时序列化程序传入的流上下文。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxItemContainer.GetToolboxItem(System.Collections.ICollection)">
+      <summary>
+              返回 <see cref="T:System.Drawing.Design.ToolboxItem" /> 中包含 <see cref="T:System.Drawing.Design.ToolboxItemContainer" />。
+            </summary>
+      <param name="creators">
+                <see cref="T:System.Drawing.Design.ToolboxItemCreator" /> 对象的集合。
+              </param>
+      <returns>
+              <see cref="T:System.Drawing.Design.ToolboxItem" /> 中包含 <see cref="T:System.Drawing.Design.ToolboxItemContainer" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxItemContainer.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              有关此成员的说明，请参见 <see cref="M:System.Drawing.Design.ToolboxItemContainer.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" /> 方法。
+            </summary>
+      <param name="info">
+                在序列化此对象时序列化程序传递的序列化信息。
+              </param>
+      <param name="context">
+                在序列化此对象时序列化程序传入的流上下文。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxItemContainer.UpdateFilter(System.Drawing.Design.ToolboxItem)">
+      <summary>
+              将合并具有筛选器与给定项的容器的筛选器。
+            </summary>
+      <param name="item">
+                要合并的容器的筛选器的筛选器的源。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxItemCreator.Create(System.Windows.Forms.IDataObject)">
+      <summary>
+              从 <see cref="T:System.Drawing.Design.ToolboxItem" /> 创建新的 <see cref="T:System.Windows.Forms.IDataObject" />。
+            </summary>
+      <param name="data">
+                数据对象，表示 <see cref="T:System.Drawing.Design.ToolboxItem" />。
+              </param>
+      <returns>
+              <see cref="T:System.Drawing.Design.ToolboxItem" /> 类的新实例。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Drawing.Design.ToolboxService" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.CreateItemContainer(System.Drawing.Design.ToolboxItem,System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              从工具箱项创建一个新的工具箱项容器。
+            </summary>
+      <param name="item">
+                要为其创建一个项容器工具箱项。
+              </param>
+      <param name="link">
+                应将链接到此工具箱项可选设计器宿主。
+                 此参数可以为 <see langword="null" />。
+              </param>
+      <returns>
+              一个新的工具箱项容器。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="item" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.CreateItemContainer(System.Windows.Forms.IDataObject)">
+      <summary>
+              从保存的数据对象创建一个新的工具箱项容器。
+            </summary>
+      <param name="dataObject">
+                数据对象，其中包含保存的工具箱数据。
+              </param>
+      <returns>
+              一个新的工具箱项容器。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="dataObject" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.FilterChanged">
+      <summary>
+              在工具箱服务检测到活动设计器的工具箱项筛选器已更改时发生。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.GetItemContainers">
+      <summary>
+              返回 <see cref="T:System.Collections.IList" /> 包含工具箱上的所有项。
+            </summary>
+      <returns>
+              <see cref="T:System.Collections.IList" /> 包含工具箱上的所有项。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.GetItemContainers(System.String)">
+      <summary>
+              返回 <see cref="T:System.Collections.IList" /> 包含给定的类别中的所有项。
+            </summary>
+      <param name="categoryName">
+                要为其检索项的容器列表类别。
+              </param>
+      <returns>
+              <see cref="T:System.Collections.IList" /> 包含指定的类别中的所有项 <paramref name="categoryName" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.GetToolboxItem(System.Type)">
+      <summary>
+              返回给定类型的工具箱项。
+            </summary>
+      <param name="toolType">
+                表示要检索其工具箱项的组件的类型。
+              </param>
+      <returns>
+              具有给定类型相关联的工具箱项或 <see langword="null" /> 如果类型没有对应的工具箱项。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="toolType" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.GetToolboxItem(System.Type,System.Boolean)">
+      <summary>
+              返回给定类型的工具箱项。
+            </summary>
+      <param name="toolType">
+                表示要检索其工具箱项的组件的类型。
+              </param>
+      <param name="nonPublic">
+                <see langword="true" /> 要搜索的类型; 上的非公共构造函数 <see langword="false" /> 搜索公共构造函数。
+              </param>
+      <returns>
+              具有给定类型相关联的工具箱项或 <see langword="null" /> 如果类型没有对应的工具箱项。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="toolType" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.GetToolboxItems(System.Reflection.Assembly,System.String)">
+      <summary>
+              返回 <see cref="T:System.Collections.ICollection" /> 包含给定程序集中的所有工具箱项。
+            </summary>
+      <param name="a">
+                要枚举的程序集。
+              </param>
+      <param name="newCodeBase">
+                一个字符串，则该程序集的 URL 位置。
+              </param>
+      <returns>
+              包含给定程序集中的所有工具箱项的集合。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="a" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.GetToolboxItems(System.Reflection.Assembly,System.String,System.Boolean)">
+      <summary>
+              返回 <see cref="T:System.Collections.ICollection" /> 的 <see cref="T:System.Drawing.Design.ToolboxItem" /> 给定程序集的对象。
+            </summary>
+      <param name="a">
+                要枚举的程序集。
+              </param>
+      <param name="newCodeBase">
+                一个字符串，则该程序集的 URL 位置。
+              </param>
+      <param name="throwOnError">
+                <see langword="true" /> 如果在出现错误引发异常否则为 <see langword="false" />。
+              </param>
+      <returns>
+              包含表示由给定的程序集名称的程序集中的所有工具箱项的集合。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="a" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.GetToolboxItems(System.Reflection.AssemblyName)">
+      <summary>
+              返回 <see cref="T:System.Collections.ICollection" /> 的 <see cref="T:System.Drawing.Design.ToolboxItem" /> 给定程序集的对象。
+            </summary>
+      <param name="an">
+                要从其中加载程序集的程序集名称。
+              </param>
+      <returns>
+              包含表示由给定的程序集名称的程序集中的所有工具箱项的集合。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="an" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.GetToolboxItems(System.Reflection.AssemblyName,System.Boolean)">
+      <summary>
+              返回 <see cref="T:System.Collections.ICollection" /> 的 <see cref="T:System.Drawing.Design.ToolboxItem" /> 给定程序集的对象。
+            </summary>
+      <param name="an">
+                要从其中加载程序集的程序集名称。
+              </param>
+      <param name="throwOnError">
+                <see langword="true" /> 如果在出现错误引发异常否则为 <see langword="false" />。
+              </param>
+      <returns>
+              包含表示由给定的程序集名称的程序集中的所有工具箱项的集合。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="an" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.IsItemContainer(System.Windows.Forms.IDataObject,System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              返回一个值，该值指示给定的数据对象是否表示一个项容器。
+            </summary>
+      <param name="dataObject">
+                要检查有一个工具箱项容器存在的数据对象。
+              </param>
+      <param name="host">
+                可选的设计器宿主。
+                 此参数可以为 <see langword="null" />。
+              </param>
+      <returns>
+              <see langword="true" /> 如果给定的数据对象表示项目容器;否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="dataObject" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.IsItemContainerSupported(System.Drawing.Design.ToolboxItemContainer,System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              确定是否将工具箱项容器支持给定的设计器宿主。
+            </summary>
+      <param name="container">
+                工具箱项容器。
+              </param>
+      <param name="host">
+                给定的设计器宿主。
+              </param>
+      <returns>
+              <see langword="true" /> 如果工具箱项容器支持给定的设计器宿主;否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="container" /> 或 <paramref name="host" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.Refresh">
+      <summary>
+              刷新工具箱项的状态。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.SelectedItemContainerUsed">
+      <summary>
+              当用户报告已使用选定的工具箱项时，请从工具箱服务接收调用。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.SetCursor">
+      <summary>
+              将当前应用程序的光标设置为一个游标，表示当前所选的工具。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果没有选定了项;否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#ComponentModel#Design#IComponentDiscoveryService#GetComponentTypes(System.ComponentModel.Design.IDesignerHost,System.Type)">
+      <summary>
+              获取可用组件类型的列表。
+            </summary>
+      <param name="designerHost">
+                提供设计时服务设计器宿主。
+              </param>
+      <param name="baseType">
+                基类型指定组件来检索。
+                 可以为 <see langword="null" />。
+              </param>
+      <returns>
+              可用组件类型的列表。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#AddCreator(System.Drawing.Design.ToolboxItemCreatorCallback,System.String)">
+      <summary>
+              有关此成员的说明，请参见 <see cref="M:System.Drawing.Design.IToolboxService.AddCreator(System.Drawing.Design.ToolboxItemCreatorCallback,System.String)" /> 方法。
+            </summary>
+      <param name="creator">
+                一个 <see cref="T:System.Drawing.Design.ToolboxItemCreatorCallback" /> ，可在调用工具箱项时创建组件。
+              </param>
+      <param name="format">
+                创建者处理数据格式。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#AddCreator(System.Drawing.Design.ToolboxItemCreatorCallback,System.String,System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              有关此成员的说明，请参见 <see cref="M:System.Drawing.Design.IToolboxService.AddCreator(System.Drawing.Design.ToolboxItemCreatorCallback,System.String,System.ComponentModel.Design.IDesignerHost)" /> 方法。
+            </summary>
+      <param name="creator">
+                一个 <see cref="T:System.Drawing.Design.ToolboxItemCreatorCallback" /> ，可在调用工具箱项时创建组件。
+              </param>
+      <param name="format">
+                创建者处理数据格式。
+              </param>
+      <param name="host">
+                <see cref="T:System.ComponentModel.Design.IDesignerHost" /> ，表示要创建者相关联的设计器宿主。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#AddLinkedToolboxItem(System.Drawing.Design.ToolboxItem,System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              有关此成员的说明，请参见 <see cref="M:System.Drawing.Design.IToolboxService.AddLinkedToolboxItem(System.Drawing.Design.ToolboxItem,System.ComponentModel.Design.IDesignerHost)" /> 方法。
+            </summary>
+      <param name="toolboxItem">
+                链接 <see cref="T:System.Drawing.Design.ToolboxItem" /> 将添加到工具箱。
+              </param>
+      <param name="host">
+                <see cref="T:System.ComponentModel.Design.IDesignerHost" /> 为当前的设计文档。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#AddLinkedToolboxItem(System.Drawing.Design.ToolboxItem,System.String,System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              有关此成员的说明，请参阅 <see cref="M:System.Drawing.Design.IToolboxService.AddLinkedToolboxItem(System.Drawing.Design.ToolboxItem,System.String,System.ComponentModel.Design.IDesignerHost)" />方法。
+            </summary>
+      <param name="toolboxItem">
+                链接 <see cref="T:System.Drawing.Design.ToolboxItem" /> 将添加到工具箱。
+              </param>
+      <param name="category">
+                工具箱将项添加到工具箱项类别。
+              </param>
+      <param name="host">
+                <see cref="T:System.ComponentModel.Design.IDesignerHost" /> 为当前的设计文档。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#AddToolboxItem(System.Drawing.Design.ToolboxItem)">
+      <summary>
+              有关此成员的说明，请参见 <see cref="M:System.Drawing.Design.IToolboxService.AddToolboxItem(System.Drawing.Design.ToolboxItem)" /> 方法。
+            </summary>
+      <param name="toolboxItem">
+                <see cref="T:System.Drawing.Design.ToolboxItem" /> 将添加到工具箱。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#AddToolboxItem(System.Drawing.Design.ToolboxItem,System.String)">
+      <summary>
+              有关此成员的说明，请参见 <see cref="M:System.Drawing.Design.IToolboxService.AddToolboxItem(System.Drawing.Design.ToolboxItem,System.String)" /> 方法。
+            </summary>
+      <param name="toolboxItem">
+                <see cref="T:System.Drawing.Design.ToolboxItem" /> 将添加到工具箱。
+              </param>
+      <param name="category">
+                若要添加的工具箱项类别 <see cref="T:System.Drawing.Design.ToolboxItem" /> 到。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#DeserializeToolboxItem(System.Object)">
+      <summary>
+              有关此成员的说明，请参见 <see cref="M:System.Drawing.Design.IToolboxService.DeserializeToolboxItem(System.Object)" /> 方法。
+            </summary>
+      <param name="serializedObject">
+                对象，其中包含 <see cref="T:System.Drawing.Design.ToolboxItem" /> 来检索。
+              </param>
+      <returns>
+              <see cref="T:System.Drawing.Design.ToolboxItem" /> 创建从反序列化。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#DeserializeToolboxItem(System.Object,System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              有关此成员的说明，请参见 <see cref="M:System.Drawing.Design.IToolboxService.DeserializeToolboxItem(System.Object,System.ComponentModel.Design.IDesignerHost)" /> 方法。
+            </summary>
+      <param name="serializedObject">
+                对象，其中包含 <see cref="T:System.Drawing.Design.ToolboxItem" /> 来检索。
+              </param>
+      <param name="host">
+                <see cref="T:System.ComponentModel.Design.IDesignerHost" /> 要与此关联 <see cref="T:System.Drawing.Design.ToolboxItem" />。
+              </param>
+      <returns>
+              <see cref="T:System.Drawing.Design.ToolboxItem" /> 创建从反序列化。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#GetSelectedToolboxItem">
+      <summary>
+              有关此成员的说明，请参见 <see cref="Overload:System.Drawing.Design.IToolboxService.GetSelectedToolboxItem" /> 方法。
+            </summary>
+      <returns>
+              <see cref="T:System.Drawing.Design.ToolboxItem" /> ，当前没有选定，或 <see langword="null" /> 如果当前没有选定任何工具箱项。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#GetSelectedToolboxItem(System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              有关此成员的说明，请参见 <see cref="M:System.Drawing.Design.IToolboxService.GetSelectedToolboxItem(System.ComponentModel.Design.IDesignerHost)" /> 方法。
+            </summary>
+      <param name="host">
+                <see cref="T:System.ComponentModel.Design.IDesignerHost" /> 所选的工具必须与为其返回相关联。
+              </param>
+      <returns>
+              <see cref="T:System.Drawing.Design.ToolboxItem" /> ，当前没有选定，或 <see langword="null" /> 如果当前没有选定任何工具箱项。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#GetToolboxItems">
+      <summary>
+              从工具箱中获取工具箱项的整个的集合。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Design.ToolboxItemCollection" /> 包含当前工具箱项。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#GetToolboxItems(System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              获取与从工具箱中指定的设计器宿主关联的工具箱项的集合。
+            </summary>
+      <param name="host">
+                <see cref="T:System.ComponentModel.Design.IDesignerHost" /> 要检索的工具箱项与该键相关联。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.Design.ToolboxItemCollection" /> ，包含与指定的设计器宿主关联的当前工具箱项。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="host" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#GetToolboxItems(System.String)">
+      <summary>
+              获取从工具箱中指定的类别相匹配的工具箱项的集合。
+            </summary>
+      <param name="category">
+                要从中检索所有工具箱项工具箱项类别。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.Design.ToolboxItemCollection" /> ，包含与指定的类别相关联的当前工具箱项。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="host" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#GetToolboxItems(System.String,System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              获取与指定设计器宿主和从工具箱的类别相关联的工具箱项的集合。
+            </summary>
+      <param name="category">
+                要检索从工具箱项的工具箱项类别。
+              </param>
+      <param name="host">
+                <see cref="T:System.ComponentModel.Design.IDesignerHost" /> 要检索的工具箱项与该键相关联。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.Design.ToolboxItemCollection" /> ，包含与指定的类别和设计器宿主关联的当前工具箱项。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="category " />或 <paramref name="host" /> 是 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#IsSupported(System.Object,System.Collections.ICollection)">
+      <summary>
+              获取一个值，该值指示指定的对象，它表示序列化的工具箱项，是否与指定的特性匹配。
+            </summary>
+      <param name="serializedObject">
+                对象，其中包含 <see cref="T:System.Drawing.Design.ToolboxItem" /> 来检索。
+              </param>
+      <param name="filterAttributes">
+                <see cref="T:System.Collections.ICollection" /> ，其中包含要测试的序列化的对象的属性。
+              </param>
+      <returns>
+              <see langword="true" /> 如果对象与指定的属性，则匹配否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="serializedObject" /> 或 <paramref name="filterAttributes" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#IsSupported(System.Object,System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              获取一个值，该值指示指定的对象，它表示序列化的工具箱项，可以使用指定的设计器宿主。
+            </summary>
+      <param name="serializedObject">
+                对象，其中包含 <see cref="T:System.Drawing.Design.ToolboxItem" /> 来检索。
+              </param>
+      <param name="host">
+                <see cref="T:System.ComponentModel.Design.IDesignerHost" /> 要测试其支持 <see cref="T:System.Drawing.Design.ToolboxItem" />。
+              </param>
+      <returns>
+              <see langword="true" /> 如果指定的对象是否与指定的设计器宿主; 兼容否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="serializedObject" /> 或 <paramref name="host" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#IsToolboxItem(System.Object)">
+      <summary>
+              获取一个值，该值指定的对象是否序列化的工具箱项。
+            </summary>
+      <param name="serializedObject">
+                要检查的对象。
+              </param>
+      <returns>
+              <see langword="true" /> 如果对象包含工具箱项对象;否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#IsToolboxItem(System.Object,System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              获取一个值，该值指定的对象是否序列化的工具箱项通过使用指定的设计器宿主。
+            </summary>
+      <param name="serializedObject">
+                要检查的对象。
+              </param>
+      <param name="host">
+                <see cref="T:System.ComponentModel.Design.IDesignerHost" /> ，正在发出此请求。
+              </param>
+      <returns>
+              <see langword="true" /> 如果对象包含工具箱项对象;否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#Refresh">
+      <summary>
+              刷新工具箱项的状态。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#RemoveCreator(System.String)">
+      <summary>
+              移除以前添加的工具箱项创建者的指定的数据格式。
+            </summary>
+      <param name="format">
+                若要删除的创建者数据格式。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="format" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#RemoveCreator(System.String,System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              移除与指定的数据格式和指定的设计器宿主关联以前添加的工具箱创建者。
+            </summary>
+      <param name="format">
+                若要删除的创建者数据格式。
+              </param>
+      <param name="host">
+                <see cref="T:System.ComponentModel.Design.IDesignerHost" /> 要删除的创建者与该键相关联。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="format" /> 或 <paramref name="host" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#RemoveToolboxItem(System.Drawing.Design.ToolboxItem)">
+      <summary>
+              从工具箱中删除指定的工具箱项。
+            </summary>
+      <param name="toolboxItem">
+                <see cref="T:System.Drawing.Design.ToolboxItem" /> 从工具箱中删除。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="toolboxItem" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#RemoveToolboxItem(System.Drawing.Design.ToolboxItem,System.String)">
+      <summary>
+              从工具箱中删除指定的工具箱项。
+            </summary>
+      <param name="toolboxItem">
+                <see cref="T:System.Drawing.Design.ToolboxItem" /> 从工具箱中删除。
+              </param>
+      <param name="category">
+                若要删除的工具箱项类别 <see cref="T:System.Drawing.Design.ToolboxItem" /> 从。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="toolboxItem" /> 或 <paramref name="category" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#SelectedToolboxItemUsed">
+      <summary>
+              通知工具箱服务已使用所选的工具。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#SerializeToolboxItem(System.Drawing.Design.ToolboxItem)">
+      <summary>
+              获取一个表示指定的工具箱项的可序列化对象。
+            </summary>
+      <param name="toolboxItem">
+                要序列化的 <see cref="T:System.Drawing.Design.ToolboxItem" />。
+              </param>
+      <returns>
+              一个对象，表示指定 <see cref="T:System.Drawing.Design.ToolboxItem" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="toolboxItem" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#SetCursor">
+      <summary>
+              将当前应用程序的光标设置为一个游标，表示当前所选的工具。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果将光标设置的当前所选的工具。 <see langword="false" /> 如果没有任何工具处于选中状态并且光标将设置为标准的 Windows 光标。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#SetSelectedToolboxItem(System.Drawing.Design.ToolboxItem)">
+      <summary>
+              选择指定的工具箱项。
+            </summary>
+      <param name="toolboxItem">
+                <see cref="T:System.Drawing.Design.ToolboxItem" /> 选择。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Design.ToolboxService.UnloadToolboxItems">
+      <summary>
+              卸载因调用而锁定了任何程序集 <see cref="Overload:System.Drawing.Design.ToolboxService.GetToolboxItems" /> 方法。
+            </summary>
+    </member>
+    <member name="P:System.Drawing.Design.CursorEditor.IsDropDownResizable">
+      <summary>
+              获取一个值，该值指示是否应由用户调整下拉编辑器的大小。
+            </summary>
+      <returns>
+              如果可调整下拉编辑器的大小，则为 <see langword="true" />；否则为 false。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Design.ToolboxItemContainer.IsCreated">
+      <summary>
+              获取一个值，该值指示是否在基础的工具箱项反序列化。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果基础的工具箱项消息反序列化;否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Design.ToolboxItemContainer.IsTransient">
+      <summary>
+              获取一个值，该值指示如果 <see cref="T:System.Drawing.Design.ToolboxItem" /> 中包含 <see cref="T:System.Drawing.Design.ToolboxItemContainer" /> 是暂时的。
+            </summary>
+      <returns>
+              <see langword="true" />, 如果 <see cref="T:System.Drawing.Design.ToolboxItem" /> 中包含 <see cref="T:System.Drawing.Design.ToolboxItemContainer" /> 被标记为暂时性的; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Design.ToolboxItemContainer.ToolboxData">
+      <summary>
+              获取 <see cref="T:System.Windows.Forms.IDataObject" /> 描述此 <see cref="T:System.Drawing.Design.ToolboxItemContainer" />。
+            </summary>
+      <returns>
+              <see cref="T:System.Windows.Forms.IDataObject" /> 描述此 <see cref="T:System.Drawing.Design.ToolboxItemContainer" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Design.ToolboxItemCreator.Format">
+      <summary>
+              获取表示要反序列化所需的数据的剪贴板格式 <see cref="T:System.Drawing.Design.ToolboxItem" />。
+            </summary>
+      <returns>
+              一个表示剪贴板格式字符串。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Design.ToolboxService.CategoryNames">
+      <summary>
+              获取一个字符串来描述可用类别工具箱的集合。
+            </summary>
+      <returns>
+              类别名称的集合。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Design.ToolboxService.SelectedCategory">
+      <summary>
+              获取或设置当前所选类别的名称。
+            </summary>
+      <returns>
+              包含当前所选类别的名称的字符串。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Design.ToolboxService.SelectedItemContainer">
+      <summary>
+              获取或设置当前选定的项容器。
+            </summary>
+      <returns>
+              当前选定的工具箱项的项容器或 <see langword="null" /> 如果未不选定任何项。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#CategoryNames">
+      <summary>
+              有关此成员的说明，请参阅 <see cref="P:System.Drawing.Design.IToolboxService.CategoryNames" /> 属性。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Design.CategoryNameCollection" /> 包含工具类别。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Design.ToolboxService.System#Drawing#Design#IToolboxService#SelectedCategory">
+      <summary>
+              有关此成员的说明，请参见 <see cref="P:System.Drawing.Design.IToolboxService.SelectedCategory" /> 属性。
+            </summary>
+      <returns>
+              当前选定类别的名称。
+            </returns>
+    </member>
+    <member name="T:System.Drawing.Design.BitmapEditor">
+      <summary>
+              用于在属性浏览器中选择位图文件中提供的用户界面。
+            </summary>
+    </member>
+    <member name="T:System.Drawing.Design.ColorEditor">
+      <summary>
+              提供了 <see cref="T:System.Drawing.Design.UITypeEditor" /> 直观地选择一种颜色。
+            </summary>
+    </member>
+    <member name="T:System.Drawing.Design.ContentAlignmentEditor">
+      <summary>
+              提供了 <see cref="T:System.Drawing.Design.UITypeEditor" /> 用于直观地编辑内容的对齐方式。
+            </summary>
+    </member>
+    <member name="T:System.Drawing.Design.CursorEditor">
+      <summary>
+              提供了 <see cref="T:System.Drawing.Design.UITypeEditor" /> ，可以执行搜索光标 (.cur) 文件的默认文件。
+            </summary>
+    </member>
+    <member name="T:System.Drawing.Design.FontEditor">
+      <summary>
+              提供用户界面来选择并配置 <see cref="T:System.Drawing.Font" /> 对象。
+            </summary>
+    </member>
+    <member name="T:System.Drawing.Design.FontNameEditor">
+      <summary>
+              提供了 <see cref="T:System.Drawing.Design.UITypeEditor" /> 绘制的字形的字体名称。
+            </summary>
+    </member>
+    <member name="T:System.Drawing.Design.IconEditor">
+      <summary>
+              提供了 <see cref="T:System.Drawing.Design.UITypeEditor" /> 直观地选择一个图标。
+            </summary>
+    </member>
+    <member name="T:System.Drawing.Design.ImageEditor">
+      <summary>
+              提供用于在属性网格中选择一个属性的图像的用户界面。
+            </summary>
+    </member>
+    <member name="T:System.Drawing.Design.MetafileEditor">
+      <summary>
+              提供了 <see cref="T:System.Drawing.Design.UITypeEditor" /> ，可以执行搜索图元文件 (.emf) 文件的默认文件。
+            </summary>
+    </member>
+    <member name="T:System.Drawing.Design.ToolboxItemContainer">
+      <summary>
+              封装 <see cref="T:System.Drawing.Design.ToolboxItem" />。
+            </summary>
+    </member>
+    <member name="T:System.Drawing.Design.ToolboxItemCreator">
+      <summary>
+              封装 <see cref="T:System.Drawing.Design.ToolboxItemCreatorCallback" />。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="T:System.Drawing.Design.ToolboxService">
+      <summary>
+              提供 <see cref="T:System.Drawing.Design.IToolboxService" /> 接口的默认实现。
+            </summary>
+    </member>
+  </members>
+</doc>

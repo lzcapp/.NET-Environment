@@ -1,0 +1,981 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Accessibility</name>
+  </assembly>
+  <members>
+    <member name="F:Accessibility.__MIDL_IWinTypes_0009.hInproc">
+      <summary>
+              <see cref="T:Accessibility.__MIDL_IWinTypes_0009" /> 所有公开的成员都是组件对象模型 (COM) 辅助功能接口的托管包装的一部分。
+            </summary>
+    </member>
+    <member name="F:Accessibility.__MIDL_IWinTypes_0009.hRemote">
+      <summary>
+              <see cref="T:Accessibility.__MIDL_IWinTypes_0009" /> 所有公开的成员都是组件对象模型 (COM) 辅助功能接口的托管包装的一部分。
+            </summary>
+    </member>
+    <member name="F:Accessibility._RemotableHandle.fContext">
+      <summary>
+              <see cref="T:Accessibility.IAccessibleHandler" /> 及其所有公开成员均属于组件对象模型 (COM) 辅助功能接口的托管包装器。
+            </summary>
+    </member>
+    <member name="F:Accessibility._RemotableHandle.u">
+      <summary>
+              <see cref="T:Accessibility.IAccessibleHandler" /> 及其所有公开成员均属于组件对象模型 (COM) 辅助功能接口的托管包装器。
+            </summary>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.#ctor">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ClearHmenuProps(Accessibility._RemotableHandle@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hmenu">
+                标识基于 HMENU 的可访问元素要批注。
+              </param>
+      <param name="idChild">
+                指定可访问元素的子 ID。
+              </param>
+      <param name="paProps">
+                指定要重置的属性的数组。
+                 这些属性将恢复为默认行为进行批注之前对它们进行显示。
+              </param>
+      <param name="cProps">
+                指定中的属性数 <paramref name="paProps" /> 数组。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ClearHwndProps(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hwnd">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idObject">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idChild">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="paProps">
+                指定要重置的属性数组。
+                 这些属性将恢复为默认行为进行批注之前对它们进行显示。
+              </param>
+      <param name="cProps">
+                指定中的属性数 <paramref name="paProps" /> 数组。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ClearProps(System.Byte@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="pIDString">
+                标识要取消批注的可访问元素。
+              </param>
+      <param name="dwIDStringLen">
+                长度 <paramref name="pIDString" />。
+              </param>
+      <param name="paProps">
+                指定要重置的属性数组。
+                 这些属性将恢复为之前进行批注，它们显示的默认行为。
+              </param>
+      <param name="cProps">
+                指定中的属性数 <paramref name="paProps" /> 数组。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ComposeHmenuIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hmenu">
+                标识基于 HMENU 的可访问元素。
+              </param>
+      <param name="idChild">
+                指定可访问元素的子 ID。
+              </param>
+      <param name="ppIDString">
+                指向接收标识字符串的缓冲区的指针。
+                 被调用方分配此缓冲区使用 <see langword="CoTaskMemAlloc" />。
+                 完成后，调用方必须通过调用释放缓冲区 <see langword="CoTaskMemFree" />。
+              </param>
+      <param name="pdwIDStringLen">
+                指向接收的标识字符串的长度的缓冲区的指针。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ComposeHwndIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hwnd">
+                指定调用方想要确定可访问元素的 HWND。
+              </param>
+      <param name="idObject">
+                指定可访问元素的对象 ID。
+              </param>
+      <param name="idChild">
+                指定可访问元素的子 ID。
+              </param>
+      <param name="ppIDString">
+                指向接收标识字符串的缓冲区的指针。
+                 被调用方分配此缓冲区使用 <see langword="CoTaskMemAlloc" />。
+                 完成后，调用方必须通过调用释放缓冲区 <see langword="CoTaskMemFree" />。
+              </param>
+      <param name="pdwIDStringLen">
+                指向接收的标识字符串的长度的缓冲区的指针。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.DecomposeHmenuIdentityString(System.Byte@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="pIDString">
+                指向包含基于 HMENU 的可访问元素的标识字符串的缓冲区的指针。
+              </param>
+      <param name="dwIDStringLen">
+                指定由指定的标识字符串的长度 <paramref name="pIDString" />。
+              </param>
+      <param name="phmenu">
+                指向该缓冲区用于接收的 HMENU 可访问元素的指针。
+              </param>
+      <param name="pidChild">
+                指向用于接收缓冲区的可访问元素的子 ID 的指针。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.DecomposeHwndIdentityString(System.Byte@,System.UInt32,System.IntPtr,System.UInt32@,System.UInt32@)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="pIDString">
+                指向包含基于 Hwnd 的可访问元素的标识字符串的缓冲区的指针。
+              </param>
+      <param name="dwIDStringLen">
+                指定由指定的标识字符串的长度 <paramref name="pIDString" />。
+              </param>
+      <param name="phwnd">
+                指向接收可访问元素的 HWND 的缓冲区的指针。
+              </param>
+      <param name="pidObject">
+                指向用于接收缓冲区的可访问元素的对象 ID 的指针。
+              </param>
+      <param name="pidChild">
+                指向用于接收缓冲区的可访问元素的子 ID 的指针。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHmenuProp(Accessibility._RemotableHandle@,System.UInt32,System.Guid,System.Object)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hmenu">
+                标识基于 HMENU 的可访问元素要批注。
+              </param>
+      <param name="idChild">
+                指定可访问元素的子 ID。
+              </param>
+      <param name="idProp">
+                指定可访问元素的属性是要批注。
+              </param>
+      <param name="var">
+                指定新值 <paramref name="idProp" /> 属性。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHmenuPropServer(Accessibility._RemotableHandle@,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hmenu">
+                标识要批注的 HMENU 访问元素。
+              </param>
+      <param name="idChild">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="paProps">
+                指定由指定的回调对象的属性数组。
+              </param>
+      <param name="cProps">
+                指定中的属性数 <paramref name="paProps" /> 数组。
+              </param>
+      <param name="pServer">
+                指定在客户端请求的重写属性之一时将调用的回调对象。
+              </param>
+      <param name="AnnoScope">
+                可能是 ANNO_THIS，指示批注影响指示可访问元素或 ANNO_CONTAINER，指示它适用于该元素和其直接元素子级。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHmenuPropStr(Accessibility._RemotableHandle@,System.UInt32,System.Guid,System.String)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hmenu">
+                标识基于 HMENU 的可访问元素要批注。
+              </param>
+      <param name="idChild">
+                指定可访问元素的子 ID。
+              </param>
+      <param name="idProp">
+                指定可访问元素的属性是要批注。
+              </param>
+      <param name="str">
+                指定新值 <paramref name="idProp" /> 属性。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHwndProp(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid,System.Object)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hwnd">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idObject">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idChild">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idProp">
+                指定该元素的哪个属性是要批注。
+              </param>
+      <param name="var">
+                指定新值 <paramref name="idProp" /> 属性。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHwndPropServer(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hwnd">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idObject">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idChild">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="paProps">
+                指定由指定的回调对象的属性数组。
+              </param>
+      <param name="cProps">
+                指定中的属性数 <paramref name="paProps" /> 数组。
+              </param>
+      <param name="pServer">
+                指定在客户端请求的重写属性之一时将调用的回调对象。
+              </param>
+      <param name="AnnoScope">
+                可能是 ANNO_THIS，指示批注影响指示可访问元素或 ANNO_CONTAINER，指示它适用于该元素和其直接元素子级。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHwndPropStr(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid,System.String)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hwnd">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idObject">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idChild">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idProp">
+                指定该元素的哪个属性是要批注。
+              </param>
+      <param name="str">
+                指定新值 <paramref name="idProp" /> 属性。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetPropServer(System.Byte@,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="pIDString">
+                标识可访问要批注的元素。
+              </param>
+      <param name="dwIDStringLen">
+                指定由标识字符串的长度 <paramref name="pIDString" /> 参数。
+              </param>
+      <param name="paProps">
+                指定属性均由指定的回调对象的数组。
+              </param>
+      <param name="cProps">
+                指定中的属性数 <paramref name="paProps" /> 数组。
+              </param>
+      <param name="pServer">
+                指定在客户端请求的重写属性之一时将调用的回调对象。
+              </param>
+      <param name="AnnoScope">
+                可能是 ANNO_THIS，指示批注影响指示可访问元素或 ANNO_CONTAINER，指示它适用于该元素和其直接元素子级。
+              </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetPropValue(System.Byte@,System.UInt32,System.Guid,System.Object)">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="pIDString">
+                标识可访问要批注的元素。
+              </param>
+      <param name="dwIDStringLen">
+                指定由标识字符串的长度 <paramref name="pIDString" /> 参数。
+              </param>
+      <param name="idProp">
+                指定要批注的可访问元素的属性。
+              </param>
+      <param name="var">
+                指定属性的新值。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accDoDefaultAction(System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accHitTest(System.Int32,System.Int32)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="xLeft">
+                此参数旨在仅供内部使用。
+              </param>
+      <param name="yTop">
+                此参数旨在仅供内部使用。
+              </param>
+      <returns>
+              一个对象。
+            </returns>
+    </member>
+    <member name="M:Accessibility.IAccessible.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="pxLeft">
+                此参数旨在仅供内部使用。
+              </param>
+      <param name="pyTop">
+                此参数旨在仅供内部使用。
+              </param>
+      <param name="pcxWidth">
+                此参数旨在仅供内部使用。
+              </param>
+      <param name="pcyHeight">
+                此参数旨在仅供内部使用。
+              </param>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accNavigate(System.Int32,System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="navDir">
+                此参数旨在仅供内部使用。
+              </param>
+      <param name="varStart">
+                此参数旨在仅供内部使用。
+              </param>
+      <returns>
+              如果成功，返回 S_OK。
+               有关其他可能的返回值，请参阅的文档 <see langword="IAccessible::accNavigate" />。
+            </returns>
+    </member>
+    <member name="M:Accessibility.IAccessible.accSelect(System.Int32,System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="flagsSelect">
+                此参数旨在仅供内部使用。
+              </param>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccessibleHandler.AccessibleObjectFromID(System.Int32,System.Int32,Accessibility.IAccessible@)">
+      <summary>
+              <see cref="T:Accessibility.IAccessibleHandler" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessibleHandler" /> 接口。
+            </summary>
+      <param name="hwnd">
+                指定为其 IAccessible 接口指针是要检索的窗口句柄。
+              </param>
+      <param name="lObjectID">
+                指定的对象 id。
+              </param>
+      <param name="pIAccessible">
+                指定接收对象的 IAccessible 接口的地址的指针变量的地址。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccIdentity.GetIdentityString(System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+              <see cref="T:Accessibility.IAccIdentity" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccIndentity" /> 接口。
+            </summary>
+      <param name="dwIDChild">
+                指定哪些子 IAccessible 对象调用方希望标识。
+              </param>
+      <param name="ppIDString">
+                接收指向被调用方分配的标识字符串的指针的变量的地址。
+                 被调用方分配的标识字符串使用 <see langword="CoTaskMemAlloc" />; 调用方必须释放使用的标识字符串 <see langword="CoTaskMemFree" /> 完成。
+              </param>
+      <param name="pdwIDStringLen">
+                接收长度，以字节为单位，被调用方分配的标识字符串的变量的地址。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServer.GetPropValue(System.Byte@,System.UInt32,System.Guid,System.Object@,System.Int32@)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServer" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServer" /> 接口。
+            </summary>
+      <param name="pIDString">
+                包含一个字符串，标识所请求的属性。
+              </param>
+      <param name="dwIDStringLen">
+                指定由指定的标识字符串的长度 <paramref name="pIDString" /> 参数。
+              </param>
+      <param name="idProp">
+                指定所需的属性，该值指示的 GUID。
+              </param>
+      <param name="pvarValue">
+                指定重写的属性的值。
+                 此参数才有效才 <paramref name="pfHasProp" /> 为 TRUE。
+                 服务器必须将其设置为 VT_EMPTY 如果 <paramref name="pfHasProp" /> 设置为 FALSE。
+              </param>
+      <param name="pfHasProp">
+                指示服务器是否提供请求的属性的值。
+                 服务器应设置此为如果它正在返回重写属性为 TRUE 或 FALSE 如果它不返回一个属性 (在这种情况下它还应设置 <paramref name="pvarValue" /> 为 VT_EMPTY)。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ClearHmenuProps(Accessibility._RemotableHandle@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hmenu">
+                标识基于 HMENU 的可访问元素要批注。
+              </param>
+      <param name="idChild">
+                指定可访问元素的子 ID。
+              </param>
+      <param name="paProps">
+                指定要重置的属性的数组。
+                 这些属性将恢复为默认行为进行批注之前对它们进行显示。
+              </param>
+      <param name="cProps">
+                指定中的属性数 <paramref name="paProps" /> 数组。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ClearHwndProps(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hwnd">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idObject">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idChild">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="paProps">
+                指定要重置的属性数组。
+                 这些属性将恢复为默认行为进行批注之前对它们进行显示。
+              </param>
+      <param name="cProps">
+                指定中的属性数 <paramref name="paProps" /> 数组。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ClearProps(System.Byte@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="pIDString">
+                标识要取消批注的可访问元素。
+              </param>
+      <param name="dwIDStringLen">
+                长度 <paramref name="pIDString" />。
+              </param>
+      <param name="paProps">
+                指定要重置的属性数组。
+                 这些属性将恢复为之前进行批注，它们显示的默认行为。
+              </param>
+      <param name="cProps">
+                指定中的属性数 <paramref name="paProps" /> 数组。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ComposeHmenuIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hmenu">
+                标识基于 HMENU 的可访问元素。
+              </param>
+      <param name="idChild">
+                指定可访问元素的子 ID。
+              </param>
+      <param name="ppIDString">
+                指向接收标识字符串的缓冲区的指针。
+                 被调用方分配此缓冲区使用 <see langword="CoTaskMemAlloc" />。
+                 完成后，调用方必须通过调用释放缓冲区 <see langword="CoTaskMemFree" />。
+              </param>
+      <param name="pdwIDStringLen">
+                指向接收的标识字符串的长度的缓冲区的指针。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ComposeHwndIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hwnd">
+                指定调用方想要确定可访问元素的 HWND。
+              </param>
+      <param name="idObject">
+                指定可访问元素的对象 ID。
+              </param>
+      <param name="idChild">
+                指定可访问元素的子 ID。
+              </param>
+      <param name="ppIDString">
+                指向接收标识字符串的缓冲区的指针。
+                 被调用方分配此缓冲区使用 <see langword="CoTaskMemAlloc" />。
+                 完成后，调用方必须通过调用释放缓冲区 <see langword="CoTaskMemFree" />。
+              </param>
+      <param name="pdwIDStringLen">
+                指向接收的标识字符串的长度的缓冲区的指针。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.DecomposeHmenuIdentityString(System.Byte@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="pIDString">
+                指向包含基于 HMENU 的可访问元素的标识字符串的缓冲区的指针。
+              </param>
+      <param name="dwIDStringLen">
+                指定由指定的标识字符串的长度 <paramref name="pIDString" />。
+              </param>
+      <param name="phmenu">
+                指向该缓冲区用于接收的 HMENU 可访问元素的指针。
+              </param>
+      <param name="pidChild">
+                指向用于接收缓冲区的可访问元素的子 ID 的指针。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.DecomposeHwndIdentityString(System.Byte@,System.UInt32,System.IntPtr,System.UInt32@,System.UInt32@)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="pIDString">
+                指向包含基于 Hwnd 的可访问元素的标识字符串的缓冲区的指针。
+              </param>
+      <param name="dwIDStringLen">
+                指定由指定的标识字符串的长度 <paramref name="pIDString" />。
+              </param>
+      <param name="phwnd">
+                指向接收可访问元素的 HWND 的缓冲区的指针。
+              </param>
+      <param name="pidObject">
+                指向用于接收缓冲区的可访问元素的对象 ID 的指针。
+              </param>
+      <param name="pidChild">
+                指向用于接收缓冲区的可访问元素的子 ID 的指针。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHmenuProp(Accessibility._RemotableHandle@,System.UInt32,System.Guid,System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hmenu">
+                标识基于 HMENU 的可访问元素要批注。
+              </param>
+      <param name="idChild">
+                指定可访问元素的子 ID。
+              </param>
+      <param name="idProp">
+                指定可访问元素的属性是要批注。
+              </param>
+      <param name="var">
+                指定新值 <paramref name="idProp" /> 属性。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHmenuPropServer(Accessibility._RemotableHandle@,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hmenu">
+                标识要批注的 HMENU 访问元素。
+              </param>
+      <param name="idChild">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="paProps">
+                指定由指定的回调对象的属性数组。
+              </param>
+      <param name="cProps">
+                指定中的属性数 <paramref name="paProps" /> 数组。
+              </param>
+      <param name="pServer">
+                指定在客户端请求的重写属性之一时将调用的回调对象。
+              </param>
+      <param name="AnnoScope">
+                可能是 ANNO_THIS，指示批注影响指示可访问元素或 ANNO_CONTAINER，指示它适用于该元素和其直接元素子级。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHmenuPropStr(Accessibility._RemotableHandle@,System.UInt32,System.Guid,System.String)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hmenu">
+                标识基于 HMENU 的可访问元素要批注。
+              </param>
+      <param name="idChild">
+                指定可访问元素的子 ID。
+              </param>
+      <param name="idProp">
+                指定可访问元素的属性是要批注。
+              </param>
+      <param name="str">
+                指定新值 <paramref name="idProp" /> 属性。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHwndProp(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid,System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hwnd">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idObject">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idChild">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idProp">
+                指定该元素的哪个属性是要批注。
+              </param>
+      <param name="var">
+                指定该属性的新值。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHwndPropServer(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hwnd">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idObject">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idChild">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="paProps">
+                指定由指定的回调对象的属性数组。
+              </param>
+      <param name="cProps">
+                指定中的属性数 <paramref name="paProps" /> 数组。
+              </param>
+      <param name="pServer">
+                指定在客户端请求的重写属性之一时将调用的回调对象。
+              </param>
+      <param name="AnnoScope">
+                可能是 ANNO_THIS，指示批注影响指示可访问元素或 ANNO_CONTAINER，指示它适用于该元素和其直接元素子级。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHwndPropStr(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid,System.String)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="hwnd">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idObject">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idChild">
+                标识可访问要批注的元素。
+                 这将替换标识字符串。
+              </param>
+      <param name="idProp">
+                指定该元素的哪个属性是要批注。
+              </param>
+      <param name="str">
+                指定该属性的新值。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetPropServer(System.Byte@,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="pIDString">
+                标识可访问要批注的元素。
+              </param>
+      <param name="dwIDStringLen">
+                指定由标识字符串的长度 <paramref name="pIDString" /> 参数。
+              </param>
+      <param name="paProps">
+                指定属性均由指定的回调对象的数组。
+              </param>
+      <param name="cProps">
+                指定属性均由指定的回调对象的数组。
+              </param>
+      <param name="pServer">
+                指定在客户端请求的重写属性之一时将调用的回调对象。
+              </param>
+      <param name="AnnoScope">
+                可能是 ANNO_THIS，指示批注影响指示可访问元素或 ANNO_CONTAINER，指示它适用于该元素和其直接元素子级。
+              </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetPropValue(System.Byte@,System.UInt32,System.Guid,System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+      <param name="pIDString">
+                标识可访问要批注的元素。
+              </param>
+      <param name="dwIDStringLen">
+                指定由标识字符串的长度 <paramref name="pIDString" /> 参数。
+              </param>
+      <param name="idProp">
+                指定要批注的可访问元素的属性。
+              </param>
+      <param name="var">
+                指定属性的新值。
+              </param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accChild(System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+      <returns>
+              一个对象。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accChildCount">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <returns>
+              一个表示该计数的整数。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accDefaultAction(System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+      <returns>
+              表示操作的字符串。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accDescription(System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+      <returns>
+              一个表示说明的字符串。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accFocus">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <returns>
+              如果成功，返回 S_OK。
+               否则，返回另一个标准的 COM 错误代码。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accHelp(System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+      <returns>
+              一个字符串。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accHelpTopic(System.String@,System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="pszHelpFile">
+                此参数旨在仅供内部使用。
+              </param>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+      <returns>
+              一个整数。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accKeyboardShortcut(System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+      <returns>
+              一个字符串。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accName(System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+      <returns>
+              一个字符串。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accParent">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <returns>
+              一个对象。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accRole(System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+      <returns>
+              一个对象。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accSelection">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <returns>
+              一个对象。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accState(System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+      <returns>
+              一个对象。
+            </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accValue(System.Object)">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+      <param name="varChild">
+                此参数旨在仅供内部使用。
+              </param>
+      <returns>
+              一个字符串。
+            </returns>
+    </member>
+    <member name="T:Accessibility.__MIDL_IWinTypes_0009">
+      <summary>
+              <see cref="T:Accessibility.__MIDL_IWinTypes_0009" /> 所有公开的成员都是组件对象模型 (COM) 辅助功能接口的托管包装的一部分。
+            </summary>
+    </member>
+    <member name="T:Accessibility._RemotableHandle">
+      <summary>
+              <see cref="T:Accessibility.IAccessibleHandler" /> 及其所有公开成员均属于组件对象模型 (COM) 辅助功能接口的托管包装器。
+            </summary>
+    </member>
+    <member name="T:Accessibility.AnnoScope">
+      <summary>
+              <see cref="T:Accessibility.AnnoScope" /> 所有公开的成员都是组件对象模型 (COM) 辅助功能接口的托管包装的一部分。
+            </summary>
+    </member>
+    <member name="F:Accessibility.AnnoScope.ANNO_THIS">
+      <summary>
+              批注的作用域是直接的对象。
+            </summary>
+    </member>
+    <member name="F:Accessibility.AnnoScope.ANNO_CONTAINER">
+      <summary>
+              批注的作用域是容器对象。
+            </summary>
+    </member>
+    <member name="T:Accessibility.CAccPropServices">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServices" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+    </member>
+    <member name="T:Accessibility.CAccPropServicesClass">
+      <summary>
+              <see cref="T:Accessibility.CAccPropServicesClass" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+    </member>
+    <member name="T:Accessibility.IAccessible">
+      <summary>
+              <see cref="T:Accessibility.IAccessible" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessible" /> 接口。
+            </summary>
+    </member>
+    <member name="T:Accessibility.IAccessibleHandler">
+      <summary>
+              <see cref="T:Accessibility.IAccessibleHandler" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccessibleHandler" /> 接口。
+            </summary>
+    </member>
+    <member name="T:Accessibility.IAccIdentity">
+      <summary>
+              <see cref="T:Accessibility.IAccIdentity" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccIdentity" /> 接口。
+            </summary>
+    </member>
+    <member name="T:Accessibility.IAccPropServer">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServer" /> 所有公开的成员都是托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServer" /> 接口。
+            </summary>
+    </member>
+    <member name="T:Accessibility.IAccPropServices">
+      <summary>
+              <see cref="T:Accessibility.IAccPropServices" /> 界面和公开的所有其成员的托管包装的组件对象模型 (COM) 的一部分 <see langword="IAccPropServices" /> 接口。
+            </summary>
+    </member>
+  </members>
+</doc>

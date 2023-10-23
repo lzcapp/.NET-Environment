@@ -1,0 +1,4785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Build.Framework</name>
+  </assembly>
+  <members>
+    <member name="E:Microsoft.Build.Framework.IEventSource.AnyEventRaised">
+      <summary>
+              当生成引发任何其他类型的生成事件时发生。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.BuildFinished">
+      <summary>
+              生成完成时发生。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.BuildStarted">
+      <summary>
+              生成开始时发生。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.CustomEventRaised">
+      <summary>
+              当生成引发自定义事件时发生。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.ErrorRaised">
+      <summary>
+              生成将引发错误时发生。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.MessageRaised">
+      <summary>
+              当生成引发一条消息时发生。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.ProjectFinished">
+      <summary>
+              当项目生成完成时出现。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.ProjectStarted">
+      <summary>
+              项目开始生成时发生。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.StatusEventRaised">
+      <summary>
+              当生成引发状态事件时出现。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.TargetFinished">
+      <summary>
+              当目标完成生成时出现。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.TargetStarted">
+      <summary>
+              当目标开始生成时发生。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.TaskFinished">
+      <summary>
+              当任务完成执行时发生。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.TaskStarted">
+      <summary>
+              当任务开始执行时发生。
+            </summary>
+    </member>
+    <member name="E:Microsoft.Build.Framework.IEventSource.WarningRaised">
+      <summary>
+              当生成引发警告时发生。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.BuildEventContext.InvalidNodeId">
+      <summary>
+              该事件的目标的节点 ID 时引发事件。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.BuildEventContext.InvalidProjectContextId">
+      <summary>
+              目标事件的项目 ID 时引发事件。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.BuildEventContext.InvalidProjectInstanceId">
+      <summary>
+              目标事件的项目实例 ID 时引发事件。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.BuildEventContext.InvalidSubmissionId">
+      <summary>
+              目标事件的提交 ID 时引发事件。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.BuildEventContext.InvalidTargetId">
+      <summary>
+              目标名称事件时触发事件。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.BuildEventContext.InvalidTaskId">
+      <summary>
+              目标事件的任务 ID 时引发事件。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.ProjectStartedEventArgs.InvalidProjectId">
+      <summary>
+              一个值，表示一个无效的项目 id。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildEngineResult.#ctor(System.Boolean,System.Collections.Generic.List{System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.ITaskItem[]}})">
+      <summary>
+              构造函数采用生成的结果和每个项目的目标输出的列表。
+            </summary>
+      <param name="result">
+                生成的结果。
+              </param>
+      <param name="targetOutputsPerProject">
+                每个项目的输出的列表。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildErrorEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.BuildErrorEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildErrorEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)">
+      <summary>
+              初始化的新实例<see cref="T:Microsoft.Build.Framework.BuildErrorEventArgs" />使用指定的类<see cref="P:Microsoft.Build.Framework.BuildErrorEventArgs.SubCategory" />， <see cref="P:Microsoft.Build.Framework.BuildErrorEventArgs.Code" />， <see cref="P:Microsoft.Build.Framework.BuildErrorEventArgs.File" />， <see cref="P:Microsoft.Build.Framework.BuildErrorEventArgs.LineNumber" />， <see cref="P:Microsoft.Build.Framework.BuildErrorEventArgs.ColumnNumber" />， <see cref="P:Microsoft.Build.Framework.BuildErrorEventArgs.EndLineNumber" />， <see cref="P:Microsoft.Build.Framework.BuildErrorEventArgs.EndColumnNumber" />， <see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" />， <see cref="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />，和<see cref="P:Microsoft.Build.Framework.BuildEventArgs.SenderName" />值。
+            </summary>
+      <param name="subcategory">
+                事件的自定义子类别。
+              </param>
+      <param name="code">
+                事件的错误代码。
+              </param>
+      <param name="file">
+                与事件关联的文件的名称。
+              </param>
+      <param name="lineNumber">
+                引发事件的代码的部分的开头相对应的行号。
+              </param>
+      <param name="columnNumber">
+                引发事件的代码段的开头相对应的列号。
+              </param>
+      <param name="endLineNumber">
+                对应于引发事件的代码段的结束行号。
+              </param>
+      <param name="endColumnNumber">
+                对应于引发事件的代码段的结束列号。
+              </param>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildErrorEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime)">
+      <summary>
+              此构造函数，这样设置的时间戳
+            </summary>
+      <param name="subcategory">
+                事件子类别
+              </param>
+      <param name="code">
+                事件代码
+              </param>
+      <param name="file">
+                与事件关联的文件
+              </param>
+      <param name="lineNumber">
+                行号 (如果不适用，则为 0)
+              </param>
+      <param name="columnNumber">
+                列号 (如果不适用，则为 0)
+              </param>
+      <param name="endLineNumber">
+                结束行号 (如果不适用，则为 0)
+              </param>
+      <param name="endColumnNumber">
+                结束列号 (如果不适用，则为 0)
+              </param>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="senderName">
+                事件发送方的名称
+              </param>
+      <param name="eventTimestamp">
+                创建事件时的时间戳
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildErrorEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime,System.Object[])">
+      <summary>
+              此构造函数，这样设置的时间戳
+            </summary>
+      <param name="subcategory">
+                事件子类别
+              </param>
+      <param name="code">
+                事件代码
+              </param>
+      <param name="file">
+                与事件关联的文件
+              </param>
+      <param name="lineNumber">
+                行号 (如果不适用，则为 0)
+              </param>
+      <param name="columnNumber">
+                列号 (如果不适用，则为 0)
+              </param>
+      <param name="endLineNumber">
+                结束行号 (如果不适用，则为 0)
+              </param>
+      <param name="endColumnNumber">
+                结束列号 (如果不适用，则为 0)
+              </param>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="senderName">
+                事件发送方的名称
+              </param>
+      <param name="eventTimestamp">
+                创建事件时的时间戳
+              </param>
+      <param name="messageArgs">
+                消息参数
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.BuildEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildEventArgs.#ctor(System.String,System.String,System.String)">
+      <summary>
+              初始化的新实例<see cref="T:Microsoft.Build.Framework.BuildEventArgs" />使用指定的类<see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" />， <see cref="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />，和<see cref="P:Microsoft.Build.Framework.BuildEventArgs.SenderName" />值。
+            </summary>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildEventArgs.#ctor(System.String,System.String,System.String,System.DateTime)">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.BuildEventArgs" /> 类的新实例。
+            </summary>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+      <param name="eventTimestamp">
+                要与事件关联的日期和时间。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildEventContext.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.BuildEventContext" /> 类的新实例。
+            </summary>
+      <param name="nodeId">
+                生成事件的节点 ID。
+              </param>
+      <param name="targetId">
+                生成事件的目标 ID。
+              </param>
+      <param name="projectContextId">
+                生成事件的项目 ID。
+              </param>
+      <param name="taskId">
+                生成事件的任务 ID。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildEventContext.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+              构造具有指定的项目的实例 id BuildEventContext。
+            </summary>
+      <param name="nodeId">
+                生成事件的节点 ID。
+              </param>
+      <param name="projectInstanceId">
+                生成事件的项目实例 ID。
+              </param>
+      <param name="projectContextId">
+                生成事件的项目 ID。
+              </param>
+      <param name="targetId">
+                生成事件的目标 ID。
+              </param>
+      <param name="taskId">
+                生成事件的任务 ID。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildEventContext.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+              构造特定提交 id BuildEventContext
+            </summary>
+      <param name="submissionId">
+                生成事件的提交 ID。
+              </param>
+      <param name="nodeId">
+                生成事件的节点 ID。
+              </param>
+      <param name="projectInstanceId">
+                生成事件的项目实例 ID。
+              </param>
+      <param name="projectContextId">
+                生成事件的项目 ID。
+              </param>
+      <param name="targetId">
+                生成事件的目标 ID。
+              </param>
+      <param name="taskId">
+                生成事件的任务 ID。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildEventContext.Equals(System.Object)">
+      <summary>
+              获取所引用是否相同。
+            </summary>
+      <param name="obj">
+                要比较的引用。
+              </param>
+      <returns>
+              <see langword="true" /> 如果引用相等 <see langword="false" /> 否则为。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildEventContext.GetHashCode">
+      <summary>
+              获取组成的代码 <see cref="P:Microsoft.Build.Framework.BuildEventContext.ProjectContextId" /> 和 <see cref="P:Microsoft.Build.Framework.BuildEventContext.NodeId" />。
+            </summary>
+      <returns>
+              一个表示哈希代码的整数值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildEventContext.op_Equality(Microsoft.Build.Framework.BuildEventContext,Microsoft.Build.Framework.BuildEventContext)">
+      <summary>
+              重写 = = 这样使用此运算符的相等比较将相同。等于
+            </summary>
+      <param name="left">
+                左操作数
+              </param>
+      <param name="right">
+                右操作数
+              </param>
+      <returns>
+              如果对象值是相同的则返回 false 如果它们不相同，则返回 true
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildEventContext.op_Inequality(Microsoft.Build.Framework.BuildEventContext,Microsoft.Build.Framework.BuildEventContext)">
+      <summary>
+              重写 ！ = 以便使用此运算符的相等比较都是作为相同 ！
+               Equals
+            </summary>
+      <param name="left">
+                左操作数
+              </param>
+      <param name="right">
+                右操作数
+              </param>
+      <returns>
+              如果为对象值不相同，则返回 false 如果相同，则返回 true
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildFinishedEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.BuildFinishedEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildFinishedEventArgs.#ctor(System.String,System.String,System.Boolean)">
+      <summary>
+              初始化的新实例<see cref="T:Microsoft.Build.Framework.BuildFinishedEventArgs" />使用指定的类<see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" />， <see cref="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />，和<see cref="P:Microsoft.Build.Framework.BuildFinishedEventArgs.Succeeded" />值。
+            </summary>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="succeeded">
+                <see langword="true" />若要指示生成成功;否则为<see langword="false" />。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildFinishedEventArgs.#ctor(System.String,System.String,System.Boolean,System.DateTime)">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.BuildFinishedEventArgs" /> 类的新实例。
+            </summary>
+      <param name="message">
+                文本消息。
+              </param>
+      <param name="helpKeyword">
+                帮助关键字。
+              </param>
+      <param name="succeeded">
+                如果事件成功，则为 true。
+              </param>
+      <param name="eventTimestamp">
+                事件消息。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildFinishedEventArgs.#ctor(System.String,System.String,System.Boolean,System.DateTime,System.Object[])">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.BuildFinishedEventArgs" /> 类的新实例。
+            </summary>
+      <param name="message">
+                文本消息。
+              </param>
+      <param name="helpKeyword">
+                帮助关键字。
+              </param>
+      <param name="succeeded">
+                如果事件成功，则为 true。
+              </param>
+      <param name="eventTimestamp">
+                日期和时间与事件关联。
+              </param>
+      <param name="messageArgs">
+                事件消息。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.BuildMessageEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)">
+      <summary>
+              初始化的新实例<see cref="T:Microsoft.Build.Framework.BuildMessageEventArgs" />使用指定的类<see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" />， <see cref="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />， <see cref="P:Microsoft.Build.Framework.BuildEventArgs.SenderName" />，和<see cref="P:Microsoft.Build.Framework.BuildMessageEventArgs.Importance" />值。
+            </summary>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+      <param name="importance">
+                A<see cref="T:Microsoft.Build.Framework.MessageImportance" />值，该值指示该事件的重要性。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime)">
+      <summary>
+              初始化<see cref="T:Microsoft.Build.Framework.BuildMessageEventArgs" />对象。
+            </summary>
+      <param name="message">
+                消息文本中。
+              </param>
+      <param name="helpKeyword">
+                要将链接到帮助主题的关键字。
+              </param>
+      <param name="senderName">
+                将事件发送方的名称。
+              </param>
+      <param name="importance">
+                消息的重要性
+              </param>
+      <param name="eventTimestamp">
+                日期和时间与事件关联。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime,System.Object[])">
+      <summary>
+              初始化<see cref="T:Microsoft.Build.Framework.BuildMessageEventArgs" />对象。
+            </summary>
+      <param name="message">
+                消息文本中。
+              </param>
+      <param name="helpKeyword">
+                要将链接到帮助主题的关键字。
+              </param>
+      <param name="senderName">
+                将事件发送方的名称。
+              </param>
+      <param name="importance">
+                消息的重要性
+              </param>
+      <param name="eventTimestamp">
+                日期和时间与事件关联。
+              </param>
+      <param name="messageArgs">
+                消息参数。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance)">
+      <summary>
+              此构造函数允许要初始化的所有事件数据
+            </summary>
+      <param name="subcategory">
+                事件子类别
+              </param>
+      <param name="code">
+                事件代码
+              </param>
+      <param name="file">
+                与事件关联的文件
+              </param>
+      <param name="lineNumber">
+                行号 (如果不适用，则为 0)
+              </param>
+      <param name="columnNumber">
+                列号 (如果不适用，则为 0)
+              </param>
+      <param name="endLineNumber">
+                结束行号 (如果不适用，则为 0)
+              </param>
+      <param name="endColumnNumber">
+                结束列号 (如果不适用，则为 0)
+              </param>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="senderName">
+                事件发送方的名称
+              </param>
+      <param name="importance">
+                消息的重要性
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime)">
+      <summary>
+              此构造函数允许来设置时间戳
+            </summary>
+      <param name="subcategory">
+                事件子类别
+              </param>
+      <param name="code">
+                事件代码
+              </param>
+      <param name="file">
+                与事件关联的文件
+              </param>
+      <param name="lineNumber">
+                行号 (如果不适用，则为 0)
+              </param>
+      <param name="columnNumber">
+                列号 (如果不适用，则为 0)
+              </param>
+      <param name="endLineNumber">
+                结束行号 (如果不适用，则为 0)
+              </param>
+      <param name="endColumnNumber">
+                结束列号 (如果不适用，则为 0)
+              </param>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="senderName">
+                事件发送方的名称
+              </param>
+      <param name="importance">
+                消息的重要性
+              </param>
+      <param name="eventTimestamp">
+                自定义事件的时间戳
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime,System.Object[])">
+      <summary>
+              此构造函数允许来设置时间戳
+            </summary>
+      <param name="subcategory">
+                事件子类别
+              </param>
+      <param name="code">
+                事件代码
+              </param>
+      <param name="file">
+                与事件关联的文件
+              </param>
+      <param name="lineNumber">
+                行号 (如果不适用，则为 0)
+              </param>
+      <param name="columnNumber">
+                列号 (如果不适用，则为 0)
+              </param>
+      <param name="endLineNumber">
+                结束行号 (如果不适用，则为 0)
+              </param>
+      <param name="endColumnNumber">
+                结束列号 (如果不适用，则为 0)
+              </param>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="senderName">
+                事件发送方的名称
+              </param>
+      <param name="importance">
+                消息的重要性
+              </param>
+      <param name="eventTimestamp">
+                自定义事件的时间戳
+              </param>
+      <param name="messageArgs">
+                消息参数
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildStartedEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.BuildStartedEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildStartedEventArgs.#ctor(System.String,System.String)">
+      <summary>
+              初始化的新实例<see cref="T:Microsoft.Build.Framework.BuildStartedEventArgs" />使用指定的消息和 Help 关键字的类。
+            </summary>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildStartedEventArgs.#ctor(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>
+              若要初始化的所有参数的构造函数。
+            </summary>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="environmentOfBuild">
+                一个字典，其中列出的生成环境，在生成开始时。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildStartedEventArgs.#ctor(System.String,System.String,System.DateTime)">
+      <summary>
+              构造函数，以便用于设置时间戳
+            </summary>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="eventTimestamp">
+                创建该事件时的时间戳
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildStartedEventArgs.#ctor(System.String,System.String,System.DateTime,System.Object[])">
+      <summary>
+              构造函数，以便用于设置时间戳
+            </summary>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="eventTimestamp">
+                创建该事件时的时间戳
+              </param>
+      <param name="messageArgs">
+                消息参数
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildStatusEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.BuildStatusEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildStatusEventArgs.#ctor(System.String,System.String,System.String)">
+      <summary>
+              初始化的新实例<see cref="T:Microsoft.Build.Framework.BuildStatusEventArgs" />使用指定的类<see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" />， <see cref="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />，和<see cref="P:Microsoft.Build.Framework.BuildEventArgs.SenderName" />值。
+            </summary>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildStatusEventArgs.#ctor(System.String,System.String,System.String,System.DateTime)">
+      <summary>
+              初始化的新实例<see cref="T:Microsoft.Build.Framework.BuildStatusEventArgs" />使用指定的类<see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" />， <see cref="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />，和<see cref="P:Microsoft.Build.Framework.BuildEventArgs.SenderName" />和<see cref="P:Microsoft.Build.Framework.BuildEventArgs.TimeStamp" />值。
+            </summary>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+      <param name="eventTimestamp">
+                引发事件的时间。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildStatusEventArgs.#ctor(System.String,System.String,System.String,System.DateTime,System.Object[])">
+      <summary>
+              初始化的新实例<see cref="T:Microsoft.Build.Framework.BuildStatusEventArgs" />使用指定的类<see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" />， <see cref="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />，和<see cref="P:Microsoft.Build.Framework.BuildEventArgs.SenderName" />和<see cref="P:Microsoft.Build.Framework.BuildEventArgs.TimeStamp" />和<see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" />值。
+            </summary>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+      <param name="eventTimestamp">
+                引发事件的时间。
+              </param>
+      <param name="messageArgs">
+                事件消息中。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildWarningEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.BuildWarningEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildWarningEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)">
+      <summary>
+              初始化的新实例<see cref="T:Microsoft.Build.Framework.BuildWarningEventArgs" />使用指定的类<see cref="P:Microsoft.Build.Framework.BuildWarningEventArgs.SubCategory" />， <see cref="P:Microsoft.Build.Framework.BuildWarningEventArgs.Code" />， <see cref="P:Microsoft.Build.Framework.BuildWarningEventArgs.File" />， <see cref="P:Microsoft.Build.Framework.BuildWarningEventArgs.LineNumber" />， <see cref="P:Microsoft.Build.Framework.BuildWarningEventArgs.ColumnNumber" />， <see cref="P:Microsoft.Build.Framework.BuildWarningEventArgs.EndLineNumber" />， <see cref="P:Microsoft.Build.Framework.BuildWarningEventArgs.EndColumnNumber" />， <see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" />， <see cref="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />，和<see cref="P:Microsoft.Build.Framework.BuildEventArgs.SenderName" />值。
+            </summary>
+      <param name="subcategory">
+                事件的自定义子类别。
+              </param>
+      <param name="code">
+                事件的警告代码。
+              </param>
+      <param name="file">
+                与事件关联的文件的名称。
+              </param>
+      <param name="lineNumber">
+                引发事件的代码的部分的开头相对应的行号。
+              </param>
+      <param name="columnNumber">
+                引发事件的代码段的开头相对应的列号。
+              </param>
+      <param name="endLineNumber">
+                对应于引发事件的代码段的结束行号。
+              </param>
+      <param name="endColumnNumber">
+                对应于引发事件的代码段的结束列号。
+              </param>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildWarningEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime)">
+      <summary>
+              此构造函数允许来设置时间戳
+            </summary>
+      <param name="subcategory">
+                事件子类别
+              </param>
+      <param name="code">
+                事件代码
+              </param>
+      <param name="file">
+                与事件关联的文件
+              </param>
+      <param name="lineNumber">
+                行号 (如果不适用，则为 0)
+              </param>
+      <param name="columnNumber">
+                列号 (如果不适用，则为 0)
+              </param>
+      <param name="endLineNumber">
+                结束行号 (如果不适用，则为 0)
+              </param>
+      <param name="endColumnNumber">
+                结束列号 (如果不适用，则为 0)
+              </param>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="senderName">
+                事件发送方的名称
+              </param>
+      <param name="eventTimestamp">
+                自定义事件的时间戳
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.BuildWarningEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime,System.Object[])">
+      <summary>
+              此构造函数允许来设置时间戳
+            </summary>
+      <param name="subcategory">
+                事件子类别
+              </param>
+      <param name="code">
+                事件代码
+              </param>
+      <param name="file">
+                与事件关联的文件
+              </param>
+      <param name="lineNumber">
+                行号 (如果不适用，则为 0)
+              </param>
+      <param name="columnNumber">
+                列号 (如果不适用，则为 0)
+              </param>
+      <param name="endLineNumber">
+                结束行号 (如果不适用，则为 0)
+              </param>
+      <param name="endColumnNumber">
+                结束列号 (如果不适用，则为 0)
+              </param>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="senderName">
+                事件发送方的名称
+              </param>
+      <param name="eventTimestamp">
+                自定义事件的时间戳
+              </param>
+      <param name="messageArgs">
+                消息参数
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.CriticalBuildMessageEventArgs.#ctor">
+      <summary>
+              默认构造函数
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.CriticalBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)">
+      <summary>
+              此构造函数允许要初始化的所有事件数据
+            </summary>
+      <param name="subcategory">
+                事件子类别
+              </param>
+      <param name="code">
+                事件代码
+              </param>
+      <param name="file">
+                与事件关联的文件
+              </param>
+      <param name="lineNumber">
+                行号 (如果不适用，则为 0)
+              </param>
+      <param name="columnNumber">
+                列号 (如果不适用，则为 0)
+              </param>
+      <param name="endLineNumber">
+                结束行号 (如果不适用，则为 0)
+              </param>
+      <param name="endColumnNumber">
+                结束列号 (如果不适用，则为 0)
+              </param>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="senderName">
+                事件发送方的名称
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.CriticalBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime)">
+      <summary>
+              此构造函数允许来设置时间戳
+            </summary>
+      <param name="subcategory">
+                事件子类别
+              </param>
+      <param name="code">
+                事件代码
+              </param>
+      <param name="file">
+                与事件关联的文件
+              </param>
+      <param name="lineNumber">
+                行号 (如果不适用，则为 0)
+              </param>
+      <param name="columnNumber">
+                列号 (如果不适用，则为 0)
+              </param>
+      <param name="endLineNumber">
+                结束行号 (如果不适用，则为 0)
+              </param>
+      <param name="endColumnNumber">
+                结束列号 (如果不适用，则为 0)
+              </param>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="senderName">
+                事件发送方的名称
+              </param>
+      <param name="eventTimestamp">
+                自定义事件的时间戳
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.CriticalBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime,System.Object[])">
+      <summary>
+              此构造函数允许来设置时间戳
+            </summary>
+      <param name="subcategory">
+                事件子类别
+              </param>
+      <param name="code">
+                事件代码
+              </param>
+      <param name="file">
+                与事件关联的文件
+              </param>
+      <param name="lineNumber">
+                行号 (如果不适用，则为 0)
+              </param>
+      <param name="columnNumber">
+                列号 (如果不适用，则为 0)
+              </param>
+      <param name="endLineNumber">
+                结束行号 (如果不适用，则为 0)
+              </param>
+      <param name="endColumnNumber">
+                结束列号 (如果不适用，则为 0)
+              </param>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="senderName">
+                事件发送方的名称
+              </param>
+      <param name="eventTimestamp">
+                自定义事件的时间戳
+              </param>
+      <param name="messageArgs">
+                消息参数
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.CustomBuildEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.CustomBuildEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.CustomBuildEventArgs.#ctor(System.String,System.String,System.String)">
+      <summary>
+              初始化的新实例<see cref="T:Microsoft.Build.Framework.CustomBuildEventArgs" />使用指定的类<see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" />， <see cref="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />，和<see cref="P:Microsoft.Build.Framework.BuildEventArgs.SenderName" />值。
+            </summary>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.CustomBuildEventArgs.#ctor(System.String,System.String,System.String,System.DateTime)">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.CustomBuildEventArgs" /> 类的新实例。
+            </summary>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+      <param name="eventTimestamp">
+                要与事件关联的日期和时间。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.CustomBuildEventArgs.#ctor(System.String,System.String,System.String,System.DateTime,System.Object[])">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.CustomBuildEventArgs" /> 类的新实例。
+            </summary>
+      <param name="message">
+                事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+      <param name="eventTimestamp">
+                要与事件关联的日期和时间。
+              </param>
+      <param name="messageArgs">
+                消息参数。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Boolean)">
+      <summary>
+              新实例初始化 <see cref="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" /> 类，用指定的值。
+            </summary>
+      <param name="message">
+                该事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+      <param name="projectFile">
+                项目文件名。
+              </param>
+      <param name="succeeded">
+                <see langword="true" /> 若要指示成功，则生成该项目否则为 <see langword="false" />。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Boolean,System.DateTime)">
+      <summary>
+              新实例初始化 <see cref="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" /> 类，用指定的值。
+            </summary>
+      <param name="message">
+                该事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+      <param name="projectFile">
+                项目文件名。
+              </param>
+      <param name="succeeded">
+                <see langword="true" /> 若要指示成功，则生成该项目否则为 false。
+              </param>
+      <param name="eventTimestamp">
+                日期和时间创建了事件中。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.ExternalProjectStartedEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String)">
+      <summary>
+              新实例初始化 <see cref="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" /> 类，用指定的值。
+            </summary>
+      <param name="message">
+                该事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+      <param name="projectFile">
+                项目文件名。
+              </param>
+      <param name="targetNames">
+                若要生成外部项目中的目标的名称。
+                 这可以是 null 引用 (<see langword="Nothing" /> 中 Visual Basic) 如果生成外部项目，则使用默认目标。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.DateTime)">
+      <summary>
+              新实例初始化 <see cref="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" /> 类，用指定的值。
+            </summary>
+      <param name="message">
+                该事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="senderName">
+                事件源。
+              </param>
+      <param name="projectFile">
+                项目文件名。
+              </param>
+      <param name="targetNames">
+                若要生成外部项目中的目标的名称。
+                 这可以是 null 引用 (<see langword="Nothing" /> 中 Visual Basic) 如果生成外部项目，则使用默认目标。
+              </param>
+      <param name="eventTimestamp">
+                要与事件关联的日期和时间。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine.BuildProjectFile(System.String,System.String[],System.Collections.IDictionary,System.Collections.IDictionary)">
+      <summary>
+              启动一个版本的项目文件。
+               如果生成成功，则，如果有，指定目标的返回输出。
+            </summary>
+      <param name="projectFileName">
+                要生成的项目文件的名称。
+              </param>
+      <param name="targetNames">
+                要生成的项目中的目标的名称。
+                 使用分号 （;） 分隔多个目标。
+              </param>
+      <param name="globalProperties">
+                <see cref="T:System.Collections.IDictionary" />的附加的全局属性应用到项目。
+                 键和值必须是<see langword="String" />数据类型。
+              </param>
+      <param name="targetOutputs">
+                每个指定的目标的输出。
+              </param>
+      <returns>
+              <see langword="true" />如果生成成功，则否则为<see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine.LogCustomEvent(Microsoft.Build.Framework.CustomBuildEventArgs)">
+      <summary>
+              引发对所有已注册的记录器的自定义事件。
+            </summary>
+      <param name="e">
+                事件数据。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine.LogErrorEvent(Microsoft.Build.Framework.BuildErrorEventArgs)">
+      <summary>
+              引发错误事件对所有已注册的记录器。
+            </summary>
+      <param name="e">
+                事件数据。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine.LogMessageEvent(Microsoft.Build.Framework.BuildMessageEventArgs)">
+      <summary>
+              引发对所有已注册的记录器的消息事件。
+            </summary>
+      <param name="e">
+                事件数据。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine.LogWarningEvent(Microsoft.Build.Framework.BuildWarningEventArgs)">
+      <summary>
+              引发警告事件对所有已注册的记录器。
+            </summary>
+      <param name="e">
+                事件数据。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine2.BuildProjectFile(System.String,System.String[],System.Collections.IDictionary,System.Collections.IDictionary,System.String)">
+      <summary>
+              启动一个版本的项目文件。
+               如果生成成功，如果存在任何返回指定的目标的输出。
+            </summary>
+      <param name="projectFileName">
+                要生成的项目文件的名称。
+              </param>
+      <param name="targetNames">
+                要生成的项目中的目标的名称。
+                 使用分号 （;） 分隔多个目标。
+                <see langword="Null" />值是可接受的。
+              </param>
+      <param name="globalProperties">
+                <see cref="T:System.Collections.IDictionary" />的附加的全局属性应用到项目。
+                 键和值必须是<see langword="String" />数据类型。
+              </param>
+      <param name="targetOutputs">
+                每个指定的目标的输出。
+                <see langword="Null" />值是可接受的。
+              </param>
+      <param name="toolsVersion">
+                默认值 ="3.5。"
+                 指定要使用的生成的工具集版本。
+                <see langword="Null" />值是可接受的。
+              </param>
+      <returns>
+              <see langword="true" />如果生成成功，则否则为<see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine2.BuildProjectFilesInParallel(System.String[],System.String[],System.Collections.IDictionary[],System.Collections.IDictionary[],System.String[],System.Boolean,System.Boolean)">
+      <summary>
+              允许任务启动并行生成的具有多个处理器或多个核心处理器的系统上的指定的项目文件。
+               如果生成成功，如果存在任何返回指定的目标的输出。
+            </summary>
+      <param name="projectFileNames">
+                要生成的项目文件的名称。
+              </param>
+      <param name="targetNames">
+                要生成的项目中的目标的名称。
+                 使用分号 （;） 分隔多个目标。
+                <see langword="Null" />值是可接受的。
+              </param>
+      <param name="globalProperties">
+                <see cref="T:System.Collections.IDictionary" />的附加的全局属性应用到项目。
+                 键和值必须是<see langword="String" />数据类型。
+                 数组项可以为<see langword="null" />。
+              </param>
+      <param name="targetOutputsPerProject">
+                每个指定的目标的输出。
+                <see langword="Null" />值是可接受的。
+              </param>
+      <param name="toolsVersion">
+                默认值 ="3.5。"
+                 指定要使用的生成的工具集版本。
+                <see langword="Null" />值是可接受的。
+              </param>
+      <param name="useResultsCache">
+                如果<see langword="true" />，仅当缓存不包含结果的操作运行。
+                 完成操作后结果将存储在缓存中。
+              </param>
+      <param name="unloadProjectsOnCompletion">
+                如果<see langword="true" />操作完成后，项目被卸载。
+              </param>
+      <returns>
+              <see langword="True" />如果成功生成，<see langword="false" />如果否则为。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine3.BuildProjectFilesInParallel(System.String[],System.String[],System.Collections.IDictionary[],System.Collections.Generic.IList{System.String}[],System.String[],System.Boolean)">
+      <summary>
+              允许任务来启动对某个项目文件版本
+            </summary>
+      <param name="projectFileNames">
+                要生成的项目。
+              </param>
+      <param name="targetNames">
+                要生成的项目中的目标 （可以为 null）。
+              </param>
+      <param name="globalProperties">
+                数组<see cref="T:System.Collections.IDictionary" />的附加的全局属性应用到子项目 （数组项可以为 null）。
+              
+                密钥都应为字符串。
+              </param>
+      <param name="removeGlobalProperties">
+                应删除的全局属性的列表。
+              </param>
+      <param name="toolsVersion">
+                工具版本在此生成期间将使用该引擎识别的 （可以为 null）。
+              </param>
+      <param name="returnTargetOutputs">
+                应在 BuildEngineResult 返回目标输出。
+              </param>
+      <returns>
+              如果生成成功，返回指定的目标的输出。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine3.Reacquire">
+      <summary>
+              等待生成后重新获得控制。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine3.Yield">
+      <summary>
+              通知系统，此任务具有长时间运行进程外组件，并且该工作完成时，可以在生成中完成其他工作。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine4.GetRegisteredTaskObject(System.Object,Microsoft.Build.Framework.RegisteredTaskObjectLifetime)">
+      <summary>
+              检索与指定的密钥存储在一起的先前已注册的任务对象。
+            </summary>
+      <param name="key">
+                用于检索对象的键。
+              </param>
+      <param name="lifetime">
+                对象的生存期。
+              </param>
+      <returns>
+              返回在该注册表项下注册的已注册的对象或如果没有对象为 null，或如果该对象已被丢弃访问早期的集合。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine4.RegisterTaskObject(System.Object,System.Object,Microsoft.Build.Framework.RegisteredTaskObjectLifetime,System.Boolean)">
+      <summary>
+              使用将在将来某个指定时间释放的系统中注册的对象。
+            </summary>
+      <param name="key">
+                用于检索对象的键。
+              </param>
+      <param name="obj">
+                要暂挂更高版本可供使用的对象。
+              </param>
+      <param name="lifetime">
+                对象的生存期。
+              </param>
+      <param name="allowEarlyCollection">
+                确定对象是否可以早于请求的时间释放的标志。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IBuildEngine4.UnregisterTaskObject(System.Object,Microsoft.Build.Framework.RegisteredTaskObjectLifetime)">
+      <summary>
+              注销先前已注册的任务对象。
+            </summary>
+      <param name="key">
+                用于检索对象的键。
+              </param>
+      <param name="lifetime">
+                对象的生存期。
+              </param>
+      <returns>
+              返回在该注册表项下注册以前注册的对象或如果没有对象为 null，或如果该对象已被丢弃访问早期的集合。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ICancelableTask.Cancel">
+      <summary>
+              指示任务退出越早越好，或如果在此方法之后调用了 Execute，请立即退出。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IEventRedirector.ForwardEvent(Microsoft.Build.Framework.BuildEventArgs)">
+      <summary>
+              由生成事件转发到中央记录器节点记录器调用。
+            </summary>
+      <param name="buildEvent">
+                <see cref="T:Microsoft.Build.Framework.BuildEventArgs" /> 转发。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IGeneratedTask.GetPropertyValue(Microsoft.Build.Framework.TaskPropertyInfo)">
+      <summary>
+              获取属性值。
+            </summary>
+      <param name="property">
+                属性的名称。
+              </param>
+      <returns>
+              已命名属性的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.IGeneratedTask.SetPropertyValue(Microsoft.Build.Framework.TaskPropertyInfo,System.Object)">
+      <summary>
+              设置一个属性值。
+            </summary>
+      <param name="property">
+                属性的名称。
+              </param>
+      <param name="value">
+                要使用的值。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ILogger.Initialize(Microsoft.Build.Framework.IEventSource)">
+      <summary>
+              订阅特定事件的记录器。
+               记录器注册时生成引擎会引发任何事件之前，调用此方法。
+            </summary>
+      <param name="eventSource">
+                记录器可用事件中。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ILogger.Shutdown">
+      <summary>
+              释放分配给记录器时初始化期间或在生成期间的资源。
+               记录器注销时从引擎中，在引发的所有事件后，调用此方法。
+               大量 MSBuild 通常在退出之前注销记录器。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.INodeLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)">
+      <summary>
+              初始化记录器。
+            </summary>
+      <param name="eventSource">
+                <see cref="T:Microsoft.Build.Framework.IEventSource" /> 对象，表示生成事件源。
+              </param>
+      <param name="nodeCount">
+                Cpu 的数目。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITask.Execute">
+      <summary>
+              执行任务。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果成功，则执行任务否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskFactory.CleanupTask(Microsoft.Build.Framework.ITask)">
+      <summary>
+              清除任何上下文或可能已积累给定任务的状态。
+            </summary>
+      <param name="task">
+                若要清理任务。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskFactory.CreateTask(Microsoft.Build.Framework.IBuildEngine)">
+      <summary>
+              创建要在批处理中使用的任务实例。
+               任务工厂日志记录主机将记录任务的上下文中的消息。
+            </summary>
+      <param name="taskFactoryLoggingHost">
+                任务工厂的日志记录主机中。
+              </param>
+      <returns>
+              返回要在批处理中使用的任务的一个实例。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskFactory.GetTaskParameters">
+      <summary>
+              获取任务的参数的描述。
+            </summary>
+      <returns>
+              属性说明一个非空数组。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskFactory.Initialize(System.String,System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.TaskPropertyInfo},System.String,Microsoft.Build.Framework.IBuildEngine)">
+      <summary>
+              初始化此工厂，以便与特定内联任务块实例化任务。
+            </summary>
+      <param name="taskName">
+                任务的名称。
+              </param>
+      <param name="parameterGroup">
+                参数组。
+              </param>
+      <param name="taskBody">
+                任务正文中。
+              </param>
+      <param name="taskFactoryLoggingHost">
+                任务工厂日志记录主机。
+              </param>
+      <returns>
+              一个值，该值指示是否已成功初始化。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskFactory2.CreateTask(Microsoft.Build.Framework.IBuildEngine,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>
+              创建要与一组可选的"特殊"参数集使用 MSBuildRuntime 和 MSBuildArchitecture 默认任务参数的单个任务调用上使用的任务实例。
+               MSBuild 提供了实现此接口，TaskHostFactory，使用值"CLR2"，"CLR4"，"CurrentRuntime"，使用"MSBuildRuntime"和"*"（的话）;和"MSBuildArchitecture"值"x86"、"x64"、"CurrentArchitecture"和"*"（任何）。
+               ITaskFactory2 的实现器可以选择使用这些预定义的 MSBuildRuntime 和 MSBuildArchitecture 值，或者可以指定这些参数的新值。
+            </summary>
+      <param name="taskFactoryLoggingHost">
+                任务工厂日志记录主机将记录任务的上下文中的消息。
+              </param>
+      <param name="taskIdentityParameters">
+                任务工厂可用于修改它执行任务，例如运行时和体系结构的方式的特殊参数。
+              </param>
+      <returns>
+              生成的任务，或null如果任务无法创建。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskFactory2.Initialize(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.TaskPropertyInfo},System.String,Microsoft.Build.Framework.IBuildEngine)">
+      <summary>
+              初始化此工厂，以便与特定内联任务块和一套 UsingTask 参数实例化任务。
+               MSBuild 提供了实现此接口，TaskHostFactory，使用"运行时"值"CLR2"，"CLR4"，"CurrentRuntime"和"*"（任何）;和"体系结构"，使用值"x86"、"x64"，"CurrentArchitecture"和"*"（任何）。
+               ITaskFactory2 的实现器可以选择要使用这些预定义的运行时和体系结构值，也可以指定这些参数的新值。
+            </summary>
+      <param name="taskName">
+                任务的名称。
+              </param>
+      <param name="factoryIdentityParameters">
+                任务工厂可用于修改如何执行任务，例如运行时和体系结构的特殊参数。
+                 键是参数的名称，值为参数的值。
+                 这是设置 UsingTask 使用例如 UsingTask 运行时和体系结构参数的参数集。
+              </param>
+      <param name="parameterGroup">
+                参数组。
+              </param>
+      <param name="taskBody">
+                任务正文中。
+              </param>
+      <param name="taskFactoryLoggingHost">
+                任务工厂日志记录主机。
+              </param>
+      <returns>
+              一个值，该值指示是否已成功初始化。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskItem.CloneCustomMetadata">
+      <summary>
+              获取自定义元数据的集合。
+            </summary>
+      <returns>
+              自定义元数据的集合。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskItem.CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)">
+      <summary>
+              将自定义元数据条目复制到另一个项。
+            </summary>
+      <param name="destinationItem">
+                要复制到的元数据条目的项。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskItem.GetMetadata(System.String)">
+      <summary>
+              获取指定的元数据条目的值。
+            </summary>
+      <param name="metadataName">
+                元数据条目的名称。
+              </param>
+      <returns>
+              值 <paramref name="attributeName" /> 元数据。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskItem.RemoveMetadata(System.String)">
+      <summary>
+              从项目中删除指定的元数据条目。
+            </summary>
+      <param name="metadataName">
+                若要删除的元数据条目的名称。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskItem.SetMetadata(System.String,System.String)">
+      <summary>
+              添加或更改的项的自定义元数据条目。
+            </summary>
+      <param name="metadataName">
+                元数据条目的名称。
+              </param>
+      <param name="metadataValue">
+                元数据条目的值。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskItem2.CloneCustomMetadataEscaped">
+      <summary>
+              返回此对象的元数据克隆的 ITaskItem2 实现。
+                返回的值采用其原始的转义形式。
+            </summary>
+      <returns>
+              返回克隆的元数据，并保留值的转义。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskItem2.GetMetadataValueEscaped(System.String)">
+      <summary>
+              允许查询此项的元数据的值。
+            </summary>
+      <param name="metadataName">
+                要查询的元数据。
+              </param>
+      <returns>
+              返回转义元数据值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ITaskItem2.SetMetadataValueLiteral(System.String,System.String)">
+      <summary>
+              允许在此项上设置一段自定义元数据。
+               假定传入的值未转义，并根据需要将值进行转义以维护其值。
+            </summary>
+      <param name="metadataName">
+                元数据名称。
+              </param>
+      <param name="metadataValue">
+                元数据的值。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor">
+      <summary>
+              默认构造函数。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor(System.String,System.String,System.String)">
+      <summary>
+              此构造函数允许要初始化的所有事件数据。
+            </summary>
+      <param name="message">
+                文本消息。
+              </param>
+      <param name="helpKeyword">
+                帮助关键字。
+              </param>
+      <param name="senderName">
+                事件发送方的名称。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor(System.String,System.String,System.String,System.DateTime,System.Object[])">
+      <summary>
+              此构造函数，允许延迟设置格式的消息参数。
+            </summary>
+      <param name="message">
+                文本消息。
+              </param>
+      <param name="helpKeyword">
+                帮助关键字。
+              </param>
+      <param name="senderName">
+                事件发送方的名称。
+              </param>
+      <param name="eventTimestamp">
+                创建事件时的时间戳。
+              </param>
+      <param name="messageArgs">
+                消息参数。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.LoadInSeparateAppDomainAttribute.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.LoadInSeparateAppDomainAttribute" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.LoggerException.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.LoggerException" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.LoggerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              新实例初始化 <see cref="T:Microsoft.Build.Framework.LoggerException" /> 类，具有指定的值。
+            </summary>
+      <param name="info">
+                <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它保存关于所引发异常的序列化对象数据。
+              </param>
+      <param name="context">
+                <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含关于源或目标的上下文信息。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.LoggerException.#ctor(System.String)">
+      <summary>
+              用指定的值初始化 <see cref="T:Microsoft.Build.Framework.LoggerException" /> 类的新实例。
+            </summary>
+      <param name="message">
+                解释异常原因的错误消息。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.LoggerException.#ctor(System.String,System.Exception)">
+      <summary>
+              新实例初始化 <see cref="T:Microsoft.Build.Framework.LoggerException" /> 类，具有指定的值。
+            </summary>
+      <param name="message">
+                解释异常原因的错误消息。
+              </param>
+      <param name="innerException">
+                导致当前异常的异常。
+                 如果 <paramref name="innerException" /> 参数不是空引用 (<see langword="Nothing" /> 中 Visual Basic) 中, 引发当前异常 <see langword="catch" /> 处理内部异常的块。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.LoggerException.#ctor(System.String,System.Exception,System.String,System.String)">
+      <summary>
+              新实例初始化 <see cref="T:Microsoft.Build.Framework.LoggerException" /> 类，具有指定的值。
+            </summary>
+      <param name="message">
+                解释异常原因的错误消息。
+              </param>
+      <param name="innerException">
+                导致当前异常的异常。
+                 如果 <paramref name="innerException" /> 参数不是空引用 (<see langword="Nothing" /> 中 Visual Basic) 中, 引发当前异常 <see langword="catch" /> 处理内部异常的块。
+              </param>
+      <param name="errorCode">
+                与异常的消息关联的错误代码。
+              </param>
+      <param name="helpKeyword">
+                错误的帮助关键字。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.LoggerException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              使用关于异常的信息设置 <see cref="T:System.Runtime.Serialization.SerializationInfo" />。
+            </summary>
+      <param name="info">
+                <see cref="T:System.Runtime.Serialization.SerializationInfo" />，它保存关于所引发异常的序列化对象数据。
+              </param>
+      <param name="context">
+                <see cref="T:System.Runtime.Serialization.StreamingContext" />，它包含关于源或目标的上下文信息。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.OutputAttribute.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.OutputAttribute" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ProjectFinishedEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.ProjectFinishedEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ProjectFinishedEventArgs.#ctor(System.String,System.String,System.String,System.Boolean)">
+      <summary>
+              新实例初始化 <see cref="T:Microsoft.Build.Framework.ProjectFinishedEventArgs" /> 类与指定 <see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" />, ，<see cref="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />, ，<see cref="P:Microsoft.Build.Framework.ProjectFinishedEventArgs.ProjectFile" />, ，和 <see cref="P:Microsoft.Build.Framework.ProjectFinishedEventArgs.Succeeded" /> 值。
+            </summary>
+      <param name="message">
+                该事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="projectFile">
+                与事件关联的项目文件。
+              </param>
+      <param name="succeeded">
+                <see langword="true" /> 若要指示在生成成功;否则为 <see langword="false" />。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ProjectFinishedEventArgs.#ctor(System.String,System.String,System.String,System.Boolean,System.DateTime)">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.ProjectFinishedEventArgs" /> 类的新实例。
+            </summary>
+      <param name="message">
+                该事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="projectFile">
+                与事件关联的项目文件。
+              </param>
+      <param name="succeeded">
+                <see langword="true" /> 若要指示在生成成功;否则为 false。
+              </param>
+      <param name="eventTimestamp">
+                日期和时间创建了事件中。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.ProjectStartedEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,Microsoft.Build.Framework.BuildEventContext)">
+      <summary>
+              用指定的值初始化 <see cref="T:Microsoft.Build.Framework.ProjectStartedEventArgs" /> 类的新实例。
+            </summary>
+      <param name="projectId">
+                唯一 <see cref="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectId" /> 项目的标识符。
+              </param>
+      <param name="message">
+                该事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="projectFile">
+                项目文件名。
+              </param>
+      <param name="targetNames">
+                要生成的目标。
+              </param>
+      <param name="properties">
+                属性的列表。
+              </param>
+      <param name="items">
+                项的列表。
+              </param>
+      <param name="parentBuildEventContext">
+                一个 <see cref="T:Microsoft.Build.Framework.BuildEventContext" /> 值，该值定义位置上下文信息。
+                 这会附加到记录事件以定义它们的位置相对于进程、 引擎、 项目、 目标或正在执行的任务。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,Microsoft.Build.Framework.BuildEventContext,System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+      <summary>
+              此构造函数允许事件数据进行初始化。
+            
+               发件人被假定为"MSBuild"。
+            </summary>
+      <param name="projectId">
+                项目 id
+              </param>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="projectFile">
+                项目名称
+              </param>
+      <param name="targetNames">
+                我们将要生成的目标 （空表示默认目标）
+              </param>
+      <param name="properties">
+                属性的列表
+              </param>
+      <param name="items">
+                项列表
+              </param>
+      <param name="parentBuildEventContext">
+                父项目的事件上下文信息
+              </param>
+      <param name="globalProperties">
+                全局属性的列表
+              </param>
+      <param name="toolsVersion">
+                工具版本
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,Microsoft.Build.Framework.BuildEventContext,System.DateTime)">
+      <summary>
+              此构造函数允许事件数据进行初始化。
+               发件人被假定为"MSBuild"。
+            </summary>
+      <param name="projectId">
+                项目 id
+              </param>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="projectFile">
+                项目名称
+              </param>
+      <param name="targetNames">
+                我们将要生成的目标 （空表示默认目标）
+              </param>
+      <param name="properties">
+                属性的列表
+              </param>
+      <param name="items">
+                项列表
+              </param>
+      <param name="parentBuildEventContext">
+                父项目的事件上下文信息
+              </param>
+      <param name="eventTimestamp">
+                事件发生的时间
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable)">
+      <summary>
+              用指定的值初始化 <see cref="T:Microsoft.Build.Framework.ProjectStartedEventArgs" /> 类的新实例。
+            </summary>
+      <param name="message">
+                该事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="projectFile">
+                项目文件名。
+              </param>
+      <param name="targetNames">
+                要生成的目标。
+              </param>
+      <param name="properties">
+                属性的列表
+              </param>
+      <param name="items">
+                项的列表。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,System.DateTime)">
+      <summary>
+              此构造函数允许事件数据进行初始化。
+               此外可以设置时间戳发件人将假定为"MSBuild"。
+            </summary>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="projectFile">
+                项目名称
+              </param>
+      <param name="targetNames">
+                我们将要生成的目标 （空表示默认目标）
+              </param>
+      <param name="properties">
+                属性的列表
+              </param>
+      <param name="items">
+                项列表
+              </param>
+      <param name="eventTimestamp">
+                事件发生的时间
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.RequiredAttribute.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.RequiredAttribute" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.RequiredRuntimeAttribute.#ctor(System.String)">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.RequiredRuntimeAttribute" /> 类的新实例。
+            </summary>
+      <param name="runtimeVersion">
+                所需的 CLR 运行时版本开头为"v"，如"v2.0"。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.RunInMTAAttribute.#ctor">
+      <summary>
+              默认构造函数。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.RunInSTAAttribute.#ctor">
+      <summary>
+              默认构造函数。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TargetFinishedEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.TargetFinishedEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TargetFinishedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+      <summary>
+              新实例初始化 <see cref="T:Microsoft.Build.Framework.TargetFinishedEventArgs" /> 类与指定 <see cref="P:Microsoft.Build.Framework.BuildEventArgs.Message" />, ，<see cref="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword" />, ，<see cref="P:Microsoft.Build.Framework.TargetFinishedEventArgs.TargetName" />, ，<see cref="P:Microsoft.Build.Framework.TargetFinishedEventArgs.ProjectFile" />, ，和 <see cref="P:Microsoft.Build.Framework.TargetFinishedEventArgs.Succeeded" /> 值。
+            </summary>
+      <param name="message">
+                该事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="targetName">
+                与事件相关联的目标的名称。
+              </param>
+      <param name="projectFile">
+                与事件关联的项目文件的名称。
+              </param>
+      <param name="targetFile">
+                目标文件的名称。
+              </param>
+      <param name="succeeded">
+                <see langword="true" /> 若要指示在生成成功;否则为 <see langword="false" />。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TargetFinishedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Collections.IEnumerable)">
+      <summary>
+              此构造函数允许事件数据进行初始化。
+               发件人被假定为"MSBuild"。
+            </summary>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="targetName">
+                目标名称
+              </param>
+      <param name="projectFile">
+                项目文件
+              </param>
+      <param name="targetFile">
+                在其中定义目标文件
+              </param>
+      <param name="succeeded">
+                如果成功生成目标，则 true
+              </param>
+      <param name="targetOutputs">
+                目标输出目标的项。
+                 如果将 null 作为批次中的最后一个目标之外的所有批处理
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TargetFinishedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.DateTime,System.Collections.IEnumerable)">
+      <summary>
+              此构造函数允许在创建了事件时要初始化包括时间戳的事件数据。
+               发件人被假定为"MSBuild"。
+            </summary>
+      <param name="message">
+                短信
+              </param>
+      <param name="helpKeyword">
+                帮助关键字 
+              </param>
+      <param name="targetName">
+                目标名称
+              </param>
+      <param name="projectFile">
+                项目文件
+              </param>
+      <param name="targetFile">
+                在其中定义目标文件
+              </param>
+      <param name="succeeded">
+                如果成功生成目标，则 true
+              </param>
+      <param name="eventTimestamp">
+                创建了事件时的时间戳
+              </param>
+      <param name="targetOutputs">
+                目标输出目标的项。
+                 如果将 null 作为批次中的最后一个目标之外的所有批处理
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TargetStartedEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.TargetStartedEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TargetStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String)">
+      <summary>
+              初始化新实例的 <see cref="T:Microsoft.Build.Framework.TargetStartedEventArgs" /> 提供的值初始化的类。
+            </summary>
+      <param name="message">
+                该事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="targetName">
+                与事件相关联的目标的名称。
+              </param>
+      <param name="projectFile">
+                与事件关联的项目文件的名称。
+              </param>
+      <param name="targetFile">
+                目标文件的名称。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TargetStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime)">
+      <summary>
+              表示目标的参数启动的事件。
+            </summary>
+      <param name="message">
+                文本消息。
+              </param>
+      <param name="helpKeyword">
+                帮助关键字。
+              </param>
+      <param name="targetName">
+                目标事件的名称。
+              </param>
+      <param name="projectFile">
+                项目文件中。
+              </param>
+      <param name="targetFile">
+                目标文件。
+              </param>
+      <param name="parentTarget">
+                父目标中。
+              </param>
+      <param name="eventTimestamp">
+                日期和时间创建了事件中。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TaskCommandLineEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.TaskCommandLineEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TaskCommandLineEventArgs.#ctor(System.String,System.String,Microsoft.Build.Framework.MessageImportance)">
+      <summary>
+              新实例初始化 <see cref="T:Microsoft.Build.Framework.TaskCommandLineEventArgs" /> 类，具有指定的命令行和 <see cref="T:Microsoft.Build.Framework.MessageImportance" />。
+            </summary>
+      <param name="commandLine">
+                命令行任务用于运行基础的程序。
+              </param>
+      <param name="taskName">
+                引发事件的任务的名称。
+              </param>
+      <param name="importance">
+                <see cref="T:Microsoft.Build.Framework.MessageImportance" /> 的消息。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TaskCommandLineEventArgs.#ctor(System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime)">
+      <summary>
+              新实例初始化 <see cref="T:Microsoft.Build.Framework.TaskCommandLineEventArgs" /> 类，具有指定的命令行任务名称和 <see cref="T:Microsoft.Build.Framework.MessageImportance" />。
+            </summary>
+      <param name="commandLine">
+                命令行任务用于运行基础的程序。
+              </param>
+      <param name="taskName">
+                引发事件的任务的名称。
+              </param>
+      <param name="importance">
+                <see cref="T:Microsoft.Build.Framework.MessageImportance" /> 的消息。
+              </param>
+      <param name="eventTimestamp">
+                该事件发生的时间。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TaskFinishedEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.TaskFinishedEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TaskFinishedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+      <summary>
+              用指定的值初始化 <see cref="T:Microsoft.Build.Framework.TaskFinishedEventArgs" /> 类的新实例。
+            </summary>
+      <param name="message">
+                消息文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="projectFile">
+                项目文件名。
+              </param>
+      <param name="taskFile">
+                在其中定义该任务的文件。
+              </param>
+      <param name="taskName">
+                任务的名称。
+              </param>
+      <param name="succeeded">
+                <see langword="true" /> 若要指示该任务成功;否则为 <see langword="false." />
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TaskFinishedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.DateTime)">
+      <summary>
+              用指定的值初始化 <see cref="T:Microsoft.Build.Framework.TaskFinishedEventArgs" /> 类的新实例。
+            </summary>
+      <param name="message">
+                消息文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="projectFile">
+                项目文件名。
+              </param>
+      <param name="taskFile">
+                在其中定义该任务的文件。
+              </param>
+      <param name="taskName">
+                任务的名称。
+              </param>
+      <param name="succeeded">
+                <see langword="true" /> 若要指示该任务成功;否则为 <see langword="false." />
+              </param>
+      <param name="eventTimestamp">
+                事件何时完成。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TaskPropertyInfo.#ctor(System.String,System.Type,System.Boolean,System.Boolean)">
+      <summary>
+              封装的任务中声明的参数的列表。
+            </summary>
+      <param name="name">
+                参数的名称
+              </param>
+      <param name="typeOfParameter">
+                参数的类型
+              </param>
+      <param name="output">
+                如果参数是一个输出和输入的参数，则为 true。
+                 如果该参数是只输入的参数，则为 false。
+              </param>
+      <param name="required">
+                如果该参数必须提供给每个调用的任务，则为 true。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.TaskStartedEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String)">
+      <summary>
+              用指定的值初始化 <see cref="T:Microsoft.Build.Framework.TaskStartedEventArgs" /> 类的新实例。
+            </summary>
+      <param name="message">
+                该事件的文本。
+              </param>
+      <param name="helpKeyword">
+                与事件关联的帮助关键字。
+              </param>
+      <param name="projectFile">
+                与事件关联的项目文件的名称。
+              </param>
+      <param name="taskFile">
+                在其中定义该任务的文件。
+              </param>
+      <param name="taskName">
+                任务的名称。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.TaskStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.DateTime)">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.TaskStartedEventArgs" /> 类的新实例。
+            </summary>
+      <param name="message">
+                有关事件的文本消息。
+              </param>
+      <param name="helpKeyword">
+                帮助关键字。
+              </param>
+      <param name="projectFile">
+                项目文件中。
+              </param>
+      <param name="taskFile">
+                定义任务的文件。
+              </param>
+      <param name="taskName">
+                任务的名称。
+              </param>
+      <param name="eventTimestamp">
+                日期和时间创建此任务中。
+              </param>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Argument.#ctor">
+      <summary>
+              所需的 XAML 反序列化的默认构造函数。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Argument.BeginInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.BeginInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Argument.EndInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.BaseProperty.#ctor">
+      <summary>
+              默认构造函数。
+               所需的这从持久化的格式。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.BaseProperty.BeginInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.BeginInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.BaseProperty.EndInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.BoolProperty.#ctor">
+      <summary>
+              默认构造函数，为布尔值属性的。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Category.#ctor">
+      <summary>
+              默认构造函数。
+               在反序列化过程中调用。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Category.BeginInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.BeginInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Category.EndInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.CategorySchema.#ctor">
+      <summary>
+              类别架构默认构造函数。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ContentType.#ctor">
+      <summary>
+              构造函数
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ContentType.BeginInit">
+      <summary>
+              开始初始化。
+               请参阅 ISupportInitialize。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ContentType.EndInit">
+      <summary>
+              结束初始化。
+                请参阅 ISupportInitialize。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ContentType.GetMetadata(System.String)">
+      <summary>
+              获取给定元数据名称的值。
+            </summary>
+      <param name="metadataName">
+                其值是要检索的元数据的名称。
+              </param>
+      <returns>
+              返回给定元数据名称的值。
+               如果元数据中找不到名称，返回 null。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ContentType.GetSchemaObjects(System.Type)">
+      <summary>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+            </summary>
+      <param name="type">
+                要检索的静态数据的类型。
+              </param>
+      <returns>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+               返回 <see langword="Null" /> 或者，如果没有给定类型的对象提供此节点的空列表。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ContentType.GetSchemaObjectTypes">
+      <summary>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </summary>
+      <returns>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.DataSource.#ctor">
+      <summary>
+              默认构造函数。
+               所需的正确 XAML 反序列化。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.DataSource.BeginInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.BeginInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.DataSource.EndInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.#ctor">
+      <summary>
+              动态枚举属性的默认构造函数。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.EnumProperty.#ctor">
+      <summary>
+              默认值的枚举属性构造函数。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.EnumProperty.EndInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.EnumValue.#ctor">
+      <summary>
+              默认构造函数。
+               所需的 XAML 反序列化。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.FileExtension.#ctor">
+      <summary>
+              构造函数
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.FileExtension.GetSchemaObjects(System.Type)">
+      <summary>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+            </summary>
+      <param name="type">
+                要检索的静态数据的类型。
+              </param>
+      <returns>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+               返回 <see langword="Null" /> 或者，如果没有给定类型的对象提供此节点的空列表。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.FileExtension.GetSchemaObjectTypes">
+      <summary>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </summary>
+      <returns>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.IntProperty.#ctor">
+      <summary>
+              Integer 属性的默认构造函数。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.IntProperty.EndInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjects(System.Type)">
+      <summary>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+            </summary>
+      <param name="type">
+                要检索的静态数据的类型。
+              </param>
+      <returns>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+               返回 <see langword="Null" /> 或者，如果没有给定类型的对象提供此节点的空列表。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjectTypes">
+      <summary>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </summary>
+      <returns>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ItemType.#ctor">
+      <summary>
+              构造函数。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ItemType.BeginInit">
+      <summary>
+              开始初始化。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ItemType.EndInit">
+      <summary>
+              结束初始化。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ItemType.GetSchemaObjects(System.Type)">
+      <summary>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+            </summary>
+      <param name="type">
+                要检索的静态数据的类型。
+              </param>
+      <returns>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+               返回 <see langword="Null" /> 或者，如果没有给定类型的对象提供此节点的空列表。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ItemType.GetSchemaObjectTypes">
+      <summary>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </summary>
+      <returns>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.NameValuePair.#ctor">
+      <summary>
+              默认构造函数的名称 / 值对。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.#ctor">
+      <summary>
+              架构定义的默认构造函数。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjects(System.Type)">
+      <summary>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+            </summary>
+      <param name="type">
+                要检索的静态数据的类型。
+              </param>
+      <returns>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+               返回 <see langword="Null" /> 或者，如果没有提供此节点的给定类型的对象的空列表。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjectTypes">
+      <summary>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </summary>
+      <returns>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Rule.#ctor">
+      <summary>
+              默认构造函数。
+               需要从持久格式反序列化。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Rule.BeginInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.BeginInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Rule.EndInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Rule.GetPropertiesByCategory">
+      <summary>
+              返回分区成类别的所有属性的字典。
+            </summary>
+      <returns>
+              返回的字典，其中的键是 <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" /> 名称，其值为该类别中的属性列表。
+               返回的值决不会是 <see langword="null" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Rule.GetPropertiesInCategory(System.String)">
+      <summary>
+              返回的列表中的属性 <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />。
+            </summary>
+      <param name="categoryName">
+                要返回其属性的类别的名称。
+              </param>
+      <returns>
+              返回的列表中的属性 <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />。
+               返回 <see langword="null" /> 如果此 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> 不包含此类别。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Rule.GetProperty(System.String)">
+      <summary>
+              获取具有指定名称的属性。
+            </summary>
+      <param name="propertyName">
+                属性的名称。
+              </param>
+      <returns>
+              如果没有找到任何具有匹配名称的属性，则返回具有指定的名称，则为 null 的属性。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjects(System.Type)">
+      <summary>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+            </summary>
+      <param name="type">
+                要检索的静态数据的类型。
+              </param>
+      <returns>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+               返回 <see langword="Null" /> 或者，如果没有给定类型的对象提供此节点的空列表。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjectTypes">
+      <summary>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </summary>
+      <returns>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.RuleBag.#ctor">
+      <summary>
+              默认构造函数。
+               所需的 XAML 反序列化。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.RuleBag.BeginInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.BeginInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.RuleBag.EndInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.RuleBag.GetSchemaObjects(System.Type)">
+      <summary>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+            </summary>
+      <param name="type">
+                要检索的静态数据的类型。
+              </param>
+      <returns>
+              返回具有给定的类型的静态数据的所有实例的枚举器。
+               返回 <see langword="Null" /> 或者，如果没有给定类型的对象提供此节点的空列表。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.RuleBag.GetSchemaObjectTypes">
+      <summary>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </summary>
+      <returns>
+              返回可枚举所有类型的静态数据，为此节点包含的数据驱动的功能。
+            </returns>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.RuleSchema.#ctor">
+      <summary>
+              默认的构造函数的规则架构。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.StringListProperty.#ctor">
+      <summary>
+              默认构造函数。
+               所需的属性 XAML 反序列化。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.StringProperty.#ctor">
+      <summary>
+              一个字符串属性的默认构造函数。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ValueEditor.#ctor">
+      <summary>
+              默认构造函数所需的 XAML 反序列化。
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ValueEditor.BeginInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.BeginInit" />.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Build.Framework.XamlTypes.ValueEditor.EndInit">
+      <summary>
+              请参阅<see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEngineResult.Result">
+      <summary>
+              如果生成成功，则返回 true。
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEngineResult.TargetOutputsPerProject">
+      <summary>
+              每个项目目标的输出。
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildErrorEventArgs.Code">
+      <summary>
+              获取事件的错误代码。
+            </summary>
+      <returns>
+              事件的错误代码。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildErrorEventArgs.ColumnNumber">
+      <summary>
+              获取引发事件的代码的部分的开头相对应的列号。
+            </summary>
+      <returns>
+              引发事件的代码段的开头相对应的列号。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildErrorEventArgs.EndColumnNumber">
+      <summary>
+              获取引发该事件的代码部分的结尾相对应的列号。
+            </summary>
+      <returns>
+              对应于引发事件的代码节的结尾处的列号。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildErrorEventArgs.EndLineNumber">
+      <summary>
+              获取引发该事件的代码部分的结尾相对应的行号。
+            </summary>
+      <returns>
+              对应于引发事件的代码节的结尾处的行号。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildErrorEventArgs.File">
+      <summary>
+              获取引发该事件的文件的名称。
+            </summary>
+      <returns>
+              引发事件的文件的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildErrorEventArgs.LineNumber">
+      <summary>
+              获取引发该事件的代码部分的开头相对应的行号。
+            </summary>
+      <returns>
+              引发事件的代码部分的开头相对应的行号。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildErrorEventArgs.ProjectFile">
+      <summary>
+              获取或设置发出此事件的项目文件的名称。
+            </summary>
+      <returns>
+              返回的项目文件的发出此事件的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildErrorEventArgs.Subcategory">
+      <summary>
+              获取事件的自定义子类型。
+            </summary>
+      <returns>
+              事件的自定义子类型。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventArgs.BuildEventContext">
+      <summary>
+              获取或设置位置的上下文信息。
+               这被附加到日志记录事件，以定义他们的位置相对于进程、 引擎、 项目、 目标或正在执行的任务。
+            </summary>
+      <returns>
+              A<see cref="T:Microsoft.Build.Framework.BuildEventContext" />表示位置的上下文信息的对象。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword">
+      <summary>
+              获取事件的帮助关键字。
+            </summary>
+      <returns>
+              事件帮助关键字。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventArgs.Message">
+      <summary>
+              获取事件的消息。
+            </summary>
+      <returns>
+              事件的消息。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventArgs.SenderName">
+      <summary>
+              获取名称 <see cref="T:System.Object" /> 引发事件。
+            </summary>
+      <returns>
+              名称 <see cref="T:System.Object" /> 引发事件。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventArgs.ThreadId">
+      <summary>
+              获取引发该事件的线程的整数标识符。
+            </summary>
+      <returns>
+              引发事件的线程的整数标识符。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventArgs.Timestamp">
+      <summary>
+              获取当事件被引发时的以 <see cref="T:System.DateTime" /> 表示的时间。
+            </summary>
+      <returns>
+              当事件被引发时的以 <see cref="T:System.DateTime" /> 表示的时间。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventContext.BuildRequestId">
+      <summary>
+              检索 BuildRequest id。
+               请注意，这并不在 BuildRequest 或 BuildResult 上的全局请求 id 相同。
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventContext.Invalid">
+      <summary>
+              获取发生事件的上下文是否有效。
+            </summary>
+      <returns>
+              <see langword="true" /> 上下文是否有效，则为 <see langword="false" /> 否则为。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventContext.NodeId">
+      <summary>
+              获取发生事件的节点 ID。
+            </summary>
+      <returns>
+              一个整数值表示节点 id。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventContext.ProjectContextId">
+      <summary>
+              获取发生事件的项目 ID。
+            </summary>
+      <returns>
+              一个整数值，表示项目 id。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventContext.ProjectInstanceId">
+      <summary>
+              检索项目实例 id。
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventContext.SubmissionId">
+      <summary>
+              检索提交 id。
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventContext.TargetId">
+      <summary>
+              获取发生事件的目标的 ID。
+            </summary>
+      <returns>
+              一个整数值表示目标 id。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildEventContext.TaskId">
+      <summary>
+              获取发生事件的任务 ID。
+            </summary>
+      <returns>
+              一个整数值表示任务 id。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildFinishedEventArgs.Succeeded">
+      <summary>
+              获取或设置一个值，该值指示是否成功生成。
+            </summary>
+      <returns>
+              <see langword="true" /> 若要指示在生成成功;否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildMessageEventArgs.Code">
+      <summary>
+              与事件相关联的代码。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.String" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildMessageEventArgs.ColumnNumber">
+      <summary>
+              关联的文件感兴趣的列数。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.Int32" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildMessageEventArgs.EndColumnNumber">
+      <summary>
+              结束列号关联的文件中的关注。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.Int32" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildMessageEventArgs.EndLineNumber">
+      <summary>
+              结束行号关联的文件中的关注。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.Int32" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildMessageEventArgs.File">
+      <summary>
+              与事件相关联的文件。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.String" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildMessageEventArgs.Importance">
+      <summary>
+              获取事件的重要性。
+            </summary>
+      <returns>
+              一个 <see cref="T:Microsoft.Build.Framework.MessageImportance" /> 值，该值指示该事件的重要性。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildMessageEventArgs.LineNumber">
+      <summary>
+              关联的文件中的感兴趣的行号。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.Int32" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildMessageEventArgs.ProjectFile">
+      <summary>
+              已发布消息时生成的项目。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.String" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildMessageEventArgs.Subcategory">
+      <summary>
+              该事件的自定义的子类型。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.String" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildStartedEventArgs.BuildEnvironment">
+      <summary>
+              获取在生成开始时使用的环境字典。
+            </summary>
+      <returns>
+              返回环境字典在生成开始时使用。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildWarningEventArgs.Code">
+      <summary>
+              获取事件的警告代码。
+            </summary>
+      <returns>
+              事件的警告代码。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildWarningEventArgs.ColumnNumber">
+      <summary>
+              获取引发事件的代码的部分的开头相对应的列号。
+            </summary>
+      <returns>
+              引发事件的代码段的开头相对应的列号。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildWarningEventArgs.EndColumnNumber">
+      <summary>
+              获取引发该事件的代码部分的结尾相对应的列号。
+            </summary>
+      <returns>
+              对应于引发事件的代码节的结尾处的列号。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildWarningEventArgs.EndLineNumber">
+      <summary>
+              获取引发该事件的代码部分的结尾相对应的行号。
+            </summary>
+      <returns>
+              对应于引发事件的代码节的结尾处的行号。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildWarningEventArgs.File">
+      <summary>
+              获取引发该事件的文件的名称。
+            </summary>
+      <returns>
+              引发事件的文件的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildWarningEventArgs.LineNumber">
+      <summary>
+              获取引发该事件的代码部分的开头相对应的行号。
+            </summary>
+      <returns>
+              引发事件的代码部分的开头相对应的行号。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildWarningEventArgs.ProjectFile">
+      <summary>
+              获取或设置已发布消息时生成的项目。
+            </summary>
+      <returns>
+              返回已发送消息时生成的项目。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.BuildWarningEventArgs.Subcategory">
+      <summary>
+              获取事件的自定义子类别。
+            </summary>
+      <returns>
+              事件的自定义子类别。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs.ProjectFile">
+      <summary>
+              获取引发事件的项目文件名称。
+            </summary>
+      <returns>
+              引发事件的项目文件名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs.Succeeded">
+      <summary>
+              获取一个值，该值指示是否成功生成。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果生成成功，则否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.ProjectFile">
+      <summary>
+              获取引发事件的项目文件。
+            </summary>
+      <returns>
+              引发事件的项目文件。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.TargetNames">
+      <summary>
+              获取正在生成项目中的目标名称。
+            </summary>
+      <returns>
+              正在生成外部项目中的目标的名称。
+               这可以是 null 引用 (<see langword="Nothing" /> 中 Visual Basic) 如果生成外部项目，则使用默认目标。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.IBuildEngine.ColumnNumberOfTaskNode">
+      <summary>
+              在项目文件中调用它获取任务节点的行号。
+            </summary>
+      <returns>
+              调用它的项目文件中的任务节点的行号。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.IBuildEngine.ContinueOnError">
+      <summary>
+              返回<see langword="true" />如果 ContinueOnError 标志设置为<see langword="true" />针对此次特定任务的项目文件中。
+            </summary>
+      <returns>
+              <see langword="true" />如果 ContinueOnError 标志设置为<see langword="true" />针对此次特定任务的项目文件中。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.IBuildEngine.LineNumberOfTaskNode">
+      <summary>
+              获取调用它的项目文件内的任务节点的行号。
+            </summary>
+      <returns>
+              调用它的项目文件中的任务节点的行号。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.IBuildEngine.ProjectFileOfTaskNode">
+      <summary>
+              获取包含对此任务调用的项目文件的完整路径。
+            </summary>
+      <returns>
+              包含对此任务调用项目文件的完整路径。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.IBuildEngine2.IsRunningMultipleNodes">
+      <summary>
+              返回是否系统在单处理器或多处理器模式下运行。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果系统运行在多处理器模式下， <see langword="false" /> 否则为。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.IForwardingLogger.BuildEventRedirector">
+      <summary>
+              获取或设置由生成引擎以允许节点记录器将消息转发到中央记录器。
+            </summary>
+      <returns>
+              <see cref="T:Microsoft.Build.Framework.IEventRedirector" />表示事件重定向程序，以将消息转发到。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.IForwardingLogger.NodeId">
+      <summary>
+              获取或设置生成引擎或节点，以通知转发记录器在哪一节点运行。
+            </summary>
+      <returns>
+              表示在其运行的生成引擎的节点 ID 的整数。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ILogger.Parameters">
+      <summary>
+              获取或设置记录器的用户定义参数。
+            </summary>
+      <returns>
+              记录器参数。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ILogger.Verbosity">
+      <summary>
+              获取或设置要显示在事件日志中的详细信息的级别。
+            </summary>
+      <returns>
+              枚举值之一。
+               默认值为 <see cref="F:Microsoft.Build.Framework.LoggerVerbosity.Normal" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ITask.BuildEngine">
+      <summary>
+              获取或设置与任务关联的生成引擎。
+            </summary>
+      <returns>
+              与任务关联的生成引擎。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ITask.HostObject">
+      <summary>
+              获取或设置与任务关联的任何宿主对象。
+            </summary>
+      <returns>
+              与此任务关联的宿主对象。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ITaskFactory.FactoryName">
+      <summary>
+              获取工厂的名称。
+            </summary>
+      <returns>
+              工厂的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ITaskFactory.TaskType">
+      <summary>
+              获取此工厂将实例化的任务的类型。
+            </summary>
+      <returns>
+              任务的类型。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ITaskItem.ItemSpec">
+      <summary>
+              获取或设置项规范。
+            </summary>
+      <returns>
+              项规范。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ITaskItem.MetadataCount">
+      <summary>
+              获取与项相关联的元数据条目数。
+            </summary>
+      <returns>
+              与项相关联的元数据条目数。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ITaskItem.MetadataNames">
+      <summary>
+              获取与项关联的元数据条目的名称。
+            </summary>
+      <returns>
+              与项关联的元数据项的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped">
+      <summary>
+              获取或设置该项目包含值。 对于基于磁盘的项，这将为文件路径。
+            </summary>
+      <returns>
+              返回包含值的项。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.LazyFormattedBuildEventArgs.Message">
+      <summary>
+              获取格式的消息。
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.LoggerException.ErrorCode">
+      <summary>
+              获取与此异常的消息相关联的错误代码。
+            </summary>
+      <returns>
+              与此异常的消息关联的错误代码。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.LoggerException.HelpKeyword">
+      <summary>
+              获取与此错误关联的 F1 帮助关键字。
+            </summary>
+      <returns>
+              错误的 F1 帮助关键字。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ProjectFinishedEventArgs.ProjectFile">
+      <summary>
+              获取与事件关联的项目文件。
+            </summary>
+      <returns>
+              与事件关联的项目文件。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ProjectFinishedEventArgs.Succeeded">
+      <summary>
+              获取一个值，该值指示是否成功生成。
+            </summary>
+      <returns>
+              指示是否成功生成的值。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ProjectStartedEventArgs.GlobalProperties">
+      <summary>
+              获取用于评估此项目的全局属性集。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.Collections.Generic.IDictionary`2" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ProjectStartedEventArgs.Items">
+      <summary>
+              获取事件的项的列表。
+            </summary>
+      <returns>
+              为事件项的列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ParentProjectBuildEventContext">
+      <summary>
+              提供上下文位置信息，包括任何调用将生成此项目的项目。
+            </summary>
+      <returns>
+              一个 <see cref="T:Microsoft.Build.Framework.BuildEventContext" /> 对象，表示的项的事件的列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectFile">
+      <summary>
+              获取与事件关联的项目文件。
+            </summary>
+      <returns>
+              与事件关联的项目文件。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectId">
+      <summary>
+              获取与事件关联的项目文件。
+            </summary>
+      <returns>
+              一个整数，表示与事件关联的项目文件的 ID。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ProjectStartedEventArgs.Properties">
+      <summary>
+              获取事件的属性的列表。
+            </summary>
+      <returns>
+              事件的属性的列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ProjectStartedEventArgs.TargetNames">
+      <summary>
+              获取要在项目中生成的目标列表。
+            </summary>
+      <returns>
+              要在项目中生成的目标列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ToolsVersion">
+      <summary>
+              获取用于评估此项目的工具版本。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.String" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.RequiredRuntimeAttribute.RuntimeVersion">
+      <summary>
+              获取构造属性时所使用，如"v2.0。"的 CLR 运行时版本
+            </summary>
+      <returns>
+              包含所需的 CLR 运行时版本的字符串。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TargetFinishedEventArgs.ProjectFile">
+      <summary>
+              获取与事件关联的项目文件的名称。
+            </summary>
+      <returns>
+              与事件关联的项目文件的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TargetFinishedEventArgs.Succeeded">
+      <summary>
+              获取一个值，该值指示目标的生成是否成功。
+            </summary>
+      <returns>
+              指示目标的生成是否成功的值。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TargetFinishedEventArgs.TargetFile">
+      <summary>
+              获取包含此目标的实现的文件的名称。
+            </summary>
+      <returns>
+              包含此目标的实现的文件的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TargetFinishedEventArgs.TargetName">
+      <summary>
+              获取与事件相关联的目标的名称。
+            </summary>
+      <returns>
+              与事件相关联的目标的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TargetFinishedEventArgs.TargetOutputs">
+      <summary>
+              获取或设置可枚举所有目标输出。
+            </summary>
+      <returns>
+              所有目标输出中都返回的枚举。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TargetStartedEventArgs.ParentTarget">
+      <summary>
+              表示这会导致此目标生成的目标。
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TargetStartedEventArgs.ProjectFile">
+      <summary>
+              获取与事件关联的项目文件的名称。
+            </summary>
+      <returns>
+              与事件关联的项目文件的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TargetStartedEventArgs.TargetFile">
+      <summary>
+              获取包含此目标的实现的文件的名称。
+            </summary>
+      <returns>
+              包含此目标的实现的文件的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TargetStartedEventArgs.TargetName">
+      <summary>
+              获取与事件相关联的目标的名称。
+            </summary>
+      <returns>
+              与事件相关联的目标的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskCommandLineEventArgs.CommandLine">
+      <summary>
+              获取命令行任务用于运行基础的程序。
+            </summary>
+      <returns>
+              命令行任务用于运行基础的程序。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskCommandLineEventArgs.TaskName">
+      <summary>
+              获取引发该事件的任务的名称。
+            </summary>
+      <returns>
+              引发事件的任务的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskFinishedEventArgs.ProjectFile">
+      <summary>
+              获取与事件关联的项目文件的名称。
+            </summary>
+      <returns>
+              与事件关联的项目文件的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskFinishedEventArgs.Succeeded">
+      <summary>
+              获取一个值，该值指示是否成功执行任务。
+            </summary>
+      <returns>
+              指示执行任务是否成功的值。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskFinishedEventArgs.TaskFile">
+      <summary>
+              获取 MSBuild 定义该任务的文件。
+            </summary>
+      <returns>
+              
+                MSBuild 定义该任务的文件。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskFinishedEventArgs.TaskName">
+      <summary>
+              获取与事件相关联的任务的名称。
+            </summary>
+      <returns>
+              与事件相关联的任务的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskPropertyInfo.Name">
+      <summary>
+              属性的名称。
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskPropertyInfo.Output">
+      <summary>
+              输出属性，则返回 true
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskPropertyInfo.PropertyType">
+      <summary>
+              属性的类型
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskPropertyInfo.Required">
+      <summary>
+              如果属性是必需的则为 true。
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskStartedEventArgs.ProjectFile">
+      <summary>
+              获取与事件关联的项目文件的名称。
+            </summary>
+      <returns>
+              与事件关联的项目文件的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskStartedEventArgs.TaskFile">
+      <summary>
+              获取 MSBuild 定义该任务的文件。
+            </summary>
+      <returns>
+              
+                MSBuild 定义该任务的文件。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.TaskStartedEventArgs.TaskName">
+      <summary>
+              获取与事件相关联的任务的名称。
+            </summary>
+      <returns>
+              与事件相关联的任务的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Argument.IsRequired">
+      <summary>
+              指示是否 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> 指向 <see cref="P:Microsoft.Build.Framework.XamlTypes.Argument.Property" /> 必须定义，以便定义 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> 拥有此参数有意义。
+            </summary>
+      <returns>
+              返回 <see langword="true" /> BaseProperty 必须定义; 否则为如果 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Argument.Property">
+      <summary>
+              获取或设置的名称 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> ，此参数引用。
+            </summary>
+      <returns>
+              返回的名称 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> ，此参数引用。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Argument.Separator">
+      <summary>
+              获取或设置用于从父分隔的参数值的字符串 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> 切换命令行中。
+            </summary>
+      <returns>
+              返回字符串用于分隔的参数值从父 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> 切换。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Arguments">
+      <summary>
+              获取或设置此属性的自变量列表。
+            </summary>
+      <returns>
+              返回此属性的自变量的列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Category">
+      <summary>
+              获取或设置此属性所属的类别的名称。
+            </summary>
+      <returns>
+              返回此属性所属的类别的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.ContainingRule">
+      <summary>
+              获取或设置<see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />包含此<see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />。
+            </summary>
+      <returns>
+              返回包含此规则<see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.DataSource">
+      <summary>
+              获取或设置此属性的当前值存储的数据源。
+            </summary>
+      <returns>
+              返回存储此属性的当前值的数据源。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Default">
+      <summary>
+              获取或设置此属性的默认值。
+            </summary>
+      <returns>
+              返回此属性的默认值。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Description">
+      <summary>
+              获取或设置此说明 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> 供预期的用户界面客户端使用。
+            </summary>
+      <returns>
+              返回此说明 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.DisplayName">
+      <summary>
+              获取或设置预期的用户界面客户端可以用于将此应用显示的名称 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />。
+            </summary>
+      <returns>
+              返回的显示名称 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.F1Keyword">
+      <summary>
+              获取或设置用于打开此属性的帮助页的关键字。
+            </summary>
+      <returns>
+              返回用于打开此属性的帮助页的关键字。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext">
+      <summary>
+              获取或设置要在用户按下 f1 键时使用的帮助上下文。
+            </summary>
+      <returns>
+              返回要在用户按下 f1 键时使用的帮助上下文。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpFile">
+      <summary>
+              获取或设置要在用户按下 f1 键时使用的帮助文件。
+            </summary>
+      <returns>
+              返回要在用户按下 f1 键时使用的帮助文件。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpUrl">
+      <summary>
+              获取或设置此属性的帮助页的 URL。
+               当用户按 F1 时，会打开页面。
+            </summary>
+      <returns>
+              返回此属性的帮助页的 URL。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.IncludeInCommandLine">
+      <summary>
+              获取或设置一个提示命令行构造函数是否在命令行中包含此属性。
+            </summary>
+      <returns>
+              返回到命令行构造函数的提示。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.IsRequired">
+      <summary>
+              获取或设置一个标志，指示是否将此属性需要设置一个值。
+            </summary>
+      <returns>
+              返回一个标志，指示是否将此属性需要设置一个值。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Metadata">
+      <summary>
+              获取或设置此附加特性 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />。
+            </summary>
+      <returns>
+              返回的此附加特性 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.MultipleValuesAllowed">
+      <summary>
+              获取或设置指定此属性是否允许多个值以同时提供/选择一个交换机。
+            </summary>
+      <returns>
+              返回指定此属性是否允许多个值以同时提供/选择一个交换机。
+               如果为 true，则可以选择多个值。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Name">
+      <summary>
+              获取或设置此名称 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />。
+            </summary>
+      <returns>
+              返回此 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> 的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.ReadOnly">
+      <summary>
+              获取或设置一个标志，指示此属性是只读的。
+            </summary>
+      <returns>
+              返回 <see langword="true" /> 如果这是一个只读属性; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Separator">
+      <summary>
+              获取或设置用于将一个开关分隔的值的标记。
+            </summary>
+      <returns>
+              返回用于将交换机与它的值分隔的标记。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Subcategory">
+      <summary>
+              获取或设置此属性所属的子类别。
+            </summary>
+      <returns>
+              返回此属性所属的子类别。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Switch">
+      <summary>
+              获取或设置此属性的开关表示，当该属性表示一个工具参数。
+            </summary>
+      <returns>
+              返回此属性的开关表示。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.SwitchPrefix">
+      <summary>
+              获取或设置此属性的开关表示的前缀，当此属性表示一个工具参数。
+            </summary>
+      <returns>
+              返回此属性的开关表示的前缀。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.ValueEditors">
+      <summary>
+              获取或设置此属性的值编辑器的列表。
+            </summary>
+      <returns>
+              返回此属性的值编辑器的列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BaseProperty.Visible">
+      <summary>
+              获取或设置一个提示，指示其是否显示该属性的用户界面客户端。
+            </summary>
+      <returns>
+              返回指示其是否显示该属性的用户界面客户端对提示。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.BoolProperty.ReverseSwitch">
+      <summary>
+              获取或设置一个标志，用于强制布尔开关的值的逻辑求反结果。
+            </summary>
+      <returns>
+              返回 <see langword="true" /> 如果值是在逻辑上求反后的; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Category.Description">
+      <summary>
+              获取或设置此说明 <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />。
+            </summary>
+      <returns>
+              返回此类别的说明。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Category.DisplayName">
+      <summary>
+              获取或设置预期的用户界面客户端可以用于将此应用显示的名称 <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />。
+            </summary>
+      <returns>
+              返回此类别的显示名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Category.HelpString">
+      <summary>
+              获取或设置此帮助信息<see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />。
+            </summary>
+      <returns>
+              返回此类别的帮助信息。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Category.Name">
+      <summary>
+              获取或设置此名称 <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />。
+            </summary>
+      <returns>
+              返回此类别的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Category.Subtype">
+      <summary>
+              获取或设置此子类型 <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />。
+            </summary>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ContentType.DefaultContentTypeForItemType">
+      <summary>
+              获取或设置一个标志，用于确定默认内容类型是否可用。
+            </summary>
+      <returns>
+              默认内容类型是否可用，则返回 true。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ContentType.DisplayName">
+      <summary>
+              将序列化为 IContentType.DisplayName。
+            </summary>
+      <returns>
+              返回序列化的显示名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName">
+      <summary>
+              将序列化为 IContentType.DefaultContentTypeForItemType
+            </summary>
+      <returns>
+              返回项类型的序列化的默认内容类型。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType">
+      <summary>
+              将序列化为 IContentType.ItemType
+            </summary>
+      <returns>
+              返回序列化的项类型。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ContentType.Metadata">
+      <summary>
+              序列化内容类型的元数据。
+            </summary>
+      <returns>
+              返回序列化的元数据。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ContentType.Name">
+      <summary>
+              将序列化为 IContentType.Name。
+            </summary>
+      <returns>
+              返回序列化的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.DataSource.HasConfigurationCondition">
+      <summary>
+              获取或设置一个标志，用于确定属性是否依赖于配置，如所示，附加到属性定义在其持久性位置的配置情况存在。
+            </summary>
+      <returns>
+              返回<see langword="true" />如果属性是依赖于配置的; 否则为<see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.DataSource.ItemType">
+      <summary>
+              获取或设置数据源的项类型。
+            </summary>
+      <returns>
+              返回数据源的项类型。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.DataSource.Label">
+      <summary>
+              获取或设置属性/项定义元数据所属的 MSBuild 属性组/项目中定义组的标签。
+            </summary>
+      <returns>
+              返回的属性或项组的标签。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.DataSource.MSBuildTarget">
+      <summary>
+              获取或设置读取此数据源的项的只读属性之前，必须执行的 MSBuild 目标的以分号分隔列表。
+            </summary>
+      <returns>
+              返回以分号分隔的列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.DataSource.PersistedName">
+      <summary>
+              获取或设置用于读/写此属性的值的实际 MSBuild 属性名称。
+            </summary>
+      <returns>
+              返回用于读/写此属性的值的实际 MSBuild 属性名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.DataSource.Persistence">
+      <summary>
+              获取或设置此数据源的存储位置。
+            </summary>
+      <returns>
+              返回此数据源的存储位置。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.DataSource.SourceOfDefaultValue">
+      <summary>
+              获取或设置的值<see cref="T:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation" /> 指示的默认值为此数据源的位置。
+            </summary>
+      <returns>
+              返回 <see cref="T:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.DataSource.SourceType">
+      <summary>
+              获取或设置控制如何在生成过程中处理数据的源的数据类型。
+            </summary>
+      <returns>
+              返回的数据类型。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.EnumProvider">
+      <summary>
+              获取或设置提供程序生成此属性的可能值的列表。
+            </summary>
+      <returns>
+              返回提供程序。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.ProviderSettings">
+      <summary>
+              获取或设置提供程序特定的一组选项传递给提供程序。
+            </summary>
+      <returns>
+              返回组的选项。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.EnumProperty.AdmissibleValues">
+      <summary>
+              获取或设置此属性的可能值的列表。
+            </summary>
+      <returns>
+              返回此属性的可能值的列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.EnumValue.Arguments">
+      <summary>
+              获取或设置此自变量列表<see cref="T:Microsoft.Build.Framework.XamlTypes.EnumValue" />。
+            </summary>
+      <returns>
+              返回自变量的列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.EnumValue.Description">
+      <summary>
+              获取或设置此说明 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" /> 供预期的用户界面客户端使用。
+            </summary>
+      <returns>
+              返回的说明。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.EnumValue.DisplayName">
+      <summary>
+              获取或设置预期的用户界面客户端可以用于将此应用显示的名称 <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumValue" />。
+            </summary>
+      <returns>
+              返回的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.EnumValue.HelpString">
+      <summary>
+              获取或设置此帮助信息<see cref="T:Microsoft.Build.Framework.XamlTypes.EnumValue" />。
+            </summary>
+      <returns>
+              返回的帮助信息。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.EnumValue.IsDefault">
+      <summary>
+              获取或设置一个标志，决定是否这 <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumValue" /> 是相关联的默认值 <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumProperty" />。
+            </summary>
+      <returns>
+              <see langword="True" /> 如果枚举值是默认值;否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.EnumValue.Metadata">
+      <summary>
+              获取或设置此附加特性 <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumValue" />。
+            </summary>
+      <returns>
+              返回的其他属性。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.EnumValue.Name">
+      <summary>
+              获取或设置此名称 <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumValue" />。
+            </summary>
+      <returns>
+              返回的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.EnumValue.Switch">
+      <summary>
+              获取或设置此属性对于这种情况的开关表示当父 <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumProperty" /> 表示工具参数。
+            </summary>
+      <returns>
+              返回的开关表示。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.EnumValue.SwitchPrefix">
+      <summary>
+              获取或设置此值用于这种情况的开关表示前缀时父 <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumProperty" /> 表示工具参数。
+            </summary>
+      <returns>
+              返回的交换机的前缀。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.FileExtension.ContentType">
+      <summary>
+              获取或设置相应的内容类型。
+            </summary>
+      <returns>
+              返回相应的内容类型。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.FileExtension.Name">
+      <summary>
+              获取或设置的文件扩展名的名称。
+            </summary>
+      <returns>
+              返回的文件扩展名的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.IntProperty.MaxValue">
+      <summary>
+              获取或设置最大允许为此属性的值。
+            </summary>
+      <returns>
+              返回最大允许值。
+               返回 <see langword="null" /> 时未设置此属性。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.IntProperty.MinValue">
+      <summary>
+              获取或设置允许为此属性的值的最小。
+            </summary>
+      <returns>
+              返回允许最小值。
+               返回 <see langword="null" /> 时未设置此属性。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ItemType.DefaultContentType">
+      <summary>
+              将序列化为 IItemType.ItemType。
+            </summary>
+      <returns>
+              返回序列化的默认内容类型。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ItemType.DisplayName">
+      <summary>
+              将序列化为 IItemType.DisplayName
+            </summary>
+      <returns>
+              返回序列化的显示名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ItemType.Name">
+      <summary>
+              将序列化为 IItemType.Name
+            </summary>
+      <returns>
+              返回的序列化的项类型名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ItemType.UpToDateCheckInput">
+      <summary>
+              获取或设置指定是否在最新检查中包括项类型的序列化的交换机。
+            </summary>
+      <returns>
+              返回一个指定是否在最新检查中包括项类型的序列化的开关。
+               如果为 true，包括了序列化。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.NameValuePair.Name">
+      <summary>
+              获取或设置名称-值对的名称。
+            </summary>
+      <returns>
+              返回的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.NameValuePair.Value">
+      <summary>
+              获取或设置的名称 / 值对的值。
+            </summary>
+      <returns>
+              获取的值。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.Nodes">
+      <summary>
+              获取或设置此架构定义的节点的列表。
+            </summary>
+      <returns>
+              返回此架构定义的节点的列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.AdditionalInputs">
+      <summary>
+              当这<see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />表示一个生成自定义项时，此字段定义要进行求值为生成自定义项目的目标的其他输入以分号分隔列表。
+            </summary>
+      <returns>
+              返回的其他输入以分号分隔的列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.Categories">
+      <summary>
+              获取或设置的列表<see cref="T:Microsoft.Build.Framework.XamlTypes.Category" />类别，在此属性<see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />属于。
+            </summary>
+      <returns>
+              返回属性的列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.CommandLine">
+      <summary>
+              当这<see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />表示一个生成自定义项时，此字段来表示要供生成自定义任务来调用该工具的命令行的模板。
+            </summary>
+      <returns>
+              返回命令行的模板。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.DataSource">
+      <summary>
+              <see cref="P:Microsoft.Build.Framework.XamlTypes.Rule.DataSource" /> 中此属性 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />。
+               将重写此属性的本地定义的任何数据源。
+            </summary>
+      <returns>
+              返回的数据源。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.Description">
+      <summary>
+              获取或设置此说明 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> 供预期的用户界面客户端使用。
+            </summary>
+      <returns>
+              返回的说明。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.DisplayName">
+      <summary>
+              获取或设置预期的用户界面客户端可以用于将此应用显示的名称 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />。
+            </summary>
+      <returns>
+              返回的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.EvaluatedCategories">
+      <summary>
+              返回指定的 XAML 的联合 <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" /> 类别和自动生成 <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" /> 类别。
+               后者可创建从通过此规则中的属性引用的任何缺少的类别。
+               自动生成 <see cref="T:Microsoft.Build.Framework.XamlTypes.Category" /> 类别只需设置其名称。
+            </summary>
+      <returns>
+              返回联合类别。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.ExecutionDescription">
+      <summary>
+              当这 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> 表示一个生成自定义项时，此字段来表示生成的自定义项在生成过程在执行之前显示的消息。
+            </summary>
+      <returns>
+              返回的消息。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.FileExtension">
+      <summary>
+              当这 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> 表示一个生成自定义项时，此字段来表示要将相关联的文件扩展名。
+            </summary>
+      <returns>
+              返回的文件扩展名。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.HelpString">
+      <summary>
+              获取或设置此帮助信息<see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />。
+            </summary>
+      <returns>
+              返回的帮助信息。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.Metadata">
+      <summary>
+              获取或设置可以设置规则的任意元数据。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.Collections.Generic.Dictionary`2" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.Name">
+      <summary>
+              此 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> 的名称。
+            </summary>
+      <returns>
+              返回的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.Order">
+      <summary>
+              获取或设置预期的相对位置的用户界面客户端建议 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> 相比在系统中的所有其他规则。
+            </summary>
+      <returns>
+              返回该建议。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.Outputs">
+      <summary>
+              当这 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> 表示一个生成自定义项时，此字段定义要计算为生成自定义项目目标的输出之间用分号分隔列表。
+            </summary>
+      <returns>
+              返回的输出。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.OverrideMode">
+      <summary>
+              获取或设置要在多个规则具有相同名称将显示在项目以协调到一个实例中的规则时使用的方法。
+            </summary>
+      <returns>
+              返回 <see cref="T:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.PageTemplate">
+      <summary>
+              获取或设置用来显示此规则的 UI 呈现模板。
+            </summary>
+      <returns>
+              返回 UI 模板。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.Properties">
+      <summary>
+              获取或设置的属性列表中这 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />。
+            </summary>
+      <returns>
+              返回属性的列表。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.PropertyPagesHidden">
+      <summary>
+              获取或设置一个标志，指示是否隐藏此规则的属性页。
+            </summary>
+      <returns>
+              返回的标志值。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.Separator">
+      <summary>
+              获取或设置用于分隔其值属性开关的令牌。
+            </summary>
+      <returns>
+              返回该标记分隔符。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.ShowOnlyRuleProperties">
+      <summary>
+              获取或设置一个标志，确定是否要隐藏的命令行的类别。
+            </summary>
+      <returns>
+              返回 <see langword="true" /> 命令行类别是否隐藏; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.SupportsFileBatching">
+      <summary>
+              获取或设置用于确定是否可以在一个命令行调用批处理多个文件的标志。
+            </summary>
+      <returns>
+              返回 <see langword="true" /> 如果多个文件可以批处理; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.SwitchPrefix">
+      <summary>
+              获取或设置要使用的所有属性开关中的前缀 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> 为这种情况时此属性 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> 代表一个工具。
+            </summary>
+      <returns>
+              返回前缀。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.Rule.ToolName">
+      <summary>
+              获取或设置该工具的名称，此规则表示一种工具。
+            </summary>
+      <returns>
+              返回该工具的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.RuleBag.Rules">
+      <summary>
+              列表 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> 实例此 <see cref="T:Microsoft.Build.Framework.XamlTypes.RuleBag" /> 实例都包含。
+            </summary>
+      <returns>
+              返回的规则的列表。
+               始终返回至少一个规则。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.StringListProperty.CommandLineValueSeparator">
+      <summary>
+              获取或设置要在描绘此字符串列表属性的各个值中使用的分隔符
+            </summary>
+      <returns>
+              返回该分隔符。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.StringListProperty.RendererValueSeparator">
+      <summary>
+              获取或设置 UI 呈现分隔符。
+               此属性已弃用。
+            </summary>
+      <returns>
+              返回 UI 呈现分隔符。
+               此属性已弃用。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.StringListProperty.Subtype">
+      <summary>
+              限定此字符串属性，以便为其提供更为具体的分类。
+            </summary>
+      <returns>
+              返回属性的子类型。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype">
+      <summary>
+              限定此字符串属性，以便为其提供更为具体的分类。
+            </summary>
+      <returns>
+              返回子类型。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ValueEditor.DisplayName">
+      <summary>
+              获取或设置编辑器中的用户界面显示名称。
+            </summary>
+      <returns>
+              返回显示名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ValueEditor.EditorType">
+      <summary>
+              获取或设置此名称 <see cref="T:Microsoft.Build.Framework.XamlTypes.ValueEditor" />。
+            </summary>
+      <returns>
+              返回编辑器中的名称。
+            </returns>
+    </member>
+    <member name="P:Microsoft.Build.Framework.XamlTypes.ValueEditor.Metadata">
+      <summary>
+              获取或设置的编辑器的一般性还不足以对此类属性的其他属性。
+            </summary>
+      <returns>
+              返回的其他属性。
+            </returns>
+    </member>
+    <member name="T:Microsoft.Build.Framework.AnyEventHandler">
+      <summary>
+              表示将处理的方法<see cref="E:Microsoft.Build.Framework.IEventSource.AnyEventRaised" />生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.BuildEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildEngineResult">
+      <summary>
+              包含结果的生成和目标输出。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildErrorEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.ErrorRaised" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildErrorEventHandler">
+      <summary>
+              表示将处理的方法<see cref="E:Microsoft.Build.Framework.IEventSource.ErrorRaised" />生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.BuildErrorEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.AnyEventRaised" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildEventContext">
+      <summary>
+              提供有关生成事件的上下文的位置信息。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildFinishedEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.BuildFinished" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildFinishedEventHandler">
+      <summary>
+              表示将处理的方法<see cref="E:Microsoft.Build.Framework.IEventSource.BuildFinished" />生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.BuildFinishedEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildMessageEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.MessageRaised" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildMessageEventHandler">
+      <summary>
+              表示将处理的方法<see cref="E:Microsoft.Build.Framework.IEventSource.MessageRaised" />生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.BuildMessageEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildStartedEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.BuildStarted" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildStartedEventHandler">
+      <summary>
+              表示将处理的方法<see cref="E:Microsoft.Build.Framework.IEventSource.BuildStarted" />生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.BuildStartedEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildStatusEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.StatusEventRaised" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildStatusEventHandler">
+      <summary>
+              表示将处理的方法<see cref="E:Microsoft.Build.Framework.IEventSource.StatusEventRaised" />生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.BuildStatusEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildWarningEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.WarningRaised" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.BuildWarningEventHandler">
+      <summary>
+              表示将处理的方法<see cref="E:Microsoft.Build.Framework.IEventSource.WarningRaised" />生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.BuildWarningEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.CriticalBuildMessageEventArgs">
+      <summary>
+              包含关键消息事件自的变量。
+               这些始终具有高的重要性。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.CustomBuildEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.CustomEventRaised" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.CustomBuildEventHandler">
+      <summary>
+              表示将处理的方法<see cref="E:Microsoft.Build.Framework.IEventSource.CustomEventRaised" />生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.CustomBuildEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.CustomEventRaised" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ExternalProjectStartedEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.CustomEventRaised" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.IBuildEngine">
+      <summary>
+              为任务作者可以使用的功能的子集提供一种 MSBuild 引擎。 </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.IBuildEngine2">
+      <summary>
+              为任务作者可以使用的功能的子集提供一种 MSBuild 引擎。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.IBuildEngine3">
+      <summary>
+              此接口扩展 IBuildEngine 提供并行的文件的方法允许正在生成项目。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.IBuildEngine4">
+      <summary>
+              此接口扩展 IBuildEngine 提供一种机制，从而允许任务调用之间共享数据的任务。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ICancelableTask">
+      <summary>
+              可以取消的任务的接口。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.IEventRedirector">
+      <summary>
+              生成事件转发到其他记录器。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.IEventSource">
+      <summary>
+              定义由生成引擎引发的事件。
+               记录器接收实现此接口中的对象及其 <see cref="M:Microsoft.Build.Framework.ILogger.Initialize(Microsoft.Build.Framework.IEventSource)" /> 方法并使用它来订阅事件，他们感兴趣接收。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.IForwardingLogger">
+      <summary>
+              扩展 <see cref="T:Microsoft.Build.Framework.ILogger" /> 接口，以提供用于将事件转发到的不同进程中运行的记录器的属性。
+               它还可用于创建筛选的记录器。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.IGeneratedTask">
+      <summary>
+              由生成的任务实现的接口 <see cref="ITaskFactory" /> 实例。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ILogger">
+      <summary>
+              定义 MSBuild 记录器，后者订阅生成系统事件。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.INodeLogger">
+      <summary>
+              定义生成系统中的"并行的记录器"。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ITask">
+      <summary>
+              定义一个任务，即使用的可执行代码单元的通过 MSBuild 来执行生成操作。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ITaskFactory">
+      <summary>
+              任务工厂实例应实现的接口。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ITaskFactory2">
+      <summary>
+              描述并扩展 <see cref="T:Microsoft.Build.Framework.ITaskFactory" /> 任务工厂实例应实现的接口。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ITaskHost">
+      <summary>
+              将主机对象从集成的开发环境 (IDE) 到单独的任务。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ITaskItem">
+      <summary>
+              定义 MSBuild 项，可以使用和发出的任务。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ITaskItem2">
+      <summary>
+              此接口为 ITaskItem 接口添加转义支持。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.LazyFormattedBuildEventArgs">
+      <summary>
+              存储延迟格式设置，直到它需要显示一条消息的部分字符串。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.LoadInSeparateAppDomainAttribute">
+      <summary>
+              定义元数据特性的 MSBuild 用于确定必须在其自己的应用程序域中执行的任务。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.LoggerException">
+      <summary>
+              允许以强制在一种显式方法中停止时生成的记录器。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.LoggerVerbosity">
+      <summary>
+              指定可用的详细级别的 <see cref="T:Microsoft.Build.Utilities.Logger" />。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Quiet">
+      <summary>
+              静默详细级别，其中显示了生成摘要。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Minimal">
+      <summary>
+              最低详细级别，后者会显示错误、 警告消息 <see cref="T:Microsoft.Build.Framework.MessageImportance" /> 值 <see cref="F:Microsoft.Build.Framework.MessageImportance.High" />, ，以及生成摘要。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Normal">
+      <summary>
+              与普通详细级别，后者会显示错误、 警告消息 <see cref="T:Microsoft.Build.Framework.MessageImportance" /> 值 <see cref="F:Microsoft.Build.Framework.MessageImportance.High" />, ，某些状态事件，以及生成摘要。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Detailed">
+      <summary>
+              消息详情的详细级别，后者会显示错误、 警告、 <see cref="T:Microsoft.Build.Framework.MessageImportance" /> 值 <see cref="F:Microsoft.Build.Framework.MessageImportance.High" /> 或 <see cref="F:Microsoft.Build.Framework.MessageImportance.Normal" />, ，所有状态事件，以及生成摘要。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Diagnostic">
+      <summary>
+              诊断详细级别，后者会显示所有错误、 警告、 消息、 状态事件和生成摘要。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.MessageImportance">
+      <summary>
+              指定定义生成消息的重要性的常数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.MessageImportance.High">
+      <summary>
+              高重要性的消息。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.MessageImportance.Normal">
+      <summary>
+              重要性一般的消息。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.MessageImportance.Low">
+      <summary>
+              一个不太重要的消息。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.OutputAttribute">
+      <summary>
+              定义任务作者用来标识输出数据从任务的任务属性的元数据属性。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ProjectFinishedEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectFinished" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ProjectFinishedEventHandler">
+      <summary>
+              表示将处理的方法 <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectFinished" /> 生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.ProjectFinishedEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ProjectStartedEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectStarted" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.ProjectStartedEventHandler">
+      <summary>
+              表示将处理的方法 <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectStarted" /> 生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.ProjectStartedEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.RegisteredTaskObjectLifetime">
+      <summary>
+              定义已注册的任务对象的生存期。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.RegisteredTaskObjectLifetime.Build">
+      <summary>
+              生成结束时，将释放已注册的对象。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.RegisteredTaskObjectLifetime.AppDomain">
+      <summary>
+              将已注册的对象时释放 <see langword="AppDomain" /> 生成是否已启动将被卸载
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.RequiredAttribute">
+      <summary>
+              定义任务作者用来标识所需的任务属性的元数据属性。
+               运行任务时，使用此属性的任务属性必须具有设定的值。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.RequiredRuntimeAttribute">
+      <summary>
+              定义任务作者用来确定是否将任务需要特定版本的 CLR 运行时的元数据属性。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.RunInMTAAttribute">
+      <summary>
+              使用此属性来标记为不显式要求 com 在 STA 中运行的任务类
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.RunInSTAAttribute">
+      <summary>
+              使用此属性来标记为必需 com 在单线程单元中运行的任务类
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.TargetFinishedEventArgs">
+      <summary>
+              初始化 <see cref="T:Microsoft.Build.Framework.TargetFinishedEventArgs" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.TargetFinishedEventHandler">
+      <summary>
+              表示将处理的方法 <see cref="E:Microsoft.Build.Framework.IEventSource.TargetFinished" /> 生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.TargetFinishedEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.TargetStartedEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.TargetStarted" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.TargetStartedEventHandler">
+      <summary>
+              表示将处理的方法 <see cref="E:Microsoft.Build.Framework.IEventSource.TargetStarted" /> 生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.TargetStartedEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.TaskCommandLineEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.MessageRaised" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.TaskFinishedEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.TaskFinished" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.TaskFinishedEventHandler">
+      <summary>
+              表示将处理的方法 <see cref="E:Microsoft.Build.Framework.IEventSource.TaskFinished" /> 生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.TargetFinishedEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.TaskPropertyInfo">
+      <summary>
+              表示作为强类型化类任务使用的参数信息。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.TaskStartedEventArgs">
+      <summary>
+              为 <see cref="E:Microsoft.Build.Framework.IEventSource.TaskStarted" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.TaskStartedEventHandler">
+      <summary>
+              表示将处理的方法 <see cref="E:Microsoft.Build.Framework.IEventSource.TaskStarted" /> 生成的事件。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:Microsoft.Build.Framework.TaskStartedEventArgs" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.Argument">
+      <summary>
+              表示的自变量<see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.BaseProperty">
+      <summary>
+              表示<see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" />属性。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.BoolProperty">
+      <summary>
+              表示布尔值属性的架构。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.Category">
+      <summary>
+              向其表示类别<see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />可属于。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.CategorySchema">
+      <summary>
+              CategorySchema 提供基础架构数据模型的强类型标识句柄。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.ContentType">
+      <summary>
+              用于反序列化的内容类型信息
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.DataSource">
+      <summary>
+              表示的位置和分组 <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation">
+      <summary>
+              确定是否在底部或项目文件的顶部设置属性的默认值。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation.BeforeContext">
+      <summary>
+              在项目文件 （通常通过.props 文件导入） 的顶部设置属性的默认值。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation.AfterContext">
+      <summary>
+              属性的默认值设置底部的项目文件 （通常通过导入的.targets 文件，其中的属性定义是建立在是否属性没有已定义条件。）
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty">
+      <summary>
+              表示枚举属性的架构。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.EnumProperty">
+      <summary>
+              表示枚举属性的架构。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.EnumValue">
+      <summary>
+              表示可采纳值的 <see cref="T:Microsoft.Build.Framework.XamlTypes.EnumProperty" />。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.FileExtension">
+      <summary>
+              内容类型的数据反序列化一个简单类。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.IntProperty">
+      <summary>
+              表示一个整数属性的架构。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode">
+      <summary>
+              定义项目架构 XAML 文件中的所有根类必须都实现一个接口。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.ItemType">
+      <summary>
+              用于反序列化的项类型信息。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.NameValuePair">
+      <summary>
+              表示一个名称 / 值对。
+               名称不能为 <see langword="null" /> 或为空。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions">
+      <summary>
+              表示数据驱动 XAML 脚本项目架构。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.Rule">
+      <summary>
+              用来表示一种工具、 自定义生成规则、 属性页，等的架构信息。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.RuleBag">
+      <summary>
+              一个用于 <see cref="T:Microsoft.Build.Framework.XamlTypes.Rule" /> 实例。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode">
+      <summary>
+              描述具有相同名称的规则的后续定义。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode.Replace">
+      <summary>
+              后续完全重写以前的定义 （具有相同的名称） 的规则定义。
+            </summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode.Extend">
+      <summary>
+              随后将属性添加到以前的定义 （具有相同的名称） 的规则定义。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.RuleSchema">
+      <summary>
+              RuleSchema 提供基础架构的数据模型的强类型化标识句柄。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.StringListProperty">
+      <summary>
+              表示列表的字符串属性的架构。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.StringProperty">
+      <summary>
+              表示一个字符串属性的架构。
+            </summary>
+    </member>
+    <member name="T:Microsoft.Build.Framework.XamlTypes.ValueEditor">
+      <summary>
+              表示值编辑器。
+            </summary>
+    </member>
+  </members>
+</doc>

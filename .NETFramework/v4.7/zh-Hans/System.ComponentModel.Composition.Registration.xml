@@ -1,0 +1,817 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ComponentModel.Composition.Registration</name>
+  </assembly>
+  <members>
+    <member name="M:System.ComponentModel.Composition.Registration.ExportBuilder.#ctor">
+      <summary>
+              初始化 <see cref="T:System.ComponentModel.Composition.Registration.ExportBuilder" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ExportBuilder.AddMetadata(System.String,System.Func{System.Type,System.Object})">
+      <summary>
+              指定要添加到导出的元数据的键/值对。
+            </summary>
+      <param name="name">
+                元数据键。
+              </param>
+      <param name="itemFunc">
+                函数接受一个类型，返回的元数据值。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ExportBuilder.AddMetadata(System.String,System.Object)">
+      <summary>
+              指定要添加到导出的元数据的键/值对。
+            </summary>
+      <param name="name">
+                元数据键。
+              </param>
+      <param name="value">
+                元数据的值。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ExportBuilder.AsContractName(System.String)">
+      <summary>
+              指定导出应在给定的协定名称下。
+            </summary>
+      <param name="contractName">
+                协定名称。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="contractName" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+                  <paramref name="contractName" /> 是一个空字符串。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ExportBuilder.AsContractType(System.Type)">
+      <summary>
+              指定导出应使用给定的协定类型。
+            </summary>
+      <param name="type">
+                若要使用的协定类型。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="type" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ExportBuilder.AsContractType``1">
+      <summary>
+              指定导出应使用给定的协定类型。
+            </summary>
+      <typeparam name="T">
+                若要使用的协定的类型。
+              </typeparam>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ExportBuilder.Inherited">
+      <summary>
+              指定此导出中应被继承。
+            </summary>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ImportBuilder.#ctor">
+      <summary>
+              初始化 <see cref="T:System.ComponentModel.Composition.Registration.ImportBuilder" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ImportBuilder.AllowDefault">
+      <summary>
+              指定导入应允许默认值。
+            </summary>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ImportBuilder.AllowRecomposition">
+      <summary>
+              指定导入应为可重新组合。
+            </summary>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ImportBuilder.AsContractName(System.String)">
+      <summary>
+              指定导入应在给定的协定名称下。
+            </summary>
+      <param name="contractName">
+                协定名称。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="contractName" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+                  <paramref name="contractName" /> 是一个空字符串。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ImportBuilder.AsContractType(System.Type)">
+      <summary>
+              指定导入应使用给定的协定类型。
+            </summary>
+      <param name="type">
+                若要使用的协定类型。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="type" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ImportBuilder.AsContractType``1">
+      <summary>
+              指定导入应使用给定的协定类型。
+            </summary>
+      <typeparam name="T">
+                若要使用的协定的类型。
+              </typeparam>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ImportBuilder.AsMany(System.Boolean)">
+      <summary>
+              指定导入的基数。
+            </summary>
+      <param name="isMany">
+                <see langword="true" /> 若要指定多个导入; <see langword="false" /> 若要指定单个导入。
+                 默认值为 <see langword="true" />。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ImportBuilder.RequiredCreationPolicy(System.ComponentModel.Composition.CreationPolicy)">
+      <summary>
+              指定导入的需要的创建策略。
+            </summary>
+      <param name="requiredCreationPolicy">
+                创建策略导入要求。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ImportBuilder.Source(System.ComponentModel.Composition.ImportSource)">
+      <summary>
+              指定一个值，指定可以从满足此导入的作用域。
+            </summary>
+      <param name="source">
+                一个值，指定作用域可以从满足导入。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ParameterImportBuilder.#ctor">
+      <summary>
+              初始化 <see cref="T:System.ComponentModel.Composition.Registration.ParameterImportBuilder" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ParameterImportBuilder.Import``1">
+      <summary>
+              将指定的参数定义为导入的参数。
+            </summary>
+      <typeparam name="T">
+                要定义的参数类型。
+              </typeparam>
+      <returns>
+              默认的 <paramref name="T" />, ，但此方法只应引用并且永远不会调用。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.ParameterImportBuilder.Import``1(System.Action{System.ComponentModel.Composition.Registration.ImportBuilder})">
+      <summary>
+              将指定的参数定义为具有指定的配置的导入参数。
+            </summary>
+      <param name="configure">
+                一个包含导入的参数的配置信息的对象。
+              </param>
+      <typeparam name="T">
+                要定义的参数类型。
+              </typeparam>
+      <returns>
+              默认的 <paramref name="T" />, ，但此方法只应引用并且永远不会调用。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="configure" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.AddMetadata(System.String,System.Func{System.Type,System.Object})">
+      <summary>
+              将元数据添加到匹配的类型。
+            </summary>
+      <param name="name">
+                元数据键。
+              </param>
+      <param name="itemFunc">
+                返回给定目标类型的元数据值的函数。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.AddMetadata(System.String,System.Object)">
+      <summary>
+              将元数据添加到匹配的类型。
+            </summary>
+      <param name="name">
+                元数据键。
+              </param>
+      <param name="value">
+                元数据的值。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.Export">
+      <summary>
+              指定应导出匹配的类型。
+            </summary>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.Export(System.Action{System.ComponentModel.Composition.Registration.ExportBuilder})">
+      <summary>
+              指定匹配的类型，应导出并提供结果导出的配置信息。
+            </summary>
+      <param name="exportConfiguration">
+                包含有关导出的配置信息的对象。
+                 默认值为 <see langword="null" />。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.Export``1">
+      <summary>
+              指定应通过使用指定的协定类型导出匹配的类型。
+            </summary>
+      <typeparam name="T">
+                协定的类型。
+              </typeparam>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.Export``1(System.Action{System.ComponentModel.Composition.Registration.ExportBuilder})">
+      <summary>
+              指定匹配的类型，应通过使用指定的协定类型导出并提供结果导出的配置信息。
+            </summary>
+      <param name="exportConfiguration">
+                包含有关导出的配置信息的对象。
+                 默认值为 <see langword="null" />。
+              </param>
+      <typeparam name="T">
+                协定的类型。
+              </typeparam>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportInterfaces">
+      <summary>
+              指定应导出的匹配类型的所有接口。
+            </summary>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportInterfaces(System.Predicate{System.Type})">
+      <summary>
+              指定一组接口上应导出的匹配类型。
+            </summary>
+      <param name="interfaceFilter">
+                一个谓词，指定一组接口。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="interfaceFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportInterfaces(System.Predicate{System.Type},System.Action{System.Type,System.ComponentModel.Composition.Registration.ExportBuilder})">
+      <summary>
+              指定一组接口上的匹配类型，应导出并提供对生成的导出配置信息。
+            </summary>
+      <param name="interfaceFilter">
+                一个谓词，指定一组接口。
+              </param>
+      <param name="exportConfiguration">
+                包含有关导出的配置信息的对象。
+                 默认值为 <see langword="null" />。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="interfaceFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportProperties(System.Predicate{System.Reflection.PropertyInfo})">
+      <summary>
+              在匹配的类型上指定一的组应导出的属性。
+            </summary>
+      <param name="propertyFilter">
+                一个谓词，指定一组属性。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportProperties(System.Predicate{System.Reflection.PropertyInfo},System.Action{System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ExportBuilder})">
+      <summary>
+              指定的匹配类型，应导出并提供这些导出的配置信息的一组属性。
+            </summary>
+      <param name="propertyFilter">
+                一个谓词，指定一组属性。
+              </param>
+      <param name="exportConfiguration">
+                包含有关导出的配置信息的对象。
+                 默认值为 <see langword="null" />。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportProperties``1(System.Predicate{System.Reflection.PropertyInfo})">
+      <summary>
+              指定应导出，通过使用指定的协定类型的匹配类型的一组属性。
+            </summary>
+      <param name="propertyFilter">
+                一个谓词，指定一组属性。
+              </param>
+      <typeparam name="T">
+                协定的类型。
+              </typeparam>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportProperties``1(System.Predicate{System.Reflection.PropertyInfo},System.Action{System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ExportBuilder})">
+      <summary>
+              指定应通过使用指定的协定类型导出并提供用于生成导出配置信息的匹配类型上的一组属性。
+            </summary>
+      <param name="propertyFilter">
+                一个谓词，指定一组属性。
+              </param>
+      <param name="exportConfiguration">
+                包含有关导出的配置信息的对象。
+                 默认值为 <see langword="null" />。
+              </param>
+      <typeparam name="T">
+                协定的类型。
+              </typeparam>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.ImportProperties(System.Predicate{System.Reflection.PropertyInfo})">
+      <summary>
+              指定应导入的匹配类型的一组属性。
+            </summary>
+      <param name="propertyFilter">
+                一个谓词，指定一组属性。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.ImportProperties(System.Predicate{System.Reflection.PropertyInfo},System.Action{System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ImportBuilder})">
+      <summary>
+              应将标记为导入的匹配类型上指定的一组属性并提供生成的导入的配置信息。
+            </summary>
+      <param name="propertyFilter">
+                一个谓词，指定一组属性。
+              </param>
+      <param name="importConfiguration">
+                包含有关导入的配置信息的对象。
+                 默认值为 <see langword="null" />。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.ImportProperties``1(System.Predicate{System.Reflection.PropertyInfo})">
+      <summary>
+              指定应将标记为导入使用指定的协定类型的匹配类型的一组属性。
+            </summary>
+      <param name="propertyFilter">
+                一个谓词，指定一组属性。
+              </param>
+      <typeparam name="T">
+                协定的类型。
+              </typeparam>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.ImportProperties``1(System.Predicate{System.Reflection.PropertyInfo},System.Action{System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ImportBuilder})">
+      <summary>
+              指定应将标记为通过使用指定的协定类型导入，并提供有关生成的导入配置信息的匹配类型的一组属性。
+            </summary>
+      <param name="propertyFilter">
+                一个谓词，指定一组属性。
+              </param>
+      <param name="importConfiguration">
+                包含有关导入的配置信息的对象。
+                 默认值为 <see langword="null" />。
+              </param>
+      <typeparam name="T">
+                协定的类型。
+              </typeparam>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.SelectConstructor(System.Func{System.Reflection.ConstructorInfo[],System.Reflection.ConstructorInfo})">
+      <summary>
+              指定匹配的类型应使用作为导入构造函数的构造函数。
+            </summary>
+      <param name="constructorFilter">
+                从构造函数的一组选择一个构造函数的函数。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="constructorFilter" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+                  <paramref name="constructorFilter" /> 返回 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  <paramref name="constructorFilter" /> 返回不与目标类型相关联的构造函数。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.SelectConstructor(System.Func{System.Reflection.ConstructorInfo[],System.Reflection.ConstructorInfo},System.Action{System.Reflection.ParameterInfo,System.ComponentModel.Composition.Registration.ImportBuilder})">
+      <summary>
+              指定匹配的类型为导入的构造函数，应使用的构造函数并提供生成的导入的配置信息。
+            </summary>
+      <param name="constructorFilter">
+                从构造函数的一组选择一个构造函数的函数。
+              </param>
+      <param name="importConfiguration">
+                一个包含配置信息导入构造函数的对象。
+                 默认值为 <see langword="null" />。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="constructorFilter" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+                  <paramref name="constructorFilter" /> 返回 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  <paramref name="constructorFilter" /> 返回不与目标类型相关联的构造函数。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder.SetCreationPolicy(System.ComponentModel.Composition.CreationPolicy)">
+      <summary>
+              指定匹配的类型的创建策略。
+            </summary>
+      <param name="creationPolicy">
+                创建策略中。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder`1.ExportProperty(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+      <summary>
+              指定应导出的属性。
+            </summary>
+      <param name="propertyFilter">
+                一个表达式，导致对目标属性的引用。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder`1.ExportProperty(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Action{System.ComponentModel.Composition.Registration.ExportBuilder})">
+      <summary>
+              指定应导出并提供用于生成导出的配置信息的属性。
+            </summary>
+      <param name="propertyFilter">
+                一个表达式，导致对目标属性的引用。
+              </param>
+      <param name="exportConfiguration">
+                包含有关导出的配置信息的对象。
+                 默认值为 <see langword="null" />。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder`1.ExportProperty``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+      <summary>
+              指定应为指定的协定类型导出的属性。
+            </summary>
+      <param name="propertyFilter">
+                一个表达式，导致对目标属性的引用。
+              </param>
+      <typeparam name="TContract">
+                协定的类型。
+              </typeparam>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder`1.ExportProperty``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Action{System.ComponentModel.Composition.Registration.ExportBuilder})">
+      <summary>
+              指定应为指定的协定类型导出的属性并提供用于生成导出的配置信息。
+            </summary>
+      <param name="propertyFilter">
+                一个表达式，导致对目标属性的引用。
+              </param>
+      <param name="exportConfiguration">
+                包含有关导出的配置信息的对象。
+                 默认值为 <see langword="null" />。
+              </param>
+      <typeparam name="TContract">
+                协定的类型。
+              </typeparam>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder`1.ImportProperty(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+      <summary>
+              指定应导入一个属性。
+            </summary>
+      <param name="propertyFilter">
+                一个表达式，导致对目标属性的引用。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder`1.ImportProperty(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Action{System.ComponentModel.Composition.Registration.ImportBuilder})">
+      <summary>
+              指定一个属性应该会导入，并提供生成的导入的配置信息。
+            </summary>
+      <param name="propertyFilter">
+                一个表达式，导致对目标属性的引用。
+              </param>
+      <param name="importConfiguration">
+                包含有关导入的配置信息的对象。
+                 默认值为 <see langword="null" />。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder`1.ImportProperty``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+      <summary>
+              指定将一个属性应导入使用指定的协定名称。
+            </summary>
+      <param name="propertyFilter">
+                一个表达式，导致对目标属性的引用。
+              </param>
+      <typeparam name="TContract">
+                若要使用的协定类型。
+              </typeparam>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder`1.ImportProperty``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Action{System.ComponentModel.Composition.Registration.ImportBuilder})">
+      <summary>
+              指定一个属性应该会导入使用指定的协定名称，并提供生成的导入的配置信息。
+            </summary>
+      <param name="propertyFilter">
+                一个表达式，导致对目标属性的引用。
+              </param>
+      <param name="importConfiguration">
+                包含有关导入的配置信息的对象。
+                 默认值为 <see langword="null" />。
+              </param>
+      <typeparam name="TContract">
+                要使用的协定名称。
+              </typeparam>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="propertyFilter" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.PartBuilder`1.SelectConstructor(System.Linq.Expressions.Expression{System.Func{System.ComponentModel.Composition.Registration.ParameterImportBuilder,`0}})">
+      <summary>
+              指定应将用作导入构造函数的构造函数。
+            </summary>
+      <param name="constructorFilter">
+                表达式，用于构造 <paramref name="T" /> 通过使用所需的构造函数。
+                 它仅用于参考，实际上不会调用。
+              </param>
+      <returns>
+              当前对象，以允许链接。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.RegistrationBuilder.#ctor">
+      <summary>
+              初始化 <see cref="T:System.ComponentModel.Composition.Registration.RegistrationBuilder" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.RegistrationBuilder.ForType(System.Type)">
+      <summary>
+              获取表示适用于指定类型的规则的对象。
+            </summary>
+      <param name="type">
+                类型。
+              </param>
+      <returns>
+              表示规则的对象。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.RegistrationBuilder.ForType``1">
+      <summary>
+              获取表示适用于指定类型的规则的强类型对象。
+            </summary>
+      <typeparam name="T">
+                类型。
+              </typeparam>
+      <returns>
+              表示该规则的强类型对象。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.RegistrationBuilder.ForTypesDerivedFrom(System.Type)">
+      <summary>
+              获取表示适用于实现指定类型的所有类型，但其不适用于指定类型的规则的对象。
+            </summary>
+      <param name="type">
+                类型。
+              </param>
+      <returns>
+              表示规则的对象。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.RegistrationBuilder.ForTypesDerivedFrom``1">
+      <summary>
+              获取表示适用于实现指定类型的所有类型，但其不适用于指定类型的规则的强类型对象。
+            </summary>
+      <typeparam name="T">
+                类型。
+              </typeparam>
+      <returns>
+              表示该规则的强类型对象。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.RegistrationBuilder.ForTypesMatching(System.Predicate{System.Type})">
+      <summary>
+              获取表示适用于匹配指定谓词的所有类型的规则的对象。
+            </summary>
+      <param name="typeFilter">
+                要匹配的谓词。
+              </param>
+      <returns>
+              表示规则的对象。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.RegistrationBuilder.ForTypesMatching``1(System.Predicate{System.Type})">
+      <summary>
+              获取表示适用于匹配指定谓词的所有类型的规则的强类型对象。
+            </summary>
+      <param name="typeFilter">
+                要匹配的谓词。
+              </param>
+      <typeparam name="T">
+                一种 <see cref="T:System.ComponentModel.Composition.Registration.PartBuilder`1" /> 要返回对象。
+              </typeparam>
+      <returns>
+              表示该规则的强类型对象。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.RegistrationBuilder.GetCustomAttributes(System.Reflection.MemberInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>
+              为指定的成员提供自定义属性的列表，如此反射上下文中表示的那样。
+            </summary>
+      <param name="member">
+                将返回其自定义特性的成员。
+              </param>
+      <param name="declaredAttributes">
+                在其当前上下文中的成员特性的集合。
+              </param>
+      <returns>
+              表示此反射上下文中指定的成员的自定义特性的集合。
+            </returns>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Registration.RegistrationBuilder.GetCustomAttributes(System.Reflection.ParameterInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>
+              为指定的参数提供自定义属性的列表，如此反射上下文中表示的那样。
+            </summary>
+      <param name="parameter">
+                将返回其自定义特性的参数。
+              </param>
+      <param name="declaredAttributes">
+                在其当前上下文中的参数特性的集合。
+              </param>
+      <returns>
+              表示此反射上下文中指定的参数的自定义特性的集合。
+            </returns>
+    </member>
+    <member name="T:System.ComponentModel.Composition.Registration.ExportBuilder">
+      <summary>
+              表示基于规则的导出的配置信息。
+            </summary>
+    </member>
+    <member name="T:System.ComponentModel.Composition.Registration.ImportBuilder">
+      <summary>
+              表示基于规则的导入的配置信息。
+            </summary>
+    </member>
+    <member name="T:System.ComponentModel.Composition.Registration.ParameterImportBuilder">
+      <summary>
+              表示基于规则的构造函数参数导入的配置。
+            </summary>
+    </member>
+    <member name="T:System.ComponentModel.Composition.Registration.PartBuilder">
+      <summary>
+              表示用于修饰具有托管可扩展性框架 (MEF) 属性的匹配类型的一组规则。
+            </summary>
+    </member>
+    <member name="T:System.ComponentModel.Composition.Registration.PartBuilder`1">
+      <summary>
+              扩展 <see cref="T:System.ComponentModel.Composition.Registration.PartBuilder" /> 类，以允许使用表达式来选择成员。
+            </summary>
+      <typeparam name="T">
+                目标的类型。
+              </typeparam>
+    </member>
+    <member name="T:System.ComponentModel.Composition.Registration.RegistrationBuilder">
+      <summary>
+              表示反射上下文，其有相关的协定，描述了规则，该规则用于修饰具有托管的扩展性框架 (MEF) 属性的条目。
+            </summary>
+    </member>
+  </members>
+</doc>

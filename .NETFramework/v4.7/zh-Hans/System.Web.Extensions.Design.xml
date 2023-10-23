@@ -1,0 +1,1212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.Extensions.Design</name>
+  </assembly>
+  <members>
+    <member name="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              返回一个集合的控件的容器中从 Id <see cref="T:System.ComponentModel.Design.IDesignerHost" /> 对象时提供格式上下文。
+            </summary>
+      <param name="context">
+                一个提供格式上下文可用来提取有关从中调用该转换器的环境的附加信息的对象。
+                 此参数或该参数的属性可以为 <see langword="null" />。
+              </param>
+      <returns>
+              包含一组字符串，表示当前容器中控件的 Id 的控件的对象。
+               如果容器没有任何控件，将返回一个空集合。
+               如果上下文是 <see langword="null" /> 或如果没有当前容器，将返回 <see langword="null" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              返回一个值，该值指示是否标准值集合，则返回从 <see cref="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> 方法通过使用指定的上下文是可能的值的独占列表。
+            </summary>
+      <param name="context">
+                一个提供格式上下文的对象。
+              </param>
+      <returns>
+              <see langword="true" /> 如果 <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> 从返回的对象 <see cref="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> 方法提供了可能的值; 的穷举列表 <see langword="false" /> 如果还可能有其他值。
+               默认值为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              返回一个值，该值指示此转换器是否支持一组标准的控件可以通过使用指定的上下文从列表中选取的 Id。
+            </summary>
+      <param name="context">
+                一个提供格式上下文的对象。
+              </param>
+      <returns>
+              <see langword="true" /> 如果 <see cref="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> 应调用方法以查找一组公共控件 Id，该对象支持; 否则为 <see langword="false" />。
+               默认值为 <see langword="true" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.AsyncPostBackTriggerEventNameConverter.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.AsyncPostBackTriggerEventNameConverter" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.AsyncPostBackTriggerEventNameConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              返回控件的事件名称的集合中的容器中 <see cref="T:System.ComponentModel.Design.IDesignerHost" /> 指定的格式上下文的实例。
+            </summary>
+      <param name="context">
+                一个可用于从调用该转换器的环境有关的详细信息的格式上下文对象。
+                 此参数或其属性可以为 <see langword="null" />。
+              </param>
+      <returns>
+              一个表示当前容器中控件的事件名称的字符串集合。
+               如果当前不包含任何控件，该方法将返回一个空集合。
+               如果上下文是 <see langword="null" /> 或如果没有当前的容器，该方法返回 <see langword="null" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.AsyncPostBackTriggerEventNameConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              返回一个值，该值指示是否标准值集合，则返回从 <see cref="M:System.Web.UI.Design.AsyncPostBackTriggerEventNameConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> 是可能的值用于指定上下文的独占列表。
+            </summary>
+      <param name="context">
+                格式上下文中。
+              </param>
+      <returns>
+              如果从 <see langword="true" /> 返回的 <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> 是可能值的穷举列表，则为 <see cref="M:System.Web.UI.Design.AsyncPostBackTriggerEventNameConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />；如果还可能有其他值，则为 <see langword="false" />。
+               默认实现返回 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.AsyncPostBackTriggerEventNameConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              返回一个值，该值指示此转换器是否支持可以从列表中选择的控件事件名称的标准集。
+            </summary>
+      <param name="context">
+                格式上下文中。
+              </param>
+      <returns>
+              <see langword="true" /> 如果 <see cref="M:System.Web.UI.Design.AsyncPostBackTriggerEventNameConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> 应被调用来查找对象支持的 ID 值的一组常用的控件; 否则为 <see langword="false" />。
+               默认实现返回 <see langword="true" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.CollectionEditorBase.#ctor(System.Type)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.UI.Design.CollectionEditorBase" /> 通过使用指定的集合类型的类。
+            </summary>
+      <param name="type">
+                要编辑的集合的类型。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.CollectionEditorBase.CreateCollectionForm">
+      <summary>
+              创建一个新的窗体来显示和编辑当前集合。
+            </summary>
+      <returns>
+              要作为用户界面提供用于编辑集合的对象。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.ExtenderControlDesigner.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.ExtenderControlDesigner" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.ExtenderControlDesigner.Dispose(System.Boolean)">
+      <summary>
+              释放由非托管的资源 <see cref="T:System.Web.UI.Design.ExtenderControlDesigner" /> ，还可以释放托管的资源。
+            </summary>
+      <param name="disposing">
+                若要释放托管资源和非托管资源，则为 <see langword="true" />；若仅释放非托管资源，则为 <see langword="false" />。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.ExtenderControlDesigner.GetDesignTimeHtml">
+      <summary>
+              获取在设计时，包括类型和 ID 信息的扩展程序控件的标准 HTML 呈现。
+            </summary>
+      <returns>
+              该控件在设计时 HTML 呈现。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.ExtenderControlDesigner.Initialize(System.ComponentModel.IComponent)">
+      <summary>
+              初始化指定的组件，并将其添加到组件更改服务。
+            </summary>
+      <param name="component">
+                类型的组件 <see cref="T:System.Web.UI.IExtenderControl" /> 实现 <see cref="T:System.ComponentModel.IComponent" /> 接口。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.ExtenderControlDesigner.PreFilterProperties(System.Collections.IDictionary)">
+      <summary>
+              调整控件的属性网格中列出的项。
+            </summary>
+      <param name="properties">
+                一个字典，其中包含该控件的属性。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.ExtenderControlToolboxItem.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.ExtenderControlToolboxItem" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.ExtenderControlToolboxItem.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              使用指定的参数初始化 <see cref="T:System.Web.UI.Design.ExtenderControlToolboxItem" /> 类的新实例。
+            </summary>
+      <param name="info">
+                一个对象，提供的序列化信息。
+              </param>
+      <param name="context">
+                一个描述源和目标的序列化流的对象。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.ExtenderControlToolboxItem.#ctor(System.Type)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.UI.Design.ExtenderControlToolboxItem" /> 类通过使用指定的类型。
+            </summary>
+      <param name="type">
+                目标控件的类型。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.ExtenderControlToolboxItem.GetTargetControlTypes(System.ComponentModel.Design.IDesignerHost)">
+      <summary>
+              返回目标类型的集合。
+            </summary>
+      <param name="host">
+                控件宿主。
+              </param>
+      <returns>
+              目标类型的只读集合。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.ExtenderControlToolboxItem.Initialize(System.Type)">
+      <summary>
+              预填充目标类型缓存条目使用指定的类型。
+            </summary>
+      <param name="type">
+                目标控件的类型。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.PostBackTriggerControlIDConverter.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.PostBackTriggerControlIDConverter" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.PostBackTriggerControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              返回一个集合的控件的容器中从 Id <see cref="T:System.ComponentModel.Design.IDesignerHost" /> 对象时提供格式上下文。
+            </summary>
+      <param name="context">
+                可用于提取有关从中调用该转换器的环境的附加信息的一种格式上下文。
+                 此参数或其属性可以为 <see langword="null" />。
+              </param>
+      <returns>
+              一个字符串，表示当前容器中控件的 Id 的控件集合。
+               如果当前不包含任何控件，该方法将返回一个空集合。
+               如果上下文是 <see langword="null" /> 或没有任何当前的容器，该方法返回 <see langword="null" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.PostBackTriggerControlIDConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              返回一个值，该值指示是否标准值集合，则返回从 <see cref="M:System.Web.UI.Design.PostBackTriggerControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> 方法通过使用指定的上下文是可能的值的独占列表。
+            </summary>
+      <param name="context">
+                格式上下文中。
+              </param>
+      <returns>
+              <see langword="true" /> 如果 <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> 从返回的对象 <see cref="M:System.Web.UI.Design.PostBackTriggerControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> 方法提供了可能的值; 的完整列表 <see langword="false" /> 如果还可能有其他值。
+               默认值为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.PostBackTriggerControlIDConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              返回一个值，该值指示此转换器是否支持一组标准控件您可以从列表中，选择通过使用指定的上下文的 Id。
+            </summary>
+      <param name="context">
+                格式上下文中。
+              </param>
+      <returns>
+              <see langword="true" /> 如果 <see cref="M:System.Web.UI.Design.PostBackTriggerControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> 应调用方法以查找一组公共控件对象支持的 Id; 否则为 <see langword="false" />。
+               默认值为 <see langword="true" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.QueryExtenderDesigner.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.QueryExtenderDesigner" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.QueryExtenderDesigner.GetDesignTimeHtml">
+      <summary>
+              获取的占位符 HTML <see cref="T:System.Web.UI.WebControls.QueryExtender" /> 控件在设计时。
+            </summary>
+      <returns>
+              在设计时控件占位符 HTML。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.ScriptManagerDesigner.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.ScriptManagerDesigner" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.ScriptManagerDesigner.GetApplicationServices(System.Web.UI.ScriptManager,System.Collections.Generic.IEnumerable{System.Web.UI.ScriptManagerProxy})">
+      <summary>
+              返回 ECMAScript (JavaScript) 代码，该代码表示网页的 <see cref="T:System.Web.UI.ScriptManager" /> 控件和 <see cref="T:System.Web.UI.ScriptManagerProxy" /> 控件中定义的配置文件服务属性。
+            </summary>
+      <param name="scriptManager">
+                与网页相关联的 <see cref="T:System.Web.UI.ScriptManager" /> 控件。
+              </param>
+      <param name="proxies">
+                与网页相关联的 <see cref="T:System.Web.UI.ScriptManagerProxy" /> 控件的集合。
+              </param>
+      <returns>
+              用于定义配置文件服务属性的 JavaScript 代码。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="scriptManager" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Web.UI.Design.ScriptManagerDesigner.GetDesignTimeHtml">
+      <summary>
+              返回 HTML 标记，表示 <see cref="T:System.Web.UI.ScriptManager" /> 控件在设计时。
+            </summary>
+      <returns>
+              用于呈现的标记 <see cref="T:System.Web.UI.ScriptManager" /> 在设计时。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.ScriptManagerDesigner.GetProxyScript(System.Web.UI.ScriptManager,System.Web.UI.ServiceReference)">
+      <summary>
+              提供了从派生的代理脚本 <see cref="T:System.Web.UI.ServiceReference" /> 对象。
+            </summary>
+      <param name="scriptManager">
+                <see cref="T:System.Web.UI.ScriptManager" /> 页上的控件。
+              </param>
+      <param name="serviceReference">
+                <see cref="T:System.Web.UI.ServiceReference" /> 用来在页面中注册 Web 服务以供使用的控件。
+              </param>
+      <returns>
+              代理服务器脚本中。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.ScriptManagerDesigner.GetProxyUrl(System.Web.UI.ScriptManager,System.Web.UI.ServiceReference)">
+      <summary>
+              提供从派生的代理 URL <see cref="T:System.Web.UI.ServiceReference" /> 对象。
+            </summary>
+      <param name="scriptManager">
+                <see cref="T:System.Web.UI.ScriptManager" /> 页上的控件。
+              </param>
+      <param name="serviceReference">
+                <see cref="T:System.Web.UI.ServiceReference" /> 用来在页面中注册 Web 服务以供使用的控件。
+              </param>
+      <returns>
+              代理服务器 URL。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.ScriptManagerDesigner.GetScriptFromWebResource(System.Reflection.Assembly,System.String,System.Globalization.CultureInfo)">
+      <summary>
+              返回由定义的 ECMAScript (JavaScript) 代码 <see cref="T:System.Web.UI.ScriptResourceAttribute" /> 属性。
+            </summary>
+      <param name="assembly">
+                包含资源的程序集。
+              </param>
+      <param name="resourceName">
+                在程序集中资源的完全限定的名称。
+              </param>
+      <param name="culture">
+                为指定的资源的区域性。
+              </param>
+      <returns>
+              JavaScript 资源中。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.ScriptManagerDesigner.GetScriptReferences(System.Web.UI.ScriptManager,System.Collections.Generic.IEnumerable{System.Web.UI.ScriptManagerProxy})">
+      <summary>
+              返回的所有集合 <see cref="T:System.Web.UI.ScriptReference" /> 在网页中定义的控件 <see cref="T:System.Web.UI.ScriptManager" /> 控件和 <see cref="T:System.Web.UI.ScriptManagerProxy" /> 控件。
+            </summary>
+      <param name="scriptManager">
+                <see cref="T:System.Web.UI.ScriptManager" /> 与 Web 页关联的控件。
+              </param>
+      <param name="proxies">
+                集合 <see cref="T:System.Web.UI.ScriptManagerProxy" /> 与 Web 页关联的控件。
+              </param>
+      <returns>
+              只读集合 <see cref="T:System.Web.UI.ScriptReference" /> 控件。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="scriptManager" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Web.UI.Design.ScriptManagerDesigner.GetServiceReferences(System.Web.UI.ScriptManager,System.Collections.Generic.IEnumerable{System.Web.UI.ScriptManagerProxy})">
+      <summary>
+              返回的所有集合 <see cref="T:System.Web.UI.ServiceReference" /> 在网页中定义的控件 <see cref="T:System.Web.UI.ScriptManager" /> 控件和 <see cref="T:System.Web.UI.ScriptManagerProxy" /> 控件。
+            </summary>
+      <param name="scriptManager">
+                <see cref="T:System.Web.UI.ScriptManager" /> 与 Web 页关联的控件。
+              </param>
+      <param name="proxies">
+                集合 <see cref="T:System.Web.UI.ScriptManagerProxy" /> 与 Web 页关联的控件。
+              </param>
+      <returns>
+              只读集合 <see cref="T:System.Web.UI.ServiceReference" /> 控件。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  <paramref name="scriptManager" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Web.UI.Design.ScriptManagerDesigner.Initialize(System.ComponentModel.IComponent)">
+      <summary>
+              初始化指定的组件。
+            </summary>
+      <param name="component">
+                一个 <see cref="T:System.Web.UI.ScriptManager" /> 实现组件 <see cref="T:System.ComponentModel.IComponent" /> 接口。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.ScriptManagerProxyDesigner.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.ScriptManagerProxyDesigner" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.ScriptManagerProxyDesigner.GetDesignTimeHtml">
+      <summary>
+              返回 HTML 标记，表示 <see cref="T:System.Web.UI.ScriptManagerProxy" /> 控件在设计时。
+            </summary>
+      <returns>
+              一个字符串，包含用于呈现的标记 <see cref="T:System.Web.UI.ScriptManagerProxy" /> 在设计时。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.ScriptManagerProxyDesigner.Initialize(System.ComponentModel.IComponent)">
+      <summary>
+              初始化指定的组件。
+            </summary>
+      <param name="component">
+                一个 <see cref="T:System.Web.UI.ScriptManagerProxy" /> 实现组件 <see cref="T:System.ComponentModel.IComponent" /> 接口。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.ServiceReferenceCollectionEditor.#ctor(System.Type)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.UI.Design.ServiceReferenceCollectionEditor" /> 通过使用指定的集合类型的类。
+            </summary>
+      <param name="type">
+                若要编辑的集合的类型。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.ServiceReferenceCollectionEditor.CanSelectMultipleInstances">
+      <summary>
+              获取一个值，该值指示是否可以同时选择多个脚本引用实例。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果多个脚本引用实例可用于选择在同一时间;，否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.ServiceReferenceCollectionEditor.CreateNewItemTypes">
+      <summary>
+              获取集合编辑器可以创建的数据类型。
+            </summary>
+      <returns>
+              数据类型 <see cref="T:System.Web.UI.Design.ServiceReferenceCollectionEditor" /> 类可以创建。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.TimerDesigner.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.TimerDesigner" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.TimerDesigner.GetDesignTimeHtml">
+      <summary>
+              返回用于呈现关联的 HTML 标记 <see cref="T:System.Web.UI.Timer" /> 控件在设计时。
+            </summary>
+      <returns>
+              一个字符串，包含用于呈现的标记 <see cref="T:System.Web.UI.Timer" /> 控件在设计时。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdatePanelDesigner.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.UpdatePanelDesigner" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdatePanelDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)">
+      <summary>
+              返回用于显示的 HTML 标记 <see cref="T:System.Web.UI.UpdatePanel" /> 控件，并使用当前的控件设计器区域填充集合。
+            </summary>
+      <param name="regions">
+                关联控件控制设计器区域。
+              </param>
+      <returns>
+              包括所有控件设计器区域的关联控件设计时 HTML 标记。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdatePanelDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)">
+      <summary>
+              返回的设计时视图中可编辑区域的内容 <see cref="T:System.Web.UI.UpdatePanel" /> 控件。
+            </summary>
+      <param name="region">
+                要更新的区域。
+              </param>
+      <returns>
+              模板用于呈现关联的序列化的副本 <see cref="T:System.Web.UI.UpdatePanel" /> 控件在设计时。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdatePanelDesigner.Initialize(System.ComponentModel.IComponent)">
+      <summary>
+              初始化指定的组件。
+            </summary>
+      <param name="component">
+                <see cref="T:System.Web.UI.UpdatePanel" /> 实现组件 <see cref="T:System.ComponentModel.IComponent" /> 接口。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdatePanelDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)">
+      <summary>
+              指定的可编辑区域的内容 <see cref="T:System.Web.UI.UpdatePanel" /> 控件在设计时。
+            </summary>
+      <param name="sender">
+                要更新的区域。
+              </param>
+      <param name="ce">
+                用于关联控件的序列化的模板。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdatePanelDesigner.SetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)">
+      <summary>
+              时调用此方法关联 <see cref="T:System.Web.UI.UpdatePanel" /> 控制的更改。
+            </summary>
+      <param name="region">
+                事件源。
+              </param>
+      <param name="content">
+                事件数据。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor.#ctor(System.Type)">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor" /> 类的新实例。
+            </summary>
+      <param name="type">
+                要编辑的触发器类型。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor.CanSelectMultipleInstances">
+      <summary>
+              获取一个值，该值指示是否可以同时选择多个触发器。
+            </summary>
+      <returns>
+              总是为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor.CreateCollectionItemType">
+      <summary>
+              获取此集合编辑的数据类型。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Web.UI.UpdatePanelTrigger" /> 对象。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor.CreateNewItemTypes">
+      <summary>
+              获取集合编辑器可以创建多个数据类型。
+            </summary>
+      <returns>
+              数组的数据类型的 <see cref="T:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor" /> 可以创建。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+      <summary>
+              通过使用指定的服务提供程序和上下文中编辑指定对象的值。
+            </summary>
+      <param name="context">
+                <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> 提供其他上下文信息的对象。
+              </param>
+      <param name="provider">
+                提供编辑服务的服务提供程序对象。
+              </param>
+      <param name="value">
+                将编辑其值的对象。
+              </param>
+      <returns>
+              对象的新值。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdateProgressAssociatedUpdatePanelIDConverter.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.UpdateProgressAssociatedUpdatePanelIDConverter" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdateProgressAssociatedUpdatePanelIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              从指定格式上下文的 <see cref="T:System.ComponentModel.Design.IDesignerHost" /> 对象内的容器中返回控件 ID 的集合。
+            </summary>
+      <param name="context">
+                一个上下文，可用于获取有关从中调用此转换器的环境的详细信息。
+                 此参数及其属性可以是 <see langword="null" />。
+              </param>
+      <returns>
+              表示当前容器中控件的控件 ID 的字符串集合。
+               如果容器中当前没有控件，则该方法返回一个空集合。
+               如果上下文为 <see langword="null" /> 或如果没有当前容器，则该方法返回 <see langword="null" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdateProgressAssociatedUpdatePanelIDConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              返回一个值，该值指示是否标准值集合，则返回从 <see cref="M:System.Web.UI.Design.UpdateProgressAssociatedUpdatePanelIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> 是可能的值用于指定上下文的独占列表。
+            </summary>
+      <param name="context">
+                格式上下文中。
+              </param>
+      <returns>
+              <see langword="true" /> 如果 <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> 从返回 <see cref="M:System.Web.UI.Design.UpdateProgressAssociatedUpdatePanelIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> 可能的值; 为独占列表 <see langword="false" /> 如果还可能有其他值。
+               默认值为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdateProgressAssociatedUpdatePanelIDConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              返回一个值，该值指示此转换器是否支持可从列表中选择的一组控件 ID 值。
+            </summary>
+      <param name="context">
+                格式上下文。
+              </param>
+      <returns>
+              如果应调用 <see cref="M:System.Web.UI.Design.UpdateProgressAssociatedUpdatePanelIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> 来查找对象支持的一组公共控件 ID 值，则为 <see langword="true" />；否则为 <see langword="false" />。
+               默认值为 <see langword="true" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdateProgressDesigner.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.UpdateProgressDesigner" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdateProgressDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)">
+      <summary>
+              返回要显示的 HTML 标记 <see cref="T:System.Web.UI.UpdateProgress" /> 控制并填充具有当前控件设计器区域的集合。
+            </summary>
+      <param name="regions">
+                一个对象，包含控件的关联控件设计器区域。
+              </param>
+      <returns>
+              包括所有控件设计器区域的关联控件设计时 HTML 标记。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdateProgressDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)">
+      <summary>
+              返回的设计时视图中可编辑区域的内容 <see cref="T:System.Web.UI.UpdateProgress" /> 控件。
+            </summary>
+      <param name="region">
+                <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> 对象要获取其内容。
+              </param>
+      <returns>
+              模板用于呈现关联的序列化的副本 <see cref="T:System.Web.UI.UpdatePanel" /> 控件在设计时。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.UpdateProgressDesigner.SetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)">
+      <summary>
+              在设计时指定该控件的可编辑区域的内容。
+            </summary>
+      <param name="region">
+                一个对象，提供要更新的区域的名称。
+              </param>
+      <param name="content">
+                用于关联控件的序列化的模板。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.DataPagerDesigner.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.WebControls.DataPagerDesigner" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.DataPagerDesigner.GetDesignTimeHtml">
+      <summary>
+              生成用于呈现关联的 HTML 标记 <see cref="T:System.Web.UI.WebControls.DataPager" /> 控件在设计时。
+            </summary>
+      <returns>
+              用于呈现关联的 HTML 标记 <see cref="T:System.Web.UI.WebControls.DataPager" /> 控件在设计时。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.DataPagerDesigner.GetEmptyDesignTimeHtml">
+      <summary>
+              生成 HTML 标记，表示 <see cref="T:System.Web.UI.WebControls.DataPager" /> 控件在设计时，在运行时没有可视化表示形式。
+            </summary>
+      <returns>
+              表示一个空的 HTML 标记 <see cref="T:System.Web.UI.WebControls.DataPager" /> 控件在设计时。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.DataPagerDesigner.Initialize(System.ComponentModel.IComponent)">
+      <summary>
+              初始化控件设计器，并加载指定的控件。
+            </summary>
+      <param name="component">
+                正在设计的控件。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties(System.Collections.IDictionary)">
+      <summary>
+              添加或移除属性的属性网格中 <see cref="T:System.Web.UI.WebControls.DataPager" /> 控件。
+            </summary>
+      <param name="properties">
+                包含在属性网格中公开的属性的集合 <see cref="T:System.Web.UI.WebControls.DataPager" /> 控件在设计时。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.DataPagerFieldTypeEditor.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.WebControls.DataPagerFieldTypeEditor" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.DataPagerFieldTypeEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+      <summary>
+              通过使用所指示的样式显示可视化编辑器 <see cref="Overload:System.Web.UI.Design.WebControls.DataPagerFieldTypeEditor.GetEditStyle" /> 方法来更新 <see cref="P:System.Web.UI.WebControls.DataPager.Fields" /> 属性。
+            </summary>
+      <param name="context">
+                有关设计环境的上下文信息。
+              </param>
+      <param name="provider">
+                对关联的设计器的引用。
+              </param>
+      <param name="value">
+                要编辑的对象。
+              </param>
+      <returns>
+              对象的新值。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.DataPagerFieldTypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+      <summary>
+              获取编辑器将使用的样式。
+            </summary>
+      <param name="context">
+                有关设计环境的上下文信息。
+              </param>
+      <returns>
+              一个枚举值，该值指示的编辑器将使用的样式的类型。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.WebControls.LinqDataSourceDesigner" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Configure">
+      <summary>
+              启动设计宿主中的数据源配置向导。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.GetView(System.String)">
+      <summary>
+              返回具有指定的名称的数据源视图。
+            </summary>
+      <param name="viewName">
+                要返回的视图的名称。
+              </param>
+      <returns>
+              其名称由指定的对象 <paramref name="viewName" />; 否则为 <see langword="null" />。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.GetViewNames">
+      <summary>
+              获取可用视图的列表。
+            </summary>
+      <returns>
+              具有包含"默认视图"的名称的一个元素的集合。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Initialize(System.ComponentModel.IComponent)">
+      <summary>
+              初始化控件设计器，并加载指定的组件。
+            </summary>
+      <param name="component">
+                要初始化的对象。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.PreFilterProperties(System.Collections.IDictionary)">
+      <summary>
+              由设计器用于将属性添加或删除在属性网格中的属性。
+            </summary>
+      <param name="properties">
+                要筛选的属性。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.RefreshSchema(System.Boolean)">
+      <summary>
+              从基础数据源刷新架构。
+            </summary>
+      <param name="preferSilent">
+                <see langword="true" /> 若要取消所有数据源事件，直到架构进行刷新。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.#ctor(System.Web.UI.Design.WebControls.LinqDataSourceDesigner)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView" /> 具有提供的数据源设计器和视图名称的类。
+            </summary>
+      <param name="owner">
+                父 <see cref="T:System.Web.UI.Design.WebControls.LinqDataSourceDesigner" /> 对象。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.GetDesignTimeData(System.Int32,System.Boolean@)">
+      <summary>
+              获取与关联的数据源控件的架构匹配使用指定的行数的设计时数据。
+               返回一个值，该值指示数据是示例数据还是真实的数据。
+            </summary>
+      <param name="minimumRows">
+                要返回的最小行数。
+              </param>
+      <param name="isSampleData">
+                若要指示返回的数据是示例数据，则为 <see langword="true" />；若要指示返回的数据是实时数据，则为 <see langword="false" />。
+              </param>
+      <returns>
+              要在设计时显示的数据。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.ListViewDesigner.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.UI.Design.WebControls.ListViewDesigner" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.ListViewDesigner.GetDesignTimeHtml">
+      <summary>
+              生成用于呈现关联的 HTML 标记 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件在设计时。
+            </summary>
+      <returns>
+              用于呈现关联的 HTML 标记 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件在设计时。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.ListViewDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)">
+      <summary>
+              生成用于呈现关联的 HTML 标记 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件在设计时，并填充当前所选的设计器区域与指定的集合。
+            </summary>
+      <param name="regions">
+                为关联的设计器区域的集合 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件。
+              </param>
+      <returns>
+              用于呈现关联的 HTML 标记 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件在设计时。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.ListViewDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)">
+      <summary>
+              返回指定的可编辑区域的关联的设计时视图的内容 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件。
+            </summary>
+      <param name="region">
+                要获取的内容的区域。
+              </param>
+      <returns>
+              该区域 HTML 标记。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.ListViewDesigner.GetEmptyDesignTimeHtml">
+      <summary>
+              生成 HTML 标记，表示 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件在设计时，在运行时没有可视化表示形式。
+            </summary>
+      <returns>
+              表示的 HTML 标记 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件在设计时。
+            </returns>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.ListViewDesigner.Initialize(System.ComponentModel.IComponent)">
+      <summary>
+              初始化控件设计器，并加载指定的控件。
+            </summary>
+      <param name="component">
+                正在设计中的控件。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.ListViewDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)">
+      <summary>
+              当关联的控件更改时发生。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="ce">
+                事件数据。
+              </param>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.ListViewDesigner.OnSchemaRefreshed">
+      <summary>
+              可防止 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件更新时在 HTML 设计器中刷新数据源架构。
+            </summary>
+    </member>
+    <member name="M:System.Web.UI.Design.WebControls.ListViewDesigner.SetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)">
+      <summary>
+              指定的可编辑区域的内容 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件在设计时。
+            </summary>
+      <param name="region">
+                中包含的可编辑的设计区域 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件。
+              </param>
+      <param name="content">
+                要为可编辑的设计区域分配的内容。
+              </param>
+    </member>
+    <member name="P:System.Web.UI.Design.ExtenderControlDesigner.Visible">
+      <summary>
+              获取一个值，该值指示是否当前控件显示在设计图面上以便可以选择它，可以编辑其属性。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果显示当前的控件;否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.UpdatePanelDesigner.UsePreviewControl">
+      <summary>
+              获取一个值，该值指示设计器是否应使用的临时副本 <see cref="T:System.Web.UI.UpdatePanel" /> 控件来生成设计时标记，而不是使用与设计器关联的实际控件。
+            </summary>
+      <returns>
+              总是为 <see langword="true" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.UpdateProgressDesigner.UsePreviewControl">
+      <summary>
+              获取一个值，该值指示是否在设计器应使用临时副本而不是与设计器关联的实际控件来生成设计时标记。
+            </summary>
+      <returns>
+              总是为 <see langword="true" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.DataPagerDesigner.ActionLists">
+      <summary>
+              获取用于创建为关联的智能标记面板的项的列表 <see cref="T:System.Web.UI.WebControls.DataPager" /> 控件。
+            </summary>
+      <returns>
+              用于创建为关联的智能标记面板的项的列表 <see cref="T:System.Web.UI.WebControls.DataPager" /> 控件。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.DataPagerDesigner.PagedControlID">
+      <summary>
+              获取或设置一个值的设计器版本 <see cref="P:System.Web.UI.WebControls.DataPager.PagedControlID" /> 属性。
+            </summary>
+      <returns>
+              <see cref="P:System.Web.UI.WebControls.DataPager.PagedControlID" /> 属性的值。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.DataPagerDesigner.TemplateGroups">
+      <summary>
+              获取用于关联的模板化页导航字段的模板组集合 <see cref="T:System.Web.UI.WebControls.DataPager" /> 控件。
+            </summary>
+      <returns>
+              模板化页导航字段关联的模板组集合 <see cref="T:System.Web.UI.WebControls.DataPager" /> 控件。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.DataPagerDesigner.UsePreviewControl">
+      <summary>
+              获取一个值，该值指示是否在设计器应使用临时副本，而不是实际 <see cref="T:System.Web.UI.WebControls.DataPager" /> 以便生成的设计时标记与设计器关联的控件。
+            </summary>
+      <returns>
+              在所有情况下均为 <see langword="true" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.ActionLists">
+      <summary>
+              获取用于在设计时创建操作列表菜单项的列表。
+            </summary>
+      <returns>
+              一个包含操作列表项的集合。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.CanConfigure">
+      <summary>
+              获取一个值，该值指示是否 <see cref="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Configure" /> 设计宿主可以调用方法。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果 <see cref="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Configure" /> 方法可以调用; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.CanRefreshSchema">
+      <summary>
+              获取一个值，该值指示是否 <see cref="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.RefreshSchema(System.Boolean)" /> 设计宿主可以调用方法。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果 <see cref="M:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.RefreshSchema(System.Boolean)" /> 方法可以调用; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.ContextTypeName">
+      <summary>
+              获取或设置包含其值仅具有您想要检索的数据的属性的类型的名称。
+            </summary>
+      <returns>
+              要从中检索数据的类的名称。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Delete">
+      <summary>
+              获取或设置删除操作的一个值。
+            </summary>
+      <returns>
+              <see langword="null" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.EnableDelete">
+      <summary>
+              获取或设置一个值，该值指示是否可以在运行时从数据源中删除行。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果对关联的用户启用删除操作 <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> 实例; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.EnableInsert">
+      <summary>
+              获取或设置一个值，该值指示是否可以在运行时在数据源中插入行。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果对关联的用户启用插入操作 <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> 实例; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.EnableUpdate">
+      <summary>
+              获取或设置一个值，该值指示是否可以在运行时中更新数据源中的行。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果对关联的用户启用更新操作 <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> 实例; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.GroupBy">
+      <summary>
+              获取或设置 Group By 子句在创建时使用的值。
+            </summary>
+      <returns>
+              一个字符串，包含用于对数据进行分组的属性。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Insert">
+      <summary>
+              获取或设置删除操作的一个值。
+            </summary>
+      <returns>
+              <see langword="null" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.OrderBy">
+      <summary>
+              获取或设置 Order By 子句在创建时使用的值。
+            </summary>
+      <returns>
+              一个字符串，包含用于对数据进行排序的属性。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.OrderGroupsBy">
+      <summary>
+              获取或设置在创建组 Order By 子句时使用的值。
+            </summary>
+      <returns>
+              一个字符串，包含用于对分组的数据进行排序的属性。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Select">
+      <summary>
+              获取或设置字符串，其中包含用于选择操作的值。
+            </summary>
+      <returns>
+              一个字符串，在 Select 子句为其创建时使用。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.ServiceProvider">
+      <summary>
+              获取与之关联的服务提供程序 <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> 实例。
+            </summary>
+      <returns>
+              一个表示服务提供程序的对象。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.TableName">
+      <summary>
+              获取或设置 <see cref="P:System.Web.UI.WebControls.LinqDataSource.TableName" /> 属性 <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> 实例。
+            </summary>
+      <returns>
+              包含的数据类的名称。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Update">
+      <summary>
+              获取更新操作的值。
+            </summary>
+      <returns>
+              <see langword="null" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDataSourceDesigner.Where">
+      <summary>
+              获取或设置 <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> 控件的 <see cref="P:System.Web.UI.WebControls.LinqDataSource.Where" /> 属性。
+            </summary>
+      <returns>
+              <see cref="P:System.Web.UI.WebControls.LinqDataSource.Where" /> 属性的值。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.CanDelete">
+      <summary>
+              获取一个值，该值指示是否 <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> 对象，该程序与当前对象 <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> 控件支持 <see cref="M:System.Web.UI.DataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" /> 方法。
+            </summary>
+      <returns>
+              如果 <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" /> 方法受支持，则为 <see langword="true" />；否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.CanInsert">
+      <summary>
+              获取一个值，该值指示是否 <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> 对象，该程序与当前对象 <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> 控件支持 <see cref="M:System.Web.UI.DataSourceView.ExecuteInsert(System.Collections.IDictionary)" /> 方法。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果 <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteInsert(System.Collections.IDictionary)" /> 方法是受支持; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.CanPage">
+      <summary>
+              获取一个值，该值指示是否 <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> 对象，该程序与当前对象 <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> 控件支持的数据检索到的分页 <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" /> 方法。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果将检索的数据进行分页 <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" /> 方法是受支持; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.CanSort">
+      <summary>
+              获取一个值，该值指示是否 <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> 对象，该程序与当前对象 <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> 控件支持的基础数据源的排序的视图。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果支持基础数据源的排序的视图;否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.CanUpdate">
+      <summary>
+              获取一个值，该值指示是否 <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> 对象，该程序与当前对象 <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> 控件支持 <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" /> 方法。
+            </summary>
+      <returns>
+              如果 <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" /> 方法受支持，则为 <see langword="true" />；否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.IsDataContext">
+      <summary>
+              获取一个值，该值指示是否 <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.ContextType" /> 属性包含一个对象，派生自 <see cref="T:System.Data.Linq.DataContext" />。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果在对象 <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.ContextType" /> 属性派生自 <see cref="T:System.Data.Linq.DataContext" />; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.IsTableTypeTable">
+      <summary>
+              获取一个值，该值指示是否 <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.TableName" /> 属性将返回 <see cref="T:System.Data.Linq.Table`1" /> 类型。
+            </summary>
+      <returns>
+              <see langword="true" /> 如果 <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.TableName" /> 属性将返回 <see cref="T:System.Data.Linq.Table`1" /> 类型; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.Schema">
+      <summary>
+              获取描述当前的视图对象表示的数据源视图的架构。
+            </summary>
+      <returns>
+              一个对象，表示该架构。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.ListViewDesigner.ActionLists">
+      <summary>
+              获取的项的列表用于创建一个用于显示智能标记面板 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件。
+            </summary>
+      <returns>
+              <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> 与此设计器关联的对象。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.ListViewDesigner.SampleRowCount">
+      <summary>
+              获取的记录数 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件将显示在设计图面上。
+            </summary>
+      <returns>
+              记录的数目 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件将显示在设计图面上。
+            </returns>
+    </member>
+    <member name="P:System.Web.UI.Design.WebControls.ListViewDesigner.UsePreviewControl">
+      <summary>
+              获取一个值，该值指示是否在设计器应使用临时副本，而不是实际 <see cref="T:System.Web.UI.WebControls.ListView" /> 以便生成的设计时标记与设计器关联的控件。
+            </summary>
+      <returns>
+              在所有情况下均为 <see langword="true" />。
+            </returns>
+    </member>
+    <member name="T:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter">
+      <summary>
+              提供检索当前容器中控件 Id 的列表的类型转换器。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.AsyncPostBackTriggerEventNameConverter">
+      <summary>
+              提供检索当前容器中控件的事件列表的类型转换器。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.CollectionEditorBase">
+      <summary>
+              提供一个用户界面，以便用户可以编辑 <see cref="T:System.Web.UI.ScriptReferenceCollection" />, ，<see cref="T:System.Web.UI.ServiceReferenceCollection" />, ，和 <see cref="T:System.Web.UI.UpdatePanelTriggerCollection" /> 在设计时对象。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.ExtenderControlDesigner">
+      <summary>
+              提供在设计时与扩展程序控件配合使用的 UI 支持。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.ExtenderControlToolboxItem">
+      <summary>
+              提供确定哪些目标控件可以通过工具箱中的特定扩展程序控件进行扩展的方法。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.PostBackTriggerControlIDConverter">
+      <summary>
+              提供检索当前容器中控件 Id 的列表的类型转换器。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.QueryExtenderDesigner">
+      <summary>
+              为 <see cref="T:System.Web.UI.WebControls.QueryExtender" /> 控件提供设计器功能。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.ScriptManagerDesigner">
+      <summary>
+              在可视化设计器中为 <see cref="T:System.Web.UI.ScriptManager" /> 控件提供设计时支持。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.ScriptManagerProxyDesigner">
+      <summary>
+              在可视化设计器中为 <see cref="T:System.Web.UI.ScriptManagerProxy" /> 控件提供设计时支持。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.ServiceReferenceCollectionEditor">
+      <summary>
+              提供的服务引用集合的组件编辑器 <see cref="T:System.Web.UI.ServiceReference" /> 控件。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.TimerDesigner">
+      <summary>
+              在可视化设计器中为 <see cref="T:System.Web.UI.Timer" /> 控件提供设计时支持。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.UpdatePanelDesigner">
+      <summary>
+              在可视化设计器中为 <see cref="T:System.Web.UI.UpdatePanel" /> 控件提供设计时支持。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.UpdatePanelTriggerCollectionEditor">
+      <summary>
+              提供有关组件编辑器 <see cref="P:System.Web.UI.UpdatePanel.Triggers" /> 集合 <see cref="T:System.Web.UI.UpdatePanel" /> 控件。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.UpdateProgressAssociatedUpdatePanelIDConverter">
+      <summary>
+              提供检索当前容器中控件 Id 的列表的类型转换器。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.UpdateProgressDesigner">
+      <summary>
+              在可视化设计器中为 <see cref="T:System.Web.UI.UpdateProgress" /> 控件提供设计时支持。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.WebControls.DataPagerDesigner">
+      <summary>
+              在可视化设计器中为 <see cref="T:System.Web.UI.WebControls.DataPager" /> 控件提供设计时支持。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.WebControls.DataPagerFieldTypeEditor">
+      <summary>
+              提供可视化编辑器 <see cref="T:System.Web.UI.WebControls.DataPager" /> 字段。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.WebControls.LinqDataSourceDesigner">
+      <summary>
+              在可视化设计器中为 <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> 控件提供设计时支持。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView">
+      <summary>
+              提供设计时视图的数据的 <see cref="T:System.Web.UI.Design.WebControls.LinqDataSourceDesigner" /> 类。
+            </summary>
+    </member>
+    <member name="T:System.Web.UI.Design.WebControls.ListViewDesigner">
+      <summary>
+              在可视化设计器中为 <see cref="T:System.Web.UI.WebControls.ListView" /> 控件提供设计时支持。
+            </summary>
+    </member>
+  </members>
+</doc>

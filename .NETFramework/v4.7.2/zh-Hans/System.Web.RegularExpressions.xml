@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.RegularExpressions</name>
+  </assembly>
+  <members>
+    <member name="M:System.Web.RegularExpressions.AspCodeRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.AspCodeRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.AspCodeRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.AspCodeRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.AspEncodedExprRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.AspEncodedExprRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.AspEncodedExprRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.AspEncodedExprRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.AspExprRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.AspExprRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.AspExprRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.AspExprRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.CommentRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.CommentRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.CommentRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.CommentRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.DatabindExprRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.DatabindExprRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.DatabindExprRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.DatabindExprRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.DataBindRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.DataBindRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.DataBindRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.DataBindRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.DirectiveRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.DirectiveRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.DirectiveRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.DirectiveRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.EndTagRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.EndTagRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.EndTagRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.EndTagRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.GTRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.GTRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.GTRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.GTRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.IncludeRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.IncludeRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.IncludeRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.IncludeRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.LTRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.LTRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.LTRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.LTRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.RunatServerRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.RunatServerRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.RunatServerRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.RunatServerRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.ServerTagsRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.ServerTagsRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.ServerTagsRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.ServerTagsRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.SimpleDirectiveRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.SimpleDirectiveRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.SimpleDirectiveRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.SimpleDirectiveRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.TagRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.TagRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.TagRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.TagRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.TagRegex35.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.TagRegex35" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.TagRegex35.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.TagRegex35" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="M:System.Web.RegularExpressions.TextRegex.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Web.RegularExpressions.TextRegex" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.TextRegex.#ctor(System.TimeSpan)">
+      <summary>
+              新实例初始化 <see cref="T:System.Web.RegularExpressions.TextRegex" /> 类，具有指定的超时值。
+            </summary>
+      <param name="A_1">
+                超时间隔，或 <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> 如果匹配操作不应超时。
+              </param>
+    </member>
+    <member name="T:System.Web.RegularExpressions.AspCodeRegex">
+      <summary>
+              提供用于分析 ASP.NET 代码块的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.AspEncodedExprRegex">
+      <summary>
+              提供用于分析已编码的 ASP.NET 表达式块的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.AspExprRegex">
+      <summary>
+              提供用于分析 ASP.NET 表达式块的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.CommentRegex">
+      <summary>
+              提供用于分析 ASP.NET 注释块的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.DatabindExprRegex">
+      <summary>
+              提供用于分析的 ASP.NET 数据绑定表达式的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.DataBindRegex">
+      <summary>
+              提供用于分析 ASP.NET 数据绑定表达式的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.DirectiveRegex">
+      <summary>
+              提供用于分析一个 ASP.NET 指令的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.EndTagRegex">
+      <summary>
+              提供用于分析的 HTML 元素、 一个 XML 元素或 ASP.NET web 服务器控件标记的结束标记的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.GTRegex">
+      <summary>
+              提供在 ASP.NET web 页面中的大于号 (&gt;) 字符相匹配的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.IncludeRegex">
+      <summary>
+              提供了正则表达式来分析 ASP.NET <see langword="#include" /> 指令。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.LTRegex">
+      <summary>
+              提供用于查找小于 (&lt;) 字符在 ASP.NET web 页面中的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.RunatServerRegex">
+      <summary>
+              提供了正则表达式来分析 ASP.NET <see langword="runat" /> 属性。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.ServerTagsRegex">
+      <summary>
+              提供用于分析 ASP.NET 服务器标记的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.SimpleDirectiveRegex">
+      <summary>
+              提供用于分析 ASP.NET 数据指令的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.TagRegex">
+      <summary>
+              提供用于分析的 HTML 元素、 一个 XML 元素或 ASP.NET Web 服务器控件标记的开始标记的正则表达式。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.TagRegex35">
+      <summary>
+              提供用于分析的 HTML 元素、 一个 XML 元素或 ASP.NET Web 服务器控件标记中，为目标的应用程序的开始标记的正则表达式 .NET Framework 3.5 SP1 及更早版本。
+            </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.TextRegex">
+      <summary>
+              提供用于匹配的所有字符，直到出现下一个小于 (&lt;) 字符的正则表达式。
+            </summary>
+    </member>
+  </members>
+</doc>
