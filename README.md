@@ -2,7 +2,7 @@
 
 ## .NET Framework
 
-### Enable Enable .NET Framework 2.0 and .NET Framework 3.5 in Windows 10 / 11
+### Enable .NET Framework 2.0 and .NET Framework 3.5 in Windows 10 / 11
 
 ![install-framework-3 5](https://github.com/lzcapp/.NET-Environment/assets/12462465/555cc0e6-b142-4c4b-acb1-716ecc454ae6)
 
