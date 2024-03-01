@@ -1955,29 +1955,29 @@
     <member name="T:System.Xaml.XamlNodeType">
       <summary>Describes the type of the node that is currently being processed by a XAML reader.</summary>
     </member>
-    <member name="F:System.Xaml.XamlNodeType.None">
-      <summary>The reader is not positioned at a true node (for example, the reader might be at end-of-file).</summary>
-    </member>
-    <member name="F:System.Xaml.XamlNodeType.StartObject">
-      <summary>The reader is at the start of an object node.</summary>
-    </member>
-    <member name="F:System.Xaml.XamlNodeType.GetObject">
-      <summary>The reader is within an object node and writing a default or implicit value, instead of being a specified object value.</summary>
+    <member name="F:System.Xaml.XamlNodeType.EndMember">
+      <summary>The reader is at the end of a member node.</summary>
     </member>
     <member name="F:System.Xaml.XamlNodeType.EndObject">
       <summary>The reader is at the end of an object node.</summary>
     </member>
-    <member name="F:System.Xaml.XamlNodeType.StartMember">
-      <summary>The reader is at the start of a member node.</summary>
-    </member>
-    <member name="F:System.Xaml.XamlNodeType.EndMember">
-      <summary>The reader is at the end of a member node.</summary>
-    </member>
-    <member name="F:System.Xaml.XamlNodeType.Value">
-      <summary>The reader is within a node and processing a value.</summary>
+    <member name="F:System.Xaml.XamlNodeType.GetObject">
+      <summary>The reader is within an object node and writing a default or implicit value, instead of being a specified object value.</summary>
     </member>
     <member name="F:System.Xaml.XamlNodeType.NamespaceDeclaration">
       <summary>The reader is within an XML namespace declaration.</summary>
+    </member>
+    <member name="F:System.Xaml.XamlNodeType.None">
+      <summary>The reader is not positioned at a true node (for example, the reader might be at end-of-file).</summary>
+    </member>
+    <member name="F:System.Xaml.XamlNodeType.StartMember">
+      <summary>The reader is at the start of a member node.</summary>
+    </member>
+    <member name="F:System.Xaml.XamlNodeType.StartObject">
+      <summary>The reader is at the start of an object node.</summary>
+    </member>
+    <member name="F:System.Xaml.XamlNodeType.Value">
+      <summary>The reader is within a node and processing a value.</summary>
     </member>
     <member name="T:System.Xaml.XamlObjectEventArgs">
       <summary>Provides data for callbacks that can be inserted in the sequence for object initialization and property setting. This influences the object graph that is produced by <see cref="T:System.Xaml.XamlObjectWriter" />.</summary>
@@ -1988,10 +1988,13 @@
       <exception cref="T:System.ArgumentNullException">
         <paramref name="instance" /> is null.</exception>
     </member>
+    <member name="P:System.Xaml.XamlObjectEventArgs.ElementLineNumber"></member>
+    <member name="P:System.Xaml.XamlObjectEventArgs.ElementLinePosition"></member>
     <member name="P:System.Xaml.XamlObjectEventArgs.Instance">
       <summary>Gets the object instance that is relevant to the event data.</summary>
       <returns>The object instance that is relevant to the event data.</returns>
     </member>
+    <member name="P:System.Xaml.XamlObjectEventArgs.SourceBamlUri"></member>
     <member name="T:System.Xaml.XamlObjectReader">
       <summary>Provides a <see cref="T:System.Xaml.XamlReader" /> implementation that reads object graphs and generates a XAML node stream.</summary>
     </member>
@@ -3525,8 +3528,8 @@
     <member name="T:System.Xaml.Schema.AllowedMemberLocations">
       <summary>Specifies the syntax restrictions enforced on a property when it is set in XAML, as reported by a <see cref="T:System.Xaml.XamlDirective" />.</summary>
     </member>
-    <member name="F:System.Xaml.Schema.AllowedMemberLocations.None">
-      <summary>Property cannot be set in XAML at all. This is the default.</summary>
+    <member name="F:System.Xaml.Schema.AllowedMemberLocations.Any">
+      <summary>Property can be set in either <see cref="F:System.Xaml.Schema.AllowedMemberLocations.Attribute" /> or <see cref="F:System.Xaml.Schema.AllowedMemberLocations.MemberElement" /> location. (This enumeration member is defined as the combination of those values.)</summary>
     </member>
     <member name="F:System.Xaml.Schema.AllowedMemberLocations.Attribute">
       <summary>Property can be set in XAML attribute syntax.</summary>
@@ -3534,8 +3537,8 @@
     <member name="F:System.Xaml.Schema.AllowedMemberLocations.MemberElement">
       <summary>Property can be set in XAML property element syntax.</summary>
     </member>
-    <member name="F:System.Xaml.Schema.AllowedMemberLocations.Any">
-      <summary>Property can be set in either <see cref="F:System.Xaml.Schema.AllowedMemberLocations.Attribute" /> or <see cref="F:System.Xaml.Schema.AllowedMemberLocations.MemberElement" /> location. (This enumeration member is defined as the combination of those values.)</summary>
+    <member name="F:System.Xaml.Schema.AllowedMemberLocations.None">
+      <summary>Property cannot be set in XAML at all. This is the default.</summary>
     </member>
     <member name="T:System.Xaml.Schema.ShouldSerializeResult">
       <summary>Defines serialization behavior as reported by a <see cref="T:System.Xaml.Schema.XamlMemberInvoker" />.</summary>
@@ -3543,17 +3546,17 @@
     <member name="F:System.Xaml.Schema.ShouldSerializeResult.Default">
       <summary>Unknown, defer to the type of the member.</summary>
     </member>
-    <member name="F:System.Xaml.Schema.ShouldSerializeResult.True">
-      <summary>Serialize the result.</summary>
-    </member>
     <member name="F:System.Xaml.Schema.ShouldSerializeResult.False">
       <summary>Do not serialize the result.</summary>
+    </member>
+    <member name="F:System.Xaml.Schema.ShouldSerializeResult.True">
+      <summary>Serialize the result.</summary>
     </member>
     <member name="T:System.Xaml.Schema.XamlCollectionKind">
       <summary>Describes the collection metaphor (if any) used by a XAML member.</summary>
     </member>
-    <member name="F:System.Xaml.Schema.XamlCollectionKind.None">
-      <summary>XAML member does not support a collection.</summary>
+    <member name="F:System.Xaml.Schema.XamlCollectionKind.Array">
+      <summary>XAML member supports an array collection.</summary>
     </member>
     <member name="F:System.Xaml.Schema.XamlCollectionKind.Collection">
       <summary>XAML member supports a list or a collection.</summary>
@@ -3561,8 +3564,8 @@
     <member name="F:System.Xaml.Schema.XamlCollectionKind.Dictionary">
       <summary>XAML member supports a dictionary (key-value pairs).</summary>
     </member>
-    <member name="F:System.Xaml.Schema.XamlCollectionKind.Array">
-      <summary>XAML member supports an array collection.</summary>
+    <member name="F:System.Xaml.Schema.XamlCollectionKind.None">
+      <summary>XAML member does not support a collection.</summary>
     </member>
     <member name="T:System.Xaml.Schema.XamlMemberInvoker">
       <summary>Provides an extension point that can access member characteristics of a XAML member through techniques other than reflection.</summary>

@@ -631,29 +631,26 @@
     <member name="T:System.Windows.Automation.Provider.NavigateDirection">
       <summary>Contains values used to specify the direction of navigation within the UI Automation tree.</summary>
     </member>
-    <member name="F:System.Windows.Automation.Provider.NavigateDirection.Parent">
-      <summary>The navigation direction is toward the parent.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Provider.NavigateDirection.NextSibling">
-      <summary>The navigation direction is to the next sibling. </summary>
-    </member>
-    <member name="F:System.Windows.Automation.Provider.NavigateDirection.PreviousSibling">
-      <summary>The navigation direction is to the previous sibling. </summary>
-    </member>
     <member name="F:System.Windows.Automation.Provider.NavigateDirection.FirstChild">
       <summary>The navigation direction is to the first child. </summary>
     </member>
     <member name="F:System.Windows.Automation.Provider.NavigateDirection.LastChild">
       <summary>The navigation direction is to the last child. </summary>
     </member>
+    <member name="F:System.Windows.Automation.Provider.NavigateDirection.NextSibling">
+      <summary>The navigation direction is to the next sibling. </summary>
+    </member>
+    <member name="F:System.Windows.Automation.Provider.NavigateDirection.Parent">
+      <summary>The navigation direction is toward the parent.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Provider.NavigateDirection.PreviousSibling">
+      <summary>The navigation direction is to the previous sibling. </summary>
+    </member>
     <member name="T:System.Windows.Automation.Provider.ProviderOptions">
       <summary>Contains values that specify the type of UI Automation provider. </summary>
     </member>
     <member name="F:System.Windows.Automation.Provider.ProviderOptions.ClientSideProvider">
       <summary>The UI Automation provider is a client-side provider. </summary>
-    </member>
-    <member name="F:System.Windows.Automation.Provider.ProviderOptions.ServerSideProvider">
-      <summary>The UI Automation provider is a server-side provider. </summary>
     </member>
     <member name="F:System.Windows.Automation.Provider.ProviderOptions.NonClientAreaProvider">
       <summary>The UI Automation provider is a non-client-area provider. </summary>
@@ -663,6 +660,9 @@
     </member>
     <member name="F:System.Windows.Automation.Provider.ProviderOptions.ProviderOwnsSetFocus">
       <summary>The UI Automation provider handles its own focus, and does not want UI Automation to set focus to the nearest window on its behalf when <see cref="M:System.Windows.Automation.AutomationElement.SetFocus" /> is called. This option is typically used by providers for windows that appear to take focus without actually receiving Win32 focus, such as menus and drop-down menus.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Provider.ProviderOptions.ServerSideProvider">
+      <summary>The UI Automation provider is a server-side provider. </summary>
     </member>
     <member name="F:System.Windows.Automation.Provider.ProviderOptions.UseComThreading">
       <summary>The UI Automation provider expects to be called according to COM threading rules. If the provider is in a Single-Threaded Apartment, it will be called only on the apartment thread. Only Server-side providers can use this option.</summary>

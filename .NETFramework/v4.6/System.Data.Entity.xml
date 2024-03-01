@@ -10711,7 +10711,7 @@
     </member>
     <member name="P:System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.TargetRoleName">
       <summary>Gets the role name at the other end of the relationship.</summary>
-      <returns>The target role name is specified by the Role attribute of the other End element in the association that defines this relationship in the conceptual model. For more information, see Association Element (CSDL).</returns>
+      <returns>The target role name is specified by the Role attribute of the other End element in the association that defines this relationship in the conceptual model. For more information, see Association (EDM).</returns>
     </member>
     <member name="T:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute">
       <summary>Attribute that indicates that the property represents a scalar property.</summary>
@@ -10937,7 +10937,7 @@
     </member>
     <member name="P:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityState">
       <summary>Gets current state of a tracked object.</summary>
-      <returns>An <see cref="T:System.Data.EntityState" /> that is the state of the tracked object.For more information, see Identity Resolution, State Management, and Change Tracking (Entity Framework) and Tracking Changes in POCO Entities(Entity Framework).</returns>
+      <returns>An <see cref="T:System.Data.EntityState" /> that is the state of the tracked object.For more information, see Identity Resolution, State Managment, and Change Tracking and Tracking Changes in POCO Entities.</returns>
     </member>
     <member name="T:System.Data.Objects.DataClasses.IEntityWithChangeTracker">
       <summary>Defines an entity type that implements change tracking. </summary>
@@ -11101,7 +11101,7 @@
       <summary>Enumerates the type of the relationship between two or more entities. </summary>
     </member>
     <member name="F:System.Data.Objects.DataClasses.RelationshipKind.Association">
-      <summary>The relationship is defined by an association in a conceptual model. For more information, see Association Element (CSDL).</summary>
+      <summary>The relationship is defined by an association in a conceptual model. For more information, see Association (EDM).</summary>
     </member>
     <member name="T:System.Data.Objects.DataClasses.RelationshipManager">
       <summary>Used to track relationships between objects in the object context.</summary>

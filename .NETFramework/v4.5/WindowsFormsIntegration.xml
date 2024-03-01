@@ -414,7 +414,6 @@
     </member>
     <member name="F:System.Windows.Forms.Integration.WindowsFormsHost.BackgroundProperty">
       <summary>Identifies the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Background" /> dependency property. </summary>
-      <returns>The identifier for the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Background" /> dependency property.</returns>
     </member>
     <member name="M:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore(System.Runtime.InteropServices.HandleRef)">
       <summary>Overrides the base class implementation of <see cref="M:System.Windows.Interop.HwndHost.BuildWindowCore(System.Runtime.InteropServices.HandleRef)" /> to build the hosted Windows Forms control. </summary>
@@ -446,7 +445,6 @@
     </member>
     <member name="F:System.Windows.Forms.Integration.WindowsFormsHost.FontFamilyProperty">
       <summary>Identifies the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.FontFamily" /> dependency property. </summary>
-      <returns>The identifier for the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.FontFamily" /> dependency property.</returns>
     </member>
     <member name="P:System.Windows.Forms.Integration.WindowsFormsHost.FontSize">
       <summary>Gets or sets the hosted control's font size.  </summary>
@@ -454,7 +452,6 @@
     </member>
     <member name="F:System.Windows.Forms.Integration.WindowsFormsHost.FontSizeProperty">
       <summary>Identifies the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.FontSize" /> dependency property. </summary>
-      <returns>The identifier for the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.FontSize" /> dependency property.</returns>
     </member>
     <member name="P:System.Windows.Forms.Integration.WindowsFormsHost.FontStyle">
       <summary>Gets or sets the hosted control's font style.  </summary>
@@ -462,7 +459,6 @@
     </member>
     <member name="F:System.Windows.Forms.Integration.WindowsFormsHost.FontStyleProperty">
       <summary>Identifies the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.FontStyle" /> dependency property. </summary>
-      <returns>The identifier for the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.FontStyle" /> dependency property.</returns>
     </member>
     <member name="P:System.Windows.Forms.Integration.WindowsFormsHost.FontWeight">
       <summary>Gets or sets the hosted control's font weight.  </summary>
@@ -470,7 +466,6 @@
     </member>
     <member name="F:System.Windows.Forms.Integration.WindowsFormsHost.FontWeightProperty">
       <summary>Identifies the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.FontWeight" /> dependency property. </summary>
-      <returns>The identifier for the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.FontWeight" /> dependency property.</returns>
     </member>
     <member name="P:System.Windows.Forms.Integration.WindowsFormsHost.Foreground">
       <summary>Gets or sets the hosted control's foreground color.  </summary>
@@ -478,7 +473,6 @@
     </member>
     <member name="F:System.Windows.Forms.Integration.WindowsFormsHost.ForegroundProperty">
       <summary>Identifies the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Foreground" /> dependency property. </summary>
-      <returns>The identifier for the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Foreground" /> dependency property.</returns>
     </member>
     <member name="E:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError">
       <summary>Occurs when a layout error, such as a skew or rotation that <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> does not support, is encountered.</summary>
@@ -490,7 +484,7 @@
     </member>
     <member name="M:System.Windows.Forms.Integration.WindowsFormsHost.OnCreateAutomationPeer">
       <summary>Creates a <see cref="T:System.Windows.Automation.Peers.WindowsFormsHostAutomationPeer" /> for the <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> element.</summary>
-      <returns>A new <see cref="T:System.Windows.Automation.Peers.WindowsFormsHostAutomationPeer" />.</returns>
+      <returns>A <see cref="T:System.Windows.Automation.Peers.WindowsFormsHostAutomationPeer" /> for the <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> element.</returns>
     </member>
     <member name="M:System.Windows.Forms.Integration.WindowsFormsHost.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
       <summary>Forces the translation of a mapped property. </summary>
@@ -502,7 +496,6 @@
     </member>
     <member name="F:System.Windows.Forms.Integration.WindowsFormsHost.PaddingProperty">
       <summary>Identifies the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Padding" /> dependency property. </summary>
-      <returns>The identifier for the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Padding" /> dependency property. </returns>
     </member>
     <member name="P:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap">
       <summary>Gets the property map that determines how setting properties on the <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> element affects the hosted Windows Forms control.</summary>
@@ -519,7 +512,6 @@
     </member>
     <member name="F:System.Windows.Forms.Integration.WindowsFormsHost.TabIndexProperty">
       <summary>Identifies the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex" /> dependency property. </summary>
-      <returns>The identifier for the <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex" /> dependency property.</returns>
     </member>
     <member name="M:System.Windows.Forms.Integration.WindowsFormsHost.TabInto(System.Windows.Input.TraversalRequest)">
       <summary>Forwards focus from WPF to the hosted Windows Forms control.</summary>

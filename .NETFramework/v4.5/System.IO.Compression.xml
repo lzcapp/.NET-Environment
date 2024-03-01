@@ -156,11 +156,11 @@
     <member name="T:System.IO.Compression.ZipArchiveMode">
       <summary>Specifies values for interacting with zip archive entries.</summary>
     </member>
-    <member name="F:System.IO.Compression.ZipArchiveMode.Read">
-      <summary>Only reading archive entries is permitted.</summary>
-    </member>
     <member name="F:System.IO.Compression.ZipArchiveMode.Create">
       <summary>Only creating new archive entries is permitted.</summary>
+    </member>
+    <member name="F:System.IO.Compression.ZipArchiveMode.Read">
+      <summary>Only reading archive entries is permitted.</summary>
     </member>
     <member name="F:System.IO.Compression.ZipArchiveMode.Update">
       <summary>Both read and write operations are permitted for archive entries.</summary>

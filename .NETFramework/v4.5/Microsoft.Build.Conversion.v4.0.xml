@@ -13,12 +13,10 @@
     <member name="P:Microsoft.Build.Conversion.ProjectFileConverter.ConversionSkippedBecauseProjectAlreadyConverted">
       <summary>Gets a value indicating whether the last attempted conversion was skipped because the project file is already in the latest format.</summary>
       <returns>true if the last attempted conversion was skipped because the project file is already in the latest format; otherwise, false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:Microsoft.Build.Conversion.ProjectFileConverter.ConversionWarnings">
       <summary>Gets a list of warnings generated during the conversion.</summary>
       <returns>A string array containing any warnings generated during the conversion.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Conversion.ProjectFileConverter.Convert">
       <summary>Converts the project specified by the <see cref="P:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile" /> property and saves it in the file specified by the <see cref="P:Microsoft.Build.Conversion.ProjectFileConverter.NewProjectFile" /> property.</summary>
@@ -39,14 +37,12 @@
       <summary>Creates a new project in memory from the <see cref="P:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile" />.</summary>
       <returns>Returns the converted <see cref="T:Microsoft.Build.BuildEngine.Project" />.</returns>
       <param name="engine">The <see cref="T:Microsoft.Build.BuildEngine.Engine" /> in which to create the new project.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory(Microsoft.Build.BuildEngine.Engine,Microsoft.Build.BuildEngine.ProjectLoadSettings)">
       <summary>This is the entry point method, which performs the project file format conversion. This method will simply create a new MSBuild Project object in memory, instead of trying to write it to disk.</summary>
       <returns>Returns the converted <see cref="T:Microsoft.Build.BuildEngine.Project" />.</returns>
       <param name="engine">The <see cref="T:Microsoft.Build.BuildEngine.Engine" /> in which to create the new project.</param>
       <param name="projectLoadSettings">A <see cref="T:Microsoft.Build.BuildEngine.ProjectLoadSettings" /> flag that determines whether the project ignores non-existent .target files when loading.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Conversion.ProjectFileConverter.FSharpSpecificConversions(System.Boolean)">
       <summary>Performs conversions specific to F# projects (VS2008 CTP -&gt; VS2012) and (VS2010 -&gt; VS2012). This involves: changing the location of FSharp targets, and for 2008CTP, adding explicit mscorlib and FSharp.Core references.</summary>

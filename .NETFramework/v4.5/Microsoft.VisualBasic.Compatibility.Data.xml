@@ -182,14 +182,14 @@
     <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum">
       <summary>Provides constants for compatibility with the Visual Basic 6.0 EOFAction property.</summary>
     </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum.adDoAddNew">
+      <summary>Moving past the last record triggers the ADODC's Validation event to occur on the current record, followed by an automatic AddNew, followed by a Reposition event on the new record.</summary>
+    </member>
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum.adDoMoveLast">
       <summary>Keeps the last record as the current record.</summary>
     </member>
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum.adStayEOF">
       <summary>Moving past the end of a Recordset triggers the ADODC's Validation event on the last record, followed by a Reposition event on the invalid (EOF) record. At this point, the MoveNext button on the ADODC is disabled.</summary>
-    </member>
-    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum.adDoAddNew">
-      <summary>Moving past the last record triggers the ADODC's Validation event to occur on the current record, followed by an automatic AddNew, followed by a Reposition event on the new record.</summary>
     </member>
     <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.ErrorDelegate">
       <summary>Represents the method that will handle an Error event.</summary>
@@ -368,7 +368,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray.GetIndex(Microsoft.VisualBasic.Compatibility.VB6.ADODC)">
       <summary>Gets the index of an <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODCArray" />.</summary>
@@ -777,6 +777,9 @@
     <member name="T:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM">
       <summary>Provides an enumeration for use by the tools for upgrading Visual Basic 6.0 applications to Visual Basic.</summary>
     </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM.DBKIND_GUID">
+      <summary>6</summary>
+    </member>
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM.DBKIND_GUID_NAME">
       <summary>0</summary>
     </member>
@@ -794,9 +797,6 @@
     </member>
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM.DBKIND_PROPID">
       <summary>5</summary>
-    </member>
-    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.DBKINDENUM.DBKIND_GUID">
-      <summary>6</summary>
     </member>
     <member name="T:Microsoft.VisualBasic.Compatibility.VB6.DBPROPIDSET">
       <summary>Provides a Structure for use in an application that has been upgraded from Visual Basic 6.0.</summary>
@@ -1316,14 +1316,14 @@
     <member name="T:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode">
       <summary>Provides constants for compatibility with the Visual Basic 6.0 UpdateMode method.</summary>
     </member>
-    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode.vbUsePropertyAttributes">
-      <summary>0</summary>
-    </member>
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode.vbUpdateWhenPropertyChanges">
       <summary>1</summary>
     </member>
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode.vbUpdateWhenRowChanges">
       <summary>2</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode.vbUsePropertyAttributes">
+      <summary>0</summary>
     </member>
   </members>
 </doc>

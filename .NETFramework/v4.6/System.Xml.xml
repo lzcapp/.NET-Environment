@@ -61,6 +61,39 @@
       <summary>Returns the <see cref="T:System.Xml.XmlNode" /> for the current position.</summary>
       <returns>The XmlNode for the current position.</returns>
     </member>
+    <member name="T:System.Xml.IXmlLineInfo">
+      <summary>Provides an interface to enable a class to return line and position information.</summary>
+    </member>
+    <member name="M:System.Xml.IXmlLineInfo.HasLineInfo">
+      <summary>Gets a value indicating whether the class can return line information.</summary>
+      <returns>true if <see cref="P:System.Xml.IXmlLineInfo.LineNumber" /> and <see cref="P:System.Xml.IXmlLineInfo.LinePosition" /> can be provided; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Xml.IXmlLineInfo.LineNumber">
+      <summary>Gets the current line number.</summary>
+      <returns>The current line number or 0 if no line information is available (for example, <see cref="M:System.Xml.IXmlLineInfo.HasLineInfo" /> returns false).</returns>
+    </member>
+    <member name="P:System.Xml.IXmlLineInfo.LinePosition">
+      <summary>Gets the current line position.</summary>
+      <returns>The current line position or 0 if no line information is available (for example, <see cref="M:System.Xml.IXmlLineInfo.HasLineInfo" /> returns false).</returns>
+    </member>
+    <member name="T:System.Xml.IXmlNamespaceResolver">
+      <summary>Provides read-only access to a set of prefix and namespace mappings.</summary>
+    </member>
+    <member name="M:System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)">
+      <summary>Gets a collection of defined prefix-namespace mappings that are currently in scope.</summary>
+      <returns>An <see cref="T:System.Collections.IDictionary" /> that contains the current in-scope namespaces.</returns>
+      <param name="scope">An <see cref="T:System.Xml.XmlNamespaceScope" /> value that specifies the type of namespace nodes to return.</param>
+    </member>
+    <member name="M:System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)">
+      <summary>Gets the namespace URI mapped to the specified prefix.</summary>
+      <returns>The namespace URI that is mapped to the prefix; null if the prefix is not mapped to a namespace URI.</returns>
+      <param name="prefix">The prefix whose namespace URI you wish to find.</param>
+    </member>
+    <member name="M:System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)">
+      <summary>Gets the prefix that is mapped to the specified namespace URI.</summary>
+      <returns>The prefix that is mapped to the namespace URI; null if the namespace URI is not mapped to a prefix.</returns>
+      <param name="namespaceName">The namespace URI whose prefix you wish to find.</param>
+    </member>
     <member name="T:System.Xml.NamespaceHandling">
       <summary>Specifies whether to remove duplicate namespace declarations in the <see cref="T:System.Xml.XmlWriter" />. </summary>
     </member>
@@ -69,6 +102,46 @@
     </member>
     <member name="F:System.Xml.NamespaceHandling.OmitDuplicates">
       <summary>Specifies that duplicate namespace declarations will be removed. For the duplicate namespace to be removed, the prefix and the namespace must match.</summary>
+    </member>
+    <member name="T:System.Xml.NameTable">
+      <summary>Implements a single-threaded <see cref="T:System.Xml.XmlNameTable" />.</summary>
+    </member>
+    <member name="M:System.Xml.NameTable.#ctor">
+      <summary>Initializes a new instance of the NameTable class.</summary>
+    </member>
+    <member name="M:System.Xml.NameTable.Add(System.Char[],System.Int32,System.Int32)">
+      <summary>Atomizes the specified string and adds it to the NameTable.</summary>
+      <returns>The atomized string or the existing string if one already exists in the NameTable. If <paramref name="len" /> is zero, String.Empty is returned.</returns>
+      <param name="key">The character array containing the string to add. </param>
+      <param name="start">The zero-based index into the array specifying the first character of the string. </param>
+      <param name="len">The number of characters in the string. </param>
+      <exception cref="T:System.IndexOutOfRangeException">0 &gt; <paramref name="start" />-or- <paramref name="start" /> &gt;= <paramref name="key" />.Length -or- <paramref name="len" /> &gt;= <paramref name="key" />.Length The above conditions do not cause an exception to be thrown if <paramref name="len" /> =0. </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="len" /> &lt; 0. </exception>
+    </member>
+    <member name="M:System.Xml.NameTable.Add(System.String)">
+      <summary>Atomizes the specified string and adds it to the NameTable.</summary>
+      <returns>The atomized string or the existing string if it already exists in the NameTable.</returns>
+      <param name="key">The string to add. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="key" /> is null. </exception>
+    </member>
+    <member name="M:System.Xml.NameTable.Get(System.Char[],System.Int32,System.Int32)">
+      <summary>Gets the atomized string containing the same characters as the specified range of characters in the given array.</summary>
+      <returns>The atomized string or null if the string has not already been atomized. If <paramref name="len" /> is zero, String.Empty is returned.</returns>
+      <param name="key">The character array containing the name to find. </param>
+      <param name="start">The zero-based index into the array specifying the first character of the name. </param>
+      <param name="len">The number of characters in the name. </param>
+      <exception cref="T:System.IndexOutOfRangeException">0 &gt; <paramref name="start" />-or- <paramref name="start" /> &gt;= <paramref name="key" />.Length -or- <paramref name="len" /> &gt;= <paramref name="key" />.Length The above conditions do not cause an exception to be thrown if <paramref name="len" /> =0. </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="len" /> &lt; 0. </exception>
+    </member>
+    <member name="M:System.Xml.NameTable.Get(System.String)">
+      <summary>Gets the atomized string with the specified value.</summary>
+      <returns>The atomized string object or null if the string has not already been atomized.</returns>
+      <param name="value">The name to find. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="value" /> is null. </exception>
     </member>
     <member name="T:System.Xml.NewLineHandling">
       <summary>Specifies how to handle line breaks.</summary>
@@ -923,6 +996,21 @@
       <param name="content">
         <see cref="T:System.String" /> that contains characters to verify.</param>
     </member>
+    <member name="T:System.Xml.XmlDateTimeSerializationMode">
+      <summary>Specifies how to treat the time value when converting between string and <see cref="T:System.DateTime" />.</summary>
+    </member>
+    <member name="F:System.Xml.XmlDateTimeSerializationMode.Local">
+      <summary>Treat as local time. If the <see cref="T:System.DateTime" /> object represents a Coordinated Universal Time (UTC), it is converted to the local time.</summary>
+    </member>
+    <member name="F:System.Xml.XmlDateTimeSerializationMode.RoundtripKind">
+      <summary>Time zone information should be preserved when converting.</summary>
+    </member>
+    <member name="F:System.Xml.XmlDateTimeSerializationMode.Unspecified">
+      <summary>Treat as a local time if a <see cref="T:System.DateTime" /> is being converted to a string.</summary>
+    </member>
+    <member name="F:System.Xml.XmlDateTimeSerializationMode.Utc">
+      <summary>Treat as a UTC. If the <see cref="T:System.DateTime" /> object represents a local time, it is converted to a UTC.</summary>
+    </member>
     <member name="T:System.Xml.XmlDeclaration">
       <summary>Represents the XML declaration node &lt;?xml version='1.0'...?&gt;.</summary>
     </member>
@@ -979,7 +1067,7 @@
       <param name="w">The XmlWriter to which you want to save. </param>
     </member>
     <member name="T:System.Xml.XmlDocument">
-      <summary>Represents an XML document.For more information, see the Remarks section.</summary>
+      <summary>Represents an XML document. You can use this class to load, validate, edit, add, and position XML in a document. For examples, see the Remarks section on this page. </summary>
     </member>
     <member name="M:System.Xml.XmlDocument.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Xml.XmlDocument" /> class.</summary>
@@ -1729,15 +1817,49 @@
       <summary>Saves the node to the specified <see cref="T:System.Xml.XmlWriter" />.</summary>
       <param name="w">The XmlWriter to which you want to save. </param>
     </member>
+    <member name="T:System.Xml.XmlException">
+      <summary>Returns detailed information about the last exception.</summary>
+    </member>
+    <member name="M:System.Xml.XmlException.#ctor">
+      <summary>Initializes a new instance of the XmlException class.</summary>
+    </member>
     <member name="M:System.Xml.XmlException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Initializes a new instance of the XmlException class using the information in the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> and <see cref="T:System.Runtime.Serialization.StreamingContext" /> objects.</summary>
       <param name="info">The SerializationInfo object containing all the properties of an XmlException. </param>
       <param name="context">The StreamingContext object containing the context information. </param>
     </member>
+    <member name="M:System.Xml.XmlException.#ctor(System.String)">
+      <summary>Initializes a new instance of the XmlException class with a specified error message.</summary>
+      <param name="message">The error description. </param>
+    </member>
+    <member name="M:System.Xml.XmlException.#ctor(System.String,System.Exception)">
+      <summary>Initializes a new instance of the XmlException class.</summary>
+      <param name="message">The description of the error condition. </param>
+      <param name="innerException">The <see cref="T:System.Exception" /> that threw the XmlException, if any. This value can be null. </param>
+    </member>
+    <member name="M:System.Xml.XmlException.#ctor(System.String,System.Exception,System.Int32,System.Int32)">
+      <summary>Initializes a new instance of the XmlException class with the specified message, inner exception, line number, and line position.</summary>
+      <param name="message">The error description. </param>
+      <param name="innerException">The exception that is the cause of the current exception. This value can be null. </param>
+      <param name="lineNumber">The line number indicating where the error occurred. </param>
+      <param name="linePosition">The line position indicating where the error occurred. </param>
+    </member>
     <member name="M:System.Xml.XmlException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Streams all the XmlException properties into the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> class for the given <see cref="T:System.Runtime.Serialization.StreamingContext" />.</summary>
       <param name="info">The SerializationInfo object. </param>
       <param name="context">The StreamingContext object. </param>
+    </member>
+    <member name="P:System.Xml.XmlException.LineNumber">
+      <summary>Gets the line number indicating where the error occurred.</summary>
+      <returns>The line number indicating where the error occurred.</returns>
+    </member>
+    <member name="P:System.Xml.XmlException.LinePosition">
+      <summary>Gets the line position indicating where the error occurred.</summary>
+      <returns>The line position indicating where the error occurred.</returns>
+    </member>
+    <member name="P:System.Xml.XmlException.Message">
+      <summary>Gets a message describing the current exception.</summary>
+      <returns>The error message that explains the reason for the exception.</returns>
     </member>
     <member name="P:System.Xml.XmlException.SourceUri">
       <summary>Gets the location of the XML file.</summary>
@@ -1817,6 +1939,66 @@
       <returns>If the <paramref name="node" /> replaces an existing node with the same name, the old node is returned; otherwise, null is returned.</returns>
       <param name="node">An XmlNode to store in the XmlNamedNodeMap. If a node with that name is already present in the map, it is replaced by the new one.</param>
       <exception cref="T:System.ArgumentException">The <paramref name="node" /> was created from a different <see cref="T:System.Xml.XmlDocument" /> than the one that created the XmlNamedNodeMap; or the XmlNamedNodeMap is read-only.</exception>
+    </member>
+    <member name="T:System.Xml.XmlNamespaceManager">
+      <summary>Resolves, adds, and removes namespaces to a collection and provides scope management for these namespaces. </summary>
+    </member>
+    <member name="M:System.Xml.XmlNamespaceManager.#ctor(System.Xml.XmlNameTable)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.XmlNamespaceManager" /> class with the specified <see cref="T:System.Xml.XmlNameTable" />.</summary>
+      <param name="nameTable">The <see cref="T:System.Xml.XmlNameTable" /> to use. </param>
+      <exception cref="T:System.NullReferenceException">null is passed to the constructor </exception>
+    </member>
+    <member name="M:System.Xml.XmlNamespaceManager.AddNamespace(System.String,System.String)">
+      <summary>Adds the given namespace to the collection.</summary>
+      <param name="prefix">The prefix to associate with the namespace being added. Use String.Empty to add a default namespace.NoteIf the <see cref="T:System.Xml.XmlNamespaceManager" /> will be used for resolving namespaces in an XML Path Language (XPath) expression, a prefix must be specified. If an XPath expression does not include a prefix, it is assumed that the namespace Uniform Resource Identifier (URI) is the empty namespace. For more information about XPath expressions and the <see cref="T:System.Xml.XmlNamespaceManager" />, refer to the <see cref="M:System.Xml.XmlNode.SelectNodes(System.String)" /> and <see cref="M:System.Xml.XPath.XPathExpression.SetContext(System.Xml.XmlNamespaceManager)" /> methods.</param>
+      <param name="uri">The namespace to add. </param>
+      <exception cref="T:System.ArgumentException">The value for <paramref name="prefix" /> is "xml" or "xmlns". </exception>
+      <exception cref="T:System.ArgumentNullException">The value for <paramref name="prefix" /> or <paramref name="uri" /> is null. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNamespaceManager.DefaultNamespace">
+      <summary>Gets the namespace URI for the default namespace.</summary>
+      <returns>Returns the namespace URI for the default namespace, or String.Empty if there is no default namespace.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamespaceManager.GetEnumerator">
+      <summary>Returns an enumerator to use to iterate through the namespaces in the <see cref="T:System.Xml.XmlNamespaceManager" />.</summary>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> containing the prefixes stored by the <see cref="T:System.Xml.XmlNamespaceManager" />.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamespaceManager.GetNamespacesInScope(System.Xml.XmlNamespaceScope)">
+      <summary>Gets a collection of namespace names keyed by prefix which can be used to enumerate the namespaces currently in scope.</summary>
+      <returns>A collection of namespace and prefix pairs currently in scope.</returns>
+      <param name="scope">An enumeration value that specifies the type of namespace nodes to return.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamespaceManager.HasNamespace(System.String)">
+      <summary>Gets a value indicating whether the supplied prefix has a namespace defined for the current pushed scope.</summary>
+      <returns>true if there is a namespace defined; otherwise, false.</returns>
+      <param name="prefix">The prefix of the namespace you want to find. </param>
+    </member>
+    <member name="M:System.Xml.XmlNamespaceManager.LookupNamespace(System.String)">
+      <summary>Gets the namespace URI for the specified prefix.</summary>
+      <returns>Returns the namespace URI for <paramref name="prefix" /> or null if there is no mapped namespace. The returned string is atomized.For more information on atomized strings, see the <see cref="T:System.Xml.XmlNameTable" /> class.</returns>
+      <param name="prefix">The prefix whose namespace URI you want to resolve. To match the default namespace, pass String.Empty. </param>
+    </member>
+    <member name="M:System.Xml.XmlNamespaceManager.LookupPrefix(System.String)">
+      <summary>Finds the prefix declared for the given namespace URI.</summary>
+      <returns>The matching prefix. If there is no mapped prefix, the method returns String.Empty. If a null value is supplied, then null is returned.</returns>
+      <param name="uri">The namespace to resolve for the prefix. </param>
+    </member>
+    <member name="P:System.Xml.XmlNamespaceManager.NameTable">
+      <summary>Gets the <see cref="T:System.Xml.XmlNameTable" /> associated with this object.</summary>
+      <returns>The <see cref="T:System.Xml.XmlNameTable" /> used by this object.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamespaceManager.PopScope">
+      <summary>Pops a namespace scope off the stack.</summary>
+      <returns>true if there are namespace scopes left on the stack; false if there are no more namespaces to pop.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamespaceManager.PushScope">
+      <summary>Pushes a namespace scope onto the stack.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNamespaceManager.RemoveNamespace(System.String,System.String)">
+      <summary>Removes the given namespace for the given prefix.</summary>
+      <param name="prefix">The prefix for the namespace </param>
+      <param name="uri">The namespace to remove for the given prefix. The namespace removed is from the current namespace scope. Namespaces outside the current scope are ignored. </param>
+      <exception cref="T:System.ArgumentNullException">The value of <paramref name="prefix" /> or <paramref name="uri" /> is null. </exception>
     </member>
     <member name="T:System.Xml.XmlNamespaceScope">
       <summary>Defines the namespace scope.</summary>
@@ -2432,6 +2614,63 @@
       <summary>Gets the current xml:space scope.</summary>
       <returns>One of the <see cref="T:System.Xml.XmlSpace" /> values. If no xml:space scope exists, this property defaults to XmlSpace.None.</returns>
     </member>
+    <member name="T:System.Xml.XmlNodeType">
+      <summary>Specifies the type of node.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.Attribute">
+      <summary>An attribute (for example, id='123' ).</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.CDATA">
+      <summary>A CDATA section (for example, &lt;![CDATA[my escaped text]]&gt; ).</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.Comment">
+      <summary>A comment (for example, &lt;!-- my comment --&gt; ).</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.Document">
+      <summary>A document object that, as the root of the document tree, provides access to the entire XML document.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.DocumentFragment">
+      <summary>A document fragment.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.DocumentType">
+      <summary>The document type declaration, indicated by the following tag (for example, &lt;!DOCTYPE...&gt; ).</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.Element">
+      <summary>An element (for example, &lt;item&gt; ).</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.EndElement">
+      <summary>An end element tag (for example, &lt;/item&gt; ).</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.EndEntity">
+      <summary>Returned when XmlReader gets to the end of the entity replacement as a result of a call to <see cref="M:System.Xml.XmlReader.ResolveEntity" />.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.Entity">
+      <summary>An entity declaration (for example, &lt;!ENTITY...&gt; ).</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.EntityReference">
+      <summary>A reference to an entity (for example, &amp;num; ).</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.None">
+      <summary>This is returned by the <see cref="T:System.Xml.XmlReader" /> if a Read method has not been called.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.Notation">
+      <summary>A notation in the document type declaration (for example, &lt;!NOTATION...&gt; ).</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.ProcessingInstruction">
+      <summary>A processing instruction (for example, &lt;?pi test?&gt; ).</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.SignificantWhitespace">
+      <summary>White space between markup in a mixed content model or white space within the xml:space="preserve" scope.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.Text">
+      <summary>The text content of a node.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.Whitespace">
+      <summary>White space between markup.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeType.XmlDeclaration">
+      <summary>The XML declaration (for example, &lt;?xml version='1.0'?&gt; ).</summary>
+    </member>
     <member name="T:System.Xml.XmlNotation">
       <summary>Represents a notation declaration, such as &lt;!NOTATION... &gt;.</summary>
     </member>
@@ -2497,6 +2736,97 @@
     <member name="F:System.Xml.XmlOutputMethod.Xml">
       <summary>Serialize according to the XML 1.0 rules.</summary>
     </member>
+    <member name="T:System.Xml.XmlParserContext">
+      <summary>Provides all the context information required by the <see cref="T:System.Xml.XmlReader" /> to parse an XML fragment.</summary>
+    </member>
+    <member name="M:System.Xml.XmlParserContext.#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.String,System.String,System.String,System.String,System.String,System.Xml.XmlSpace)">
+      <summary>Initializes a new instance of the XmlParserContext class with the specified <see cref="T:System.Xml.XmlNameTable" />, <see cref="T:System.Xml.XmlNamespaceManager" />, base URI, xml:lang, xml:space, and document type values.</summary>
+      <param name="nt">The <see cref="T:System.Xml.XmlNameTable" /> to use to atomize strings. If this is null, the name table used to construct the <paramref name="nsMgr" /> is used instead. For more information about atomized strings, see <see cref="T:System.Xml.XmlNameTable" />. </param>
+      <param name="nsMgr">The <see cref="T:System.Xml.XmlNamespaceManager" /> to use for looking up namespace information, or null. </param>
+      <param name="docTypeName">The name of the document type declaration. </param>
+      <param name="pubId">The public identifier. </param>
+      <param name="sysId">The system identifier. </param>
+      <param name="internalSubset">The internal DTD subset. The DTD subset is used for entity resolution, not for document validation.</param>
+      <param name="baseURI">The base URI for the XML fragment (the location from which the fragment was loaded). </param>
+      <param name="xmlLang">The xml:lang scope. </param>
+      <param name="xmlSpace">An <see cref="T:System.Xml.XmlSpace" /> value indicating the xml:space scope. </param>
+      <exception cref="T:System.Xml.XmlException">
+        <paramref name="nt" /> is not the same XmlNameTable used to construct <paramref name="nsMgr" />. </exception>
+    </member>
+    <member name="M:System.Xml.XmlParserContext.#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.String,System.String,System.String,System.String,System.String,System.Xml.XmlSpace,System.Text.Encoding)">
+      <summary>Initializes a new instance of the XmlParserContext class with the specified <see cref="T:System.Xml.XmlNameTable" />, <see cref="T:System.Xml.XmlNamespaceManager" />, base URI, xml:lang, xml:space, encoding, and document type values.</summary>
+      <param name="nt">The <see cref="T:System.Xml.XmlNameTable" /> to use to atomize strings. If this is null, the name table used to construct the <paramref name="nsMgr" /> is used instead. For more information about atomized strings, see <see cref="T:System.Xml.XmlNameTable" />. </param>
+      <param name="nsMgr">The <see cref="T:System.Xml.XmlNamespaceManager" /> to use for looking up namespace information, or null. </param>
+      <param name="docTypeName">The name of the document type declaration. </param>
+      <param name="pubId">The public identifier. </param>
+      <param name="sysId">The system identifier. </param>
+      <param name="internalSubset">The internal DTD subset. The DTD is used for entity resolution, not for document validation.</param>
+      <param name="baseURI">The base URI for the XML fragment (the location from which the fragment was loaded). </param>
+      <param name="xmlLang">The xml:lang scope. </param>
+      <param name="xmlSpace">An <see cref="T:System.Xml.XmlSpace" /> value indicating the xml:space scope. </param>
+      <param name="enc">An <see cref="T:System.Text.Encoding" /> object indicating the encoding setting. </param>
+      <exception cref="T:System.Xml.XmlException">
+        <paramref name="nt" /> is not the same XmlNameTable used to construct <paramref name="nsMgr" />. </exception>
+    </member>
+    <member name="M:System.Xml.XmlParserContext.#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.Xml.XmlSpace)">
+      <summary>Initializes a new instance of the XmlParserContext class with the specified <see cref="T:System.Xml.XmlNameTable" />, <see cref="T:System.Xml.XmlNamespaceManager" />, xml:lang, and xml:space values.</summary>
+      <param name="nt">The <see cref="T:System.Xml.XmlNameTable" /> to use to atomize strings. If this is null, the name table used to construct the <paramref name="nsMgr" /> is used instead. For more information about atomized strings, see <see cref="T:System.Xml.XmlNameTable" />. </param>
+      <param name="nsMgr">The <see cref="T:System.Xml.XmlNamespaceManager" /> to use for looking up namespace information, or null. </param>
+      <param name="xmlLang">The xml:lang scope. </param>
+      <param name="xmlSpace">An <see cref="T:System.Xml.XmlSpace" /> value indicating the xml:space scope. </param>
+      <exception cref="T:System.Xml.XmlException">
+        <paramref name="nt" /> is not the same XmlNameTable used to construct <paramref name="nsMgr" />. </exception>
+    </member>
+    <member name="M:System.Xml.XmlParserContext.#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.Xml.XmlSpace,System.Text.Encoding)">
+      <summary>Initializes a new instance of the XmlParserContext class with the specified <see cref="T:System.Xml.XmlNameTable" />, <see cref="T:System.Xml.XmlNamespaceManager" />, xml:lang, xml:space, and encoding.</summary>
+      <param name="nt">The <see cref="T:System.Xml.XmlNameTable" /> to use to atomize strings. If this is null, the name table used to construct the <paramref name="nsMgr" /> is used instead. For more information on atomized strings, see <see cref="T:System.Xml.XmlNameTable" />. </param>
+      <param name="nsMgr">The <see cref="T:System.Xml.XmlNamespaceManager" /> to use for looking up namespace information, or null. </param>
+      <param name="xmlLang">The xml:lang scope. </param>
+      <param name="xmlSpace">An <see cref="T:System.Xml.XmlSpace" /> value indicating the xml:space scope. </param>
+      <param name="enc">An <see cref="T:System.Text.Encoding" /> object indicating the encoding setting. </param>
+      <exception cref="T:System.Xml.XmlException">
+        <paramref name="nt" /> is not the same XmlNameTable used to construct <paramref name="nsMgr" />. </exception>
+    </member>
+    <member name="P:System.Xml.XmlParserContext.BaseURI">
+      <summary>Gets or sets the base URI.</summary>
+      <returns>The base URI to use to resolve the DTD file.</returns>
+    </member>
+    <member name="P:System.Xml.XmlParserContext.DocTypeName">
+      <summary>Gets or sets the name of the document type declaration.</summary>
+      <returns>The name of the document type declaration.</returns>
+    </member>
+    <member name="P:System.Xml.XmlParserContext.Encoding">
+      <summary>Gets or sets the encoding type.</summary>
+      <returns>An <see cref="T:System.Text.Encoding" /> object indicating the encoding type.</returns>
+    </member>
+    <member name="P:System.Xml.XmlParserContext.InternalSubset">
+      <summary>Gets or sets the internal DTD subset.</summary>
+      <returns>The internal DTD subset. For example, this property returns everything between the square brackets &lt;!DOCTYPE doc [...]&gt;.</returns>
+    </member>
+    <member name="P:System.Xml.XmlParserContext.NamespaceManager">
+      <summary>Gets or sets the <see cref="T:System.Xml.XmlNamespaceManager" />.</summary>
+      <returns>The XmlNamespaceManager.</returns>
+    </member>
+    <member name="P:System.Xml.XmlParserContext.NameTable">
+      <summary>Gets the <see cref="T:System.Xml.XmlNameTable" /> used to atomize strings. For more information on atomized strings, see <see cref="T:System.Xml.XmlNameTable" />.</summary>
+      <returns>The XmlNameTable.</returns>
+    </member>
+    <member name="P:System.Xml.XmlParserContext.PublicId">
+      <summary>Gets or sets the public identifier.</summary>
+      <returns>The public identifier.</returns>
+    </member>
+    <member name="P:System.Xml.XmlParserContext.SystemId">
+      <summary>Gets or sets the system identifier.</summary>
+      <returns>The system identifier.</returns>
+    </member>
+    <member name="P:System.Xml.XmlParserContext.XmlLang">
+      <summary>Gets or sets the current xml:lang scope.</summary>
+      <returns>The current xml:lang scope. If there is no xml:lang in scope, String.Empty is returned.</returns>
+    </member>
+    <member name="P:System.Xml.XmlParserContext.XmlSpace">
+      <summary>Gets or sets the current xml:space scope.</summary>
+      <returns>An <see cref="T:System.Xml.XmlSpace" /> value indicating the xml:space scope.</returns>
+    </member>
     <member name="T:System.Xml.XmlProcessingInstruction">
       <summary>Represents a processing instruction, which XML defines to keep processor-specific information in the text of the document.</summary>
     </member>
@@ -2547,6 +2877,67 @@
     <member name="M:System.Xml.XmlProcessingInstruction.WriteTo(System.Xml.XmlWriter)">
       <summary>Saves the node to the specified <see cref="T:System.Xml.XmlWriter" />.</summary>
       <param name="w">The XmlWriter to which you want to save. </param>
+    </member>
+    <member name="T:System.Xml.XmlQualifiedName">
+      <summary>Represents an XML qualified name.</summary>
+    </member>
+    <member name="M:System.Xml.XmlQualifiedName.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.XmlQualifiedName" /> class.</summary>
+    </member>
+    <member name="M:System.Xml.XmlQualifiedName.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.XmlQualifiedName" /> class with the specified name.</summary>
+      <param name="name">The local name to use as the name of the <see cref="T:System.Xml.XmlQualifiedName" /> object. </param>
+    </member>
+    <member name="M:System.Xml.XmlQualifiedName.#ctor(System.String,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.XmlQualifiedName" /> class with the specified name and namespace.</summary>
+      <param name="name">The local name to use as the name of the <see cref="T:System.Xml.XmlQualifiedName" /> object. </param>
+      <param name="ns">The namespace for the <see cref="T:System.Xml.XmlQualifiedName" /> object. </param>
+    </member>
+    <member name="F:System.Xml.XmlQualifiedName.Empty">
+      <summary>Provides an empty <see cref="T:System.Xml.XmlQualifiedName" />.</summary>
+    </member>
+    <member name="M:System.Xml.XmlQualifiedName.Equals(System.Object)">
+      <summary>Determines whether the specified <see cref="T:System.Xml.XmlQualifiedName" /> object is equal to the current <see cref="T:System.Xml.XmlQualifiedName" /> object. </summary>
+      <returns>true if the two are the same instance object; otherwise, false.</returns>
+      <param name="other">The <see cref="T:System.Xml.XmlQualifiedName" /> to compare. </param>
+    </member>
+    <member name="M:System.Xml.XmlQualifiedName.GetHashCode">
+      <summary>Returns the hash code for the <see cref="T:System.Xml.XmlQualifiedName" />.</summary>
+      <returns>A hash code for this object.</returns>
+    </member>
+    <member name="P:System.Xml.XmlQualifiedName.IsEmpty">
+      <summary>Gets a value indicating whether the <see cref="T:System.Xml.XmlQualifiedName" /> is empty.</summary>
+      <returns>true if name and namespace are empty strings; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Xml.XmlQualifiedName.Name">
+      <summary>Gets a string representation of the qualified name of the <see cref="T:System.Xml.XmlQualifiedName" />.</summary>
+      <returns>A string representation of the qualified name or String.Empty if a name is not defined for the object.</returns>
+    </member>
+    <member name="P:System.Xml.XmlQualifiedName.Namespace">
+      <summary>Gets a string representation of the namespace of the <see cref="T:System.Xml.XmlQualifiedName" />.</summary>
+      <returns>A string representation of the namespace or String.Empty if a namespace is not defined for the object.</returns>
+    </member>
+    <member name="M:System.Xml.XmlQualifiedName.op_Equality(System.Xml.XmlQualifiedName,System.Xml.XmlQualifiedName)">
+      <summary>Compares two <see cref="T:System.Xml.XmlQualifiedName" /> objects.</summary>
+      <returns>true if the two objects have the same name and namespace values; otherwise, false.</returns>
+      <param name="a">An <see cref="T:System.Xml.XmlQualifiedName" /> to compare. </param>
+      <param name="b">An <see cref="T:System.Xml.XmlQualifiedName" /> to compare. </param>
+    </member>
+    <member name="M:System.Xml.XmlQualifiedName.op_Inequality(System.Xml.XmlQualifiedName,System.Xml.XmlQualifiedName)">
+      <summary>Compares two <see cref="T:System.Xml.XmlQualifiedName" /> objects.</summary>
+      <returns>true if the name and namespace values for the two objects differ; otherwise, false.</returns>
+      <param name="a">An <see cref="T:System.Xml.XmlQualifiedName" /> to compare. </param>
+      <param name="b">An <see cref="T:System.Xml.XmlQualifiedName" /> to compare. </param>
+    </member>
+    <member name="M:System.Xml.XmlQualifiedName.ToString">
+      <summary>Returns the string value of the <see cref="T:System.Xml.XmlQualifiedName" />.</summary>
+      <returns>The string value of the <see cref="T:System.Xml.XmlQualifiedName" /> in the format of namespace:localname. If the object does not have a namespace defined, this method returns just the local name.</returns>
+    </member>
+    <member name="M:System.Xml.XmlQualifiedName.ToString(System.String,System.String)">
+      <summary>Returns the string value of the <see cref="T:System.Xml.XmlQualifiedName" />.</summary>
+      <returns>The string value of the <see cref="T:System.Xml.XmlQualifiedName" /> in the format of namespace:localname. If the object does not have a namespace defined, this method returns just the local name.</returns>
+      <param name="name">The name of the object. </param>
+      <param name="ns">The namespace of the object. </param>
     </member>
     <member name="T:System.Xml.XmlReader">
       <summary>Represents a reader that provides fast, noncached, forward-only access to XML data.To browse the .NET Framework source code for this type, see the Reference Source.</summary>
@@ -3749,6 +4140,18 @@
       <summary>Saves the node to the specified <see cref="T:System.Xml.XmlWriter" />.</summary>
       <param name="w">The XmlWriter to which you want to save. </param>
     </member>
+    <member name="T:System.Xml.XmlSpace">
+      <summary>Specifies the current xml:space scope.</summary>
+    </member>
+    <member name="F:System.Xml.XmlSpace.Default">
+      <summary>The xml:space scope equals default.</summary>
+    </member>
+    <member name="F:System.Xml.XmlSpace.None">
+      <summary>No xml:space scope.</summary>
+    </member>
+    <member name="F:System.Xml.XmlSpace.Preserve">
+      <summary>The xml:space scope equals preserve.</summary>
+    </member>
     <member name="T:System.Xml.XmlText">
       <summary>Represents the text content of an element or attribute.</summary>
     </member>
@@ -4880,10 +5283,42 @@
       <summary>Saves the node to the specified <see cref="T:System.Xml.XmlWriter" />.</summary>
       <param name="w">The <see cref="T:System.Xml.XmlWriter" /> to which you want to save.</param>
     </member>
+    <member name="T:System.Xml.XmlWriter">
+      <summary>Represents a writer that provides a fast, non-cached, forward-only way to generate streams or files that contain XML data.</summary>
+    </member>
+    <member name="M:System.Xml.XmlWriter.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.XmlWriter" /> class.</summary>
+    </member>
     <member name="M:System.Xml.XmlWriter.Close">
       <summary>When overridden in a derived class, closes this stream and the underlying stream.</summary>
       <exception cref="T:System.InvalidOperationException">A call is made to write more output after Close has been called or the result of this call is an invalid XML document.</exception>
       <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.Create(System.IO.Stream)">
+      <summary>Creates a new <see cref="T:System.Xml.XmlWriter" /> instance using the specified stream.</summary>
+      <returns>An <see cref="T:System.Xml.XmlWriter" /> object.</returns>
+      <param name="output">The stream to which you want to write. The <see cref="T:System.Xml.XmlWriter" /> writes XML 1.0 text syntax and appends it to the specified stream.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="stream" /> value is null.</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.Create(System.IO.Stream,System.Xml.XmlWriterSettings)">
+      <summary>Creates a new <see cref="T:System.Xml.XmlWriter" /> instance using the stream and <see cref="T:System.Xml.XmlWriterSettings" /> object.</summary>
+      <returns>An <see cref="T:System.Xml.XmlWriter" /> object.</returns>
+      <param name="output">The stream to which you want to write. The <see cref="T:System.Xml.XmlWriter" /> writes XML 1.0 text syntax and appends it to the specified stream.</param>
+      <param name="settings">The <see cref="T:System.Xml.XmlWriterSettings" /> object used to configure the new <see cref="T:System.Xml.XmlWriter" /> instance. If this is null, a <see cref="T:System.Xml.XmlWriterSettings" /> with default settings is used.If the <see cref="T:System.Xml.XmlWriter" /> is being used with the <see cref="M:System.Xml.Xsl.XslCompiledTransform.Transform(System.String,System.Xml.XmlWriter)" /> method, you should use the <see cref="P:System.Xml.Xsl.XslCompiledTransform.OutputSettings" /> property to obtain an <see cref="T:System.Xml.XmlWriterSettings" /> object with the correct settings. This ensures that the created <see cref="T:System.Xml.XmlWriter" /> object has the correct output settings.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="stream" /> value is null.</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.Create(System.IO.TextWriter)">
+      <summary>Creates a new <see cref="T:System.Xml.XmlWriter" /> instance using the specified <see cref="T:System.IO.TextWriter" />.</summary>
+      <returns>An <see cref="T:System.Xml.XmlWriter" /> object.</returns>
+      <param name="output">The <see cref="T:System.IO.TextWriter" /> to which you want to write. The <see cref="T:System.Xml.XmlWriter" /> writes XML 1.0 text syntax and appends it to the specified <see cref="T:System.IO.TextWriter" />.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="text" /> value is null.</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.Create(System.IO.TextWriter,System.Xml.XmlWriterSettings)">
+      <summary>Creates a new <see cref="T:System.Xml.XmlWriter" /> instance using the <see cref="T:System.IO.TextWriter" /> and <see cref="T:System.Xml.XmlWriterSettings" /> objects.</summary>
+      <returns>An <see cref="T:System.Xml.XmlWriter" /> object.</returns>
+      <param name="output">The <see cref="T:System.IO.TextWriter" /> to which you want to write. The <see cref="T:System.Xml.XmlWriter" /> writes XML 1.0 text syntax and appends it to the specified <see cref="T:System.IO.TextWriter" />.</param>
+      <param name="settings">The <see cref="T:System.Xml.XmlWriterSettings" /> object used to configure the new <see cref="T:System.Xml.XmlWriter" /> instance. If this is null, a <see cref="T:System.Xml.XmlWriterSettings" /> with default settings is used.If the <see cref="T:System.Xml.XmlWriter" /> is being used with the <see cref="M:System.Xml.Xsl.XslCompiledTransform.Transform(System.String,System.Xml.XmlWriter)" /> method, you should use the <see cref="P:System.Xml.Xsl.XslCompiledTransform.OutputSettings" /> property to obtain an <see cref="T:System.Xml.XmlWriterSettings" /> object with the correct settings. This ensures that the created <see cref="T:System.Xml.XmlWriter" /> object has the correct output settings.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="text" /> value is null.</exception>
     </member>
     <member name="M:System.Xml.XmlWriter.Create(System.String)">
       <summary>Creates a new <see cref="T:System.Xml.XmlWriter" /> instance using the specified filename.</summary>
@@ -4898,6 +5333,371 @@
       <param name="settings">The <see cref="T:System.Xml.XmlWriterSettings" /> object used to configure the new <see cref="T:System.Xml.XmlWriter" /> instance. If this is null, a <see cref="T:System.Xml.XmlWriterSettings" /> with default settings is used.If the <see cref="T:System.Xml.XmlWriter" /> is being used with the <see cref="M:System.Xml.Xsl.XslCompiledTransform.Transform(System.String,System.Xml.XmlWriter)" /> method, you should use the <see cref="P:System.Xml.Xsl.XslCompiledTransform.OutputSettings" /> property to obtain an <see cref="T:System.Xml.XmlWriterSettings" /> object with the correct settings. This ensures that the created <see cref="T:System.Xml.XmlWriter" /> object has the correct output settings.</param>
       <exception cref="T:System.ArgumentNullException">The <paramref name="url" /> value is null.</exception>
     </member>
+    <member name="M:System.Xml.XmlWriter.Create(System.Text.StringBuilder)">
+      <summary>Creates a new <see cref="T:System.Xml.XmlWriter" /> instance using the specified <see cref="T:System.Text.StringBuilder" />.</summary>
+      <returns>An <see cref="T:System.Xml.XmlWriter" /> object.</returns>
+      <param name="output">The <see cref="T:System.Text.StringBuilder" /> to which to write to. Content written by the <see cref="T:System.Xml.XmlWriter" /> is appended to the <see cref="T:System.Text.StringBuilder" />.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="builder" /> value is null.</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.Create(System.Text.StringBuilder,System.Xml.XmlWriterSettings)">
+      <summary>Creates a new <see cref="T:System.Xml.XmlWriter" /> instance using the <see cref="T:System.Text.StringBuilder" /> and <see cref="T:System.Xml.XmlWriterSettings" /> objects.</summary>
+      <returns>An <see cref="T:System.Xml.XmlWriter" /> object.</returns>
+      <param name="output">The <see cref="T:System.Text.StringBuilder" /> to which to write to. Content written by the <see cref="T:System.Xml.XmlWriter" /> is appended to the <see cref="T:System.Text.StringBuilder" />.</param>
+      <param name="settings">The <see cref="T:System.Xml.XmlWriterSettings" /> object used to configure the new <see cref="T:System.Xml.XmlWriter" /> instance. If this is null, a <see cref="T:System.Xml.XmlWriterSettings" /> with default settings is used.If the <see cref="T:System.Xml.XmlWriter" /> is being used with the <see cref="M:System.Xml.Xsl.XslCompiledTransform.Transform(System.String,System.Xml.XmlWriter)" /> method, you should use the <see cref="P:System.Xml.Xsl.XslCompiledTransform.OutputSettings" /> property to obtain an <see cref="T:System.Xml.XmlWriterSettings" /> object with the correct settings. This ensures that the created <see cref="T:System.Xml.XmlWriter" /> object has the correct output settings.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="builder" /> value is null.</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.Create(System.Xml.XmlWriter)">
+      <summary>Creates a new <see cref="T:System.Xml.XmlWriter" /> instance using the specified <see cref="T:System.Xml.XmlWriter" /> object.</summary>
+      <returns>An <see cref="T:System.Xml.XmlWriter" /> object that is wrapped around the specified <see cref="T:System.Xml.XmlWriter" /> object.</returns>
+      <param name="output">The <see cref="T:System.Xml.XmlWriter" /> object that you want to use as the underlying writer.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="writer" /> value is null.</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.Create(System.Xml.XmlWriter,System.Xml.XmlWriterSettings)">
+      <summary>Creates a new <see cref="T:System.Xml.XmlWriter" /> instance using the specified <see cref="T:System.Xml.XmlWriter" /> and <see cref="T:System.Xml.XmlWriterSettings" /> objects.</summary>
+      <returns>An <see cref="T:System.Xml.XmlWriter" /> object that is wrapped around the specified <see cref="T:System.Xml.XmlWriter" /> object.</returns>
+      <param name="output">The <see cref="T:System.Xml.XmlWriter" /> object that you want to use as the underlying writer.</param>
+      <param name="settings">The <see cref="T:System.Xml.XmlWriterSettings" /> object used to configure the new <see cref="T:System.Xml.XmlWriter" /> instance. If this is null, a <see cref="T:System.Xml.XmlWriterSettings" /> with default settings is used.If the <see cref="T:System.Xml.XmlWriter" /> is being used with the <see cref="M:System.Xml.Xsl.XslCompiledTransform.Transform(System.String,System.Xml.XmlWriter)" /> method, you should use the <see cref="P:System.Xml.Xsl.XslCompiledTransform.OutputSettings" /> property to obtain an <see cref="T:System.Xml.XmlWriterSettings" /> object with the correct settings. This ensures that the created <see cref="T:System.Xml.XmlWriter" /> object has the correct output settings.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="writer" /> value is null.</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.Dispose">
+      <summary>Releases all resources used by the current instance of the <see cref="T:System.Xml.XmlWriter" /> class.</summary>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.Dispose(System.Boolean)">
+      <summary>Releases the unmanaged resources used by the <see cref="T:System.Xml.XmlWriter" /> and optionally releases the managed resources.</summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.Flush">
+      <summary>When overridden in a derived class, flushes whatever is in the buffer to the underlying streams and also flushes the underlying stream.</summary>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.FlushAsync">
+      <summary>Asynchronously flushes whatever is in the buffer to the underlying streams and also flushes the underlying stream.</summary>
+      <returns>The task that represents the asynchronous Flush operation.</returns>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.LookupPrefix(System.String)">
+      <summary>When overridden in a derived class, returns the closest prefix defined in the current namespace scope for the namespace URI.</summary>
+      <returns>The matching prefix or null if no matching namespace URI is found in the current scope.</returns>
+      <param name="ns">The namespace URI whose prefix you want to find.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="ns" /> is either null or String.Empty.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="P:System.Xml.XmlWriter.Settings">
+      <summary>Gets the <see cref="T:System.Xml.XmlWriterSettings" /> object used to create this <see cref="T:System.Xml.XmlWriter" /> instance.</summary>
+      <returns>The <see cref="T:System.Xml.XmlWriterSettings" /> object used to create this writer instance. If this writer was not created using the <see cref="Overload:System.Xml.XmlWriter.Create" /> method, this property returns null.</returns>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteAttributes(System.Xml.XmlReader,System.Boolean)">
+      <summary>When overridden in a derived class, writes out all the attributes found at the current position in the <see cref="T:System.Xml.XmlReader" />.</summary>
+      <param name="reader">The XmlReader from which to copy the attributes.</param>
+      <param name="defattr">true to copy the default attributes from the XmlReader; otherwise, false.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="reader" /> is null. </exception>
+      <exception cref="T:System.Xml.XmlException">The reader is not positioned on an element, attribute or XmlDeclaration node. </exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteAttributesAsync(System.Xml.XmlReader,System.Boolean)">
+      <summary>Asynchronously writes out all the attributes found at the current position in the <see cref="T:System.Xml.XmlReader" />.</summary>
+      <returns>The task that represents the asynchronous WriteAttributes operation.</returns>
+      <param name="reader">The XmlReader from which to copy the attributes.</param>
+      <param name="defattr">true to copy the default attributes from the XmlReader; otherwise, false.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteAttributeString(System.String,System.String)">
+      <summary>When overridden in a derived class, writes out the attribute with the specified local name and value.</summary>
+      <param name="localName">The local name of the attribute.</param>
+      <param name="value">The value of the attribute.</param>
+      <exception cref="T:System.InvalidOperationException">The state of writer is not WriteState.Element or writer is closed. </exception>
+      <exception cref="T:System.ArgumentException">The xml:space or xml:lang attribute value is invalid. </exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteAttributeString(System.String,System.String,System.String)">
+      <summary>When overridden in a derived class, writes an attribute with the specified local name, namespace URI, and value.</summary>
+      <param name="localName">The local name of the attribute.</param>
+      <param name="ns">The namespace URI to associate with the attribute.</param>
+      <param name="value">The value of the attribute.</param>
+      <exception cref="T:System.InvalidOperationException">The state of writer is not WriteState.Element or writer is closed. </exception>
+      <exception cref="T:System.ArgumentException">The xml:space or xml:lang attribute value is invalid. </exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteAttributeString(System.String,System.String,System.String,System.String)">
+      <summary>When overridden in a derived class, writes out the attribute with the specified prefix, local name, namespace URI, and value.</summary>
+      <param name="prefix">The namespace prefix of the attribute.</param>
+      <param name="localName">The local name of the attribute.</param>
+      <param name="ns">The namespace URI of the attribute.</param>
+      <param name="value">The value of the attribute.</param>
+      <exception cref="T:System.InvalidOperationException">The state of writer is not WriteState.Element or writer is closed. </exception>
+      <exception cref="T:System.ArgumentException">The xml:space or xml:lang attribute value is invalid. </exception>
+      <exception cref="T:System.Xml.XmlException">The <paramref name="localName" /> or <paramref name="ns" /> is null. </exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteAttributeStringAsync(System.String,System.String,System.String,System.String)">
+      <summary>Asynchronously writes out the attribute with the specified prefix, local name, namespace URI, and value.</summary>
+      <returns>The task that represents the asynchronous WriteAttributeString operation.</returns>
+      <param name="prefix">The namespace prefix of the attribute.</param>
+      <param name="localName">The local name of the attribute.</param>
+      <param name="ns">The namespace URI of the attribute.</param>
+      <param name="value">The value of the attribute.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteBase64(System.Byte[],System.Int32,System.Int32)">
+      <summary>When overridden in a derived class, encodes the specified binary bytes as Base64 and writes out the resulting text.</summary>
+      <param name="buffer">Byte array to encode.</param>
+      <param name="index">The position in the buffer indicating the start of the bytes to write.</param>
+      <param name="count">The number of bytes to write.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="buffer" /> is null. </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="index" /> or <paramref name="count" /> is less than zero. -or-The buffer length minus <paramref name="index" /> is less than <paramref name="count" />.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteBase64Async(System.Byte[],System.Int32,System.Int32)">
+      <summary>Asynchronously encodes the specified binary bytes as Base64 and writes out the resulting text.</summary>
+      <returns>The task that represents the asynchronous WriteBase64 operation.</returns>
+      <param name="buffer">Byte array to encode.</param>
+      <param name="index">The position in the buffer indicating the start of the bytes to write.</param>
+      <param name="count">The number of bytes to write.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteBinHex(System.Byte[],System.Int32,System.Int32)">
+      <summary>When overridden in a derived class, encodes the specified binary bytes as BinHex and writes out the resulting text.</summary>
+      <param name="buffer">Byte array to encode.</param>
+      <param name="index">The position in the buffer indicating the start of the bytes to write.</param>
+      <param name="count">The number of bytes to write.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="buffer" /> is null.</exception>
+      <exception cref="T:System.InvalidOperationException">The writer is closed or in error state.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="index" /> or <paramref name="count" /> is less than zero. -or-The buffer length minus <paramref name="index" /> is less than <paramref name="count" />.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteBinHexAsync(System.Byte[],System.Int32,System.Int32)">
+      <summary>Asynchronously encodes the specified binary bytes as BinHex and writes out the resulting text.</summary>
+      <returns>The task that represents the asynchronous WriteBinHex operation.</returns>
+      <param name="buffer">Byte array to encode.</param>
+      <param name="index">The position in the buffer indicating the start of the bytes to write.</param>
+      <param name="count">The number of bytes to write.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteCData(System.String)">
+      <summary>When overridden in a derived class, writes out a &lt;![CDATA[...]]&gt; block containing the specified text.</summary>
+      <param name="text">The text to place inside the CDATA block.</param>
+      <exception cref="T:System.ArgumentException">The text would result in a non-well formed XML document.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteCDataAsync(System.String)">
+      <summary>Asynchronously writes out a &lt;![CDATA[...]]&gt; block containing the specified text.</summary>
+      <returns>The task that represents the asynchronous WriteCData operation.</returns>
+      <param name="text">The text to place inside the CDATA block.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteCharEntity(System.Char)">
+      <summary>When overridden in a derived class, forces the generation of a character entity for the specified Unicode character value.</summary>
+      <param name="ch">The Unicode character for which to generate a character entity.</param>
+      <exception cref="T:System.ArgumentException">The character is in the surrogate pair character range, 0xd800 - 0xdfff.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteCharEntityAsync(System.Char)">
+      <summary>Asynchronously forces the generation of a character entity for the specified Unicode character value.</summary>
+      <returns>The task that represents the asynchronous WriteCharEntity operation.</returns>
+      <param name="ch">The Unicode character for which to generate a character entity.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteChars(System.Char[],System.Int32,System.Int32)">
+      <summary>When overridden in a derived class, writes text one buffer at a time.</summary>
+      <param name="buffer">Character array containing the text to write.</param>
+      <param name="index">The position in the buffer indicating the start of the text to write.</param>
+      <param name="count">The number of characters to write.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="buffer" /> is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="index" /> or <paramref name="count" /> is less than zero.-or-The buffer length minus <paramref name="index" /> is less than <paramref name="count" />; the call results in surrogate pair characters being split or an invalid surrogate pair being written.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="buffer" /> parameter value is not valid.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteCharsAsync(System.Char[],System.Int32,System.Int32)">
+      <summary>Asynchronously writes text one buffer at a time.</summary>
+      <returns>The task that represents the asynchronous WriteChars operation.</returns>
+      <param name="buffer">Character array containing the text to write.</param>
+      <param name="index">The position in the buffer indicating the start of the text to write.</param>
+      <param name="count">The number of characters to write.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteComment(System.String)">
+      <summary>When overridden in a derived class, writes out a comment &lt;!--...--&gt; containing the specified text.</summary>
+      <param name="text">Text to place inside the comment.</param>
+      <exception cref="T:System.ArgumentException">The text would result in a non-well-formed XML document.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteCommentAsync(System.String)">
+      <summary>Asynchronously writes out a comment &lt;!--...--&gt; containing the specified text.</summary>
+      <returns>The task that represents the asynchronous WriteComment operation.</returns>
+      <param name="text">Text to place inside the comment.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteDocType(System.String,System.String,System.String,System.String)">
+      <summary>When overridden in a derived class, writes the DOCTYPE declaration with the specified name and optional attributes.</summary>
+      <param name="name">The name of the DOCTYPE. This must be non-empty.</param>
+      <param name="pubid">If non-null it also writes PUBLIC "pubid" "sysid" where <paramref name="pubid" /> and <paramref name="sysid" /> are replaced with the value of the given arguments.</param>
+      <param name="sysid">If <paramref name="pubid" /> is null and <paramref name="sysid" /> is non-null it writes SYSTEM "sysid" where <paramref name="sysid" /> is replaced with the value of this argument.</param>
+      <param name="subset">If non-null it writes [subset] where subset is replaced with the value of this argument.</param>
+      <exception cref="T:System.InvalidOperationException">This method was called outside the prolog (after the root element). </exception>
+      <exception cref="T:System.ArgumentException">The value for <paramref name="name" /> would result in invalid XML.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteDocTypeAsync(System.String,System.String,System.String,System.String)">
+      <summary>Asynchronously writes the DOCTYPE declaration with the specified name and optional attributes.</summary>
+      <returns>The task that represents the asynchronous WriteDocType operation.</returns>
+      <param name="name">The name of the DOCTYPE. This must be non-empty.</param>
+      <param name="pubid">If non-null it also writes PUBLIC "pubid" "sysid" where <paramref name="pubid" /> and <paramref name="sysid" /> are replaced with the value of the given arguments.</param>
+      <param name="sysid">If <paramref name="pubid" /> is null and <paramref name="sysid" /> is non-null it writes SYSTEM "sysid" where <paramref name="sysid" /> is replaced with the value of this argument.</param>
+      <param name="subset">If non-null it writes [subset] where subset is replaced with the value of this argument.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteElementString(System.String,System.String)">
+      <summary>Writes an element with the specified local name and value.</summary>
+      <param name="localName">The local name of the element.</param>
+      <param name="value">The value of the element.</param>
+      <exception cref="T:System.ArgumentException">The <paramref name="localName" /> value is null or an empty string.-or-The parameter values are not valid.</exception>
+      <exception cref="T:System.Text.EncoderFallbackException">There is a character in the buffer that is a valid XML character but is not valid for the output encoding. For example, if the output encoding is ASCII, you should only use characters from the range of 0 to 127 for element and attribute names. The invalid character might be in the argument of this method or in an argument of previous methods that were writing to the buffer. Such characters are escaped by character entity references when possible (for example, in text nodes or attribute values). However, the character entity reference is not allowed in element and attribute names, comments, processing instructions, or CDATA sections.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteElementString(System.String,System.String,System.String)">
+      <summary>Writes an element with the specified local name, namespace URI, and value.</summary>
+      <param name="localName">The local name of the element.</param>
+      <param name="ns">The namespace URI to associate with the element.</param>
+      <param name="value">The value of the element.</param>
+      <exception cref="T:System.ArgumentException">The <paramref name="localName" /> value is null or an empty string.-or-The parameter values are not valid.</exception>
+      <exception cref="T:System.Text.EncoderFallbackException">There is a character in the buffer that is a valid XML character but is not valid for the output encoding. For example, if the output encoding is ASCII, you should only use characters from the range of 0 to 127 for element and attribute names. The invalid character might be in the argument of this method or in an argument of previous methods that were writing to the buffer. Such characters are escaped by character entity references when possible (for example, in text nodes or attribute values). However, the character entity reference is not allowed in element and attribute names, comments, processing instructions, or CDATA sections.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteElementString(System.String,System.String,System.String,System.String)">
+      <summary>Writes an element with the specified prefix, local name, namespace URI, and value.</summary>
+      <param name="prefix">The prefix of the element.</param>
+      <param name="localName">The local name of the element.</param>
+      <param name="ns">The namespace URI of the element.</param>
+      <param name="value">The value of the element.</param>
+      <exception cref="T:System.ArgumentException">The <paramref name="localName" /> value is null or an empty string.-or-The parameter values are not valid.</exception>
+      <exception cref="T:System.Text.EncoderFallbackException">There is a character in the buffer that is a valid XML character but is not valid for the output encoding. For example, if the output encoding is ASCII, you should only use characters from the range of 0 to 127 for element and attribute names. The invalid character might be in the argument of this method or in an argument of previous methods that were writing to the buffer. Such characters are escaped by character entity references when possible (for example, in text nodes or attribute values). However, the character entity reference is not allowed in element and attribute names, comments, processing instructions, or CDATA sections.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteElementStringAsync(System.String,System.String,System.String,System.String)">
+      <summary>Asynchronously writes an element with the specified prefix, local name, namespace URI, and value.</summary>
+      <returns>The task that represents the asynchronous WriteElementString operation.</returns>
+      <param name="prefix">The prefix of the element.</param>
+      <param name="localName">The local name of the element.</param>
+      <param name="ns">The namespace URI of the element.</param>
+      <param name="value">The value of the element.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteEndAttribute">
+      <summary>When overridden in a derived class, closes the previous <see cref="M:System.Xml.XmlWriter.WriteStartAttribute(System.String,System.String)" /> call.</summary>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteEndAttributeAsync">
+      <summary>Asynchronously closes the previous <see cref="M:System.Xml.XmlWriter.WriteStartAttribute(System.String,System.String)" /> call.</summary>
+      <returns>The task that represents the asynchronous WriteEndAttribute operation.</returns>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteEndDocument">
+      <summary>When overridden in a derived class, closes any open elements or attributes and puts the writer back in the Start state.</summary>
+      <exception cref="T:System.ArgumentException">The XML document is invalid.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteEndDocumentAsync">
+      <summary>Asynchronously closes any open elements or attributes and puts the writer back in the Start state.</summary>
+      <returns>The task that represents the asynchronous WriteEndDocument operation.</returns>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteEndElement">
+      <summary>When overridden in a derived class, closes one element and pops the corresponding namespace scope.</summary>
+      <exception cref="T:System.InvalidOperationException">This results in an invalid XML document.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteEndElementAsync">
+      <summary>Asynchronously closes one element and pops the corresponding namespace scope.</summary>
+      <returns>The task that represents the asynchronous WriteEndElement operation.</returns>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteEntityRef(System.String)">
+      <summary>When overridden in a derived class, writes out an entity reference as &amp;name;.</summary>
+      <param name="name">The name of the entity reference.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> is either null or String.Empty.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteEntityRefAsync(System.String)">
+      <summary>Asynchronously writes out an entity reference as &amp;name;.</summary>
+      <returns>The task that represents the asynchronous WriteEntityRef operation.</returns>
+      <param name="name">The name of the entity reference.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteFullEndElement">
+      <summary>When overridden in a derived class, closes one element and pops the corresponding namespace scope.</summary>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteFullEndElementAsync">
+      <summary>Asynchronously closes one element and pops the corresponding namespace scope.</summary>
+      <returns>The task that represents the asynchronous WriteFullEndElement operation.</returns>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteName(System.String)">
+      <summary>When overridden in a derived class, writes out the specified name, ensuring it is a valid name according to the W3C XML 1.0 recommendation (http://www.w3.org/TR/1998/REC-xml-19980210#NT-Name).</summary>
+      <param name="name">The name to write.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> is not a valid XML name; or <paramref name="name" /> is either null or String.Empty.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteNameAsync(System.String)">
+      <summary>Asynchronously writes out the specified name, ensuring it is a valid name according to the W3C XML 1.0 recommendation (http://www.w3.org/TR/1998/REC-xml-19980210#NT-Name).</summary>
+      <returns>The task that represents the asynchronous WriteName operation.</returns>
+      <param name="name">The name to write.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteNmToken(System.String)">
+      <summary>When overridden in a derived class, writes out the specified name, ensuring it is a valid NmToken according to the W3C XML 1.0 recommendation (http://www.w3.org/TR/1998/REC-xml-19980210#NT-Name).</summary>
+      <param name="name">The name to write.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> is not a valid NmToken; or <paramref name="name" /> is either null or String.Empty.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteNmTokenAsync(System.String)">
+      <summary>Asynchronously writes out the specified name, ensuring it is a valid NmToken according to the W3C XML 1.0 recommendation (http://www.w3.org/TR/1998/REC-xml-19980210#NT-Name).</summary>
+      <returns>The task that represents the asynchronous WriteNmToken operation.</returns>
+      <param name="name">The name to write.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteNode(System.Xml.XmlReader,System.Boolean)">
+      <summary>When overridden in a derived class, copies everything from the reader to the writer and moves the reader to the start of the next sibling.</summary>
+      <param name="reader">The <see cref="T:System.Xml.XmlReader" /> to read from.</param>
+      <param name="defattr">true to copy the default attributes from the XmlReader; otherwise, false.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="reader" /> is null.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="reader" /> contains invalid characters.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
     <member name="M:System.Xml.XmlWriter.WriteNode(System.Xml.XPath.XPathNavigator,System.Boolean)">
       <summary>Copies everything from the <see cref="T:System.Xml.XPath.XPathNavigator" /> object to the writer. The position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> remains unchanged.</summary>
       <param name="navigator">The <see cref="T:System.Xml.XPath.XPathNavigator" /> to copy from.</param>
@@ -4905,6 +5705,14 @@
       <exception cref="T:System.ArgumentNullException">
         <paramref name="navigator" /> is null.</exception>
       <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteNodeAsync(System.Xml.XmlReader,System.Boolean)">
+      <summary>Asynchronously copies everything from the reader to the writer and moves the reader to the start of the next sibling.</summary>
+      <returns>The task that represents the asynchronous WriteNode operation.</returns>
+      <param name="reader">The <see cref="T:System.Xml.XmlReader" /> to read from.</param>
+      <param name="defattr">true to copy the default attributes from the XmlReader; otherwise, false.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
     </member>
     <member name="M:System.Xml.XmlWriter.WriteNodeAsync(System.Xml.XPath.XPathNavigator,System.Boolean)">
       <summary>Asynchronously copies everything from the <see cref="T:System.Xml.XPath.XPathNavigator" /> object to the writer. The position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> remains unchanged.</summary>
@@ -4914,10 +5722,274 @@
       <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
       <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
     </member>
+    <member name="M:System.Xml.XmlWriter.WriteProcessingInstruction(System.String,System.String)">
+      <summary>When overridden in a derived class, writes out a processing instruction with a space between the name and text as follows: &lt;?name text?&gt;.</summary>
+      <param name="name">The name of the processing instruction.</param>
+      <param name="text">The text to include in the processing instruction.</param>
+      <exception cref="T:System.ArgumentException">The text would result in a non-well formed XML document.<paramref name="name" /> is either null or String.Empty.This method is being used to create an XML declaration after <see cref="M:System.Xml.XmlWriter.WriteStartDocument" /> has already been called. </exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteProcessingInstructionAsync(System.String,System.String)">
+      <summary>Asynchronously writes out a processing instruction with a space between the name and text as follows: &lt;?name text?&gt;.</summary>
+      <returns>The task that represents the asynchronous WriteProcessingInstruction operation.</returns>
+      <param name="name">The name of the processing instruction.</param>
+      <param name="text">The text to include in the processing instruction.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteQualifiedName(System.String,System.String)">
+      <summary>When overridden in a derived class, writes out the namespace-qualified name. This method looks up the prefix that is in scope for the given namespace.</summary>
+      <param name="localName">The local name to write.</param>
+      <param name="ns">The namespace URI for the name.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="localName" /> is either null or String.Empty.<paramref name="localName" /> is not a valid name. </exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteQualifiedNameAsync(System.String,System.String)">
+      <summary>Asynchronously writes out the namespace-qualified name. This method looks up the prefix that is in scope for the given namespace.</summary>
+      <returns>The task that represents the asynchronous WriteQualifiedName operation.</returns>
+      <param name="localName">The local name to write.</param>
+      <param name="ns">The namespace URI for the name.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteRaw(System.Char[],System.Int32,System.Int32)">
+      <summary>When overridden in a derived class, writes raw markup manually from a character buffer.</summary>
+      <param name="buffer">Character array containing the text to write.</param>
+      <param name="index">The position within the buffer indicating the start of the text to write.</param>
+      <param name="count">The number of characters to write.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="buffer" /> is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="index" /> or <paramref name="count" /> is less than zero. -or-The buffer length minus <paramref name="index" /> is less than <paramref name="count" />.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteRaw(System.String)">
+      <summary>When overridden in a derived class, writes raw markup manually from a string.</summary>
+      <param name="data">String containing the text to write.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="data" /> is either null or String.Empty.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteRawAsync(System.Char[],System.Int32,System.Int32)">
+      <summary>Asynchronously writes raw markup manually from a character buffer.</summary>
+      <returns>The task that represents the asynchronous WriteRaw operation.</returns>
+      <param name="buffer">Character array containing the text to write.</param>
+      <param name="index">The position within the buffer indicating the start of the text to write.</param>
+      <param name="count">The number of characters to write.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteRawAsync(System.String)">
+      <summary>Asynchronously writes raw markup manually from a string.</summary>
+      <returns>The task that represents the asynchronous WriteRaw operation.</returns>
+      <param name="data">String containing the text to write.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStartAttribute(System.String)">
+      <summary>Writes the start of an attribute with the specified local name.</summary>
+      <param name="localName">The local name of the attribute.</param>
+      <exception cref="T:System.InvalidOperationException">The writer is closed.</exception>
+      <exception cref="T:System.Text.EncoderFallbackException">There is a character in the buffer that is a valid XML character but is not valid for the output encoding. For example, if the output encoding is ASCII, you should only use characters from the range of 0 to 127 for element and attribute names. The invalid character might be in the argument of this method or in an argument of previous methods that were writing to the buffer. Such characters are escaped by character entity references when possible (for example, in text nodes or attribute values). However, the character entity reference is not allowed in element and attribute names, comments, processing instructions, or CDATA sections.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStartAttribute(System.String,System.String)">
+      <summary>Writes the start of an attribute with the specified local name and namespace URI.</summary>
+      <param name="localName">The local name of the attribute.</param>
+      <param name="ns">The namespace URI of the attribute.</param>
+      <exception cref="T:System.Text.EncoderFallbackException">There is a character in the buffer that is a valid XML character but is not valid for the output encoding. For example, if the output encoding is ASCII, you should only use characters from the range of 0 to 127 for element and attribute names. The invalid character might be in the argument of this method or in an argument of previous methods that were writing to the buffer. Such characters are escaped by character entity references when possible (for example, in text nodes or attribute values). However, the character entity reference is not allowed in element and attribute names, comments, processing instructions, or CDATA sections.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStartAttribute(System.String,System.String,System.String)">
+      <summary>When overridden in a derived class, writes the start of an attribute with the specified prefix, local name, and namespace URI.</summary>
+      <param name="prefix">The namespace prefix of the attribute.</param>
+      <param name="localName">The local name of the attribute.</param>
+      <param name="ns">The namespace URI for the attribute.</param>
+      <exception cref="T:System.Text.EncoderFallbackException">There is a character in the buffer that is a valid XML character but is not valid for the output encoding. For example, if the output encoding is ASCII, you should only use characters from the range of 0 to 127 for element and attribute names. The invalid character might be in the argument of this method or in an argument of previous methods that were writing to the buffer. Such characters are escaped by character entity references when possible (for example, in text nodes or attribute values). However, the character entity reference is not allowed in element and attribute names, comments, processing instructions, or CDATA sections. </exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStartAttributeAsync(System.String,System.String,System.String)">
+      <summary>Asynchronously writes the start of an attribute with the specified prefix, local name, and namespace URI.</summary>
+      <returns>The task that represents the asynchronous WriteStartAttribute operation.</returns>
+      <param name="prefix">The namespace prefix of the attribute.</param>
+      <param name="localName">The local name of the attribute.</param>
+      <param name="ns">The namespace URI for the attribute.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStartDocument">
+      <summary>When overridden in a derived class, writes the XML declaration with the version "1.0".</summary>
+      <exception cref="T:System.InvalidOperationException">This is not the first write method called after the constructor.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStartDocument(System.Boolean)">
+      <summary>When overridden in a derived class, writes the XML declaration with the version "1.0" and the standalone attribute.</summary>
+      <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no".</param>
+      <exception cref="T:System.InvalidOperationException">This is not the first write method called after the constructor. </exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStartDocumentAsync">
+      <summary>Asynchronously writes the XML declaration with the version "1.0".</summary>
+      <returns>The task that represents the asynchronous WriteStartDocument operation.</returns>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStartDocumentAsync(System.Boolean)">
+      <summary>Asynchronously writes the XML declaration with the version "1.0" and the standalone attribute.</summary>
+      <returns>The task that represents the asynchronous WriteStartDocument operation.</returns>
+      <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no".</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStartElement(System.String)">
+      <summary>When overridden in a derived class, writes out a start tag with the specified local name.</summary>
+      <param name="localName">The local name of the element.</param>
+      <exception cref="T:System.InvalidOperationException">The writer is closed.</exception>
+      <exception cref="T:System.Text.EncoderFallbackException">There is a character in the buffer that is a valid XML character but is not valid for the output encoding. For example, if the output encoding is ASCII, you should only use characters from the range of 0 to 127 for element and attribute names. The invalid character might be in the argument of this method or in an argument of previous methods that were writing to the buffer. Such characters are escaped by character entity references when possible (for example, in text nodes or attribute values). However, the character entity reference is not allowed in element and attribute names, comments, processing instructions, or CDATA sections. </exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStartElement(System.String,System.String)">
+      <summary>When overridden in a derived class, writes the specified start tag and associates it with the given namespace.</summary>
+      <param name="localName">The local name of the element.</param>
+      <param name="ns">The namespace URI to associate with the element. If this namespace is already in scope and has an associated prefix, the writer automatically writes that prefix also.</param>
+      <exception cref="T:System.InvalidOperationException">The writer is closed.</exception>
+      <exception cref="T:System.Text.EncoderFallbackException">There is a character in the buffer that is a valid XML character but is not valid for the output encoding. For example, if the output encoding is ASCII, you should only use characters from the range of 0 to 127 for element and attribute names. The invalid character might be in the argument of this method or in an argument of previous methods that were writing to the buffer. Such characters are escaped by character entity references when possible (for example, in text nodes or attribute values). However, the character entity reference is not allowed in element and attribute names, comments, processing instructions, or CDATA sections.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStartElement(System.String,System.String,System.String)">
+      <summary>When overridden in a derived class, writes the specified start tag and associates it with the given namespace and prefix.</summary>
+      <param name="prefix">The namespace prefix of the element.</param>
+      <param name="localName">The local name of the element.</param>
+      <param name="ns">The namespace URI to associate with the element.</param>
+      <exception cref="T:System.InvalidOperationException">The writer is closed.</exception>
+      <exception cref="T:System.Text.EncoderFallbackException">There is a character in the buffer that is a valid XML character but is not valid for the output encoding. For example, if the output encoding is ASCII, you should only use characters from the range of 0 to 127 for element and attribute names. The invalid character might be in the argument of this method or in an argument of previous methods that were writing to the buffer. Such characters are escaped by character entity references when possible (for example, in text nodes or attribute values). However, the character entity reference is not allowed in element and attribute names, comments, processing instructions, or CDATA sections.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStartElementAsync(System.String,System.String,System.String)">
+      <summary>Asynchronously writes the specified start tag and associates it with the given namespace and prefix.</summary>
+      <returns>The task that represents the asynchronous WriteStartElement operation.</returns>
+      <param name="prefix">The namespace prefix of the element.</param>
+      <param name="localName">The local name of the element.</param>
+      <param name="ns">The namespace URI to associate with the element.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="P:System.Xml.XmlWriter.WriteState">
+      <summary>When overridden in a derived class, gets the state of the writer.</summary>
+      <returns>One of the <see cref="T:System.Xml.WriteState" /> values.</returns>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteString(System.String)">
+      <summary>When overridden in a derived class, writes the given text content.</summary>
+      <param name="text">The text to write.</param>
+      <exception cref="T:System.ArgumentException">The text string contains an invalid surrogate pair.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteStringAsync(System.String)">
+      <summary>Asynchronously writes the given text content.</summary>
+      <returns>The task that represents the asynchronous WriteString operation.</returns>
+      <param name="text">The text to write.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteSurrogateCharEntity(System.Char,System.Char)">
+      <summary>When overridden in a derived class, generates and writes the surrogate character entity for the surrogate character pair.</summary>
+      <param name="lowChar">The low surrogate. This must be a value between 0xDC00 and 0xDFFF.</param>
+      <param name="highChar">The high surrogate. This must be a value between 0xD800 and 0xDBFF.</param>
+      <exception cref="T:System.ArgumentException">An invalid surrogate character pair was passed.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteSurrogateCharEntityAsync(System.Char,System.Char)">
+      <summary>Asynchronously generates and writes the surrogate character entity for the surrogate character pair.</summary>
+      <returns>The task that represents the asynchronous WriteSurrogateCharEntity operation.</returns>
+      <param name="lowChar">The low surrogate. This must be a value between 0xDC00 and 0xDFFF.</param>
+      <param name="highChar">The high surrogate. This must be a value between 0xD800 and 0xDBFF.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteValue(System.Boolean)">
+      <summary>Writes a <see cref="T:System.Boolean" /> value.</summary>
+      <param name="value">The <see cref="T:System.Boolean" /> value to write.</param>
+      <exception cref="T:System.ArgumentException">An invalid value was specified.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
     <member name="M:System.Xml.XmlWriter.WriteValue(System.DateTime)">
       <summary>Writes a <see cref="T:System.DateTime" /> value.</summary>
       <param name="value">The <see cref="T:System.DateTime" /> value to write.</param>
       <exception cref="T:System.ArgumentException">An invalid value was specified.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteValue(System.DateTimeOffset)">
+      <summary>Writes a <see cref="T:System.DateTimeOffset" /> value.</summary>
+      <param name="value">The <see cref="T:System.DateTimeOffset" /> value to write.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteValue(System.Decimal)">
+      <summary>Writes a <see cref="T:System.Decimal" /> value.</summary>
+      <param name="value">The <see cref="T:System.Decimal" /> value to write.</param>
+      <exception cref="T:System.ArgumentException">An invalid value was specified.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteValue(System.Double)">
+      <summary>Writes a <see cref="T:System.Double" /> value.</summary>
+      <param name="value">The <see cref="T:System.Double" /> value to write.</param>
+      <exception cref="T:System.ArgumentException">An invalid value was specified.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteValue(System.Int32)">
+      <summary>Writes a <see cref="T:System.Int32" /> value.</summary>
+      <param name="value">The <see cref="T:System.Int32" /> value to write.</param>
+      <exception cref="T:System.ArgumentException">An invalid value was specified.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteValue(System.Int64)">
+      <summary>Writes a <see cref="T:System.Int64" /> value.</summary>
+      <param name="value">The <see cref="T:System.Int64" /> value to write.</param>
+      <exception cref="T:System.ArgumentException">An invalid value was specified.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteValue(System.Object)">
+      <summary>Writes the object value.</summary>
+      <param name="value">The object value to write.Note   With the release of the .NET Framework 3.5, this method accepts <see cref="T:System.DateTimeOffset" /> as a parameter.</param>
+      <exception cref="T:System.ArgumentException">An invalid value was specified.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="value" /> is null.</exception>
+      <exception cref="T:System.InvalidOperationException">The writer is closed or in error state.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteValue(System.Single)">
+      <summary>Writes a single-precision floating-point number.</summary>
+      <param name="value">The single-precision floating-point number to write.</param>
+      <exception cref="T:System.ArgumentException">An invalid value was specified.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteValue(System.String)">
+      <summary>Writes a <see cref="T:System.String" /> value.</summary>
+      <param name="value">The <see cref="T:System.String" /> value to write.</param>
+      <exception cref="T:System.ArgumentException">An invalid value was specified.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteWhitespace(System.String)">
+      <summary>When overridden in a derived class, writes out the given white space.</summary>
+      <param name="ws">The string of white space characters.</param>
+      <exception cref="T:System.ArgumentException">The string contains non-white space characters.</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="M:System.Xml.XmlWriter.WriteWhitespaceAsync(System.String)">
+      <summary>Asynchronously writes out the given white space.</summary>
+      <returns>The task that represents the asynchronous WriteWhitespace operation.</returns>
+      <param name="ws">The string of white space characters.</param>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlWriterSettings.Async" /> flag to true. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlWriterSettings.Async to true if you want to use Async Methods.”</exception>
+    </member>
+    <member name="P:System.Xml.XmlWriter.XmlLang">
+      <summary>When overridden in a derived class, gets the current xml:lang scope.</summary>
+      <returns>The current xml:lang scope.</returns>
+      <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+    </member>
+    <member name="P:System.Xml.XmlWriter.XmlSpace">
+      <summary>When overridden in a derived class, gets an <see cref="T:System.Xml.XmlSpace" /> representing the current xml:space scope.</summary>
+      <returns>An XmlSpace representing the current xml:space scope.Value Meaning NoneThis is the default if no xml:space scope exists.DefaultThe current scope is xml:space="default".PreserveThe current scope is xml:space="preserve".</returns>
       <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlWriter" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
     </member>
     <member name="T:System.Xml.XmlWriterSettings">
@@ -6158,6 +7230,18 @@
     <member name="P:System.Xml.Schema.XmlSchemaFacet.Value">
       <summary>Gets or sets the value attribute of the facet.</summary>
       <returns>The value attribute.</returns>
+    </member>
+    <member name="T:System.Xml.Schema.XmlSchemaForm">
+      <summary>Indicates if attributes or elements need to be qualified with a namespace prefix.</summary>
+    </member>
+    <member name="F:System.Xml.Schema.XmlSchemaForm.None">
+      <summary>Element and attribute form is not specified in the schema.</summary>
+    </member>
+    <member name="F:System.Xml.Schema.XmlSchemaForm.Qualified">
+      <summary>Elements and attributes must be qualified with a namespace prefix.</summary>
+    </member>
+    <member name="F:System.Xml.Schema.XmlSchemaForm.Unqualified">
+      <summary>Elements and attributes are not required to be qualified with a namespace prefix.</summary>
     </member>
     <member name="T:System.Xml.Schema.XmlSchemaFractionDigitsFacet">
       <summary>Specifies a restriction on the number of digits that can be entered for the fraction value of a simpleType element. The value of fractionDigits must be a positive integer. Represents the World Wide Web Consortium (W3C) fractionDigits facet.</summary>
@@ -7577,6 +8661,21 @@
       <summary>Gets a collection of warnings that are generated when importing the code entity descriptions.</summary>
       <returns>A <see cref="T:System.Collections.Specialized.StringCollection" /> that contains warnings that were generated when importing the code entity descriptions.</returns>
     </member>
+    <member name="T:System.Xml.Serialization.IXmlSerializable">
+      <summary>Provides custom formatting for XML serialization and deserialization.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.IXmlSerializable.GetSchema">
+      <summary>This method is reserved and should not be used. When implementing the IXmlSerializable interface, you should return null (Nothing in Visual Basic) from this method, and instead, if specifying a custom schema is required, apply the <see cref="T:System.Xml.Serialization.XmlSchemaProviderAttribute" /> to the class.</summary>
+      <returns>An <see cref="T:System.Xml.Schema.XmlSchema" /> that describes the XML representation of the object that is produced by the <see cref="M:System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)" /> method and consumed by the <see cref="M:System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)" /> method.</returns>
+    </member>
+    <member name="M:System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)">
+      <summary>Generates an object from its XML representation.</summary>
+      <param name="reader">The <see cref="T:System.Xml.XmlReader" /> stream from which the object is deserialized. </param>
+    </member>
+    <member name="M:System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)">
+      <summary>Converts an object into its XML representation.</summary>
+      <param name="writer">The <see cref="T:System.Xml.XmlWriter" /> stream to which the object is serialized. </param>
+    </member>
     <member name="T:System.Xml.Serialization.IXmlTextParser">
       <summary>Establishes a <see cref="P:System.Xml.Serialization.IXmlTextParser.Normalized" /> property for use by the .NET Framework infrastructure.</summary>
     </member>
@@ -8018,6 +9117,34 @@
     <member name="M:System.Xml.Serialization.XmlAnyAttributeAttribute.#ctor">
       <summary>Constructs a new instance of the <see cref="T:System.Xml.Serialization.XmlAnyAttributeAttribute" /> class.</summary>
     </member>
+    <member name="T:System.Xml.Serialization.XmlAnyElementAttribute">
+      <summary>Specifies that the member (a field that returns an array of <see cref="T:System.Xml.XmlElement" /> or <see cref="T:System.Xml.XmlNode" /> objects) contains objects that represent any XML element that has no corresponding member in the object being serialized or deserialized.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlAnyElementAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" /> class.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlAnyElementAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" /> class and specifies the XML element name generated in the XML document.</summary>
+      <param name="name">The name of the XML element that the <see cref="T:System.Xml.Serialization.XmlSerializer" /> generates. </param>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlAnyElementAttribute.#ctor(System.String,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" /> class and specifies the XML element name generated in the XML document and its XML namespace.</summary>
+      <param name="name">The name of the XML element that the <see cref="T:System.Xml.Serialization.XmlSerializer" /> generates. </param>
+      <param name="ns">The XML namespace of the XML element. </param>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlAnyElementAttribute.Name">
+      <summary>Gets or sets the XML element name.</summary>
+      <returns>The name of the XML element.</returns>
+      <exception cref="T:System.InvalidOperationException">The element name of an array member does not match the element name specified by the <see cref="P:System.Xml.Serialization.XmlAnyElementAttribute.Name" /> property. </exception>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlAnyElementAttribute.Namespace">
+      <summary>Gets or sets the XML namespace generated in the XML document.</summary>
+      <returns>An XML namespace.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlAnyElementAttribute.Order">
+      <summary>Gets or sets the explicit order in which the elements are serialized or deserialized.</summary>
+      <returns>The order of the code generation.</returns>
+    </member>
     <member name="T:System.Xml.Serialization.XmlAnyElementAttributes">
       <summary>Represents a collection of <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" /> objects.</summary>
     </member>
@@ -8057,6 +9184,36 @@
     <member name="M:System.Xml.Serialization.XmlAnyElementAttributes.Remove(System.Xml.Serialization.XmlAnyElementAttribute)">
       <summary>Removes the specified <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" /> from the collection.</summary>
       <param name="attribute">The <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" /> to remove. </param>
+    </member>
+    <member name="T:System.Xml.Serialization.XmlArrayAttribute">
+      <summary>Specifies that the <see cref="T:System.Xml.Serialization.XmlSerializer" /> must serialize a particular class member as an array of XML elements.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlArrayAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlArrayAttribute" /> class.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlArrayAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlArrayAttribute" /> class and specifies the XML element name generated in the XML document instance.</summary>
+      <param name="elementName">The name of the XML element that the <see cref="T:System.Xml.Serialization.XmlSerializer" /> generates. </param>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlArrayAttribute.ElementName">
+      <summary>Gets or sets the XML element name given to the serialized array.</summary>
+      <returns>The XML element name of the serialized array. The default is the name of the member to which the <see cref="T:System.Xml.Serialization.XmlArrayAttribute" /> is assigned.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlArrayAttribute.Form">
+      <summary>Gets or sets a value that indicates whether the XML element name generated by the <see cref="T:System.Xml.Serialization.XmlSerializer" /> is qualified or unqualified.</summary>
+      <returns>One of the <see cref="T:System.Xml.Schema.XmlSchemaForm" /> values. The default is XmlSchemaForm.None.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlArrayAttribute.IsNullable">
+      <summary>Gets or sets a value that indicates whether the <see cref="T:System.Xml.Serialization.XmlSerializer" /> must serialize a member as an empty XML tag with the xsi:nil attribute set to true.</summary>
+      <returns>true if the <see cref="T:System.Xml.Serialization.XmlSerializer" /> generates the xsi:nil attribute; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlArrayAttribute.Namespace">
+      <summary>Gets or sets the namespace of the XML element.</summary>
+      <returns>The namespace of the XML element.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlArrayAttribute.Order">
+      <summary>Gets or sets the explicit order in which the elements are serialized or deserialized.</summary>
+      <returns>The order of the code generation.</returns>
     </member>
     <member name="T:System.Xml.Serialization.XmlArrayItemAttribute">
       <summary>Represents an attribute that specifies the derived types that the <see cref="T:System.Xml.Serialization.XmlSerializer" /> can place in a serialized array.</summary>
@@ -8213,6 +9370,34 @@
       <param name="sender">The source of the event. </param>
       <param name="e">An <see cref="T:System.Xml.Serialization.XmlAttributeEventArgs" /> that contains the event data. </param>
     </member>
+    <member name="T:System.Xml.Serialization.XmlAttributeOverrides">
+      <summary>Allows you to override property, field, and class attributes when you use the <see cref="T:System.Xml.Serialization.XmlSerializer" /> to serialize or deserialize an object.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlAttributeOverrides.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlAttributeOverrides" /> class. </summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlAttributeOverrides.Add(System.Type,System.String,System.Xml.Serialization.XmlAttributes)">
+      <summary>Adds an <see cref="T:System.Xml.Serialization.XmlAttributes" /> object to the collection of <see cref="T:System.Xml.Serialization.XmlAttributes" /> objects. The <paramref name="type" /> parameter specifies an object to be overridden. The <paramref name="member" /> parameter specifies the name of a member that is overridden.</summary>
+      <param name="type">The <see cref="T:System.Type" /> of the object to override. </param>
+      <param name="member">The name of the member to override. </param>
+      <param name="attributes">An <see cref="T:System.Xml.Serialization.XmlAttributes" /> object that represents the overriding attributes. </param>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlAttributeOverrides.Add(System.Type,System.Xml.Serialization.XmlAttributes)">
+      <summary>Adds an <see cref="T:System.Xml.Serialization.XmlAttributes" /> object to the collection of <see cref="T:System.Xml.Serialization.XmlAttributes" /> objects. The <paramref name="type" /> parameter specifies an object to be overridden by the <see cref="T:System.Xml.Serialization.XmlAttributes" /> object.</summary>
+      <param name="type">The <see cref="T:System.Type" /> of the object that is overridden. </param>
+      <param name="attributes">An <see cref="T:System.Xml.Serialization.XmlAttributes" /> object that represents the overriding attributes. </param>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlAttributeOverrides.Item(System.Type)">
+      <summary>Gets the object associated with the specified, base-class, type.</summary>
+      <returns>An <see cref="T:System.Xml.Serialization.XmlAttributes" /> that represents the collection of overriding attributes.</returns>
+      <param name="type">The base class <see cref="T:System.Type" /> that is associated with the collection of attributes you want to retrieve. </param>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlAttributeOverrides.Item(System.Type,System.String)">
+      <summary>Gets the object associated with the specified (base-class) type. The member parameter specifies the base-class member that is overridden.</summary>
+      <returns>An <see cref="T:System.Xml.Serialization.XmlAttributes" /> that represents the collection of overriding attributes.</returns>
+      <param name="type">The base class <see cref="T:System.Type" /> that is associated with the collection of attributes you want. </param>
+      <param name="member">The name of the overridden member that specifies the <see cref="T:System.Xml.Serialization.XmlAttributes" /> to return. </param>
+    </member>
     <member name="T:System.Xml.Serialization.XmlAttributes">
       <summary>Represents a collection of attribute objects that control how the <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializes and deserializes an object.</summary>
     </member>
@@ -8278,6 +9463,20 @@
     <member name="P:System.Xml.Serialization.XmlAttributes.XmlType">
       <summary>Gets or sets an object that specifies how the <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializes a class to which the <see cref="T:System.Xml.Serialization.XmlTypeAttribute" /> has been applied.</summary>
       <returns>An <see cref="T:System.Xml.Serialization.XmlTypeAttribute" /> that overrides an <see cref="T:System.Xml.Serialization.XmlTypeAttribute" /> applied to a class declaration.</returns>
+    </member>
+    <member name="T:System.Xml.Serialization.XmlChoiceIdentifierAttribute">
+      <summary>Specifies that the member can be further detected by using an enumeration.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlChoiceIdentifierAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlChoiceIdentifierAttribute" /> class.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlChoiceIdentifierAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlChoiceIdentifierAttribute" /> class.</summary>
+      <param name="name">The member name that returns the enumeration used to detect a choice. </param>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlChoiceIdentifierAttribute.MemberName">
+      <summary>Gets or sets the name of the field that returns the enumeration to use when detecting types.</summary>
+      <returns>The name of a field that returns an enumeration.</returns>
     </member>
     <member name="T:System.Xml.Serialization.XmlCodeExporter">
       <summary>Generates types and attribute declarations from internal type mapping information for XML schema element declarations.</summary>
@@ -8357,6 +9556,54 @@
     <member name="P:System.Xml.Serialization.XmlDeserializationEvents.OnUnreferencedObject">
       <summary>Gets or sets an object that represents the method that handles the <see cref="E:System.Xml.Serialization.XmlSerializer.UnreferencedObject" /> event.</summary>
       <returns>An <see cref="T:System.Xml.Serialization.UnreferencedObjectEventHandler" /> that points to the event handler.</returns>
+    </member>
+    <member name="T:System.Xml.Serialization.XmlElementAttribute">
+      <summary>Indicates that a public field or property represents an XML element when the <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializes or deserializes the object that contains it.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlElementAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlElementAttribute" /> class.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlElementAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlElementAttribute" /> class and specifies the name of the XML element.</summary>
+      <param name="elementName">The XML element name of the serialized member. </param>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlElementAttribute.#ctor(System.String,System.Type)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlElementAttribute" /> and specifies the name of the XML element and a derived type for the member to which the <see cref="T:System.Xml.Serialization.XmlElementAttribute" /> is applied. This member type is used when the <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializes the object that contains it.</summary>
+      <param name="elementName">The XML element name of the serialized member. </param>
+      <param name="type">The <see cref="T:System.Type" /> of an object derived from the member's type. </param>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlElementAttribute.#ctor(System.Type)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlElementAttribute" /> class and specifies a type for the member to which the <see cref="T:System.Xml.Serialization.XmlElementAttribute" /> is applied. This type is used by the <see cref="T:System.Xml.Serialization.XmlSerializer" /> when serializing or deserializing object that contains it.</summary>
+      <param name="type">The <see cref="T:System.Type" /> of an object derived from the member's type. </param>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlElementAttribute.DataType">
+      <summary>Gets or sets the XML Schema definition (XSD) data type of the XML element generated by the <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+      <returns>An XML Schema data type, as defined by the World Wide Web Consortium (www.w3.org) document named "XML Schema Part 2: Datatypes".</returns>
+      <exception cref="T:System.Exception">The XML Schema data type you have specified cannot be mapped to the.NET data type. </exception>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlElementAttribute.ElementName">
+      <summary>Gets or sets the name of the generated XML element.</summary>
+      <returns>The name of the generated XML element. The default is the member identifier.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlElementAttribute.Form">
+      <summary>Gets or sets a value that indicates whether the element is qualified.</summary>
+      <returns>One of the <see cref="T:System.Xml.Schema.XmlSchemaForm" /> values. The default is <see cref="F:System.Xml.Schema.XmlSchemaForm.None" />.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlElementAttribute.IsNullable">
+      <summary>Gets or sets a value that indicates whether the <see cref="T:System.Xml.Serialization.XmlSerializer" /> must serialize a member that is set to null as an empty tag with the xsi:nil attribute set to true.</summary>
+      <returns>true if the <see cref="T:System.Xml.Serialization.XmlSerializer" /> generates the xsi:nil attribute; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlElementAttribute.Namespace">
+      <summary>Gets or sets the namespace assigned to the XML element that results when the class is serialized.</summary>
+      <returns>The namespace of the XML element.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlElementAttribute.Order">
+      <summary>Gets or sets the explicit order in which the elements are serialized or deserialized.</summary>
+      <returns>The order of the code generation.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlElementAttribute.Type">
+      <summary>Gets or sets the object type used to represent the XML element.</summary>
+      <returns>The <see cref="T:System.Type" /> of the member.</returns>
     </member>
     <member name="T:System.Xml.Serialization.XmlElementAttributes">
       <summary>Represents a collection of <see cref="T:System.Xml.Serialization.XmlElementAttribute" /> objects used by the <see cref="T:System.Xml.Serialization.XmlSerializer" /> to override the default way it serializes a class.</summary>
@@ -8554,6 +9801,12 @@
     <member name="P:System.Xml.Serialization.XmlMembersMapping.TypeNamespace">
       <summary>Gets the namespace of the .NET Framework type being mapped to the data type of an XML Schema element that represents a SOAP message.</summary>
       <returns>The .NET Framework namespace of the mapping.</returns>
+    </member>
+    <member name="T:System.Xml.Serialization.XmlNamespaceDeclarationsAttribute">
+      <summary>Specifies that the target property, parameter, return value, or class member contains prefixes associated with namespaces that are used within an XML document.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlNamespaceDeclarationsAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlNamespaceDeclarationsAttribute" /> class.</summary>
     </member>
     <member name="T:System.Xml.Serialization.XmlNodeEventArgs">
       <summary>Provides data for the <see cref="E:System.Xml.Serialization.XmlSerializer.UnknownNode" /> event.</summary>
@@ -8896,6 +10149,21 @@
       <summary>Generates internal type mapping information for an element defined in an XML schema document. </summary>
       <returns>The .NET Framework type mapping information for an XML schema element.</returns>
       <param name="name">An <see cref="T:System.Xml.XmlQualifiedName" /> that specifies the name of an element defined in an XML schema document.</param>
+    </member>
+    <member name="T:System.Xml.Serialization.XmlSchemaProviderAttribute">
+      <summary>When applied to a type, stores the name of a static method of the type that returns an XML schema and a <see cref="T:System.Xml.XmlQualifiedName" /> (or <see cref="T:System.Xml.Schema.XmlSchemaType" /> for anonymous types) that controls the serialization of the type.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlSchemaProviderAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlSchemaProviderAttribute" /> class, taking the name of the static method that supplies the type's XML schema.</summary>
+      <param name="methodName">The name of the static method that must be implemented.</param>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny">
+      <summary>Gets or sets a value that determines whether the target class is a wildcard, or that the schema for the class has contains only an xs:any element.</summary>
+      <returns>true, if the class is a wildcard, or if the schema contains only the xs:any element; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlSchemaProviderAttribute.MethodName">
+      <summary>Gets the name of the static method that supplies the type's XML schema and the name of its XML Schema data type.</summary>
+      <returns>The name of the method that is invoked by the XML infrastructure to return an XML schema.</returns>
     </member>
     <member name="T:System.Xml.Serialization.XmlSchemas">
       <summary>Represents the collection of XML schemas.</summary>
@@ -10372,6 +11640,33 @@
       <summary>Gets the XML writer object for the serializer.</summary>
       <returns>An <see cref="T:System.Xml.Serialization.XmlSerializationWriter" /> that is used to write to an XML data stream or document.</returns>
     </member>
+    <member name="T:System.Xml.Serialization.XmlSerializerNamespaces">
+      <summary>Contains the XML namespaces and prefixes that the <see cref="T:System.Xml.Serialization.XmlSerializer" /> uses to generate qualified names in an XML-document instance.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlSerializerNamespaces.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> class.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlSerializerNamespaces.#ctor(System.Xml.Serialization.XmlSerializerNamespaces)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> class, using the specified instance of XmlSerializerNamespaces containing the collection of prefix and namespace pairs.</summary>
+      <param name="namespaces">An instance of the <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" />containing the namespace and prefix pairs. </param>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlSerializerNamespaces.#ctor(System.Xml.XmlQualifiedName[])">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> class.</summary>
+      <param name="namespaces">An array of <see cref="T:System.Xml.XmlQualifiedName" /> objects. </param>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlSerializerNamespaces.Add(System.String,System.String)">
+      <summary>Adds a prefix and namespace pair to an <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> object.</summary>
+      <param name="prefix">The prefix associated with an XML namespace. </param>
+      <param name="ns">An XML namespace. </param>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlSerializerNamespaces.Count">
+      <summary>Gets the number of prefix and namespace pairs in the collection.</summary>
+      <returns>The number of prefix and namespace pairs in the collection.</returns>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlSerializerNamespaces.ToArray">
+      <summary>Gets the array of prefix and namespace pairs in an <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> object.</summary>
+      <returns>An array of <see cref="T:System.Xml.XmlQualifiedName" /> objects that are used as qualified names in an XML document.</returns>
+    </member>
     <member name="T:System.Xml.Serialization.XmlSerializerVersionAttribute">
       <summary>Signifies that the code was generated by the serialization infrastructure and can be reused for increased performance, when this attribute is applied to an assembly.</summary>
     </member>
@@ -10397,6 +11692,52 @@
     <member name="P:System.Xml.Serialization.XmlSerializerVersionAttribute.Version">
       <summary>Gets or sets the assembly's version number.</summary>
       <returns>The version of the assembly.</returns>
+    </member>
+    <member name="T:System.Xml.Serialization.XmlTextAttribute">
+      <summary>Indicates to the <see cref="T:System.Xml.Serialization.XmlSerializer" /> that the member must be treated as XML text when the class that contains it is serialized or deserialized.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlTextAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlTextAttribute" /> class.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlTextAttribute.#ctor(System.Type)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlTextAttribute" /> class.</summary>
+      <param name="type">The <see cref="T:System.Type" /> of the member to be serialized. </param>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlTextAttribute.DataType">
+      <summary>Gets or sets the XML Schema definition language (XSD) data type of the text generated by the <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+      <returns>An XML Schema (XSD) data type, as defined by the World Wide Web Consortium (www.w3.org) document "XML Schema Part 2: Datatypes".</returns>
+      <exception cref="T:System.Exception">The XML Schema data type you have specified cannot be mapped to the .NET data type. </exception>
+      <exception cref="T:System.InvalidOperationException">The XML Schema data type you have specified is invalid for the property and cannot be converted to the member type. </exception>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlTextAttribute.Type">
+      <summary>Gets or sets the type of the member.</summary>
+      <returns>The <see cref="T:System.Type" /> of the member.</returns>
+    </member>
+    <member name="T:System.Xml.Serialization.XmlTypeAttribute">
+      <summary>Controls the XML schema that is generated when the attribute target is serialized by the <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlTypeAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlTypeAttribute" /> class.</summary>
+    </member>
+    <member name="M:System.Xml.Serialization.XmlTypeAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Xml.Serialization.XmlTypeAttribute" /> class and specifies the name of the XML type.</summary>
+      <param name="typeName">The name of the XML type that the <see cref="T:System.Xml.Serialization.XmlSerializer" /> generates when it serializes the class instance (and recognizes when it deserializes the class instance). </param>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlTypeAttribute.AnonymousType">
+      <summary>Gets or sets a value that determines whether the resulting schema type is an XSD anonymous type.</summary>
+      <returns>true, if the resulting schema type is an XSD anonymous type; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlTypeAttribute.IncludeInSchema">
+      <summary>Gets or sets a value that indicates whether to include the type in XML schema documents.</summary>
+      <returns>true to include the type in XML schema documents; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlTypeAttribute.Namespace">
+      <summary>Gets or sets the namespace of the XML type.</summary>
+      <returns>The namespace of the XML type.</returns>
+    </member>
+    <member name="P:System.Xml.Serialization.XmlTypeAttribute.TypeName">
+      <summary>Gets or sets the name of the XML type.</summary>
+      <returns>The name of the XML type.</returns>
     </member>
     <member name="T:System.Xml.Serialization.XmlTypeMapping">
       <summary>Contains a mapping of one type to another.</summary>

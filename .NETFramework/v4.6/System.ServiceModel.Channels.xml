@@ -147,6 +147,9 @@
       <summary>Returns a value that indicates whether the <see cref="P:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.ReaderQuotas" /> property has changed from its default value and should be serialized.</summary>
       <returns>true if the <see cref="P:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement.ReaderQuotas" /> property value should be serialized; otherwise, false.</returns>
     </member>
+    <member name="T:System.ServiceModel.Channels.HttpRequestMessageExtensionMethods">
+      <summary>Provides extension methods for accessing user principal associated with the HTTP request message.</summary>
+    </member>
     <member name="M:System.ServiceModel.Channels.HttpRequestMessageExtensionMethods.ToMessage(System.Net.Http.HttpRequestMessage)">
       <summary> Creates a <see cref="T:System.ServiceModel.Channels.Message" /> instance from an <see cref="T:System.Net.Http.HttpRequestMessage" /> instance.</summary>
       <returns>The new <see cref="T:System.ServiceModel.Channels.Message" /> instance.</returns>

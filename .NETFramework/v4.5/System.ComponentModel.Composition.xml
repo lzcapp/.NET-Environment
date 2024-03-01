@@ -320,13 +320,13 @@
       <summary>Specifies when and how a part will be instantiated.</summary>
     </member>
     <member name="F:System.ComponentModel.Composition.CreationPolicy.Any">
-      <summary>Specifies that the <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> will use the most appropriate <see cref="T:System.ComponentModel.Composition.CreationPolicy" /> for the part given the current context. This is the default <see cref="T:System.ComponentModel.Composition.CreationPolicy" />. Be default, <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> will use <see cref="F:System.ComponentModel.Composition.CreationPolicy.Shared" />, unless the <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> or importer requests <see cref="F:System.ComponentModel.Composition.CreationPolicy.NonShared" />.</summary>
-    </member>
-    <member name="F:System.ComponentModel.Composition.CreationPolicy.Shared">
-      <summary>Specifies that a single shared instance of the associated <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> will be created by the <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> and shared by all requestors.</summary>
+      <summary>Specifies that the <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> will use the most appropriate <see cref="T:System.ComponentModel.Composition.CreationPolicy" /> for the part given the current context. This is the default <see cref="T:System.ComponentModel.Composition.CreationPolicy" />. By default, <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> will use <see cref="F:System.ComponentModel.Composition.CreationPolicy.Shared" />, unless the <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> or importer requests <see cref="F:System.ComponentModel.Composition.CreationPolicy.NonShared" />.</summary>
     </member>
     <member name="F:System.ComponentModel.Composition.CreationPolicy.NonShared">
       <summary>Specifies that a new non-shared instance of the associated <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> will be created by the <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> for every requestor.</summary>
+    </member>
+    <member name="F:System.ComponentModel.Composition.CreationPolicy.Shared">
+      <summary>Specifies that a single shared instance of the associated <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> will be created by the <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> and shared by all requestors.</summary>
     </member>
     <member name="T:System.ComponentModel.Composition.ExportAttribute">
       <summary>Specifies that a type, property, field, or method provides a particular export.</summary>
@@ -1227,11 +1227,11 @@
     <member name="F:System.ComponentModel.Composition.Hosting.CompositionOptions.DisableSilentRejection">
       <summary>Silent rejection is disabled, so all rejections will result in errors.</summary>
     </member>
-    <member name="F:System.ComponentModel.Composition.Hosting.CompositionOptions.IsThreadSafe">
-      <summary>This provider should be thread-safe.</summary>
-    </member>
     <member name="F:System.ComponentModel.Composition.Hosting.CompositionOptions.ExportCompositionService">
       <summary>This provider is an export composition service.</summary>
+    </member>
+    <member name="F:System.ComponentModel.Composition.Hosting.CompositionOptions.IsThreadSafe">
+      <summary>This provider should be thread-safe.</summary>
     </member>
     <member name="T:System.ComponentModel.Composition.Hosting.CompositionScopeDefinition">
       <summary>Represents a node in a tree of scoped catalogs, reflecting an underlying catalog and its child scopes.</summary>
@@ -1562,12 +1562,6 @@
       <exception cref="T:System.ComponentModel.Composition.CompositionContractMismatchException">One or more of the underlying exported values cannot be cast to <paramref name="T" />.</exception>
       <exception cref="T:System.ComponentModel.Composition.CompositionException">An error occurred during composition. <see cref="P:System.ComponentModel.Composition.CompositionException.Errors" /> will contain a collection of errors that occurred.</exception>
     </member>
-    <member name="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports``1">
-      <summary>Gets all the exports with the contract name derived from the specified type parameter.</summary>
-      <returns>The <see cref="T:System.Lazy`1" /> objects with the contract name derived from <paramref name="T" />, if found; otherwise, an empty <see cref="T:System.Collections.Generic.IEnumerable`1" /> object.</returns>
-      <typeparam name="T">The type parameter of the <see cref="T:System.Lazy`1" /> objects to return. The contract name is also derived from this type parameter.</typeparam>
-      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> object has been disposed of.</exception>
-    </member>
     <member name="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports``2">
       <summary>Gets all the exports with the contract name derived from the specified type parameter.</summary>
       <returns>The <see cref="T:System.Lazy`2" /> objects with the contract name derived from <paramref name="T" />, if found; otherwise, an empty <see cref="T:System.Collections.Generic.IEnumerable`1" /> object.</returns>
@@ -1576,6 +1570,12 @@
       <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> object has been disposed of.</exception>
       <exception cref="T:System.InvalidOperationException">
         <paramref name="TMetadataView" /> is not a valid metadata view type.</exception>
+    </member>
+    <member name="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports``1">
+      <summary>Gets all the exports with the contract name derived from the specified type parameter.</summary>
+      <returns>The <see cref="T:System.Lazy`1" /> objects with the contract name derived from <paramref name="T" />, if found; otherwise, an empty <see cref="T:System.Collections.Generic.IEnumerable`1" /> object.</returns>
+      <typeparam name="T">The type parameter of the <see cref="T:System.Lazy`1" /> objects to return. The contract name is also derived from this type parameter.</typeparam>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> object has been disposed of.</exception>
     </member>
     <member name="M:System.ComponentModel.Composition.Hosting.ExportProvider.GetExports(System.ComponentModel.Composition.Primitives.ImportDefinition)">
       <summary>Gets all exports that match the conditions of the specified import definition.</summary>
@@ -1607,7 +1607,7 @@
       <summary>Gets all the exports with the specified contract name.</summary>
       <returns>The <see cref="T:System.Lazy`2" /> objects with the specified contract name if found; otherwise, an empty <see cref="T:System.Collections.Generic.IEnumerable`1" /> object.</returns>
       <param name="contractName">The contract name of the <see cref="T:System.Lazy`2" /> objects to return, or null or an empty string ("") to use the default contract name.</param>
-      <typeparam name="T">The type parameter of the <see cref="T:System.Lazy'2" /> objects to return. The contract name is also derived from this type parameter.</typeparam>
+      <typeparam name="T">The type parameter of the <see cref="T:System.Lazy`2" /> objects to return. The contract name is also derived from this type parameter.</typeparam>
       <typeparam name="TMetadataView">The type of the metadata view of the <see cref="T:System.Lazy`2" /> objects to return.</typeparam>
       <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> object has been disposed of.</exception>
       <exception cref="T:System.InvalidOperationException">
@@ -2237,14 +2237,14 @@
     <member name="T:System.ComponentModel.Composition.Primitives.ImportCardinality">
       <summary>Indicates the cardinality of the <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objects required by an <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />.</summary>
     </member>
-    <member name="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ZeroOrOne">
-      <summary>Zero or one <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objects are required by the <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />.</summary>
-    </member>
     <member name="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ExactlyOne">
       <summary>Exactly one <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> object is required by the <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />.</summary>
     </member>
     <member name="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ZeroOrMore">
       <summary>Zero or more <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objects are required by the <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />.</summary>
+    </member>
+    <member name="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ZeroOrOne">
+      <summary>Zero or one <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objects are required by the <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />.</summary>
     </member>
     <member name="T:System.ComponentModel.Composition.Primitives.ImportDefinition">
       <summary>Represents an import that is required by a <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> object.</summary>

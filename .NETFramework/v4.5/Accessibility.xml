@@ -25,11 +25,11 @@
     <member name="T:Accessibility.AnnoScope">
       <summary>The <see cref="T:Accessibility.AnnoScope" /> and all of its exposed members are part of a managed wrapper for the Component Object Model (COM) accessibility interface.</summary>
     </member>
-    <member name="F:Accessibility.AnnoScope.ANNO_THIS">
-      <summary>Annotation is scoped to the immediate object.</summary>
-    </member>
     <member name="F:Accessibility.AnnoScope.ANNO_CONTAINER">
       <summary>Annotation is scoped to the container object.</summary>
+    </member>
+    <member name="F:Accessibility.AnnoScope.ANNO_THIS">
+      <summary>Annotation is scoped to the immediate object.</summary>
     </member>
     <member name="T:Accessibility.CAccPropServices">
       <summary>The <see cref="T:Accessibility.CAccPropServices" /> and all of its exposed members are part of a managed wrapper for the Component Object Model (COM) IAccPropServices interface. </summary>

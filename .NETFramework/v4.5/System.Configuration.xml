@@ -230,17 +230,17 @@
     <member name="T:System.Configuration.ConfigurationAllowDefinition">
       <summary>Specifies the locations within the configuration-file hierarchy that can set or override the properties contained within a <see cref="T:System.Configuration.ConfigurationSection" /> object.</summary>
     </member>
+    <member name="F:System.Configuration.ConfigurationAllowDefinition.Everywhere">
+      <summary>The <see cref="T:System.Configuration.ConfigurationSection" /> can be defined anywhere.</summary>
+    </member>
     <member name="F:System.Configuration.ConfigurationAllowDefinition.MachineOnly">
       <summary>The <see cref="T:System.Configuration.ConfigurationSection" /> can be defined only in the Machine.config file.</summary>
-    </member>
-    <member name="F:System.Configuration.ConfigurationAllowDefinition.MachineToWebRoot">
-      <summary>The <see cref="T:System.Configuration.ConfigurationSection" /> can be defined in either the Machine.config file or the machine-level Web.config file found in the same directory as Machine.config, but not in application Web.config files.</summary>
     </member>
     <member name="F:System.Configuration.ConfigurationAllowDefinition.MachineToApplication">
       <summary>The <see cref="T:System.Configuration.ConfigurationSection" /> can be defined in either the Machine.config file, the machine-level Web.config file found in the same directory as Machine.config, or the top-level application Web.config file found in the virtual-directory root, but not in subdirectories of a virtual root.</summary>
     </member>
-    <member name="F:System.Configuration.ConfigurationAllowDefinition.Everywhere">
-      <summary>The <see cref="T:System.Configuration.ConfigurationSection" /> can be defined anywhere.</summary>
+    <member name="F:System.Configuration.ConfigurationAllowDefinition.MachineToWebRoot">
+      <summary>The <see cref="T:System.Configuration.ConfigurationSection" /> can be defined in either the Machine.config file or the machine-level Web.config file found in the same directory as Machine.config, but not in application Web.config files.</summary>
     </member>
     <member name="T:System.Configuration.ConfigurationAllowExeDefinition">
       <summary>Specifies the locations within the configuration-file hierarchy that can set or override the properties contained within a <see cref="T:System.Configuration.ConfigurationSection" /> object.</summary>
@@ -251,11 +251,11 @@
     <member name="F:System.Configuration.ConfigurationAllowExeDefinition.MachineToApplication">
       <summary>The <see cref="T:System.Configuration.ConfigurationSection" /> can be defined either in the Machine.config file or in the Exe.config file in the client application directory. This is the default value.</summary>
     </member>
-    <member name="F:System.Configuration.ConfigurationAllowExeDefinition.MachineToRoamingUser">
-      <summary>The <see cref="T:System.Configuration.ConfigurationSection" /> can be defined in the Machine.config file, in the Exe.config file in the client application directory, or in the User.config file in the roaming user directory. </summary>
-    </member>
     <member name="F:System.Configuration.ConfigurationAllowExeDefinition.MachineToLocalUser">
       <summary>The <see cref="T:System.Configuration.ConfigurationSection" /> can be defined in the Machine.config file, in the Exe.config file in the client application directory, in the User.config file in the roaming user directory, or in the User.config file in the local user directory.</summary>
+    </member>
+    <member name="F:System.Configuration.ConfigurationAllowExeDefinition.MachineToRoamingUser">
+      <summary>The <see cref="T:System.Configuration.ConfigurationSection" /> can be defined in the Machine.config file, in the Exe.config file in the client application directory, or in the User.config file in the roaming user directory. </summary>
     </member>
     <member name="T:System.Configuration.ConfigurationCollectionAttribute">
       <summary>Declaratively instructs the .NET Framework to create an instance of a configuration element collection. This class cannot be inherited.</summary>
@@ -577,11 +577,11 @@
     </member>
     <member name="M:System.Configuration.ConfigurationElementCollection.CreateNewElement">
       <summary>When overridden in a derived class, creates a new <see cref="T:System.Configuration.ConfigurationElement" />.</summary>
-      <returns>A new <see cref="T:System.Configuration.ConfigurationElement" />.</returns>
+      <returns>A newly created <see cref="T:System.Configuration.ConfigurationElement" />.</returns>
     </member>
     <member name="M:System.Configuration.ConfigurationElementCollection.CreateNewElement(System.String)">
       <summary>Creates a new <see cref="T:System.Configuration.ConfigurationElement" /> when overridden in a derived class.</summary>
-      <returns>A new <see cref="T:System.Configuration.ConfigurationElement" />.</returns>
+      <returns>A new <see cref="T:System.Configuration.ConfigurationElement" /> with a specified name.</returns>
       <param name="elementName">The name of the <see cref="T:System.Configuration.ConfigurationElement" /> to create. </param>
     </member>
     <member name="P:System.Configuration.ConfigurationElementCollection.ElementName">
@@ -605,7 +605,7 @@
     </member>
     <member name="M:System.Configuration.ConfigurationElementCollection.GetEnumerator">
       <summary>Gets an <see cref="T:System.Collections.IEnumerator" /> which is used to iterate through the <see cref="T:System.Configuration.ConfigurationElementCollection" />.</summary>
-      <returns>An <see cref="T:System.Collections.IEnumerator" /> which is used to iterate through the <see cref="T:System.Configuration.ConfigurationElementCollection" /></returns>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> which is used to iterate through the <see cref="T:System.Configuration.ConfigurationElementCollection" />.</returns>
     </member>
     <member name="M:System.Configuration.ConfigurationElementCollection.GetHashCode">
       <summary>Gets a unique value representing the <see cref="T:System.Configuration.ConfigurationElementCollection" /> instance.</summary>
@@ -686,17 +686,17 @@
     <member name="T:System.Configuration.ConfigurationElementCollectionType">
       <summary>Specifies the type of a <see cref="T:System.Configuration.ConfigurationElementCollectionType" /> object.</summary>
     </member>
-    <member name="F:System.Configuration.ConfigurationElementCollectionType.BasicMap">
-      <summary>Collections of this type contain elements that apply to the level at which they are specified, and to all child levels. A child level cannot modify the properties specified by a parent element of this type.</summary>
-    </member>
     <member name="F:System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMap">
       <summary>The default type of <see cref="T:System.Configuration.ConfigurationElementCollection" />. Collections of this type contain elements that can be merged across a hierarchy of configuration files. At any particular level within such a hierarchy, add, remove, and clear directives are used to modify any inherited properties and specify new ones.</summary>
     </member>
-    <member name="F:System.Configuration.ConfigurationElementCollectionType.BasicMapAlternate">
-      <summary>Same as <see cref="F:System.Configuration.ConfigurationElementCollectionType.BasicMap" />, except that this type causes the <see cref="T:System.Configuration.ConfigurationElementCollection" /> object to sort its contents such that inherited elements are listed last.</summary>
-    </member>
     <member name="F:System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMapAlternate">
       <summary>Same as <see cref="F:System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMap" />, except that this type causes the <see cref="T:System.Configuration.ConfigurationElementCollection" /> object to sort its contents such that inherited elements are listed last.</summary>
+    </member>
+    <member name="F:System.Configuration.ConfigurationElementCollectionType.BasicMap">
+      <summary>Collections of this type contain elements that apply to the level at which they are specified, and to all child levels. A child level cannot modify the properties specified by a parent element of this type.</summary>
+    </member>
+    <member name="F:System.Configuration.ConfigurationElementCollectionType.BasicMapAlternate">
+      <summary>Same as <see cref="F:System.Configuration.ConfigurationElementCollectionType.BasicMap" />, except that this type causes the <see cref="T:System.Configuration.ConfigurationElementCollection" /> object to sort its contents such that inherited elements are listed last.</summary>
     </member>
     <member name="T:System.Configuration.ConfigurationElementProperty">
       <summary>Specifies the property of a configuration element. This class cannot be inherited.</summary>
@@ -1220,38 +1220,38 @@
     <member name="T:System.Configuration.ConfigurationPropertyOptions">
       <summary>Specifies the options to apply to a property.</summary>
     </member>
-    <member name="F:System.Configuration.ConfigurationPropertyOptions.None">
-      <summary>Indicates that no option applies to the property.</summary>
+    <member name="F:System.Configuration.ConfigurationPropertyOptions.IsAssemblyStringTransformationRequired">
+      <summary>Indicates whether the assembly name for the configuration property requires transformation when it is serialized for an earlier version of the .NET Framework.</summary>
     </member>
     <member name="F:System.Configuration.ConfigurationPropertyOptions.IsDefaultCollection">
       <summary>Indicates that the property is a default collection. </summary>
     </member>
-    <member name="F:System.Configuration.ConfigurationPropertyOptions.IsRequired">
-      <summary>Indicates that the property is required. </summary>
-    </member>
     <member name="F:System.Configuration.ConfigurationPropertyOptions.IsKey">
       <summary>Indicates that the property is a collection key.</summary>
+    </member>
+    <member name="F:System.Configuration.ConfigurationPropertyOptions.IsRequired">
+      <summary>Indicates that the property is required. </summary>
     </member>
     <member name="F:System.Configuration.ConfigurationPropertyOptions.IsTypeStringTransformationRequired">
       <summary>Indicates whether the type name for the configuration property requires transformation when it is serialized for an earlier version of the .NET Framework.</summary>
     </member>
-    <member name="F:System.Configuration.ConfigurationPropertyOptions.IsAssemblyStringTransformationRequired">
-      <summary>Indicates whether the assembly name for the configuration property requires transformation when it is serialized for an earlier version of the .NET Framework.</summary>
-    </member>
     <member name="F:System.Configuration.ConfigurationPropertyOptions.IsVersionCheckRequired">
       <summary>Indicates whether the configuration property's parent configuration section should be queried at serialization time to determine whether the configuration property should be serialized into XML.</summary>
+    </member>
+    <member name="F:System.Configuration.ConfigurationPropertyOptions.None">
+      <summary>Indicates that no option applies to the property.</summary>
     </member>
     <member name="T:System.Configuration.ConfigurationSaveMode">
       <summary>Determines which properties are written out to a configuration file.</summary>
     </member>
-    <member name="F:System.Configuration.ConfigurationSaveMode.Modified">
-      <summary>Causes only modified properties to be written to the configuration file, even when the value is the same as the inherited value.</summary>
+    <member name="F:System.Configuration.ConfigurationSaveMode.Full">
+      <summary>Causes all properties to be written to the configuration file. This is useful mostly for creating information configuration files or moving configuration values from one machine to another.</summary>
     </member>
     <member name="F:System.Configuration.ConfigurationSaveMode.Minimal">
       <summary>Causes only properties that differ from inherited values to be written to the configuration file.</summary>
     </member>
-    <member name="F:System.Configuration.ConfigurationSaveMode.Full">
-      <summary>Causes all properties to be written to the configuration file. This is useful mostly for creating information configuration files or moving configuration values from one machine to another.</summary>
+    <member name="F:System.Configuration.ConfigurationSaveMode.Modified">
+      <summary>Causes only modified properties to be written to the configuration file, even when the value is the same as the inherited value.</summary>
     </member>
     <member name="T:System.Configuration.ConfigurationSection">
       <summary>Represents a section within a configuration file.</summary>
@@ -1926,7 +1926,7 @@
     </member>
     <member name="M:System.Configuration.KeyValueConfigurationCollection.CreateNewElement">
       <summary>When overridden in a derived class, the <see cref="M:System.Configuration.KeyValueConfigurationCollection.CreateNewElement" /> method creates a new <see cref="T:System.Configuration.KeyValueConfigurationElement" /> object.</summary>
-      <returns>A new <see cref="T:System.Configuration.KeyValueConfigurationElement" />.</returns>
+      <returns>A newly created <see cref="T:System.Configuration.KeyValueConfigurationElement" />.</returns>
     </member>
     <member name="M:System.Configuration.KeyValueConfigurationCollection.GetElementKey(System.Configuration.ConfigurationElement)">
       <summary>Gets the element key for a specified configuration element when overridden in a derived class.</summary>
@@ -2078,14 +2078,14 @@
     <member name="T:System.Configuration.OverrideMode">
       <summary>Specifies the override behavior of a configuration element for configuration elements in child directories.</summary>
     </member>
-    <member name="F:System.Configuration.OverrideMode.Inherit">
-      <summary>The configuration setting of the element or group will be overridden by configuration settings that are in child directories if explicitly allowed by a parent element of the current configuration element or group. Permission to override is specified by using the OverrideMode attribute.</summary>
-    </member>
     <member name="F:System.Configuration.OverrideMode.Allow">
       <summary>The configuration setting of the element or group can be overridden by configuration settings that are in child directories.</summary>
     </member>
     <member name="F:System.Configuration.OverrideMode.Deny">
       <summary>The configuration setting of the element or group cannot be overridden by configuration settings that are in child directories.</summary>
+    </member>
+    <member name="F:System.Configuration.OverrideMode.Inherit">
+      <summary>The configuration setting of the element or group will be overridden by configuration settings that are in child directories if explicitly allowed by a parent element of the current configuration element or group. Permission to override is specified by using the OverrideMode attribute.</summary>
     </member>
     <member name="T:System.Configuration.PositiveTimeSpanValidator">
       <summary>Provides validation of a <see cref="T:System.TimeSpan" /> object. This class cannot be inherited.</summary>
@@ -2400,7 +2400,7 @@
     </member>
     <member name="M:System.Configuration.RsaProtectedConfigurationProvider.Decrypt(System.Xml.XmlNode)">
       <summary>Decrypts the XML node passed to it.</summary>
-      <returns>The <see cref="T:System.Xml.XmlNode" /> object containing decrypted data.</returns>
+      <returns>The decrypted XML node.</returns>
       <param name="encryptedNode">The <see cref="T:System.Xml.XmlNode" /> to decrypt.</param>
     </member>
     <member name="M:System.Configuration.RsaProtectedConfigurationProvider.DeleteKey">
@@ -2460,6 +2460,10 @@
     <member name="P:System.Configuration.RsaProtectedConfigurationProvider.RsaPublicKey">
       <summary>Gets the public key used by the provider.</summary>
       <returns>An <see cref="T:System.Security.Cryptography.RSAParameters" /> object that contains the public key used by the provider.</returns>
+    </member>
+    <member name="P:System.Configuration.RsaProtectedConfigurationProvider.UseFIPS">
+      <summary>Gets a value indicating whether the provider uses FIPS.</summary>
+      <returns>true if the provider uses FIPS; otherwise, false.</returns>
     </member>
     <member name="P:System.Configuration.RsaProtectedConfigurationProvider.UseMachineContainer">
       <summary>Gets a value that indicates whether the <see cref="T:System.Configuration.RsaProtectedConfigurationProvider" /> object is using the machine key container.</summary>
@@ -3637,9 +3641,6 @@
       <exception cref="T:System.ArgumentNullException">
         <paramref name="provider" /> is null.</exception>
       <exception cref="T:System.ArgumentException">The <see cref="P:System.Configuration.Provider.ProviderBase.Name" /> of <paramref name="provider" /> is null.- or -The length of the <see cref="P:System.Configuration.Provider.ProviderBase.Name" /> of <paramref name="provider" /> is less than 1.</exception>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-      </PermissionSet>
     </member>
     <member name="M:System.Configuration.Provider.ProviderCollection.Clear">
       <summary>Removes all items from the collection.</summary>

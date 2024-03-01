@@ -71,29 +71,29 @@
     <member name="F:System.DirectoryServices.Protocols.AuthType.Basic">
       <summary>Indicates that basic authentication should be used on the connection. The value is equal to 1.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.AuthType.Negotiate">
-      <summary>Indicates that Microsoft Negotiate authentication should be used on the connection. The value is equal to 2.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.AuthType.Ntlm">
-      <summary>Indicates that Windows NT Challenge/Response (NTLM) authentication should be used on the connection. The value is equal to 3.</summary>
-    </member>
     <member name="F:System.DirectoryServices.Protocols.AuthType.Digest">
       <summary>Indicates that the Digest Access Authentication should be used on the connection. The value is equal to 4.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.AuthType.Sicily">
-      <summary>Indicates a negotiation mechanism (Sicily) will be used to choose MSN, DPA or NTLM.  This should be used for LDAPv2 servers only. The value is equal to 5.</summary>
-    </member>
     <member name="F:System.DirectoryServices.Protocols.AuthType.Dpa">
       <summary>Indicates that Distributed Password Authentication (DPA) should be used on the connection. The value is equal to 6.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.AuthType.Msn">
-      <summary>Indicates that it is authenticated by "Microsoft Network Authentication Service". The value is equal to 7.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.AuthType.External">
       <summary>Indicates an external method will be used to authenticate the connection. The value is equal to 8.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.AuthType.Kerberos">
       <summary>Indicates that Kerberos authentication should be used on the connection. The value is equal to 9.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.AuthType.Msn">
+      <summary>Indicates that it is authenticated by "Microsoft Network Authentication Service". The value is equal to 7.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.AuthType.Negotiate">
+      <summary>Indicates that Microsoft Negotiate authentication should be used on the connection. The value is equal to 2.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.AuthType.Ntlm">
+      <summary>Indicates that Windows NT Challenge/Response (NTLM) authentication should be used on the connection. The value is equal to 3.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.AuthType.Sicily">
+      <summary>Indicates a negotiation mechanism (Sicily) will be used to choose MSN, DPA or NTLM.  This should be used for LDAPv2 servers only. The value is equal to 5.</summary>
     </member>
     <member name="T:System.DirectoryServices.Protocols.BerConversionException">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.BerConversionException" /> class is an exception thrown when converting data using a <see cref="T:System.DirectoryServices.Protocols.BerConverter" /> object.          </summary>
@@ -232,17 +232,17 @@
     <member name="T:System.DirectoryServices.Protocols.DereferenceAlias">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.DereferenceAlias" /> enumeration specifies the process by which aliases are dereferenced.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.DereferenceAlias.Never">
-      <summary>Does not dereference aliases. The value is equal to 0.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.DereferenceAlias.InSearching">
-      <summary>Dereferences aliases when searching subordinates of the base object, but not when locating the base itself. The value is equal to 1.</summary>
+    <member name="F:System.DirectoryServices.Protocols.DereferenceAlias.Always">
+      <summary>Dereferences aliases when both searching subordinates and locating the base object of the search. The value is equal to 3.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.DereferenceAlias.FindingBaseObject">
       <summary>Dereferences aliases when locating the base object, but not when searching its subordinates. The value is equal to 2.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.DereferenceAlias.Always">
-      <summary>Dereferences aliases when both searching subordinates and locating the base object of the search. The value is equal to 3.</summary>
+    <member name="F:System.DirectoryServices.Protocols.DereferenceAlias.InSearching">
+      <summary>Dereferences aliases when searching subordinates of the base object, but not when locating the base itself. The value is equal to 1.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.DereferenceAlias.Never">
+      <summary>Does not dereference aliases. The value is equal to 0.</summary>
     </member>
     <member name="T:System.DirectoryServices.Protocols.DereferenceConnectionCallback">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.DereferenceConnectionCallback" /> delegate dereferences a connection that is no longer required. The connection was probably established through a successful call to the <see cref="T:System.DirectoryServices.Protocols.QueryForConnectionCallback" /> or <see cref="T:System.DirectoryServices.Protocols.NotifyOfNewConnectionCallback" /> delegate.</summary>
@@ -810,6 +810,9 @@
     <member name="T:System.DirectoryServices.Protocols.DirectorySynchronizationOptions">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.DirectorySynchronizationOptions" /> enumeration specifies the behavior of the search in a <see cref="T:System.DirectoryServices.Protocols.DirSyncRequestControl" /> object.</summary>
     </member>
+    <member name="F:System.DirectoryServices.Protocols.DirectorySynchronizationOptions.IncrementalValues">
+      <summary>If this option is used, only changed values are returned. If this option is not used, all values, up to a server-specified limit, in a multi-valued attribute, are returned when a value changes. The value equals 2147483648 or 0x80000000.</summary>
+    </member>
     <member name="F:System.DirectoryServices.Protocols.DirectorySynchronizationOptions.None">
       <summary>No options used. The value equals 0 or 0x0.</summary>
     </member>
@@ -821,9 +824,6 @@
     </member>
     <member name="F:System.DirectoryServices.Protocols.DirectorySynchronizationOptions.PublicDataOnly">
       <summary>Do not return private data in search results. The value equals 8192 or 0x2000.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.DirectorySynchronizationOptions.IncrementalValues">
-      <summary>If this option is used, only changed values are returned. If this option is not used, all values, up to a server-specified limit, in a multi-valued attribute, are returned when a value changes. The value equals 2147483648 or 0x80000000.</summary>
     </member>
     <member name="T:System.DirectoryServices.Protocols.DirSyncRequestControl">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.DirSyncRequestControl" /> class is a directory control that enables the application to search the directory for objects that have changed since a previous state.</summary>
@@ -934,20 +934,20 @@
     <member name="T:System.DirectoryServices.Protocols.DsmlDocumentProcessing">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.DsmlDocumentProcessing" /> enumeration specifies the processing method for a DSML document.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.DsmlDocumentProcessing.Sequential">
-      <summary>Sequential.  Value is equal to 0.</summary>
-    </member>
     <member name="F:System.DirectoryServices.Protocols.DsmlDocumentProcessing.Parallel">
       <summary>Parallel.  Value is equal to 1.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.DsmlDocumentProcessing.Sequential">
+      <summary>Sequential.  Value is equal to 0.</summary>
     </member>
     <member name="T:System.DirectoryServices.Protocols.DsmlErrorProcessing">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.DsmlErrorProcessing" /> enumeration specifies how to proceed when an error occurs.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.DsmlErrorProcessing.Resume">
-      <summary>Resume. Value is equal to 0.</summary>
-    </member>
     <member name="F:System.DirectoryServices.Protocols.DsmlErrorProcessing.Exit">
       <summary>Exit. Value is equal to 1.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.DsmlErrorProcessing.Resume">
+      <summary>Resume. Value is equal to 0.</summary>
     </member>
     <member name="T:System.DirectoryServices.Protocols.DsmlErrorResponse">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.DsmlErrorResponse" /> class is generated by the server when a severe error occurs.</summary>
@@ -1404,29 +1404,29 @@
     <member name="T:System.DirectoryServices.Protocols.ErrorResponseCategory">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.ErrorResponseCategory" /> enumeration contains possible DSML error responses.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.NotAttempted">
-      <summary>The DSML provider did not attempt to execute a request element. The value is equal to 0.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.CouldNotConnect">
-      <summary>The DSML provider was unable to connect to a server. The value is equal to 1.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.AuthenticationFailed">
+      <summary>Authentication failed. The value is equal to 5.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.ConnectionClosed">
       <summary>The DSML provider connected to a server, but the server closed the connection without responding to the request. The value is equal to 2.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.MalformedRequest">
-      <summary>The client failed to specify a request ID for each request. The value is equal to 3.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.CouldNotConnect">
+      <summary>The DSML provider was unable to connect to a server. The value is equal to 1.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.GatewayInternalError">
       <summary>There is an internal gateway error. The value is equal to 4.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.AuthenticationFailed">
-      <summary>Authentication failed. The value is equal to 5.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.MalformedRequest">
+      <summary>The client failed to specify a request ID for each request. The value is equal to 3.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.UnresolvableUri">
-      <summary>The client provider is unable to resolve the URI to a value that can transferred to the server. The value is equal to 6.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.NotAttempted">
+      <summary>The DSML provider did not attempt to execute a request element. The value is equal to 0.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.Other">
       <summary>An unknown error occurred. The value is equal to 7.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ErrorResponseCategory.UnresolvableUri">
+      <summary>The client provider is unable to resolve the URI to a value that can transferred to the server. The value is equal to 6.</summary>
     </member>
     <member name="T:System.DirectoryServices.Protocols.ErrorResponseException">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.ErrorResponseException" /> class is an exception that occurs when the server returns an &lt;errorResponse&gt;.</summary>
@@ -1956,56 +1956,56 @@
     <member name="T:System.DirectoryServices.Protocols.LocatorFlags">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.LocatorFlags" /> enumeration specifies data required to locate a domain controller.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.None">
-      <summary>No data required. The value is equal to 0 or 0x0.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.ForceRediscovery">
-      <summary>Forces the cached domain controller to be ignored. The value is equal to 1 or 0x1.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.DirectoryServicesRequired">
-      <summary>Requires that the returned domain controller support Windows 2000 or later. The value is equal to 16 or 0x10.</summary>
+    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.AvoidSelf">
+      <summary>Specifies that the domain controller returned should not be the current computer. The value is equal to 16384 or 0x4000.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.LocatorFlags.DirectoryServicesPreferred">
       <summary>Attempts to find a domain controller that supports directory service functions (Windows 2000 or later). The value is equal to 32 or 0x20.</summary>
     </member>
+    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.DirectoryServicesRequired">
+      <summary>Requires that the returned domain controller support Windows 2000 or later. The value is equal to 16 or 0x10.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.ForceRediscovery">
+      <summary>Forces the cached domain controller to be ignored. The value is equal to 1 or 0x1.</summary>
+    </member>
     <member name="F:System.DirectoryServices.Protocols.LocatorFlags.GCRequired">
       <summary>Requires that the returned domain controller be a global catalog server for the forest of domains with this domain as the root. The value is equal to 64 or 0x40.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.PdcRequired">
-      <summary>Requires that the returned domain controller be the primary domain controller for the domain. The value is equal to 128 or 0x80.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.IPRequired">
-      <summary>Sets the Internet protocol address of the domain controller in the DomainControllerAddress member of DomainControllerInfo. The value is equal to 512 or 0x200.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.KdcRequired">
-      <summary>Requires that the returned domain controller be currently running the Kerberos Key Distribution Center service. The value is equal to 1024 or 0x400.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.TimeServerRequired">
-      <summary>Requires that the returned domain controller be currently running the Windows Time Service. The value is equal to 2048 or 0x800.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.WriteableRequired">
-      <summary>Requires that the returned domain controller be writable. The value is equal to 4096 or 0x1000.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.LocatorFlags.GoodTimeServerPreferred">
       <summary>Attempts to find a domain controller that is a reliable time server. The value is equal to 8192 or 0x2000.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.AvoidSelf">
-      <summary>Specifies that the domain controller returned should not be the current computer. The value is equal to 16384 or 0x4000.</summary>
+    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.IPRequired">
+      <summary>Sets the Internet protocol address of the domain controller in the DomainControllerAddress member of DomainControllerInfo. The value is equal to 512 or 0x200.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.OnlyLdapNeeded">
-      <summary>Specifies that the server returned is an LDAP server. The value is equal to 32768 or 0x8000.</summary>
+    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.IsDnsName">
+      <summary>Specifies that the DomainName parameter is a DNS name. The value is equal to 131072 or 0x20000.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.LocatorFlags.IsFlatName">
       <summary>Specifies that the DomainName parameter is a flat name. The value is equal to 65536 or 0x10000.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.IsDnsName">
-      <summary>Specifies that the DomainName parameter is a DNS name. The value is equal to 131072 or 0x20000.</summary>
+    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.KdcRequired">
+      <summary>Requires that the returned domain controller be currently running the Kerberos Key Distribution Center service. The value is equal to 1024 or 0x400.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.None">
+      <summary>No data required. The value is equal to 0 or 0x0.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.OnlyLdapNeeded">
+      <summary>Specifies that the server returned is an LDAP server. The value is equal to 32768 or 0x8000.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.PdcRequired">
+      <summary>Requires that the returned domain controller be the primary domain controller for the domain. The value is equal to 128 or 0x80.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.LocatorFlags.ReturnDnsName">
       <summary>Specifies that the name returned should be a DNS name. The value is equal to 1073741824 or 0x40000000.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.LocatorFlags.ReturnFlatName">
       <summary>Specifies that the name should be a flat name. The value is equal to 2147483648 or 0x80000000.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.TimeServerRequired">
+      <summary>Requires that the returned domain controller be currently running the Windows Time Service. The value is equal to 2048 or 0x800.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.LocatorFlags.WriteableRequired">
+      <summary>Requires that the returned domain controller be writable. The value is equal to 4096 or 0x1000.</summary>
     </member>
     <member name="T:System.DirectoryServices.Protocols.ModifyDNRequest">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.ModifyDNRequest" /> class modifies the distinguished name of an object. This class moves an object to a new parent and/or renames the object.</summary>
@@ -2231,35 +2231,41 @@
     <member name="T:System.DirectoryServices.Protocols.ReferralChasingOptions">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.ReferralChasingOptions" /> enumeration specifies if and how referral chasing is pursued.</summary>
     </member>
+    <member name="F:System.DirectoryServices.Protocols.ReferralChasingOptions.All">
+      <summary>Chase referrals of either the subordinate or external type. The value is equal to 96 or 0x60.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ReferralChasingOptions.External">
+      <summary>Chase external referrals. The value is equal to 64 or 0x40.</summary>
+    </member>
     <member name="F:System.DirectoryServices.Protocols.ReferralChasingOptions.None">
       <summary>Never chase the referred-to server. Setting this option prevents a client from contacting other servers in a referral process. The value is equal to 0 or 0x0.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.ReferralChasingOptions.Subordinate">
       <summary>Chase only subordinate referrals which are a subordinate naming context in a directory tree. The ADSI LDAP provider always turns off this flag for paged searches. The value is equal to 32 or 0x20.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ReferralChasingOptions.External">
-      <summary>Chase external referrals. The value is equal to 64 or 0x40.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ReferralChasingOptions.All">
-      <summary>Chase referrals of either the subordinate or external type. The value is equal to 96 or 0x60.</summary>
-    </member>
     <member name="T:System.DirectoryServices.Protocols.ResultCode">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.ResultCode" /> enumeration specifies the operation result codes.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.Success">
-      <summary>The call completed successfully. The value is equal to 0.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.AdminLimitExceeded">
+      <summary>The administration limit on the server was exceeded. The value is equal to 11.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.OperationsError">
-      <summary>An operation error occurred. The value is equal to 1.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.AffectsMultipleDsas">
+      <summary>Multiple directory service agents are affected. The value is equal to 71.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.ProtocolError">
-      <summary>A protocol error occurred. The value is equal to 2.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.AliasDereferencingProblem">
+      <summary>A problem occurred when dereferencing the alias. The value is equal to 36.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.TimeLimitExceeded">
-      <summary>The time limit set by the server-side time limit parameter was exceeded. The value is equal to 3.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.AliasProblem">
+      <summary>The alias is invalid. The value is equal to 33.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.SizeLimitExceeded">
-      <summary>The size limit was exceeded. The value is equal to 4.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.AttributeOrValueExists">
+      <summary>The attribute exists or the value has been assigned. The value is equal to 20.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.AuthMethodNotSupported">
+      <summary>The authentication method is not supported. The value is equal to 7.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.Busy">
+      <summary>The server is busy. The value is equal to 51.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.ResultCode.CompareFalse">
       <summary>The attribute and known values do not match. The value is equal to 5.</summary>
@@ -2267,89 +2273,41 @@
     <member name="F:System.DirectoryServices.Protocols.ResultCode.CompareTrue">
       <summary>The attribute and known values match. The value is equal to 6.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.AuthMethodNotSupported">
-      <summary>The authentication method is not supported. The value is equal to 7.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.StrongAuthRequired">
-      <summary>Strong authentication is required for this operation. The value is equal to 8.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.ReferralV2">
-      <summary>Only partial results and referrals were received. The value is equal to 9.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.Referral">
-      <summary>A referral was returned from the server. The value is equal to 10.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.AdminLimitExceeded">
-      <summary>The administration limit on the server was exceeded. The value is equal to 11.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.UnavailableCriticalExtension">
-      <summary>The server does not support the control. The control is critical. The value is equal to 12.</summary>
-    </member>
     <member name="F:System.DirectoryServices.Protocols.ResultCode.ConfidentialityRequired">
       <summary>Confidentiality is required for this operation. The value is equal to 13.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.SaslBindInProgress">
-      <summary>Simple Authentication and Security Layer (SASL) bind is in progress. The value is equal to 14.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.NoSuchAttribute">
-      <summary>The requested attribute does not exist. The value is equal to 16.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.UndefinedAttributeType">
-      <summary>The type is not defined. The value is equal to 17.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.InappropriateMatching">
-      <summary>The matching rule does not apply to the specified attribute type. The value is equal to 18.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.ResultCode.ConstraintViolation">
       <summary>A value in the request does not comply with certain constraints. The value is equal to 19.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.AttributeOrValueExists">
-      <summary>The attribute exists or the value has been assigned. The value is equal to 20.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.InvalidAttributeSyntax">
-      <summary>The syntax is invalid. The value is equal to 21.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.NoSuchObject">
-      <summary>The object does not exist. The value is equal to 32.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.AliasProblem">
-      <summary>The alias is invalid. The value is equal to 33.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.InvalidDNSyntax">
-      <summary>The distinguished name contains invalid syntax. The value is equal to 34.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.AliasDereferencingProblem">
-      <summary>A problem occurred when dereferencing the alias. The value is equal to 36.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.EntryAlreadyExists">
+      <summary>The object already exists. The value is equal to 68.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.ResultCode.InappropriateAuthentication">
       <summary>The authentication that was provided was not appropriate. The value is equal to 48.</summary>
     </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.InappropriateMatching">
+      <summary>The matching rule does not apply to the specified attribute type. The value is equal to 18.</summary>
+    </member>
     <member name="F:System.DirectoryServices.Protocols.ResultCode.InsufficientAccessRights">
       <summary>The user has insufficient access rights. The value is equal to 50.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.Busy">
-      <summary>The server is busy. The value is equal to 51.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.InvalidAttributeSyntax">
+      <summary>The syntax is invalid. The value is equal to 21.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.Unavailable">
-      <summary>The server is unavailable. The value is equal to 52.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.UnwillingToPerform">
-      <summary>The server cannot handle directory requests. The value is equal to 53.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.InvalidDNSyntax">
+      <summary>The distinguished name contains invalid syntax. The value is equal to 34.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.ResultCode.LoopDetect">
       <summary>The chain of referrals has looped back to a referring server. The value is equal to 54.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.SortControlMissing">
-      <summary>The search requires a SORT control. The value is equal to 60.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.OffsetRangeError">
-      <summary>The search results exceed the specified offset range. The value is equal to 61.</summary>
-    </member>
     <member name="F:System.DirectoryServices.Protocols.ResultCode.NamingViolation">
       <summary>A naming violation occurred. The value is equal to 64.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.ObjectClassViolation">
-      <summary>An object class violation occurred. The value is equal to 65.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.NoSuchAttribute">
+      <summary>The requested attribute does not exist. The value is equal to 16.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.NoSuchObject">
+      <summary>The object does not exist. The value is equal to 32.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.ResultCode.NotAllowedOnNonLeaf">
       <summary>This operation is not allowed on a non-leaf object. The value is equal to 66.</summary>
@@ -2357,23 +2315,65 @@
     <member name="F:System.DirectoryServices.Protocols.ResultCode.NotAllowedOnRdn">
       <summary>This operation is not allowed on a relative distinguished name (RDN). The value is equal to 67.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.EntryAlreadyExists">
-      <summary>The object already exists. The value is equal to 68.</summary>
-    </member>
     <member name="F:System.DirectoryServices.Protocols.ResultCode.ObjectClassModificationsProhibited">
       <summary>The request is attempting to modify an object class that cannot be modified. The value is equal to 69.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.ObjectClassViolation">
+      <summary>An object class violation occurred. The value is equal to 65.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.OffsetRangeError">
+      <summary>The search results exceed the specified offset range. The value is equal to 61.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.OperationsError">
+      <summary>An operation error occurred. The value is equal to 1.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.Other">
+      <summary>An unknown error occurred. The value is equal to 80.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.ProtocolError">
+      <summary>A protocol error occurred. The value is equal to 2.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.Referral">
+      <summary>A referral was returned from the server. The value is equal to 10.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.ReferralV2">
+      <summary>Only partial results and referrals were received. The value is equal to 9.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.ResultCode.ResultsTooLarge">
       <summary>The returned results are too large. The value is equal to 70.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.AffectsMultipleDsas">
-      <summary>Multiple directory service agents are affected. The value is equal to 71.</summary>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.SaslBindInProgress">
+      <summary>Simple Authentication and Security Layer (SASL) bind is in progress. The value is equal to 14.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.SizeLimitExceeded">
+      <summary>The size limit was exceeded. The value is equal to 4.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.SortControlMissing">
+      <summary>The search requires a SORT control. The value is equal to 60.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.StrongAuthRequired">
+      <summary>Strong authentication is required for this operation. The value is equal to 8.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.Success">
+      <summary>The call completed successfully. The value is equal to 0.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.TimeLimitExceeded">
+      <summary>The time limit set by the server-side time limit parameter was exceeded. The value is equal to 3.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.Unavailable">
+      <summary>The server is unavailable. The value is equal to 52.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.UnavailableCriticalExtension">
+      <summary>The server does not support the control. The control is critical. The value is equal to 12.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.UndefinedAttributeType">
+      <summary>The type is not defined. The value is equal to 17.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.ResultCode.UnwillingToPerform">
+      <summary>The server cannot handle directory requests. The value is equal to 53.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.ResultCode.VirtualListViewError">
       <summary>An error occurred when attempting to perform a requested Virtual List View operation. The value is equal to 76.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.ResultCode.Other">
-      <summary>An unknown error occurred. The value is equal to 80.</summary>
     </member>
     <member name="T:System.DirectoryServices.Protocols.SearchOption">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.SearchOption" /> enumeration specifies the search options which define how the search will behave.</summary>
@@ -2651,17 +2651,17 @@
     <member name="T:System.DirectoryServices.Protocols.SecurityMasks">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.SecurityMasks" /> enumeration specifies various security descriptor options.</summary>
     </member>
+    <member name="F:System.DirectoryServices.Protocols.SecurityMasks.Dacl">
+      <summary>The discretionary access control list (DACL) security descriptor flag. The value is equal to 4 or 0x4.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.SecurityMasks.Group">
+      <summary>The primary group security descriptor flag. The value is equal to 2 or 0x2.</summary>
+    </member>
     <member name="F:System.DirectoryServices.Protocols.SecurityMasks.None">
       <summary>No security descriptor flag is set. The value is equal to 0 or 0x0.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.SecurityMasks.Owner">
       <summary>The owner security descriptor flag. The value is equal to 1 or 0x1.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.SecurityMasks.Group">
-      <summary>The primary group security descriptor flag. The value is equal to 2 or 0x2.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.Protocols.SecurityMasks.Dacl">
-      <summary>The discretionary access control list (DACL) security descriptor flag. The value is equal to 4 or 0x4.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.SecurityMasks.Sacl">
       <summary>The system access control list (SACL) security descriptor flag.  The value is equal to 8 or 0x8.</summary>
@@ -2700,29 +2700,29 @@
     <member name="T:System.DirectoryServices.Protocols.SecurityProtocol">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.SecurityProtocol" /> enumeration is used to specify the security protocol used by a connection.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.SecurityProtocol.Pct1Server">
-      <summary>Indicates that the server is using the PCT1 protocol. The value is equal to 1.</summary>
-    </member>
     <member name="F:System.DirectoryServices.Protocols.SecurityProtocol.Pct1Client">
       <summary>Indicates that the client is using the PCT1 protocol. The value is equal to 2.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.SecurityProtocol.Ssl2Server">
-      <summary>Indicates that the server is using the SSL2 protocol. The value is equal to 4.</summary>
+    <member name="F:System.DirectoryServices.Protocols.SecurityProtocol.Pct1Server">
+      <summary>Indicates that the server is using the PCT1 protocol. The value is equal to 1.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.SecurityProtocol.Ssl2Client">
       <summary>Indicates that the client is using the SSL2 protocol. The value is equal to 8.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.SecurityProtocol.Ssl3Server">
-      <summary>Indicates that the server is using the SSL3 protocol. The value is equal to 16.</summary>
+    <member name="F:System.DirectoryServices.Protocols.SecurityProtocol.Ssl2Server">
+      <summary>Indicates that the server is using the SSL2 protocol. The value is equal to 4.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.SecurityProtocol.Ssl3Client">
       <summary>Indicates that the client is using the SSL3 protocol. The value is equal to 32.</summary>
     </member>
-    <member name="F:System.DirectoryServices.Protocols.SecurityProtocol.Tls1Server">
-      <summary>Indicates that the server is using the TLS1 protocol. The value is equal to 64.</summary>
+    <member name="F:System.DirectoryServices.Protocols.SecurityProtocol.Ssl3Server">
+      <summary>Indicates that the server is using the SSL3 protocol. The value is equal to 16.</summary>
     </member>
     <member name="F:System.DirectoryServices.Protocols.SecurityProtocol.Tls1Client">
       <summary>Indicates that the client is using the TLS1 protocol. The value is equal to 128.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.Protocols.SecurityProtocol.Tls1Server">
+      <summary>Indicates that the server is using the TLS1 protocol. The value is equal to 64.</summary>
     </member>
     <member name="T:System.DirectoryServices.Protocols.ShowDeletedControl">
       <summary>The <see cref="T:System.DirectoryServices.Protocols.ShowDeletedControl" /> class is used with <see cref="T:System.DirectoryServices.Protocols.SearchRequest" /> to specify that the search results should include any deleted objects that match the search filter.</summary>

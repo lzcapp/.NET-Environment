@@ -1918,12 +1918,12 @@
     </member>
     <member name="M:System.ServiceModel.Activities.Configuration.ServiceModelActivitiesSectionGroup.GetSectionGroup(System.Configuration.Configuration)">
       <summary>Gets or sets the <see cref="T:System.ServiceModel.Activities.Configuration.ServiceModelActivitiesSectionGroup" /> from the given configuration.</summary>
-      <returns>The <see cref="T:System.ServiceModel.Activities.Configuration.ServiceModelActivitiesSectionGroup" />.</returns>
+      <returns>The <see cref="T:System.ServiceModel.Activities.Configuration.ServiceModelActivitiesSectionGroup" /> from the given configuration.</returns>
       <param name="config">The configuration from which to get the <see cref="T:System.ServiceModel.Activities.Configuration.ServiceModelActivitiesSectionGroup" />.</param>
     </member>
     <member name="P:System.ServiceModel.Activities.Configuration.ServiceModelActivitiesSectionGroup.WorkflowHostingOptionsSection">
       <summary>Gets or sets the <see cref="T:System.ServiceModel.Activities.Configuration.WorkflowHostingOptionsSection" />.</summary>
-      <returns>The <see cref="T:System.ServiceModel.Activities.Configuration.WorkflowHostingOptionsSection" />.</returns>
+      <returns>The workflow hosting options section.</returns>
     </member>
     <member name="T:System.ServiceModel.Activities.Configuration.SqlWorkflowInstanceStoreElement">
       <summary>Creates and maintains the <see cref="T:System.Activities.DurableInstancing.SqlWorkflowInstanceStore" /> sub-element of the service behaviors section of a Sql workflow configuration file.</summary>
@@ -2309,14 +2309,14 @@
     <member name="F:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon">
       <summary>Abandons the workflow instance.</summary>
     </member>
+    <member name="F:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend">
+      <summary>Abandons the workflow instance and marks the last persisted state as suspended. If there is no last persisted instance can be found, the workflow instance is aborted.</summary>
+    </member>
     <member name="F:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel">
       <summary>Cancels the workflow instance.</summary>
     </member>
     <member name="F:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate">
       <summary>Terminates the workflow instance. The instance state is <see cref="T:System.Activities.Hosting.WorkflowInstanceState.Complete" />.</summary>
-    </member>
-    <member name="F:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend">
-      <summary>Abandons the workflow instance and marks the last persisted state as suspended. If there is no last persisted instance can be found, the workflow instance is aborted.</summary>
     </member>
     <member name="T:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior">
       <summary>A service behavior that enables you to specify the action to take when an unhandled exception occurs within a workflow service.</summary>

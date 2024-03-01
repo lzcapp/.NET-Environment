@@ -65,50 +65,28 @@
     <member name="P:System.Web.Services.WebService.Application">
       <summary>Gets the application object for the current HTTP request.</summary>
       <returns>An <see cref="T:System.Web.HttpApplicationState" /> object.</returns>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlThread, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Web.AspNetHostingPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Level="Minimal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.WebService.Context">
       <summary>Gets the ASP.NET <see cref="T:System.Web.HttpContext" /> for the current request, which encapsulates all HTTP-specific context used by the HTTP server to process Web requests.</summary>
       <returns>The ASP.NET <see cref="T:System.Web.HttpContext" /> for the current request.</returns>
       <exception cref="T:System.Exception">
         <paramref name="Context" /> is null. </exception>
-      <PermissionSet>
-        <IPermission class="System.Web.AspNetHostingPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Level="Minimal" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.WebService.Server">
       <summary>Gets the <see cref="T:System.Web.HttpServerUtility" /> for the current request.</summary>
       <returns>An <see cref="T:System.Web.HttpServerUtility" /> object.</returns>
-      <PermissionSet>
-        <IPermission class="System.Web.AspNetHostingPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Level="Minimal" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.WebService.Session">
       <summary>Gets the <see cref="T:System.Web.SessionState.HttpSessionState" /> instance for the current request.</summary>
       <returns>An <see cref="T:System.Web.SessionState.HttpSessionState" /> representing the ASP.NET session state object for the current session.</returns>
-      <PermissionSet>
-        <IPermission class="System.Web.AspNetHostingPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Level="Minimal" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.WebService.SoapVersion">
       <summary>Gets the version of the SOAP protocol used to make the SOAP request to the XML Web service.</summary>
       <returns>One of the <see cref="T:System.Web.Services.Protocols.SoapProtocolVersion" /> values. The default is <see cref="F:System.Web.Services.Protocols.SoapProtocolVersion.Default" />.</returns>
-      <PermissionSet>
-        <IPermission class="System.Web.AspNetHostingPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Level="Minimal" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.WebService.User">
       <summary>Gets the ASP.NET server <see cref="P:System.Web.HttpContext.User" /> object. Can be used to authenticate whether a user is authorized to execute the request.</summary>
       <returns>A <see cref="T:System.Security.Principal.IPrincipal" /> representing the ASP.NET server <see cref="P:System.Web.HttpContext.User" /> object.</returns>
-      <PermissionSet>
-        <IPermission class="System.Web.AspNetHostingPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Level="Minimal" />
-      </PermissionSet>
     </member>
     <member name="T:System.Web.Services.WebServiceAttribute">
       <summary>Used to add additional information to an XML Web service, such as a string describing its functionality.</summary>
@@ -175,11 +153,11 @@
     <member name="T:System.Web.Services.WsiProfiles">
       <summary>Describes the Web services interoperability (WSI) specification to which a Web service claims to conform.</summary>
     </member>
-    <member name="F:System.Web.Services.WsiProfiles.None">
-      <summary>The web service makes no conformance claims.</summary>
-    </member>
     <member name="F:System.Web.Services.WsiProfiles.BasicProfile1_1">
       <summary>The web service claims to conform to the WSI Basic Profile version 1.1.</summary>
+    </member>
+    <member name="F:System.Web.Services.WsiProfiles.None">
+      <summary>The web service makes no conformance claims.</summary>
     </member>
     <member name="T:System.Web.Services.Configuration.DiagnosticsElement">
       <summary>Represents the &lt;diagnostics&gt; element in the Web.config configuration file.</summary>
@@ -441,11 +419,11 @@
     <member name="T:System.Web.Services.Configuration.WebServiceProtocols">
       <summary>Specifies the transmission protocols that are used to decrypt data sent from a client browser in the HTTP request.</summary>
     </member>
-    <member name="F:System.Web.Services.Configuration.WebServiceProtocols.Unknown">
-      <summary>Unknown protocol.</summary>
+    <member name="F:System.Web.Services.Configuration.WebServiceProtocols.AnyHttpSoap">
+      <summary>Any version of the HTTP SOAP protocol.</summary>
     </member>
-    <member name="F:System.Web.Services.Configuration.WebServiceProtocols.HttpSoap">
-      <summary>The HTTP SOAP protocol.</summary>
+    <member name="F:System.Web.Services.Configuration.WebServiceProtocols.Documentation">
+      <summary>The Web Services Documentation protocol.</summary>
     </member>
     <member name="F:System.Web.Services.Configuration.WebServiceProtocols.HttpGet">
       <summary>The HTTP GET protocol.</summary>
@@ -453,17 +431,17 @@
     <member name="F:System.Web.Services.Configuration.WebServiceProtocols.HttpPost">
       <summary>The HTTP POST protocol.</summary>
     </member>
-    <member name="F:System.Web.Services.Configuration.WebServiceProtocols.Documentation">
-      <summary>The Web Services Documentation protocol.</summary>
-    </member>
     <member name="F:System.Web.Services.Configuration.WebServiceProtocols.HttpPostLocalhost">
       <summary>The HTTP POST LOCALHOST protocol.</summary>
+    </member>
+    <member name="F:System.Web.Services.Configuration.WebServiceProtocols.HttpSoap">
+      <summary>The HTTP SOAP protocol.</summary>
     </member>
     <member name="F:System.Web.Services.Configuration.WebServiceProtocols.HttpSoap12">
       <summary>The HTTP SOAP version 1.2 protocol.</summary>
     </member>
-    <member name="F:System.Web.Services.Configuration.WebServiceProtocols.AnyHttpSoap">
-      <summary>Any version of the HTTP SOAP protocol.</summary>
+    <member name="F:System.Web.Services.Configuration.WebServiceProtocols.Unknown">
+      <summary>Unknown protocol.</summary>
     </member>
     <member name="T:System.Web.Services.Configuration.WebServicesSection">
       <summary>Represents the webServices element in the configuration file. This element controls the settings of XML Web services.</summary>
@@ -862,12 +840,6 @@
     <member name="P:System.Web.Services.Description.DocumentableItem.Documentation">
       <summary>Gets or sets the text documentation for the instance of the <see cref="T:System.Web.Services.Description.DocumentableItem" />.</summary>
       <returns>A string that represents the documentation for the <see cref="T:System.Web.Services.Description.DocumentableItem" />.</returns>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.Description.DocumentableItem.DocumentationElement">
       <summary>Gets or sets the documentation element for the <see cref="T:System.Web.Services.Description.DocumentableItem" />.</summary>
@@ -1590,11 +1562,11 @@
     <member name="F:System.Web.Services.Description.OperationFlow.None">
       <summary>Indicates that the endpoint of the XML Web service receives no transmissions.</summary>
     </member>
-    <member name="F:System.Web.Services.Description.OperationFlow.OneWay">
-      <summary>Indicates that the endpoint of the XML Web service receives a message.</summary>
-    </member>
     <member name="F:System.Web.Services.Description.OperationFlow.Notification">
       <summary>Indicates that the endpoint of the XML Web service sends a message.</summary>
+    </member>
+    <member name="F:System.Web.Services.Description.OperationFlow.OneWay">
+      <summary>Indicates that the endpoint of the XML Web service receives a message.</summary>
     </member>
     <member name="F:System.Web.Services.Description.OperationFlow.RequestResponse">
       <summary>Indicates that the endpoint of the XML Web service receives a message, then sends a correlated message.</summary>
@@ -2144,12 +2116,6 @@
       <summary>Gets a value that indicates whether an <see cref="T:System.Xml.XmlReader" /> represents a valid Web Services Description Language (WSDL) file that can be parsed.</summary>
       <returns>true if the <see cref="T:System.Xml.Serialization.XmlSerializer" /> can recognize the node on which the <see cref="T:System.Xml.XmlReader" /> is positioned; otherwise false.</returns>
       <param name="reader">An <see cref="T:System.Xml.XmlReader" /></param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.Description.ServiceDescription.Extensions">
       <summary>Gets the collection of extensibility elements contained in the <see cref="T:System.Web.Services.Description.ServiceDescription" />.</summary>
@@ -2174,12 +2140,6 @@
       <summary>Initializes an instance of the <see cref="T:System.Web.Services.Description.ServiceDescription" /> class by directly loading the XML from a <see cref="T:System.IO.Stream" /> instance.</summary>
       <returns>An instance of the <see cref="T:System.Web.Services.Description.ServiceDescription" />.</returns>
       <param name="stream">A <see cref="T:System.IO.Stream" />, passed by reference, which contains the bytes to be read.</param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Description.ServiceDescription.Read(System.IO.Stream,System.Boolean)">
       <summary>Initializes an instance of the <see cref="T:System.Web.Services.Description.ServiceDescription" /> class by directly loading the XML from a <see cref="T:System.IO.Stream" /> instance.</summary>
@@ -2191,12 +2151,6 @@
       <summary>Initializes an instance of the <see cref="T:System.Web.Services.Description.ServiceDescription" /> class by directly loading the XML from a <see cref="T:System.IO.TextReader" />.</summary>
       <returns>An instance of the <see cref="T:System.Web.Services.Description.ServiceDescription" />.</returns>
       <param name="textReader">A <see cref="T:System.IO.TextReader" /> instance, passed by reference, which contains the text to be read. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Description.ServiceDescription.Read(System.IO.TextReader,System.Boolean)">
       <summary>Initializes an instance of the <see cref="T:System.Web.Services.Description.ServiceDescription" /> class by directly loading the XML from a <see cref="T:System.IO.TextReader" />.</summary>
@@ -2208,12 +2162,6 @@
       <summary>Initializes an instance of a <see cref="T:System.Web.Services.Description.ServiceDescription" /> object by directly loading the XML from the specified file.</summary>
       <returns>An instance of the <see cref="T:System.Web.Services.Description.ServiceDescription" />.</returns>
       <param name="fileName">The path to the file to be read. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Description.ServiceDescription.Read(System.String,System.Boolean)">
       <summary>Initializes an instance of a <see cref="T:System.Web.Services.Description.ServiceDescription" /> object by directly loading the XML from the specified file.</summary>
@@ -2225,12 +2173,6 @@
       <summary>Initializes an instance of the <see cref="T:System.Web.Services.Description.ServiceDescription" /> class by directly loading the XML from an <see cref="T:System.Xml.XmlReader" />.</summary>
       <returns>An instance of the <see cref="T:System.Web.Services.Description.ServiceDescription" />.</returns>
       <param name="reader">An <see cref="T:System.Xml.XmlReader" />, passed by reference, which contains the XML data to be read. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Description.ServiceDescription.Read(System.Xml.XmlReader,System.Boolean)">
       <summary>Initializes an instance of the <see cref="T:System.Web.Services.Description.ServiceDescription" /> class by directly loading the XML from an <see cref="T:System.Xml.XmlReader" />.</summary>
@@ -2249,12 +2191,6 @@
     <member name="P:System.Web.Services.Description.ServiceDescription.Serializer">
       <summary>Gets the XML serializer used to serialize and deserialize between a <see cref="T:System.Web.Services.Description.ServiceDescription" /> object and a Web Services Description Language (WSDL) document.</summary>
       <returns>The XML serializer used to serialize and deserialize between a <see cref="T:System.Web.Services.Description.ServiceDescription" /> object and a Web Services Description Language (WSDL) document.</returns>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.Description.ServiceDescription.ServiceDescriptions">
       <summary>Gets the <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> instance of which the <see cref="T:System.Web.Services.Description.ServiceDescription" /> is a member.</summary>
@@ -2280,42 +2216,18 @@
     <member name="M:System.Web.Services.Description.ServiceDescription.Write(System.IO.Stream)">
       <summary>Writes out the <see cref="T:System.Web.Services.Description.ServiceDescription" /> to the specified <see cref="T:System.IO.Stream" />.</summary>
       <param name="stream">A <see cref="T:System.IO.Stream" />, passed by reference, which contains the Web Services Description Language (WSDL) file produced. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Description.ServiceDescription.Write(System.IO.TextWriter)">
       <summary>Writes out the <see cref="T:System.Web.Services.Description.ServiceDescription" /> as a Web Services Description Language (WSDL) file to the <see cref="T:System.IO.TextWriter" />.</summary>
       <param name="writer">A <see cref="T:System.IO.TextWriter" /> that contains the WSDL file produced. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Description.ServiceDescription.Write(System.String)">
       <summary>Writes out the <see cref="T:System.Web.Services.Description.ServiceDescription" /> as a Web Services Description Language (WSDL) file to the specified path.</summary>
       <param name="fileName">The path to which the WSDL file is written. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Description.ServiceDescription.Write(System.Xml.XmlWriter)">
       <summary>Writes out the <see cref="T:System.Web.Services.Description.ServiceDescription" /> to the <see cref="T:System.Xml.XmlWriter" /> as a Web Services Description Language (WSDL) file.</summary>
       <param name="writer">An <see cref="T:System.Xml.XmlWriter" />, passed by reference, which contains the WSDL file produced. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="T:System.Web.Services.Description.ServiceDescriptionBaseCollection">
       <summary>Forms the basis for the strongly typed collections that are members of the <see cref="N:System.Web.Services.Description" /> namespace.</summary>
@@ -2583,23 +2495,23 @@
     <member name="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.NoCodeGenerated">
       <summary>Specifies that no proxy class was generated by the <see cref="M:System.Web.Services.Description.ServiceDescriptionImporter.Import(System.CodeDom.CodeNamespace,System.CodeDom.CodeCompileUnit)" /> method.</summary>
     </member>
+    <member name="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.NoMethodsGenerated">
+      <summary>Specifies that the proxy class generated by the <see cref="M:System.Web.Services.Description.ServiceDescriptionImporter.Import(System.CodeDom.CodeNamespace,System.CodeDom.CodeCompileUnit)" /> method includes no methods.</summary>
+    </member>
     <member name="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.OptionalExtensionsIgnored">
       <summary>Specifies that at least one optional <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> for the <see cref="T:System.Web.Services.Description.ServiceDescription" /> to be imported has been ignored.</summary>
     </member>
     <member name="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.RequiredExtensionsIgnored">
       <summary>Specifies that at least one required <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> for the <see cref="T:System.Web.Services.Description.ServiceDescription" /> to be imported has been ignored.</summary>
     </member>
-    <member name="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.UnsupportedOperationsIgnored">
-      <summary>Specifies that at least one <see cref="T:System.Web.Services.Description.Operation" /> for the <see cref="T:System.Web.Services.Description.ServiceDescription" /> to be imported is of an unsupported type and has been ignored.</summary>
+    <member name="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.SchemaValidation">
+      <summary>Specifies that the <see cref="T:System.Web.Services.Description.ServiceDescription" /> schema is invalid.</summary>
     </member>
     <member name="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.UnsupportedBindingsIgnored">
       <summary>Specifies that at least one <see cref="T:System.Web.Services.Description.Binding" /> for the <see cref="T:System.Web.Services.Description.ServiceDescription" /> to be imported is of an unsupported type and has been ignored.</summary>
     </member>
-    <member name="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.NoMethodsGenerated">
-      <summary>Specifies that the proxy class generated by the <see cref="M:System.Web.Services.Description.ServiceDescriptionImporter.Import(System.CodeDom.CodeNamespace,System.CodeDom.CodeCompileUnit)" /> method includes no methods.</summary>
-    </member>
-    <member name="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.SchemaValidation">
-      <summary>Specifies that the <see cref="T:System.Web.Services.Description.ServiceDescription" /> schema is invalid.</summary>
+    <member name="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.UnsupportedOperationsIgnored">
+      <summary>Specifies that at least one <see cref="T:System.Web.Services.Description.Operation" /> for the <see cref="T:System.Web.Services.Description.ServiceDescription" /> to be imported is of an unsupported type and has been ignored.</summary>
     </member>
     <member name="F:System.Web.Services.Description.ServiceDescriptionImportWarnings.WsiConformance">
       <summary>Specifies that the <see cref="T:System.Web.Services.Description.ServiceDescription" /> to be imported does not conform to the WS-I Basic Profile.</summary>
@@ -3159,12 +3071,6 @@
     <member name="P:System.Web.Services.Discovery.ContractReference.DefaultFilename">
       <summary>Gets the name of the file to use by default when saving the referenced service description.</summary>
       <returns>Name of the default file to use when saving the referenced service description to a file.</returns>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.Discovery.ContractReference.DocRef">
       <summary>Gets and sets the URL for a XML Web service implementing the service description referenced in the <see cref="P:System.Web.Services.Discovery.ContractReference.Ref" /> property.</summary>
@@ -3178,12 +3084,6 @@
       <returns>A <see cref="T:System.Web.Services.Description.ServiceDescription" /> containing the contents of the referenced service description.</returns>
       <param name="stream">
         <see cref="T:System.IO.Stream" /> containing the service description. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.Discovery.ContractReference.Ref">
       <summary>Gets or sets the URL to the referenced service description.</summary>
@@ -3203,12 +3103,6 @@
       <summary>Writes the passed-in service description into the passed-in <see cref="T:System.IO.Stream" />.</summary>
       <param name="document">The <see cref="T:System.Web.Services.Description.ServiceDescription" /> to write into <paramref name="stream" />. </param>
       <param name="stream">The <see cref="T:System.IO.Stream" /> into which the serialized <see cref="T:System.Web.Services.Description.ServiceDescription" /> is written. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="T:System.Web.Services.Discovery.ContractSearchPattern">
       <summary>Obtains the file locations and descriptions of ASP.NET Web services. This class cannot be inherited.</summary>
@@ -3444,12 +3338,6 @@
       <summary>Returns a value indicating whether the passed <see cref="T:System.Xml.XmlReader" /> can be deserialized into a <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" />.</summary>
       <returns>true if <see cref="T:System.Xml.XmlReader" /> can be deserialized into a <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" />; otherwise, false.</returns>
       <param name="xmlReader">The <see cref="T:System.Xml.XmlReader" /> that is tested whether it can be deserialized into a <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" />. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="F:System.Web.Services.Discovery.DiscoveryDocument.Namespace">
       <summary>Namespace of the discovery XML element of a discovery document.</summary>
@@ -3458,34 +3346,16 @@
       <summary>Reads and returns a <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> from the passed <see cref="T:System.IO.Stream" />.</summary>
       <returns>A <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> containing the contents of a discovery document from the passed <see cref="T:System.IO.Stream" />.</returns>
       <param name="stream">The <see cref="T:System.IO.Stream" /> from which to read the <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" />. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Discovery.DiscoveryDocument.Read(System.IO.TextReader)">
       <summary>Reads and returns a <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> from the passed <see cref="T:System.IO.TextReader" />.</summary>
       <returns>A <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> containing the contents of a discovery document from the passed <see cref="T:System.IO.TextReader" />.</returns>
       <param name="reader">The <see cref="T:System.IO.TextReader" /> from which to read the <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" />. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Discovery.DiscoveryDocument.Read(System.Xml.XmlReader)">
       <summary>Reads and returns a <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> from the passed <see cref="T:System.Xml.XmlReader" />.</summary>
       <returns>A <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> containing the contents of a discovery document from the passed <see cref="T:System.Xml.XmlReader" />.</returns>
       <param name="xmlReader">The <see cref="T:System.Xml.XmlReader" /> from which to read the <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" />. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.Discovery.DiscoveryDocument.References">
       <summary>A list of references contained within the discovery document.</summary>
@@ -3494,32 +3364,14 @@
     <member name="M:System.Web.Services.Discovery.DiscoveryDocument.Write(System.IO.Stream)">
       <summary>Writes this <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> into the passed <see cref="T:System.IO.Stream" />.</summary>
       <param name="stream">The <see cref="T:System.IO.Stream" /> into which this <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> is written. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Discovery.DiscoveryDocument.Write(System.IO.TextWriter)">
       <summary>Writes this <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> into the passed <see cref="T:System.IO.TextWriter" />.</summary>
       <param name="writer">The <see cref="T:System.IO.TextWriter" /> into which this <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> is written. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Discovery.DiscoveryDocument.Write(System.Xml.XmlWriter)">
       <summary>Writes this <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> into the passed <see cref="T:System.Xml.XmlWriter" />.</summary>
       <param name="writer">The <see cref="T:System.Xml.XmlWriter" /> into which this <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> is written. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="T:System.Web.Services.Discovery.DiscoveryDocumentLinksPattern">
       <summary>Obtains the file locations of Web services discovery documents for use in populating another Web services discovery document.</summary>
@@ -3561,12 +3413,6 @@
       <returns>A <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> containing the contents of the referenced discovery document.</returns>
       <param name="stream">
         <see cref="T:System.IO.Stream" /> containing the discovery document. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.Discovery.DiscoveryDocumentReference.Ref">
       <summary>Gets or sets the reference to a discovery document.</summary>
@@ -3575,12 +3421,6 @@
     <member name="M:System.Web.Services.Discovery.DiscoveryDocumentReference.ResolveAll">
       <summary>Verifies that all referenced documents within the discovery document are valid.</summary>
       <exception cref="T:System.InvalidOperationException">The <see cref="P:System.Web.Services.Discovery.DiscoveryReference.ClientProtocol" /> property is null.-or- The discovery document could not be downloaded and verified successfully. </exception>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.Discovery.DiscoveryDocumentReference.Url">
       <summary>Gets or sets the URL of the referenced discovery document.</summary>
@@ -3590,12 +3430,6 @@
       <summary>Writes the passed <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> into the passed <see cref="T:System.IO.Stream" />.</summary>
       <param name="document">The <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> to write into <paramref name="stream" />. </param>
       <param name="stream">The <see cref="T:System.IO.Stream" /> into which the serialized discovery document is written. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="T:System.Web.Services.Discovery.DiscoveryDocumentSearchPattern">
       <summary>Obtains the file locations of Web services discovery documents for use in populating another Web services discovery document. This class cannot be inherited.</summary>
@@ -3682,12 +3516,6 @@
     <member name="M:System.Web.Services.Discovery.DiscoveryReference.Resolve">
       <summary>Downloads the referenced document at <see cref="P:System.Web.Services.Discovery.DiscoveryReference.Url" /> to resolve whether the referenced document is valid.</summary>
       <exception cref="T:System.InvalidOperationException">The <see cref="P:System.Web.Services.Discovery.DiscoveryReference.ClientProtocol" /> property is null. </exception>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Discovery.DiscoveryReference.Resolve(System.String,System.IO.Stream)">
       <summary>Resolves whether the referenced document is valid.</summary>
@@ -3773,12 +3601,6 @@
       <summary>Deserializes an XML document into a <see cref="T:System.Web.Services.Discovery.DynamicDiscoveryDocument" /> instance.</summary>
       <returns>The <see cref="T:System.Web.Services.Discovery.DynamicDiscoveryDocument" /> that was loaded.</returns>
       <param name="stream">A <see cref="T:System.IO.Stream" /> object from which the XML dynamic discovery document is deserialized.</param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="F:System.Web.Services.Discovery.DynamicDiscoveryDocument.Namespace">
       <summary>Contains the dynamic discovery document namespace "urn:schemas-dynamicdiscovery:disco.2000-03-17". This field is constant.</summary>
@@ -3786,12 +3608,6 @@
     <member name="M:System.Web.Services.Discovery.DynamicDiscoveryDocument.Write(System.IO.Stream)">
       <summary>Serializes a <see cref="T:System.Web.Services.Discovery.DynamicDiscoveryDocument" /> instance into an XML document specified as an output stream.</summary>
       <param name="stream">A <see cref="T:System.IO.Stream" /> object to which the XML dynamic discovery document is serialized.</param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="T:System.Web.Services.Discovery.ExcludePathInfo">
       <summary>Represents a file system directory path that should not be searched for references to add to a Web services discovery document.</summary>
@@ -3820,12 +3636,6 @@
     <member name="P:System.Web.Services.Discovery.SchemaReference.DefaultFilename">
       <summary>Gets the name of the default file to use when saving the referenced XSD schema.</summary>
       <returns>Default name to use when saving the referenced XSD schema to a file.</returns>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="F:System.Web.Services.Discovery.SchemaReference.Namespace">
       <summary>XML namespace for XSD schema references in discovery documents.</summary>
@@ -3835,12 +3645,6 @@
       <returns>An <see cref="T:System.Xml.Schema.XmlSchema" /> containing the contents of the referenced XSD schema.</returns>
       <param name="stream">
         <see cref="T:System.IO.Stream" /> containing the XSD schema. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.Discovery.SchemaReference.Ref">
       <summary>Gets or sets the URL to the referenced XSD schema.</summary>
@@ -3864,12 +3668,6 @@
       <summary>Writes the passed XSD schema into the passed <see cref="T:System.IO.Stream" />.</summary>
       <param name="document">The <see cref="T:System.Xml.Schema.XmlSchema" /> to write into <paramref name="stream" />. </param>
       <param name="stream">The <see cref="T:System.IO.Stream" /> into which the serialized XSD schema is written. </param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="T:System.Web.Services.Discovery.SoapBinding">
       <summary>Represents a SOAP binding in a discovery document. This class cannot be inherited.</summary>
@@ -3934,12 +3732,6 @@
       <summary>Reads name-value pairs into Web method parameter values.</summary>
       <returns>An array of objects contain the name-value pairs.</returns>
       <param name="request">An <see cref="T:System.Web.HttpRequest" /> object containing HTML name-value pairs encoded in the body of an HTTP request.</param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="T:System.Web.Services.Protocols.HtmlFormParameterWriter">
       <summary>Writes outgoing request parameters for Web services implemented using HTTP with name-value pairs encoded like an HTML form rather than as a SOAP message.</summary>
@@ -4274,11 +4066,11 @@
     <member name="T:System.Web.Services.Protocols.LogicalMethodTypes">
       <summary>Specifies how the XML Web service method was invoked.</summary>
     </member>
-    <member name="F:System.Web.Services.Protocols.LogicalMethodTypes.Sync">
-      <summary>The XML Web service method is invoked synchronously.</summary>
-    </member>
     <member name="F:System.Web.Services.Protocols.LogicalMethodTypes.Async">
       <summary>The XML Web service method is invoked asynchronously.</summary>
+    </member>
+    <member name="F:System.Web.Services.Protocols.LogicalMethodTypes.Sync">
+      <summary>The XML Web service method is invoked synchronously.</summary>
     </member>
     <member name="T:System.Web.Services.Protocols.MatchAttribute">
       <summary>Represents the attributes of a match made using text pattern matching. This class cannot be inherited.</summary>
@@ -4929,17 +4721,17 @@
     <member name="T:System.Web.Services.Protocols.SoapHeaderDirection">
       <summary>Specifies whether the recipient of the <see cref="T:System.Web.Services.Protocols.SoapHeader" /> is the XML Web service, the XML Web service client, or both.</summary>
     </member>
+    <member name="F:System.Web.Services.Protocols.SoapHeaderDirection.Fault">
+      <summary>Specifies the <see cref="T:System.Web.Services.Protocols.SoapHeader" /> is sent to the XML Web service client when an exception is thrown by the XML Web service method.</summary>
+    </member>
     <member name="F:System.Web.Services.Protocols.SoapHeaderDirection.In">
       <summary>Specifies the <see cref="T:System.Web.Services.Protocols.SoapHeader" /> is sent to the XML Web service.</summary>
-    </member>
-    <member name="F:System.Web.Services.Protocols.SoapHeaderDirection.Out">
-      <summary>Specifies the <see cref="T:System.Web.Services.Protocols.SoapHeader" /> is sent to the XML Web service client.</summary>
     </member>
     <member name="F:System.Web.Services.Protocols.SoapHeaderDirection.InOut">
       <summary>Specifies the <see cref="T:System.Web.Services.Protocols.SoapHeader" /> is sent to both the XML Web service and the XML Web service client.</summary>
     </member>
-    <member name="F:System.Web.Services.Protocols.SoapHeaderDirection.Fault">
-      <summary>Specifies the <see cref="T:System.Web.Services.Protocols.SoapHeader" /> is sent to the XML Web service client when an exception is thrown by the XML Web service method.</summary>
+    <member name="F:System.Web.Services.Protocols.SoapHeaderDirection.Out">
+      <summary>Specifies the <see cref="T:System.Web.Services.Protocols.SoapHeader" /> is sent to the XML Web service client.</summary>
     </member>
     <member name="T:System.Web.Services.Protocols.SoapHeaderException">
       <summary>The SOAP representation of a server error.</summary>
@@ -5096,12 +4888,6 @@
       <summary>Dynamically binds to an XML Web service described in the discovery document at <see cref="P:System.Web.Services.Protocols.WebClientProtocol.Url" />.</summary>
       <exception cref="T:System.Exception">The binding defined in the proxy class could not be found in the discovery document at <see cref="P:System.Web.Services.Protocols.WebClientProtocol.Url" />. </exception>
       <exception cref="T:System.Exception">The proxy class does not have a binding defined. </exception>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Protocols.SoapHttpClientProtocol.EndInvoke(System.IAsyncResult)">
       <summary>Ends an asynchronous invocation of an XML Web service method using SOAP.</summary>
@@ -5242,8 +5028,8 @@
     <member name="T:System.Web.Services.Protocols.SoapMessageStage">
       <summary>Specifies the processing stage of a SOAP message.</summary>
     </member>
-    <member name="F:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize">
-      <summary>The stage just prior to a <see cref="T:System.Web.Services.Protocols.SoapMessage" /> being serialized.</summary>
+    <member name="F:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize">
+      <summary>The stage just after a <see cref="T:System.Web.Services.Protocols.SoapMessage" /> is deserialized from a SOAP message into an object.</summary>
     </member>
     <member name="F:System.Web.Services.Protocols.SoapMessageStage.AfterSerialize">
       <summary>The stage just after a <see cref="T:System.Web.Services.Protocols.SoapMessage" /> is serialized, but before the SOAP message is sent over the wire.</summary>
@@ -5251,17 +5037,17 @@
     <member name="F:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize">
       <summary>The stage just before a <see cref="T:System.Web.Services.Protocols.SoapMessage" /> is deserialized from the SOAP message sent across the network into an object.</summary>
     </member>
-    <member name="F:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize">
-      <summary>The stage just after a <see cref="T:System.Web.Services.Protocols.SoapMessage" /> is deserialized from a SOAP message into an object.</summary>
+    <member name="F:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize">
+      <summary>The stage just prior to a <see cref="T:System.Web.Services.Protocols.SoapMessage" /> being serialized.</summary>
     </member>
     <member name="T:System.Web.Services.Protocols.SoapParameterStyle">
       <summary>Specifies how parameters are formatted in a SOAP message.</summary>
     </member>
-    <member name="F:System.Web.Services.Protocols.SoapParameterStyle.Default">
-      <summary>Specifies using the default <see cref="T:System.Web.Services.Protocols.SoapParameterStyle" /> for the XML Web service. The default for an XML Web service can be set by applying a <see cref="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" /> to the class implementing the XML Web service. If a <see cref="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" /> is not applied to the class implementing the XML Web service, the default is <see cref="F:System.Web.Services.Protocols.SoapParameterStyle.Wrapped" />.</summary>
-    </member>
     <member name="F:System.Web.Services.Protocols.SoapParameterStyle.Bare">
       <summary>Parameters sent to and from an XML Web service method are placed in XML elements directly following the Body element of a SOAP request or SOAP response.</summary>
+    </member>
+    <member name="F:System.Web.Services.Protocols.SoapParameterStyle.Default">
+      <summary>Specifies using the default <see cref="T:System.Web.Services.Protocols.SoapParameterStyle" /> for the XML Web service. The default for an XML Web service can be set by applying a <see cref="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" /> to the class implementing the XML Web service. If a <see cref="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" /> is not applied to the class implementing the XML Web service, the default is <see cref="F:System.Web.Services.Protocols.SoapParameterStyle.Wrapped" />.</summary>
     </member>
     <member name="F:System.Web.Services.Protocols.SoapParameterStyle.Wrapped">
       <summary>Parameters sent to and from an XML Web service method are encapsulated within a single XML element followig the Body element of the XML portion of a SOAP request or SOAP response.</summary>
@@ -5362,12 +5148,6 @@
     <member name="P:System.Web.Services.Protocols.SoapServerMessage.Url">
       <summary>Gets the base URL of the XML Web service.</summary>
       <returns>The base URL of the XML Web service.</returns>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="T:System.Web.Services.Protocols.SoapServerMethod">
       <summary>Represents the attributes and metadata for an XML Web service method. This class cannot be inherited.</summary>
@@ -5505,11 +5285,11 @@
     <member name="T:System.Web.Services.Protocols.SoapServiceRoutingStyle">
       <summary>Specifies how a SOAP message is routed to the Web server hosting the XML Web service.</summary>
     </member>
-    <member name="F:System.Web.Services.Protocols.SoapServiceRoutingStyle.SoapAction">
-      <summary>The SOAP message is routed based on the SOAPAction HTTP header.</summary>
-    </member>
     <member name="F:System.Web.Services.Protocols.SoapServiceRoutingStyle.RequestElement">
       <summary>The SOAP Message is routed based on the first child element following the &lt;Body&gt; XML element of the SOAP message.</summary>
+    </member>
+    <member name="F:System.Web.Services.Protocols.SoapServiceRoutingStyle.SoapAction">
+      <summary>The SOAP message is routed based on the SOAPAction HTTP header.</summary>
     </member>
     <member name="T:System.Web.Services.Protocols.SoapUnknownHeader">
       <summary>Represents the data received from a SOAP header that was not understood by the recipient XML Web service or XML Web service client. This class cannot be inherited.</summary>
@@ -5531,10 +5311,6 @@
       <summary>Returns an initializer for the specified method.</summary>
       <returns>An initializer for the specified method</returns>
       <param name="methodInfo">A <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" /> that specifies the Web method for which the initializer is obtained.</param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="ControlEvidence" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Protocols.TextReturnReader.Initialize(System.Object)">
       <summary>Initializes an instance.</summary>
@@ -5586,12 +5362,6 @@
       <summary>Reads name/value pairs encoded in the query string of an HTTP request into Web method parameter values.</summary>
       <returns>An array of name/value pairs.</returns>
       <param name="request">A <see cref="T:System.Net.WebResponse" /> objectcontaining HTML URL-encoded name/value pairs.</param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="T:System.Web.Services.Protocols.UrlParameterWriter">
       <summary>Writes out-going request parameters for Web services implemented using HTTP with name-value pairs encoded in the URL's query string rather than as a SOAP message.</summary>
@@ -5718,12 +5488,6 @@
     <member name="P:System.Web.Services.Protocols.WebClientProtocol.Url">
       <summary>Gets or sets the base URL of the XML Web service the client is requesting.</summary>
       <returns>The base URL of the XML Web service the client is requesting. The default is <see cref="F:System.String.Empty" />.</returns>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="P:System.Web.Services.Protocols.WebClientProtocol.UseDefaultCredentials">
       <summary>Gets or sets a value that indicates whether to set the <see cref="P:System.Web.Services.Protocols.WebClientProtocol.Credentials" /> property to the value of the <see cref="P:System.Net.CredentialCache.DefaultCredentials" /> property.</summary>
@@ -5742,13 +5506,6 @@
       <param name="verb">The HTTP data transfer method (GET or POST) that the client uses.</param>
       <param name="url">The raw URL of the requested resource.</param>
       <param name="filePath">The file-system path of the requested resource.</param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence, ControlPrincipal" />
-        <IPermission class="System.Web.AspNetHostingPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Level="Medium" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Protocols.WebServiceHandlerFactory.ReleaseHandler(System.Web.IHttpHandler)">
       <summary>Releases the <see cref="T:System.Web.IHttpHandler" /> instance.</summary>
@@ -5764,23 +5521,11 @@
       <summary>Returns an initializer for the specified method.</summary>
       <returns>An initializer for the specified method.</returns>
       <param name="methodInfo">A <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" /> that specifies the Web method for which the initializer is obtained.</param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Protocols.XmlReturnReader.GetInitializers(System.Web.Services.Protocols.LogicalMethodInfo[])">
       <summary>Returns an array of initializer objects corresponding to an input array of method definitions.</summary>
       <returns>An array of initializer objects corresponding to an input array of method definitions.</returns>
       <param name="methodInfos">An array of type <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" /> that specifies the Web methods for which the initializers are obtained.</param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
-        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
     <member name="M:System.Web.Services.Protocols.XmlReturnReader.Initialize(System.Object)">
       <summary>Initializes an instance.</summary>
@@ -5791,9 +5536,6 @@
       <returns>A return value deserialized from an XML document contained in the HTTP response.</returns>
       <param name="response">An <see cref="T:System.Web.HttpRequest" /> object containing the output message for an operation.</param>
       <param name="responseStream">A <see cref="T:System.IO.Stream" /> whose content is the body of the HTTP response represented by the <paramref name="response" /> parameter.</param>
-      <PermissionSet>
-        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
-      </PermissionSet>
     </member>
   </members>
 </doc>

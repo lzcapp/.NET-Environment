@@ -159,6 +159,9 @@
       <returns>true if the specified <see cref="T:System.Windows.Automation.AutomationElement" /> is equal to this <see cref="T:System.Windows.Automation.AutomationElement" />;otherwise false.</returns>
       <param name="obj">An <see cref="T:System.Windows.Automation.AutomationElement" /> to compare.</param>
     </member>
+    <member name="M:System.Windows.Automation.AutomationElement.Finalize">
+      <summary>Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.</summary>
+    </member>
     <member name="M:System.Windows.Automation.AutomationElement.FindAll(System.Windows.Automation.TreeScope,System.Windows.Automation.Condition)">
       <summary>Returns all <see cref="T:System.Windows.Automation.AutomationElement" /> objects that satisfy the specified condition.</summary>
       <returns>A collection of objects that satisfies the specified condition. If there are no matches, an empty collection is returned.</returns>
@@ -576,11 +579,11 @@
     <member name="T:System.Windows.Automation.AutomationElementMode">
       <summary>Contains values that specify the type of reference to use when returning UI Automation elements. These values are used in the <see cref="P:System.Windows.Automation.CacheRequest.AutomationElementMode" /> property.</summary>
     </member>
-    <member name="F:System.Windows.Automation.AutomationElementMode.None">
-      <summary>Specifies that returned elements have no reference to the underlying UI and contain only cached information. This mode might be used, for example, to retrieve the names of items in a list box without obtaining references to the items themselves.</summary>
-    </member>
     <member name="F:System.Windows.Automation.AutomationElementMode.Full">
       <summary>Specifies that returned elements have a full reference to the underlying UI. </summary>
+    </member>
+    <member name="F:System.Windows.Automation.AutomationElementMode.None">
+      <summary>Specifies that returned elements have no reference to the underlying UI and contain only cached information. This mode might be used, for example, to retrieve the names of items in a list box without obtaining references to the items themselves.</summary>
     </member>
     <member name="T:System.Windows.Automation.AutomationFocusChangedEventArgs">
       <summary>Provides data for a focus-changed event.</summary>
@@ -711,14 +714,14 @@
     <member name="T:System.Windows.Automation.ClientSideProviderMatchIndicator">
       <summary>Contains values that specify behavior when matching class names in a <see cref="T:System.Windows.Automation.ClientSideProviderDescription" />.</summary>
     </member>
-    <member name="F:System.Windows.Automation.ClientSideProviderMatchIndicator.None">
-      <summary>No special flags.</summary>
-    </member>
     <member name="F:System.Windows.Automation.ClientSideProviderMatchIndicator.AllowSubstringMatch">
       <summary>Specifies that substring comparison is used for comparing class names.</summary>
     </member>
     <member name="F:System.Windows.Automation.ClientSideProviderMatchIndicator.DisallowBaseClassNameMatch">
       <summary>Specifies that the base class of the object is not used when matching window class names.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.ClientSideProviderMatchIndicator.None">
+      <summary>No special flags.</summary>
     </member>
     <member name="T:System.Windows.Automation.Condition">
       <summary>Base type for conditions used in filtering when searching for elements in the UI Automation tree.</summary>
@@ -1007,11 +1010,11 @@
     <member name="T:System.Windows.Automation.PropertyConditionFlags">
       <summary>Contains values that specify how a property value is tested in a <see cref="T:System.Windows.Automation.PropertyCondition" />. </summary>
     </member>
-    <member name="F:System.Windows.Automation.PropertyConditionFlags.None">
-      <summary>Specifies that the property value is tested using default behavior (case-sensitive comparison for strings).</summary>
-    </member>
     <member name="F:System.Windows.Automation.PropertyConditionFlags.IgnoreCase">
       <summary>Specifies that comparison with a string property value is not case-sensitive.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.PropertyConditionFlags.None">
+      <summary>Specifies that the property value is tested using default behavior (case-sensitive comparison for strings).</summary>
     </member>
     <member name="T:System.Windows.Automation.RangeValuePattern">
       <summary>Represents a control that can be set to a value within a range.</summary>

@@ -7,11 +7,11 @@
     <member name="T:System.Web.DynamicData.ContainerType">
       <summary>Specifies the data-control container type. </summary>
     </member>
-    <member name="F:System.Web.DynamicData.ContainerType.List">
-      <summary>Indicates a list container that implements the <see cref="T:System.Web.UI.WebControls.IDataBoundListControl" /> interface, such as a <see cref="T:System.Web.UI.WebControls.ListView" /> control, a <see cref="T:System.Web.UI.WebControls.GridView" /> control, or a <see cref="T:System.Web.UI.WebControls.Repeater" /> control.</summary>
-    </member>
     <member name="F:System.Web.DynamicData.ContainerType.Item">
       <summary>Indicates an item container that implements the <see cref="T:System.Web.UI.WebControls.IDataBoundItemControl" /> interface, such as a <see cref="T:System.Web.UI.WebControls.DetailsView" /> control or a <see cref="T:System.Web.UI.WebControls.FormView" /> control.</summary>
+    </member>
+    <member name="F:System.Web.DynamicData.ContainerType.List">
+      <summary>Indicates a list container that implements the <see cref="T:System.Web.UI.WebControls.IDataBoundListControl" /> interface, such as a <see cref="T:System.Web.UI.WebControls.ListView" /> control, a <see cref="T:System.Web.UI.WebControls.GridView" /> control, or a <see cref="T:System.Web.UI.WebControls.Repeater" /> control.</summary>
     </member>
     <member name="T:System.Web.DynamicData.ContextConfiguration">
       <summary>Provides information for a data-context instance in order to allow customization.</summary>
@@ -1617,7 +1617,7 @@
     <member name="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Func{System.Object},System.Web.DynamicData.ContextConfiguration)">
       <summary>Registers a data-context instance by using the specified context configuration and by enabling a custom constructor. </summary>
       <param name="contextFactory">A delegate that is used to instantiate the data model context.</param>
-      <param name="configuration">Context information as defined by the <see cref="T:System.Web.DynamicData.ContextConfiguration" /> class.</param>
+      <param name="configuration">The context information as defined by the <see cref="T:System.Web.DynamicData.ContextConfiguration" /> class.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="contextFactory" /> is null.</exception>
       <exception cref="T:System.ArgumentException">The <paramref name="contextType" /> that is instantiated by <paramref name="contextFactory" /> is not valid.</exception>
@@ -1629,7 +1629,7 @@
     <member name="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Type,System.Web.DynamicData.ContextConfiguration)">
       <summary>Registers a data-context instance by using the specified context configuration. </summary>
       <param name="contextType">The type of the data context as defined in the data model.</param>
-      <param name="configuration">Configuration information for the context, as defined by the <see cref="T:System.Web.DynamicData.ContextConfiguration" /> class.</param>
+      <param name="configuration">The configuration information for the context, as defined by the <see cref="T:System.Web.DynamicData.ContextConfiguration" /> class.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="contextType" /> is null.</exception>
     </member>
@@ -1640,7 +1640,7 @@
     <member name="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Web.DynamicData.ModelProviders.DataModelProvider,System.Web.DynamicData.ContextConfiguration)">
       <summary>Registers a data-context instance by using the specified context configuration and by enabling a data-model provider. </summary>
       <param name="dataModelProvider">A provider for the data model.</param>
-      <param name="configuration">Context information as defined by the <see cref="T:System.Web.DynamicData.ContextConfiguration" /> class.</param>
+      <param name="configuration">The context information as defined by the <see cref="T:System.Web.DynamicData.ContextConfiguration" /> class.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="dataModelProvider" /> or <paramref name="configuration" /> is null.</exception>
       <exception cref="T:System.InvalidOperationException">
@@ -2039,17 +2039,17 @@
     <member name="T:System.Web.DynamicData.ModelProviders.AssociationDirection">
       <summary>Indicates the relationship between two entities.</summary>
     </member>
-    <member name="F:System.Web.DynamicData.ModelProviders.AssociationDirection.OneToOne">
-      <summary>Indicates a one-to-one relationship.</summary>
-    </member>
-    <member name="F:System.Web.DynamicData.ModelProviders.AssociationDirection.OneToMany">
-      <summary>Indicates a one-to-many relationship.</summary>
+    <member name="F:System.Web.DynamicData.ModelProviders.AssociationDirection.ManyToMany">
+      <summary>Indicates a many-to-many relationship.</summary>
     </member>
     <member name="F:System.Web.DynamicData.ModelProviders.AssociationDirection.ManyToOne">
       <summary>Indicates a many-to-one relationship.</summary>
     </member>
-    <member name="F:System.Web.DynamicData.ModelProviders.AssociationDirection.ManyToMany">
-      <summary>Indicates a many-to-many relationship.</summary>
+    <member name="F:System.Web.DynamicData.ModelProviders.AssociationDirection.OneToMany">
+      <summary>Indicates a one-to-many relationship.</summary>
+    </member>
+    <member name="F:System.Web.DynamicData.ModelProviders.AssociationDirection.OneToOne">
+      <summary>Indicates a one-to-one relationship.</summary>
     </member>
     <member name="T:System.Web.DynamicData.ModelProviders.AssociationProvider">
       <summary>Provides the base class for column-association providers.</summary>

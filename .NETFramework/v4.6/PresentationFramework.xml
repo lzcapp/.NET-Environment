@@ -7414,8 +7414,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.ButtonAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type of the element that is associated with the UI Automation peer.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Button" />.</returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Button" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.ButtonAutomationPeer.GetClassNameCore">
       <summary>Gets the name of the control that is associated with this UI Automation peer.</summary>
@@ -7540,8 +7539,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.CheckBoxAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the <see cref="T:System.Windows.Automation.Peers.AutomationControlType" /> for the element associated with this <see cref="T:System.Windows.Automation.Peers.CheckBoxAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.CheckBox" />.</returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.CheckBox" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.CheckBoxAutomationPeer.GetClassNameCore">
       <summary>Gets the name of the element associated with this <see cref="T:System.Windows.Automation.Peers.CheckBoxAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
@@ -8124,8 +8122,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.ExpanderAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.Controls.Expander" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ExpanderAutomationPeer" />. This method is called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Group" />.</returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Group" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.ExpanderAutomationPeer.GetClassNameCore">
       <summary>Gets the name of the <see cref="T:System.Windows.Controls.Expander" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ExpanderAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
@@ -8526,8 +8523,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.GridViewItemAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="P:System.Windows.Controls.ItemsControl.Items" /> collection that is associated with this <see cref="T:System.Windows.Automation.Peers.GridViewItemAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.DataItem" />.</returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.DataItem" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.GridViewItemAutomationPeer.GetChildrenCore">
       <summary>Gets the collection of child elements of the <see cref="P:System.Windows.Controls.ItemsControl.Items" /> collection that is associated with this <see cref="T:System.Windows.Automation.Peers.GridViewItemAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetChildren" />.</summary>
@@ -8897,9 +8893,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.ListBoxItemWrapperAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.Controls.ListBoxItem" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ListBoxItemWrapperAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.ListItem" />
-      </returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.ListItem" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.ListBoxItemWrapperAutomationPeer.GetClassNameCore">
       <summary>Gets the name of the <see cref="T:System.Windows.Controls.ListBoxItem" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ListBoxItemWrapperAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
@@ -8985,9 +8979,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.MenuItemAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.Controls.MenuItem" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.MenuItemAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.MenuItem" />
-      </returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.MenuItem" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.MenuItemAutomationPeer.GetChildrenCore">
       <summary>Gets the collection of child elements of the <see cref="T:System.Windows.Controls.MenuItem" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.MenuItemAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetChildren" />.</summary>
@@ -9242,8 +9234,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.ScrollBarAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the name of the <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ScrollBarAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.ScrollBar" />.</returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.ScrollBar" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.ScrollBarAutomationPeer.GetClassNameCore">
       <summary>Gets the name of the <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ScrollBarAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
@@ -9387,9 +9378,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.SeparatorAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.Controls.Separator" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.SeparatorAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Separator" />
-      </returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Separator" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.SeparatorAutomationPeer.GetClassNameCore">
       <summary>Gets the name of the <see cref="T:System.Windows.Controls.Separator" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.SeparatorAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
@@ -9408,9 +9397,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.SliderAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.Controls.Slider" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.SliderAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Slider" />
-      </returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Slider" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.SliderAutomationPeer.GetClassNameCore">
       <summary>Gets the name of the <see cref="T:System.Windows.Controls.Slider" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.SliderAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
@@ -9492,9 +9479,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.TabItemAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.Controls.TabItem" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.TabItem" />
-      </returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.TabItem" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.TabItemAutomationPeer.GetChildrenCore">
       <summary>Gets the collection of child elements of the <see cref="T:System.Windows.Controls.TabItem" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetChildren" />.</summary>
@@ -9624,9 +9609,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.TextBlockAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.Controls.TextBlock" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.TextBlockAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Text" />
-      </returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Text" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.TextBlockAutomationPeer.GetChildrenCore">
       <summary>Gets the collection of child elements of the <see cref="T:System.Windows.Controls.TextBlock" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.TextBlockAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetChildren" />.</summary>
@@ -9649,9 +9632,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.TextBoxAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.Controls.TextBox" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.TextBoxAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Edit" />
-      </returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Edit" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.TextBoxAutomationPeer.GetClassNameCore">
       <summary>Gets the name of the <see cref="T:System.Windows.Controls.TextBox" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.TextBoxAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
@@ -9706,9 +9687,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.ThumbAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.Controls.Primitives.Thumb" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ThumbAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Thumb" />
-      </returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Thumb" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.ThumbAutomationPeer.GetClassNameCore">
       <summary>Gets the name of the <see cref="T:System.Windows.Controls.Primitives.Thumb" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ThumbAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
@@ -9754,9 +9733,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.ToolBarAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.Controls.ToolBar" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ToolBarAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.ToolBar" />
-      </returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.ToolBar" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.ToolBarAutomationPeer.GetClassNameCore">
       <summary>Gets the name of the <see cref="T:System.Windows.Controls.ToolBar" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ToolBarAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
@@ -9791,8 +9768,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.TreeViewAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.ContentElement" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ContentElementAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Tree" />.</returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Tree" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.TreeViewAutomationPeer.GetChildrenCore">
       <summary>Gets the collection of child elements of the <see cref="T:System.Windows.ContentElement" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ContentElementAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetChildren" />.</summary>
@@ -9967,9 +9943,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.Viewport3DAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.Controls.Viewport3D" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.Viewport3DAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
-      <returns>
-        <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Custom" />
-      </returns>
+      <returns>The <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Custom" /> enumeration value.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.Viewport3DAutomationPeer.GetClassNameCore">
       <summary>Gets the name of the <see cref="T:System.Windows.Controls.Viewport3D" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.Viewport3DAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>

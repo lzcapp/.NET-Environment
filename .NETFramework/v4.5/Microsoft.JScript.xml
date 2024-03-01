@@ -417,9 +417,6 @@
     <member name="T:Microsoft.JScript.CmdLineError">
       <summary>Specifies errors that occur when you run the command-line compiler jsc.exe. This enumeration is used to create <see cref="T:Microsoft.JScript.CmdLineException" /> objects.</summary>
     </member>
-    <member name="F:Microsoft.JScript.CmdLineError.NoError">
-      <summary>No error. This is the default value.</summary>
-    </member>
     <member name="F:Microsoft.JScript.CmdLineError.AssemblyNotFound">
       <summary>The referenced assembly '{0}' could not be found.</summary>
     </member>
@@ -468,17 +465,20 @@
     <member name="F:Microsoft.JScript.CmdLineError.InvalidPlatform">
       <summary>Platform '{0}' is invalid. Specify 'x86', 'Itanium', 'x64', or 'anycpu'.</summary>
     </member>
-    <member name="F:Microsoft.JScript.CmdLineError.InvalidTarget">
-      <summary>Target '{0}' is invalid. Specify 'exe' or 'library'.</summary>
-    </member>
     <member name="F:Microsoft.JScript.CmdLineError.InvalidSourceFile">
       <summary>'{0}' is not a valid source file.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.CmdLineError.InvalidTarget">
+      <summary>Target '{0}' is invalid. Specify 'exe' or 'library'.</summary>
     </member>
     <member name="F:Microsoft.JScript.CmdLineError.InvalidVersion">
       <summary>'{0}' is not a valid version string.</summary>
     </member>
     <member name="F:Microsoft.JScript.CmdLineError.InvalidWarningLevel">
       <summary>Invalid warning level specified with option '{0}'.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.CmdLineError.LAST">
+      <summary>A placeholder enumeration member that contains the same value as the last (highest) assigned enumeration value.</summary>
     </member>
     <member name="F:Microsoft.JScript.CmdLineError.ManagedResourceNotFound">
       <summary>Managed resource '{0}' was not found.</summary>
@@ -513,6 +513,9 @@
     <member name="F:Microsoft.JScript.CmdLineError.NoCodePage">
       <summary>No code page is specified with option '{0}'.</summary>
     </member>
+    <member name="F:Microsoft.JScript.CmdLineError.NoError">
+      <summary>No error. This is the default value.</summary>
+    </member>
     <member name="F:Microsoft.JScript.CmdLineError.NoFileName">
       <summary>No file name specified with option '{0}'.</summary>
     </member>
@@ -539,9 +542,6 @@
     </member>
     <member name="F:Microsoft.JScript.CmdLineError.Unspecified">
       <summary>Unspecified error.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.CmdLineError.LAST">
-      <summary>A placeholder enumeration member that contains the same value as the last (highest) assigned enumeration value.</summary>
     </member>
     <member name="T:Microsoft.JScript.CmdLineException">
       <summary>Represents errors that occur when you run the command-line compiler jsc.exe. </summary>
@@ -1750,11 +1750,11 @@
     <member name="T:Microsoft.JScript.ErrorType">
       <summary>Specifies the JScript error types.</summary>
     </member>
-    <member name="F:Microsoft.JScript.ErrorType.OtherError">
-      <summary>Any error other than one of the other error types. This is the default value.</summary>
-    </member>
     <member name="F:Microsoft.JScript.ErrorType.EvalError">
       <summary>An eval Method (Visual Studio - JScript) error. Corresponds to the <see cref="T:Microsoft.JScript.EvalErrorObject" /> object.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.ErrorType.OtherError">
+      <summary>Any error other than one of the other error types. This is the default value.</summary>
     </member>
     <member name="F:Microsoft.JScript.ErrorType.RangeError">
       <summary>A range error. Corresponds to the <see cref="T:Microsoft.JScript.RangeErrorObject" /> object.</summary>
@@ -2786,9 +2786,6 @@
     <member name="T:Microsoft.JScript.JSBuiltin">
       <summary>Specifies the built-in JScript functions. These functions correspond to the static methods of the intrinsic JScript objects. The members of this enumeration are used to create <see cref="T:Microsoft.JScript.JSFunctionAttribute" /> objects.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSBuiltin.None">
-      <summary>No method. This is the default value.</summary>
-    </member>
     <member name="F:Microsoft.JScript.JSBuiltin.Array_concat">
       <summary>The static <see cref="M:Microsoft.JScript.ArrayPrototype.concat(System.Object,Microsoft.JScript.Vsa.VsaEngine,System.Object[])" /> method of the <see cref="T:Microsoft.JScript.ArrayPrototype" /> class.</summary>
     </member>
@@ -2903,11 +2900,11 @@
     <member name="F:Microsoft.JScript.JSBuiltin.Date_setHours">
       <summary>The static <see cref="M:Microsoft.JScript.DatePrototype.setHours(System.Object,System.Double,System.Object,System.Object,System.Object)" /> method of the <see cref="T:Microsoft.JScript.DatePrototype" /> class.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSBuiltin.Date_setMinutes">
-      <summary>The static <see cref="M:Microsoft.JScript.DatePrototype.setMinutes(System.Object,System.Double,System.Object,System.Object)" /> method of the <see cref="T:Microsoft.JScript.DatePrototype" /> class.</summary>
-    </member>
     <member name="F:Microsoft.JScript.JSBuiltin.Date_setMilliseconds">
       <summary>The static <see cref="M:Microsoft.JScript.DatePrototype.setMilliseconds(System.Object,System.Double)" /> method of the <see cref="T:Microsoft.JScript.DatePrototype" /> class.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSBuiltin.Date_setMinutes">
+      <summary>The static <see cref="M:Microsoft.JScript.DatePrototype.setMinutes(System.Object,System.Double,System.Object,System.Object)" /> method of the <see cref="T:Microsoft.JScript.DatePrototype" /> class.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSBuiltin.Date_setMonth">
       <summary>The static <see cref="M:Microsoft.JScript.DatePrototype.setMonth(System.Object,System.Double,System.Object)" /> method of the <see cref="T:Microsoft.JScript.DatePrototype" /> class.</summary>
@@ -2927,11 +2924,11 @@
     <member name="F:Microsoft.JScript.JSBuiltin.Date_setUTCHours">
       <summary>The static <see cref="M:Microsoft.JScript.DatePrototype.setUTCHours(System.Object,System.Double,System.Object,System.Object,System.Object)" /> method of the <see cref="T:Microsoft.JScript.DatePrototype" /> class.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSBuiltin.Date_setUTCMinutes">
-      <summary>The static <see cref="M:Microsoft.JScript.DatePrototype.setUTCMinutes(System.Object,System.Double,System.Object,System.Object)" /> method of the <see cref="T:Microsoft.JScript.DatePrototype" /> class.</summary>
-    </member>
     <member name="F:Microsoft.JScript.JSBuiltin.Date_setUTCMilliseconds">
       <summary>The static <see cref="M:Microsoft.JScript.DatePrototype.setUTCMilliseconds(System.Object,System.Double)" /> method of the <see cref="T:Microsoft.JScript.DatePrototype" /> class.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSBuiltin.Date_setUTCMinutes">
+      <summary>The static <see cref="M:Microsoft.JScript.DatePrototype.setUTCMinutes(System.Object,System.Double,System.Object,System.Object)" /> method of the <see cref="T:Microsoft.JScript.DatePrototype" /> class.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSBuiltin.Date_setUTCMonth">
       <summary>The static <see cref="M:Microsoft.JScript.DatePrototype.setUTCMonth(System.Object,System.Double,System.Object)" /> method of the <see cref="T:Microsoft.JScript.DatePrototype" /> class.</summary>
@@ -3020,11 +3017,11 @@
     <member name="F:Microsoft.JScript.JSBuiltin.Global_GetObject">
       <summary>The static <see cref="M:Microsoft.JScript.GlobalObject.GetObject(System.Object,System.Object)" /> method of the <see cref="T:Microsoft.JScript.GlobalObject" /> class.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSBuiltin.Global_isNaN">
-      <summary>The static <see cref="M:Microsoft.JScript.GlobalObject.isNaN(System.Object)" /> method of the <see cref="T:Microsoft.JScript.GlobalObject" /> class.</summary>
-    </member>
     <member name="F:Microsoft.JScript.JSBuiltin.Global_isFinite">
       <summary>The static <see cref="M:Microsoft.JScript.GlobalObject.isFinite(System.Double)" /> method of the <see cref="T:Microsoft.JScript.GlobalObject" /> class.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSBuiltin.Global_isNaN">
+      <summary>The static <see cref="M:Microsoft.JScript.GlobalObject.isNaN(System.Object)" /> method of the <see cref="T:Microsoft.JScript.GlobalObject" /> class.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSBuiltin.Global_parseFloat">
       <summary>The static <see cref="M:Microsoft.JScript.GlobalObject.parseFloat(System.Object)" /> method of the <see cref="T:Microsoft.JScript.GlobalObject" /> class.</summary>
@@ -3100,6 +3097,9 @@
     </member>
     <member name="F:Microsoft.JScript.JSBuiltin.Math_tan">
       <summary>The static <see cref="M:Microsoft.JScript.MathObject.tan(System.Double)" /> method of the <see cref="T:Microsoft.JScript.MathObject" /> class.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSBuiltin.None">
+      <summary>No method. This is the default value.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSBuiltin.Number_toExponential">
       <summary>The static <see cref="M:Microsoft.JScript.NumberPrototype.toExponential(System.Object,System.Object)" /> method of the <see cref="T:Microsoft.JScript.NumberPrototype" /> class.</summary>
@@ -3448,83 +3448,44 @@
     <member name="T:Microsoft.JScript.JSError">
       <summary>Specifies the JScript error messages. This class belongs to the compilation and run-time state category.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NoError">
-      <summary>No error. This is the default (0) value for the enumeration.</summary>
+    <member name="F:Microsoft.JScript.JSError.AbstractCannotBePrivate">
+      <summary>An abstract method cannot be private.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.InvalidCall">
-      <summary>Invalid procedure call or argument.</summary>
+    <member name="F:Microsoft.JScript.JSError.AbstractCannotBeStatic">
+      <summary>Static methods cannot be abstract.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.OutOfMemory">
-      <summary>Out of memory.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.TypeMismatch">
-      <summary>Type mismatch.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.OutOfStack">
-      <summary>Out of stack space.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.InternalError">
-      <summary>An internal error has been thrown.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.FileNotFound">
-      <summary>File not found.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NeedObject">
-      <summary>An object is required.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.CantCreateObject">
-      <summary>Cannot create object.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.OLENoPropOrMethod">
-      <summary>Object does not support this property or method.</summary>
+    <member name="F:Microsoft.JScript.JSError.AbstractWithBody">
+      <summary>An abstract function cannot have a body.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.ActionNotSupported">
       <summary>The object does not support this action.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NotCollection">
-      <summary>This object is not a collection.</summary>
+    <member name="F:Microsoft.JScript.JSError.AmbiguousBindingBecauseOfEval">
+      <summary>The presence of <see cref="T:Microsoft.JScript.Eval" /> has made the use of this name ambiguous.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.SyntaxError">
-      <summary>Discovered syntax error.</summary>
+    <member name="F:Microsoft.JScript.JSError.AmbiguousBindingBecauseOfWith">
+      <summary>The <see cref="T:Microsoft.JScript.With" /> statement has made the use of this name ambiguous.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NoColon">
-      <summary>Expected ":".</summary>
+    <member name="F:Microsoft.JScript.JSError.AmbiguousConstructorCall">
+      <summary>More than one constructor matches this parameter list.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NoSemicolon">
-      <summary>Expected ";".</summary>
+    <member name="F:Microsoft.JScript.JSError.AmbiguousMatch">
+      <summary>More than one method or property matches this parameter list.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NoLeftParen">
-      <summary>Expected "(".</summary>
+    <member name="F:Microsoft.JScript.JSError.ArrayLengthAssignIncorrect">
+      <summary>Array length must be assigned a finite positive number.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NoRightParen">
-      <summary>Expected ")".</summary>
+    <member name="F:Microsoft.JScript.JSError.ArrayLengthConstructIncorrect">
+      <summary>Array length must be a finite positive integer.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NoRightBracket">
-      <summary>Expected "]".</summary>
+    <member name="F:Microsoft.JScript.JSError.ArrayMayBeCopied">
+      <summary>Assigning a JScript array to a <see cref="T:System.Array" /> may cause the array to be copied.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NoLeftCurly">
-      <summary>Expected "{".</summary>
+    <member name="F:Microsoft.JScript.JSError.AssemblyAttributesMustBeGlobal">
+      <summary>Assembly custom attributes cannot be part of another construct.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NoRightCurly">
-      <summary>Expected "}".</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoIdentifier">
-      <summary>Expected identifier.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoEqual">
-      <summary>Expected "=".</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.IllegalChar">
-      <summary>Invalid character.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.UnterminatedString">
-      <summary>String constant not terminated.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoCommentEnd">
-      <summary>Comment not terminated.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.BadReturn">
-      <summary>Return statement cannot appear outside the function.</summary>
+    <member name="F:Microsoft.JScript.JSError.AssignmentToReadOnly">
+      <summary>Cannot assign to read-only field or property.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.BadBreak">
       <summary>Cannot have break outside the loop.</summary>
@@ -3532,140 +3493,277 @@
     <member name="F:Microsoft.JScript.JSError.BadContinue">
       <summary>Cannot have continue outside the loop.</summary>
     </member>
+    <member name="F:Microsoft.JScript.JSError.BadFunctionDeclaration">
+      <summary>Possible invalid function declaration, function missing, or unrecognized syntax error.</summary>
+    </member>
     <member name="F:Microsoft.JScript.JSError.BadHexDigit">
       <summary>Expected hexadecimal digit.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoWhile">
-      <summary>Expected while.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.BadLabel">
       <summary>There is already a label that has that name.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NoLabel">
-      <summary>Label not found.</summary>
+    <member name="F:Microsoft.JScript.JSError.BadModifierInInterface">
+      <summary>This modifier cannot be used on an interface member.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.DupDefault">
-      <summary>default can appear only once in a switch statement.</summary>
+    <member name="F:Microsoft.JScript.JSError.BadOctalLiteral">
+      <summary>Malformed octal literal treated as decimal literal.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NoMemberIdentifier">
-      <summary>Expected identifier or string.</summary>
+    <member name="F:Microsoft.JScript.JSError.BadPropertyDeclaration">
+      <summary>Invalid property declaration. The get accessor must not have arguments and the set accessor must have one argument.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NoCcEnd">
-      <summary>Expected @end.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.CcOff">
-      <summary>Conditional compilation is turned off.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NotConst">
-      <summary>Expected constant.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoAt">
-      <summary>Expected @.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoCatch">
-      <summary>Expected catch.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.InvalidElse">
-      <summary>Unmatched else; no if defined.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoComma">
-      <summary>Expected ",".</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.DupVisibility">
-      <summary>Visibility modifier already defined.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.IllegalVisibility">
-      <summary>Invalid visibility modifier.</summary>
+    <member name="F:Microsoft.JScript.JSError.BadReturn">
+      <summary>Return statement cannot appear outside the function.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.BadSwitch">
       <summary>Missing case or default statement.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.CcInvalidEnd">
-      <summary>Unmatched @end; no @if defined.</summary>
+    <member name="F:Microsoft.JScript.JSError.BadThrow">
+      <summary>A throw statement must have an argument unless it is inside the catch block of a try statement.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.CcInvalidElse">
-      <summary>Unmatched @else; no @if defined.</summary>
+    <member name="F:Microsoft.JScript.JSError.BadVariableDeclaration">
+      <summary>Possible invalid variable declaration, var missing, or unrecognized syntax error.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.CcInvalidElif">
-      <summary>Unmatched @elif; no @if defined.</summary>
+    <member name="F:Microsoft.JScript.JSError.BadWayToLeaveFinally">
+      <summary>It is slow and potentially confusing to leave a finally block this way.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.ErrEOF">
-      <summary>Expecting more source characters.</summary>
+    <member name="F:Microsoft.JScript.JSError.BaseClassIsExpandoAlready">
+      <summary>A base class is already marked <see cref="T:Microsoft.JScript.Expando" />; current specification will be ignored.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.IncompatibleVisibility">
-      <summary>Incompatible visibility modifier.</summary>
+    <member name="F:Microsoft.JScript.JSError.BooleanExpected">
+      <summary>No Boolean value found.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.ClassNotAllowed">
-      <summary>Class definition not allowed in this context.</summary>
+    <member name="F:Microsoft.JScript.JSError.CannotAssignToFunctionResult">
+      <summary>Cannot assign to a function result.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NeedCompileTimeConstant">
-      <summary>An expression must be a compile-time constant.</summary>
+    <member name="F:Microsoft.JScript.JSError.CannotBeAbstract">
+      <summary>Cannot be abstract unless class is marked as abstract.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.DuplicateName">
-      <summary>Identifier already in use.</summary>
+    <member name="F:Microsoft.JScript.JSError.CannotCallSecurityMethodLateBound">
+      <summary>The <see cref="M:System.Security.CodeAccessPermission.Deny" />, <see cref="M:System.Security.CodeAccessPermission.PermitOnly" />, and <see cref="M:System.Security.CodeAccessPermission.Assert" /> security methods cannot be called using late binding.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NeedType">
-      <summary>A type name is expected.</summary>
+    <member name="F:Microsoft.JScript.JSError.CannotChangeVisibility">
+      <summary>Cannot change visibility specification of a base method.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NotInsideClass">
-      <summary>Valid only inside a class definition.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.InvalidPositionDirective">
-      <summary>An unknown position directive was discovered.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.MustBeEOL">
-      <summary>Directive cannot be followed by other code on the same line.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.WrongDirective">
-      <summary>Wrong debugger directive or wrong position for the directive.</summary>
+    <member name="F:Microsoft.JScript.JSError.CannotInstantiateAbstractClass">
+      <summary>It is not possible to construct an instance of an abstract class.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.CannotNestPositionDirective">
       <summary>Position directive must be ended before a new one can be started.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.CircularDefinition">
-      <summary>Circular definition.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.Deprecated">
-      <summary>The specified type is deprecated.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.IllegalUseOfThis">
-      <summary>It is not valid to use this in the current context.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NotAccessible">
-      <summary>The object or member is not accessible from this scope.</summary>
+    <member name="F:Microsoft.JScript.JSError.CannotReturnValueFromVoidFunction">
+      <summary>Cannot return a value from a void function or constructor.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.CannotUseNameOfClass">
       <summary>Only a constructor function can have the same name as the class it appears in.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.MustImplementMethod">
-      <summary>The class must provide an implementation of the method.</summary>
+    <member name="F:Microsoft.JScript.JSError.CannotUseStaticSecurityAttribute">
+      <summary>JScript does not support static security attributes.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NeedInterface">
-      <summary>An interface name is expected.</summary>
+    <member name="F:Microsoft.JScript.JSError.CantAssignThis">
+      <summary>Cannot assign to this.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.UnreachableCatch">
-      <summary>Catch clause will never be reached.</summary>
+    <member name="F:Microsoft.JScript.JSError.CantCreateObject">
+      <summary>Cannot create object.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.TypeCannotBeExtended">
-      <summary>Type cannot be extended.</summary>
+    <member name="F:Microsoft.JScript.JSError.CcInvalidElif">
+      <summary>Unmatched @elif; no @if defined.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.UndeclaredVariable">
-      <summary>Variable has not been declared.</summary>
+    <member name="F:Microsoft.JScript.JSError.CcInvalidElse">
+      <summary>Unmatched @else; no @if defined.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.VariableLeftUninitialized">
-      <summary>Uninitialized variables are dangerous and slow to use. Did you intend to leave it uninitialized?</summary>
+    <member name="F:Microsoft.JScript.JSError.CcInvalidEnd">
+      <summary>Unmatched @end; no @if defined.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.KeywordUsedAsIdentifier">
-      <summary>You cannot use a reserved word as an identifier.</summary>
+    <member name="F:Microsoft.JScript.JSError.CcInvalidInDebugger">
+      <summary>Conditional compilation directives and variables cannot be used in the debugger.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NotAllowedInSuperConstructorCall">
-      <summary>Object or member is not allowed in a call to the base class constructor.</summary>
+    <member name="F:Microsoft.JScript.JSError.CcOff">
+      <summary>Conditional compilation is turned off.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NotMeantToBeCalledDirectly">
-      <summary>You cannot call this method directly. If possible, use property accessors instead.</summary>
+    <member name="F:Microsoft.JScript.JSError.CircularDefinition">
+      <summary>Circular definition.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ClashWithProperty">
+      <summary>The name of the field conflicts with the name of the property.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ClassNotAllowed">
+      <summary>Class definition not allowed in this context.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ConstructorMayNotHaveReturnType">
+      <summary>A constructor cannot have a return type.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.CustomAttributeUsedMoreThanOnce">
+      <summary>This type of attribute must be unique.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.DateExpected">
+      <summary>Date object expected.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.DelegatesShouldNotBeExplicitlyConstructed">
+      <summary>Delegates should not be explicitly constructed; simply use the method name.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.Deprecated">
+      <summary>The specified type is deprecated.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.DifferentReturnTypeFromBase">
+      <summary>Method in base has a different return type.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.DoesNotHaveAnAddress">
+      <summary>Expression does not have an address.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.DupDefault">
+      <summary>default can appear only once in a switch statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.DuplicateMethod">
+      <summary>This method has the same name, parameter types, and return type as another method in this class.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.DuplicateName">
+      <summary>Identifier already in use.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.DuplicateNamedParameter">
+      <summary>Duplicate named parameter.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.DupVisibility">
+      <summary>Visibility modifier already defined.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.EnumeratorExpected">
+      <summary>Enumerator object expected.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.EnumNotAllowed">
+      <summary>enum definition not allowed in this context.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ErrEOF">
+      <summary>Expecting more source characters.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ExceptionFromHResult">
+      <summary>Exception from HRESULT.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ExecutablesCannotBeLocalized">
+      <summary>Executables cannot be localized; <see cref="P:System.Reflection.AssemblyCultureAttribute.Culture" /> should always be empty.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ExpandoClassShouldNotImpleEnumerable">
+      <summary>
+        <see cref="T:Microsoft.JScript.Expando" /> classes should not implement <see cref="T:System.Collections.IEnumerable" />. The interface is implicitly defined on <see cref="T:Microsoft.JScript.Expando" /> classes.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ExpandoMustBePublic">
+      <summary>
+        <see cref="T:Microsoft.JScript.Expando" /> methods must be public.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ExpandoPrecludesAbstract">
+      <summary>
+        <see cref="T:Microsoft.JScript.Expando" /> methods cannot be abstract.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ExpandoPrecludesOverride">
+      <summary>
+        <see cref="T:Microsoft.JScript.Expando" /> methods cannot override base class methods.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ExpandoPrecludesStatic">
+      <summary>
+        <see cref="T:Microsoft.JScript.Expando" /> methods cannot be static.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ExpectedAssembly">
+      <summary>Expected assembly.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ExpressionExpected">
+      <summary>Expected expression.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.FileNotFound">
+      <summary>File not found.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.FinalPrecludesAbstract">
+      <summary>final and abstract cannot be used together.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.FractionOutOfRange">
+      <summary>The number of fractional digits is out of range.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.FuncEvalAborted">
+      <summary>Function evaluation was aborted.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.FuncEvalBadLocation">
+      <summary>Function evaluation cannot be done when stopped at this point in the program.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.FuncEvalBadThreadNotStarted">
+      <summary>Function evaluation failed and the thread has not started.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.FuncEvalBadThreadState">
+      <summary>Function evaluation failed. The thread can contain incorrect data.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.FuncEvalThreadSleepWaitJoin">
+      <summary>Function evaluation failed. The thread is sleeping, waiting for an object, or waiting for another thread to finish.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.FuncEvalThreadSuspended">
+      <summary>Function evaluation failed. The thread is suspended.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.FuncEvalTimedout">
+      <summary>Function evaluation timed out.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.FuncEvalWebMethod">
+      <summary>Cannot call a Web method in the debugger.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.FunctionExpected">
+      <summary>A function was expected.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.GetAndSetAreInconsistent">
       <summary>The get and set methods of this property do not match each other.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.HidesAbstractInBase">
+      <summary>Method hides abstract in a base class.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.HidesParentMember">
+      <summary>base class already contains a member by this name.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.IllegalAssignment">
+      <summary>Invalid assignment.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.IllegalChar">
+      <summary>Invalid character.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.IllegalEval">
+      <summary>An <see cref="T:Microsoft.JScript.Eval" /> cannot be called by an alias.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.IllegalParamArrayAttribute">
+      <summary>A variable argument list must be of an array type.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.IllegalUseOfSuper">
+      <summary>It is not valid to use the base class in this way.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.IllegalUseOfThis">
+      <summary>It is not valid to use this in the current context.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.IllegalVisibility">
+      <summary>Invalid visibility modifier.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ImplicitlyReferencedAssemblyNotFound">
+      <summary>A referenced assembly depends on another assembly that is not referenced or could not be found.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ImpossibleConversion">
+      <summary>The specified conversion or coercion is not possible.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.IncompatibleAssemblyReference">
+      <summary>The assembly referenced is incompatible.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.IncompatibleVisibility">
+      <summary>Incompatible visibility modifier.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.IncorrectNumberOfIndices">
+      <summary>The number of indices does not match the dimension of the array.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.InstanceNotAccessibleFromStatic">
+      <summary>A non-static member is not accessible from a static scope.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.InterfaceIllegalInInterface">
+      <summary>Interfaces cannot be declared in an interface.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.InternalError">
+      <summary>An internal error has been thrown.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.InvalidAssemblyKeyFile">
+      <summary>An invalid assembly key file has been used.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.InvalidBaseTypeForEnum">
+      <summary>enum base type must be a primitive integral type.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.InvalidCall">
+      <summary>Invalid procedure call or argument.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.InvalidCustomAttribute">
       <summary>A custom attribute class must derive from <see cref="T:System.Attribute" />.</summary>
@@ -3676,322 +3774,269 @@
     <member name="F:Microsoft.JScript.JSError.InvalidCustomAttributeClassOrCtor">
       <summary>Unknown custom attribute class or constructor.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.TooManyParameters">
-      <summary>There are too many actual parameters. The excess parameters will be ignored.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.AmbiguousBindingBecauseOfWith">
-      <summary>The <see cref="T:Microsoft.JScript.With" /> statement has made the use of this name ambiguous.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.AmbiguousBindingBecauseOfEval">
-      <summary>The presence of <see cref="T:Microsoft.JScript.Eval" /> has made the use of this name ambiguous.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoSuchMember">
-      <summary>Objects of this type do not have such a member.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ItemNotAllowedOnExpandoClass">
-      <summary>Cannot define the property Item on an <see cref="T:Microsoft.JScript.Expando" /> class. This Item is reserved for the <see cref="T:Microsoft.JScript.Expando" /> fields.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.MethodNotAllowedOnExpandoClass">
-      <summary>Cannot define a property named Item on an <see cref="T:Microsoft.JScript.Expando" /> class.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.MethodClashOnExpandoSuperClass">
-      <summary>Cannot create the <see cref="T:Microsoft.JScript.Expando" /> class because a property named Item is already defined in the class hierarchy.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.BaseClassIsExpandoAlready">
-      <summary>A base class is already marked <see cref="T:Microsoft.JScript.Expando" />; current specification will be ignored.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.AbstractCannotBePrivate">
-      <summary>An abstract method cannot be private.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NotIndexable">
-      <summary>Objects of this type are not indexable.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.StaticMissingInStaticInit">
-      <summary>Static initializer must specify the static keyword.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.MissingConstructForAttributes">
-      <summary>The list of attributes does not apply to the current context.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.OnlyClassesAllowed">
-      <summary>Only classes are allowed inside a package.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ExpandoClassShouldNotImpleEnumerable">
-      <summary>
-        <see cref="T:Microsoft.JScript.Expando" /> classes should not implement <see cref="T:System.Collections.IEnumerable" />. The interface is implicitly defined on <see cref="T:Microsoft.JScript.Expando" /> classes.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NonCLSCompliantMember">
-      <summary>The specified member is not CLS compliant.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NotDeletable">
-      <summary>The object or member cannot be deleted.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.PackageExpected">
-      <summary>Package name expected.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.UselessExpression">
-      <summary>Expression has no effect.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.HidesParentMember">
-      <summary>base class already contains a member by this name.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.CannotChangeVisibility">
-      <summary>Cannot change visibility specification of a base method.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.HidesAbstractInBase">
-      <summary>Method hides abstract in a base class.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NewNotSpecifiedInMethodDeclaration">
-      <summary>A method matches a method in a base class. Must specify override or hide.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.MethodInBaseIsNotVirtual">
-      <summary>A method in a base class that is final or not virtualoverride is ignored. Specify hide.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoMethodInBaseToNew">
-      <summary>There is no member in a base class to hide.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.DifferentReturnTypeFromBase">
-      <summary>Method in base has a different return type.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ClashWithProperty">
-      <summary>The name of the field conflicts with the name of the property.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.OverrideAndHideUsedTogether">
-      <summary>Cannot use override and hide together in a member declaration.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.InvalidLanguageOption">
-      <summary>Must specify either "fast" or "versionSafe" language option.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoMethodInBaseToOverride">
-      <summary>There is no member in a base class to override.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NotValidForConstructor">
-      <summary>Not valid for a constructor.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.CannotReturnValueFromVoidFunction">
-      <summary>Cannot return a value from a void function or constructor.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.AmbiguousMatch">
-      <summary>More than one method or property matches this parameter list.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.AmbiguousConstructorCall">
-      <summary>More than one constructor matches this parameter list.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.SuperClassConstructorNotAccessible">
-      <summary>Base class constructor is not accessible from this scope.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.OctalLiteralsAreDeprecated">
-      <summary>Octal literals are deprecated.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.VariableMightBeUnitialized">
-      <summary>Variable might not be initialized.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NotOKToCallSuper">
-      <summary>It is not valid to call a base class constructor from this location.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.IllegalUseOfSuper">
-      <summary>It is not valid to use the base class in this way.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.BadWayToLeaveFinally">
-      <summary>It is slow and potentially confusing to leave a finally block this way.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoCommaOrTypeDefinitionError">
-      <summary>Expected "," or invalid type declaration; write "&lt;Identifier&gt; : &lt;Type&gt;" not "&lt;Type&gt; &lt;Identifier&gt;".</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.AbstractWithBody">
-      <summary>An abstract function cannot have a body.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoRightParenOrComma">
-      <summary>Expected "," or ")".</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoRightBracketOrComma">
-      <summary>Expected "," or "]".</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ExpressionExpected">
-      <summary>Expected expression.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.UnexpectedSemicolon">
-      <summary>Unexpected ";".</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.TooManyTokensSkipped">
-      <summary>Too many errors. The file might not be a JScript file.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.BadVariableDeclaration">
-      <summary>Possible invalid variable declaration, var missing, or unrecognized syntax error.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.BadFunctionDeclaration">
-      <summary>Possible invalid function declaration, function missing, or unrecognized syntax error.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.BadPropertyDeclaration">
-      <summary>Invalid property declaration. The get accessor must not have arguments and the set accessor must have one argument.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.DoesNotHaveAnAddress">
-      <summary>Expression does not have an address.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.TooFewParameters">
-      <summary>Not all required parameters have been supplied.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.UselessAssignment">
-      <summary>An assignment creates an <see cref="T:Microsoft.JScript.Expando" /> property that is immediately thrown away.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.SuspectAssignment">
-      <summary>If condition cannot contain an assignment.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.SuspectSemicolon">
-      <summary>Empty statement found in if statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ImpossibleConversion">
-      <summary>The specified conversion or coercion is not possible.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.FinalPrecludesAbstract">
-      <summary>final and abstract cannot be used together.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NeedInstance">
-      <summary>An instance is expected.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.CannotBeAbstract">
-      <summary>Cannot be abstract unless class is marked as abstract.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.InvalidBaseTypeForEnum">
-      <summary>enum base type must be a primitive integral type.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.CannotInstantiateAbstractClass">
-      <summary>It is not possible to construct an instance of an abstract class.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ArrayMayBeCopied">
-      <summary>Assigning a JScript array to a <see cref="T:System.Array" /> may cause the array to be copied.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.AbstractCannotBeStatic">
-      <summary>Static methods cannot be abstract.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.StaticIsAlreadyFinal">
-      <summary>Static methods cannot be final.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.StaticMethodsCannotOverride">
-      <summary>Static methods cannot override base class methods.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.StaticMethodsCannotHide">
-      <summary>Static methods cannot hide base class methods.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ExpandoPrecludesOverride">
-      <summary>
-        <see cref="T:Microsoft.JScript.Expando" /> methods cannot override base class methods.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.IllegalParamArrayAttribute">
-      <summary>A variable argument list must be of an array type.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ExpandoPrecludesAbstract">
-      <summary>
-        <see cref="T:Microsoft.JScript.Expando" /> methods cannot be abstract.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ShouldBeAbstract">
-      <summary>A function without a body should be abstract.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.BadModifierInInterface">
-      <summary>This modifier cannot be used on an interface member.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.VarIllegalInInterface">
-      <summary>Variables cannot be declared in an interface.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.InterfaceIllegalInInterface">
-      <summary>Interfaces cannot be declared in an interface.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoVarInEnum">
-      <summary>enum member declarations should not use the var keyword.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.InvalidImport">
-      <summary>The import statement is not valid in this context.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.EnumNotAllowed">
-      <summary>enum definition not allowed in this context.</summary>
-    </member>
     <member name="F:Microsoft.JScript.JSError.InvalidCustomAttributeTarget">
       <summary>This attribute is not valid for this type of declaration.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.PackageInWrongContext">
-      <summary>Package definition is not allowed in this context.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ConstructorMayNotHaveReturnType">
-      <summary>A constructor cannot have a return type.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.OnlyClassesAndPackagesAllowed">
-      <summary>Only classes and packages are allowed inside a library.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.InvalidDebugDirective">
       <summary>Invalid debug directive.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.CustomAttributeUsedMoreThanOnce">
-      <summary>This type of attribute must be unique.</summary>
+    <member name="F:Microsoft.JScript.JSError.InvalidElse">
+      <summary>Unmatched else; no if defined.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.InvalidImport">
+      <summary>The import statement is not valid in this context.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.InvalidLanguageOption">
+      <summary>Must specify either "fast" or "versionSafe" language option.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.InvalidPositionDirective">
+      <summary>An unknown position directive was discovered.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.InvalidPrototype">
+      <summary>This function does not have a valid prototype object.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.InvalidResource">
+      <summary>This is not a valid .resources file.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ItemNotAllowedOnExpandoClass">
+      <summary>Cannot define the property Item on an <see cref="T:Microsoft.JScript.Expando" /> class. This Item is reserved for the <see cref="T:Microsoft.JScript.Expando" /> fields.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.KeywordUsedAsIdentifier">
+      <summary>You cannot use a reserved word as an identifier.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.MemberInitializerCannotContainFuncExpr">
+      <summary>A member initializer cannot contain a function expression.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.MemberTypeCLSCompliantMismatch">
+      <summary>Class member cannot be marked Common Language Specification (CLS) compliant because the class is not marked CLS compliant.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.MethodClashOnExpandoSuperClass">
+      <summary>Cannot create the <see cref="T:Microsoft.JScript.Expando" /> class because a property named Item is already defined in the class hierarchy.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.MethodInBaseIsNotVirtual">
+      <summary>A method in a base class that is final or not virtualoverride is ignored. Specify hide.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.MethodNotAllowedOnExpandoClass">
+      <summary>Cannot define a property named Item on an <see cref="T:Microsoft.JScript.Expando" /> class.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.MissingConstructForAttributes">
+      <summary>The list of attributes does not apply to the current context.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.MissingNameParameter">
+      <summary>The specified named parameter name is not one of the formal parameters.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.MoreNamedParametersThanArguments">
+      <summary>Too few arguments specified. The number of named parameter names cannot exceed the number of arguments passed in.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.MustBeEOL">
+      <summary>Directive cannot be followed by other code on the same line.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.MustImplementMethod">
+      <summary>The class must provide an implementation of the method.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.MustProvideNameForNamedParameter">
+      <summary>Cannot provide null or empty named parameter name.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NeedArrayObject">
+      <summary>A "|" is not an array object. Array object expected.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NeedCompileTimeConstant">
+      <summary>An expression must be a compile-time constant.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NeedInstance">
+      <summary>An instance is expected.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NeedInterface">
+      <summary>An interface name is expected.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NeedObject">
+      <summary>An object is required.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NeedType">
+      <summary>A type name is expected.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.NestedInstanceTypeCannotBeExtendedByStatic">
       <summary>A non-static nested type can be extended only by a non-static type nested in the same class.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.PropertyLevelAttributesMustBeOnGetter">
-      <summary>An attribute that targets the property must be specified on the get accessor, if the get accessor is present.</summary>
+    <member name="F:Microsoft.JScript.JSError.NewNotSpecifiedInMethodDeclaration">
+      <summary>A method matches a method in a base class. Must specify override or hide.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.BadThrow">
-      <summary>A throw statement must have an argument unless it is inside the catch block of a try statement.</summary>
+    <member name="F:Microsoft.JScript.JSError.NoAt">
+      <summary>Expected @.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.ParamListNotLast">
-      <summary>A variable argument list must be the last argument.</summary>
+    <member name="F:Microsoft.JScript.JSError.NoCatch">
+      <summary>Expected catch.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NoSuchType">
-      <summary>Type could not be found. An assembly reference might be missing.</summary>
+    <member name="F:Microsoft.JScript.JSError.NoCcEnd">
+      <summary>Expected @end.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.BadOctalLiteral">
-      <summary>Malformed octal literal treated as decimal literal.</summary>
+    <member name="F:Microsoft.JScript.JSError.NoColon">
+      <summary>Expected ":".</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.InstanceNotAccessibleFromStatic">
-      <summary>A non-static member is not accessible from a static scope.</summary>
+    <member name="F:Microsoft.JScript.JSError.NoComma">
+      <summary>Expected ",".</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.StaticRequiresTypeName">
-      <summary>A static member must be accessed by the class name.</summary>
+    <member name="F:Microsoft.JScript.JSError.NoCommaOrTypeDefinitionError">
+      <summary>Expected "," or invalid type declaration; write "&lt;Identifier&gt; : &lt;Type&gt;" not "&lt;Type&gt; &lt;Identifier&gt;".</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoCommentEnd">
+      <summary>Comment not terminated.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoConstructor">
+      <summary>No such constructor.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoEqual">
+      <summary>Expected "=".</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoError">
+      <summary>No error. This is the default (0) value for the enumeration.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoFuncEvalAllowed">
+      <summary>Function evaluation aborted. To turn on property evaluation, click Options on the Tools menu and then select the Debugging in the tree view.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoIdentifier">
+      <summary>Expected identifier.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoLabel">
+      <summary>Label not found.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoLeftCurly">
+      <summary>Expected "{".</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoLeftParen">
+      <summary>Expected "(".</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoMemberIdentifier">
+      <summary>Expected identifier or string.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoMethodInBaseToNew">
+      <summary>There is no member in a base class to hide.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoMethodInBaseToOverride">
+      <summary>There is no member in a base class to override.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NonCLSCompliantMember">
+      <summary>The specified member is not CLS compliant.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NonCLSCompliantType">
+      <summary>The specified type is not CLS compliant.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NonClsException">
+      <summary>A target threw a non-CLS exception.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.NonStaticWithTypeName">
       <summary>A non-static member cannot be accessed with the class name.</summary>
     </member>
+    <member name="F:Microsoft.JScript.JSError.NonSupportedInDebugger">
+      <summary>The expression cannot be evaluated in the debugger.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoRightBracket">
+      <summary>Expected "]".</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoRightBracketOrComma">
+      <summary>Expected "," or "]".</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoRightCurly">
+      <summary>Expected "}".</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoRightParen">
+      <summary>Expected ")".</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoRightParenOrComma">
+      <summary>Expected "," or ")".</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoSemicolon">
+      <summary>Expected ";".</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NoSuchMember">
+      <summary>Objects of this type do not have such a member.</summary>
+    </member>
     <member name="F:Microsoft.JScript.JSError.NoSuchStaticMember">
       <summary>Type does not have such a static member.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.SuspectLoopCondition">
-      <summary>Loop condition cannot contain a function call.</summary>
+    <member name="F:Microsoft.JScript.JSError.NoSuchType">
+      <summary>Type could not be found. An assembly reference might be missing.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.ExpectedAssembly">
-      <summary>Expected assembly.</summary>
+    <member name="F:Microsoft.JScript.JSError.NotAccessible">
+      <summary>The object or member is not accessible from this scope.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.AssemblyAttributesMustBeGlobal">
-      <summary>Assembly custom attributes cannot be part of another construct.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ExpandoPrecludesStatic">
-      <summary>
-        <see cref="T:Microsoft.JScript.Expando" /> methods cannot be static.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.DuplicateMethod">
-      <summary>This method has the same name, parameter types, and return type as another method in this class.</summary>
+    <member name="F:Microsoft.JScript.JSError.NotAllowedInSuperConstructorCall">
+      <summary>Object or member is not allowed in a call to the base class constructor.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.NotAnExpandoFunction">
       <summary>Class members used as constructors should be marked as <see cref="T:Microsoft.JScript.Expando" /> functions.</summary>
     </member>
+    <member name="F:Microsoft.JScript.JSError.NotCollection">
+      <summary>This object is not a collection.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NotConst">
+      <summary>Expected constant.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NotDeletable">
+      <summary>The object or member cannot be deleted.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NotIndexable">
+      <summary>Objects of this type are not indexable.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NotInsideClass">
+      <summary>Valid only inside a class definition.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NotMeantToBeCalledDirectly">
+      <summary>You cannot call this method directly. If possible, use property accessors instead.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NotOKToCallSuper">
+      <summary>It is not valid to call a base class constructor from this location.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.NotValidForConstructor">
+      <summary>Not valid for a constructor.</summary>
+    </member>
     <member name="F:Microsoft.JScript.JSError.NotValidVersionString">
       <summary>Not a valid version string.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.ExecutablesCannotBeLocalized">
-      <summary>Executables cannot be localized; <see cref="P:System.Reflection.AssemblyCultureAttribute.Culture" /> should always be empty.</summary>
+    <member name="F:Microsoft.JScript.JSError.NotYetImplemented">
+      <summary>Not yet implemented.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.StringConcatIsSlow">
-      <summary>The plus operator is a slow way to concatenate strings. Consider using <see cref="T:System.Text.StringBuilder" /> instead.</summary>
+    <member name="F:Microsoft.JScript.JSError.NoVarInEnum">
+      <summary>enum member declarations should not use the var keyword.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.CcInvalidInDebugger">
-      <summary>Conditional compilation directives and variables cannot be used in the debugger.</summary>
+    <member name="F:Microsoft.JScript.JSError.NoWhile">
+      <summary>Expected while.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.ExpandoMustBePublic">
-      <summary>
-        <see cref="T:Microsoft.JScript.Expando" /> methods must be public.</summary>
+    <member name="F:Microsoft.JScript.JSError.NumberExpected">
+      <summary>Expected a number.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.DelegatesShouldNotBeExplicitlyConstructed">
-      <summary>Delegates should not be explicitly constructed; simply use the method name.</summary>
+    <member name="F:Microsoft.JScript.JSError.ObjectExpected">
+      <summary>Expected an object.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.ImplicitlyReferencedAssemblyNotFound">
-      <summary>A referenced assembly depends on another assembly that is not referenced or could not be found.</summary>
+    <member name="F:Microsoft.JScript.JSError.OctalLiteralsAreDeprecated">
+      <summary>Octal literals are deprecated.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.OLENoPropOrMethod">
+      <summary>Object does not support this property or method.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.OnlyClassesAllowed">
+      <summary>Only classes are allowed inside a package.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.OnlyClassesAndPackagesAllowed">
+      <summary>Only classes and packages are allowed inside a library.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.OutOfMemory">
+      <summary>Out of memory.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.OutOfStack">
+      <summary>Out of stack space.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.OverrideAndHideUsedTogether">
+      <summary>Cannot use override and hide together in a member declaration.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.PackageExpected">
+      <summary>Package name expected.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.PackageInWrongContext">
+      <summary>Package definition is not allowed in this context.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.ParamListNotLast">
+      <summary>A variable argument list must be the last argument.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.PossibleBadConversion">
       <summary>This conversion may fail at runtime.</summary>
@@ -3999,68 +4044,14 @@
     <member name="F:Microsoft.JScript.JSError.PossibleBadConversionFromString">
       <summary>Converting a string to a number or Boolean is slow and may fail at run time.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.InvalidResource">
-      <summary>This is not a valid .resources file.</summary>
+    <member name="F:Microsoft.JScript.JSError.PrecisionOutOfRange">
+      <summary>The precision is out of range.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.WrongUseOfAddressOf">
-      <summary>The address of operator can be used only in a list of arguments.</summary>
+    <member name="F:Microsoft.JScript.JSError.PropertyLevelAttributesMustBeOnGetter">
+      <summary>An attribute that targets the property must be specified on the get accessor, if the get accessor is present.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.NonCLSCompliantType">
-      <summary>The specified type is not CLS compliant.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.MemberTypeCLSCompliantMismatch">
-      <summary>Class member cannot be marked Common Language Specification (CLS) compliant because the class is not marked CLS compliant.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.TypeAssemblyCLSCompliantMismatch">
-      <summary>Type cannot be marked CLS compliant because the assembly is not marked as CLS compliant.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.IncompatibleAssemblyReference">
-      <summary>The assembly referenced is incompatible.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.InvalidAssemblyKeyFile">
-      <summary>An invalid assembly key file has been used.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.TypeNameTooLong">
-      <summary>The fully qualified type name is too long. It must be less than 1,024 characters.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.MemberInitializerCannotContainFuncExpr">
-      <summary>A member initializer cannot contain a function expression.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.CantAssignThis">
-      <summary>Cannot assign to this.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NumberExpected">
-      <summary>Expected a number.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.FunctionExpected">
-      <summary>A function was expected.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.CannotAssignToFunctionResult">
-      <summary>Cannot assign to a function result.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.StringExpected">
-      <summary>String expected.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.DateExpected">
-      <summary>Date object expected.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ObjectExpected">
-      <summary>Expected an object.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.IllegalAssignment">
-      <summary>Invalid assignment.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.UndefinedIdentifier">
-      <summary>Undefined identifier.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.BooleanExpected">
-      <summary>No Boolean value found.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.VBArrayExpected">
-      <summary>A VBArray is expected.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.EnumeratorExpected">
-      <summary>Enumerator object expected.</summary>
+    <member name="F:Microsoft.JScript.JSError.RefParamsNonSupportedInDebugger">
+      <summary>Methods with ref parameters cannot be called in the debugger.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.RegExpExpected">
       <summary>
@@ -4069,116 +4060,125 @@
     <member name="F:Microsoft.JScript.JSError.RegExpSyntax">
       <summary>Syntax error in regular expression.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.UncaughtException">
-      <summary>Exception thrown and not caught.</summary>
+    <member name="F:Microsoft.JScript.JSError.ShouldBeAbstract">
+      <summary>A function without a body should be abstract.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.InvalidPrototype">
-      <summary>This function does not have a valid prototype object.</summary>
+    <member name="F:Microsoft.JScript.JSError.SideEffectsDisallowed">
+      <summary>The expression causes side effects and will not be evaluated.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.URIEncodeError">
-      <summary>The URI to be encoded contains an invalid character.</summary>
+    <member name="F:Microsoft.JScript.JSError.StaticIsAlreadyFinal">
+      <summary>Static methods cannot be final.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.URIDecodeError">
-      <summary>The URI to be decoded is not a valid encoding.</summary>
+    <member name="F:Microsoft.JScript.JSError.StaticMethodsCannotHide">
+      <summary>Static methods cannot hide base class methods.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.FractionOutOfRange">
-      <summary>The number of fractional digits is out of range.</summary>
+    <member name="F:Microsoft.JScript.JSError.StaticMethodsCannotOverride">
+      <summary>Static methods cannot override base class methods.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.PrecisionOutOfRange">
-      <summary>The precision is out of range.</summary>
+    <member name="F:Microsoft.JScript.JSError.StaticMissingInStaticInit">
+      <summary>Static initializer must specify the static keyword.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.ArrayLengthConstructIncorrect">
-      <summary>Array length must be a finite positive integer.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.ArrayLengthAssignIncorrect">
-      <summary>Array length must be assigned a finite positive number.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NeedArrayObject">
-      <summary>A "|" is not an array object. Array object expected.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoConstructor">
-      <summary>No such constructor.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.IllegalEval">
-      <summary>An <see cref="T:Microsoft.JScript.Eval" /> cannot be called by an alias.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NotYetImplemented">
-      <summary>Not yet implemented.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.MustProvideNameForNamedParameter">
-      <summary>Cannot provide null or empty named parameter name.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.DuplicateNamedParameter">
-      <summary>Duplicate named parameter.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.MissingNameParameter">
-      <summary>The specified named parameter name is not one of the formal parameters.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.MoreNamedParametersThanArguments">
-      <summary>Too few arguments specified. The number of named parameter names cannot exceed the number of arguments passed in.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NonSupportedInDebugger">
-      <summary>The expression cannot be evaluated in the debugger.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.AssignmentToReadOnly">
-      <summary>Cannot assign to read-only field or property.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.WriteOnlyProperty">
-      <summary>The property is write-only.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.IncorrectNumberOfIndices">
-      <summary>The number of indices does not match the dimension of the array.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.RefParamsNonSupportedInDebugger">
-      <summary>Methods with ref parameters cannot be called in the debugger.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.CannotCallSecurityMethodLateBound">
-      <summary>The <see cref="M:System.Security.CodeAccessPermission.Deny" />, <see cref="M:System.Security.CodeAccessPermission.PermitOnly" />, and <see cref="M:System.Security.CodeAccessPermission.Assert" /> security methods cannot be called using late binding.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.CannotUseStaticSecurityAttribute">
-      <summary>JScript does not support static security attributes.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NonClsException">
-      <summary>A target threw a non-CLS exception.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.FuncEvalAborted">
-      <summary>Function evaluation was aborted.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.FuncEvalTimedout">
-      <summary>Function evaluation timed out.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.FuncEvalThreadSuspended">
-      <summary>Function evaluation failed. The thread is suspended.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.FuncEvalThreadSleepWaitJoin">
-      <summary>Function evaluation failed. The thread is sleeping, waiting for an object, or waiting for another thread to finish.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.FuncEvalBadThreadState">
-      <summary>Function evaluation failed. The thread can contain incorrect data.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.FuncEvalBadThreadNotStarted">
-      <summary>Function evaluation failed and the thread has not started.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.NoFuncEvalAllowed">
-      <summary>Function evaluation aborted. To turn on property evaluation, click Options on the Tools menu and then select the Debugging in the tree view.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.FuncEvalBadLocation">
-      <summary>Function evaluation cannot be done when stopped at this point in the program.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSError.FuncEvalWebMethod">
-      <summary>Cannot call a Web method in the debugger.</summary>
+    <member name="F:Microsoft.JScript.JSError.StaticRequiresTypeName">
+      <summary>A static member must be accessed by the class name.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSError.StaticVarNotAvailable">
       <summary>A static variable is not available.</summary>
     </member>
+    <member name="F:Microsoft.JScript.JSError.StringConcatIsSlow">
+      <summary>The plus operator is a slow way to concatenate strings. Consider using <see cref="T:System.Text.StringBuilder" /> instead.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.StringExpected">
+      <summary>String expected.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.SuperClassConstructorNotAccessible">
+      <summary>Base class constructor is not accessible from this scope.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.SuspectAssignment">
+      <summary>If condition cannot contain an assignment.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.SuspectLoopCondition">
+      <summary>Loop condition cannot contain a function call.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.SuspectSemicolon">
+      <summary>Empty statement found in if statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.SyntaxError">
+      <summary>Discovered syntax error.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.TooFewParameters">
+      <summary>Not all required parameters have been supplied.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.TooManyParameters">
+      <summary>There are too many actual parameters. The excess parameters will be ignored.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.TooManyTokensSkipped">
+      <summary>Too many errors. The file might not be a JScript file.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.TypeAssemblyCLSCompliantMismatch">
+      <summary>Type cannot be marked CLS compliant because the assembly is not marked as CLS compliant.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.TypeCannotBeExtended">
+      <summary>Type cannot be extended.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.TypeMismatch">
+      <summary>Type mismatch.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.TypeNameTooLong">
+      <summary>The fully qualified type name is too long. It must be less than 1,024 characters.</summary>
+    </member>
     <member name="F:Microsoft.JScript.JSError.TypeObjectNotAvailable">
       <summary>The type object for this type is not available.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.ExceptionFromHResult">
-      <summary>Exception from HRESULT.</summary>
+    <member name="F:Microsoft.JScript.JSError.UncaughtException">
+      <summary>Exception thrown and not caught.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSError.SideEffectsDisallowed">
-      <summary>The expression causes side effects and will not be evaluated.</summary>
+    <member name="F:Microsoft.JScript.JSError.UndeclaredVariable">
+      <summary>Variable has not been declared.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.UndefinedIdentifier">
+      <summary>Undefined identifier.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.UnexpectedSemicolon">
+      <summary>Unexpected ";".</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.UnreachableCatch">
+      <summary>Catch clause will never be reached.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.UnterminatedString">
+      <summary>String constant not terminated.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.URIDecodeError">
+      <summary>The URI to be decoded is not a valid encoding.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.URIEncodeError">
+      <summary>The URI to be encoded contains an invalid character.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.UselessAssignment">
+      <summary>An assignment creates an <see cref="T:Microsoft.JScript.Expando" /> property that is immediately thrown away.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.UselessExpression">
+      <summary>Expression has no effect.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.VariableLeftUninitialized">
+      <summary>Uninitialized variables are dangerous and slow to use. Did you intend to leave it uninitialized?</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.VariableMightBeUnitialized">
+      <summary>Variable might not be initialized.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.VarIllegalInInterface">
+      <summary>Variables cannot be declared in an interface.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.VBArrayExpected">
+      <summary>A VBArray is expected.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.WriteOnlyProperty">
+      <summary>The property is write-only.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.WrongDirective">
+      <summary>Wrong debugger directive or wrong position for the directive.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSError.WrongUseOfAddressOf">
+      <summary>The address of operator can be used only in a list of arguments.</summary>
     </member>
     <member name="T:Microsoft.JScript.JSField">
       <summary>Supports all fields in JScript. This is the base class for all fields that are defined by JScript. This class belongs to the name binding category.</summary>
@@ -4320,26 +4320,26 @@
     <member name="T:Microsoft.JScript.JSFunctionAttributeEnum">
       <summary>Specifies the calling conventions of functions that are generated by the JScript compiler. Used with the <see cref="T:Microsoft.JScript.JSFunctionAttribute" /> custom attribute.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.None">
-      <summary>Specifies a regular .NET Framework method with no special calling conventions. Typically not used as in this case the JSFunctionAttribute is not emitted.</summary>
+    <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.ClassicFunction">
+      <summary>Specifies the aggregate of <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasArguments" />, <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasEngine" />, and <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject" />.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.ClassicNestedFunction">
+      <summary>Specifies the aggregate of <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.ClassicFunction" /> and <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.NestedFunction" />.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.HasArguments">
       <summary>Specifies that the third parameter of the function is of type Object. The caller should pass in an object that implements the JScript arguments object, typically an instance of <see cref="T:Microsoft.JScript.ArgumentsObject" />. The JScript runtime assumes that if <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasArguments" /> is set, then <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasStackFrame" /> and <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject" /> are also set.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject">
-      <summary>Specifies that the first parameter of the function is of type Object and that it is usually named <paramref name="thisob" />. The caller should pass in an instance of the object that the function acts on.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.IsNested">
-      <summary>Specifies that the function is nested in another JScript function.</summary>
+    <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.HasEngine">
+      <summary>Specifies that the second parameter of the function is of type <see cref="T:Microsoft.JScript.Vsa.VsaEngine" />. The caller should pass in an instance of <see cref="T:Microsoft.JScript.Vsa.VsaEngine" /> from which the function can retrieve the runtime infrastructure. The JScript runtime assumes that if <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasEngine" /> is set then <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject" /> is also set.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.HasStackFrame">
       <summary>Specifies that the function copies its local variables into a stack frame object maintained by the JScript runtime before making a call out. It copies the variables back from the stack frame object to its locals when control is returned to the function. This flag is set on functions that contain nested functions that access the parent function's locals.</summary>
     </member>
+    <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject">
+      <summary>Specifies that the first parameter of the function is of type Object and that it is usually named <paramref name="thisob" />. The caller should pass in an instance of the object that the function acts on.</summary>
+    </member>
     <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs">
       <summary>Specifies that the function takes a variable number of arguments. The last parameter is of type array of Object, which holds any arguments that are explicitly specified.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.HasEngine">
-      <summary>Specifies that the second parameter of the function is of type <see cref="T:Microsoft.JScript.Vsa.VsaEngine" />. The caller should pass in an instance of <see cref="T:Microsoft.JScript.Vsa.VsaEngine" /> from which the function can retrieve the runtime infrastructure. The JScript runtime assumes that if <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasEngine" /> is set then <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject" /> is also set.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.IsExpandoMethod">
       <summary>Specifies that the function is a constructor function for a prototype-based object. For more information, see Prototype-based Objects and expando Modifier.</summary>
@@ -4347,14 +4347,14 @@
     <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.IsInstanceNestedClassConstructor">
       <summary>Specifies that the function is a constructor for a nested instance class. The first parameter of the function an instance of the parent class.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.ClassicFunction">
-      <summary>Specifies the aggregate of <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasArguments" />, <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasEngine" />, and <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject" />.</summary>
+    <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.IsNested">
+      <summary>Specifies that the function is nested in another JScript function.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.NestedFunction">
       <summary>Specifies the aggregate of <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasStackFrame" />, <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.IsNested" />, and <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasEngine" />.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.ClassicNestedFunction">
-      <summary>Specifies the aggregate of <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.ClassicFunction" /> and <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.NestedFunction" />.</summary>
+    <member name="F:Microsoft.JScript.JSFunctionAttributeEnum.None">
+      <summary>Specifies a regular .NET Framework method with no special calling conventions. Typically not used as in this case the JSFunctionAttribute is not emitted.</summary>
     </member>
     <member name="T:Microsoft.JScript.JSLocalField">
       <summary>Represents a local variable.</summary>
@@ -4652,278 +4652,47 @@
     <member name="T:Microsoft.JScript.JSToken">
       <summary>Specifies the individual units of code, or tokens, that make up the JScript language.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.None">
-      <summary>No token. For example, before scanning any tokens, or in error situations.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.EndOfFile">
-      <summary>The end of the file being scanned or parsed. This is the default value.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.If">
-      <summary>The if statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.For">
-      <summary>The for statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Do">
-      <summary>The do statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.While">
-      <summary>The while statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Continue">
-      <summary>The continue statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Break">
-      <summary>The break statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Return">
-      <summary>The return statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Import">
-      <summary>The import statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.With">
-      <summary>The with statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Switch">
-      <summary>The switch statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Throw">
-      <summary>The throw statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Try">
-      <summary>The try statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Package">
-      <summary>The package statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Internal">
-      <summary>The internal modifier.</summary>
-    </member>
     <member name="F:Microsoft.JScript.JSToken.Abstract">
       <summary>The abstract modifier.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Public">
-      <summary>The public modifier.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Static">
-      <summary>The static modifier.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Private">
-      <summary>The private modifier.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Protected">
-      <summary>The protected modifier.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Final">
-      <summary>The final modifier.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Event">
-      <summary>The event reserved word.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Var">
-      <summary>The var statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Const">
-      <summary>The const statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Class">
-      <summary>The class statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Function">
-      <summary>The function statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LeftCurly">
-      <summary>The { symbol.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Semicolon">
-      <summary>The ; symbol.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Null">
-      <summary>The null literal.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.True">
-      <summary>The true literal.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.False">
-      <summary>The false literal.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.This">
-      <summary>The this statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Identifier">
-      <summary>An identifier.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.StringLiteral">
-      <summary>A numeric literal.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.IntegerLiteral">
-      <summary>An integer literal.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.NumericLiteral">
-      <summary>A numeric literal.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LeftParen">
-      <summary>The ( symbol.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LeftBracket">
-      <summary>The [ symbol.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.AccessField">
       <summary>The . field accessor symbol.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.FirstOp">
-      <summary>A placeholder enumeration member that enables comparisons such as if JSToken.FirstOp &lt;= token &amp;&amp; token &lt;= JSToken.LastOp then...</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LogicalNot">
-      <summary>The ! logical NOT operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.BitwiseNot">
-      <summary>The ~ bitwise NOT operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Delete">
-      <summary>The delete operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Void">
-      <summary>The void operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Typeof">
-      <summary>The typeof operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Increment">
-      <summary>The ++ increment operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Decrement">
-      <summary>The -- decrement operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.FirstBinaryOp">
-      <summary>A placeholder enumeration member that enables comparisons such as if JSToken.FirstBinaryOp &lt;= token &amp;&amp; token &lt;= JSToken.LastBinaryOp then...</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Plus">
-      <summary>The + addition operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Minus">
-      <summary>The - subtraction operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LogicalOr">
-      <summary>The || logical OR operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LogicalAnd">
-      <summary>The &amp;&amp; logical AND operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.BitwiseOr">
-      <summary>The | bitwise OR operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.BitwiseXor">
-      <summary>The ^ bitwise XOR operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.BitwiseAnd">
-      <summary>The &amp; bitwise AND operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Equal">
-      <summary>The == equality comparison operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.NotEqual">
-      <summary>The != inequality comparison operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.StrictEqual">
-      <summary>The === identity comparison operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.StrictNotEqual">
-      <summary>The !== identity comparison operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.GreaterThan">
-      <summary>The &gt; relational comparison operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LessThan">
-      <summary>The &lt; relational comparison operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LessThanEqual">
-      <summary>The &lt;= relational comparison operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.GreaterThanEqual">
-      <summary>The &gt;= relational comparison operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LeftShift">
-      <summary>The &lt;&lt; bitwise left shift operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.RightShift">
-      <summary>The &gt;&gt; bitwise right shift operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.UnsignedRightShift">
-      <summary>The &gt;&gt;&gt; unsigned right shift operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Multiply">
-      <summary>The * multiplication operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Divide">
-      <summary>The / division operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Modulo">
-      <summary>The % modulus operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LastPPOperator">
-      <summary>A placeholder enumeration member that enables comparisons such as if JSToken.FirstBinaryOp &lt;= token &amp;&amp; token &lt;= JSToken.LastPPOperator then... PPOperators are operations that can be pre-processed.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Instanceof">
-      <summary>The instanceof operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.In">
-      <summary>The in operator.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Assert">
+      <summary>The assert reserved word.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.Assign">
       <summary>The = assignment operator.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.PlusAssign">
-      <summary>The += addition assignment operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.MinusAssign">
-      <summary>The -= subtraction assignment operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.MultiplyAssign">
-      <summary>The *= multiplication assignment operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.DivideAssign">
-      <summary>The /= division assignment operator.</summary>
+    <member name="F:Microsoft.JScript.JSToken.BitwiseAnd">
+      <summary>The &amp; bitwise AND operator.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.BitwiseAndAssign">
       <summary>The &amp;= bitwise AND assignment operator.</summary>
     </member>
+    <member name="F:Microsoft.JScript.JSToken.BitwiseNot">
+      <summary>The ~ bitwise NOT operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.BitwiseOr">
+      <summary>The | bitwise OR operator.</summary>
+    </member>
     <member name="F:Microsoft.JScript.JSToken.BitwiseOrAssign">
       <summary>The |= bitwise OR assignment operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.BitwiseXor">
+      <summary>The ^ bitwise XOR operator.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.BitwiseXorAssign">
       <summary>The ^= bitwise XOR assignment operator.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.ModuloAssign">
-      <summary>The %= modulus assignment operator.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Boolean">
+      <summary>The boolean data type.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.LeftShiftAssign">
-      <summary>The &lt;&lt;= left shift assignment operator.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Break">
+      <summary>The break statement.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.RightShiftAssign">
-      <summary>The &gt;&gt;= right shift assignment operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.UnsignedRightShiftAssign">
-      <summary>The &gt;&gt;&gt;= unsigned right shift assignment operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LastAssign">
-      <summary>A placeholder enumeration member that enables comparisons such as if JSToken.Assign &lt;= token &amp;&amp; token &lt;= JSToken.LastAssign then...</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LastBinaryOp">
-      <summary>A placeholder enumeration member that enables comparisons such as if JSToken.FirstBinaryOp &lt;= token &amp;&amp; token &lt;= JSToken.LastBinaryOp then...</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.ConditionalIf">
-      <summary>The ? ternary operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Colon">
-      <summary>The : ternary operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Comma">
-      <summary>The , comma operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.LastOp">
-      <summary>A placeholder enumeration member that enables comparisons such as if JSToken.FirstBinaryOp &lt;= token &amp;&amp; token &lt;= JSToken.LastOp then...</summary>
+    <member name="F:Microsoft.JScript.JSToken.Byte">
+      <summary>The byte data type.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.Case">
       <summary>The case keyword of a switch statement.</summary>
@@ -4931,74 +4700,53 @@
     <member name="F:Microsoft.JScript.JSToken.Catch">
       <summary>The catch keyword of a try statement.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Debugger">
-      <summary>The debugger statement.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Char">
+      <summary>The char data type.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Default">
-      <summary>The default keyword of a switch statement.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Class">
+      <summary>The class statement.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Else">
-      <summary>The else keyword of an if statement.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Colon">
+      <summary>The : ternary operator.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Export">
-      <summary>The export reserved word.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Extends">
-      <summary>The extends keyword of a class statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Finally">
-      <summary>The finally keyword of a try statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Get">
-      <summary>The get keyword of a function get statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Implements">
-      <summary>The implements keyword of a class or interface statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Interface">
-      <summary>The interface statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.New">
-      <summary>The new operator.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Set">
-      <summary>The set keyword of a function set statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Super">
-      <summary>The super statement.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.RightParen">
-      <summary>The ) symbol.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.RightCurly">
-      <summary>The } symbol.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.RightBracket">
-      <summary>The ] symbol.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.PreProcessorConstant">
-      <summary>A preprocessor constant.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Comma">
+      <summary>The , comma operator.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.Comment">
       <summary>Comment text.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.UnterminatedComment">
-      <summary>An un-terminated comment.</summary>
+    <member name="F:Microsoft.JScript.JSToken.ConditionalIf">
+      <summary>The ? ternary operator.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Assert">
-      <summary>The assert reserved word.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Const">
+      <summary>The const statement.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Boolean">
-      <summary>The boolean data type.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Continue">
+      <summary>The continue statement.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Byte">
-      <summary>The byte data type.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.JSToken.Char">
-      <summary>The char data type.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Debugger">
+      <summary>The debugger statement.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.Decimal">
       <summary>The decimal data type.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Decrement">
+      <summary>The -- decrement operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Default">
+      <summary>The default keyword of a switch statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Delete">
+      <summary>The delete operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Divide">
+      <summary>The / division operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.DivideAssign">
+      <summary>The /= division assignment operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Do">
+      <summary>The do statement.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.Double">
       <summary>The double data type.</summary>
@@ -5006,26 +4754,167 @@
     <member name="F:Microsoft.JScript.JSToken.DoubleColon">
       <summary>The :: reserved word.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Enum">
-      <summary>The enum statement.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Else">
+      <summary>The else keyword of an if statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.EndOfFile">
+      <summary>The end of the file being scanned or parsed. This is the default value.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.EndOfLine">
+      <summary>The end of the line being parsed.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.Ensure">
       <summary>The ensure reserved word.</summary>
     </member>
+    <member name="F:Microsoft.JScript.JSToken.Enum">
+      <summary>The enum statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Equal">
+      <summary>The == equality comparison operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Event">
+      <summary>The event reserved word.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Export">
+      <summary>The export reserved word.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Extends">
+      <summary>The extends keyword of a class statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.False">
+      <summary>The false literal.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Final">
+      <summary>The final modifier.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Finally">
+      <summary>The finally keyword of a try statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.FirstBinaryOp">
+      <summary>A placeholder enumeration member that enables comparisons such as if JSToken.FirstBinaryOp &lt;= token &amp;&amp; token &lt;= JSToken.LastBinaryOp then...</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.FirstOp">
+      <summary>A placeholder enumeration member that enables comparisons such as if JSToken.FirstOp &lt;= token &amp;&amp; token &lt;= JSToken.LastOp then...</summary>
+    </member>
     <member name="F:Microsoft.JScript.JSToken.Float">
       <summary>The float data type.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.For">
+      <summary>The for statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Function">
+      <summary>The function statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Get">
+      <summary>The get keyword of a function get statement.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.Goto">
       <summary>The goto reserved word.</summary>
     </member>
+    <member name="F:Microsoft.JScript.JSToken.GreaterThan">
+      <summary>The &gt; relational comparison operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.GreaterThanEqual">
+      <summary>The &gt;= relational comparison operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Identifier">
+      <summary>An identifier.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.If">
+      <summary>The if statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Implements">
+      <summary>The implements keyword of a class or interface statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Import">
+      <summary>The import statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.In">
+      <summary>The in operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Increment">
+      <summary>The ++ increment operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Instanceof">
+      <summary>The instanceof operator.</summary>
+    </member>
     <member name="F:Microsoft.JScript.JSToken.Int">
       <summary>The int data type.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.IntegerLiteral">
+      <summary>An integer literal.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Interface">
+      <summary>The interface statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Internal">
+      <summary>The internal modifier.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.Invariant">
       <summary>The invariant reserved word.</summary>
     </member>
+    <member name="F:Microsoft.JScript.JSToken.LastAssign">
+      <summary>A placeholder enumeration member that enables comparisons such as if JSToken.Assign &lt;= token &amp;&amp; token &lt;= JSToken.LastAssign then...</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LastBinaryOp">
+      <summary>A placeholder enumeration member that enables comparisons such as if JSToken.FirstBinaryOp &lt;= token &amp;&amp; token &lt;= JSToken.LastBinaryOp then...</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LastOp">
+      <summary>A placeholder enumeration member that enables comparisons such as if JSToken.FirstBinaryOp &lt;= token &amp;&amp; token &lt;= JSToken.LastOp then...</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LastPPOperator">
+      <summary>A placeholder enumeration member that enables comparisons such as if JSToken.FirstBinaryOp &lt;= token &amp;&amp; token &lt;= JSToken.LastPPOperator then... PPOperators are operations that can be pre-processed.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LeftBracket">
+      <summary>The [ symbol.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LeftCurly">
+      <summary>The { symbol.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LeftParen">
+      <summary>The ( symbol.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LeftShift">
+      <summary>The &lt;&lt; bitwise left shift operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LeftShiftAssign">
+      <summary>The &lt;&lt;= left shift assignment operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LessThan">
+      <summary>The &lt; relational comparison operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LessThanEqual">
+      <summary>The &lt;= relational comparison operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LogicalAnd">
+      <summary>The &amp;&amp; logical AND operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LogicalNot">
+      <summary>The ! logical NOT operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.LogicalOr">
+      <summary>The || logical OR operator.</summary>
+    </member>
     <member name="F:Microsoft.JScript.JSToken.Long">
       <summary>The long data type.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Minus">
+      <summary>The - subtraction operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.MinusAssign">
+      <summary>The -= subtraction assignment operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Modulo">
+      <summary>The % modulus operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.ModuloAssign">
+      <summary>The %= modulus assignment operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Multiply">
+      <summary>The * multiplication operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.MultiplyAssign">
+      <summary>The *= multiplication assignment operator.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.Namespace">
       <summary>The namespace reserved word.</summary>
@@ -5033,32 +4922,122 @@
     <member name="F:Microsoft.JScript.JSToken.Native">
       <summary>The native reserved word.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Require">
-      <summary>The require reserved word.</summary>
+    <member name="F:Microsoft.JScript.JSToken.New">
+      <summary>The new operator.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Sbyte">
-      <summary>The sbyte data type.</summary>
+    <member name="F:Microsoft.JScript.JSToken.None">
+      <summary>No token. For example, before scanning any tokens, or in error situations.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Short">
-      <summary>The short data type.</summary>
+    <member name="F:Microsoft.JScript.JSToken.NotEqual">
+      <summary>The != inequality comparison operator.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Synchronized">
-      <summary>The synchronized reserved word.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Null">
+      <summary>The null literal.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Transient">
-      <summary>The transient reserved word.</summary>
+    <member name="F:Microsoft.JScript.JSToken.NumericLiteral">
+      <summary>A numeric literal.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Throws">
-      <summary>The throws reserved word.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Package">
+      <summary>The package statement.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.ParamArray">
       <summary>The ... reserved word.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Volatile">
-      <summary>The volatile reserved word.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Plus">
+      <summary>The + addition operator.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.Ushort">
-      <summary>The ushort data type.</summary>
+    <member name="F:Microsoft.JScript.JSToken.PlusAssign">
+      <summary>The += addition assignment operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.PreProcessDirective">
+      <summary>A preprocessor directive.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.PreProcessorConstant">
+      <summary>A preprocessor constant.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Private">
+      <summary>The private modifier.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Protected">
+      <summary>The protected modifier.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Public">
+      <summary>The public modifier.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Require">
+      <summary>The require reserved word.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Return">
+      <summary>The return statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.RightBracket">
+      <summary>The ] symbol.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.RightCurly">
+      <summary>The } symbol.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.RightParen">
+      <summary>The ) symbol.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.RightShift">
+      <summary>The &gt;&gt; bitwise right shift operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.RightShiftAssign">
+      <summary>The &gt;&gt;= right shift assignment operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Sbyte">
+      <summary>The sbyte data type.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Semicolon">
+      <summary>The ; symbol.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Set">
+      <summary>The set keyword of a function set statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Short">
+      <summary>The short data type.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Static">
+      <summary>The static modifier.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.StrictEqual">
+      <summary>The === identity comparison operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.StrictNotEqual">
+      <summary>The !== identity comparison operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.StringLiteral">
+      <summary>A numeric literal.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Super">
+      <summary>The super statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Switch">
+      <summary>The switch statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Synchronized">
+      <summary>The synchronized reserved word.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.This">
+      <summary>The this statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Throw">
+      <summary>The throw statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Throws">
+      <summary>The throws reserved word.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Transient">
+      <summary>The transient reserved word.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.True">
+      <summary>The true literal.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Try">
+      <summary>The try statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Typeof">
+      <summary>The typeof operator.</summary>
     </member>
     <member name="F:Microsoft.JScript.JSToken.Uint">
       <summary>The uint data type.</summary>
@@ -5066,14 +5045,35 @@
     <member name="F:Microsoft.JScript.JSToken.Ulong">
       <summary>The ulong data type.</summary>
     </member>
+    <member name="F:Microsoft.JScript.JSToken.UnsignedRightShift">
+      <summary>The &gt;&gt;&gt; unsigned right shift operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.UnsignedRightShiftAssign">
+      <summary>The &gt;&gt;&gt;= unsigned right shift assignment operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.UnterminatedComment">
+      <summary>An un-terminated comment.</summary>
+    </member>
     <member name="F:Microsoft.JScript.JSToken.Use">
       <summary>The use reserved word.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.EndOfLine">
-      <summary>The end of the line being parsed.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Ushort">
+      <summary>The ushort data type.</summary>
     </member>
-    <member name="F:Microsoft.JScript.JSToken.PreProcessDirective">
-      <summary>A preprocessor directive.</summary>
+    <member name="F:Microsoft.JScript.JSToken.Var">
+      <summary>The var statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Void">
+      <summary>The void operator.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.Volatile">
+      <summary>The volatile reserved word.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.While">
+      <summary>The while statement.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.JSToken.With">
+      <summary>The with statement.</summary>
     </member>
     <member name="T:Microsoft.JScript.JSVariableField">
       <summary>Supports variable fields in JScript. This is the base class for parameters, local variables, global variables, and class members. </summary>
@@ -6706,11 +6706,11 @@
     <member name="T:Microsoft.JScript.SourceState">
       <summary>Specifies the state of source code text. This class is used together with other classes that provide information to color JScript code in an editor.</summary>
     </member>
-    <member name="F:Microsoft.JScript.SourceState.STATE_COLOR_NORMAL">
-      <summary>Normal text.</summary>
-    </member>
     <member name="F:Microsoft.JScript.SourceState.STATE_COLOR_COMMENT">
       <summary>Comment text.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.SourceState.STATE_COLOR_NORMAL">
+      <summary>Normal text.</summary>
     </member>
     <member name="F:Microsoft.JScript.SourceState.STATE_COLOR_STRING">
       <summary>String literal text.</summary>
@@ -7036,8 +7036,11 @@
     <member name="T:Microsoft.JScript.TokenColor">
       <summary>Specifies the colors that individual units of code should have when text is being colorized in an editor. The members of this enumeration are used by the <see cref="P:Microsoft.JScript.ITokenColorInfo.Color" /> property of <see cref="T:Microsoft.JScript.ITokenColorInfo" /> objects.</summary>
     </member>
-    <member name="F:Microsoft.JScript.TokenColor.COLOR_TEXT">
-      <summary>The color for a unit of code that represents text. This is the default value.</summary>
+    <member name="F:Microsoft.JScript.TokenColor.COLOR_COMMENT">
+      <summary>The color for a unit of code that represents a comment.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.TokenColor.COLOR_CONDITIONAL_COMP">
+      <summary>Not used.</summary>
     </member>
     <member name="F:Microsoft.JScript.TokenColor.COLOR_IDENTIFIER">
       <summary>The color for a unit of code that represents an identifier.</summary>
@@ -7045,20 +7048,17 @@
     <member name="F:Microsoft.JScript.TokenColor.COLOR_KEYWORD">
       <summary>The color for a unit of code that represents a keyword.</summary>
     </member>
-    <member name="F:Microsoft.JScript.TokenColor.COLOR_COMMENT">
-      <summary>The color for a unit of code that represents a comment.</summary>
+    <member name="F:Microsoft.JScript.TokenColor.COLOR_NUMBER">
+      <summary>The color for a unit of code that represents a numeric literal.</summary>
     </member>
     <member name="F:Microsoft.JScript.TokenColor.COLOR_OPERATOR">
       <summary>The color for a unit of code that represents an operator.</summary>
     </member>
-    <member name="F:Microsoft.JScript.TokenColor.COLOR_NUMBER">
-      <summary>The color for a unit of code that represents a numeric literal.</summary>
-    </member>
     <member name="F:Microsoft.JScript.TokenColor.COLOR_STRING">
       <summary>The color for a unit of code that represents a string literal.</summary>
     </member>
-    <member name="F:Microsoft.JScript.TokenColor.COLOR_CONDITIONAL_COMP">
-      <summary>Not used.</summary>
+    <member name="F:Microsoft.JScript.TokenColor.COLOR_TEXT">
+      <summary>The color for a unit of code that represents text. This is the default value.</summary>
     </member>
     <member name="T:Microsoft.JScript.Try">
       <summary>Identifies blocks of code to run in error handling scopes. This class belongs to the abstract syntax tree category.</summary>
@@ -7345,8 +7345,8 @@
     <member name="T:Microsoft.JScript.VSAITEMTYPE2">
       <summary>Extends the <see cref="T:Microsoft.Vsa.VsaItemType" /> enumeration. Provides extra functionality that is needed by an IActiveScript host. </summary>
     </member>
-    <member name="F:Microsoft.JScript.VSAITEMTYPE2.None">
-      <summary>Specifies none. This is the default value.</summary>
+    <member name="F:Microsoft.JScript.VSAITEMTYPE2.EXPRESSION">
+      <summary>Specifies an expression. This applies to an <see cref="T:Microsoft.JScript.IVsaScriptCodeItem" />.</summary>
     </member>
     <member name="F:Microsoft.JScript.VSAITEMTYPE2.HOSTOBJECT">
       <summary>Specifies a host object.</summary>
@@ -7357,17 +7357,17 @@
     <member name="F:Microsoft.JScript.VSAITEMTYPE2.HOSTSCOPEANDOBJECT">
       <summary>Specifies both the scope and the object.</summary>
     </member>
-    <member name="F:Microsoft.JScript.VSAITEMTYPE2.SCRIPTSCOPE">
-      <summary>Specifies the script scope.</summary>
+    <member name="F:Microsoft.JScript.VSAITEMTYPE2.None">
+      <summary>Specifies none. This is the default value.</summary>
     </member>
     <member name="F:Microsoft.JScript.VSAITEMTYPE2.SCRIPTBLOCK">
       <summary>Specifies a script block. This applies to an <see cref="T:Microsoft.JScript.IVsaScriptCodeItem" />.</summary>
     </member>
+    <member name="F:Microsoft.JScript.VSAITEMTYPE2.SCRIPTSCOPE">
+      <summary>Specifies the script scope.</summary>
+    </member>
     <member name="F:Microsoft.JScript.VSAITEMTYPE2.STATEMENT">
       <summary>Specifies a single statement. This applies to an <see cref="T:Microsoft.JScript.IVsaScriptCodeItem" />.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.VSAITEMTYPE2.EXPRESSION">
-      <summary>Specifies an expression. This applies to an <see cref="T:Microsoft.JScript.IVsaScriptCodeItem" />.</summary>
     </member>
     <member name="T:Microsoft.JScript.With">
       <summary>Represents the with statement. This class belongs to the abstract syntax tree category.</summary>
@@ -7623,44 +7623,44 @@
     <member name="T:Microsoft.JScript.Vsa.BaseVsaEngine.Pre">
       <summary>Provides enumeration for the <see cref="T:Microsoft.JScript.Vsa.BaseVsaEngine" /> class.</summary>
     </member>
-    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.None">
-      <summary>No engine is set.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.EngineNotClosed">
-      <summary>The engine is not closed.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.SupportForDebug">
-      <summary>The debug features are switched on.</summary>
-    </member>
     <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.EngineCompiled">
       <summary>The engine is compiled.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.EngineRunning">
-      <summary>The engine is running.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.EngineNotRunning">
-      <summary>The engine is not running.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.RootMonikerSet">
-      <summary>The root moniker is set.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.RootMonikerNotSet">
-      <summary>The root moniker is not set.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.RootNamespaceSet">
-      <summary>The root namespace is set.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.SiteSet">
-      <summary>The site is set.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.SiteNotSet">
-      <summary>The site is not set.</summary>
     </member>
     <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.EngineInitialised">
       <summary>The engine is initialized.</summary>
     </member>
+    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.EngineNotClosed">
+      <summary>The engine is not closed.</summary>
+    </member>
     <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.EngineNotInitialised">
       <summary>The engine is not initialized.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.EngineNotRunning">
+      <summary>The engine is not running.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.EngineRunning">
+      <summary>The engine is running.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.None">
+      <summary>No engine is set.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.RootMonikerNotSet">
+      <summary>The root moniker is not set.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.RootMonikerSet">
+      <summary>The root moniker is set.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.RootNamespaceSet">
+      <summary>The root namespace is set.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.SiteNotSet">
+      <summary>The site is not set.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.SiteSet">
+      <summary>The site is set.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.BaseVsaEngine.Pre.SupportForDebug">
+      <summary>The debug features are switched on.</summary>
     </member>
     <member name="T:Microsoft.JScript.Vsa.BaseVsaSite">
       <summary>Enables communication between the host and the script engine.</summary>
@@ -7682,7 +7682,7 @@
       <param name="debugInfo">Debug info object to be set.</param>
     </member>
     <member name="M:Microsoft.JScript.Vsa.BaseVsaSite.GetEventSourceInstance(System.String,System.String)">
-      <summary>Gets a reference to an event source previously added to a script engine using the <see cref="M:Microsoft.Vsa.IVsaCodeItem.AddEventSource" /> method.</summary>
+      <summary>Gets a reference to an event source previously added to a script engine using the <see cref="M:Microsoft.Vsa.IVsaCodeItem.AddEventSource(System.String,System.String)" /> method.</summary>
       <returns>Returns the event source to the engine.</returns>
       <param name="itemName">The specified item name.</param>
       <param name="eventSourceName">The specified event source name.</param>
@@ -7962,12 +7962,12 @@
       <summary>Manages project persistence and stores and retrieves code and other items using save and load operations implemented by the host.</summary>
     </member>
     <member name="M:Microsoft.JScript.Vsa.IJSVsaPersistSite.LoadElement(System.String)">
-      <summary>Gets the source string previously saved using the <see cref="M:Microsoft.JScript.Vsa.IJSVsaPersistSite.SaveElement" /> method.</summary>
+      <summary>Gets the source string previously saved using the <see cref="M:Microsoft.JScript.Vsa.IJSVsaPersistSite.SaveElement(System.String,System.String)" /> method.</summary>
       <returns>Returns the contents of the source-code element associated with the name parameter.</returns>
       <param name="name">The name of the code item to be loaded. This can be a null reference when loading the Project file.</param>
     </member>
     <member name="M:Microsoft.JScript.Vsa.IJSVsaPersistSite.SaveElement(System.String,System.String)">
-      <summary>Saves an arbitrary source string with a given name parameter, which can then be used in a call to the <see cref="M:Microsoft.JScript.Vsa.IJSVsaPersistSite.LoadElement" /> method to reload the string.</summary>
+      <summary>Saves an arbitrary source string with a given name parameter, which can then be used in a call to the <see cref="M:Microsoft.JScript.Vsa.IJSVsaPersistSite.LoadElement(System.String)" /> method to reload the string.</summary>
       <param name="name">A name to associate with the specified source item. This can be a null reference when saving the Project file.</param>
       <param name="source">The source string for the item.</param>
     </member>
@@ -7987,7 +7987,7 @@
       <param name="debugInfo">The debugging information for the assembly, or a null reference if such information does not exist or is not available. </param>
     </member>
     <member name="M:Microsoft.JScript.Vsa.IJSVsaSite.GetEventSourceInstance(System.String,System.String)">
-      <summary>Gets a reference to an event source previously added to a script engine using the <see cref="M:Microsoft.JScript.Vsa.IJSVsaCodeItem.AddEventSource" /> method.</summary>
+      <summary>Gets a reference to an event source previously added to a script engine using the <see cref="M:Microsoft.JScript.Vsa.IJSVsaCodeItem.AddEventSource(System.String,System.String)" /> method.</summary>
       <returns>Returns the event source to the engine.</returns>
       <param name="itemName">The specified item name.</param>
       <param name="eventSourceName">The specified event source name.</param>
@@ -8031,17 +8031,26 @@
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.BadAssembly">
       <summary>Value: 0x80133006 </summary>
     </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.BrowserNotExist">
+      <summary>Value: 0x8013303D </summary>
+    </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.CachedAssemblyInvalid">
       <summary>Value: 0x80133007 </summary>
     </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.CallbackUnexpected">
       <summary>Value: 0x80133008 </summary>
     </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.CannotAttachToWebServer">
+      <summary>Value: 0x8013304C </summary>
+    </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.CodeDOMNotAvailable">
       <summary>Value: 0x80133009 </summary>
     </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.CompiledStateNotFound">
       <summary>Value: 0x8013300A </summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.DebuggeeNotStarted">
+      <summary>Value: 0x8013303E </summary>
     </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.DebugInfoNotSupported">
       <summary>Value: 0x8013300B </summary>
@@ -8073,8 +8082,17 @@
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.EngineNameInUse">
       <summary>Value: 0x80133014 </summary>
     </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.EngineNameInvalid">
+      <summary>Value: 0x8013303F </summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.EngineNameNotSet">
+      <summary>Value: 0x8013303F </summary>
+    </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.EngineNotCompiled">
       <summary>Value: 0x80133015 </summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.EngineNotExist">
+      <summary>Value: 0x80133040 </summary>
     </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.EngineNotInitialized">
       <summary>Value: 0x80133016 </summary>
@@ -8100,6 +8118,12 @@
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.EventSourceTypeInvalid">
       <summary>Value: 0x8013301D </summary>
     </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.FileFormatUnsupported">
+      <summary>Value: 0x80133041 </summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.FileTypeUnknown">
+      <summary>Value: 0x80133042 </summary>
+    </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.GetCompiledStateFailed">
       <summary>Value: 0x8013301E </summary>
     </member>
@@ -8114,6 +8138,9 @@
     </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.ItemCannotBeRemoved">
       <summary>Value: 0x80133022 </summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.ItemCannotBeRenamed">
+      <summary>Value: 0x80133043 </summary>
     </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.ItemFlagNotSupported">
       <summary>Value: 0x80133023 </summary>
@@ -8136,14 +8163,35 @@
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.LoadElementFailed">
       <summary>Value: 0x80133029 </summary>
     </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.MissingPdb">
+      <summary>Value: 0x8013304A </summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.MissingSource">
+      <summary>Value: 0x80133044 </summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.NameTooLong">
+      <summary>Value: 0x80133046 </summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.NotClientSideAndNoUrl">
+      <summary>Value: 0x8013304B </summary>
+    </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.NotificationInvalid">
       <summary>Value: 0x8013302A </summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.NotInitCompleted">
+      <summary>Value: 0x80133045 </summary>
     </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.OptionInvalid">
       <summary>Value: 0x8013302B </summary>
     </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.OptionNotSupported">
       <summary>Value: 0x8013302C </summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.ProcNameInUse">
+      <summary>Value: 0x80133047 </summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.ProcNameInvalid">
+      <summary>Value: 0x80133048 </summary>
     </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.RevokeFailed">
       <summary>Value: 0x8013302D </summary>
@@ -8190,62 +8238,14 @@
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.SourceMonikerNotAvailable">
       <summary>Value: 0x8013303B </summary>
     </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaError.UnknownError">
+      <summary>Value: 0x801330FF </summary>
+    </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.URLInvalid">
       <summary>Value: 0x8013303C </summary>
     </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.BrowserNotExist">
-      <summary>Value: 0x8013303D </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.DebuggeeNotStarted">
-      <summary>Value: 0x8013303E </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.EngineNameInvalid">
-      <summary>Value: 0x8013303F </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.EngineNotExist">
-      <summary>Value: 0x80133040 </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.FileFormatUnsupported">
-      <summary>Value: 0x80133041 </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.FileTypeUnknown">
-      <summary>Value: 0x80133042 </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.ItemCannotBeRenamed">
-      <summary>Value: 0x80133043 </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.MissingSource">
-      <summary>Value: 0x80133044 </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.NotInitCompleted">
-      <summary>Value: 0x80133045 </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.NameTooLong">
-      <summary>Value: 0x80133046 </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.ProcNameInUse">
-      <summary>Value: 0x80133047 </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.ProcNameInvalid">
-      <summary>Value: 0x80133048 </summary>
-    </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaError.VsaServerDown">
       <summary>Value: 0x80133049 </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.MissingPdb">
-      <summary>Value: 0x8013304A </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.NotClientSideAndNoUrl">
-      <summary>Value: 0x8013304B </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.CannotAttachToWebServer">
-      <summary>Value: 0x8013304C </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.EngineNameNotSet">
-      <summary>Value: 0x8013303F </summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaError.UnknownError">
-      <summary>Value: 0x801330FF </summary>
     </member>
     <member name="T:Microsoft.JScript.Vsa.JSVsaException">
       <summary>This type supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
@@ -8298,26 +8298,26 @@
     <member name="T:Microsoft.JScript.Vsa.JSVsaItemFlag">
       <summary>Identifies the type of code item as Class, Module, or None.</summary>
     </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaItemFlag.None">
-      <summary>Used when the code item is a class.</summary>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaItemFlag.Class">
+      <summary>Used when the code item is generic or when the item type does not accept flags. In such cases, no special flags are required to create the item.</summary>
     </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaItemFlag.Module">
       <summary>Used when the code item is a module.</summary>
     </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaItemFlag.Class">
-      <summary>Used when the code item is generic or when the item type does not accept flags. In such cases, no special flags are required to create the item.</summary>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaItemFlag.None">
+      <summary>Used when the code item is a class.</summary>
     </member>
     <member name="T:Microsoft.JScript.Vsa.JSVsaItemType">
       <summary>Represents the type of the item.</summary>
-    </member>
-    <member name="F:Microsoft.JScript.Vsa.JSVsaItemType.Reference">
-      <summary>Used to add a reference to an external .NET assembly, which can then be referenced from code. This type is used to create an IJSVsaReferenceItem object</summary>
     </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaItemType.AppGlobal">
       <summary>Used to add a global object to the .NET script engine. This type is used to create an IJSVsaGlobalItem object.</summary>
     </member>
     <member name="F:Microsoft.JScript.Vsa.JSVsaItemType.Code">
       <summary>Used to create a code item for storing source code for the .NET script engine.</summary>
+    </member>
+    <member name="F:Microsoft.JScript.Vsa.JSVsaItemType.Reference">
+      <summary>Used to add a reference to an external .NET assembly, which can then be referenced from code. This type is used to create an IJSVsaReferenceItem object</summary>
     </member>
     <member name="T:Microsoft.JScript.Vsa.ResInfo">
       <summary>This class, member, or property is internal to the script engine and should not be called from your code.</summary>

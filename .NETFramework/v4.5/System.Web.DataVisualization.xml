@@ -190,7 +190,7 @@
     </member>
     <member name="P:System.Web.UI.DataVisualization.Charting.Annotation.Width">
       <summary>Gets or sets the width, in pixels, of an annotation.</summary>
-      <returns>A double value that represents the width of an annotation.</returns>
+      <returns>A double value that is a percentage of the chart width.</returns>
     </member>
     <member name="P:System.Web.UI.DataVisualization.Charting.Annotation.X">
       <summary>Gets or sets the X coordinate of an annotation.</summary>
@@ -428,20 +428,26 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.AntiAliasingStyles">
       <summary>Specifies the anti-aliasing options for the chart.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.AntiAliasingStyles.All">
+      <summary>Use anti-aliasing for text and graphics.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.AntiAliasingStyles.Graphics">
+      <summary>Use anti-aliasing when drawing graphics primitives such as circles or rectangles.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.AntiAliasingStyles.None">
       <summary>Do not use anti-aliasing.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.AntiAliasingStyles.Text">
       <summary>Use anti-aliasing when drawing text.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.AntiAliasingStyles.Graphics">
-      <summary>Use anti-aliasing when drawing graphics primitives such as circles or rectangles.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.AntiAliasingStyles.All">
-      <summary>Use anti-aliasing for text and graphics.</summary>
-    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.AreaAlignmentOrientations">
       <summary>Specifies the alignment orientation of a chart area.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentOrientations.All">
+      <summary>Chart areas are aligned horizontally and vertically.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal">
+      <summary>Chart areas are aligned horizontally.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentOrientations.None">
       <summary>Chart areas are not automatically aligned.</summary>
@@ -449,29 +455,23 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentOrientations.Vertical">
       <summary>Chart areas are aligned vertically.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal">
-      <summary>Chart areas are aligned horizontally.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentOrientations.All">
-      <summary>Chart areas are aligned horizontally and vertically.</summary>
-    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles">
       <summary>Specifies the alignment styles of chart areas.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles.None">
-      <summary>Chart areas are not automatically aligned.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles.Position">
-      <summary>Chart areas are aligned by the chart area position.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles.PlotPosition">
-      <summary>Chart areas are aligned by their inner plot position.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles.All">
+      <summary>Chart areas are aligned using all values.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles.AxesView">
       <summary>Chart areas are aligned using their axis scale views.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles.All">
-      <summary>Chart areas are aligned using all values.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles.None">
+      <summary>Chart areas are not automatically aligned.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles.PlotPosition">
+      <summary>Chart areas are aligned by their inner plot position.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.AreaAlignmentStyles.Position">
+      <summary>Chart areas are aligned by the chart area position.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.ArrowAnnotation">
       <summary>Represents an arrow annotation.</summary>
@@ -498,11 +498,11 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.ArrowStyle">
       <summary>Specifies styles for an arrow annotation. </summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ArrowStyle.Simple">
-      <summary>A simple one-pointed arrow.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ArrowStyle.DoubleArrow">
       <summary>An arrow that points in two directions.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ArrowStyle.Simple">
+      <summary>A simple one-pointed arrow.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ArrowStyle.Tailed">
       <summary>An arrow with a tail.</summary>
@@ -737,17 +737,17 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.AxisArrowStyle">
       <summary>Specifies the axis arrow styles.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.AxisArrowStyle.Lines">
+      <summary>A line-shaped arrow is used for the relevant axis.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.AxisArrowStyle.None">
       <summary>No arrow is used for the relevant axis.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.AxisArrowStyle.Triangle">
-      <summary>A triangular arrow is used for the relevant axis.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.AxisArrowStyle.SharpTriangle">
       <summary>A sharp triangular arrow is used for the relevant axis.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.AxisArrowStyle.Lines">
-      <summary>A line-shaped arrow is used for the relevant axis.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.AxisArrowStyle.Triangle">
+      <summary>A triangular arrow is used for the relevant axis.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.AxisEnabled">
       <summary>Specifies the state of an axis.</summary>
@@ -755,11 +755,11 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.AxisEnabled.Auto">
       <summary>The axis is only enabled if it used to plot a <see cref="T:System.Web.UI.DataVisualization.Charting.Series" />.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.AxisEnabled.True">
-      <summary>The axis is always enabled.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.AxisEnabled.False">
       <summary>The axis is never enabled.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.AxisEnabled.True">
+      <summary>The axis is always enabled.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.AxisName">
       <summary>Specifies the name of an axis.</summary>
@@ -767,11 +767,11 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.AxisName.X">
       <summary>Primary X-axis.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.AxisName.Y">
-      <summary>Primary Y-axis.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.AxisName.X2">
       <summary>Secondary X-axis.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.AxisName.Y">
+      <summary>Primary Y-axis.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.AxisName.Y2">
       <summary>Secondary Y-axis.</summary>
@@ -932,17 +932,8 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.BorderSkinStyle">
       <summary>Specifies a style for the border skin of a chart.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.None">
-      <summary>No border skin is used.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.Emboss">
       <summary>Use an embossed border skin.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.Raised">
-      <summary>Use a raised border skin.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.Sunken">
-      <summary>Use a sunken border skin.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameThin1">
       <summary>Use a thin border skin with rounded corners.</summary>
@@ -986,20 +977,29 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameTitle8">
       <summary>Use a border skin with rounded corners on top and bottom sides only. </summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.None">
+      <summary>No border skin is used.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.Raised">
+      <summary>Use a raised border skin.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.Sunken">
+      <summary>Use a sunken border skin.</summary>
+    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.BreakLineStyle">
       <summary>Specifies line styles for axis scale breaks.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.BreakLineStyle.None">
       <summary>Scale break is not displayed.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.BreakLineStyle.Ragged">
+      <summary>Scale break is displayed as a ragged line.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.BreakLineStyle.Straight">
       <summary>Scale break is displayed as a straight line.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.BreakLineStyle.Wave">
       <summary>Scale break is displayed as a wavy line.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.BreakLineStyle.Ragged">
-      <summary>Scale break is displayed as a ragged line.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.CalloutAnnotation">
       <summary>Represents a callout annotation.</summary>
@@ -1062,14 +1062,17 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.CalloutStyle">
       <summary>Represents the available callout styles. Applicable only to callout annotations.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.SimpleLine">
-      <summary>Callout text is underlined and a line points to the anchor point.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.Borderline">
       <summary>A border is drawn around the callout text and a line points to the anchor point.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.Cloud">
       <summary>Callout text is inside the cloud and smaller clouds point to the anchor point.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.Ellipse">
+      <summary>An ellipse is drawn around the callout text, which is connected to the anchor point.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.Perspective">
+      <summary>A perspective rectangle is drawn around the callout text, which is connected to the anchor point.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.Rectangle">
       <summary>A rectangle is drawn around the callout text, which is connected to the anchor point.</summary>
@@ -1077,11 +1080,8 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.RoundedRectangle">
       <summary>A rounded rectangle is drawn around the callout text, which is connected to the anchor point.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.Ellipse">
-      <summary>An ellipse is drawn around the callout text, which is connected to the anchor point.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.Perspective">
-      <summary>A perspective rectangle is drawn around the callout text, which is connected to the anchor point.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.SimpleLine">
+      <summary>Callout text is underlined and a line points to the anchor point.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.Chart">
       <summary>Serves as the root class of the <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" /> control.</summary>
@@ -1333,11 +1333,11 @@
       <returns>A <see cref="T:System.Web.UI.DataVisualization.Charting.ChartImageType" /> enumeration value that specifies the type of image into which the chart is rendered. The default value is <see cref="F:System.Web.UI.DataVisualization.Charting.ChartImageType.Jpeg" />.</returns>
     </member>
     <member name="P:System.Web.UI.DataVisualization.Charting.Chart.IsMapAreaAttributesEncoded">
-      <summary>Gets or sets a flag that determines whether map area attributes are encoded.</summary>
+      <summary>Gets or sets a flag that determines whether map area attributes are encoded. The map area attributes can load data from various data sources. The Chart control does not prevent an end user from loading untrusted data from various data sources. For this reason, it is recommended that you validate the data and encode it yourself.  </summary>
       <returns>true if map area attributes are encoded; otherwise, false.</returns>
     </member>
     <member name="P:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled">
-      <summary>Gets or sets a flag that determines whether client-side image maps are enabled.</summary>
+      <summary>Gets or sets a flag that determines whether client-side image maps are enabled. </summary>
       <returns>true if image maps are enabled; otherwise, false. The default value is true.</returns>
     </member>
     <member name="P:System.Web.UI.DataVisualization.Charting.Chart.IsSoftShadows">
@@ -1701,50 +1701,47 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.ChartColorPalette">
       <summary>Specifies a palette when setting a Palette property. </summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.None">
-      <summary>No palette is used. </summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Berry">
+      <summary>Palette utilizes blues and purples.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Bright">
       <summary>Palette utilizes bright colors.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Grayscale">
-      <summary>Palette utilizes grayscale colors, that is, shades of black and white.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Excel">
-      <summary>Palette utilizes Excel-style colors.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Light">
-      <summary>Palette utilizes light colors.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Pastel">
-      <summary>Palette utilizes pastel colors.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.EarthTones">
-      <summary>Palette utilizes earth tone colors such as green and brown.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.SemiTransparent">
-      <summary>Palette utilizes semi-transparent colors.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Berry">
-      <summary>Palette utilizes blues and purples.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.BrightPastel">
+      <summary>Palette utilizes bright pastel colors.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Chocolate">
       <summary>Palette utilizes shades of brown.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.EarthTones">
+      <summary>Palette utilizes earth tone colors such as green and brown.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Excel">
+      <summary>Palette utilizes Excel-style colors.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Fire">
       <summary>Palette utilizes red, orange and yellow colors.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Grayscale">
+      <summary>Palette utilizes grayscale colors, that is, shades of black and white.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Light">
+      <summary>Palette utilizes light colors.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.None">
+      <summary>No palette is used. </summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.Pastel">
+      <summary>Palette utilizes pastel colors.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.SeaGreen">
       <summary>Palette utilizes colors that range from green to blue.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.BrightPastel">
-      <summary>Palette utilizes bright pastel colors.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartColorPalette.SemiTransparent">
+      <summary>Palette utilizes semi-transparent colors.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.ChartDashStyle">
       <summary>Specifies a line style.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartDashStyle.NotSet">
-      <summary>The line style is not set.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartDashStyle.Dash">
       <summary>A dashed line.</summary>
@@ -1757,6 +1754,9 @@
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartDashStyle.Dot">
       <summary>A line with a repeating dot pattern.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartDashStyle.NotSet">
+      <summary>The line style is not set.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartDashStyle.Solid">
       <summary>A solid line.</summary>
@@ -1849,26 +1849,11 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.ChartElementType">
       <summary>Specifies a chart element type.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.Nothing">
-      <summary>No chart element.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.Title">
-      <summary>The title of a <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" />.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.PlottingArea">
-      <summary>The plotting area, which is the chart area excluding axes, labels, and so on. Also excludes the regions that data points might occupy.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.Annotation">
+      <summary>Any object derived from the <see cref="T:System.Web.UI.DataVisualization.Charting.Annotation" /> class.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.Axis">
       <summary>An <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> object.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.TickMarks">
-      <summary>Any major or minor <see cref="T:System.Web.UI.DataVisualization.Charting.TickMark" /> object.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.Gridlines">
-      <summary>Any major or minor grid line, either vertical or horizontal.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.StripLines">
-      <summary>A <see cref="T:System.Web.UI.DataVisualization.Charting.StripLine" /> object.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.AxisLabelImage">
       <summary>An <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> label image.</summary>
@@ -1885,11 +1870,11 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.DataPointLabel">
       <summary>A series <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> label.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.Gridlines">
+      <summary>Any major or minor grid line, either vertical or horizontal.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.LegendArea">
       <summary>The area inside a <see cref="T:System.Web.UI.DataVisualization.Charting.Legend" /> object. Does not include the space occupied by legend items.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.LegendTitle">
-      <summary>A <see cref="T:System.Web.UI.DataVisualization.Charting.Legend" /> title.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.LegendHeader">
       <summary>A <see cref="T:System.Web.UI.DataVisualization.Charting.Legend" /> header.</summary>
@@ -1897,8 +1882,23 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.LegendItem">
       <summary>A <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItem" /> object.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.Annotation">
-      <summary>Any object derived from the <see cref="T:System.Web.UI.DataVisualization.Charting.Annotation" /> class.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.LegendTitle">
+      <summary>A <see cref="T:System.Web.UI.DataVisualization.Charting.Legend" /> title.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.Nothing">
+      <summary>No chart element.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.PlottingArea">
+      <summary>The plotting area, which is the chart area excluding axes, labels, and so on. Also excludes the regions that data points might occupy.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.StripLines">
+      <summary>A <see cref="T:System.Web.UI.DataVisualization.Charting.StripLine" /> object.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.TickMarks">
+      <summary>Any major or minor <see cref="T:System.Web.UI.DataVisualization.Charting.TickMark" /> object.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartElementType.Title">
+      <summary>The title of a <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" />.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.ChartGraphics">
       <summary>Provides numerous conversion functions and exposes a GDI+ <see cref="T:System.Drawing.Graphics" /> object.</summary>
@@ -1950,9 +1950,6 @@
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.ChartHatchStyle">
       <summary>Specifies a hatching style for a chart element.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartHatchStyle.None">
-      <summary>No hatching style.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal">
       <summary>Backward diagonal style.</summary>
@@ -2034,6 +2031,9 @@
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartHatchStyle.NarrowVertical">
       <summary>Narrow vertical style.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartHatchStyle.None">
+      <summary>No hatching style.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartHatchStyle.OutlinedDiamond">
       <summary>Outlined diamond style.</summary>
@@ -2177,11 +2177,11 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType">
       <summary>Specifies a storage type for chart images.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType.InProcess">
-      <summary>Chart images are stored in the private process memory. You cannot use this option in a multiple-process or farm environment.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType.File">
       <summary>Chart images are stored in a file.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType.InProcess">
+      <summary>Chart images are stored in the private process memory. You cannot use this option in a multiple-process or farm environment.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType.Session">
       <summary>Chart images are stored in the ASP.NET session.</summary>
@@ -2189,35 +2189,50 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle">
       <summary>Specifies the image alignment for a chart background image. </summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.TopLeft">
-      <summary>The mage is aligned to the top left corner of the chart element.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.Top">
-      <summary>The image is aligned to the top boundary of the chart element.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.TopRight">
-      <summary>The image is aligned to the top right corner of the chart element.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.Right">
-      <summary>The image is aligned to the right boundary of the chart element.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.BottomRight">
-      <summary>The image is aligned to the bottom right corner of the chart element.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.Bottom">
       <summary>The image is aligned to the bottom boundary of the chart element.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.BottomLeft">
       <summary>The image is aligned to the bottom left corner of the chart element.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.Left">
-      <summary>The image is aligned to the left boundary of the chart element.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.BottomRight">
+      <summary>The image is aligned to the bottom right corner of the chart element.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.Center">
       <summary>The image is aligned in the center of the chart element.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.Left">
+      <summary>The image is aligned to the left boundary of the chart element.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.Right">
+      <summary>The image is aligned to the right boundary of the chart element.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.Top">
+      <summary>The image is aligned to the top boundary of the chart element.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.TopLeft">
+      <summary>The mage is aligned to the top left corner of the chart element.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle.TopRight">
+      <summary>The image is aligned to the top right corner of the chart element.</summary>
+    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.ChartImageFormat">
       <summary>Specifies the image type for the chart.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.Bmp">
+      <summary>A bitmap (BMP) image format.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.Emf">
+      <summary>A Windows Enhanced Metafile (EMF) image format.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.EmfDual">
+      <summary>A Windows Enhanced Metafile Dual (EMF-dual) image format.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.EmfPlus">
+      <summary>A Windows Enhanced Metafile Plus (EMF+) image format. </summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.Gif">
+      <summary>A GIF image format.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.Jpeg">
       <summary>A JPEG image format.</summary>
@@ -2225,23 +2240,8 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.Png">
       <summary>A PNG image format.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.Bmp">
-      <summary>A bitmap (BMP) image format.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.Tiff">
       <summary>A TIFF image format.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.Gif">
-      <summary>A GIF image format.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.Emf">
-      <summary>A Windows Enhanced Metafile (EMF) image format.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.EmfPlus">
-      <summary>A Windows Enhanced Metafile Plus (EMF+) image format. </summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageFormat.EmfDual">
-      <summary>A Windows Enhanced Metafile Dual (EMF-dual) image format.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.ChartImageType">
       <summary>Specifies the image type for the chart.</summary>
@@ -2249,14 +2249,14 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageType.Bmp">
       <summary>BMP image format type.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageType.Emf">
+      <summary>Windows Enhanced Metafile (EMF) image format type.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageType.Jpeg">
       <summary>JPEG image format type.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageType.Png">
       <summary>PNG image format type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartImageType.Emf">
-      <summary>Windows Enhanced Metafile (EMF) image format type.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.ChartImageWrapMode">
       <summary>Specifies the drawing mode for a background image.</summary>
@@ -2436,11 +2436,17 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.Auto">
       <summary>Property type is set automatically by the <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" /> control.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.Date">
+      <summary>The date portion of a <see cref="T:System.DateTime" /> value.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.DateTime">
+      <summary>A <see cref="T:System.DateTime" /> value.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.DateTimeOffset">
+      <summary>A <see cref="T:System.DateTime" /> value with offset.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.Double">
       <summary>A <see cref="T:System.Double" /> value.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.Single">
-      <summary>A <see cref="T:System.Single" /> value.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.Int32">
       <summary>A <see cref="T:System.Int32" /> value.</summary>
@@ -2448,44 +2454,38 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.Int64">
       <summary>A <see cref="T:System.Int64" /> value.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.Single">
+      <summary>A <see cref="T:System.Single" /> value.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.String">
+      <summary>A <see cref="T:System.String" /> value.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.Time">
+      <summary>The time portion of the <see cref="DateTime" /> value.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.UInt32">
       <summary>A <see cref="T:System.UInt32" /> value.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.UInt64">
       <summary>A <see cref="T:System.UInt64" /> value.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.String">
-      <summary>A <see cref="T:System.String" /> value.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.DateTime">
-      <summary>A <see cref="T:System.DateTime" /> value.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.Date">
-      <summary>The date portion of a <see cref="T:System.DateTime" /> value.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.Time">
-      <summary>The time portion of the <see cref="DateTime" /> value.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.ChartValueType.DateTimeOffset">
-      <summary>A <see cref="T:System.DateTime" /> value with offset.</summary>
-    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.CompareMethod">
       <summary>Specifies the type of comparison to be used when filtering data. This enumeration is used by the Filter method definitions in the <see cref="T:System.Web.UI.DataVisualization.Charting.DataManipulator" /> class that take the <paramref name="CompareMethod" /> argument.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.CompareMethod.MoreThan">
-      <summary>If the data point value is more than the compared value, the point is filtered.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.CompareMethod.LessThan">
-      <summary>If the data point value is less than the compared value, the point is filtered.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.CompareMethod.EqualTo">
       <summary>If the data point value is equal to the compared value, the point is filtered.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.CompareMethod.MoreThanOrEqualTo">
-      <summary>If the data point value more than or equal to the compared value, the point is filtered.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.CompareMethod.LessThan">
+      <summary>If the data point value is less than the compared value, the point is filtered.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.CompareMethod.LessThanOrEqualTo">
       <summary>If the data point value is less than or equal to the compared value, the point is filtered.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.CompareMethod.MoreThan">
+      <summary>If the data point value is more than the compared value, the point is filtered.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.CompareMethod.MoreThanOrEqualTo">
+      <summary>If the data point value more than or equal to the compared value, the point is filtered.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.CompareMethod.NotEqualTo">
       <summary>If the data point value is not equal to the compared value, the point is filtered.</summary>
@@ -3526,17 +3526,11 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.DateRangeType">
       <summary>Specifies a date/time interval that determines the ranges that will be filtered when you invoke one of the Filter method definitionsfound in the <see cref="T:System.Web.UI.DataVisualization.Charting.DataManipulator" /> class.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.DateRangeType.Year">
-      <summary>Date/time interval is years.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.DateRangeType.Month">
-      <summary>Date/time interval is months.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.DateRangeType.DayOfMonth">
+      <summary>Date/time interval is days of the month.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.DateRangeType.DayOfWeek">
       <summary>Date/time interval is days of the week.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.DateRangeType.DayOfMonth">
-      <summary>Date/time interval is days of the month.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.DateRangeType.Hour">
       <summary>Date/time interval is hours.</summary>
@@ -3544,23 +3538,17 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.DateRangeType.Minute">
       <summary>Date/time interval is minutes.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.DateRangeType.Month">
+      <summary>Date/time interval is months.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.DateRangeType.Year">
+      <summary>Date/time interval is years.</summary>
+    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType">
       <summary>Specifies an interval type.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Auto">
       <summary>Automatically determined by the <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" /> control.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Number">
-      <summary>Interval type is in numerical.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Years">
-      <summary>Interval type is in years.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Months">
-      <summary>Interval type is in months.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Weeks">
-      <summary>Interval type is in weeks.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Days">
       <summary>Interval type is in days.</summary>
@@ -3568,32 +3556,44 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Hours">
       <summary>Interval type is in hours.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Milliseconds">
+      <summary>Interval type is in milliseconds.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Minutes">
       <summary>Interval type is in minutes.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Seconds">
-      <summary>Interval type is in seconds.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Milliseconds">
-      <summary>Interval type is in milliseconds.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Months">
+      <summary>Interval type is in months.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.NotSet">
       <summary>The IntervalType or IntervalOffsetType property is not set. This value is used for grid lines, tick marks, strip lines and axis labels, and indicates that the interval type is being obtained from the <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> object to which the element belongs. Setting this value for an <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> object will have no effect.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Number">
+      <summary>Interval type is in numerical.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Seconds">
+      <summary>Interval type is in seconds.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Weeks">
+      <summary>Interval type is in weeks.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Years">
+      <summary>Interval type is in years.</summary>
+    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.Docking">
       <summary>Specifies where a chart element, such as a legend or title, will be docked on the chart.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.Docking.Top">
-      <summary>Docked to the top of either the chart image or a <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> object.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.Docking.Right">
-      <summary>Docked to the right of either the chart image or a <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> object.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.Docking.Bottom">
       <summary>Docked to the bottom of either the chart image or a <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> object.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.Docking.Left">
       <summary>Docked to the left of either the chart image or a <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> object.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.Docking.Right">
+      <summary>Docked to the right of either the chart image or a <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> object.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.Docking.Top">
+      <summary>Docked to the top of either the chart image or a <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" /> object.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.ElementPosition">
       <summary>Represents the base class for many visual elements of the chart such as the legend, title, and chart areas. Defines the position of the chart element in relative coordinates, which range from (0,0) to (100,100).</summary>
@@ -3691,9 +3691,6 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.FinancialFormula.Forecasting">
       <summary>Forecasting predicts future values using historical observations.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.FinancialFormula.MovingAverageConvergenceDivergence">
-      <summary>Moving Average Convergence/Divergence indicator compares two moving averages of prices and is used with a 9-day Exponential Moving average as a signal that indicates buying and selling moments.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.FinancialFormula.MassIndex">
       <summary>The Mass Index is used to predict trend reversal by comparing the difference and range between High and Low prices.</summary>
     </member>
@@ -3702,6 +3699,12 @@
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.FinancialFormula.MoneyFlow">
       <summary>The Money Flow indicator compares upward changes and downward changes of volume-weighted typical prices.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.FinancialFormula.MovingAverage">
+      <summary>A Simple Moving Average is an average of data calculated over a period of time. The moving average is the most popular price indicator used in technical analysis, and can be used with any price, for example, Hi, Low, Open and Close, or can be applied to other indicators.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.FinancialFormula.MovingAverageConvergenceDivergence">
+      <summary>Moving Average Convergence/Divergence indicator compares two moving averages of prices and is used with a 9-day Exponential Moving average as a signal that indicates buying and selling moments.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.FinancialFormula.NegativeVolumeIndex">
       <summary>The Negative Volume Index should be used with the Positive Volume index; the Negative Volume Index only changes if the volume decreases from the previous day.</summary>
@@ -3723,9 +3726,6 @@
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.FinancialFormula.RelativeStrengthIndex">
       <summary>The Relative Strength Index is a momentum oscillator that compares upward movements of the closing price with downward movements, and results in values that range from 0 to 100.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.FinancialFormula.MovingAverage">
-      <summary>A Simple Moving Average is an average of data calculated over a period of time. The moving average is the most popular price indicator used in technical analysis, and can be used with any price, for example, Hi, Low, Open and Close, or can be applied to other indicators.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.FinancialFormula.StandardDeviation">
       <summary>Standard Deviation is used to indicate volatility, and measures the difference between values, for example, closing price, and their moving average.</summary>
@@ -3821,15 +3821,6 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.GradientStyle">
       <summary>Specifies a gradient style to be used for a chart element.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.GradientStyle.None">
-      <summary>No gradient is applied.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.GradientStyle.LeftRight">
-      <summary>Gradient is applied from left to right.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.GradientStyle.TopBottom">
-      <summary>Gradient is applied from top to bottom.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.GradientStyle.Center">
       <summary>Gradient is applied from the center outwards.</summary>
     </member>
@@ -3841,6 +3832,15 @@
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.GradientStyle.HorizontalCenter">
       <summary>Gradient is applied horizontally from the center outwards.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.GradientStyle.LeftRight">
+      <summary>Gradient is applied from left to right.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.GradientStyle.None">
+      <summary>No gradient is applied.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.GradientStyle.TopBottom">
+      <summary>Gradient is applied from top to bottom.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.GradientStyle.VerticalCenter">
       <summary>Gradient is applied vertically from the center outwards.</summary>
@@ -3886,17 +3886,17 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.GridTickTypes">
       <summary>Specifies the options for displaying a grid line or a tick mark for a custom label.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.GridTickTypes.All">
+      <summary>A tick mark and a grid line are shown.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.GridTickTypes.Gridline">
+      <summary>A grid line is shown.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.GridTickTypes.None">
       <summary>No tick mark or grid line is shown.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.GridTickTypes.TickMark">
       <summary>A tick mark is shown.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.GridTickTypes.Gridline">
-      <summary>A grid line is shown.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.GridTickTypes.All">
-      <summary>A tick mark and a grid line are shown.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.HitTestResult">
       <summary>Represents the results of a hit test.</summary>
@@ -4084,53 +4084,38 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.IntervalType">
       <summary>Specifies an interval type.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Number">
-      <summary>A numerical interval.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Years">
-      <summary>An interval of years.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Months">
-      <summary>An interval of months.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Weeks">
-      <summary>An interval of weeks.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Days">
       <summary>An interval of days.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Hours">
       <summary>An interval of hours.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Milliseconds">
+      <summary>An interval of milliseconds.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Minutes">
       <summary>An interval of minutes.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Months">
+      <summary>An interval of months.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Number">
+      <summary>A numerical interval.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Seconds">
       <summary>An interval of seconds.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Milliseconds">
-      <summary>An interval of milliseconds.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Weeks">
+      <summary>An interval of weeks.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.IntervalType.Years">
+      <summary>An interval of years.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles">
       <summary>Specifies a label alignment when <see cref="T:System.Web.UI.DataVisualization.Charting.SmartLabelStyle" /> is used.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.Top">
-      <summary>Label is aligned to the top of the data point.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.Bottom">
       <summary>Label is aligned to the bottom of the data point.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.Right">
-      <summary>Label is aligned to the right of the data point.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.Left">
-      <summary>Label is aligned to the left of the data point.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.TopLeft">
-      <summary>Label is aligned to the top-left corner of the data point.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.TopRight">
-      <summary>Label is aligned to the top-right corner of the data point.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.BottomLeft">
       <summary>Label is aligned to the bottom-left of the data point.</summary>
@@ -4141,20 +4126,29 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.Center">
       <summary>Label is aligned to the center of the data point.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.Left">
+      <summary>Label is aligned to the left of the data point.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.Right">
+      <summary>Label is aligned to the right of the data point.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.Top">
+      <summary>Label is aligned to the top of the data point.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.TopLeft">
+      <summary>Label is aligned to the top-left corner of the data point.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAlignmentStyles.TopRight">
+      <summary>Label is aligned to the top-right corner of the data point.</summary>
+    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles">
       <summary>Specifies style changes that can automatically be made to a label when the <see cref="P:System.Web.UI.DataVisualization.Charting.Axis.LabelAutoFitStyle" /> property is used.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.None">
-      <summary>No label changes are allowed.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont">
-      <summary>Label font can be increased.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont">
       <summary>Label font can be decreased.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels">
-      <summary>Labels can be staggered.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont">
+      <summary>Label font can be increased.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep30">
       <summary>Labels can be angled in 30 degree steps: 0, 30, 60 and 90.</summary>
@@ -4165,11 +4159,20 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep90">
       <summary>Labels can be angled in 90 degree steps: 0 and 90.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.None">
+      <summary>No label changes are allowed.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels">
+      <summary>Labels can be staggered.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelAutoFitStyles.WordWrap">
       <summary>Labels can be word wrapped.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LabelCalloutStyle">
       <summary>Specifies the type of leader line that should be drawn from the point to the label.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LabelCalloutStyle.Box">
+      <summary>Line will terminate to a box drawn around the label text.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelCalloutStyle.None">
       <summary>Line will terminate at the label without any added style.</summary>
@@ -4177,11 +4180,14 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelCalloutStyle.Underlined">
       <summary>Line will terminate with a horizontal line beneath the label text.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LabelCalloutStyle.Box">
-      <summary>Line will terminate to a box drawn around the label text.</summary>
-    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LabelMarkStyle">
       <summary>Specifies a mark for custom labels.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LabelMarkStyle.Box">
+      <summary>A box is drawn around the label.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LabelMarkStyle.LineSideMark">
+      <summary>Custom labels use line and side marks.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelMarkStyle.None">
       <summary>No label marks are used.</summary>
@@ -4189,23 +4195,17 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelMarkStyle.SideMark">
       <summary>Custom labels use side marks.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LabelMarkStyle.LineSideMark">
-      <summary>Custom labels use line and side marks.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LabelMarkStyle.Box">
-      <summary>A box is drawn around the label.</summary>
-    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle">
       <summary>Specifies the degree to which a label can be drawn outside a plotting area.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes">
-      <summary>Labels can be drawn outside the plotting area.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No">
       <summary>Labels cannot de drawn outside the plotting area.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Partial">
       <summary>Labels can be drawn partially outside the plotting area. </summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes">
+      <summary>Labels can be drawn outside the plotting area.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LabelStyle">
       <summary>Provides properties that define the visual appearance of the axis labels. </summary>
@@ -4706,23 +4706,23 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.LegendCellColumnType">
       <summary>Specifies a legend cell column type.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LegendCellColumnType.Text">
-      <summary>The legend cell column contains text.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LegendCellColumnType.SeriesSymbol">
       <summary>The legend cell column contains a series symbol such as a line, rectangle, or line with marker.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LegendCellColumnType.Text">
+      <summary>The legend cell column contains text.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LegendCellType">
       <summary>Specifies a legend cell type.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LegendCellType.Text">
-      <summary>The legend cell contains text.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LegendCellType.Image">
+      <summary>The legend cell contains an image.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol">
       <summary>The legend cell contains a series symbol, such as a line or rectangle.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LegendCellType.Image">
-      <summary>The legend cell contains an image.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LegendCellType.Text">
+      <summary>The legend cell contains text.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LegendCollection">
       <summary>Represents a collection of <see cref="T:System.Web.UI.DataVisualization.Charting.Legend" /> objects.</summary>
@@ -4735,14 +4735,14 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.LegendImageStyle">
       <summary>Specifies the style to apply to the symbol for a legend item.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LegendImageStyle.Rectangle">
-      <summary>The symbol will be a rectangle.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LegendImageStyle.Line">
       <summary>The symbol will be a line.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LegendImageStyle.Marker">
       <summary>The symbol will be a marker.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LegendImageStyle.Rectangle">
+      <summary>The symbol will be a rectangle.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LegendItem">
       <summary>Represents a legend item, which is stored in the <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItemsCollection" /> class.</summary>
@@ -4890,11 +4890,11 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.LegendItemOrder.Auto">
       <summary>The chart automatically determines the order in which items are added to the legend.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LegendItemOrder.SameAsSeriesOrder">
-      <summary>Items are added to the legend in the same order as items added to the chart series.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LegendItemOrder.ReversedSeriesOrder">
       <summary>Items are added to the legend in the reverse order of items added to the chart series.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LegendItemOrder.SameAsSeriesOrder">
+      <summary>Items are added to the legend in the same order as items added to the chart series.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LegendItemsCollection">
       <summary>Represents a collection of <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItem" /> objects.</summary>
@@ -4929,29 +4929,29 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle">
       <summary>Specifies the styles for legend separator lines.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle.None">
-      <summary>No separator will be shown.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle.Line">
-      <summary>Legend separator is a solid line.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle.ThickLine">
-      <summary>Legend separator is a thick solid line.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle.DoubleLine">
-      <summary>Legend separator is a double line.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle.DashLine">
       <summary>Legend separator is a dashed line.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle.DotLine">
       <summary>Legend separator is a dotted line.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle.DoubleLine">
+      <summary>Legend separator is a double line.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle.GradientLine">
       <summary>Legend separator is a solid line with a gradient on the ends.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle.Line">
+      <summary>Legend separator is a solid line.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle.None">
+      <summary>No separator will be shown.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle.ThickGradientLine">
       <summary>Legend separator is a thick solid line with a gradient on the ends.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle.ThickLine">
+      <summary>Legend separator is a thick solid line.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LegendStyle">
       <summary>Specifies the legend style.</summary>
@@ -4971,11 +4971,11 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.LegendTableStyle.Auto">
       <summary>The legend table style is automatically determined by the <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" /> control.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LegendTableStyle.Wide">
-      <summary>Legend items will be fit horizontally within the legend. This style is preferred when <see cref="T:System.Web.UI.DataVisualization.Charting.Docking" /> is set to <see cref="F:System.Web.UI.DataVisualization.Charting.Docking.Top" /> or <see cref="F:System.Web.UI.DataVisualization.Charting.Docking.Bottom" />.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LegendTableStyle.Tall">
       <summary>Legend items will be fit vertically within the legend. This style is preferred when <see cref="T:System.Web.UI.DataVisualization.Charting.Docking" /> is set to <see cref="F:System.Web.UI.DataVisualization.Charting.Docking.Left" /> or <see cref="F:System.Web.UI.DataVisualization.Charting.Docking.Right" />.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LegendTableStyle.Wide">
+      <summary>Legend items will be fit horizontally within the legend. This style is preferred when <see cref="T:System.Web.UI.DataVisualization.Charting.Docking" /> is set to <see cref="F:System.Web.UI.DataVisualization.Charting.Docking.Top" /> or <see cref="F:System.Web.UI.DataVisualization.Charting.Docking.Bottom" />.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LightStyle">
       <summary>Specifies a lighting style for a three-dimensional (3D) chart area.</summary>
@@ -4983,17 +4983,14 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.LightStyle.None">
       <summary>No lighting is applied.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LightStyle.Simplistic">
-      <summary>A simplistic lighting style is applied, where the hue of all chart area elements is fixed.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LightStyle.Realistic">
       <summary>A realistic lighting style is applied, where the hue of all chart area elements changes depending on the amount of rotation.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LightStyle.Simplistic">
+      <summary>A simplistic lighting style is applied, where the hue of all chart area elements is fixed.</summary>
+    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle">
       <summary>Specifies the shape—that is, the anchor cap—to draw on the point end of the label callout line.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.None">
-      <summary>Anchor cap will not be drawn.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Arrow">
       <summary>Anchor cap will be drawn with an arrowhead.</summary>
@@ -5001,11 +4998,14 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Diamond">
       <summary>Anchor cap will be drawn with a diamond-shaped end.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Square">
-      <summary>Anchor cap will be drawn with a square head.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.None">
+      <summary>Anchor cap will not be drawn.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Round">
       <summary>Anchor cap will be drawn with a round end.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Square">
+      <summary>Anchor cap will be drawn with a square head.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.LineAnnotation">
       <summary>Represents a line annotation.</summary>
@@ -5160,14 +5160,14 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.MapAreaShape">
       <summary>Specifies the shape of a map area.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.MapAreaShape.Rectangle">
-      <summary>The shape of the map area is rectangular.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.MapAreaShape.Circle">
       <summary>The shape of the map area is circular.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.MapAreaShape.Polygon">
       <summary>The shape of the map area is polygonal.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.MapAreaShape.Rectangle">
+      <summary>The shape of the map area is rectangular.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.Margins">
       <summary>Represents the margins for various chart elements.</summary>
@@ -5222,23 +5222,23 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.MarkerStyle">
       <summary>Specifies a style for markers. </summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Circle">
+      <summary>A circular marker is displayed.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Cross">
+      <summary>A cross-shaped marker is displayed.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Diamond">
+      <summary>A diamond-shaped marker is displayed.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.None">
       <summary>No marker is displayed for the series or data point.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Square">
       <summary>A square marker is displayed.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Circle">
-      <summary>A circular marker is displayed.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Diamond">
-      <summary>A diamond-shaped marker is displayed.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Triangle">
-      <summary>A triangular marker is displayed.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Cross">
-      <summary>A cross-shaped marker is displayed.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Star10">
+      <summary>A 10-point star-shaped marker is displayed.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Star4">
       <summary>A 4-point star-shaped marker is displayed.</summary>
@@ -5249,8 +5249,8 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Star6">
       <summary>A 6-point star-shaped marker is displayed.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Star10">
-      <summary>A 10-point star-shaped marker is displayed.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.Triangle">
+      <summary>A triangular marker is displayed.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.NamedImage">
       <summary>Represents named images, which are stored in the <see cref="T:System.Web.UI.DataVisualization.Charting.NamedImagesCollection" />.</summary>
@@ -5456,17 +5456,20 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.RenderType">
       <summary>Specifies how the image of the chart will be rendered. </summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag">
-      <summary>Chart is rendered using an HTML image tag.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.RenderType.BinaryStreaming">
       <summary>Chart is streamed directly to the client.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.RenderType.ImageMap">
       <summary>Chart is rendered as an image map.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag">
+      <summary>Chart is rendered using an HTML image tag.</summary>
+    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.RightToLeft">
       <summary>Specifies a value indicating whether the text appears from right to left, such as when using Hebrew or Arabic fonts.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.RightToLeft.Inherit">
+      <summary>The direction the text read is inherited from the parent control.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.RightToLeft.No">
       <summary>The text reads from left to right. This is the default.</summary>
@@ -5474,32 +5477,29 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.RightToLeft.Yes">
       <summary>The text reads from right to left.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.RightToLeft.Inherit">
-      <summary>The direction the text read is inherited from the parent control.</summary>
-    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.SerializationContents">
       <summary>Specifies the type of chart content to be serialized.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SerializationContents.Default">
-      <summary>Serialize all non-default chart content. This includes appearance properties, series and their data points, axis minimums/maximums, and so forth.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SerializationContents.Data">
-      <summary>Serialize data values from all chart series. Does not include appearance properties.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SerializationContents.Appearance">
-      <summary>Serialize all appearance properties, such as color or line style, if they have non-default values</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.SerializationContents.All">
       <summary>Serialize all chart information. This includes all appearance properties and data point values.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SerializationContents.Appearance">
+      <summary>Serialize all appearance properties, such as color or line style, if they have non-default values</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SerializationContents.Data">
+      <summary>Serialize data values from all chart series. Does not include appearance properties.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SerializationContents.Default">
+      <summary>Serialize all non-default chart content. This includes appearance properties, series and their data points, axis minimums/maximums, and so forth.</summary>
+    </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.SerializationFormat">
       <summary>Represents the formatting type to use when the chart is serialized.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SerializationFormat.Xml">
-      <summary>Chart data will be serialized using well-formed XML.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.SerializationFormat.Binary">
       <summary>Chart data will be serialized in a binary format. </summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SerializationFormat.Xml">
+      <summary>Chart data will be serialized using well-formed XML.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.Series">
       <summary>Stores data points and series attributes.</summary>
@@ -5624,74 +5624,65 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.SeriesChartType">
       <summary>Specifies a chart type for a <see cref="T:System.Web.UI.DataVisualization.Charting.Series" />.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Point">
-      <summary>Point chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.FastPoint">
-      <summary>FastPoint chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Bubble">
-      <summary>Bubble chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Line">
-      <summary>Line chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Spline">
-      <summary>Spline chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StepLine">
-      <summary>StepLine chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.FastLine">
-      <summary>FastLine chart type.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Area">
+      <summary>Area chart type.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Bar">
       <summary>Bar chart type.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedBar">
-      <summary>Stacked bar chart type.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.BoxPlot">
+      <summary>Box plot chart type.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedBar100">
-      <summary>Hundred-percent stacked bar chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Column">
-      <summary>Column chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedColumn">
-      <summary>Stacked column chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedColumn100">
-      <summary>Hundred-percent stacked column chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Area">
-      <summary>Area chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.SplineArea">
-      <summary>Spline area chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedArea">
-      <summary>Stacked area chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedArea100">
-      <summary>Hundred-percent stacked area chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Pie">
-      <summary>Pie chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Doughnut">
-      <summary>Doughnut chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Stock">
-      <summary>Stock chart type.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Bubble">
+      <summary>Bubble chart type.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Candlestick">
       <summary>Candlestick chart type.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Column">
+      <summary>Column chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Doughnut">
+      <summary>Doughnut chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.ErrorBar">
+      <summary>Error bar chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.FastLine">
+      <summary>FastLine chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.FastPoint">
+      <summary>FastPoint chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Funnel">
+      <summary>Funnel chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Kagi">
+      <summary>Kagi chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Line">
+      <summary>Line chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Pie">
+      <summary>Pie chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Point">
+      <summary>Point chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.PointAndFigure">
+      <summary>PointAndFigure chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Polar">
+      <summary>Polar chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Pyramid">
+      <summary>Pyramid chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Radar">
+      <summary>Radar chart type.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Range">
       <summary>Range chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.SplineRange">
-      <summary>Spline range chart type.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.RangeBar">
       <summary>RangeBar chart type.</summary>
@@ -5699,35 +5690,44 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.RangeColumn">
       <summary>Range column chart type.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Radar">
-      <summary>Radar chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Polar">
-      <summary>Polar chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.ErrorBar">
-      <summary>Error bar chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.BoxPlot">
-      <summary>Box plot chart type.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Renko">
       <summary>Renko chart type.</summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Spline">
+      <summary>Spline chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.SplineArea">
+      <summary>Spline area chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.SplineRange">
+      <summary>Spline range chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedArea">
+      <summary>Stacked area chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedArea100">
+      <summary>Hundred-percent stacked area chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedBar">
+      <summary>Stacked bar chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedBar100">
+      <summary>Hundred-percent stacked bar chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedColumn">
+      <summary>Stacked column chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedColumn100">
+      <summary>Hundred-percent stacked column chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StepLine">
+      <summary>StepLine chart type.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Stock">
+      <summary>Stock chart type.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.ThreeLineBreak">
       <summary>ThreeLineBreak chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Kagi">
-      <summary>Kagi chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.PointAndFigure">
-      <summary>PointAndFigure chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Funnel">
-      <summary>Funnel chart type.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Pyramid">
-      <summary>Pyramid chart type.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.SeriesCollection">
       <summary>Represents a collection of <see cref="T:System.Web.UI.DataVisualization.Charting.Series" /> objects.</summary>
@@ -5801,11 +5801,11 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.StartFromZero.Auto">
       <summary>The <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" /> control calculates whether to start the axis scale at zero or at a more appropriate rounded value.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.StartFromZero.Yes">
-      <summary>Start the axis segment scale from zero.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.StartFromZero.No">
       <summary>Do not start the axis segment scale from zero.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.StartFromZero.Yes">
+      <summary>Start the axis segment scale from zero.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.StatisticFormula">
       <summary>Calculates statistical formulas.</summary>
@@ -6112,11 +6112,11 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality">
       <summary>Specifies the quality of the anti-aliasing to be used with the <see cref="P:System.Web.UI.DataVisualization.Charting.Chart.TextAntiAliasingQuality" /> property. </summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality.Normal">
-      <summary>Normal anti-aliasing quality.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality.High">
       <summary>High anti-aliasing quality.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality.Normal">
+      <summary>Normal anti-aliasing quality.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault">
       <summary>System default anti-aliasing quality. The text will be drawn using whatever font smoothing settings the user has selected for the system.</summary>
@@ -6130,11 +6130,11 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.TextOrientation.Horizontal">
       <summary>Text is horizontal.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.TextOrientation.Rotated90">
-      <summary>Text is rotated 90 degrees and oriented from top to bottom.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.TextOrientation.Rotated270">
       <summary>Text is rotated 270 degrees and oriented from bottom to top.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.TextOrientation.Rotated90">
+      <summary>Text is rotated 90 degrees and oriented from top to bottom.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.TextOrientation.Stacked">
       <summary>Text characters are not rotated and are positioned one below the other.</summary>
@@ -6145,17 +6145,17 @@
     <member name="F:System.Web.UI.DataVisualization.Charting.TextStyle.Default">
       <summary>Default text drawing style.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.TextStyle.Shadow">
-      <summary>Shadow text.</summary>
+    <member name="F:System.Web.UI.DataVisualization.Charting.TextStyle.Embed">
+      <summary>Embedded text.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.TextStyle.Emboss">
       <summary>Embossed text.</summary>
     </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.TextStyle.Embed">
-      <summary>Embedded text.</summary>
-    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.TextStyle.Frame">
       <summary>Framed text.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.TextStyle.Shadow">
+      <summary>Shadow text.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.TickMark">
       <summary>Represents the major and minor tick marks along an axis.</summary>
@@ -6174,17 +6174,17 @@
     <member name="T:System.Web.UI.DataVisualization.Charting.TickMarkStyle">
       <summary>Specifies a tick mark style when setting the <see cref="P:System.Web.UI.DataVisualization.Charting.TickMark.TickMarkStyle" /> property of a <see cref="T:System.Web.UI.DataVisualization.Charting.TickMark" /> object. </summary>
     </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.TickMarkStyle.AcrossAxis">
+      <summary>Tick marks are drawn across the relevant axis line.</summary>
+    </member>
+    <member name="F:System.Web.UI.DataVisualization.Charting.TickMarkStyle.InsideArea">
+      <summary>Tick marks are drawn inside the chart area.</summary>
+    </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.TickMarkStyle.None">
       <summary>Tick marks are disabled.</summary>
     </member>
     <member name="F:System.Web.UI.DataVisualization.Charting.TickMarkStyle.OutsideArea">
       <summary>Tick marks are drawn outside the chart area.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.TickMarkStyle.InsideArea">
-      <summary>Tick marks are drawn inside the chart area.</summary>
-    </member>
-    <member name="F:System.Web.UI.DataVisualization.Charting.TickMarkStyle.AcrossAxis">
-      <summary>Tick marks are drawn across the relevant axis line.</summary>
     </member>
     <member name="T:System.Web.UI.DataVisualization.Charting.Title">
       <summary>Represents a title for the entire chart image.</summary>

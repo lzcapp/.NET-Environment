@@ -22,7 +22,6 @@
     <member name="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.BuildEngine">
       <summary>Gets or sets the build engine interface that is available to tasks.</summary>
       <returns>The <see cref="T:Microsoft.Build.Framework.IBuildEngine" /> that is available to tasks.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.Execute">
       <summary>Runs the task.</summary>
@@ -35,12 +34,10 @@
     <member name="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.HostObject">
       <summary>Gets or sets a host object instance that is associated with the derived <see cref="T:Microsoft.Build.Utilities.Task" />.</summary>
       <returns>The <see cref="T:Microsoft.Build.Framework.ITaskHost" /> host object instance that is associated with the derived <see cref="T:Microsoft.Build.Utilities.Task" />. This value can be null.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.InitializeLifetimeService">
       <summary>When overridden in a derived class, gives tasks infinite lease time.</summary>
       <returns>null to specify an infinite lifetime.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.Log">
       <summary>Gets an instance of a task logging helper object that contains task logging methods.</summary>
@@ -438,32 +435,32 @@
     <member name="T:Microsoft.Build.Utilities.DotNetFrameworkArchitecture">
       <summary>Used to specify the targeted bitness of the .NET Framework for some methods of ToolLocationHelper</summary>
     </member>
-    <member name="F:Microsoft.Build.Utilities.DotNetFrameworkArchitecture.Current">
-      <summary>Indicates the .NET Framework that is currently being run under.</summary>
-    </member>
     <member name="F:Microsoft.Build.Utilities.DotNetFrameworkArchitecture.Bitness32">
       <summary>Indicates the 32-bit .NET Framework</summary>
     </member>
     <member name="F:Microsoft.Build.Utilities.DotNetFrameworkArchitecture.Bitness64">
       <summary>Indicates the 64-bit .NET Framework</summary>
     </member>
+    <member name="F:Microsoft.Build.Utilities.DotNetFrameworkArchitecture.Current">
+      <summary>Indicates the .NET Framework that is currently being run under.</summary>
+    </member>
     <member name="T:Microsoft.Build.Utilities.ExecutableType">
       <summary>Enumeration to express the type of executable being wrapped by Tracker.exe</summary>
-    </member>
-    <member name="F:Microsoft.Build.Utilities.ExecutableType.Native32Bit">
-      <summary>32-bit native executable</summary>
-    </member>
-    <member name="F:Microsoft.Build.Utilities.ExecutableType.Native64Bit">
-      <summary>64-bit native executable</summary>
-    </member>
-    <member name="F:Microsoft.Build.Utilities.ExecutableType.ManagedIL">
-      <summary>A managed executable without a specified bitness</summary>
     </member>
     <member name="F:Microsoft.Build.Utilities.ExecutableType.Managed32Bit">
       <summary>A managed executable specifically marked as 32-bit</summary>
     </member>
     <member name="F:Microsoft.Build.Utilities.ExecutableType.Managed64Bit">
       <summary>A managed executable specifically marked as 64-bit</summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.ExecutableType.ManagedIL">
+      <summary>A managed executable without a specified bitness</summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.ExecutableType.Native32Bit">
+      <summary>32-bit native executable</summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.ExecutableType.Native64Bit">
+      <summary>64-bit native executable</summary>
     </member>
     <member name="F:Microsoft.Build.Utilities.ExecutableType.SameAsCurrentProcess">
       <summary>Use the same bitness as the currently running executable.</summary>
@@ -828,17 +825,17 @@
     <member name="T:Microsoft.Build.Utilities.HostObjectInitializationStatus">
       <summary>Defines the next action for <see cref="T:Microsoft.Build.Utilities.ToolTask" /> after an attempt to initialize the host object.</summary>
     </member>
-    <member name="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.UseHostObjectToExecute">
-      <summary>Indicates that an appropriate host object for this task exists, which can support all of the parameters passed in and should be invoked to do the real work of the task.</summary>
-    </member>
-    <member name="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.UseAlternateToolToExecute">
-      <summary>Indicates that either a host object is not available, or that the host object is not capable of supporting all of the features required for this build. Therefore, <see cref="T:Microsoft.Build.Utilities.ToolTask" /> should fallback to an alternate means of doing the build, such as invoking the command-line tool.</summary>
+    <member name="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.NoActionReturnFailure">
+      <summary>Indicates that some of the parameters being passed into the task are invalid, and that the task should fail immediately.</summary>
     </member>
     <member name="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.NoActionReturnSuccess">
       <summary>Indicates that the host object is up to date, and that no further action is necessary.</summary>
     </member>
-    <member name="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.NoActionReturnFailure">
-      <summary>Indicates that some of the parameters being passed into the task are invalid, and that the task should fail immediately.</summary>
+    <member name="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.UseAlternateToolToExecute">
+      <summary>Indicates that either a host object is not available, or that the host object is not capable of supporting all of the features required for this build. Therefore, <see cref="T:Microsoft.Build.Utilities.ToolTask" /> should fallback to an alternate means of doing the build, such as invoking the command-line tool.</summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.UseHostObjectToExecute">
+      <summary>Indicates that an appropriate host object for this task exists, which can support all of the parameters passed in and should be invoked to do the real work of the task.</summary>
     </member>
     <member name="T:Microsoft.Build.Utilities.Logger">
       <summary>When overridden in a derived form, provides functionality for loggers that handle events raised by the MSBuild engine.</summary>
@@ -1066,12 +1063,10 @@
     <member name="M:Microsoft.Build.Utilities.TaskItem.CloneCustomMetadata">
       <summary>Clones the collection of custom metadata for the item specification.</summary>
       <returns>An <see cref="T:System.Collections.IDictionary" /> that represents a clone of the custom metadata.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskItem.CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)">
       <summary>Copies the item-specification metadata to the specified destination task item.</summary>
       <param name="destinationItem">The item that this method will copy metadata to.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskItem.GetMetadata(System.String)">
       <summary>Retrieves the specified metadata on the item.</summary>
@@ -1081,7 +1076,6 @@
     <member name="M:Microsoft.Build.Utilities.TaskItem.InitializeLifetimeService">
       <summary>When overridden in a derived class, gives task items infinite lease time.</summary>
       <returns>null to specify an infinite lifetime.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:Microsoft.Build.Utilities.TaskItem.ItemSpec">
       <summary>Gets or sets the item specification.</summary>
@@ -1121,7 +1115,6 @@
       <summary>Allows an explicit type cast from a <see cref="T:Microsoft.Build.Utilities.TaskItem" /> to a <see cref="T:System.String" />, and returns the <see cref="P:Microsoft.Build.Utilities.TaskItem.ItemSpec" /> for that item.</summary>
       <returns>The <see cref="P:Microsoft.Build.Utilities.TaskItem.ItemSpec" /> for the item.</returns>
       <param name="taskItemToCast">The item to operate on.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskItem.RemoveMetadata(System.String)">
       <summary>Removes the specified metadata on the item.</summary>
@@ -1245,7 +1238,6 @@
       <param name="exception">The exception to log.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="e" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromException(System.Exception,System.Boolean)">
       <summary>Logs an error using the message, and optionally the stack trace, from the given exception.</summary>
@@ -1253,7 +1245,6 @@
       <param name="showStackTrace">true to include the stack trace in the log; otherwise, false.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="e" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromException(System.Exception,System.Boolean,System.Boolean,System.String)">
       <summary>Logs an error using the message, and optionally the stack-trace from the given exception and any inner exceptions.</summary>
@@ -1263,7 +1254,6 @@
       <param name="file">The name of the file related to the exception, or null if the project file should be logged.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="e" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromResources(System.String,System.Object[])">
       <summary>Logs an error using the specified resource string.</summary>
@@ -1271,7 +1261,6 @@
       <param name="messageArgs">The arguments for formatting the loaded string.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="messageResourceName" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromResources(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])">
       <summary>Logs an error using the specified resource string and other error details.</summary>
@@ -1287,7 +1276,6 @@
       <param name="messageArgs">The arguments for formatting the loaded string.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="messageResourceName" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorWithCodeFromResources(System.String,System.Object[])">
       <summary>Logs an error with an error code using the specified resource string.</summary>
@@ -1295,7 +1283,6 @@
       <param name="messageArgs">The arguments for formatting the loaded string.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="messageResourceName" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorWithCodeFromResources(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])">
       <summary>Logs an error using the specified resource string and other error details.</summary>
@@ -1309,7 +1296,6 @@
       <param name="messageArgs">The arguments for formatting the loaded string.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="messageResourceName" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogExternalProjectFinished(System.String,System.String,System.String,System.Boolean)">
       <summary>Helps log the custom <see cref="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" /> build event.</summary>
@@ -1317,7 +1303,6 @@
       <param name="helpKeyword">The help keyword.</param>
       <param name="projectFile">The name of the project.</param>
       <param name="succeeded">true to indicate that project was built successfully; otherwise, false.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogExternalProjectStarted(System.String,System.String,System.String,System.String)">
       <summary>Helps log the custom <see cref="T:Microsoft.Build.Framework.ExternalProjectStartedEventArgs" /> build event.</summary>
@@ -1325,7 +1310,6 @@
       <param name="helpKeyword">The help keyword.</param>
       <param name="projectFile">The name of the project.</param>
       <param name="targetNames">The targets to build. An empty string indicates default targets.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage(Microsoft.Build.Framework.MessageImportance,System.String,System.Object[])">
       <summary>Logs a message with the specified string and importance.</summary>
@@ -1364,7 +1348,6 @@
       <param name="messageArgs">The arguments for formatting the loaded string.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="message" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessageFromResources(System.String,System.Object[])">
       <summary>Logs a message with the specified resource string.</summary>
@@ -1372,7 +1355,6 @@
       <param name="messageArgs">The arguments for formatting the loaded string.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="messageResourceName" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessageFromText(System.String,Microsoft.Build.Framework.MessageImportance)">
       <summary>Logs an error message or warning from the given line of text.</summary>
@@ -1381,7 +1363,6 @@
       <param name="messageImportance">One of the values of <see cref="T:Microsoft.Build.Framework.MessageImportance" /> that indicates the importance level of the command line.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="lineOfText" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessagesFromFile(System.String)">
       <summary>Logs errors, warnings, and messages for each line of text in the given file.</summary>
@@ -1389,7 +1370,6 @@
       <param name="fileName">The name of the file to log messages from.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="message" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessagesFromFile(System.String,Microsoft.Build.Framework.MessageImportance)">
       <summary>Logs errors, warnings, and messages for each line of text in the given file. Also logs the importance of messages.</summary>
@@ -1397,7 +1377,6 @@
       <param name="fileName">The name of the file to log messages from.</param>
       <param name="messageImportance">One of the enumeration values that specifies the importance of logged messages.</param>
       <exception cref="T:System.ArgumentNullException">Thrown when filename is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessagesFromStream(System.IO.TextReader,Microsoft.Build.Framework.MessageImportance)">
       <summary>Logs an error message or warning from the given stream.</summary>
@@ -1406,7 +1385,6 @@
       <param name="messageImportance">One of the values of <see cref="T:Microsoft.Build.Framework.MessageImportance" /> that indicates the importance level of the command line.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="stream" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarning(System.String,System.Object[])">
       <summary>Logs a warning with the specified message.</summary>
@@ -1435,7 +1413,6 @@
       <param name="exception">The exception to log.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="e" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningFromException(System.Exception,System.Boolean)">
       <summary>Logs a warning using the message, and optionally the stack trace, from the given exception.</summary>
@@ -1443,7 +1420,6 @@
       <param name="showStackTrace">true to include the stack trace in the log; otherwise, false.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="e" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningFromResources(System.String,System.Object[])">
       <summary>Logs a warning using the specified resource string.</summary>
@@ -1451,7 +1427,6 @@
       <param name="messageArgs">The arguments for formatting the loaded string.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="messageResourceName" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningFromResources(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])">
       <summary>Logs a warning using the specified resource string and other warning details.</summary>
@@ -1467,7 +1442,6 @@
       <param name="messageArgs">The arguments for formatting the loaded string.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="messageResourceName" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningWithCodeFromResources(System.String,System.Object[])">
       <summary>Logs a warning with a warning code using the specified resource string.</summary>
@@ -1475,7 +1449,6 @@
       <param name="messageArgs">The arguments for formatting the loaded string.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="messageResourceName" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningWithCodeFromResources(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])">
       <summary>Logs a warning with a warning code using the specified resource string and other warning details.</summary>
@@ -1489,7 +1462,6 @@
       <param name="messageArgs">The arguments for formatting the loaded string.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="messageResourceName" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.TaskLoggingHelper.MarkAsInactive">
       <summary>Notifies this TaskLoggingHelper that it is no longer needed.</summary>
@@ -1501,7 +1473,6 @@
     <member name="P:Microsoft.Build.Utilities.TaskLoggingHelper.TaskResources">
       <summary>Gets or sets the culture-specific resources used by the logging methods.</summary>
       <returns>A <see cref="T:System.Resources.ResourceManager" /> that represents the culture-specific resources used by the logging methods. This value can be null.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:Microsoft.Build.Utilities.ToolLocationHelper">
       <summary>Provides utility methods for locating .NET Framework and .NET Framework SDK files and directories.</summary>
@@ -1659,14 +1630,13 @@
       <param name="targetFrameworkIdentifier">Identifier being targeted</param>
       <param name="targetFrameworkVersion">Version being targeted</param>
       <param name="targetFrameworkProfile">Profile being targeted</param>
-      <param name="platformTarget">This is used to determine where we should look for the standard libraries. Note, this parameter is only used for .net frameworks less than 4.0</param>
+      <param name="platformTarget">This is used to determine where we should look for the standard libraries. Note, this parameter is only used for .NET Framework 3.5 or less.</param>
       <exception cref="T:System.ArgumentNullException">When the frameworkName is null</exception>
     </member>
     <member name="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToSystemFile(System.String)">
       <summary>Gets a fully qualified path to a file in the system directory.</summary>
       <returns>A string containing the fully qualified path to the the file in the system directory.</returns>
       <param name="fileName">The file to locate in the System folder.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToWindowsSdk(Microsoft.Build.Utilities.TargetDotNetFrameworkVersion,Microsoft.Build.Utilities.VisualStudioVersion)">
       <summary>Returns the path to the Windows SDK for the desired .NET Framework and Visual Studio version. Note that this is only supported for a targeted .NET Framework version of 4.5 and above.</summary>
@@ -1817,13 +1787,6 @@
       <param name="diskRoots">List of disk locations to search for platform SDKs.</param>
       <param name="registryRoot">Registry root location to look for platform SDKs.</param>
     </member>
-    <member name="M:Microsoft.Build.Utilities.ToolLocationHelper.GetWindowsMetadataFoldersExInfo(System.String,System.String,System.Reflection.ProcessorArchitecture)">
-      <summary>Gets a sorted list of <see cref="T:Microsoft.Build.Utilities.WinMDFoldersExInfo" /> objects, which contain information about the directories in which the third party winmd files are registered. This information is used at build and design time.</summary>
-      <returns>Returns list of WinMDFoldersExInfo.</returns>
-      <param name="registryRoot">The root registry location. For Windows SDK this is “SOFTWARE\MICROSOFT\Windows SDKS\Windows Kits”.</param>
-      <param name="targetPlatformVersion">The targeted framework version (7.0, 8.0)</param>
-      <param name="targetProcessorArchitecture">The targeted processor architecture. This determines which registry hives are searched and in which order.</param>
-    </member>
     <member name="M:Microsoft.Build.Utilities.ToolLocationHelper.HighestVersionOfTargetFrameworkIdentifier(System.String,System.String)">
       <summary>Gets the highest version of a target framework moniker based on the identifier. </summary>
       <returns>Returns the highest version of a target framework moniker based on the identifier. This method will only find full frameworks; no profiles will be returned.</returns>
@@ -1833,7 +1796,6 @@
     <member name="P:Microsoft.Build.Utilities.ToolLocationHelper.PathToSystem">
       <summary>Gets the fully qualified path of the system directory.</summary>
       <returns>A string containing a directory path to the system directory.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:Microsoft.Build.Utilities.ToolTask">
       <summary>When overridden in a derived form, provides functionality for a task that wraps a command line tool.</summary>
@@ -2033,11 +1995,11 @@
     <member name="F:Microsoft.Build.Utilities.UpToDateCheckType.InputNewerThanOutput">
       <summary>Input newer than output</summary>
     </member>
-    <member name="F:Microsoft.Build.Utilities.UpToDateCheckType.InputOrOutputNewerThanTracking">
-      <summary>Input or output newer than tracking</summary>
-    </member>
     <member name="F:Microsoft.Build.Utilities.UpToDateCheckType.InputNewerThanTracking">
       <summary>Input newer than tracking</summary>
+    </member>
+    <member name="F:Microsoft.Build.Utilities.UpToDateCheckType.InputOrOutputNewerThanTracking">
+      <summary>Input or output newer than tracking</summary>
     </member>
     <member name="T:Microsoft.Build.Utilities.VisualStudioVersion">
       <summary>Used to specify the version of Visual Studio from which to select associated tools for some methods of ToolLocationHelper</summary>
@@ -2046,46 +2008,10 @@
       <summary>Visual Studio 2010 and SP1</summary>
     </member>
     <member name="F:Microsoft.Build.Utilities.VisualStudioVersion.Version110">
-      <summary>Visual Studio 2012 RC</summary>
+      <summary>Visual Studio 2012</summary>
     </member>
     <member name="F:Microsoft.Build.Utilities.VisualStudioVersion.VersionLatest">
       <summary>The latest version available at the time of release</summary>
-    </member>
-    <member name="T:Microsoft.Build.Utilities.WinMDFoldersExInfo">
-      <summary>Contains information about entries in the WinMDFoldersEx registry keys.</summary>
-    </member>
-    <member name="M:Microsoft.Build.Utilities.WinMDFoldersExInfo.#ctor(Microsoft.Win32.RegistryHive,Microsoft.Win32.RegistryView,System.String,System.String,System.Version,System.Version)">
-      <summary>Creates a new instance of the WinMDFoldersExInfo class.</summary>
-      <param name="hive">Registry hive to use.</param>
-      <param name="view">Registry hive to use.</param>
-      <param name="registryKey">Registry key for the component.</param>
-      <param name="directoryPath">Registry keys default folder path.</param>
-      <param name="componentVersion">Component version.</param>
-      <param name="targetFrameworkVersion">Target framework version for the registry key.</param>
-    </member>
-    <member name="P:Microsoft.Build.Utilities.WinMDFoldersExInfo.ComponentVersion">
-      <summary>Gets or sets the component version.</summary>
-      <returns>Returns the component version.</returns>
-    </member>
-    <member name="P:Microsoft.Build.Utilities.WinMDFoldersExInfo.DirectoryPath">
-      <summary>Gets or sets the folder found at the registry keys default value.</summary>
-      <returns>Returns path to the registry keys default folder.</returns>
-    </member>
-    <member name="P:Microsoft.Build.Utilities.WinMDFoldersExInfo.Hive">
-      <summary>Gets or sets the registry hive.</summary>
-      <returns>Returns the registry hive.</returns>
-    </member>
-    <member name="P:Microsoft.Build.Utilities.WinMDFoldersExInfo.Key">
-      <summary>Gets or sets the registry key for the component.</summary>
-      <returns>Returns the registry key.</returns>
-    </member>
-    <member name="P:Microsoft.Build.Utilities.WinMDFoldersExInfo.TargetFrameworkVersion">
-      <summary>Gets or sets the target framework version for the registry key.</summary>
-      <returns>Returns the target framework version.</returns>
-    </member>
-    <member name="P:Microsoft.Build.Utilities.WinMDFoldersExInfo.View">
-      <summary>Gets or sets the registry view.</summary>
-      <returns>Returns the registry view.</returns>
     </member>
   </members>
 </doc>

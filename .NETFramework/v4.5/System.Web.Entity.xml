@@ -61,6 +61,10 @@
       <summary>Gets or sets the fully qualified name of the typed <see cref="T:System.Data.Objects.ObjectContext" /> that is used by the <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> control.</summary>
       <returns>A <see cref="T:System.String" /> that is the fully qualified name of the type.</returns>
     </member>
+    <member name="M:System.Web.UI.WebControls.EntityDataSource.CreateView">
+      <summary>Creates a new instance of the <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> that is associated with this control.</summary>
+      <returns>An object that acts as the interface for data-bound controls.</returns>
+    </member>
     <member name="P:System.Web.UI.WebControls.EntityDataSource.DefaultContainerName">
       <summary>Gets or sets the default container name.</summary>
       <returns>A <see cref="T:System.String" /> that is the default container name.</returns>
@@ -318,6 +322,11 @@
     <member name="T:System.Web.UI.WebControls.EntityDataSourceView">
       <summary>Supports the <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> control and provides an interface for data-bound controls to perform queries and other operations against entity data.</summary>
     </member>
+    <member name="M:System.Web.UI.WebControls.EntityDataSourceView.#ctor(System.Web.UI.WebControls.EntityDataSource,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> class, setting the specified <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> control as the owner of the current view.</summary>
+      <param name="owner">The data source control that the <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> object is associated with.</param>
+      <param name="viewName">A unique name for the data source view within the scope of the data source control that owns it.</param>
+    </member>
     <member name="P:System.Web.UI.WebControls.EntityDataSourceView.CanDelete">
       <summary>Gets a value that indicates whether the <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> object that is associated with the current <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> control supports the delete operation.</summary>
       <returns>true if the operation is supported; otherwise, false. </returns>
@@ -359,6 +368,29 @@
     </member>
     <member name="E:System.Web.UI.WebControls.EntityDataSourceView.Exception">
       <summary>Occurs when validation fails in a partial methods or when an exception is raised. </summary>
+    </member>
+    <member name="M:System.Web.UI.WebControls.EntityDataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)">
+      <summary>Performs a delete operation.</summary>
+      <returns>The number of rows deleted; otherwise, -1, if the operation fails or the number is not known.</returns>
+      <param name="keys">The keys of the entity to be deleted.</param>
+      <param name="oldValues">The values of the entity to be deleted.</param>
+    </member>
+    <member name="M:System.Web.UI.WebControls.EntityDataSourceView.ExecuteInsert(System.Collections.IDictionary)">
+      <summary>Performs an insert operation.</summary>
+      <returns>The number of rows inserted; otherwise, -1, if the operation fails or the number is not known.</returns>
+      <param name="values">The values of the entity to be inserted.</param>
+    </member>
+    <member name="M:System.Web.UI.WebControls.EntityDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)">
+      <summary>Performs a select operation.</summary>
+      <returns>The result of the select operation.</returns>
+      <param name="arguments">The select operation arguments.</param>
+    </member>
+    <member name="M:System.Web.UI.WebControls.EntityDataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)">
+      <summary>Performs an update operation.</summary>
+      <returns>The number of rows updated; otherwise, -1, if the operation fails or the number is not known.</returns>
+      <param name="keys">The keys of the entity to be updated.</param>
+      <param name="values">The new values of the entity to be updated.</param>
+      <param name="oldValues">The old values of the entity to be updated.</param>
     </member>
     <member name="M:System.Web.UI.WebControls.EntityDataSourceView.GetViewSchema">
       <summary>Returns a table that represents the <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" />.</summary>

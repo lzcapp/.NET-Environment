@@ -10,12 +10,10 @@
     <member name="M:System.Workflow.Activities.ActiveDirectoryRole.GetAllReports">
       <summary>Returns an <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> that contains all the roles that report to the current role either directly or indirectly.</summary>
       <returns>A <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> that contains all the roles that either directly or indirectly report to the current role.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.ActiveDirectoryRole.GetDirectReports">
       <summary>Returns an <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> that contains all the roles that report directly to the current role.</summary>
       <returns>An <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> that contains all the roles that directly report to the current role.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.ActiveDirectoryRole.GetEntries">
       <summary>Returns the generic collection that contains all <see cref="T:System.DirectoryServices.DirectoryEntry" /> objects associated with the current <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" />. </summary>
@@ -32,7 +30,6 @@
     <member name="M:System.Workflow.Activities.ActiveDirectoryRole.GetManagerialChain">
       <summary>Returns the Active Directory role that contains information about the managerial chain associated with the current <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" />. </summary>
       <returns>The <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> that contains information about the managerial chain associated with the current role.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.ActiveDirectoryRole.GetPeers">
       <summary>Returns an Active Directory role that contains information about all the directory operations that are supervised by the manager of the current <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" />.</summary>
@@ -41,7 +38,6 @@
     <member name="M:System.Workflow.Activities.ActiveDirectoryRole.GetSecurityIdentifiers">
       <summary>Returns a generic list of <see cref="T:System.Security.Principal.SecurityIdentifier" /> objects associated with the current <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" />. </summary>
       <returns>A generic list of <see cref="T:System.Security.Principal.SecurityIdentifier" /> objects associated with the current <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.ActiveDirectoryRole.IncludesIdentity(System.String)">
       <summary>Returns a value that indicates whether the <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> contains the specified identity. </summary>
@@ -55,7 +51,6 @@
     <member name="P:System.Workflow.Activities.ActiveDirectoryRole.RootEntry">
       <summary>Gets the root Active Directory node associated with the <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" />.</summary>
       <returns>A <see cref="T:System.DirectoryServices.DirectoryEntry" /> that represents the root Active Directory node associated with the <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.ActiveDirectoryRole.System#IDisposable#Dispose">
       <summary>Releases all resources used by the <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" />. </summary>
@@ -67,12 +62,10 @@
     </member>
     <member name="T:System.Workflow.Activities.ActiveDirectoryRoleFactory">
       <summary>A factory class for creating <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> objects from Windows NT aliases, e-mail addresses, and security identifiers (SIDs).</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.ActiveDirectoryRoleFactory.Configuration">
       <summary>Gets the <see cref="T:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration" /> object that is associated with the <see cref="T:System.Workflow.Activities.ActiveDirectoryRoleFactory" />.</summary>
       <returns>The <see cref="T:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration" /> object associated with the <see cref="T:System.Workflow.Activities.ActiveDirectoryRoleFactory" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.ActiveDirectoryRoleFactory.CreateFromAlias(System.String)">
       <summary>Creates an instance of <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> using the specified Windows NT alias.</summary>
@@ -105,7 +98,6 @@
     </member>
     <member name="F:System.Workflow.Activities.CallExternalMethodActivity.CorrelationTokenProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.CallExternalMethodActivity.CorrelationToken" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.CallExternalMethodActivity.Execute(System.Workflow.ComponentModel.ActivityExecutionContext)">
       <summary>Tries to run the <see cref="T:System.Workflow.Activities.CallExternalMethodActivity" /> with the specified <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" />.</summary>
@@ -125,14 +117,12 @@
     </member>
     <member name="F:System.Workflow.Activities.CallExternalMethodActivity.InterfaceTypeProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.CallExternalMethodActivity.InterfaceType" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Activities.CallExternalMethodActivity.MethodInvoking">
       <summary>Occurs before invoking the method.</summary>
     </member>
     <member name="F:System.Workflow.Activities.CallExternalMethodActivity.MethodInvokingEvent">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="E:System.Workflow.Activities.CallExternalMethodActivity.MethodInvoking" /> event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.CallExternalMethodActivity.MethodName">
       <summary>Gets or sets the name of the method to be called on the local service registered with the <see cref="T:System.Workflow.Activities.ExternalDataExchangeService" />.</summary>
@@ -140,7 +130,6 @@
     </member>
     <member name="F:System.Workflow.Activities.CallExternalMethodActivity.MethodNameProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.CallExternalMethodActivity.MethodName" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.CallExternalMethodActivity.OnMethodInvoked(System.EventArgs)">
       <summary>Provides a hook for derived classes to extract out and return values from the <see cref="P:System.Workflow.Activities.CallExternalMethodActivity.ParameterBindings" />. This method is called just after the external method is run. </summary>
@@ -156,7 +145,6 @@
     </member>
     <member name="F:System.Workflow.Activities.CallExternalMethodActivity.ParameterBindingsProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.CallExternalMethodActivity.ParameterBindings" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.CallExternalMethodActivity.System#Workflow#ComponentModel#IDynamicPropertyTypeProvider#GetAccessType(System.IServiceProvider,System.String)">
       <summary>Returns the access type for the specified property.</summary>
@@ -199,7 +187,6 @@
     </member>
     <member name="F:System.Workflow.Activities.CodeActivity.ExecuteCodeEvent">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="E:System.Workflow.Activities.CodeActivity.ExecuteCode" /> event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.CodeCondition">
       <summary>Defines a condition that guards/drives the execution of a certain activity within a workflow definition. It has an event of type <see cref="T:System.Workflow.Activities.ConditionalEventArgs" /> to return the result of the condition.</summary>
@@ -212,7 +199,6 @@
     </member>
     <member name="F:System.Workflow.Activities.CodeCondition.ConditionEvent">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="E:System.Workflow.Activities.CodeCondition.Condition" /> event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.CodeCondition.Evaluate(System.Workflow.ComponentModel.Activity,System.IServiceProvider)">
       <summary>Evaluates the underlying condition. </summary>
@@ -276,7 +262,6 @@
         <paramref name="child" /> parameter is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.InvalidOperationException">The conditioned activity group state is null.</exception>
       <exception cref="T:System.ArgumentException">The number of times that the child activity has been run cannot be determined.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.ConditionedActivityGroup.GetDynamicActivity(System.String)">
       <summary>Gets the currently executing instance of the child activity.</summary>
@@ -285,7 +270,6 @@
       <exception cref="T:System.ArgumentNullException">
         <paramref name="childactivity" /> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.ArgumentException">The executable activities do not contain the <paramref name="childactivity" />.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.ConditionedActivityGroup.GetWhenCondition(System.Object)">
       <summary>Gets the condition associated with the <see cref="F:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty" /> for the specified dependency object.</summary>
@@ -314,11 +298,9 @@
     </member>
     <member name="F:System.Workflow.Activities.ConditionedActivityGroup.UntilConditionProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.ConditionedActivityGroup.UntilCondition" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="F:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.CorrelationAliasAttribute">
       <summary>Overrides the correlation parameter value when the correlation value must be obtained from a parameter other than that indicated by the <see cref="T:System.Workflow.Activities.CorrelationParameterAttribute" />. This class cannot be inherited.</summary>
@@ -368,7 +350,6 @@
     </member>
     <member name="F:System.Workflow.Activities.DelayActivity.InitializeTimeoutDurationEvent">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="E:System.Workflow.Activities.DelayActivity.InitializeTimeoutDuration" /> event. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.DelayActivity.System#Workflow#Activities#IEventActivity#QueueName">
       <summary>Gets the name of the workflow queue that will be delivered when the timer expires.</summary>
@@ -399,26 +380,21 @@
     </member>
     <member name="F:System.Workflow.Activities.DelayActivity.TimeoutDurationProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.DelayActivity.TimeoutDuration" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.EventDeliveryFailedException">
       <summary>The exception that is thrown when an event that is raised from the host cannot be delivered to the workflow instance. Typically the event is raised from an <see cref="T:System.Workflow.Activities.ExternalDataExchangeService" /> on a workflow instance. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventDeliveryFailedException.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.EventDeliveryFailedException" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventDeliveryFailedException.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.EventDeliveryFailedException" /> class by using the error message that explains the reason for the exception.</summary>
       <param name="message">An error message that explains the reason for the exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventDeliveryFailedException.#ctor(System.String,System.Exception)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.EventDeliveryFailedException" /> class by using the error message that explains the reason for the exception and the <see cref="T:System.Exception" /> that caused this exception.</summary>
       <param name="message">An error message that explains the reason for the exception.</param>
       <param name="innerException">The <see cref="T:System.Exception" /> that caused this exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.EventDrivenActivity">
       <summary>Wraps an <see cref="T:System.Workflow.ComponentModel.Activity" /> whose execution is initialized by an event. This class cannot be inherited. </summary>
@@ -451,7 +427,6 @@
       <exception cref="T:System.ArgumentNullException">
         <paramref name="childactivity" /> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.ArgumentException">The executable activities do not contain the <paramref name="childactivity" />.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventHandlersActivity.System#Workflow#ComponentModel#IActivityEventListener{T}#OnEvent(System.Object,System.Workflow.ComponentModel.ActivityExecutionStatusChangedEventArgs)">
       <summary>Defines the processing procedure when the subscribed-to event occurs.</summary>
@@ -491,46 +466,38 @@
       <summary>Compares the current <see cref="T:System.Workflow.Activities.EventQueueName" /> to the specified <see cref="T:System.Workflow.Activities.EventQueueName" />. </summary>
       <returns>A 32-bit signed integer that indicates the whether the comprarands match. -1 indicates that the current <see cref="T:System.Workflow.Activities.EventQueueName" /> and the specified object do not match; 0 indicates that the <see cref="T:System.Workflow.Activities.EventQueueName" /> and the specified object match.</returns>
       <param name="toCompare">The <see cref="T:System.Object" /> to compare with the current <see cref="T:System.Workflow.Activities.EventQueueName" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventQueueName.CompareTo(System.Workflow.Activities.EventQueueName)">
       <summary>Compares the current <see cref="T:System.Workflow.Activities.EventQueueName" /> to the specified <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
       <returns>A 32-bit signed integer that indicates the whether the comprarands match. -1 indicates that the two <see cref="T:System.Workflow.Activities.EventQueueName" /> objects do not match; 0 indicates that the two <see cref="T:System.Workflow.Activities.EventQueueName" /> objects match.</returns>
       <param name="eventQueueName">The <see cref="T:System.Workflow.Activities.EventQueueName" /> to compare with the current <see cref="T:System.Workflow.Activities.EventQueueName" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventQueueName.Equals(System.Object)">
       <summary>Determines whether the specified object is equal to the current <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
       <returns>true if the specified The <see cref="T:System.Object" /> is equal to the current <see cref="T:System.Workflow.Activities.EventQueueName" />; otherwise, false. </returns>
       <param name="obj">The <see cref="T:System.Object" /> to compare with the current <see cref="T:System.Workflow.Activities.EventQueueName" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventQueueName.GetCorrelationValues">
       <summary>Returns a <see cref="T:System.Workflow.Runtime.CorrelationProperty" /> array that contains all correlation properties associated with the <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
       <returns>The <see cref="T:System.Workflow.Runtime.CorrelationProperty" /> array that contains all correlation properties associated with the <see cref="T:System.Workflow.Activities.EventQueueName" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventQueueName.GetHashCode">
       <summary>Returns a hash code for the current <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
       <returns>An integer that represents the hash code generated for the current <see cref="T:System.Workflow.Activities.EventQueueName" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.EventQueueName.InterfaceType">
       <summary>Gets the <see cref="T:System.Type" /> associated with the <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
       <returns>The <see cref="T:System.Type" /> associated with the <see cref="T:System.Workflow.Activities.EventQueueName" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.EventQueueName.MethodName">
       <summary>Gets the method name associated with the <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
       <returns>A string that contains the method name associated with the <see cref="T:System.Workflow.Activities.EventQueueName" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventQueueName.op_Equality(System.Workflow.Activities.EventQueueName,System.Workflow.Activities.EventQueueName)">
       <summary>Returns a value indicating whether the two specified <see cref="T:System.Workflow.Activities.EventQueueName" /> objects are the equal. </summary>
       <returns>true if <paramref name="queueKey1" /> and <paramref name="queueKey2" /> are equal; otherwise, false. </returns>
       <param name="queueKey1">The first <see cref="T:System.Workflow.Activities.EventQueueName" /> to compare.</param>
       <param name="queueKey2">The second <see cref="T:System.Workflow.Activities.EventQueueName" /> to compare.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventQueueName.op_GreaterThan(System.Workflow.Activities.EventQueueName,System.Workflow.Activities.EventQueueName)">
       <summary>Returns a value indicating whether the first of two specified <see cref="T:System.Workflow.Activities.EventQueueName" /> objects is greater than the second.</summary>
@@ -539,14 +506,12 @@
       <param name="queueKey2">The second <see cref="T:System.Workflow.Activities.EventQueueName" /> to compare.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="queueKey1" /> or <paramref name="queueKey2" /> contains a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventQueueName.op_Inequality(System.Workflow.Activities.EventQueueName,System.Workflow.Activities.EventQueueName)">
       <summary>Returns a value indicating whether the two specified <see cref="T:System.Workflow.Activities.EventQueueName" /> objects are the not equal. </summary>
       <returns>true if <paramref name="queueKey1" /> and <paramref name="queueKey2" /> are not equal; otherwise, false. </returns>
       <param name="queueKey1">The first <see cref="T:System.Workflow.Activities.EventQueueName" /> to compare.</param>
       <param name="queueKey2">The second <see cref="T:System.Workflow.Activities.EventQueueName" /> to compare.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventQueueName.op_LessThan(System.Workflow.Activities.EventQueueName,System.Workflow.Activities.EventQueueName)">
       <summary>Returns a value indicating whether the first of two specified <see cref="T:System.Workflow.Activities.EventQueueName" /> objects is less than the second.</summary>
@@ -555,21 +520,19 @@
       <param name="queueKey2">The second <see cref="T:System.Workflow.Activities.EventQueueName" /> to compare.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="queueKey1" /> or <paramref name="queueKey2" /> contains a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.EventQueueName.ToString">
       <summary>Returns a <see cref="T:System.String" /> representation of the current <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
       <returns>A <see cref="T:System.String" /> representation of the current <see cref="T:System.Workflow.Activities.EventQueueName" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.ExecutionType">
       <summary>Specifies the execution mode for activities.</summary>
     </member>
-    <member name="F:System.Workflow.Activities.ExecutionType.Sequence">
-      <summary>Executes activities in sequential order. Each activity is executed in turn, after the previous activity has finished running. </summary>
-    </member>
     <member name="F:System.Workflow.Activities.ExecutionType.Parallel">
       <summary>Executes activities in parallel.</summary>
+    </member>
+    <member name="F:System.Workflow.Activities.ExecutionType.Sequence">
+      <summary>Executes activities in sequential order. Each activity is executed in turn, after the previous activity has finished running. </summary>
     </member>
     <member name="T:System.Workflow.Activities.ExternalDataEventArgs">
       <summary>Represents the data sent when an event is raised using the <see cref="T:System.Workflow.Activities.HandleExternalEventActivity" /> activity. </summary>
@@ -690,11 +653,10 @@
     </member>
     <member name="P:System.Workflow.Activities.HandleExternalEventActivity.CorrelationToken">
       <summary>Gets or sets the binding to a <see cref="T:System.Workflow.Runtime.CorrelationToken" />. </summary>
-      <returns>This property is used to correlate an event to the correct <see cref="T:System.Workflow.Activities.IEventActivity" />-inherited activity based on the payload of the event. For example, when a single workflow instance is listening for multiple instances of the same event at the same time, the CorrelationToken property is used to route the event to the proper activity in that workflow instance.This correlation should not be confused with correlating an event to the correct workflow instance. The correlation to the correct workflow instance is done by sending the event to an explicit workflow instance and using the <see cref="P:System.Workflow.Activities.ExternalDataEventArgs.InstanceId" /> property to properly identify the correct workflow instance. correlation, see the Correlated Local Service Sample.</returns>
+      <returns>This property is used to correlate an event to the correct <see cref="T:System.Workflow.Activities.IEventActivity" />-inherited activity based on the payload of the event. For example, when a single workflow instance is listening for multiple instances of the same event at the same time, the CorrelationToken property is used to route the event to the proper activity in that workflow instance.This correlation should not be confused with correlating an event to the correct workflow instance. The correlation to the correct workflow instance is done by sending the event to an explicit workflow instance and using the <see cref="P:System.Workflow.Activities.ExternalDataEventArgs.InstanceId" /> property to properly identify the correct workflow instance.For an example of correlation, see the Correlated Local Service Sample.</returns>
     </member>
     <member name="F:System.Workflow.Activities.HandleExternalEventActivity.CorrelationTokenProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.HandleExternalEventActivity.CorrelationToken" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.HandleExternalEventActivity.EventName">
       <summary>Gets the name of the raised event. This property must be set before local communication can occur.</summary>
@@ -702,7 +664,6 @@
     </member>
     <member name="F:System.Workflow.Activities.HandleExternalEventActivity.EventNameProperty">
       <summary>Corresponds to the name of an event that is defined in an interface that was marked with the <see cref="T:System.Workflow.Activities.ExternalDataExchangeAttribute" />.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.HandleExternalEventActivity.Execute(System.Workflow.ComponentModel.ActivityExecutionContext)">
       <summary>Tries to run the <see cref="T:System.Workflow.Activities.HandleExternalEventActivity" /> associated with the <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" />.</summary>
@@ -734,14 +695,12 @@
     </member>
     <member name="F:System.Workflow.Activities.HandleExternalEventActivity.InterfaceTypeProperty">
       <summary>Corresponds to the name of the interface that was marked with the <see cref="T:System.Workflow.Activities.ExternalDataExchangeAttribute" />.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Activities.HandleExternalEventActivity.Invoked">
       <summary>Occurs when the external event is received.</summary>
     </member>
     <member name="F:System.Workflow.Activities.HandleExternalEventActivity.InvokedEvent">
       <summary>Defines an event delegate that is executed after the activity receives the expected event from the local service.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.HandleExternalEventActivity.OnClosed(System.IServiceProvider)">
       <summary>Called by the workflow runtime as part of the activity's transition to the Closed state.</summary>
@@ -757,7 +716,6 @@
     </member>
     <member name="F:System.Workflow.Activities.HandleExternalEventActivity.ParameterBindingsProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.HandleExternalEventActivity.ParameterBindings" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.HandleExternalEventActivity.Roles">
       <summary>Gets or sets a reference to a workflow role collection.</summary>
@@ -765,7 +723,6 @@
     </member>
     <member name="F:System.Workflow.Activities.HandleExternalEventActivity.RolesProperty">
       <summary>Identifies the valid user roles that are allowed to send messages from the host to this activity. The two types of supported roles are Active Directory and ASP.NET.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.HandleExternalEventActivity.System#Workflow#Activities#IEventActivity#QueueName">
       <summary>Gets the name of the <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> on which the activity is waiting for data to arrive.</summary>
@@ -871,7 +828,6 @@
     </member>
     <member name="F:System.Workflow.Activities.IfElseBranchActivity.ConditionProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.IfElseBranchActivity.Condition" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.InvokeWebServiceActivity">
       <summary>Invokes a Web service through a proxy class, which passes and receives parameters as specified. This class cannot be inherited.</summary>
@@ -888,14 +844,12 @@
     </member>
     <member name="F:System.Workflow.Activities.InvokeWebServiceActivity.InvokedEvent">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="E:System.Workflow.Activities.InvokeWebServiceActivity.Invoked" /> event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Activities.InvokeWebServiceActivity.Invoking">
       <summary>Occurs when the Web service is being invoked.</summary>
     </member>
     <member name="F:System.Workflow.Activities.InvokeWebServiceActivity.InvokingEvent">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="E:System.Workflow.Activities.InvokeWebServiceActivity.Invoking" /> event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.InvokeWebServiceActivity.MethodName">
       <summary>Gets or sets the method name of the proxy class that is called on the Web service.</summary>
@@ -903,7 +857,6 @@
     </member>
     <member name="F:System.Workflow.Activities.InvokeWebServiceActivity.MethodNameProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.InvokeWebServiceActivity.MethodName" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.InvokeWebServiceActivity.ParameterBindings">
       <summary>Gets the collection of parameter bindings for the method specified by the <see cref="P:System.Workflow.Activities.InvokeWebServiceActivity.MethodName" /> property.</summary>
@@ -911,7 +864,6 @@
     </member>
     <member name="F:System.Workflow.Activities.InvokeWebServiceActivity.ParameterBindingsProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.InvokeWebServiceActivity.ParameterBindings" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.InvokeWebServiceActivity.ProxyClass">
       <summary>Gets or sets the type of the proxy class used to communicate with the Web service.</summary>
@@ -920,7 +872,6 @@
     </member>
     <member name="F:System.Workflow.Activities.InvokeWebServiceActivity.ProxyClassProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.InvokeWebServiceActivity.ProxyClass" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.InvokeWebServiceActivity.SessionId">
       <summary>Gets or sets a session identifier that indicates whether the session is shared across an activity, or if a new session is used.</summary>
@@ -928,7 +879,6 @@
     </member>
     <member name="F:System.Workflow.Activities.InvokeWebServiceActivity.SessionIdProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.InvokeWebServiceActivity.SessionId" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.InvokeWebServiceActivity.System#Workflow#ComponentModel#IDynamicPropertyTypeProvider#GetAccessType(System.IServiceProvider,System.String)">
       <summary>Returns the access type for the specified property.</summary>
@@ -969,14 +919,12 @@
     </member>
     <member name="F:System.Workflow.Activities.InvokeWorkflowActivity.InstanceIdProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.InvokeWorkflowActivity.InstanceId" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Activities.InvokeWorkflowActivity.Invoking">
       <summary>Occurs before the workflow is invoked. </summary>
     </member>
     <member name="F:System.Workflow.Activities.InvokeWorkflowActivity.InvokingEvent">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="E:System.Workflow.Activities.InvokeWorkflowActivity.Invoking" /> event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.InvokeWorkflowActivity.ParameterBindings">
       <summary>Gets the collection of parameters to bind to. </summary>
@@ -984,7 +932,6 @@
     </member>
     <member name="F:System.Workflow.Activities.InvokeWorkflowActivity.ParameterBindingsProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="F:System.Workflow.Activities.InvokeWorkflowActivity.ParameterBindingsProperty" />property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.InvokeWorkflowActivity.System#Workflow#ComponentModel#Design#ITypeFilterProvider#CanFilterType(System.Type,System.Boolean)">
       <summary>Determines whether the <see cref="T:System.Type" /> can be filtered by the workflow.</summary>
@@ -1008,7 +955,6 @@
     </member>
     <member name="F:System.Workflow.Activities.InvokeWorkflowActivity.TargetWorkflowProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.InvokeWorkflowActivity.TargetWorkflow" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.ListenActivity">
       <summary>Makes the workflow wait for any one of several possible events before the activity proceeds. This class cannot be inherited.</summary>
@@ -1112,7 +1058,6 @@
     </member>
     <member name="F:System.Workflow.Activities.PolicyActivity.RuleSetReferenceProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.PolicyActivity.RuleSetReference" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.ReplicatorActivity">
       <summary>Runs multiple instances of a child activity.</summary>
@@ -1133,21 +1078,18 @@
     </member>
     <member name="F:System.Workflow.Activities.ReplicatorActivity.ChildCompletedEvent">
       <summary>Occurs when the child activity instance of the <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> has completed.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Activities.ReplicatorActivity.ChildInitialized">
       <summary>Occurs immediately after a child activity is initialized.</summary>
     </member>
     <member name="F:System.Workflow.Activities.ReplicatorActivity.ChildInitializedEvent">
       <summary>Occurs when the child activity instance of the <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> has initialized.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Activities.ReplicatorActivity.Completed">
       <summary>Occurs when the <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> completes.</summary>
     </member>
     <member name="F:System.Workflow.Activities.ReplicatorActivity.CompletedEvent">
       <summary>Occurs when the <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> has completed.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.ReplicatorActivity.CurrentChildData">
       <summary>Returns a list of all child activities.</summary>
@@ -1167,7 +1109,6 @@
     </member>
     <member name="F:System.Workflow.Activities.ReplicatorActivity.ExecutionTypeProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.ReplicatorActivity.ExecutionType" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.ReplicatorActivity.InitialChildData">
       <summary>Gets or sets a list of child activity data.</summary>
@@ -1175,14 +1116,12 @@
     </member>
     <member name="F:System.Workflow.Activities.ReplicatorActivity.InitialChildDataProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.ReplicatorActivity.InitialChildData" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Activities.ReplicatorActivity.Initialized">
       <summary>Occurs when the <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> begins to execute.</summary>
     </member>
     <member name="F:System.Workflow.Activities.ReplicatorActivity.InitializedEvent">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="E:System.Workflow.Activities.ReplicatorActivity.Initialized" /> event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.ReplicatorActivity.IsExecuting(System.Int32)">
       <summary>Indicates whether the specified child activity is currently executing. </summary>
@@ -1195,7 +1134,6 @@
     </member>
     <member name="F:System.Workflow.Activities.ReplicatorActivity.UntilConditionProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.ReplicatorActivity.UntilCondition" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.ReplicatorChildEventArgs">
       <summary>Contains event arguments for the <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> activity handlers called at initialization of child <see cref="T:System.Workflow.ComponentModel.Activity" /> instances in addition to when the child <see cref="T:System.Workflow.ComponentModel.Activity" /> instances are finished.</summary>
@@ -1274,7 +1212,6 @@
     </member>
     <member name="F:System.Workflow.Activities.SequentialWorkflowActivity.CompletedEvent">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="E:System.Workflow.Activities.SequentialWorkflowActivity.Completed" /> event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.SequentialWorkflowActivity.DynamicUpdateCondition">
       <summary>Gets or sets an <see cref="T:System.Workflow.ComponentModel.ActivityCondition" /> in which dynamic updates can be made in the workflow, when overridden in a derived class. </summary>
@@ -1290,7 +1227,6 @@
     </member>
     <member name="F:System.Workflow.Activities.SequentialWorkflowActivity.InitializedEvent">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="E:System.Workflow.Activities.SequentialWorkflowActivity.Initialized" /> event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.SequentialWorkflowActivity.OnSequenceComplete(System.Workflow.ComponentModel.ActivityExecutionContext)">
       <summary>Raises the <see cref="F:System.Workflow.Activities.SequentialWorkflowActivity.CompletedEvent" /> for the <see cref="T:System.Workflow.Activities.SequentialWorkflowActivity" />.</summary>
@@ -1314,7 +1250,6 @@
     </member>
     <member name="F:System.Workflow.Activities.SetStateActivity.TargetStateNameProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.SetStateActivity.TargetStateName" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.SetStateEventArgs">
       <summary>Represents a class that is used as an argument to set the state of a <see cref="T:System.Workflow.Activities.StateMachineWorkflowActivity" />.</summary>
@@ -1352,7 +1287,6 @@
       <returns>The dynamic child activities. </returns>
       <param name="childActivityName">The child activity.</param>
       <exception cref="T:System.ArgumentException">The executable activities do not contain the <paramref name="childActivityName" />.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.StateActivity.Initialize(System.IServiceProvider)">
       <summary>Initializes the <see cref="T:System.Workflow.Activities.StateActivity" /> using the service provider.</summary>
@@ -1369,7 +1303,6 @@
     </member>
     <member name="F:System.Workflow.Activities.StateActivity.StateChangeTrackingDataKey">
       <summary>Holds the string value of the change tracking data key; "StateActivity.StateChange". This field is a constant.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.StateActivityValidator">
       <summary>Represents a class that verifies whether a <see cref="T:System.Workflow.Activities.StateActivity" /> class is configured correctly.</summary>
@@ -1427,7 +1360,6 @@
     </member>
     <member name="F:System.Workflow.Activities.StateMachineWorkflowActivity.CompletedStateNameProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> that targets the <see cref="P:System.Workflow.Activities.StateMachineWorkflowActivity.CompletedStateName" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.StateMachineWorkflowActivity.CurrentStateName">
       <summary>Gets the name of the currently executing <see cref="T:System.Workflow.Activities.StateActivity" />.</summary>
@@ -1443,7 +1375,6 @@
     </member>
     <member name="F:System.Workflow.Activities.StateMachineWorkflowActivity.InitialStateNameProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> that targets the <see cref="P:System.Workflow.Activities.StateMachineWorkflowActivity.InitialStateName" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.StateMachineWorkflowActivity.PreviousStateName">
       <summary>Gets the name of the previously executed <see cref="T:System.Workflow.Activities.StateActivity" />.</summary>
@@ -1523,42 +1454,33 @@
     </member>
     <member name="T:System.Workflow.Activities.WebServiceFaultActivity">
       <summary>Enables sending a fault to the Web service client from the workflow. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.WebServiceFaultActivity.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.WebServiceFaultActivity" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.WebServiceFaultActivity.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.WebServiceFaultActivity" /> class using the name of the activity.</summary>
       <param name="name">The user-defined name of the activity.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.WebServiceFaultActivity.Fault">
       <summary>Gets or sets the exception that caused the Web service to stop.</summary>
       <returns>The exception that caused the Web service to stop.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Activities.WebServiceFaultActivity.FaultProperty">
       <summary>Contains the exception value that is thrown when there is an error in the execution of the <see cref="T:System.Workflow.Activities.WebServiceInputActivity" /> activity.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.WebServiceFaultActivity.InputActivityName">
       <summary>Gets or sets the name of the previous <see cref="T:System.Workflow.Activities.WebServiceInputActivity" />.</summary>
       <returns>The name of the previous <see cref="T:System.Workflow.Activities.WebServiceInputActivity" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Activities.WebServiceFaultActivity.InputActivityNameProperty">
       <summary>Represents the name of the <see cref="T:System.Workflow.Activities.WebServiceInputActivity" /> that is associated with this fault. The fault is thrown on the method that was associated with the <see cref="T:System.Workflow.Activities.WebServiceInputActivity" />.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Activities.WebServiceFaultActivity.SendingFault">
       <summary>Occurs before the fault is sent to the client, which is useful for appending information to the fault.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Activities.WebServiceFaultActivity.SendingFaultEvent">
       <summary>Defines an event delegate that is executed before the fault is delivered to the method caller. This handler provides a place to set the fault property value.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.WebServiceInputActivity">
       <summary>Enables receiving data from a Web service in a workflow. This class cannot be inherited.</summary>
@@ -1572,14 +1494,12 @@
     </member>
     <member name="F:System.Workflow.Activities.WebServiceInputActivity.ActivitySubscribedProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="F:System.Workflow.Activities.WebServiceInputActivity.ActivitySubscribedProperty" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Activities.WebServiceInputActivity.InputReceived">
       <summary>Occurs when the <see cref="T:System.Workflow.Activities.WebServiceInputActivity" /> has received input.</summary>
     </member>
     <member name="F:System.Workflow.Activities.WebServiceInputActivity.InputReceivedEvent">
       <summary>Defines an event delegate that is executed after the activity receives the expected call from the Web service invocation.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.WebServiceInputActivity.InterfaceType">
       <summary>Gets or sets the interface type that defines the method that this activity listens on.</summary>
@@ -1587,7 +1507,6 @@
     </member>
     <member name="F:System.Workflow.Activities.WebServiceInputActivity.InterfaceTypeProperty">
       <summary>Corresponds to the name of the interface that is used as the Web service contract.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.WebServiceInputActivity.IsActivating">
       <summary>Gets or sets a value that indicates whether receiving data should start the workflow.</summary>
@@ -1595,7 +1514,6 @@
     </member>
     <member name="F:System.Workflow.Activities.WebServiceInputActivity.IsActivatingProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.WebServiceInputActivity.IsActivating" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.WebServiceInputActivity.MethodName">
       <summary>Gets or sets the name of the method on the interface specified by the <see cref="P:System.Workflow.Activities.WebServiceInputActivity.InterfaceType" /> property that this <see cref="T:System.Workflow.Activities.WebServiceInputActivity" /> represents.</summary>
@@ -1603,7 +1521,6 @@
     </member>
     <member name="F:System.Workflow.Activities.WebServiceInputActivity.MethodNameProperty">
       <summary>Corresponds to a name of one of the methods contained in the interface that is used as the Web service contract.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.WebServiceInputActivity.ParameterBindings">
       <summary>Gets the collection of bindings associated with the input parameters to the method specified in the <see cref="P:System.Workflow.Activities.WebServiceInputActivity.MethodName" /> property.</summary>
@@ -1611,7 +1528,6 @@
     </member>
     <member name="F:System.Workflow.Activities.WebServiceInputActivity.ParameterBindingsProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.WebServiceInputActivity.ParameterBindings" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.WebServiceInputActivity.Roles">
       <summary>Gets or sets a collection of roles that are valid to send data to the <see cref="T:System.Workflow.Activities.WebServiceInputActivity" />.</summary>
@@ -1619,7 +1535,6 @@
     </member>
     <member name="F:System.Workflow.Activities.WebServiceInputActivity.RolesProperty">
       <summary>Identifies the valid user roles that are allowed to send messages from the Web service client to the <see cref="T:System.Workflow.Activities.WebServiceInputActivity" />. The two types of supported roles are Active Directory and ASP.NET.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.WebServiceInputActivity.System#Workflow#Activities#IEventActivity#QueueName">
       <summary>Gets the name of the <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> on which the activity is waiting for data to arrive.</summary>
@@ -1668,7 +1583,6 @@
     </member>
     <member name="F:System.Workflow.Activities.WebServiceOutputActivity.InputActivityNameProperty">
       <summary>Defines the name of the <see cref="T:System.Workflow.Activities.WebServiceInputActivity" /> that this <see cref="T:System.Workflow.Activities.WebServiceOutputActivity" /> is matched with.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.WebServiceOutputActivity.ParameterBindings">
       <summary>Gets the collection of bindings associated with the out/ref and return value of the corresponding <see cref="T:System.Workflow.Activities.WebServiceInputActivity" /> method.</summary>
@@ -1676,14 +1590,12 @@
     </member>
     <member name="F:System.Workflow.Activities.WebServiceOutputActivity.ParameterBindingsProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> that targets the <see cref="P:System.Workflow.Activities.WebServiceOutputActivity.ParameterBindings" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Activities.WebServiceOutputActivity.SendingOutput">
       <summary>Occurs before the <see cref="T:System.Workflow.Activities.WebServiceOutputActivity" /> sends output to the client.</summary>
     </member>
     <member name="F:System.Workflow.Activities.WebServiceOutputActivity.SendingOutputEvent">
       <summary>Defines an event delegate that is executed before the activity sends the output of the Web service invocation.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.WebServiceOutputActivity.System#Workflow#ComponentModel#IDynamicPropertyTypeProvider#GetAccessType(System.IServiceProvider,System.String)">
       <summary>Returns the access type for the specified property.</summary>
@@ -1748,7 +1660,6 @@
     </member>
     <member name="F:System.Workflow.Activities.WhileActivity.ConditionProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.WhileActivity.Condition" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.WhileActivity.DynamicActivity">
       <summary>Gets the dynamic child activities in the <see cref="T:System.Workflow.Activities.WhileActivity" />.</summary>
@@ -1761,11 +1672,9 @@
     </member>
     <member name="T:System.Workflow.Activities.WorkflowAuthorizationException">
       <summary>The exception that is thrown when role validation fails due to a specified identity that is not contained in the <see cref="T:System.Workflow.Activities.WorkflowRoleCollection" />.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.WorkflowAuthorizationException.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.WorkflowAuthorizationException" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.WorkflowAuthorizationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.WorkflowAuthorizationException" /> class by using serialized data.</summary>
@@ -1775,19 +1684,16 @@
     <member name="M:System.Workflow.Activities.WorkflowAuthorizationException.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.WorkflowAuthorizationException" /> class using the specified message.</summary>
       <param name="message">The error message that explains the reason for the exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.WorkflowAuthorizationException.#ctor(System.String,System.Exception)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.WorkflowAuthorizationException" /> class by using the specified message and <see cref="T:System.Exception" />.</summary>
       <param name="message">The error message that explains the reason for the exception.</param>
       <param name="innerException">The <see cref="T:System.Exception" /> that caused the <see cref="T:System.Workflow.Activities.WorkflowAuthorizationException" />.  </param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.WorkflowAuthorizationException.#ctor(System.String,System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.WorkflowAuthorizationException" /> class using the name of the activity and the principal.</summary>
       <param name="activityName">The name of the <see cref="T:System.Workflow.ComponentModel.Activity" /> in which the exception occurred.</param>
       <param name="principalName">The name of the user or entity on whose behalf the workflow authorization exception was thrown.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.WorkflowRole">
       <summary>The abstract base class from which workflow roles are derived.</summary>
@@ -1881,57 +1787,46 @@
     <member name="P:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration.RootPath">
       <summary>Gets or sets the root path for this instance.</summary>
       <returns>The root path for this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.AddedConditionAction">
       <summary>Represents the addition of a <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> to a workflow during dynamic update. This class cannot be inherited. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.AddedConditionAction.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.AddedConditionAction" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.AddedConditionAction.#ctor(System.Workflow.Activities.Rules.RuleCondition)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.AddedConditionAction" /> class using the definition of the added condition.</summary>
       <param name="addedConditionDefinition">The condition added to the workflow.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="addedConditionDefinition" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.AddedConditionAction.ConditionDefinition">
       <summary>Gets or sets the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> to add to the workflow.</summary>
       <returns>The <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> to add to the workflow.</returns>
       <exception cref="T:System.ArgumentNullException">The <see cref="P:System.Workflow.Activities.Rules.AddedConditionAction.ConditionDefinition" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.AddedConditionAction.ConditionName">
       <summary>Gets a string that contains the name of the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> that was added to the workflow.</summary>
       <returns>The name of the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> that was added to the workflow.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.AddedRuleSetAction">
       <summary>Represents the addition of a <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> during dynamic update. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.AddedRuleSetAction.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.AddedRuleSetAction" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.AddedRuleSetAction.#ctor(System.Workflow.Activities.Rules.RuleSet)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.AddedRuleSetAction" /> class by using the new <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
       <param name="addedRuleSetDefinition">The new <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.AddedRuleSetAction.RuleSetDefinition">
       <summary>Gets or sets the new <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
       <returns>The new <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</returns>
       <exception cref="T:System.ArgumentNullException">The <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.AddedRuleSetAction.RuleSetName">
       <summary>Gets the name of the new <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
       <returns>The name of the new <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.IRuleExpression">
       <summary>Represents the base class from which custom expression writers must derive to write custom expressions.</summary>
@@ -1970,55 +1865,45 @@
     </member>
     <member name="T:System.Workflow.Activities.Rules.RemovedConditionAction">
       <summary>Represents the removal of a <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> from a workflow during dynamic update. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RemovedConditionAction.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RemovedConditionAction" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RemovedConditionAction.#ctor(System.Workflow.Activities.Rules.RuleCondition)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RemovedConditionAction" /> class by using the definition of the removed condition.</summary>
       <param name="removedConditionDefinition">The condition removed from the workflow.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="addedConditionDefinition" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RemovedConditionAction.ConditionDefinition">
       <summary>Gets or sets the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> to remove from the workflow.</summary>
       <returns>The <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> to remove from the workflow.</returns>
       <exception cref="T:System.ArgumentNullException">The <see cref="P:System.Workflow.Activities.Rules.RemovedConditionAction.ConditionDefinition" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RemovedConditionAction.ConditionName">
       <summary>Gets a string that contains the name of the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> to remove from the workflow.</summary>
       <returns>The name of the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> to remove from the workflow.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RemovedRuleSetAction">
       <summary>Represents the removal of a <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> during dynamic update. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RemovedRuleSetAction.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RemovedRuleSetAction" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RemovedRuleSetAction.#ctor(System.Workflow.Activities.Rules.RuleSet)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RemovedRuleSetAction" /> class by using the <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> removed from the workflow.</summary>
       <param name="removedRuleSetDefinition">The <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> removed from the workflow.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="removedRuleSetDefinition" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RemovedRuleSetAction.RuleSetDefinition">
       <summary>Gets or Sets the <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> removed from the workflow.</summary>
       <returns>The <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> removed from the workflow.</returns>
       <exception cref="T:System.ArgumentNullException">The <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> to remove from the workflow is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RemovedRuleSetAction.RuleSetName">
       <summary>Gets the name of the <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> removed from the workflow.</summary>
       <returns>The name of the <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> removed from the workflow.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.Rule">
       <summary>Defines a condition with an associated set of actions to perform.</summary>
@@ -2050,7 +1935,6 @@
     <member name="M:System.Workflow.Activities.Rules.Rule.Clone">
       <summary>Creates a deep copy of the current <see cref="T:System.Workflow.Activities.Rules.Rule" />.</summary>
       <returns>A <see cref="T:System.Workflow.Activities.Rules.Rule" /> that is identical to this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.Rule.Condition">
       <summary>Gets or sets a <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> for the <see cref="T:System.Workflow.Activities.Rules.Rule" /> to evaluate.</summary>
@@ -2068,12 +1952,10 @@
       <summary>Determines whether this instance of <see cref="T:System.Workflow.Activities.Rules.Rule" /> and the object passed as the parameter have the same value.</summary>
       <returns>true if the current object and <paramref name="obj" /> are the same; otherwise, false.</returns>
       <param name="obj">The object to compare the current object to.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.Rule.GetHashCode">
       <summary>Returns the hash code for this instance.</summary>
       <returns>The hash code for this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.Rule.Name">
       <summary>Gets or sets the name of the <see cref="T:System.Workflow.Activities.Rules.Rule" />.</summary>
@@ -2100,7 +1982,6 @@
     <member name="M:System.Workflow.Activities.Rules.RuleAction.Clone">
       <summary>Creates a deep copy of the current <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</summary>
       <returns>A <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> that is identical to this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleAction.Execute(System.Workflow.Activities.Rules.RuleExecution)">
       <summary>Executes the <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> using the specified <see cref="T:System.Workflow.Activities.Rules.RuleExecution" /> instance.</summary>
@@ -2129,39 +2010,32 @@
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleAnalysis">
       <summary>Stores the fields and properties read by a condition or written to by an action. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleAnalysis.#ctor(System.Workflow.Activities.Rules.RuleValidation,System.Boolean)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleAnalysis" /> class. </summary>
       <param name="validation">The <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> to manage the validation process.</param>
       <param name="forWrites">A Boolean value that indicates whether analysis is being done for writes (in the case of <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> objects) or reads (in the case of <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> objects).</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleAnalysis.AddSymbol(System.String)">
       <summary>Adds the fields and properties used by an expression as symbols to the <see cref="T:System.Workflow.Activities.Rules.RuleAnalysis" /> instance.</summary>
       <param name="symbol">A string that represents the path to a field or property.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleAnalysis.ForWrites">
       <summary>Gets a value that indicates whether analysis is being done for writes or reads. </summary>
       <returns>true if analysis is being done for writes (in the case of <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> objects); otherwise, false if the analysis is being done for reads (in the case of <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> objects).</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleAnalysis.GetSymbols">
       <summary>Returns the list of symbols from the <see cref="T:System.Workflow.Activities.Rules.RuleAnalysis" /> instance. </summary>
       <returns>The list of symbols for the <see cref="T:System.Workflow.Activities.Rules.RuleAnalysis" /> instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleAttribute">
       <summary>Represents the base class for custom <see cref="T:System.Workflow.Activities.Rules.Rule" /> attributes. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleAttribute.#ctor">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleAttribute" /> class.</summary>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleAttributeTarget">
       <summary>Specifies whether the path in a <see cref="T:System.Workflow.Activities.Rules.RuleReadAttribute" /> or <see cref="T:System.Workflow.Activities.Rules.RuleWriteAttribute" /> is for a method parameter, or this.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Activities.Rules.RuleAttributeTarget.Parameter">
       <summary>Specifies the path is an absolute path beginning with a parameter name, which optionally can be followed by a path to an inner member.</summary>
@@ -2172,14 +2046,14 @@
     <member name="T:System.Workflow.Activities.Rules.RuleChainingBehavior">
       <summary>Specifies the forward chaining behavior of the <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
     </member>
+    <member name="F:System.Workflow.Activities.Rules.RuleChainingBehavior.Full">
+      <summary>Indicates that chaining is performed when fields or properties are modified by actions, <see cref="T:System.Workflow.Activities.Rules.RuleWriteAttribute" /> are specified for methods called by actions, or when a <see cref="T:System.Workflow.Activities.Rules.RuleUpdateAction" /> is performed.</summary>
+    </member>
     <member name="F:System.Workflow.Activities.Rules.RuleChainingBehavior.None">
       <summary>Indicates that no chaining is performed. Each rule is executed exactly once.</summary>
     </member>
     <member name="F:System.Workflow.Activities.Rules.RuleChainingBehavior.UpdateOnly">
       <summary>Indicates that chaining is performed if executed actions explicitly specify it using a <see cref="T:System.Workflow.Activities.Rules.RuleUpdateAction" />.</summary>
-    </member>
-    <member name="F:System.Workflow.Activities.Rules.RuleChainingBehavior.Full">
-      <summary>Indicates that chaining is performed when fields or properties are modified by actions, <see cref="T:System.Workflow.Activities.Rules.RuleWriteAttribute" /> are specified for methods called by actions, or when a <see cref="T:System.Workflow.Activities.Rules.RuleUpdateAction" /> is performed.</summary>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleCondition">
       <summary>Base type for <see cref="T:System.Workflow.Activities.Rules.RuleExpressionCondition" /> and any custom conditions created by users.</summary>
@@ -2190,7 +2064,6 @@
     <member name="M:System.Workflow.Activities.Rules.RuleCondition.Clone">
       <summary>When overridden in a derived class, creates a deep copy of the current <see cref="T:System.Workflow.Activities.Rules.RuleCondition" />.</summary>
       <returns>A <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> that is identical to this instance</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleCondition.Evaluate(System.Workflow.Activities.Rules.RuleExecution)">
       <summary>When overridden in a derived class, evaluates the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" />.</summary>
@@ -2201,7 +2074,6 @@
       <summary>When overridden in a derived class, gets the dependencies for the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" />.</summary>
       <returns>A list of symbols that represent entities read by the condition.</returns>
       <param name="validation">The <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> that was used previously in a call to <see cref="M:System.Workflow.Activities.Rules.RuleAction.Validate(System.Workflow.Activities.Rules.RuleValidation)" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleCondition.Name">
       <summary>Gets or sets the name of the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" />.</summary>
@@ -2209,17 +2081,14 @@
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleCondition.OnRuntimeInitialized">
       <summary>Called when all properties have been given values. After this call, no properties can be modified.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleCondition.Validate(System.Workflow.Activities.Rules.RuleValidation)">
       <summary>When overridden in a derived class, verifies that the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> is configured correctly and has no errors.</summary>
       <returns>true to show that the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> has no errors; otherwise, false.</returns>
       <param name="validation">The instance of <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> that is used to manage the validation of rules and rule conditions.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleConditionChangeAction">
       <summary>Represents an abstract base class from which all dynamic update notifications of changes to <see cref="T:System.Workflow.Activities.Rules.RuleCondition" />s must be derived.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleConditionChangeAction.#ctor">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleConditionChangeAction" /> class.</summary>
@@ -2227,7 +2096,6 @@
     <member name="P:System.Workflow.Activities.Rules.RuleConditionChangeAction.ConditionName">
       <summary>When overridden in a derived class, gets the name of the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> to be changed.</summary>
       <returns>The name of the <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> to be changed.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleConditionChangeAction.ValidateChanges(System.Workflow.ComponentModel.Activity)">
       <summary>When overridden in a derived class, verifies that the <see cref="T:System.Workflow.Activities.Rules.RuleConditionChangeAction" /> is configured correctly and has no errors.</summary>
@@ -2236,11 +2104,9 @@
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleConditionCollection">
       <summary>Contains a collection of <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> classes defined on the workflow. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleConditionCollection.#ctor">
       <summary>Initializes a new instance of a <see cref="T:System.Workflow.Activities.Rules.RuleConditionCollection" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleConditionCollection.Add(System.Workflow.Activities.Rules.RuleCondition)">
       <summary>Adds a <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> to the <see cref="T:System.Workflow.Activities.Rules.RuleConditionCollection" />.</summary>
@@ -2248,14 +2114,12 @@
       <exception cref="T:System.Data.ReadOnlyException">The <see cref="T:System.Workflow.Activities.Rules.Rule" /> is runtime initialized.</exception>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="item" /> is null.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleConditionCollection.Diff(System.Object,System.Object)">
       <summary>Determines the difference between two <see cref="T:System.Workflow.Activities.Rules.RuleConditionCollection" /> classes.</summary>
       <returns>A list of <see cref="T:System.Workflow.ComponentModel.WorkflowChangeAction" /> classes that account for the differences between the <paramref name="originalDefinition" /> and the <paramref name="changedDefinition" />.</returns>
       <param name="originalDefinition">The original <see cref="T:System.Workflow.Activities.Rules.RuleConditionCollection" />.</param>
       <param name="changedDefinition">The <see cref="T:System.Workflow.Activities.Rules.RuleConditionCollection" /> with proposed changes.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleConditionReference">
       <summary>Represents a <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> in the conditions collection and enables you to programmatically evaluate the condition.</summary>
@@ -2291,11 +2155,9 @@
       <returns>A list of <see cref="T:System.Workflow.ComponentModel.WorkflowChangeAction" /> classes that differentiate the <paramref name="originalDefinition" /> from the <paramref name="changedDefinition" />.</returns>
       <param name="originalDefinition">The original rule definition.</param>
       <param name="changedDefinition">The new rule definition.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Activities.Rules.RuleDefinitions.RuleDefinitionsProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="T:System.Workflow.Activities.Rules.RuleDefinitions" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleDefinitions.RuleSets">
       <summary>Gets the collection of <see cref="P:System.Workflow.Activities.Rules.RuleDefinitions.RuleSets" /> in the workflow.</summary>
@@ -2325,11 +2187,9 @@
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleEvaluationException">
       <summary>Represents the base class for all exceptions caused by rule evaluation issues.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleEvaluationException.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationException" /> class.  </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleEvaluationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationException" /> class with serialized data.</summary>
@@ -2339,21 +2199,17 @@
     <member name="M:System.Workflow.Activities.Rules.RuleEvaluationException.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationException" /> class with a specified error message.</summary>
       <param name="message">The message that describes the error.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleEvaluationException.#ctor(System.String,System.Exception)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationException" /> class, with a specified error message and a reference to the inner <see cref="T:System.Exception" /> that is the cause of this <see cref="T:System.Exception" />.</summary>
       <param name="message">The message that describes the error.</param>
       <param name="ex">The <see cref="T:System.Exception" /> that is the cause of the current <see cref="T:System.Exception" /> . If the <paramref name="innerException" /> parameter is not a null reference (Nothing in Visual Basic), the current <see cref="T:System.Exception" /> is raised in a catch block that handles the inner <see cref="T:System.Exception" /> . </param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException">
       <summary>The exception that is thrown when attempting to apply an operator to incompatible operands when you evaluate a rule.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" /> class.  </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" /> class with serialized data.</summary>
@@ -2366,13 +2222,11 @@
     <member name="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" /> with a specified error message.</summary>
       <param name="message">A string that contains the error message to associate with this instance.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.#ctor(System.String,System.Exception)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" /> class with a specified error message and a reference to the inner <see cref="T:System.Exception" /> that is the cause of this <see cref="T:System.Exception" />.</summary>
       <param name="message">A message that describes the current exception.</param>
       <param name="ex">The <see cref="T:System.Exception" /> instance that caused the current exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.#ctor(System.String,System.Type,System.CodeDom.CodeBinaryOperatorType,System.Type)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" /> class with the details of the compatibility violation.</summary>
@@ -2380,7 +2234,6 @@
       <param name="left">The <see cref="T:System.Type" /> appearing on the left side of the operator.</param>
       <param name="op">The <see cref="T:System.CodeDom.CodeBinaryOperatorType" /> representing the operator whose compatibility is violated.</param>
       <param name="right">The <see cref="T:System.Type" /> appearing on the right side of the operator.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.#ctor(System.String,System.Type,System.CodeDom.CodeBinaryOperatorType,System.Type,System.Exception)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" /> class with the details of the compatibility violation. This includes the <see cref="P:System.Exception.InnerException" />.</summary>
@@ -2389,36 +2242,29 @@
       <param name="op">The <see cref="T:System.CodeDom.CodeBinaryOperatorType" /> representing the operator whose compatibility is violated.</param>
       <param name="right">The <see cref="T:System.Type" /> appearing on the right side of the operator.</param>
       <param name="ex">The <see cref="T:System.Exception" /> instance that caused the current exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Sets the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with information about the exception.</summary>
       <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown. </param>
       <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Left">
       <summary>Gets or sets the <see cref="T:System.Type" /> of the left argument of the expression causing the exception.</summary>
       <returns>The <see cref="T:System.Type" /> of the left argument of the expression causing the exception.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Operator">
       <summary>Gets or sets the <see cref="T:System.CodeDom.CodeBinaryOperatorType" /> representing the operator which caused the exception. </summary>
       <returns>The <see cref="T:System.CodeDom.CodeBinaryOperatorType" /> representing the operator which caused the exception. </returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Right">
       <summary>Gets or sets the <see cref="T:System.Type" /> of the right argument of the expression causing the exception.</summary>
       <returns>The <see cref="T:System.Type" /> of the right argument of the expression causing the exception.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleException">
       <summary>Represents the base class for all exceptions caused by evaluation or validation of rules.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleException.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleException" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleException" /> class with serialized data.</summary>
@@ -2428,13 +2274,11 @@
     <member name="M:System.Workflow.Activities.Rules.RuleException.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleException" /> class with a specified error message.</summary>
       <param name="message">The message that describes the error.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleException.#ctor(System.String,System.Exception)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleException" /> class, with a specified error message and a reference to the inner <see cref="T:System.Exception" /> that is the cause of this <see cref="T:System.Exception" />.</summary>
       <param name="message">The message that describes the error.</param>
       <param name="ex">The <see cref="T:System.Exception" /> that is the cause of the current <see cref="T:System.Exception" /> . If the <paramref name="innerException" /> parameter is not a null reference (Nothing in Visual Basic), the current <see cref="T:System.Exception" /> is raised in a catch block that handles the inner <see cref="T:System.Exception" /> . </param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleExecution">
       <summary>Stores state information while executing <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> or <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> classes.</summary>
@@ -2463,7 +2307,6 @@
     <member name="P:System.Workflow.Activities.Rules.RuleExecution.Halted">
       <summary>Gets or sets a value that indicates whether the rule execution was stopped.</summary>
       <returns>true if the rule execution was stopped; otherwise, false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleExecution.ThisObject">
       <summary>Gets the current object to be executed.</summary>
@@ -2497,13 +2340,11 @@
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionCondition.Clone">
       <summary>Creates a deep copy of the current <see cref="T:System.Workflow.Activities.Rules.RuleExpressionCondition" />.</summary>
       <returns>A <see cref="T:System.Workflow.Activities.Rules.RuleExpressionCondition" /> that is identical to this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionCondition.Equals(System.Object)">
       <summary>Determines whether two object instances are equal.</summary>
       <returns>true if the object instances are equal; otherwise, false.</returns>
       <param name="obj">The <see cref="T:System.Object" /> to compare with the current object.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionCondition.Evaluate(System.Workflow.Activities.Rules.RuleExecution)">
       <summary>Evaluates the expression.</summary>
@@ -2519,12 +2360,10 @@
       <summary>Gets the dependencies for the <see cref="T:System.Workflow.Activities.Rules.RuleExpressionCondition" />.</summary>
       <returns>A list of dependencies.</returns>
       <param name="validation">The <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> to manage the validation process.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionCondition.GetHashCode">
       <summary>Returns the hash code for this instance.</summary>
       <returns>The hash code for this instance. </returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleExpressionCondition.Name">
       <summary>Gets or sets the name of the condition to evaluate.</summary>
@@ -2533,7 +2372,6 @@
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionCondition.OnRuntimeInitialized">
       <summary>Called when all properties have been given values. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionCondition.ToString">
       <summary>Returns the string value of the expression condition. </summary>
@@ -2548,21 +2386,17 @@
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleExpressionInfo">
       <summary>An instance of this class is returned by the <see cref="M:System.Workflow.Activities.Rules.IRuleExpression.Validate(System.Workflow.Activities.Rules.RuleValidation,System.Boolean)" /> method of an <see cref="T:System.Workflow.Activities.Rules.IRuleExpression" /> expression.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionInfo.#ctor(System.Type)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleExpressionInfo" /> class. </summary>
       <param name="expressionType">The <see cref="T:System.Type" /> of the expression.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleExpressionInfo.ExpressionType">
       <summary>Gets the type of the expression.</summary>
       <returns>The <see cref="T:System.Type" /> of the expression.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleExpressionResult">
       <summary>Abstract class that is the base for classes representing the result of custom expressions based on the <see cref="T:System.Workflow.Activities.Rules.IRuleExpression" /> interface.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionResult.#ctor">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleExpressionResult" /> class.</summary>
@@ -2570,11 +2404,9 @@
     <member name="P:System.Workflow.Activities.Rules.RuleExpressionResult.Value">
       <summary>When overridden in a derived class, gets or sets the result of the expression.</summary>
       <returns>The result of the expression.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleExpressionWalker">
       <summary>Propagates the current behavior in the expression to child nodes. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionWalker.AnalyzeUsage(System.Workflow.Activities.Rules.RuleAnalysis,System.CodeDom.CodeExpression,System.Boolean,System.Boolean,System.Workflow.Activities.Rules.RulePathQualifier)">
       <summary>Identifies the fields and properties used by an expression and adds these as symbols to the <see cref="T:System.Workflow.Activities.Rules.RuleAnalysis" /> instance.</summary>
@@ -2585,20 +2417,17 @@
       <param name="qualifier">The path of a field or property determined up to this point.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="analysis" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionWalker.Clone(System.CodeDom.CodeExpression)">
       <summary>Creates a deep copy of the child nodes of the current <see cref="T:System.CodeDom.CodeExpression" />.</summary>
       <returns>A <see cref="T:System.CodeDom.CodeExpression" /> that is identical to this instance.</returns>
       <param name="originalExpression">The expression that the clone is based on.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionWalker.Decompile(System.Text.StringBuilder,System.CodeDom.CodeExpression,System.CodeDom.CodeExpression)">
       <summary>Decompiles the child nodes of the expression into string form.</summary>
       <param name="stringBuilder">The <see cref="T:System.Text.StringBuilder" /> that contains the mutable string of characters.</param>
       <param name="expression">The current <see cref="T:System.CodeDom.CodeExpression" />.</param>
       <param name="parentExpression">The parent <see cref="T:System.CodeDom.CodeExpression" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionWalker.Evaluate(System.Workflow.Activities.Rules.RuleExecution,System.CodeDom.CodeExpression)">
       <summary>Evaluates the expression and all child expressions.</summary>
@@ -2607,14 +2436,12 @@
       <param name="expression">The <see cref="T:System.CodeDom.CodeExpression" /> to evaluate.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="execution" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionWalker.Match(System.CodeDom.CodeExpression,System.CodeDom.CodeExpression)">
       <summary>Compares the current expression and child nodes to another expression to determine whether they are equal.</summary>
       <returns>true if the expressions are equal; otherwise, false.</returns>
       <param name="firstExpression">The first <see cref="T:System.CodeDom.CodeExpression" /> in the comparison.</param>
       <param name="secondExpression">The second <see cref="T:System.CodeDom.CodeExpression" /> in the comparison.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleExpressionWalker.Validate(System.Workflow.Activities.Rules.RuleValidation,System.CodeDom.CodeExpression,System.Boolean)">
       <summary>Verifies that the expression and child nodes are configured correctly and has no errors.</summary>
@@ -2625,7 +2452,6 @@
       <exception cref="T:System.ArgumentNullException">
         <paramref name="validation" /> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.InvalidOperationException">The <paramref name="expression" /> is null and the errors collection on the <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> object is a null reference (Nothing).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleHaltAction">
       <summary>Causes the <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> to stop executing and returns control back to the calling method.</summary>
@@ -2636,13 +2462,11 @@
     <member name="M:System.Workflow.Activities.Rules.RuleHaltAction.Clone">
       <summary>Creates a deep copy of the current <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</summary>
       <returns>A <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> that is identical to this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleHaltAction.Equals(System.Object)">
       <summary>Determines whether two object instances are equal.</summary>
       <returns>true if the objects are equal; otherwise, false.</returns>
       <param name="obj">The <see cref="T:System.Object" /> to compare with the current <see cref="T:System.Object" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleHaltAction.Execute(System.Workflow.Activities.Rules.RuleExecution)">
       <summary>Executes the <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> using the specified <see cref="T:System.Workflow.Activities.Rules.RuleExecution" />.</summary>
@@ -2653,13 +2477,11 @@
     <member name="M:System.Workflow.Activities.Rules.RuleHaltAction.GetHashCode">
       <summary>Returns the hash code for this instance.</summary>
       <returns>The hash code for this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleHaltAction.GetSideEffects(System.Workflow.Activities.Rules.RuleValidation)">
       <summary>Returns the fields and properties updated by the <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</summary>
       <returns>A list of the fields and properties changed by the <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.NoteSince <see cref="T:System.Workflow.Activities.Rules.RuleHaltAction" /> does not have parameters, the return value will always be an empty list.</returns>
       <param name="validation">The <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> to manage the validation process.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleHaltAction.ToString">
       <summary>Returns the string "Halt".</summary>
@@ -2669,7 +2491,6 @@
       <summary>Returns true, no validation is performed.</summary>
       <returns>Always returns true.</returns>
       <param name="validator">The <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> to manage the validation process.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleInvokeAttribute">
       <summary>Indicates that a method is invoked by a condition. This class cannot be inherited.</summary>
@@ -2681,7 +2502,6 @@
     <member name="P:System.Workflow.Activities.Rules.RuleInvokeAttribute.MethodInvoked">
       <summary>Gets the method invoked by the condition.</summary>
       <returns>The method invoked by the condition.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleLiteralResult">
       <summary>Represents the literal result of a custom expression written using <see cref="T:System.Workflow.Activities.Rules.IRuleExpression" />. </summary>
@@ -2698,23 +2518,19 @@
     </member>
     <member name="T:System.Workflow.Activities.Rules.RulePathQualifier">
       <summary>Builds the path of a field or property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RulePathQualifier.#ctor(System.String,System.Workflow.Activities.Rules.RulePathQualifier)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RulePathQualifier" /> class. </summary>
       <param name="name">The name of the current entity in the path.</param>
       <param name="next">The next entity, or the field or property, for the path. Null if <paramref name="name" /> is the name of the property or field at the root of the path.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RulePathQualifier.Name">
       <summary>Gets the name of the current field or property.</summary>
       <returns>The name of the current entity in the path.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RulePathQualifier.Next">
       <summary>Gets the next field or property for the path.</summary>
       <returns>The next entity, or the field or property, for the path.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleReadAttribute">
       <summary>Indicates that a property is read by a <see cref="T:System.Workflow.Activities.Rules.Rule" />. This class cannot be inherited.</summary>
@@ -2731,7 +2547,6 @@
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleReadWriteAttribute">
       <summary>Represents the base class for the <see cref="T:System.Workflow.Activities.Rules.RuleReadAttribute" /> and <see cref="T:System.Workflow.Activities.Rules.RuleWriteAttribute" /> classes.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleReadWriteAttribute.#ctor(System.String,System.Workflow.Activities.Rules.RuleAttributeTarget)">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleReadWriteAttribute" /> class. </summary>
@@ -2742,21 +2557,19 @@
     <member name="P:System.Workflow.Activities.Rules.RuleReadWriteAttribute.Path">
       <summary>Gets the path to the target of the attribute.</summary>
       <returns>A <see cref="T:System.String" /> containing the path.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleReadWriteAttribute.Target">
       <summary>Gets the <see cref="T:System.Workflow.Activities.Rules.RuleAttributeTarget" /> enumeration value that determines how to use path to find target.</summary>
       <returns>A <see cref="T:System.Workflow.Activities.Rules.RuleAttributeTarget" /> enumeration value that determines how to use the specified path to find target.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleReevaluationBehavior">
       <summary>Specifies whether a <see cref="T:System.Workflow.Activities.Rules.Rule" /> can be reevaluated.</summary>
     </member>
-    <member name="F:System.Workflow.Activities.Rules.RuleReevaluationBehavior.Never">
-      <summary>Indicates that the <see cref="T:System.Workflow.Activities.Rules.Rule" /> is executed once.  A condition may be evaluated several times until the rule executes actions, but the rule will never be evaluated again.</summary>
-    </member>
     <member name="F:System.Workflow.Activities.Rules.RuleReevaluationBehavior.Always">
       <summary>Indicates that the <see cref="T:System.Workflow.Activities.Rules.Rule" /> can be reevaluated multiple times. <see cref="F:System.Workflow.Activities.Rules.RuleReevaluationBehavior.Always" /> is the default value.</summary>
+    </member>
+    <member name="F:System.Workflow.Activities.Rules.RuleReevaluationBehavior.Never">
+      <summary>Indicates that the <see cref="T:System.Workflow.Activities.Rules.Rule" /> is executed once.  A condition may be evaluated several times until the rule executes actions, but the rule will never be evaluated again.</summary>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleSet">
       <summary>Contains a collection of <see cref="T:System.Workflow.Activities.Rules.Rule" /> classes along with the semantics for forward-chaining execution of those rules. A <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> can be executed directly in code or using the <see cref="T:System.Workflow.Activities.PolicyActivity" /> activity.</summary>
@@ -2780,7 +2593,6 @@
     <member name="M:System.Workflow.Activities.Rules.RuleSet.Clone">
       <summary>Creates a deep copy of the current <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
       <returns>A <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> that is identical to this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleSet.Description">
       <summary>Gets or sets a description of the <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
@@ -2790,7 +2602,6 @@
       <summary>Determines whether two object instances are equal.</summary>
       <returns>true if the objects are equal; otherwise, false.</returns>
       <param name="obj">The <see cref="T:System.Object" /> to compare with the current <see cref="T:System.Object" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleSet.Execute(System.Workflow.Activities.Rules.RuleExecution)">
       <summary>Evaluates the <see cref="T:System.Workflow.Activities.Rules.Rule" /> instances in the <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
@@ -2802,7 +2613,6 @@
     <member name="M:System.Workflow.Activities.Rules.RuleSet.GetHashCode">
       <summary>Returns the hash code for this instance.</summary>
       <returns>The hash code for this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleSet.Name">
       <summary>Gets and sets the name of the <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
@@ -2821,7 +2631,6 @@
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleSetChangeAction">
       <summary>Represents an abstract base class from which all dynamic update notifications of changes to a <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> must be derived. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleSetChangeAction.#ctor">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleSetChangeAction" /> class.</summary>
@@ -2829,7 +2638,6 @@
     <member name="P:System.Workflow.Activities.Rules.RuleSetChangeAction.RuleSetName">
       <summary>When overridden in a derived class, gets the name of the <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> to be changed.</summary>
       <returns>The name of the <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> to be changed.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleSetChangeAction.ValidateChanges(System.Workflow.ComponentModel.Activity)">
       <summary>When overridden in a derived class, verifies that the <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> is configured correctly and has no errors.</summary>
@@ -2838,23 +2646,19 @@
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleSetCollection">
       <summary>Contains a collection of <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> classes defined in a workflow.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleSetCollection.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleSetCollection" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleSetCollection.Add(System.Workflow.Activities.Rules.RuleSet)">
       <summary>Overloaded. Adds a <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> to the collection</summary>
       <param name="item">The <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> to add to the <see cref="T:System.Workflow.Activities.Rules.RuleSetCollection" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleSetCollection.Diff(System.Object,System.Object)">
       <summary>Determines the difference between two <see cref="T:System.Workflow.Activities.Rules.RuleSetCollection" />.</summary>
       <returns>A list of <see cref="T:System.Workflow.ComponentModel.WorkflowChangeAction" /> classes that differentiate the <paramref name="originalDefinition" /> from the <paramref name="changedDefinition" />.</returns>
       <param name="originalDefinition">The original definition of the <see cref="T:System.Workflow.Activities.Rules.RuleSetCollection" />.</param>
       <param name="changedDefinition">The changed definition of the <see cref="T:System.Workflow.Activities.Rules.RuleSetCollection" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleSetReference">
       <summary>Holds the name of a <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> in the <see cref="T:System.Workflow.Activities.Rules.RuleSetCollection" /> on the workflow. This class cannot be inherited.</summary>
@@ -2872,11 +2676,9 @@
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleSetValidationException">
       <summary>Represents the exception thrown when processing cannot continue because a rule set cannot be validated.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleSetValidationException.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleSetValidationException" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleSetValidationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleSetValidationException" /> class from serialized data.</summary>
@@ -2886,30 +2688,25 @@
     <member name="M:System.Workflow.Activities.Rules.RuleSetValidationException.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleSetValidationException" /> class. </summary>
       <param name="message">The error message that explains the reason for the exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleSetValidationException.#ctor(System.String,System.Exception)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleSetValidationException" /> class. </summary>
       <param name="message">The error message that explains the reason for the exception.</param>
       <param name="ex">The inner exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleSetValidationException.#ctor(System.String,System.Workflow.ComponentModel.Compiler.ValidationErrorCollection)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.RuleSetValidationException" /> class. </summary>
       <param name="message">The error message that explains the reason for the exception.</param>
       <param name="errors">Collection of validation errors that occurred while validating a rule set.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleSetValidationException.Errors">
       <summary>Gets a collection of validation errors that occurred while validating a rule set.</summary>
       <returns>A <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" /> that contains the validation errors.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleSetValidationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Implements the <see cref="T:System.Runtime.Serialization.ISerializable" /> interface.</summary>
       <param name="info">Reference to the object that holds the data needed to serialize and deserialize the exception.</param>
       <param name="context">Provides the means for serializing the exception data.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.RuleStatementAction">
       <summary>Specifies a property or field to update or a method to run using the CodeDom types.</summary>
@@ -2928,7 +2725,6 @@
     <member name="M:System.Workflow.Activities.Rules.RuleStatementAction.Clone">
       <summary>Creates a deep copy of the current <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</summary>
       <returns>A <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> that is identical to this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleStatementAction.CodeDomStatement">
       <summary>Gets or sets the code statement specifying the action to perform.</summary>
@@ -2938,7 +2734,6 @@
       <summary>Determines whether two object instances are equal.</summary>
       <returns>true if the objects are equal; otherwise, false.</returns>
       <param name="obj">The <see cref="T:System.Object" /> to compare with the current <see cref="T:System.Object" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleStatementAction.Execute(System.Workflow.Activities.Rules.RuleExecution)">
       <summary>Executes the <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> using the specified <see cref="T:System.Workflow.Activities.Rules.RuleExecution" />.</summary>
@@ -2947,13 +2742,11 @@
     <member name="M:System.Workflow.Activities.Rules.RuleStatementAction.GetHashCode">
       <summary>Returns the hash code for this instance.</summary>
       <returns>The hash code for this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleStatementAction.GetSideEffects(System.Workflow.Activities.Rules.RuleValidation)">
       <summary>Returns the fields and properties updated by a <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</summary>
       <returns>A list of the fields and properties changed by a <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</returns>
       <param name="validation">The <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> to manage the validation process.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleStatementAction.ToString">
       <summary>Returns the string value of the action. </summary>
@@ -2977,13 +2770,11 @@
     <member name="M:System.Workflow.Activities.Rules.RuleUpdateAction.Clone">
       <summary>Creates a deep copy of the current <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</summary>
       <returns>A <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> that is identical to this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleUpdateAction.Equals(System.Object)">
       <summary>Determines whether two object instances are equal.</summary>
       <returns>true if the objects are equal; otherwise, false.</returns>
       <param name="obj">The <see cref="T:System.Object" /> to compare with the current <see cref="T:System.Object" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleUpdateAction.Execute(System.Workflow.Activities.Rules.RuleExecution)">
       <summary>Executes the <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> using the specified <see cref="T:System.Workflow.Activities.Rules.RuleExecution" />.</summary>
@@ -2992,13 +2783,11 @@
     <member name="M:System.Workflow.Activities.Rules.RuleUpdateAction.GetHashCode">
       <summary>Returns the hash code for this instance.</summary>
       <returns>The hash code for this instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleUpdateAction.GetSideEffects(System.Workflow.Activities.Rules.RuleValidation)">
       <summary>Returns the fields and properties updated by a <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</summary>
       <returns>A list of the fields and properties changed by a <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</returns>
       <param name="validation">The <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> to manage the validation process.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleUpdateAction.Path">
       <summary>Gets or sets the path of the <see cref="T:System.Workflow.Activities.Rules.RuleUpdateAction" />.</summary>
@@ -3039,11 +2828,9 @@
       <summary>Determines the type of the code expression.</summary>
       <returns>The <see cref="T:System.Workflow.Activities.Rules.RuleExpressionInfo" /> for the object. This identifies the type of the object.</returns>
       <param name="expression">The <see cref="T:System.CodeDom.CodeExpression" /> to evaluate.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleValidation.PopParentExpression">
       <summary>Removes and returns the parent expressions at the top of the <see cref="T:System.Collections.Stack" />.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.RuleValidation.PushParentExpression(System.CodeDom.CodeExpression)">
       <summary>Inserts an object at the top of the <see cref="T:System.Collections.Stack" />. </summary>
@@ -3051,7 +2838,6 @@
       <param name="newParent">The <see cref="T:System.CodeDom.CodeExpression" /> to add to the <see cref="T:System.Collections.Stack" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="newParent" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.RuleValidation.ThisType">
       <summary>Gets the type of object.</summary>
@@ -3072,11 +2858,9 @@
     </member>
     <member name="T:System.Workflow.Activities.Rules.UpdatedConditionAction">
       <summary>Represents the change to a <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> for dynamic updates. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.UpdatedConditionAction.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.UpdatedConditionAction" /> class.  </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.UpdatedConditionAction.#ctor(System.Workflow.Activities.Rules.RuleCondition,System.Workflow.Activities.Rules.RuleCondition)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.UpdatedConditionAction" /> class, with the existing and new conditions of the change.</summary>
@@ -3087,32 +2871,26 @@
       <exception cref="T:System.ArgumentNullException">
         <paramref name="newConditionDefinition" /> is a null reference (Nothing).</exception>
       <exception cref="T:System.ArgumentException">The name of the <paramref name="conditionDefinition" /> is not equal to the name of <paramref name="newConditionDefinition." /></exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.UpdatedConditionAction.ConditionDefinition">
       <summary>Gets or sets the condition being replaced by this action.</summary>
       <returns>The condition being replaced by this action.</returns>
       <exception cref="T:System.ArgumentNullException">Trying to set this property to a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.UpdatedConditionAction.ConditionName">
       <summary>Gets the name of the condition be replaced.</summary>
       <returns>The name of the condition to be replaced.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.UpdatedConditionAction.NewConditionDefinition">
       <summary>Gets or sets the condition which will replace the existing condition.</summary>
       <returns>The condition which will replace the existing condition.</returns>
       <exception cref="T:System.ArgumentNullException">Trying to set this property to a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.UpdatedRuleSetAction">
       <summary>Represents the change to a <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> for dynamic updates. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.UpdatedRuleSetAction.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.UpdatedRuleSetAction" /> class.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.Rules.UpdatedRuleSetAction.#ctor(System.Workflow.Activities.Rules.RuleSet,System.Workflow.Activities.Rules.RuleSet)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.Rules.UpdatedRuleSetAction" /> class by using the original and the updated <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> classes.</summary>
@@ -3120,24 +2898,20 @@
       <param name="updatedRuleSetDefinition">The updated <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</param>
       <exception cref="T:System.ArgumentNullException">The RuleSetDefinition or updatedRuleSetDefinition is null</exception>
       <exception cref="T:System.ArgumentException">The names of the two RuleSets are not the same</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.UpdatedRuleSetAction.OriginalRuleSetDefinition">
       <summary>Gets or sets the original <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
       <returns>The original <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</returns>
       <exception cref="T:System.ArgumentNullException">The original <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.UpdatedRuleSetAction.RuleSetName">
       <summary>Gets the name of the <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
       <returns>The name of the <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.Rules.UpdatedRuleSetAction.UpdatedRuleSetDefinition">
       <summary>Gets or sets the updated <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</summary>
       <returns>The updated <see cref="T:System.Workflow.Activities.Rules.RuleSet" />.</returns>
       <exception cref="T:System.ArgumentNullException">The updated <see cref="T:System.Workflow.Activities.Rules.RuleSet" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.Rules.Design.RuleConditionDialog">
       <summary>This dialog is normally used by the activities <see cref="T:System.Workflow.Activities.IfElseBranchActivity" />, <see cref="T:System.Workflow.Activities.WhileActivity" />, <see cref="T:System.Workflow.Activities.ConditionedActivityGroup" />, and <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> to edit declarative conditions. However, if you want to use conditions outside of these activities (for example, edit a condition for use outside of a workflow completely), you can use this dialog to perform the editing of the condition.</summary>

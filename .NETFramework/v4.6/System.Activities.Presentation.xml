@@ -5994,7 +5994,7 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
       <summary>The command used to zoom in on the current Windows Workflow Designer surface.</summary>
     </member>
     <member name="F:System.Activities.Presentation.View.DesignerView.ZoomOutCommand">
-      <summary>The command used to zoom out of the current  surface.</summary>
+      <summary>The command used to zoom out of the current Windows Workflow Designer surface.</summary>
     </member>
     <member name="T:System.Activities.Presentation.View.EditingState">
       <summary>Enumerates the possible states of editing an expression in an expression text box.</summary>

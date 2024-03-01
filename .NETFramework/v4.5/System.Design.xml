@@ -956,14 +956,14 @@
     <member name="T:System.ComponentModel.Design.DesignerActionUIStateChangeType">
       <summary>Specifies the display state of a smart tag panel.</summary>
     </member>
-    <member name="F:System.ComponentModel.Design.DesignerActionUIStateChangeType.Show">
-      <summary>The smart tag panel is being displayed.</summary>
-    </member>
     <member name="F:System.ComponentModel.Design.DesignerActionUIStateChangeType.Hide">
       <summary>The smart tag panel is being hidden.</summary>
     </member>
     <member name="F:System.ComponentModel.Design.DesignerActionUIStateChangeType.Refresh">
       <summary>The smart tag panel is being refreshed.</summary>
+    </member>
+    <member name="F:System.ComponentModel.Design.DesignerActionUIStateChangeType.Show">
+      <summary>The smart tag panel is being displayed.</summary>
     </member>
     <member name="T:System.ComponentModel.Design.DesignerCommandSet">
       <summary>Represents a base class for design-time tools, not derived from <see cref="T:System.ComponentModel.Design.ComponentDesigner" />, that provide smart tag or designer verb capabilities.</summary>
@@ -1278,17 +1278,17 @@
     <member name="T:System.ComponentModel.Design.DisplayMode">
       <summary>Defines identifiers that indicate the display modes used by <see cref="T:System.ComponentModel.Design.ByteViewer" />.</summary>
     </member>
-    <member name="F:System.ComponentModel.Design.DisplayMode.Hexdump">
-      <summary>A hexadecimal format display.</summary>
-    </member>
     <member name="F:System.ComponentModel.Design.DisplayMode.Ansi">
       <summary>An ANSI format display.</summary>
     </member>
-    <member name="F:System.ComponentModel.Design.DisplayMode.Unicode">
-      <summary>A Unicode format display.</summary>
-    </member>
     <member name="F:System.ComponentModel.Design.DisplayMode.Auto">
       <summary>A display mode that automatically selects a display mode. In this mode, the bytes are examined to determine if they are hexadecimal or printable. If the bytes are in hexadecimal format, the <see cref="F:System.ComponentModel.Design.DisplayMode.Hexdump" /> mode is selected. If the characters match a printable character set, a test is run to automatically select either the <see cref="F:System.ComponentModel.Design.DisplayMode.Ansi" /> or <see cref="F:System.ComponentModel.Design.DisplayMode.Unicode" /> display mode.</summary>
+    </member>
+    <member name="F:System.ComponentModel.Design.DisplayMode.Hexdump">
+      <summary>A hexadecimal format display.</summary>
+    </member>
+    <member name="F:System.ComponentModel.Design.DisplayMode.Unicode">
+      <summary>A Unicode format display.</summary>
     </member>
     <member name="T:System.ComponentModel.Design.EventBindingService">
       <summary>A default implementation of the <see cref="T:System.ComponentModel.Design.IEventBindingService" /> interface.</summary>
@@ -1620,11 +1620,11 @@
     <member name="F:System.ComponentModel.Design.MenuCommandsChangedType.CommandAdded">
       <summary>Specifies that one or more command objects were added.</summary>
     </member>
-    <member name="F:System.ComponentModel.Design.MenuCommandsChangedType.CommandRemoved">
-      <summary>Specifies that one or more commands were removed.</summary>
-    </member>
     <member name="F:System.ComponentModel.Design.MenuCommandsChangedType.CommandChanged">
       <summary>Specifies that one or more commands have changed their status.</summary>
+    </member>
+    <member name="F:System.ComponentModel.Design.MenuCommandsChangedType.CommandRemoved">
+      <summary>Specifies that one or more commands were removed.</summary>
     </member>
     <member name="T:System.ComponentModel.Design.MenuCommandService">
       <summary>Implements the <see cref="T:System.ComponentModel.Design.IMenuCommandService" /> interface.</summary>
@@ -1880,7 +1880,7 @@
     </member>
     <member name="M:System.ComponentModel.Design.UndoEngine.CreateUndoUnit(System.String,System.Boolean)">
       <summary>Creates a new <see cref="T:System.ComponentModel.Design.UndoEngine.UndoUnit" />.</summary>
-      <returns>A new <see cref="T:System.ComponentModel.Design.UndoEngine.UndoUnit" />.</returns>
+      <returns>A new <see cref="T:System.ComponentModel.Design.UndoEngine.UndoUnit" /> with a specified name.</returns>
       <param name="name">The name of the unit to create. </param>
       <param name="primary">true to create the first of a series of nested units; false to create subsequent nested units.</param>
     </member>
@@ -2468,17 +2468,17 @@
     <member name="T:System.ComponentModel.Design.Data.QueryBuilderMode">
       <summary>Specifies the type of data-store query the design environment should construct.</summary>
     </member>
+    <member name="F:System.ComponentModel.Design.Data.QueryBuilderMode.Delete">
+      <summary>The query being built is a Delete query.</summary>
+    </member>
+    <member name="F:System.ComponentModel.Design.Data.QueryBuilderMode.Insert">
+      <summary>The query being built is an Insert query.</summary>
+    </member>
     <member name="F:System.ComponentModel.Design.Data.QueryBuilderMode.Select">
       <summary>The query being built is a Select query.</summary>
     </member>
     <member name="F:System.ComponentModel.Design.Data.QueryBuilderMode.Update">
       <summary>The query being built is an Update query.</summary>
-    </member>
-    <member name="F:System.ComponentModel.Design.Data.QueryBuilderMode.Insert">
-      <summary>The query being built is an Insert query.</summary>
-    </member>
-    <member name="F:System.ComponentModel.Design.Data.QueryBuilderMode.Delete">
-      <summary>The query being built is a Delete query.</summary>
     </member>
     <member name="T:System.ComponentModel.Design.Serialization.BasicDesignerLoader">
       <summary>Provides an implementation of the <see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderService" /> interface.</summary>
@@ -2603,11 +2603,11 @@
     <member name="F:System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReloadOptions.Default">
       <summary>The designer loader flushes changes before reloading, but it does not force a reload, and it also does not set the <see cref="P:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Modified" /> property to true if load errors occur.</summary>
     </member>
-    <member name="F:System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReloadOptions.ModifyOnError">
-      <summary>The designer loader will set the <see cref="P:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Modified" /> property to true if load errors occur. This flag is useful if you want a flush of the loader to overwrite persistent state that had errors.</summary>
-    </member>
     <member name="F:System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReloadOptions.Force">
       <summary>The designer loader forces the reload to occur. Normally, a reload occurs only if the <see cref="M:System.ComponentModel.Design.Serialization.BasicDesignerLoader.IsReloadNeeded" /> method returns true. This flag bypasses calling this method and always performs the reload.</summary>
+    </member>
+    <member name="F:System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReloadOptions.ModifyOnError">
+      <summary>The designer loader will set the <see cref="P:System.ComponentModel.Design.Serialization.BasicDesignerLoader.Modified" /> property to true if load errors occur. This flag is useful if you want a flush of the loader to overwrite persistent state that had errors.</summary>
     </member>
     <member name="F:System.ComponentModel.Design.Serialization.BasicDesignerLoader.ReloadOptions.NoFlush">
       <summary>The designer loader abandons any changes before reloading.</summary>
@@ -2624,7 +2624,7 @@
     </member>
     <member name="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.CreateStore">
       <summary>Creates a new <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" />.</summary>
-      <returns>A <see cref="T:System.ComponentModel.Design.Serialization.SerializationStore" />.</returns>
+      <returns>A new serialization store.</returns>
     </member>
     <member name="M:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService.Deserialize(System.ComponentModel.Design.Serialization.SerializationStore)">
       <summary>Deserializes the given store to produce a collection of objects.</summary>
@@ -3552,7 +3552,7 @@
     </member>
     <member name="M:System.ComponentModel.Design.Serialization.TypeCodeDomSerializer.Deserialize(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.CodeDom.CodeTypeDeclaration)">
       <summary>Deserializes the given type declaration.</summary>
-      <returns>A root <see cref="T:System.Object" />.</returns>
+      <returns>The root object.</returns>
       <param name="manager">The serialization manager to use for serialization.</param>
       <param name="declaration">Type declaration to use for serialization.</param>
       <exception cref="T:System.ArgumentNullException">
@@ -3644,11 +3644,11 @@
     <member name="F:System.Data.Design.ParameterGenerationOption.ClrTypes">
       <summary>Parameters in the typed dataset are CLR types.</summary>
     </member>
-    <member name="F:System.Data.Design.ParameterGenerationOption.SqlTypes">
-      <summary>Parameters in the typed dataset are Sql types.</summary>
-    </member>
     <member name="F:System.Data.Design.ParameterGenerationOption.Objects">
       <summary>Parameters in the typed dataset are all of <see cref="T:System.Object" />.</summary>
+    </member>
+    <member name="F:System.Data.Design.ParameterGenerationOption.SqlTypes">
+      <summary>Parameters in the typed dataset are Sql types.</summary>
     </member>
     <member name="T:System.Data.Design.TypedDataSetGenerator">
       <summary>Generates a strongly typed <see cref="T:System.Data.DataSet" /> class.</summary>
@@ -3762,14 +3762,14 @@
     <member name="T:System.Data.Design.TypedDataSetGenerator.GenerateOption">
       <summary>Provides the <see cref="T:System.Data.Design.TypedDataSetGenerator" />with information for creating typed datasets that support LINQ to DataSet and hierarchical update.</summary>
     </member>
-    <member name="F:System.Data.Design.TypedDataSetGenerator.GenerateOption.None">
-      <summary>Generates typed datasets that are compatible with typed datasets generated in versions of Visual Studio earlier than Visual Studio 2008.</summary>
-    </member>
     <member name="F:System.Data.Design.TypedDataSetGenerator.GenerateOption.HierarchicalUpdate">
       <summary>Generates typed datasets that have a TableAdapterManager and associated methods for enabling hierarchical update.</summary>
     </member>
     <member name="F:System.Data.Design.TypedDataSetGenerator.GenerateOption.LinqOverTypedDatasets">
       <summary>Generates typed datasets that have data tables that inherit from <see cref="T:System.Data.TypedTableBase`1" /> in order to enable the ability to perform LINQ queries on data tables.</summary>
+    </member>
+    <member name="F:System.Data.Design.TypedDataSetGenerator.GenerateOption.None">
+      <summary>Generates typed datasets that are compatible with typed datasets generated in versions of Visual Studio earlier than Visual Studio 2008.</summary>
     </member>
     <member name="T:System.Data.Design.TypedDataSetGeneratorException">
       <summary>The exception that is thrown when a name conflict occurs while a strongly typed <see cref="T:System.Data.DataSet" /> is being generated.</summary>
@@ -4487,20 +4487,20 @@
     <member name="T:System.Web.UI.Design.ControlLocation">
       <summary>Specifies the possible locations for adding a control in a container.</summary>
     </member>
-    <member name="F:System.Web.UI.Design.ControlLocation.Before">
-      <summary>Adds the control before the current selection or current control.</summary>
-    </member>
     <member name="F:System.Web.UI.Design.ControlLocation.After">
       <summary>Adds the control after the current selection or current control.</summary>
+    </member>
+    <member name="F:System.Web.UI.Design.ControlLocation.Before">
+      <summary>Adds the control before the current selection or current control.</summary>
     </member>
     <member name="F:System.Web.UI.Design.ControlLocation.First">
       <summary>Adds the control at the start of the document.</summary>
     </member>
-    <member name="F:System.Web.UI.Design.ControlLocation.Last">
-      <summary>Adds the control at the end of the document.</summary>
-    </member>
     <member name="F:System.Web.UI.Design.ControlLocation.FirstChild">
       <summary>Adds the control as the first child of the selected control, if the selected control is a container control.</summary>
+    </member>
+    <member name="F:System.Web.UI.Design.ControlLocation.Last">
+      <summary>Adds the control at the end of the document.</summary>
     </member>
     <member name="F:System.Web.UI.Design.ControlLocation.LastChild">
       <summary>Adds the control as the last child of the selected control, if the selected control is a container control.</summary>
@@ -6889,6 +6889,9 @@
     <member name="M:System.Web.UI.Design.TemplateEditingService.Dispose">
       <summary>Releases all resources that are used by the <see cref="T:System.Web.UI.Design.TemplateEditingService" /> object. </summary>
     </member>
+    <member name="M:System.Web.UI.Design.TemplateEditingService.Finalize">
+      <summary>Finalizes the service.</summary>
+    </member>
     <member name="M:System.Web.UI.Design.TemplateEditingService.GetContainingTemplateName(System.Web.UI.Control)">
       <summary>Gets the name of the parent template.</summary>
       <returns>The name of the parent template.</returns>
@@ -7177,11 +7180,11 @@
     <member name="T:System.Web.UI.Design.UrlBuilderOptions">
       <summary>Defines identifiers for settings of a <see cref="T:System.Web.UI.Design.UrlBuilder" />.</summary>
     </member>
-    <member name="F:System.Web.UI.Design.UrlBuilderOptions.None">
-      <summary>Use no additional options for the <see cref="T:System.Web.UI.Design.UrlBuilder" />.</summary>
-    </member>
     <member name="F:System.Web.UI.Design.UrlBuilderOptions.NoAbsolute">
       <summary>Build a URL that references a path relative to the current path, rather than one that references a fully qualified, absolute path.</summary>
+    </member>
+    <member name="F:System.Web.UI.Design.UrlBuilderOptions.None">
+      <summary>Use no additional options for the <see cref="T:System.Web.UI.Design.UrlBuilder" />.</summary>
     </member>
     <member name="T:System.Web.UI.Design.UrlEditor">
       <summary>Provides a user interface for selecting a URL.</summary>
@@ -8758,8 +8761,7 @@
     </member>
     <member name="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)">
       <summary>Returns the content for an editable region of the design-time view of the associated control.</summary>
-      <returns>
-        <see cref="F:System.String.Empty" />.</returns>
+      <returns>The content for an editable region of the design-time view of the associated control.</returns>
       <param name="region">The <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> for which to fetch content.</param>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.Initialize(System.ComponentModel.IComponent)">
@@ -8774,7 +8776,7 @@
       <summary>Called when the schema of the data source for the associated control changes. </summary>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.PreFilterProperties(System.Collections.IDictionary)">
-      <summary>Used by the designer to remove properties from or add properties to the display in the Properties grid or to shadow properties of the associated control.</summary>
+      <summary>Used by the designer to remove properties from or add properties to the display in the <paramref name="Properties" /> grid or to shadow properties of the associated control.</summary>
       <param name="properties">A collection implementing the <see cref="T:System.Collections.IDictionary" /> of the added and shadowed properties. </param>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.DetailsViewDesigner.SampleRowCount">
@@ -8861,14 +8863,14 @@
       <summary>Provides design-time support in a visual designer for the <see cref="T:System.Web.UI.WebControls.GridView" /> control.</summary>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.GridViewDesigner.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Web.UI.Design.WebControls.GridViewDesigner" /> class. </summary>
+      <summary>Initializes a new instance of the <see cref="T:System.Web.UI.Design.WebControls.GridViewDesigner" /> class.</summary>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.GridViewDesigner.ActionLists">
-      <summary>Gets the designer action list collection for this designer.</summary>
+      <summary>Gets or sets the designer action list collection for this designer.</summary>
       <returns>The <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> associated with this designer.</returns>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.GridViewDesigner.AutoFormats">
-      <summary>Gets the collection of predefined formatting schemes to display in the Auto Format dialog box.</summary>
+      <summary>Gets or sets the collection of predefined formatting schemes to display in the Auto Format dialog box.</summary>
       <returns>A <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" /> that contains the predefined schemes for the <see cref="T:System.Web.UI.WebControls.GridView" />.</returns>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.GridViewDesigner.DataBind(System.Web.UI.WebControls.BaseDataBoundControl)">
@@ -8876,7 +8878,7 @@
       <param name="dataBoundControl">The <see cref="T:System.Web.UI.WebControls.GridView" /> to bind to the design-time data source.</param>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml">
-      <summary>Gets the markup that is used to render the associated control at design time. </summary>
+      <summary>Gets the markup that is used to render the associated control at design time.</summary>
       <returns>A <see cref="T:System.String" /> containing the markup used to render the <see cref="T:System.Web.UI.WebControls.GridView" /> at design time.</returns>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)">
@@ -8899,14 +8901,14 @@
       <param name="e">A <see cref="T:System.Web.UI.Design.DesignerRegionMouseEventArgs" /> that defines the clicked region of the control.</param>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.GridViewDesigner.OnSchemaRefreshed">
-      <summary>Called when the schema of the data source for the associated control changes. </summary>
+      <summary>Called when the schema of the data source for the associated control changes.</summary>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.GridViewDesigner.PreFilterProperties(System.Collections.IDictionary)">
       <summary>Used by the designer to remove properties from or add additional properties to the display in the Properties grid or to shadow properties of the associated control.</summary>
       <param name="properties">A collection implementing the <see cref="T:System.Collections.IDictionary" /> of the added and shadowed properties.</param>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.GridViewDesigner.SampleRowCount">
-      <summary>Gets the number of sample rows for the associated control to display.</summary>
+      <summary>Gets or sets the number of sample rows for the associated control to display.</summary>
       <returns>The number of sample rows.</returns>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.GridViewDesigner.SetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)">
@@ -8915,12 +8917,12 @@
       <param name="content">A <see cref="T:System.String" /> to write to <paramref name="region" />.</param>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.GridViewDesigner.TemplateGroups">
-      <summary>Gets a collection of template groups for the fields of the associated control.</summary>
+      <summary>Gets or sets a collection of template groups for the fields of the associated control.</summary>
       <returns>A <see cref="T:System.Web.UI.Design.TemplateGroupCollection" /> containing an element for each templated field in the <see cref="T:System.Web.UI.WebControls.GridView" />.</returns>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.GridViewDesigner.UsePreviewControl">
       <summary>Gets a value indicating whether the designer should use a temporary copy rather than the actual control associated with the designer to generate the design-time markup.</summary>
-      <returns>Always true.</returns>
+      <returns>true if the designer should use a temporary copy rather than the actual control associated with the designer to generate the design-time markup; otherwise, false.</returns>
     </member>
     <member name="T:System.Web.UI.Design.WebControls.HiddenFieldDesigner">
       <summary>Provides design-time support in a visual designer for the <see cref="T:System.Web.UI.WebControls.HiddenField" /> control.</summary>
@@ -9978,15 +9980,15 @@
     </member>
     <member name="P:System.Web.UI.Design.WebControls.SiteMapPathDesigner.AutoFormats">
       <summary>Gets the collection of automatic formatting schemes to display in the Auto Format dialog box for the associated control at design time.</summary>
-      <returns>A <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" /> object that contains the predefined schemes for the control.</returns>
+      <returns>Returns <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" />.</returns>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.SiteMapPathDesigner.GetDesignTimeHtml">
       <summary>Gets the HTML markup that is used to represent the control at design time.</summary>
-      <returns>The HTML markup used to represent the control at design time.</returns>
+      <returns>Returns <see cref="T:System.String" />.</returns>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.SiteMapPathDesigner.GetErrorDesignTimeHtml(System.Exception)">
       <summary>Gets the HTML markup that provides information about the specified exception.</summary>
-      <returns>The design-time HTML markup for the specified exception.</returns>
+      <returns>Returns <see cref="T:System.String" />.</returns>
       <param name="e"> The exception that occurred.</param>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.SiteMapPathDesigner.Initialize(System.ComponentModel.IComponent)">
@@ -9995,7 +9997,7 @@
     </member>
     <member name="P:System.Web.UI.Design.WebControls.SiteMapPathDesigner.TemplateGroups">
       <summary>Gets a collection of template groups, each containing one or more template definitions.</summary>
-      <returns>A collection of <see cref="T:System.Web.UI.Design.TemplateGroup" /> objects. The default is an empty <see cref="T:System.Web.UI.Design.TemplateGroupCollection" />.</returns>
+      <returns>Returns <see cref="T:System.Web.UI.Design.TemplateGroupCollection" />.</returns>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.SiteMapPathDesigner.UsePreviewControl">
       <summary>Gets a value indicating whether the control designer uses a temporary preview control to generate the design-time HTML markup.</summary>
@@ -10021,7 +10023,7 @@
       <summary>Provides design-time support in a visual designer for the <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> control.</summary>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.SqlDataSourceDesigner.#ctor">
-      <summary>Creates an instance of the <see cref="T:System.Web.UI.Design.WebControls.SqlDataSourceDesigner" /> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.Web.UI.Design.WebControls.SqlDataSourceDesigner" /> class.</summary>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.SqlDataSourceDesigner.CanConfigure">
       <summary>Gets a value indicating whether the <see cref="M:System.Web.UI.Design.WebControls.SqlDataSourceDesigner.Configure" /> method can be called by the design host.</summary>
@@ -10044,9 +10046,8 @@
       <param name="viewName">The name of the view to create.</param>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.SqlDataSourceDesigner.DeleteQuery">
-      <summary>Indicates that this <see cref="T:System.Web.UI.Design.WebControls.SqlDataSourceDesigner" /> supports delete queries.</summary>
-      <returns>
-        <see cref="F:System.Web.UI.DataSourceOperation.Delete" />.</returns>
+      <summary>Gets or sets the <see cref="T:System.Web.UI.Design.WebControls.SqlDataSourceDesigner" /> that supports delete queries.</summary>
+      <returns>The <see cref="F:System.Web.UI.DataSourceOperation.Delete" /> query.</returns>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.SqlDataSourceDesigner.DeriveParameters(System.String,System.Data.Common.DbCommand)">
       <summary>Derives the parameters from the specified SQL command and adds corresponding <see cref="T:System.Web.UI.WebControls.Parameter" /> objects to the command's parameters collection.</summary>
@@ -10069,14 +10070,13 @@
     <member name="M:System.Web.UI.Design.WebControls.SqlDataSourceDesigner.InferParameterNames(System.ComponentModel.Design.Data.DesignerDataConnection,System.String,System.Web.UI.WebControls.SqlDataSourceCommandType)">
       <summary>Returns an array of parameters using the specified connection, command text, and command type.</summary>
       <returns>An array of <see cref="T:System.Web.UI.WebControls.Parameter" /> objects.</returns>
-      <param name="connection">A <see cref="T:System.ComponentModel.Design.Data.DesignerDataConnection" />  object</param>
+      <param name="connection">A <see cref="T:System.ComponentModel.Design.Data.DesignerDataConnection" /> object.</param>
       <param name="commandText">The text of the command.</param>
       <param name="commandType">A <see cref="T:System.Web.UI.WebControls.SqlDataSourceCommandType" /> indicating the type of command.</param>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.SqlDataSourceDesigner.InsertQuery">
-      <summary>Indicates that this <see cref="T:System.Web.UI.Design.WebControls.SqlDataSourceDesigner" /> supports insert queries.</summary>
-      <returns>
-        <see cref="F:System.Web.UI.DataSourceOperation.Insert" />.</returns>
+      <summary>Gets or sets the <see cref="T:System.Web.UI.Design.WebControls.SqlDataSourceDesigner" /> that supports insert queries.</summary>
+      <returns>The <see cref="F:System.Web.UI.DataSourceOperation.Insert" /> query.</returns>
     </member>
     <member name="M:System.Web.UI.Design.WebControls.SqlDataSourceDesigner.PreFilterProperties(System.Collections.IDictionary)">
       <summary>Used by the designer to add properties to, or remove them from, the Properties grid or to shadow properties of the associated control.</summary>
@@ -10088,21 +10088,19 @@
     </member>
     <member name="M:System.Web.UI.Design.WebControls.SqlDataSourceDesigner.RefreshSchema(System.Boolean)">
       <summary>Refreshes the schema from the underlying data source.</summary>
-      <param name="preferSilent">true suppresses all data source events until the schema is refreshed.</param>
+      <param name="preferSilent">true to suppress all data source events until the schema is refreshed; otherwise, false.</param>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.SqlDataSourceDesigner.SelectCommand">
       <summary>Gets or sets the SQL query in the associated <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> for selecting data from the underlying database.</summary>
       <returns>An SQL query.</returns>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.SqlDataSourceDesigner.SelectQuery">
-      <summary>Indicates that this <see cref="T:System.Web.UI.Design.WebControls.SqlDataSourceDesigner" /> supports select queries.</summary>
-      <returns>
-        <see cref="F:System.Web.UI.DataSourceOperation.Select" />.</returns>
+      <summary>Gets or sets the <see cref="T:System.Web.UI.Design.WebControls.SqlDataSourceDesigner" /> that supports select queries.</summary>
+      <returns>The <see cref="F:System.Web.UI.DataSourceOperation.Select" /> query.</returns>
     </member>
     <member name="P:System.Web.UI.Design.WebControls.SqlDataSourceDesigner.UpdateQuery">
-      <summary>Indicates that this <see cref="T:System.Web.UI.Design.WebControls.SqlDataSourceDesigner" /> supports update queries.</summary>
-      <returns>
-        <see cref="F:System.Web.UI.DataSourceOperation.Update" />.</returns>
+      <summary>Gets or sets the <see cref="T:System.Web.UI.Design.WebControls.SqlDataSourceDesigner" /> that supports update queries.</summary>
+      <returns>The <see cref="F:System.Web.UI.DataSourceOperation.Update" /> query.</returns>
     </member>
     <member name="T:System.Web.UI.Design.WebControls.SqlDesignerDataSourceView">
       <summary>Provides a design-time view of data for the <see cref="T:System.Web.UI.Design.WebControls.SqlDataSourceDesigner" /> class.</summary>
@@ -11503,7 +11501,7 @@
     </member>
     <member name="M:System.Windows.Forms.Design.ControlDesigner.GetControlGlyph(System.Windows.Forms.Design.Behavior.GlyphSelectionType)">
       <summary>Returns a <see cref="T:System.Windows.Forms.Design.Behavior.ControlBodyGlyph" /> representing the bounds of this control.</summary>
-      <returns>A <see cref="T:System.Windows.Forms.Design.Behavior.ControlBodyGlyph" />.</returns>
+      <returns>A <see cref="T:System.Windows.Forms.Design.Behavior.ControlBodyGlyph" /> representing the bounds of this control.</returns>
       <param name="selectionType">A <see cref="T:System.Windows.Forms.Design.Behavior.GlyphSelectionType" /> value that specifies the selection state.</param>
     </member>
     <member name="M:System.Windows.Forms.Design.ControlDesigner.GetGlyphs(System.Windows.Forms.Design.Behavior.GlyphSelectionType)">
@@ -11999,6 +11997,13 @@
     <member name="F:System.Windows.Forms.Design.FolderNameEditor.FolderBrowserStyles.ShowTextBox">
       <summary>The folder browser includes a <see cref="T:System.Windows.Forms.TextBox" /> control in the browse dialog box that allows the user to type the name of an item.</summary>
     </member>
+    <member name="T:System.Windows.Forms.Design.IContainsThemedScrollbarWindows">
+      <summary>Defines a method for getting information about how the scrollbars of windows need to be themed when displayed in the Visual Studio designer.</summary>
+    </member>
+    <member name="M:System.Windows.Forms.Design.IContainsThemedScrollbarWindows.ThemedScrollbarWindows">
+      <summary>Gets an enumeration of <see cref="T:System.Windows.Forms.Design.ThemedScrollbarWindow" /> objects that represent windows and how their scrollbars need to be themed when displayed in the Visual Studio designer.</summary>
+      <returns>An enumeration of objects that represent windows and how their scrollbars need to be themed when displayed in the Visual Studio designer.</returns>
+    </member>
     <member name="T:System.Windows.Forms.Design.ImageListCodeDomSerializer">
       <summary>Serializes string dictionaries.</summary>
     </member>
@@ -12422,20 +12427,8 @@
     <member name="T:System.Windows.Forms.Design.SelectionRules">
       <summary>Defines identifiers that are used to indicate selection rules for a component.</summary>
     </member>
-    <member name="F:System.Windows.Forms.Design.SelectionRules.None">
-      <summary>Indicates no special selection attributes.</summary>
-    </member>
-    <member name="F:System.Windows.Forms.Design.SelectionRules.Moveable">
-      <summary>Indicates the component supports a location property that allows it to be moved on the screen.</summary>
-    </member>
-    <member name="F:System.Windows.Forms.Design.SelectionRules.Visible">
-      <summary>Indicates the component has some form of visible user interface and the selection service is drawing a selection border around this user interface. If a selected component has this rule set, you can assume that the component implements <see cref="T:System.ComponentModel.IComponent" /> and that it is associated with a corresponding designer instance.</summary>
-    </member>
-    <member name="F:System.Windows.Forms.Design.SelectionRules.Locked">
-      <summary>Indicates the component is locked to its container. Overrides the <see cref="F:System.Windows.Forms.Design.SelectionRules.Moveable" />, <see cref="F:System.Windows.Forms.Design.SelectionRules.AllSizeable" />, <see cref="F:System.Windows.Forms.Design.SelectionRules.BottomSizeable" />, <see cref="F:System.Windows.Forms.Design.SelectionRules.LeftSizeable" />, <see cref="F:System.Windows.Forms.Design.SelectionRules.RightSizeable" />, and <see cref="F:System.Windows.Forms.Design.SelectionRules.TopSizeable" /> bit flags of this enumeration.</summary>
-    </member>
-    <member name="F:System.Windows.Forms.Design.SelectionRules.TopSizeable">
-      <summary>Indicates the component supports resize from the top.</summary>
+    <member name="F:System.Windows.Forms.Design.SelectionRules.AllSizeable">
+      <summary>Indicates the component supports sizing in all directions.</summary>
     </member>
     <member name="F:System.Windows.Forms.Design.SelectionRules.BottomSizeable">
       <summary>Indicates the component supports resize from the bottom.</summary>
@@ -12443,11 +12436,23 @@
     <member name="F:System.Windows.Forms.Design.SelectionRules.LeftSizeable">
       <summary>Indicates the component supports resize from the left.</summary>
     </member>
+    <member name="F:System.Windows.Forms.Design.SelectionRules.Locked">
+      <summary>Indicates the component is locked to its container. Overrides the <see cref="F:System.Windows.Forms.Design.SelectionRules.Moveable" />, <see cref="F:System.Windows.Forms.Design.SelectionRules.AllSizeable" />, <see cref="F:System.Windows.Forms.Design.SelectionRules.BottomSizeable" />, <see cref="F:System.Windows.Forms.Design.SelectionRules.LeftSizeable" />, <see cref="F:System.Windows.Forms.Design.SelectionRules.RightSizeable" />, and <see cref="F:System.Windows.Forms.Design.SelectionRules.TopSizeable" /> bit flags of this enumeration.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.Design.SelectionRules.Moveable">
+      <summary>Indicates the component supports a location property that allows it to be moved on the screen.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.Design.SelectionRules.None">
+      <summary>Indicates no special selection attributes.</summary>
+    </member>
     <member name="F:System.Windows.Forms.Design.SelectionRules.RightSizeable">
       <summary>Indicates the component supports resize from the right.</summary>
     </member>
-    <member name="F:System.Windows.Forms.Design.SelectionRules.AllSizeable">
-      <summary>Indicates the component supports sizing in all directions.</summary>
+    <member name="F:System.Windows.Forms.Design.SelectionRules.TopSizeable">
+      <summary>Indicates the component supports resize from the top.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.Design.SelectionRules.Visible">
+      <summary>Indicates the component has some form of visible user interface and the selection service is drawing a selection border around this user interface. If a selected component has this rule set, you can assume that the component implements <see cref="T:System.ComponentModel.IComponent" /> and that it is associated with a corresponding designer instance.</summary>
     </member>
     <member name="T:System.Windows.Forms.Design.ShortcutKeysEditor">
       <summary>Provides an editor for picking shortcut keys.</summary>
@@ -12466,6 +12471,27 @@
       <summary>Gets the editor style used by the <see cref="Overload:System.Windows.Forms.Design.ShortcutKeysEditor.EditValue" /> method.</summary>
       <returns>A <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> value that indicates the style of editor used by the <see cref="Overload:System.Windows.Forms.Design.ShortcutKeysEditor.EditValue" /> method.</returns>
       <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that can be used to gain additional context information.</param>
+    </member>
+    <member name="T:System.Windows.Forms.Design.ThemedScrollbarMode">
+      <summary>A value that indicates whether the scrollbars of a window and its children will be themed when displayed in the Visual Studio designer.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.Design.ThemedScrollbarMode.All">
+      <summary>The window and all of its children will have themed scrollbars.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.Design.ThemedScrollbarMode.None">
+      <summary>The window and all of its children will not be themed.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.Design.ThemedScrollbarMode.OnlyTopLevel">
+      <summary>The window will have themed scrollbars but all of its children will not be themed.</summary>
+    </member>
+    <member name="T:System.Windows.Forms.Design.ThemedScrollbarWindow">
+      <summary>Represents a window and a value that indicates how its scrollbars should be themed when displayed in the Visual Studio designer. </summary>
+    </member>
+    <member name="F:System.Windows.Forms.Design.ThemedScrollbarWindow.Handle">
+      <summary>The window handle.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.Design.ThemedScrollbarWindow.Mode">
+      <summary>A value that indicates how the window scrollbars should be themed when displayed in the Visual Studio designer.</summary>
     </member>
     <member name="T:System.Windows.Forms.Design.WindowsFormsDesignerOptionService">
       <summary>Provides access to get and set option values for a Windows Forms designer.</summary>
@@ -12635,7 +12661,7 @@
     </member>
     <member name="P:System.Windows.Forms.Design.Behavior.BehaviorService.Adorners">
       <summary>Gets the <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection" />.</summary>
-      <returns>A <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection" />.</returns>
+      <returns>A collection of adorner.</returns>
     </member>
     <member name="P:System.Windows.Forms.Design.Behavior.BehaviorService.AdornerWindowGraphics">
       <summary>Gets the <see cref="T:System.Drawing.Graphics" /> for the adorner window.</summary>
@@ -13029,26 +13055,29 @@
     <member name="T:System.Windows.Forms.Design.Behavior.SnapLinePriority">
       <summary>Specifies the relative importance of a snapline.</summary>
     </member>
+    <member name="F:System.Windows.Forms.Design.Behavior.SnapLinePriority.Always">
+      <summary>The priority category that is equivalent to the highest priority of all the current snaplines. Indicates that this category of snapline should always be active.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.Design.Behavior.SnapLinePriority.High">
+      <summary>The highest priority category.</summary>
+    </member>
     <member name="F:System.Windows.Forms.Design.Behavior.SnapLinePriority.Low">
       <summary>The lowest priority category.</summary>
     </member>
     <member name="F:System.Windows.Forms.Design.Behavior.SnapLinePriority.Medium">
       <summary>The middle priority category.</summary>
     </member>
-    <member name="F:System.Windows.Forms.Design.Behavior.SnapLinePriority.High">
-      <summary>The highest priority category.</summary>
-    </member>
-    <member name="F:System.Windows.Forms.Design.Behavior.SnapLinePriority.Always">
-      <summary>The priority category that is equivalent to the highest priority of all the current snaplines. Indicates that this category of snapline should always be active.</summary>
-    </member>
     <member name="T:System.Windows.Forms.Design.Behavior.SnapLineType">
       <summary>Specifies the orientation and relative location of a snapline.</summary>
     </member>
-    <member name="F:System.Windows.Forms.Design.Behavior.SnapLineType.Top">
-      <summary>A horizontal snapline typically aligned to the top edge of a control.</summary>
+    <member name="F:System.Windows.Forms.Design.Behavior.SnapLineType.Baseline">
+      <summary>A horizontal snapline typically associated with a primary internal feature of a control; for example, the base of the text string in a <see cref="T:System.Windows.Forms.Label" /> control.</summary>
     </member>
     <member name="F:System.Windows.Forms.Design.Behavior.SnapLineType.Bottom">
       <summary>A horizontal snapline typically aligned to the bottom edge of a control.</summary>
+    </member>
+    <member name="F:System.Windows.Forms.Design.Behavior.SnapLineType.Horizontal">
+      <summary>A horizontal snapline typically not associated with an edge of a control.</summary>
     </member>
     <member name="F:System.Windows.Forms.Design.Behavior.SnapLineType.Left">
       <summary>A vertical snapline typically aligned to the left edge of a control.</summary>
@@ -13056,14 +13085,11 @@
     <member name="F:System.Windows.Forms.Design.Behavior.SnapLineType.Right">
       <summary>A vertical snapline typically aligned to the right edge of a control.</summary>
     </member>
-    <member name="F:System.Windows.Forms.Design.Behavior.SnapLineType.Horizontal">
-      <summary>A horizontal snapline typically not associated with an edge of a control.</summary>
+    <member name="F:System.Windows.Forms.Design.Behavior.SnapLineType.Top">
+      <summary>A horizontal snapline typically aligned to the top edge of a control.</summary>
     </member>
     <member name="F:System.Windows.Forms.Design.Behavior.SnapLineType.Vertical">
       <summary>A vertical snapline typically not associated with an edge of a control.</summary>
-    </member>
-    <member name="F:System.Windows.Forms.Design.Behavior.SnapLineType.Baseline">
-      <summary>A horizontal snapline typically associated with a primary internal feature of a control; for example, the base of the text string in a <see cref="T:System.Windows.Forms.Label" /> control.</summary>
     </member>
   </members>
 </doc>

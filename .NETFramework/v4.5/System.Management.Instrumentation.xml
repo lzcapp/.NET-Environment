@@ -66,22 +66,20 @@
     <member name="F:System.Management.Instrumentation.ManagementQualifierFlavors.Amended">
       <summary>The qualifier is not required in the basic class definition and can be moved to the amendment to be localized.</summary>
     </member>
-    <member name="F:System.Management.Instrumentation.ManagementQualifierFlavors.DisableOverride">
-      <summary>The qualifier cannot be overridden in a derived class or instance. Note that being able to override a propagated qualifier is the default.</summary>
-    </member>
     <member name="F:System.Management.Instrumentation.ManagementQualifierFlavors.ClassOnly">
       <summary>The qualifier is propagated to instances.</summary>
+    </member>
+    <member name="F:System.Management.Instrumentation.ManagementQualifierFlavors.DisableOverride">
+      <summary>The qualifier cannot be overridden in a derived class or instance. Note that being able to override a propagated qualifier is the default.</summary>
     </member>
     <member name="F:System.Management.Instrumentation.ManagementQualifierFlavors.ThisClassOnly">
       <summary>The qualifier is not propagated to derived classes.</summary>
     </member>
     <member name="T:System.Management.Instrumentation.WmiProviderInstallationException">
       <summary>Represents an exception to throw when WMI provider installation fails.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Management.Instrumentation.WmiProviderInstallationException.#ctor">
       <summary>Initializes a new instance of the class. This is the default constructor.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Management.Instrumentation.WmiProviderInstallationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Initializes a new instance of the class with serialization information.</summary>
@@ -91,13 +89,11 @@
     <member name="M:System.Management.Instrumentation.WmiProviderInstallationException.#ctor(System.String)">
       <summary>Initializes a new instance of the class with a message that describes the exception.</summary>
       <param name="message"> Message that describes the exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Management.Instrumentation.WmiProviderInstallationException.#ctor(System.String,System.Exception)">
       <summary>Initializes a new class with the specified string and exception.</summary>
       <param name="message">Message that describes the exception.</param>
       <param name="innerException">The Exception instance that caused the current exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
   </members>
 </doc>

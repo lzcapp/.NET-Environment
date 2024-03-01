@@ -364,11 +364,11 @@
     <member name="T:System.Configuration.Install.UninstallAction">
       <summary>Specifies what an installer should do during an uninstallation.</summary>
     </member>
-    <member name="F:System.Configuration.Install.UninstallAction.Remove">
-      <summary>Removes the resource the installer created.</summary>
-    </member>
     <member name="F:System.Configuration.Install.UninstallAction.NoAction">
       <summary>Leaves the resource created by the installer as is.</summary>
+    </member>
+    <member name="F:System.Configuration.Install.UninstallAction.Remove">
+      <summary>Removes the resource the installer created.</summary>
     </member>
     <member name="T:System.Diagnostics.EventLogInstaller">
       <summary>Allows you to install and configure an event log that your application reads from or writes to when running. </summary>

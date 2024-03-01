@@ -66,6 +66,10 @@
       <summary>Gets or sets whether projection requests should be accepted.</summary>
       <returns>true if projection requests are supported; otherwise false.</returns>
     </member>
+    <member name="P:System.Data.Services.DataServiceBehavior.AcceptReplaceFunctionInQuery">
+      <summary>Allow replace functions in the request url.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
     <member name="P:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete">
       <summary>Gets or sets whether to invoke change interceptors when a link is deleted.</summary>
       <returns>A <see cref="T:System.Boolean" /> value that is true when interceptors should be invoked; otherwise false. </returns>
@@ -262,26 +266,8 @@
     <member name="T:System.Data.Services.EntitySetRights">
       <summary>An enumeration used to define access rights to data that is deployed by WCF Data Services.</summary>
     </member>
-    <member name="F:System.Data.Services.EntitySetRights.None">
-      <summary>Denies all rights to access data.</summary>
-    </member>
-    <member name="F:System.Data.Services.EntitySetRights.ReadSingle">
-      <summary>Authorization to read single data items.</summary>
-    </member>
-    <member name="F:System.Data.Services.EntitySetRights.ReadMultiple">
-      <summary>Authorization to read sets of data.</summary>
-    </member>
-    <member name="F:System.Data.Services.EntitySetRights.WriteAppend">
-      <summary>Authorization to create new data items in data sets.</summary>
-    </member>
-    <member name="F:System.Data.Services.EntitySetRights.WriteReplace">
-      <summary>Authorization to replace data.</summary>
-    </member>
-    <member name="F:System.Data.Services.EntitySetRights.WriteDelete">
-      <summary>Authorization to delete data items from data sets.</summary>
-    </member>
-    <member name="F:System.Data.Services.EntitySetRights.WriteMerge">
-      <summary>Authorization to merge data.</summary>
+    <member name="F:System.Data.Services.EntitySetRights.All">
+      <summary>Authorization to create, read, update, and delete data.</summary>
     </member>
     <member name="F:System.Data.Services.EntitySetRights.AllRead">
       <summary>Authorization to read data.</summary>
@@ -289,8 +275,26 @@
     <member name="F:System.Data.Services.EntitySetRights.AllWrite">
       <summary>Authorization to write data.</summary>
     </member>
-    <member name="F:System.Data.Services.EntitySetRights.All">
-      <summary>Authorization to create, read, update, and delete data.</summary>
+    <member name="F:System.Data.Services.EntitySetRights.None">
+      <summary>Denies all rights to access data.</summary>
+    </member>
+    <member name="F:System.Data.Services.EntitySetRights.ReadMultiple">
+      <summary>Authorization to read sets of data.</summary>
+    </member>
+    <member name="F:System.Data.Services.EntitySetRights.ReadSingle">
+      <summary>Authorization to read single data items.</summary>
+    </member>
+    <member name="F:System.Data.Services.EntitySetRights.WriteAppend">
+      <summary>Authorization to create new data items in data sets.</summary>
+    </member>
+    <member name="F:System.Data.Services.EntitySetRights.WriteDelete">
+      <summary>Authorization to delete data items from data sets.</summary>
+    </member>
+    <member name="F:System.Data.Services.EntitySetRights.WriteMerge">
+      <summary>Authorization to merge data.</summary>
+    </member>
+    <member name="F:System.Data.Services.EntitySetRights.WriteReplace">
+      <summary>Authorization to replace data.</summary>
     </member>
     <member name="T:System.Data.Services.ETagAttribute">
       <summary>This attribute on an entity type is used to specify the properties that determine changes in content.</summary>
@@ -673,23 +677,23 @@
     <member name="T:System.Data.Services.ServiceOperationRights">
       <summary>An enumeration used to define access rights to service operations deployed by WCF Data Services.</summary>
     </member>
-    <member name="F:System.Data.Services.ServiceOperationRights.None">
-      <summary>No authorization to access the service operation.</summary>
-    </member>
-    <member name="F:System.Data.Services.ServiceOperationRights.ReadSingle">
-      <summary>Authorization to read a single data item by using the service operation.</summary>
-    </member>
-    <member name="F:System.Data.Services.ServiceOperationRights.ReadMultiple">
-      <summary>Authorization to read multiple data items by using the service operation.</summary>
+    <member name="F:System.Data.Services.ServiceOperationRights.All">
+      <summary>All rights assigned to the service operation..</summary>
     </member>
     <member name="F:System.Data.Services.ServiceOperationRights.AllRead">
       <summary>Authorization to read single or multiple data items deployed by the service operation.</summary>
     </member>
-    <member name="F:System.Data.Services.ServiceOperationRights.All">
-      <summary>All rights assigned to the service operation..</summary>
+    <member name="F:System.Data.Services.ServiceOperationRights.None">
+      <summary>No authorization to access the service operation.</summary>
     </member>
     <member name="F:System.Data.Services.ServiceOperationRights.OverrideEntitySetRights">
       <summary>Overrides entity set rights that are explicitly defined in the data service with the service operation rights.</summary>
+    </member>
+    <member name="F:System.Data.Services.ServiceOperationRights.ReadMultiple">
+      <summary>Authorization to read multiple data items by using the service operation.</summary>
+    </member>
+    <member name="F:System.Data.Services.ServiceOperationRights.ReadSingle">
+      <summary>Authorization to read a single data item by using the service operation.</summary>
     </member>
     <member name="T:System.Data.Services.SingleResultAttribute">
       <summary>Attribute used on service operations to specify that they return a single instance of their return element. </summary>
@@ -700,9 +704,6 @@
     <member name="T:System.Data.Services.UpdateOperations">
       <summary>An enumeration used to specify the update operations that were performed on an entity. </summary>
     </member>
-    <member name="F:System.Data.Services.UpdateOperations.None">
-      <summary>No operations were performed on the resource.</summary>
-    </member>
     <member name="F:System.Data.Services.UpdateOperations.Add">
       <summary>The entity was added.</summary>
     </member>
@@ -711,6 +712,39 @@
     </member>
     <member name="F:System.Data.Services.UpdateOperations.Delete">
       <summary>The entity was deleted.</summary>
+    </member>
+    <member name="F:System.Data.Services.UpdateOperations.None">
+      <summary>No operations were performed on the resource.</summary>
+    </member>
+    <member name="T:System.Data.Services.Configuration.DataServicesFeaturesSection">
+      <summary>A configuration section that allows you to configure WCF data services features.</summary>
+    </member>
+    <member name="M:System.Data.Services.Configuration.DataServicesFeaturesSection.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Data.Services.Configuration.DataServicesFeaturesSection" /> class.</summary>
+    </member>
+    <member name="P:System.Data.Services.Configuration.DataServicesFeaturesSection.ReplaceFunction">
+      <summary>Gets or sets a DataServiceReplaceFunctionFeature instance.</summary>
+      <returns>A DataServiceReplaceFunctionFeature instance.</returns>
+    </member>
+    <member name="T:System.Data.Services.Configuration.DataServicesReplaceFunctionFeature">
+      <summary>A configuration element that allows you to enable or disable the data service replace functionality.</summary>
+    </member>
+    <member name="M:System.Data.Services.Configuration.DataServicesReplaceFunctionFeature.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Data.Services.Configuration.DataServicesReplaceFunctionFeature" /> class.</summary>
+    </member>
+    <member name="P:System.Data.Services.Configuration.DataServicesReplaceFunctionFeature.Enable">
+      <summary>Gets or sets a boolean value that specifies if the Replace functionality is enabled.</summary>
+      <returns>True if the replace functionality is enabled, otherwise false.</returns>
+    </member>
+    <member name="T:System.Data.Services.Configuration.DataServicesSectionGroup">
+      <summary>Represents the DataServicesSectionGroup configuration section group.</summary>
+    </member>
+    <member name="M:System.Data.Services.Configuration.DataServicesSectionGroup.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Data.Services.Configuration.DataServicesSectionGroup" /> class.</summary>
+    </member>
+    <member name="P:System.Data.Services.Configuration.DataServicesSectionGroup.Features">
+      <summary>Gets the DataServicesFeaturesSection instance associated with the DataServicesSectionGroup.</summary>
+      <returns>A DataServicesFeaturesSection instance.</returns>
     </member>
     <member name="T:System.Data.Services.Internal.ExpandedWrapper`1">
       <summary>This class is used internally by the system to implement support for queries with eager loading of related entities.</summary>
@@ -2041,23 +2075,23 @@
     <member name="T:System.Data.Services.Providers.ResourcePropertyKind">
       <summary>Enumeration for the kinds of properties that a resource can have.</summary>
     </member>
-    <member name="F:System.Data.Services.Providers.ResourcePropertyKind.Primitive">
-      <summary>A primitive type property.</summary>
+    <member name="F:System.Data.Services.Providers.ResourcePropertyKind.ComplexType">
+      <summary>Complex or compound property.</summary>
+    </member>
+    <member name="F:System.Data.Services.Providers.ResourcePropertyKind.ETag">
+      <summary>An ETag property.</summary>
     </member>
     <member name="F:System.Data.Services.Providers.ResourcePropertyKind.Key">
       <summary>A property that is part of the key.</summary>
     </member>
-    <member name="F:System.Data.Services.Providers.ResourcePropertyKind.ComplexType">
-      <summary>Complex or compound property.</summary>
+    <member name="F:System.Data.Services.Providers.ResourcePropertyKind.Primitive">
+      <summary>A primitive type property.</summary>
     </member>
     <member name="F:System.Data.Services.Providers.ResourcePropertyKind.ResourceReference">
       <summary>A reference to another resource.</summary>
     </member>
     <member name="F:System.Data.Services.Providers.ResourcePropertyKind.ResourceSetReference">
       <summary>A reference to a resource set.</summary>
-    </member>
-    <member name="F:System.Data.Services.Providers.ResourcePropertyKind.ETag">
-      <summary>An ETag property.</summary>
     </member>
     <member name="T:System.Data.Services.Providers.ResourceSet">
       <summary>Represents a collection of entity type values.</summary>
@@ -2194,11 +2228,11 @@
     <member name="T:System.Data.Services.Providers.ResourceTypeKind">
       <summary>Enumeration for the kind of resource key.</summary>
     </member>
-    <member name="F:System.Data.Services.Providers.ResourceTypeKind.EntityType">
-      <summary>Entity type resource.</summary>
-    </member>
     <member name="F:System.Data.Services.Providers.ResourceTypeKind.ComplexType">
       <summary>Complex type resource.</summary>
+    </member>
+    <member name="F:System.Data.Services.Providers.ResourceTypeKind.EntityType">
+      <summary>Entity type resource.</summary>
     </member>
     <member name="F:System.Data.Services.Providers.ResourceTypeKind.Primitive">
       <summary>Primitive type resource.</summary>

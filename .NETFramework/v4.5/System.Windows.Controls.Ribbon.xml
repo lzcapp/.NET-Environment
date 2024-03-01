@@ -1178,29 +1178,29 @@
     <member name="T:System.Windows.Controls.KeyTipHorizontalPlacement">
       <summary>Specifies the values for the horizontal placement of the KeyTip relative to its placement target.</summary>
     </member>
-    <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipLeftAtTargetLeft">
-      <summary>The left of the KeyTip is aligned with the left of the target element.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipLeftAtTargetCenter">
-      <summary>The left of the KeyTip is aligned with the center of the target element.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipLeftAtTargetRight">
-      <summary>The left of the KeyTip is aligned with the right of the target element.</summary>
+    <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipCenterAtTargetCenter">
+      <summary>The center of the KeyTip is aligned with the center of the target element.</summary>
     </member>
     <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipCenterAtTargetLeft">
       <summary>The center of the KeyTip is aligned with the left of the target element.</summary>
     </member>
-    <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipCenterAtTargetCenter">
-      <summary>The center of the KeyTip is aligned with the center of the target element.</summary>
-    </member>
     <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipCenterAtTargetRight">
       <summary>The center of the KeyTip is aligned with the right of the target element.</summary>
     </member>
-    <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipRightAtTargetLeft">
-      <summary>The right of the KeyTip is aligned with the left of the target element.</summary>
+    <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipLeftAtTargetCenter">
+      <summary>The left of the KeyTip is aligned with the center of the target element.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipLeftAtTargetLeft">
+      <summary>The left of the KeyTip is aligned with the left of the target element.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipLeftAtTargetRight">
+      <summary>The left of the KeyTip is aligned with the right of the target element.</summary>
     </member>
     <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipRightAtTargetCenter">
       <summary>The right of the KeyTip is aligned with the center of the target element.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipRightAtTargetLeft">
+      <summary>The right of the KeyTip is aligned with the left of the target element.</summary>
     </member>
     <member name="F:System.Windows.Controls.KeyTipHorizontalPlacement.KeyTipRightAtTargetRight">
       <summary>The right of the KeyTip is aligned with the right of the target element.</summary>
@@ -1325,32 +1325,32 @@
     <member name="T:System.Windows.Controls.KeyTipVerticalPlacement">
       <summary>Specifies the values for the vertical placement of the KeyTip relative to its placement target.</summary>
     </member>
-    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipTopAtTargetTop">
-      <summary>The top of the KeyTip is aligned with the top of the target element.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipTopAtTargetCenter">
-      <summary>The top of the KeyTip is aligned with the center of the target element.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipTopAtTargetBottom">
-      <summary>The top of the KeyTip is aligned with the bottom of the target element.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipCenterAtTargetTop">
-      <summary>The center of the KeyTip is aligned with the top of the target element.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipCenterAtTargetCenter">
-      <summary>The center of the KeyTip is aligned with the center of the target element.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipCenterAtTargetBottom">
-      <summary>The center of the KeyTip is aligned with the bottom of the target element.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipBottomAtTargetTop">
-      <summary>The bottom of the KeyTip is aligned with the top of the target element.</summary>
+    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipBottomAtTargetBottom">
+      <summary>The bottom of the KeyTip is aligned with the bottom of the target element.</summary>
     </member>
     <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipBottomAtTargetCenter">
       <summary>The bottom of the KeyTip is aligned with the center of the target element.</summary>
     </member>
-    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipBottomAtTargetBottom">
-      <summary>The bottom of the KeyTip is aligned with the bottom of the target element.</summary>
+    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipBottomAtTargetTop">
+      <summary>The bottom of the KeyTip is aligned with the top of the target element.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipCenterAtTargetBottom">
+      <summary>The center of the KeyTip is aligned with the bottom of the target element.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipCenterAtTargetCenter">
+      <summary>The center of the KeyTip is aligned with the center of the target element.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipCenterAtTargetTop">
+      <summary>The center of the KeyTip is aligned with the top of the target element.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipTopAtTargetBottom">
+      <summary>The top of the KeyTip is aligned with the bottom of the target element.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipTopAtTargetCenter">
+      <summary>The top of the KeyTip is aligned with the center of the target element.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.KeyTipVerticalPlacement.KeyTipTopAtTargetTop">
+      <summary>The top of the KeyTip is aligned with the top of the target element.</summary>
     </member>
     <member name="T:System.Windows.Controls.Ribbon.Ribbon">
       <summary>Represents the root element of a ribbon user interface that hosts a Quick Access Toolbar, Application Menu, and tabs.</summary>
@@ -1756,14 +1756,14 @@
     <member name="T:System.Windows.Controls.Ribbon.RibbonApplicationMenuItemLevel">
       <summary>Defines constants that specify the level that a menu item is displayed at in the ribbon Application Menu.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Ribbon.RibbonApplicationMenuItemLevel.Top">
-      <summary>The menu item is displayed in the top level.</summary>
-    </member>
     <member name="F:System.Windows.Controls.Ribbon.RibbonApplicationMenuItemLevel.Middle">
       <summary>The menu item is displayed in the middle level.</summary>
     </member>
     <member name="F:System.Windows.Controls.Ribbon.RibbonApplicationMenuItemLevel.Sub">
       <summary>The menu item is displayed in the lowest level.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.Ribbon.RibbonApplicationMenuItemLevel.Top">
+      <summary>The menu item is displayed in the top level.</summary>
     </member>
     <member name="T:System.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem">
       <summary>Represents a menu item inside a <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationMenu" /> control that can invoke a command and also display a submenu.</summary>
@@ -2859,11 +2859,11 @@
     <member name="F:System.Windows.Controls.Ribbon.RibbonControlLengthUnitType.Auto">
       <summary>The sizing method is not specified.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Ribbon.RibbonControlLengthUnitType.Pixel">
-      <summary>The size is a fixed value expressed in pixels.</summary>
-    </member>
     <member name="F:System.Windows.Controls.Ribbon.RibbonControlLengthUnitType.Item">
       <summary>The size is a fixed value expressed in the number of child elements.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.Ribbon.RibbonControlLengthUnitType.Pixel">
+      <summary>The size is a fixed value expressed in pixels.</summary>
     </member>
     <member name="F:System.Windows.Controls.Ribbon.RibbonControlLengthUnitType.Star">
       <summary>The size is a weighted proportion of the available space.</summary>
@@ -4496,11 +4496,11 @@
     <member name="F:System.Windows.Controls.Ribbon.RibbonImageSize.Collapsed">
       <summary>The image is collapsed.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Ribbon.RibbonImageSize.Small">
-      <summary>The small image is shown.</summary>
-    </member>
     <member name="F:System.Windows.Controls.Ribbon.RibbonImageSize.Large">
       <summary>The large image is shown.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.Ribbon.RibbonImageSize.Small">
+      <summary>The small image is shown.</summary>
     </member>
     <member name="T:System.Windows.Controls.Ribbon.RibbonMenuButton">
       <summary>Represents a button on the ribbon that displays a drop-down menu when clicked.</summary>
@@ -5669,11 +5669,11 @@
     <member name="T:System.Windows.Controls.Ribbon.RibbonSplitButtonLabelPosition">
       <summary>Provides values that indicate the position of the label of a <see cref="T:System.Windows.Controls.Ribbon.RibbonSplitButton" />.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Ribbon.RibbonSplitButtonLabelPosition.Header">
-      <summary>Indicates that the label should be positioned in the header section of the <see cref="T:System.Windows.Controls.Ribbon.RibbonSplitButton" />.</summary>
-    </member>
     <member name="F:System.Windows.Controls.Ribbon.RibbonSplitButtonLabelPosition.DropDown">
       <summary>Indicates that the label should be positioned in the drop-down section of the <see cref="T:System.Windows.Controls.Ribbon.RibbonSplitButton" />.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.Ribbon.RibbonSplitButtonLabelPosition.Header">
+      <summary>Indicates that the label should be positioned in the header section of the <see cref="T:System.Windows.Controls.Ribbon.RibbonSplitButton" />.</summary>
     </member>
     <member name="T:System.Windows.Controls.Ribbon.RibbonSplitMenuItem">
       <summary>Represents a menu item inside a <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> menu that can invoke a command and also display a submenu.</summary>

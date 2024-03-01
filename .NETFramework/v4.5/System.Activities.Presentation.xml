@@ -1442,7 +1442,7 @@
       <summary>Represents the workflow designer icons.</summary>
     </member>
     <member name="M:System.Activities.Presentation.WorkflowDesignerIcons.UseWindowsStoreAppStyleIcons">
-      <summary>Uses the Windows app icons.</summary>
+      <summary>Uses the Windows Store App style icons.</summary>
     </member>
     <member name="T:System.Activities.Presentation.WorkflowDesignerIcons.Activities">
       <summary>Represents the designer icons for the activities in workflow.</summary>
@@ -2002,7 +2002,7 @@
       <summary>Identifies the <see cref="P:System.Activities.Presentation.WorkflowItemsPresenter.Items" /> dependency property.</summary>
     </member>
     <member name="M:System.Activities.Presentation.WorkflowItemsPresenter.OnCreateAutomationPeer">
-      <summary>Returns a <see cref="T:System.Activities.Presentation.WorkflowItemsPresenter" />-specific AutomationPeer implementation for the  infrastructure. Implement this method in your derived class to add class handling for this event.</summary>
+      <summary>Returns a <see cref="T:System.Activities.Presentation.WorkflowItemsPresenter" />-specific AutomationPeer implementation for the Windows Presentation Foundation (WPF) infrastructure. Implement this method in your derived class to add class handling for this event.</summary>
       <returns>The type-specific AutomationPeer implementation.</returns>
     </member>
     <member name="M:System.Activities.Presentation.WorkflowItemsPresenter.OnDragEnter(System.Windows.DragEventArgs)">
@@ -2063,7 +2063,7 @@
       <summary>Identifies the <see cref="P:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate" /> dependency property.</summary>
     </member>
     <member name="T:System.Activities.Presentation.WorkflowViewElement">
-      <summary>Specifies the base class for any UI element that appears on the  designer canvas and that visually represents an instance of an atomic item that can be edited.</summary>
+      <summary>Specifies the base class for any UI element that appears on the Windows Workflow Foundation designer canvas and that visually represents an instance of an atomic item that can be edited.</summary>
     </member>
     <member name="M:System.Activities.Presentation.WorkflowViewElement.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> class.</summary>
@@ -2134,7 +2134,7 @@
       <param name="menu">The <see cref="T:System.Windows.Controls.ContextMenu" /> that is loaded.</param>
     </member>
     <member name="M:System.Activities.Presentation.WorkflowViewElement.OnCreateAutomationPeer">
-      <summary>Returns a <see cref="T:System.Activities.Presentation.WorkflowViewElement" />-specific <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> implementation for the  infrastructure.</summary>
+      <summary>Returns a <see cref="T:System.Activities.Presentation.WorkflowViewElement" />-specific <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> implementation for the Windows Presentation Foundation (WPF) infrastructure.</summary>
       <returns>The type-specific <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> implementation.</returns>
     </member>
     <member name="M:System.Activities.Presentation.WorkflowViewElement.OnDragEnter(System.Windows.DragEventArgs)">
@@ -2429,17 +2429,17 @@
     <member name="T:System.Activities.Presentation.Debug.BreakpointTypes">
       <summary>Represents an enumeration that provides settings for breakpoints.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.Debug.BreakpointTypes.None">
-      <summary>No breakpoint is set.</summary>
-    </member>
-    <member name="F:System.Activities.Presentation.Debug.BreakpointTypes.Enabled">
-      <summary>Represents that the breakpoint is enabled.</summary>
-    </member>
     <member name="F:System.Activities.Presentation.Debug.BreakpointTypes.Bounded">
       <summary>Represents a bounded breakpoint, which implements the where and when of breaking at a desired point in a program.</summary>
     </member>
     <member name="F:System.Activities.Presentation.Debug.BreakpointTypes.Conditional">
       <summary>Represents a conditional breakpoint, which is an expression that is evaluated to determine whether the breakpoint will occur.</summary>
+    </member>
+    <member name="F:System.Activities.Presentation.Debug.BreakpointTypes.Enabled">
+      <summary>Represents that the breakpoint is enabled.</summary>
+    </member>
+    <member name="F:System.Activities.Presentation.Debug.BreakpointTypes.None">
+      <summary>No breakpoint is set.</summary>
     </member>
     <member name="T:System.Activities.Presentation.Debug.DebuggerService">
       <summary>Manages the placement of breakpoints for a debugging process.</summary>
@@ -2972,7 +2972,7 @@
       <param name="type">The type to be checked.</param>
     </member>
     <member name="T:System.Activities.Presentation.Hosting.ReadOnlyState">
-      <summary>Represents a <see cref="T:System.Activities.Presentation.ContextItem" /> that is published in the editing context and that indicates whether the  designer is in a read-only state.</summary>
+      <summary>Represents a <see cref="T:System.Activities.Presentation.ContextItem" /> that is published in the editing context and that indicates whether the Windows Workflow Foundation designer is in a read-only state.</summary>
     </member>
     <member name="M:System.Activities.Presentation.Hosting.ReadOnlyState.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Activities.Presentation.Hosting.ReadOnlyState" /> class.</summary>
@@ -3392,11 +3392,11 @@ Returns <see cref="T:System.Collections.Generic.IEnumerable`1" />.
     <member name="T:System.Activities.Presentation.Model.CreateOptions">
       <summary>Used by a <see cref="T:System.Activities.Presentation.Model.ModelFactory" /> instance to specify how to create a new item.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.Model.CreateOptions.None">
-      <summary>Creates the object and does not perform any operation on it. This is the default option when creating an item with the <see cref="T:System.Activities.Presentation.Model.ModelFactory" /> class.</summary>
-    </member>
     <member name="F:System.Activities.Presentation.Model.CreateOptions.InitializeDefaults">
       <summary>Creates the item and asks the object to perform any default initialization. This flag is generally passed in when a new control or object is being created by a user.</summary>
+    </member>
+    <member name="F:System.Activities.Presentation.Model.CreateOptions.None">
+      <summary>Creates the object and does not perform any operation on it. This is the default option when creating an item with the <see cref="T:System.Activities.Presentation.Model.ModelFactory" /> class.</summary>
     </member>
     <member name="T:System.Activities.Presentation.Model.EditingScope">
       <summary>An editing scope represents a collection of changes to the <see cref="T:System.Activities.Presentation.Model.ModelItem" /> tree that can be committed or rolled back as one atomic unit of work. </summary>
@@ -4554,17 +4554,17 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
     <member name="T:System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode">
       <summary>Contains the different edit modes of a <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyContainer" />.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode.Inline">
-      <summary>Inline editor mode of the property inspector dialog window, which enables the editing of values directly into that window.</summary>
-    </member>
-    <member name="F:System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode.ExtendedPopup">
-      <summary>Editor mode of the property inspector dialog window, which enables the implementation of an additional user interface displayed on top of the property inspector window.</summary>
+    <member name="F:System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode.Dialog">
+      <summary>Edit mode of the property inspector dialog window, which enables the implementation of a pop-up window to contain the property editor.</summary>
     </member>
     <member name="F:System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode.ExtendedPinned">
       <summary>Editor mode of the property inspector dialog window, which enables the implementation of an additional user interface pinned into place within the property inspector window.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode.Dialog">
-      <summary>Edit mode of the property inspector dialog window, which enables the implementation of a pop-up window to contain the property editor.</summary>
+    <member name="F:System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode.ExtendedPopup">
+      <summary>Editor mode of the property inspector dialog window, which enables the implementation of an additional user interface displayed on top of the property inspector window.</summary>
+    </member>
+    <member name="F:System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode.Inline">
+      <summary>Inline editor mode of the property inspector dialog window, which enables the editing of values directly into that window.</summary>
     </member>
     <member name="T:System.Activities.Presentation.PropertyEditing.PropertyEntry">
       <summary>Represents the data of a property for a selected item and enables editing of this property with type-specific data. </summary>
@@ -5060,12 +5060,6 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
     <member name="T:System.Activities.Presentation.Services.ModelChangeType">
       <summary>Specifies the model change type.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.Services.ModelChangeType.None">
-      <summary>None operation.</summary>
-    </member>
-    <member name="F:System.Activities.Presentation.Services.ModelChangeType.PropertyChanged">
-      <summary>A property is changed.</summary>
-    </member>
     <member name="F:System.Activities.Presentation.Services.ModelChangeType.CollectionItemAdded">
       <summary>A collection item is added.</summary>
     </member>
@@ -5080,6 +5074,12 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
     </member>
     <member name="F:System.Activities.Presentation.Services.ModelChangeType.DictionaryValueChanged">
       <summary>A dictionary value is changed.</summary>
+    </member>
+    <member name="F:System.Activities.Presentation.Services.ModelChangeType.None">
+      <summary>None operation.</summary>
+    </member>
+    <member name="F:System.Activities.Presentation.Services.ModelChangeType.PropertyChanged">
+      <summary>A property is changed.</summary>
     </member>
     <member name="T:System.Activities.Presentation.Services.ModelSearchService">
       <summary>Represents a class that is responsible for generating a TextImage and navigating to the corresponding ModelItem in the workflow designer.</summary>
@@ -5710,17 +5710,17 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
     <member name="T:System.Activities.Presentation.Validation.ValidationState">
       <summary>An enumeration of values that represent states of activity validation.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.Validation.ValidationState.Error">
-      <summary>A value that indicates that an error occurred during the validation of an activity.</summary>
-    </member>
-    <member name="F:System.Activities.Presentation.Validation.ValidationState.Warning">
-      <summary>A value that indicates that a warning occurred during the validation of an activity.</summary>
-    </member>
     <member name="F:System.Activities.Presentation.Validation.ValidationState.ChildInvalid">
       <summary>A value that represents that validation found a child activity to be invalid.</summary>
     </member>
+    <member name="F:System.Activities.Presentation.Validation.ValidationState.Error">
+      <summary>A value that indicates that an error occurred during the validation of an activity.</summary>
+    </member>
     <member name="F:System.Activities.Presentation.Validation.ValidationState.Valid">
       <summary>A value that indicates that an activity is valid.</summary>
+    </member>
+    <member name="F:System.Activities.Presentation.Validation.ValidationState.Warning">
+      <summary>A value that indicates that a warning occurred during the validation of an activity.</summary>
     </member>
     <member name="T:System.Activities.Presentation.View.CommandMenuMode">
       <summary>Specifies the full command menu for the context menu that appears when you right-click the canvas.</summary>
@@ -5732,7 +5732,7 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
       <summary>Specifies the no-command menu mode.</summary>
     </member>
     <member name="T:System.Activities.Presentation.View.DesignerView">
-      <summary>Provides  controls for the designer view that represents the workflow canvas.</summary>
+      <summary>Provides Windows Presentation Foundation (WPF) controls for the designer view that represents the workflow canvas.</summary>
     </member>
     <member name="P:System.Activities.Presentation.View.DesignerView.ActivitySchema">
       <summary>Gets the activity schema.</summary>
@@ -5810,7 +5810,7 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
       <summary>The command used to expand the list for the current element.</summary>
     </member>
     <member name="F:System.Activities.Presentation.View.DesignerView.ExpandCommand">
-      <summary>The command used to navigate to the selected child of a composite activity and expand it to fill the full screen of the Windows Workflow Designer surface. The View full screen context menu command initiates this action.</summary>
+      <summary>The command used to navigate to the selected child of a composite activity and expand it to fill the full screen of the Windows Workflow Designer surface. The <paramref name="View full screen" /> context menu command initiates this action.</summary>
     </member>
     <member name="F:System.Activities.Presentation.View.DesignerView.ExpandInPlaceCommand">
       <summary>The command used to expand the list for the current element in place within the current display.</summary>
@@ -5834,7 +5834,7 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
       <param name="obj">The object whose command menu mode is retrieved. </param>
     </member>
     <member name="F:System.Activities.Presentation.View.DesignerView.GoToParentCommand">
-      <summary>The command used to navigate to the parent activity of the selected child activity and expand it to fill the full screen of the Windows Workflow Designer surface. The View parent context menu command initiates this action.</summary>
+      <summary>The command used to navigate to the parent activity of the selected child activity and expand it to fill the full screen of the Windows Workflow Designer surface. The <paramref name="View parent" /> context menu command initiates this action.</summary>
     </member>
     <member name="F:System.Activities.Presentation.View.DesignerView.HideAllAnnotationCommand">
       <summary>The command used to hide all annotations.</summary>
@@ -5965,7 +5965,7 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
       <param name="target">The target.</param>
     </member>
     <member name="F:System.Activities.Presentation.View.DesignerView.ToggleArgumentDesignerCommand">
-      <summary>The command used to show or hide the argument designer. Clicking the Arguments button on the Windows Workflow Designer surface initiates this action. </summary>
+      <summary>The command used to show or hide the argument designer. Clicking the <paramref name="Arguments" /> button on the Windows Workflow Designer surface initiates this action. </summary>
     </member>
     <member name="F:System.Activities.Presentation.View.DesignerView.ToggleImportsDesignerCommand">
       <summary>The command used to toggle the imports designer.</summary>
@@ -5977,7 +5977,7 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
       <summary>The command used to toggle the selection.</summary>
     </member>
     <member name="F:System.Activities.Presentation.View.DesignerView.ToggleVariableDesignerCommand">
-      <summary>The command used to show or hide the variable designer. Clicking the Variables button on the Windows Workflow Designer surface initiates this action.</summary>
+      <summary>The command used to show or hide the variable designer. Clicking the <paramref name="Variables" /> button on the Windows Workflow Designer surface initiates this action.</summary>
     </member>
     <member name="F:System.Activities.Presentation.View.DesignerView.UndoCommand">
       <summary>The command used to undo the last operation in the buffer.</summary>
@@ -6002,7 +6002,7 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
       <summary>The command used to zoom in on the current Windows Workflow Designer surface.</summary>
     </member>
     <member name="F:System.Activities.Presentation.View.DesignerView.ZoomOutCommand">
-      <summary>The command used to zoom out of the current  surface.</summary>
+      <summary>The command used to zoom out of the current Windows Workflow Designer surface.</summary>
     </member>
     <member name="T:System.Activities.Presentation.View.EditingState">
       <summary>Enumerates the possible states of editing an expression in an expression text box.</summary>
@@ -6010,11 +6010,11 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
     <member name="F:System.Activities.Presentation.View.EditingState.Editing">
       <summary>Specifies the editing state for an expression.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.View.EditingState.Validating">
-      <summary>Specifies the validating state in editing an expression.</summary>
-    </member>
     <member name="F:System.Activities.Presentation.View.EditingState.Idle">
       <summary>Specifies the idle state in editing an expression.</summary>
+    </member>
+    <member name="F:System.Activities.Presentation.View.EditingState.Validating">
+      <summary>Specifies the validating state in editing an expression.</summary>
     </member>
     <member name="T:System.Activities.Presentation.View.ExpressionTextBox">
       <summary>Describes a control that enables the user to edit an expression in an activity designer.</summary>
@@ -6488,11 +6488,8 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
     <member name="T:System.Activities.Presentation.View.ShellBarItemVisibility">
       <summary>Enumerates the items that are visible in the shell bar.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.View.ShellBarItemVisibility.None">
-      <summary>Specifies that nothing is visible.</summary>
-    </member>
-    <member name="F:System.Activities.Presentation.View.ShellBarItemVisibility.Variables">
-      <summary>Specifies that the variables are visible.</summary>
+    <member name="F:System.Activities.Presentation.View.ShellBarItemVisibility.All">
+      <summary>Specifies that all items are visible.</summary>
     </member>
     <member name="F:System.Activities.Presentation.View.ShellBarItemVisibility.Arguments">
       <summary>Specifies that arguments are visible.</summary>
@@ -6500,35 +6497,38 @@ A <see cref="T:System.Windows.DependencyObject" /> that graphically represents t
     <member name="F:System.Activities.Presentation.View.ShellBarItemVisibility.Imports">
       <summary>Specifies that imports are visible.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.View.ShellBarItemVisibility.Zoom">
-      <summary>Specifies that the zoom is visible.</summary>
-    </member>
     <member name="F:System.Activities.Presentation.View.ShellBarItemVisibility.MiniMap">
       <summary>Specifies that the mini map is visible.</summary>
+    </member>
+    <member name="F:System.Activities.Presentation.View.ShellBarItemVisibility.None">
+      <summary>Specifies that nothing is visible.</summary>
     </member>
     <member name="F:System.Activities.Presentation.View.ShellBarItemVisibility.PanMode">
       <summary>Specifies that PanMode is visible.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.View.ShellBarItemVisibility.All">
-      <summary>Specifies that all items are visible.</summary>
+    <member name="F:System.Activities.Presentation.View.ShellBarItemVisibility.Variables">
+      <summary>Specifies that the variables are visible.</summary>
+    </member>
+    <member name="F:System.Activities.Presentation.View.ShellBarItemVisibility.Zoom">
+      <summary>Specifies that the zoom is visible.</summary>
     </member>
     <member name="T:System.Activities.Presentation.View.ShellHeaderItemsVisibility">
       <summary>Specifies the visibility of shell header items.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.View.ShellHeaderItemsVisibility.None">
-      <summary>None is visible.</summary>
+    <member name="F:System.Activities.Presentation.View.ShellHeaderItemsVisibility.All">
+      <summary>All items are visible.</summary>
     </member>
     <member name="F:System.Activities.Presentation.View.ShellHeaderItemsVisibility.Breadcrumb">
       <summary>The breadcrumb is visible.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.View.ShellHeaderItemsVisibility.ExpandAll">
-      <summary>Expand all is visible.</summary>
-    </member>
     <member name="F:System.Activities.Presentation.View.ShellHeaderItemsVisibility.CollapseAll">
       <summary>Collapse all is visible.</summary>
     </member>
-    <member name="F:System.Activities.Presentation.View.ShellHeaderItemsVisibility.All">
-      <summary>All items are visible.</summary>
+    <member name="F:System.Activities.Presentation.View.ShellHeaderItemsVisibility.ExpandAll">
+      <summary>Expand all is visible.</summary>
+    </member>
+    <member name="F:System.Activities.Presentation.View.ShellHeaderItemsVisibility.None">
+      <summary>None is visible.</summary>
     </member>
     <member name="T:System.Activities.Presentation.View.TypePresenter">
       <summary>A control used for selecting a type.</summary>

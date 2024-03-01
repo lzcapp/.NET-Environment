@@ -365,11 +365,11 @@
     <member name="T:System.Runtime.Remoting.Channels.SocketCachePolicy">
       <summary>Specifies the policy for removing clients from the cache maintained by remoting clients.</summary>
     </member>
-    <member name="F:System.Runtime.Remoting.Channels.SocketCachePolicy.Default">
-      <summary>Remove a socket from the cache a fixed time after its last use.</summary>
-    </member>
     <member name="F:System.Runtime.Remoting.Channels.SocketCachePolicy.AbsoluteTimeout">
       <summary>Remove a socket from the cache a fixed time after its creation.</summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.SocketCachePolicy.Default">
+      <summary>Remove a socket from the cache a fixed time after its last use.</summary>
     </member>
     <member name="T:System.Runtime.Remoting.Channels.Http.HttpChannel">
       <summary>Implements a client channel for remote calls that uses the HTTP protocol to transmit messages.</summary>

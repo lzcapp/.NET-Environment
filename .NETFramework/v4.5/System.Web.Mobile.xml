@@ -362,14 +362,14 @@
     <member name="T:System.Web.UI.MobileControls.Alignment">
       <summary>Specifies the alignment of a rendered object. This class cannot be inherited. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
-    <member name="F:System.Web.UI.MobileControls.Alignment.NotSet">
-      <summary>Default value. If the value is <see cref="F:System.Web.UI.MobileControls.Alignment.NotSet" />, then the alignment is inherited from the control's style, or, if the style is not defined, from the control's parent control. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
+    <member name="F:System.Web.UI.MobileControls.Alignment.Center">
+      <summary>Aligns with the center of the screen. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.Alignment.Left">
       <summary>Aligns with the left of the screen. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
-    <member name="F:System.Web.UI.MobileControls.Alignment.Center">
-      <summary>Aligns with the center of the screen. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
+    <member name="F:System.Web.UI.MobileControls.Alignment.NotSet">
+      <summary>Default value. If the value is <see cref="F:System.Web.UI.MobileControls.Alignment.NotSet" />, then the alignment is inherited from the control's style, or, if the style is not defined, from the control's parent control. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.Alignment.Right">
       <summary>Aligns with the right of the screen. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
@@ -473,11 +473,11 @@
     <member name="T:System.Web.UI.MobileControls.BooleanOption">
       <summary>Specifies a style option. This class cannot be inherited. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
-    <member name="F:System.Web.UI.MobileControls.BooleanOption.NotSet">
-      <summary>Default value. If the value is <see cref="F:System.Web.UI.MobileControls.BooleanOption.NotSet" />, then the font attributes are inherited from the control's style, or, if the style is not defined, from the control's parent control. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
-    </member>
     <member name="F:System.Web.UI.MobileControls.BooleanOption.False">
       <summary>The specified style will not be applied. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
+    </member>
+    <member name="F:System.Web.UI.MobileControls.BooleanOption.NotSet">
+      <summary>Default value. If the value is <see cref="F:System.Web.UI.MobileControls.BooleanOption.NotSet" />, then the font attributes are inherited from the control's style, or, if the style is not defined, from the control's parent control. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.BooleanOption.True">
       <summary>The specified style will be applied. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
@@ -1265,17 +1265,17 @@
     <member name="T:System.Web.UI.MobileControls.FontSize">
       <summary>Specifies the size of the rendered text. This class cannot be inherited. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
-    <member name="F:System.Web.UI.MobileControls.FontSize.NotSet">
-      <summary>Default value. If the value is <see cref="F:System.Web.UI.MobileControls.FontSize.NotSet" />, then the font's size is inherited from the control's style, or, if the style is not defined, from the control's parent control. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
+    <member name="F:System.Web.UI.MobileControls.FontSize.Large">
+      <summary>Font is larger than Normal. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.FontSize.Normal">
       <summary>Default font size. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
+    <member name="F:System.Web.UI.MobileControls.FontSize.NotSet">
+      <summary>Default value. If the value is <see cref="F:System.Web.UI.MobileControls.FontSize.NotSet" />, then the font's size is inherited from the control's style, or, if the style is not defined, from the control's parent control. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
+    </member>
     <member name="F:System.Web.UI.MobileControls.FontSize.Small">
       <summary>Font is smaller than Normal. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
-    </member>
-    <member name="F:System.Web.UI.MobileControls.FontSize.Large">
-      <summary>Font is larger than Normal. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="T:System.Web.UI.MobileControls.Form">
       <summary>Provides the capability to group controls together. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
@@ -1823,11 +1823,11 @@
     <member name="T:System.Web.UI.MobileControls.ListDecoration">
       <summary>Specifies the type of decoration to be added to list items. This class cannot be inherited. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
-    <member name="F:System.Web.UI.MobileControls.ListDecoration.None">
-      <summary>No decoration. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
-    </member>
     <member name="F:System.Web.UI.MobileControls.ListDecoration.Bulleted">
       <summary>List items are decorated with a bullet. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
+    </member>
+    <member name="F:System.Web.UI.MobileControls.ListDecoration.None">
+      <summary>No decoration. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.ListDecoration.Numbered">
       <summary>List items are decorated with a number. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
@@ -1835,20 +1835,20 @@
     <member name="T:System.Web.UI.MobileControls.ListSelectType">
       <summary>Specifies how the selection list UI will be presented. This class cannot be inherited. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
+    <member name="F:System.Web.UI.MobileControls.ListSelectType.CheckBox">
+      <summary>Renders list items with check boxes and multiple selection capability. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
+    </member>
     <member name="F:System.Web.UI.MobileControls.ListSelectType.DropDown">
       <summary>Renders list items in a drop-down list box. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.ListSelectType.ListBox">
       <summary>Renders list items in a list box. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
-    <member name="F:System.Web.UI.MobileControls.ListSelectType.Radio">
-      <summary>Renders list items as options. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
-    </member>
     <member name="F:System.Web.UI.MobileControls.ListSelectType.MultiSelectListBox">
       <summary>Renders list items in a list box with multiple selection capability. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
-    <member name="F:System.Web.UI.MobileControls.ListSelectType.CheckBox">
-      <summary>Renders list items with check boxes and multiple selection capability. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
+    <member name="F:System.Web.UI.MobileControls.ListSelectType.Radio">
+      <summary>Renders list items as options. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="T:System.Web.UI.MobileControls.LiteralLink">
       <summary>Provides literal hyperlinks. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
@@ -2203,7 +2203,7 @@
     </member>
     <member name="M:System.Web.UI.MobileControls.MobileControlsSectionHandler.Create(System.Object,System.Object,System.Xml.XmlNode)">
       <summary>Creates a new instance of this object. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
-      <returns>A <see cref="T:System.Web.UI.MobileControls.MobileControlsSectionHandler" />.</returns>
+      <returns>The created instance of this object.</returns>
       <param name="parent">Parent object.</param>
       <param name="context">Configuration context object.</param>
       <param name="input">Section XML node.</param>
@@ -2419,14 +2419,14 @@
     <member name="T:System.Web.UI.MobileControls.MobileListItemType">
       <summary>Assigns an item type to an element in a <see cref="T:System.Web.UI.MobileControls.List" /> or <see cref="T:System.Web.UI.MobileControls.ObjectList" /> control's child controls. This class cannot be inherited. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
+    <member name="F:System.Web.UI.MobileControls.MobileListItemType.FooterItem">
+      <summary>Represents a footer for a list. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
+    </member>
     <member name="F:System.Web.UI.MobileControls.MobileListItemType.HeaderItem">
       <summary>Represents a heading for a list. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.MobileListItemType.ListItem">
       <summary>Represents an item in a list. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
-    </member>
-    <member name="F:System.Web.UI.MobileControls.MobileListItemType.FooterItem">
-      <summary>Represents a footer for a list. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.MobileListItemType.SeparatorItem">
       <summary>Represents a separator between list items. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
@@ -3356,14 +3356,14 @@
     <member name="T:System.Web.UI.MobileControls.ObjectListViewMode">
       <summary>Specifies the display mode of the object list. This class cannot be inherited. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
-    <member name="F:System.Web.UI.MobileControls.ObjectListViewMode.List">
-      <summary>List view. This view displays each field of the item, including title and value. In HTML, this view is combined with the Commands view, with the commands appearing as hyperlinks below the details. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
-    </member>
     <member name="F:System.Web.UI.MobileControls.ObjectListViewMode.Commands">
       <summary>Command's view in WML. This is the default view displayed when the page containing the object list is rendered for the first time. It consists of either the label fields of the items, or (when TableFields is not empty) a table with columns corresponding to the table fields and rows corresponding to items. When there is more information in the Details view, a hyperlink for each item displaying the Details view is rendered, by default reading More. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.ObjectListViewMode.Details">
       <summary>Details view. This view is rendered separately only for WML devices. It consists of a menu with the ObjectList's commands, along with an menu item displaying the Details view. For HTML devices, this view is combined with the Details view, with the commands appearing as hyperlinks below the details. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
+    </member>
+    <member name="F:System.Web.UI.MobileControls.ObjectListViewMode.List">
+      <summary>List view. This view displays each field of the item, including title and value. In HTML, this view is combined with the Commands view, with the commands appearing as hyperlinks below the details. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="T:System.Web.UI.MobileControls.PagedControl">
       <summary>Functions as a base class used by controls that support internal pagination. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
@@ -4193,11 +4193,11 @@
     <member name="F:System.Web.UI.MobileControls.Wrapping.NotSet">
       <summary>Default value. If the value is <see cref="F:System.Web.UI.MobileControls.Wrapping.NotSet" />, then whether a control wraps or not is inherited from the control's style, or, if the style is not defined, from the control's parent control. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
-    <member name="F:System.Web.UI.MobileControls.Wrapping.Wrap">
-      <summary>Text is wrapped at the margins of a screen or a container. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
-    </member>
     <member name="F:System.Web.UI.MobileControls.Wrapping.NoWrap">
       <summary>Text is not wrapped. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
+    </member>
+    <member name="F:System.Web.UI.MobileControls.Wrapping.Wrap">
+      <summary>Text is wrapped at the margins of a screen or a container. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="T:System.Web.UI.MobileControls.Adapters.ChtmlCalendarAdapter">
       <summary>Provides a <see cref="T:System.Web.UI.MobileControls.Calendar" /> adapter class for the cHTML adapter set. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
@@ -6448,14 +6448,14 @@
     <member name="F:System.Web.UI.MobileControls.Adapters.WmlPostFieldType.Normal">
       <summary>The value is written as a literal, with encoding. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
+    <member name="F:System.Web.UI.MobileControls.Adapters.WmlPostFieldType.Raw">
+      <summary>The value is written as a literal, without encoding. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
+    </member>
     <member name="F:System.Web.UI.MobileControls.Adapters.WmlPostFieldType.Submit">
       <summary>The value is written as <see cref="F:System.Web.UI.MobileControls.Adapters.WmlPostFieldType.Normal" /> with an associated submit action. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.Adapters.WmlPostFieldType.Variable">
       <summary>The value is written as a variable name. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
-    </member>
-    <member name="F:System.Web.UI.MobileControls.Adapters.WmlPostFieldType.Raw">
-      <summary>The value is written as a literal, without encoding. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
     <member name="T:System.Web.UI.MobileControls.Adapters.WmlSelectionListAdapter">
       <summary>Provides a <see cref="T:System.Web.UI.MobileControls.SelectionList" /> adapter class for the WML device adapter set. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
@@ -6565,35 +6565,35 @@
     <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype.NotSet">
       <summary>Not determined.</summary>
     </member>
+    <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype.Wml20">
+      <summary>WML 2.0 document.</summary>
+    </member>
     <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype.XhtmlBasic">
       <summary>Basic XHTML format. This format does not support frames and styles.</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype.XhtmlMobileProfile">
       <summary>XHTML Mobile Profile format.</summary>
     </member>
-    <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype.Wml20">
-      <summary>WML 2.0 document.</summary>
-    </member>
     <member name="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation">
       <summary>Specifies the type of location for the style sheet for a mobile control or page. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
     </member>
-    <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation.NotSet">
-      <summary>Default value. The location has not yet been determined.</summary>
-    </member>
     <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation.ApplicationCache">
       <summary>The style sheet is stored in the Application Cache.</summary>
-    </member>
-    <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation.SessionState">
-      <summary>The style sheet is stored in the current Session state.</summary>
-    </member>
-    <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation.PhysicalFile">
-      <summary>The style sheet is an external physical file, such as MyStylesheet.css.</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation.Internal">
       <summary>The style sheet is a set of styles within the current source file (either .aspx or .ascx).</summary>
     </member>
     <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation.None">
       <summary>Not currently used.</summary>
+    </member>
+    <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation.NotSet">
+      <summary>Default value. The location has not yet been determined.</summary>
+    </member>
+    <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation.PhysicalFile">
+      <summary>The style sheet is an external physical file, such as MyStylesheet.css.</summary>
+    </member>
+    <member name="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation.SessionState">
+      <summary>The style sheet is stored in the current Session state.</summary>
     </member>
     <member name="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlCalendarAdapter">
       <summary>Provides an XHTML adapter class for the <see cref="T:System.Web.UI.MobileControls.Calendar" />. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
@@ -7389,7 +7389,7 @@
     </member>
     <member name="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPhoneCallAdapter.Control">
       <summary>Gets a strongly typed reference to the associated control. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>
-      <returns>A <see cref="T:System.Web.UI.MobileControls.PhoneCall" />.</returns>
+      <returns>A strongly typed reference to the associated control.</returns>
     </member>
     <member name="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPhoneCallAdapter.Render(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)">
       <summary>Renders the control and its content on the client using the provided <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />. This API is obsolete. For information about how to develop ASP.NET mobile applications, see the www.asp.net/mobile Web site.</summary>

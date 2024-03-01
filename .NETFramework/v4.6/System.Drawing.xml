@@ -17260,82 +17260,82 @@
       <summary>6 3/4 envelope (3.625 in. by 6.5 in.).</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.Prc16K">
-      <summary>People's Republic of China 16K paper (146 mm by 215 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> 16K paper (146 mm by 215 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.Prc16KRotated">
-      <summary>People's Republic of China 16K rotated paper (146 mm by 215 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> 16K rotated paper (146 mm by 215 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.Prc32K">
-      <summary>People's Republic of China 32K paper (97 mm by 151 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> 32K paper (97 mm by 151 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.Prc32KBig">
-      <summary>People's Republic of China 32K big paper (97 mm by 151 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> 32K big paper (97 mm by 151 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.Prc32KBigRotated">
-      <summary>People's Republic of China 32K big rotated paper (97 mm by 151 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> 32K big rotated paper (97 mm by 151 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.Prc32KRotated">
-      <summary>People's Republic of China 32K rotated paper (97 mm by 151 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> 32K rotated paper (97 mm by 151 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber1">
-      <summary>People's Republic of China #1 envelope (102 mm by 165 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #1 envelope (102 mm by 165 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber10">
-      <summary>People's Republic of China #10 envelope (324 mm by 458 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #10 envelope (324 mm by 458 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber10Rotated">
-      <summary>People's Republic of China #10 rotated envelope (458 mm by 324 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #10 rotated envelope (458 mm by 324 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber1Rotated">
-      <summary>People's Republic of China #1 rotated envelope (165 mm by 102 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #1 rotated envelope (165 mm by 102 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber2">
-      <summary>People's Republic of China #2 envelope (102 mm by 176 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #2 envelope (102 mm by 176 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber2Rotated">
-      <summary>People's Republic of China #2 rotated envelope (176 mm by 102 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #2 rotated envelope (176 mm by 102 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber3">
-      <summary>People's Republic of China #3 envelope (125 mm by 176 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #3 envelope (125 mm by 176 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber3Rotated">
-      <summary>People's Republic of China #3 rotated envelope (176 mm by 125 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #3 rotated envelope (176 mm by 125 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber4">
-      <summary>People's Republic of China #4 envelope (110 mm by 208 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #4 envelope (110 mm by 208 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber4Rotated">
-      <summary>People's Republic of China #4 rotated envelope (208 mm by 110 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #4 rotated envelope (208 mm by 110 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber5">
-      <summary>People's Republic of China #5 envelope (110 mm by 220 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #5 envelope (110 mm by 220 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber5Rotated">
-      <summary>People's Republic of China Envelope #5 rotated envelope (220 mm by 110 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> Envelope #5 rotated envelope (220 mm by 110 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber6">
-      <summary>People's Republic of China #6 envelope (120 mm by 230 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #6 envelope (120 mm by 230 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber6Rotated">
-      <summary>People's Republic of China #6 rotated envelope (230 mm by 120 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #6 rotated envelope (230 mm by 120 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber7">
-      <summary>People's Republic of China #7 envelope (160 mm by 230 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #7 envelope (160 mm by 230 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber7Rotated">
-      <summary>People's Republic of China #7 rotated envelope (230 mm by 160 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #7 rotated envelope (230 mm by 160 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber8">
-      <summary>People's Republic of China #8 envelope (120 mm by 309 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #8 envelope (120 mm by 309 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber8Rotated">
-      <summary>People's Republic of China #8 rotated envelope (309 mm by 120 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #8 rotated envelope (309 mm by 120 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber9">
-      <summary>People's Republic of China #9 envelope (229 mm by 324 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #9 envelope (229 mm by 324 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.PrcEnvelopeNumber9Rotated">
-      <summary>People's Republic of China #9 rotated envelope (324 mm by 229 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
+      <summary> #9 rotated envelope (324 mm by 229 mm). Requires Windows 98, Windows NT 4.0, or later.</summary>
     </member>
     <member name="F:System.Drawing.Printing.PaperKind.Quarto">
       <summary>Quarto paper (215 mm by 275 mm).</summary>

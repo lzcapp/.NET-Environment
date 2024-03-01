@@ -1886,29 +1886,29 @@
     <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.DefaultToolsVersion">
       <summary>The <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.DefaultToolsVersion" /> property changed.</summary>
     </member>
-    <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.Toolsets">
-      <summary>The toolsets changed.</summary>
-    </member>
-    <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.Loggers">
-      <summary>The loggers changed.</summary>
+    <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.DisableMarkDirty">
+      <summary>The <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.DisableMarkDirty" /> property changed.</summary>
     </member>
     <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.GlobalProperties">
       <summary>The global properties changed.</summary>
     </member>
+    <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.HostServices">
+      <summary>The <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.HostServices" /> property changed.</summary>
+    </member>
     <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.IsBuildEnabled">
       <summary>The <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.IsBuildEnabled" /> property changed.</summary>
+    </member>
+    <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.Loggers">
+      <summary>The loggers changed.</summary>
     </member>
     <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.OnlyLogCriticalEvents">
       <summary>The <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.OnlyLogCriticalEvents" /> property changed.</summary>
     </member>
-    <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.HostServices">
-      <summary>The <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.HostServices" /> property changed.</summary>
-    </member>
-    <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.DisableMarkDirty">
-      <summary>The <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.DisableMarkDirty" /> property changed.</summary>
-    </member>
     <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.SkipEvaluation">
       <summary>The <see cref="P:Microsoft.Build.Evaluation.ProjectCollection.SkipEvaluation" /> property changed.</summary>
+    </member>
+    <member name="F:Microsoft.Build.Evaluation.ProjectCollectionChangedState.Toolsets">
+      <summary>The toolsets changed.</summary>
     </member>
     <member name="T:Microsoft.Build.Evaluation.ProjectItem">
       <summary>Represents an evaluated design-time project item.</summary>
@@ -2232,11 +2232,11 @@
     <member name="T:Microsoft.Build.Evaluation.ToolsetDefinitionLocations">
       <summary>Flags for controlling the toolset initialization. </summary>
     </member>
-    <member name="F:Microsoft.Build.Evaluation.ToolsetDefinitionLocations.None">
-      <summary>Do not read toolset information from any external location.</summary>
-    </member>
     <member name="F:Microsoft.Build.Evaluation.ToolsetDefinitionLocations.ConfigurationFile">
       <summary>Read toolset information from the exe configuration file.</summary>
+    </member>
+    <member name="F:Microsoft.Build.Evaluation.ToolsetDefinitionLocations.None">
+      <summary>Do not read toolset information from any external location.</summary>
     </member>
     <member name="F:Microsoft.Build.Evaluation.ToolsetDefinitionLocations.Registry">
       <summary>Read toolset information from the registry (HKLM\Software\Microsoft\MSBuild\ToolsVersions).</summary>
@@ -2686,17 +2686,17 @@
     <member name="T:Microsoft.Build.Execution.BuildRequestDataFlags">
       <summary>Flags providing additional control over the build request. </summary>
     </member>
+    <member name="F:Microsoft.Build.Execution.BuildRequestDataFlags.IgnoreExistingProjectState">
+      <summary>When this flag is present and the project has previously been built on a node whose affinity is incompatible with the affinity this request requires, this build request ignores the project state (but not the target results) that was previously generated. </summary>
+    </member>
     <member name="F:Microsoft.Build.Execution.BuildRequestDataFlags.None">
       <summary>No flags.</summary>
-    </member>
-    <member name="F:Microsoft.Build.Execution.BuildRequestDataFlags.ReplaceExistingProjectInstance">
-      <summary>When this flag is present, the existing ProjectInstance in the build will be replaced by this one.</summary>
     </member>
     <member name="F:Microsoft.Build.Execution.BuildRequestDataFlags.ProvideProjectStateAfterBuild">
       <summary>When this flag is present, <see cref="T:Microsoft.Build.Execution.BuildResult" /> issued in response to this request will include <see cref="P:Microsoft.Build.Execution.BuildResult.ProjectStateAfterBuild" />.</summary>
     </member>
-    <member name="F:Microsoft.Build.Execution.BuildRequestDataFlags.IgnoreExistingProjectState">
-      <summary>When this flag is present and the project has previously been built on a node whose affinity is incompatible with the affinity this request requires, this build request ignores the project state (but not the target results) that was previously generated. </summary>
+    <member name="F:Microsoft.Build.Execution.BuildRequestDataFlags.ReplaceExistingProjectInstance">
+      <summary>When this flag is present, the existing ProjectInstance in the build will be replaced by this one.</summary>
     </member>
     <member name="T:Microsoft.Build.Execution.BuildResult">
       <summary>Represents the current result set for all of the targets that have produced results for a particular configuration.</summary>
@@ -2766,11 +2766,11 @@
     <member name="T:Microsoft.Build.Execution.BuildResultCode">
       <summary>Enumerated data indicating the build result of a target or a  build request.</summary>
     </member>
-    <member name="F:Microsoft.Build.Execution.BuildResultCode.Success">
-      <summary>The target or request was a complete success.</summary>
-    </member>
     <member name="F:Microsoft.Build.Execution.BuildResultCode.Failure">
       <summary>The target or request failed in some way.</summary>
+    </member>
+    <member name="F:Microsoft.Build.Execution.BuildResultCode.Success">
+      <summary>The target or request was a complete success.</summary>
     </member>
     <member name="T:Microsoft.Build.Execution.BuildSubmission">
       <summary>Represents a build request that has been submitted to the build manager for processing. The methods of this class may be used to execute synchronous or asynchronous build requests and to provide access to the results upon completion.</summary>
@@ -2871,14 +2871,14 @@
     <member name="T:Microsoft.Build.Execution.NodeAffinity">
       <summary>An enumerated data type that determines where projects are built.</summary>
     </member>
+    <member name="F:Microsoft.Build.Execution.NodeAffinity.Any">
+      <summary>The project may be scheduled anywhere.</summary>
+    </member>
     <member name="F:Microsoft.Build.Execution.NodeAffinity.InProc">
       <summary>The project may only be scheduled on the in-proc node. This happens automatically if there is a host object or if a ProjectInstance was specified. A host may wish to specify it if they know a task depends explicitly on shared static data or other host-provided objects.</summary>
     </member>
     <member name="F:Microsoft.Build.Execution.NodeAffinity.OutOfProc">
       <summary>The project may only be scheduled on an out-of-proc node. A host may wish to specify this if it is known the project being built could contaminate the host environment (or the host contaminates the environment while a build is proceeding.)</summary>
-    </member>
-    <member name="F:Microsoft.Build.Execution.NodeAffinity.Any">
-      <summary>The project may be scheduled anywhere.</summary>
     </member>
     <member name="T:Microsoft.Build.Execution.NodeEngineShutdownReason">
       <summary>Reasons for a node to shutdown.</summary>
@@ -3173,14 +3173,14 @@
     <member name="T:Microsoft.Build.Execution.ProjectInstanceSettings">
       <summary>Contains settings for controlling project instance creation.</summary>
     </member>
-    <member name="F:Microsoft.Build.Execution.ProjectInstanceSettings.None">
-      <summary>Create project instance with no options.</summary>
-    </member>
     <member name="F:Microsoft.Build.Execution.ProjectInstanceSettings.Immutable">
       <summary>Create immutable instance of project.</summary>
     </member>
     <member name="F:Microsoft.Build.Execution.ProjectInstanceSettings.ImmutableWithFastItemLookup">
       <summary>Create immutable instance of project with look up table that improves performance.</summary>
+    </member>
+    <member name="F:Microsoft.Build.Execution.ProjectInstanceSettings.None">
+      <summary>Create project instance with no options.</summary>
     </member>
     <member name="T:Microsoft.Build.Execution.ProjectItemDefinitionInstance">
       <summary>Represents an evaluated item definition for a particular item type, divested of all references to project source code.</summary>
@@ -3798,14 +3798,14 @@
     <member name="T:Microsoft.Build.Execution.TargetResultCode">
       <summary>The result code for a given target.</summary>
     </member>
+    <member name="F:Microsoft.Build.Execution.TargetResultCode.Failure">
+      <summary>The target failed to build.</summary>
+    </member>
     <member name="F:Microsoft.Build.Execution.TargetResultCode.Skipped">
       <summary>The target was skipped because its condition was not met.</summary>
     </member>
     <member name="F:Microsoft.Build.Execution.TargetResultCode.Success">
       <summary>The target successfully built.</summary>
-    </member>
-    <member name="F:Microsoft.Build.Execution.TargetResultCode.Failure">
-      <summary>The target failed to build.</summary>
     </member>
     <member name="T:Microsoft.Build.Logging.ColorResetter">
       <summary>Type of delegate used to reset console color.</summary>

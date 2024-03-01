@@ -4,15 +4,6 @@
     <name>System.Net.Http.WebRequest</name>
   </assembly>
   <members>
-    <member name="T:System.Net.Http.RtcRequestFactory">
-      <summary>Represents the class that is used to create special <see cref="T:System.Net.Http.HttpRequestMessage" /> for use with the Real-Time-Communications (RTC) background notification infrastructure.</summary>
-    </member>
-    <member name="M:System.Net.Http.RtcRequestFactory.Create(System.Net.Http.HttpMethod,System.Uri)">
-      <summary>Creates a special <see cref="T:System.Net.Http.HttpRequestMessage" /> for use with the Real-Time-Communications (RTC) background notification infrastructure.</summary>
-      <returns>Returns <see cref="T:System.Net.Http.HttpRequestMessage" />.An HTTP request message for use with the RTC background notification infrastructure.</returns>
-      <param name="method">The HTTP method.</param>
-      <param name="uri">The Uri the request is sent to.</param>
-    </member>
     <member name="T:System.Net.Http.WebRequestHandler">
       <summary>Provides desktop-specific features not available to Windows Store apps or other environments. </summary>
     </member>

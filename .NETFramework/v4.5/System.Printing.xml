@@ -7,8 +7,29 @@
     <member name="T:System.Printing.EnumeratedPrintQueueTypes">
       <summary>Specifies attributes of print queues.</summary>
     </member>
+    <member name="F:System.Printing.EnumeratedPrintQueueTypes.Connections">
+      <summary>A print queue that is connected to the specified print server.</summary>
+    </member>
+    <member name="F:System.Printing.EnumeratedPrintQueueTypes.DirectPrinting">
+      <summary>A print queue that sends a print job directly to printing instead of spooling the job first.</summary>
+    </member>
+    <member name="F:System.Printing.EnumeratedPrintQueueTypes.EnableBidi">
+      <summary>A print queue for a printer that has bidirectional communication enabled.</summary>
+    </member>
     <member name="F:System.Printing.EnumeratedPrintQueueTypes.EnableDevQuery">
       <summary>A print queue that holds its print jobs when the document and printer configurations do not match.</summary>
+    </member>
+    <member name="F:System.Printing.EnumeratedPrintQueueTypes.Fax">
+      <summary>A print queue that services a fax machine.</summary>
+    </member>
+    <member name="F:System.Printing.EnumeratedPrintQueueTypes.KeepPrintedJobs">
+      <summary>A print queue that keeps jobs in the queue after printing them.</summary>
+    </member>
+    <member name="F:System.Printing.EnumeratedPrintQueueTypes.Local">
+      <summary>A print queue that is installed as a local print queue on the specified print server.</summary>
+    </member>
+    <member name="F:System.Printing.EnumeratedPrintQueueTypes.PublishedInDirectoryServices">
+      <summary>A print queue that is visible in the directory of printers.</summary>
     </member>
     <member name="F:System.Printing.EnumeratedPrintQueueTypes.PushedMachineConnection">
       <summary>A print queue that was installed by using the Push Printer Connections computer policy. See Remarks.</summary>
@@ -19,38 +40,17 @@
     <member name="F:System.Printing.EnumeratedPrintQueueTypes.Queued">
       <summary>A print queue that allows multiple print jobs in the queue.</summary>
     </member>
-    <member name="F:System.Printing.EnumeratedPrintQueueTypes.DirectPrinting">
-      <summary>A print queue that sends a print job directly to printing instead of spooling the job first.</summary>
-    </member>
-    <member name="F:System.Printing.EnumeratedPrintQueueTypes.PublishedInDirectoryServices">
-      <summary>A print queue that is visible in the directory of printers.</summary>
-    </member>
-    <member name="F:System.Printing.EnumeratedPrintQueueTypes.WorkOffline">
-      <summary>A print queue that can work offline.</summary>
-    </member>
     <member name="F:System.Printing.EnumeratedPrintQueueTypes.RawOnly">
       <summary>A print queue that spools only raw data.</summary>
-    </member>
-    <member name="F:System.Printing.EnumeratedPrintQueueTypes.EnableBidi">
-      <summary>A print queue for a printer that has bidirectional communication enabled.</summary>
-    </member>
-    <member name="F:System.Printing.EnumeratedPrintQueueTypes.KeepPrintedJobs">
-      <summary>A print queue that keeps jobs in the queue after printing them.</summary>
-    </member>
-    <member name="F:System.Printing.EnumeratedPrintQueueTypes.Fax">
-      <summary>A print queue that services a fax machine.</summary>
-    </member>
-    <member name="F:System.Printing.EnumeratedPrintQueueTypes.TerminalServer">
-      <summary>A print queue that is installed by the redirection feature in Terminal Services.</summary>
-    </member>
-    <member name="F:System.Printing.EnumeratedPrintQueueTypes.Connections">
-      <summary>A print queue that is connected to the specified print server.</summary>
     </member>
     <member name="F:System.Printing.EnumeratedPrintQueueTypes.Shared">
       <summary>A print queue that is shared.</summary>
     </member>
-    <member name="F:System.Printing.EnumeratedPrintQueueTypes.Local">
-      <summary>A print queue that is installed as a local print queue on the specified print server.</summary>
+    <member name="F:System.Printing.EnumeratedPrintQueueTypes.TerminalServer">
+      <summary>A print queue that is installed by the redirection feature in Terminal Services.</summary>
+    </member>
+    <member name="F:System.Printing.EnumeratedPrintQueueTypes.WorkOffline">
+      <summary>A print queue that can work offline.</summary>
     </member>
     <member name="T:System.Printing.LocalPrintServer">
       <summary>Represents the local print server (the computer on which your application is running) and enables management of its print queues.</summary>
@@ -130,14 +130,35 @@
     <member name="T:System.Printing.LocalPrintServerIndexedProperty">
       <summary>Specifies the properties of a <see cref="T:System.Printing.LocalPrintServer" /> object that are initialized when it is constructed.</summary>
     </member>
+    <member name="F:System.Printing.LocalPrintServerIndexedProperty.BeepEnabled">
+      <summary>The property that specifies whether a printer error causes the local print server to beep.</summary>
+    </member>
+    <member name="F:System.Printing.LocalPrintServerIndexedProperty.DefaultPortThreadPriority">
+      <summary>The property that specifies the default priority for the thread that manages port I/0.</summary>
+    </member>
     <member name="F:System.Printing.LocalPrintServerIndexedProperty.DefaultPrintQueue">
       <summary>The property that specifies the default print queue for the local print server.</summary>
+    </member>
+    <member name="F:System.Printing.LocalPrintServerIndexedProperty.DefaultSchedulerPriority">
+      <summary>The property that specifies the default priority for the scheduler.</summary>
+    </member>
+    <member name="F:System.Printing.LocalPrintServerIndexedProperty.DefaultSpoolDirectory">
+      <summary>The property that specifies the path to the folder where spool jobs are located as temporary files.</summary>
+    </member>
+    <member name="F:System.Printing.LocalPrintServerIndexedProperty.EventLog">
+      <summary>The property that specifies the kind of event logging that is provided by the local print server.</summary>
+    </member>
+    <member name="F:System.Printing.LocalPrintServerIndexedProperty.MajorVersion">
+      <summary>The property that specifies the major version of the operating system.</summary>
     </member>
     <member name="F:System.Printing.LocalPrintServerIndexedProperty.MinorVersion">
       <summary>The property that specifies the minor version of the operating system.</summary>
     </member>
-    <member name="F:System.Printing.LocalPrintServerIndexedProperty.MajorVersion">
-      <summary>The property that specifies the major version of the operating system.</summary>
+    <member name="F:System.Printing.LocalPrintServerIndexedProperty.NetPopup">
+      <summary>The property that specifies whether the client computer or the print server receives notifications that a job is finished.</summary>
+    </member>
+    <member name="F:System.Printing.LocalPrintServerIndexedProperty.PortThreadPriority">
+      <summary>The property that specifies the priority of the thread that manages port I/O.</summary>
     </member>
     <member name="F:System.Printing.LocalPrintServerIndexedProperty.RestartJobOnPoolEnabled">
       <summary>The property that specifies whether users can restart jobs when printer pooling is being used.</summary>
@@ -145,29 +166,8 @@
     <member name="F:System.Printing.LocalPrintServerIndexedProperty.RestartJobOnPoolTimeout">
       <summary>The property that specifies the wait time before jobs can be restarted when printer pooling is being used.</summary>
     </member>
-    <member name="F:System.Printing.LocalPrintServerIndexedProperty.EventLog">
-      <summary>The property that specifies the kind of event logging that is provided by the local print server.</summary>
-    </member>
-    <member name="F:System.Printing.LocalPrintServerIndexedProperty.NetPopup">
-      <summary>The property that specifies whether the client computer or the print server receives notifications that a job is finished.</summary>
-    </member>
-    <member name="F:System.Printing.LocalPrintServerIndexedProperty.BeepEnabled">
-      <summary>The property that specifies whether a printer error causes the local print server to beep.</summary>
-    </member>
-    <member name="F:System.Printing.LocalPrintServerIndexedProperty.DefaultSchedulerPriority">
-      <summary>The property that specifies the default priority for the scheduler.</summary>
-    </member>
     <member name="F:System.Printing.LocalPrintServerIndexedProperty.SchedulerPriority">
       <summary>The property that specifies the priority of the scheduler.</summary>
-    </member>
-    <member name="F:System.Printing.LocalPrintServerIndexedProperty.DefaultPortThreadPriority">
-      <summary>The property that specifies the default priority for the thread that manages port I/0.</summary>
-    </member>
-    <member name="F:System.Printing.LocalPrintServerIndexedProperty.PortThreadPriority">
-      <summary>The property that specifies the priority of the thread that manages port I/O.</summary>
-    </member>
-    <member name="F:System.Printing.LocalPrintServerIndexedProperty.DefaultSpoolDirectory">
-      <summary>The property that specifies the path to the folder where spool jobs are located as temporary files.</summary>
     </member>
     <member name="T:System.Printing.PrintDocumentImageableArea">
       <summary>Specifies the size of the paper (or other media), the size of the imageable area, and the location of the imageable area.</summary>
@@ -238,11 +238,11 @@
     <member name="T:System.Printing.PrintJobPriority">
       <summary>Specifies a non-numerical priority for a print job relative to other print jobs in the print queue. </summary>
     </member>
-    <member name="F:System.Printing.PrintJobPriority.Maximum">
-      <summary>A job that has the highest priority.</summary>
-    </member>
     <member name="F:System.Printing.PrintJobPriority.Default">
       <summary>A job that has the <see cref="P:System.Printing.PrintQueue.DefaultPriority" /> for the <see cref="T:System.Printing.PrintQueueStream" />.</summary>
+    </member>
+    <member name="F:System.Printing.PrintJobPriority.Maximum">
+      <summary>A job that has the highest priority.</summary>
     </member>
     <member name="F:System.Printing.PrintJobPriority.Minimum">
       <summary>A job that has the lowest priority.</summary>
@@ -264,35 +264,14 @@
     <member name="T:System.Printing.PrintJobStatus">
       <summary>Specifies the current status of a print job in a print queue.</summary>
     </member>
-    <member name="F:System.Printing.PrintJobStatus.Retained">
-      <summary>The print job is retained in the print queue after printing.</summary>
+    <member name="F:System.Printing.PrintJobStatus.Blocked">
+      <summary>An error condition, possibly on a print job that precedes this one in the queue, blocked the print job.</summary>
     </member>
     <member name="F:System.Printing.PrintJobStatus.Completed">
       <summary>The print job is complete, including any post-printing processing. </summary>
     </member>
-    <member name="F:System.Printing.PrintJobStatus.Restarted">
-      <summary>The print job was blocked but has restarted.</summary>
-    </member>
-    <member name="F:System.Printing.PrintJobStatus.UserIntervention">
-      <summary>The printer requires user action to fix an error condition.  </summary>
-    </member>
-    <member name="F:System.Printing.PrintJobStatus.Blocked">
-      <summary>An error condition, possibly on a print job that precedes this one in the queue, blocked the print job.</summary>
-    </member>
     <member name="F:System.Printing.PrintJobStatus.Deleted">
       <summary>The print job was deleted from the queue, typically after printing.</summary>
-    </member>
-    <member name="F:System.Printing.PrintJobStatus.Printed">
-      <summary>The print job printed. </summary>
-    </member>
-    <member name="F:System.Printing.PrintJobStatus.PaperOut">
-      <summary>The printer is out of the required paper size.</summary>
-    </member>
-    <member name="F:System.Printing.PrintJobStatus.Offline">
-      <summary>The printer is offline.</summary>
-    </member>
-    <member name="F:System.Printing.PrintJobStatus.Spooling">
-      <summary>The print job is spooling.</summary>
     </member>
     <member name="F:System.Printing.PrintJobStatus.Deleting">
       <summary>The print job is in the process of being deleted.</summary>
@@ -300,14 +279,35 @@
     <member name="F:System.Printing.PrintJobStatus.Error">
       <summary>The print job is in an error state.</summary>
     </member>
-    <member name="F:System.Printing.PrintJobStatus.Paused">
-      <summary>The print job is paused.</summary>
-    </member>
     <member name="F:System.Printing.PrintJobStatus.None">
       <summary>The print job has no specified state.</summary>
     </member>
+    <member name="F:System.Printing.PrintJobStatus.Offline">
+      <summary>The printer is offline.</summary>
+    </member>
+    <member name="F:System.Printing.PrintJobStatus.PaperOut">
+      <summary>The printer is out of the required paper size.</summary>
+    </member>
+    <member name="F:System.Printing.PrintJobStatus.Paused">
+      <summary>The print job is paused.</summary>
+    </member>
+    <member name="F:System.Printing.PrintJobStatus.Printed">
+      <summary>The print job printed. </summary>
+    </member>
     <member name="F:System.Printing.PrintJobStatus.Printing">
       <summary>The print job is now printing.</summary>
+    </member>
+    <member name="F:System.Printing.PrintJobStatus.Restarted">
+      <summary>The print job was blocked but has restarted.</summary>
+    </member>
+    <member name="F:System.Printing.PrintJobStatus.Retained">
+      <summary>The print job is retained in the print queue after printing.</summary>
+    </member>
+    <member name="F:System.Printing.PrintJobStatus.Spooling">
+      <summary>The print job is spooling.</summary>
+    </member>
+    <member name="F:System.Printing.PrintJobStatus.UserIntervention">
+      <summary>The printer requires user action to fix an error condition.  </summary>
     </member>
     <member name="T:System.Printing.PrintJobType">
       <summary>Specifies whether the print job uses XML Paper Specification (XPS). </summary>
@@ -410,7 +410,7 @@
       <param name="jobName">The name of the print job.</param>
     </member>
     <member name="M:System.Printing.PrintQueue.AddJob(System.String,System.Printing.PrintTicket)">
-      <summary>Inserts a new print job for an XML Paper Specification (XPS) Document into the queue, gives it the specified name and settings.</summary>
+      <summary>Inserts a new print job for an XML Paper Specification (XPS) Document into the queue, and gives it the specified name and settings.</summary>
       <returns>A <see cref="T:System.Printing.PrintSystemJobInfo" /> that represents the print job and its status. </returns>
       <param name="jobName">The path and name of the document that is being printed.</param>
       <param name="printTicket">The settings of the print job.</param>
@@ -421,6 +421,14 @@
       <param name="jobName">The name of the print job.</param>
       <param name="documentPath">The path and name of the document that is being printed.</param>
       <param name="fastCopy">true to spool quickly without page-by-page progress feedback and without validating that the file is valid XPS; otherwise, false. </param>
+    </member>
+    <member name="M:System.Printing.PrintQueue.AddJob(System.String,System.String,System.Boolean,System.Printing.PrintTicket)">
+      <summary>Inserts a new print job for an XML Paper Specification (XPS) Document into the queue, gives it the specified name and settings, and specifies whether or not it should be validated.</summary>
+      <returns>A <see cref="T:System.Printing.PrintSystemJobInfo" /> that represents the print job and its status.</returns>
+      <param name="jobName">The path and name of the document that is being printed.</param>
+      <param name="documentPath">The path and name of the document that is being printed.</param>
+      <param name="fastCopy">true to spool quickly without page-by-page progress feedback and without validating that the file is valid XPS; otherwise, false.</param>
+      <param name="printTicket">The settings of the print job.</param>
     </member>
     <member name="P:System.Printing.PrintQueue.AveragePagesPerMinute">
       <summary>Gets the speed of the printer measured in pages per minute. </summary>
@@ -790,20 +798,11 @@
     <member name="T:System.Printing.PrintQueueAttributes">
       <summary>Specifies the attributes of a print queue and its printer.</summary>
     </member>
-    <member name="F:System.Printing.PrintQueueAttributes.Published">
-      <summary>The print queue is visible to other network users.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueAttributes.RawOnly">
-      <summary>The print queue cannot use enhanced metafile (EMF) printing.</summary>
+    <member name="F:System.Printing.PrintQueueAttributes.Direct">
+      <summary>The print queue sends print jobs immediately to the printer instead of spooling jobs first.</summary>
     </member>
     <member name="F:System.Printing.PrintQueueAttributes.EnableBidi">
       <summary>The printer's bidirectional communication is enabled.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueAttributes.ScheduleCompletedJobsFirst">
-      <summary>The queue prints a fully spooled job before it prints higher priority jobs that are still spooling.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueAttributes.KeepPrintedJobs">
-      <summary>The printer language file is not deleted after the file prints.</summary>
     </member>
     <member name="F:System.Printing.PrintQueueAttributes.EnableDevQuery">
       <summary>The queue holds its jobs when the document and printer configurations do not match.</summary>
@@ -811,17 +810,26 @@
     <member name="F:System.Printing.PrintQueueAttributes.Hidden">
       <summary>The print queue is not visible in the application UI.</summary>
     </member>
-    <member name="F:System.Printing.PrintQueueAttributes.Shared">
-      <summary>The print queue is shared.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueAttributes.Queued">
-      <summary>The print queue can hold more than one print job at a time.</summary>
+    <member name="F:System.Printing.PrintQueueAttributes.KeepPrintedJobs">
+      <summary>The printer language file is not deleted after the file prints.</summary>
     </member>
     <member name="F:System.Printing.PrintQueueAttributes.None">
       <summary>No print queue attribute is specified.</summary>
     </member>
-    <member name="F:System.Printing.PrintQueueAttributes.Direct">
-      <summary>The print queue sends print jobs immediately to the printer instead of spooling jobs first.</summary>
+    <member name="F:System.Printing.PrintQueueAttributes.Published">
+      <summary>The print queue is visible to other network users.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueAttributes.Queued">
+      <summary>The print queue can hold more than one print job at a time.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueAttributes.RawOnly">
+      <summary>The print queue cannot use enhanced metafile (EMF) printing.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueAttributes.ScheduleCompletedJobsFirst">
+      <summary>The queue prints a fully spooled job before it prints higher priority jobs that are still spooling.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueAttributes.Shared">
+      <summary>The print queue is shared.</summary>
     </member>
     <member name="T:System.Printing.PrintQueueCollection">
       <summary>Represents a collection of <see cref="T:System.Printing.PrintQueue" /> objects. </summary>
@@ -862,146 +870,146 @@
     <member name="T:System.Printing.PrintQueueIndexedProperty">
       <summary>Specifies the properties that are initialized when a <see cref="T:System.Printing.PrintQueue" /> object is constructed.</summary>
     </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.DefaultPrintTicket">
-      <summary>The default print ticket object.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.UserPrintTicket">
-      <summary>The print ticket for the user.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.SeparatorFile">
-      <summary>The path to the separator file.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.QueueStatus">
-      <summary>The current status of the queue.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.HostingPrintServer">
-      <summary>The host print server.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.QueuePrintProcessor">
-      <summary>The print processor for the print queue.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.QueuePort">
-      <summary>The printer port used by the print queue.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.QueueDriver">
-      <summary>The printer driver for the queue.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.QueueAttributes">
-      <summary>The attributes of the print queue.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.NumberOfJobs">
-      <summary>The number of jobs in the print queue.</summary>
-    </member>
     <member name="F:System.Printing.PrintQueueIndexedProperty.AveragePagesPerMinute">
       <summary>The speed of the print queue.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.UntilTimeOfDay">
-      <summary>The time of day that the queue stops printing jobs.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.StartTimeOfDay">
-      <summary>The time of day that the queue begins printing its jobs.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.DefaultPriority">
-      <summary>The default priority. </summary>
     </member>
     <member name="F:System.Printing.PrintQueueIndexedProperty.Comment">
       <summary>A comment specific to the print queue.</summary>
     </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.ShareName">
-      <summary>The share name of the queue.</summary>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.DefaultPrintTicket">
+      <summary>The default print ticket object.</summary>
     </member>
-    <member name="F:System.Printing.PrintQueueIndexedProperty.Name">
-      <summary>The name of the print queue.</summary>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.DefaultPriority">
+      <summary>The default priority. </summary>
     </member>
     <member name="F:System.Printing.PrintQueueIndexedProperty.Description">
       <summary>The description of the queue.</summary>
     </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.HostingPrintServer">
+      <summary>The host print server.</summary>
+    </member>
     <member name="F:System.Printing.PrintQueueIndexedProperty.Location">
       <summary>The location of the physical printer.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.Name">
+      <summary>The name of the print queue.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.NumberOfJobs">
+      <summary>The number of jobs in the print queue.</summary>
     </member>
     <member name="F:System.Printing.PrintQueueIndexedProperty.Priority">
       <summary>The priority of the print queue relative to other print queues serving the same printer.</summary>
     </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.QueueAttributes">
+      <summary>The attributes of the print queue.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.QueueDriver">
+      <summary>The printer driver for the queue.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.QueuePort">
+      <summary>The printer port used by the print queue.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.QueuePrintProcessor">
+      <summary>The print processor for the print queue.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.QueueStatus">
+      <summary>The current status of the queue.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.SeparatorFile">
+      <summary>The path to the separator file.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.ShareName">
+      <summary>The share name of the queue.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.StartTimeOfDay">
+      <summary>The time of day that the queue begins printing its jobs.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.UntilTimeOfDay">
+      <summary>The time of day that the queue stops printing jobs.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueIndexedProperty.UserPrintTicket">
+      <summary>The print ticket for the user.</summary>
+    </member>
     <member name="T:System.Printing.PrintQueueStatus">
       <summary>Specifies the status of a print queue or its printer. </summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.PowerSave">
-      <summary>The printer is in power save mode.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.ServerUnknown">
-      <summary>The printer is in an error state.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.DoorOpen">
-      <summary>A door on the printer is open.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.OutOfMemory">
-      <summary>The printer has no available memory.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.UserIntervention">
-      <summary>The printer requires user action to correct an error condition.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.PagePunt">
-      <summary>The printer is unable to print the current page.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.NoToner">
-      <summary>The printer is out of toner.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.TonerLow">
-      <summary>Only a small amount of toner remains in the printer.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.WarmingUp">
-      <summary>The printer is warming up.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.Initializing">
-      <summary>The printer is initializing.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.Processing">
-      <summary>The device is doing some kind of work, which need not be printing if the device is a combination printer, fax machine, and scanner.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.Waiting">
-      <summary>The printer is waiting for a print job.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.NotAvailable">
-      <summary>Status information is unavailable.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.OutputBinFull">
-      <summary>The printer's output bin is full.</summary>
     </member>
     <member name="F:System.Printing.PrintQueueStatus.Busy">
       <summary>The printer is busy.</summary>
     </member>
-    <member name="F:System.Printing.PrintQueueStatus.IOActive">
-      <summary>The printer is exchanging data with the print server.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.Offline">
-      <summary>The printer is offline.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.PaperProblem">
-      <summary>The paper in the printer is causing an unspecified error condition.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.ManualFeed">
-      <summary>The printer is waiting for a user to place print media in the manual feed bin.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.PaperOut">
-      <summary>The printer does not have, or is out of, the type of paper needed for the current print job.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.PaperJam">
-      <summary>The paper in the printer is jammed.</summary>
-    </member>
-    <member name="F:System.Printing.PrintQueueStatus.PendingDeletion">
-      <summary>The print queue is deleting a print job.</summary>
+    <member name="F:System.Printing.PrintQueueStatus.DoorOpen">
+      <summary>A door on the printer is open.</summary>
     </member>
     <member name="F:System.Printing.PrintQueueStatus.Error">
       <summary>The printer cannot print due to an error condition.</summary>
     </member>
-    <member name="F:System.Printing.PrintQueueStatus.Paused">
-      <summary>The print queue is paused.</summary>
+    <member name="F:System.Printing.PrintQueueStatus.Initializing">
+      <summary>The printer is initializing.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.IOActive">
+      <summary>The printer is exchanging data with the print server.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.ManualFeed">
+      <summary>The printer is waiting for a user to place print media in the manual feed bin.</summary>
     </member>
     <member name="F:System.Printing.PrintQueueStatus.None">
       <summary>Status is not specified.</summary>
     </member>
+    <member name="F:System.Printing.PrintQueueStatus.NotAvailable">
+      <summary>Status information is unavailable.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.NoToner">
+      <summary>The printer is out of toner.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.Offline">
+      <summary>The printer is offline.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.OutOfMemory">
+      <summary>The printer has no available memory.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.OutputBinFull">
+      <summary>The printer's output bin is full.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.PagePunt">
+      <summary>The printer is unable to print the current page.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.PaperJam">
+      <summary>The paper in the printer is jammed.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.PaperOut">
+      <summary>The printer does not have, or is out of, the type of paper needed for the current print job.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.PaperProblem">
+      <summary>The paper in the printer is causing an unspecified error condition.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.Paused">
+      <summary>The print queue is paused.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.PendingDeletion">
+      <summary>The print queue is deleting a print job.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.PowerSave">
+      <summary>The printer is in power save mode.</summary>
+    </member>
     <member name="F:System.Printing.PrintQueueStatus.Printing">
       <summary>The device is printing. </summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.Processing">
+      <summary>The device is doing some kind of work, which need not be printing if the device is a combination printer, fax machine, and scanner.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.ServerUnknown">
+      <summary>The printer is in an error state.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.TonerLow">
+      <summary>Only a small amount of toner remains in the printer.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.UserIntervention">
+      <summary>The printer requires user action to correct an error condition.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.Waiting">
+      <summary>The printer is waiting for a print job.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStatus.WarmingUp">
+      <summary>The printer is warming up.</summary>
     </member>
     <member name="T:System.Printing.PrintQueueStream">
       <summary>A stream that represents a spooled print job in a print queue.</summary>
@@ -1118,14 +1126,14 @@
     <member name="T:System.Printing.PrintQueueStringPropertyType">
       <summary>Specifies the intended meaning of a <see cref="T:System.Printing.PrintQueueStringProperty" />.</summary>
     </member>
-    <member name="F:System.Printing.PrintQueueStringPropertyType.ShareName">
-      <summary>The share name of the print queue.</summary>
-    </member>
     <member name="F:System.Printing.PrintQueueStringPropertyType.Comment">
       <summary>A comment about the print queue.</summary>
     </member>
     <member name="F:System.Printing.PrintQueueStringPropertyType.Location">
       <summary>The location of the physical printer.</summary>
+    </member>
+    <member name="F:System.Printing.PrintQueueStringPropertyType.ShareName">
+      <summary>The share name of the print queue.</summary>
     </member>
     <member name="T:System.Printing.PrintServer">
       <summary>Manages the print queues on a print server, which is usually a computer, but can be a dedicated hardware print server appliance. </summary>
@@ -1214,12 +1222,12 @@
     </member>
     <member name="M:System.Printing.PrintServer.GetPrintQueue(System.String)">
       <summary>Obtains a reference to the named print queue from the print server. </summary>
-      <returns>A <see cref="T:System.Printing.PrintQueue" />.</returns>
+      <returns>The <see cref="T:System.Printing.PrintQueue" /> with the specified name from the print server.</returns>
       <param name="printQueueName">The name of the print queue.</param>
     </member>
     <member name="M:System.Printing.PrintServer.GetPrintQueue(System.String,System.String[])">
       <summary>Gets a specified print queue from the print server. </summary>
-      <returns>A <see cref="T:System.Printing.PrintQueue" />.</returns>
+      <returns>The <see cref="T:System.Printing.PrintQueue" /> with the specified name from the print server.</returns>
       <param name="printQueueName">The name of the print queue.</param>
       <param name="propertiesFilter">The names of the properties that are initialized in the returned queue.</param>
     </member>
@@ -1354,17 +1362,17 @@
     <member name="F:System.Printing.PrintServerEventLoggingTypes.LogAllPrintingEvents">
       <summary>All printing events.</summary>
     </member>
-    <member name="F:System.Printing.PrintServerEventLoggingTypes.LogPrintingInformationEvents">
-      <summary>Information events for printing.</summary>
-    </member>
-    <member name="F:System.Printing.PrintServerEventLoggingTypes.LogPrintingWarningEvents">
-      <summary>Warning events.</summary>
-    </member>
     <member name="F:System.Printing.PrintServerEventLoggingTypes.LogPrintingErrorEvents">
       <summary>Error events for printing.</summary>
     </member>
+    <member name="F:System.Printing.PrintServerEventLoggingTypes.LogPrintingInformationEvents">
+      <summary>Information events for printing.</summary>
+    </member>
     <member name="F:System.Printing.PrintServerEventLoggingTypes.LogPrintingSuccessEvents">
       <summary>Successful printing events.</summary>
+    </member>
+    <member name="F:System.Printing.PrintServerEventLoggingTypes.LogPrintingWarningEvents">
+      <summary>Warning events.</summary>
     </member>
     <member name="F:System.Printing.PrintServerEventLoggingTypes.None">
       <summary>No events.</summary>
@@ -1372,11 +1380,32 @@
     <member name="T:System.Printing.PrintServerIndexedProperty">
       <summary>Specifies the properties of a <see cref="T:System.Printing.PrintServer" /> object that are initialized when it is constructed.</summary>
     </member>
-    <member name="F:System.Printing.PrintServerIndexedProperty.MinorVersion">
-      <summary>The property that specifies the minor version of the operating system.</summary>
+    <member name="F:System.Printing.PrintServerIndexedProperty.BeepEnabled">
+      <summary>The property that specifies whether a printer error causes the print server to beep.</summary>
+    </member>
+    <member name="F:System.Printing.PrintServerIndexedProperty.DefaultPortThreadPriority">
+      <summary>The property that specifies the default priority for the thread that manages port I/0.</summary>
+    </member>
+    <member name="F:System.Printing.PrintServerIndexedProperty.DefaultSchedulerPriority">
+      <summary>The property that specifies the default thread priority for the scheduling of print jobs.</summary>
+    </member>
+    <member name="F:System.Printing.PrintServerIndexedProperty.DefaultSpoolDirectory">
+      <summary>The property that specifies the path to the folder where spool jobs are located as temporary files.</summary>
+    </member>
+    <member name="F:System.Printing.PrintServerIndexedProperty.EventLog">
+      <summary>The property that specifies the kind of event logging that is provided by the print server.</summary>
     </member>
     <member name="F:System.Printing.PrintServerIndexedProperty.MajorVersion">
       <summary>The property that specifies the major version of the operating system.</summary>
+    </member>
+    <member name="F:System.Printing.PrintServerIndexedProperty.MinorVersion">
+      <summary>The property that specifies the minor version of the operating system.</summary>
+    </member>
+    <member name="F:System.Printing.PrintServerIndexedProperty.NetPopup">
+      <summary>The property that specifies whether the client computer or the print server receives notifications that a job is finished.</summary>
+    </member>
+    <member name="F:System.Printing.PrintServerIndexedProperty.PortThreadPriority">
+      <summary>The property that specifies the priority of the thread that manages port I/O.</summary>
     </member>
     <member name="F:System.Printing.PrintServerIndexedProperty.RestartJobOnPoolEnabled">
       <summary>The property that specifies whether users can restart print jobs when printer pooling is being used.</summary>
@@ -1384,29 +1413,8 @@
     <member name="F:System.Printing.PrintServerIndexedProperty.RestartJobOnPoolTimeout">
       <summary>The property that specifies how long to wait before restarting a print job when printer pooling is being used.</summary>
     </member>
-    <member name="F:System.Printing.PrintServerIndexedProperty.EventLog">
-      <summary>The property that specifies the kind of event logging that is provided by the print server.</summary>
-    </member>
-    <member name="F:System.Printing.PrintServerIndexedProperty.NetPopup">
-      <summary>The property that specifies whether the client computer or the print server receives notifications that a job is finished.</summary>
-    </member>
-    <member name="F:System.Printing.PrintServerIndexedProperty.BeepEnabled">
-      <summary>The property that specifies whether a printer error causes the print server to beep.</summary>
-    </member>
-    <member name="F:System.Printing.PrintServerIndexedProperty.DefaultSchedulerPriority">
-      <summary>The property that specifies the default thread priority for the scheduling of print jobs.</summary>
-    </member>
     <member name="F:System.Printing.PrintServerIndexedProperty.SchedulerPriority">
       <summary>The property that specifies the priority of the scheduler.</summary>
-    </member>
-    <member name="F:System.Printing.PrintServerIndexedProperty.DefaultPortThreadPriority">
-      <summary>The property that specifies the default priority for the thread that manages port I/0.</summary>
-    </member>
-    <member name="F:System.Printing.PrintServerIndexedProperty.PortThreadPriority">
-      <summary>The property that specifies the priority of the thread that manages port I/O.</summary>
-    </member>
-    <member name="F:System.Printing.PrintServerIndexedProperty.DefaultSpoolDirectory">
-      <summary>The property that specifies the path to the folder where spool jobs are located as temporary files.</summary>
     </member>
     <member name="T:System.Printing.PrintSystemDesiredAccess">
       <summary>Specifies the different access rights (or levels of access) for printing objects.</summary>
@@ -1414,17 +1422,17 @@
     <member name="F:System.Printing.PrintSystemDesiredAccess.AdministratePrinter">
       <summary>The right to perform all administrative tasks for the print queue, including the right to pause and resume any print job; and the right to delete all jobs from the queue. This access level also includes all rights under <see cref="F:System.Printing.PrintSystemDesiredAccess.UsePrinter" />.</summary>
     </member>
-    <member name="F:System.Printing.PrintSystemDesiredAccess.UsePrinter">
-      <summary>The right to add print jobs to the queue and to delete and enumerate one's own jobs.</summary>
+    <member name="F:System.Printing.PrintSystemDesiredAccess.AdministrateServer">
+      <summary>The right to perform all administrative tasks for the print server. This access level does not include <see cref="F:System.Printing.PrintSystemDesiredAccess.AdministratePrinter" /> rights for the print queues hosted by the server.</summary>
     </member>
     <member name="F:System.Printing.PrintSystemDesiredAccess.EnumerateServer">
       <summary>The right to list the queues on the print server.</summary>
     </member>
-    <member name="F:System.Printing.PrintSystemDesiredAccess.AdministrateServer">
-      <summary>The right to perform all administrative tasks for the print server. This access level does not include <see cref="F:System.Printing.PrintSystemDesiredAccess.AdministratePrinter" /> rights for the print queues hosted by the server.</summary>
-    </member>
     <member name="F:System.Printing.PrintSystemDesiredAccess.None">
       <summary>No access.</summary>
+    </member>
+    <member name="F:System.Printing.PrintSystemDesiredAccess.UsePrinter">
+      <summary>The right to add print jobs to the queue and to delete and enumerate one's own jobs.</summary>
     </member>
     <member name="T:System.Printing.PrintSystemJobInfo">
       <summary>Defines a print job in detail.</summary>
@@ -1632,14 +1640,14 @@
     <member name="T:System.Printing.PrintSystemObjectLoadMode">
       <summary>Specifies whether the properties of an object are initialized when the object loads.</summary>
     </member>
-    <member name="F:System.Printing.PrintSystemObjectLoadMode.None">
-      <summary>Not specified whether the properties are initialized. </summary>
-    </member>
     <member name="F:System.Printing.PrintSystemObjectLoadMode.LoadInitialized">
       <summary>The properties are initialized during loading.</summary>
     </member>
     <member name="F:System.Printing.PrintSystemObjectLoadMode.LoadUninitialized">
       <summary>The properties are not initialized during loading.</summary>
+    </member>
+    <member name="F:System.Printing.PrintSystemObjectLoadMode.None">
+      <summary>Not specified whether the properties are initialized. </summary>
     </member>
     <member name="T:System.Printing.PrintSystemObjectPropertiesChangedEventArgs">
       <summary>Provides data for a PropertiesChanged event, which you must create.</summary>
@@ -1701,12 +1709,12 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintBooleanProperty.op_Implicit(System.Printing.IndexedProperties.PrintBooleanProperty|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.Boolean">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintBooleanProperty" /> to a <see cref="T:System.Boolean" />.</summary>
-      <returns>A <see cref="T:System.Boolean" />.</returns>
+      <returns>The converted PrintBooleanProperty object as a Boolean object.</returns>
       <param name="attribRef">The <see cref="T:System.Printing.IndexedProperties.PrintBooleanProperty" />  that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintBooleanProperty.op_Implicit(System.Printing.IndexedProperties.PrintBooleanProperty)~System.Boolean">
       <summary>Provides implicit conversion to a <see cref="T:System.Boolean" /> from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintBooleanProperty" />.</summary>
-      <returns>A <see cref="T:System.Boolean" />.</returns>
+      <returns>The converted PrintBooleanProperty object as a Boolean object.</returns>
       <param name="attribRef">A pointer to the <see cref="T:System.Printing.IndexedProperties.PrintBooleanProperty" />  that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintBooleanProperty.Value">
@@ -1753,12 +1761,12 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintDateTimeProperty.op_Implicit(System.Printing.IndexedProperties.PrintDateTimeProperty|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.ValueType!System.DateTime!System.Runtime.CompilerServices.IsBoxed">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintDateTimeProperty" /> to a <see cref="T:System.DateTime" />. </summary>
-      <returns>A <see cref="T:System.DateTime" />. </returns>
+      <returns>The converted PrintDateTimePropety object to a DateTime object.</returns>
       <param name="attribRef">The object that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintDateTimeProperty.op_Implicit(System.Printing.IndexedProperties.PrintDateTimeProperty)~System.ValueType!System.DateTime!System.Runtime.CompilerServices.IsBoxed">
       <summary>Provides implicit conversion from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintDateTimeProperty" /> to a <see cref="T:System.DateTime" />. </summary>
-      <returns>A <see cref="T:System.DateTime" />. </returns>
+      <returns>The converted PrintDateTimePropety object to a DateTime object.</returns>
       <param name="attribRef">The object that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintDateTimeProperty.Value">
@@ -1779,12 +1787,12 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintDriverProperty.op_Implicit(System.Printing.IndexedProperties.PrintDriverProperty|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.Printing.PrintDriver">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintDriverProperty" /> to a <see cref="T:System.Printing.PrintDriver" />. </summary>
-      <returns>A <see cref="T:System.Printing.PrintDriver" />.</returns>
+      <returns>A <see cref="T:System.Printing.PrintDriver" /> that is the converted value of the <see cref="T:System.Printing.IndexedProperties.PrintDriverProperty" />.</returns>
       <param name="attribRef">The <see cref="T:System.Printing.IndexedProperties.PrintDriverProperty" />  that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintDriverProperty.op_Implicit(System.Printing.IndexedProperties.PrintDriverProperty)~System.Printing.PrintDriver">
       <summary>Provides implicit conversion to a <see cref="T:System.Printing.PrintDriver" /> from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintDriverProperty" />.</summary>
-      <returns>A <see cref="T:System.Printing.PrintDriver" />.</returns>
+      <returns>A <see cref="T:System.Printing.PrintDriver" /> that is the converted value of the <see cref="T:System.Printing.IndexedProperties.PrintDriverProperty" />.</returns>
       <param name="attribRef">The pointer to a <see cref="T:System.Printing.IndexedProperties.PrintDriverProperty" />  that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintDriverProperty.Value">
@@ -1805,12 +1813,12 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintInt32Property.op_Implicit(System.Printing.IndexedProperties.PrintInt32Property|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.Int32">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintInt32Property" /> to an <see cref="T:System.Int32" />. </summary>
-      <returns>An <see cref="T:System.Int32" />.</returns>
+      <returns>The converted PrintInt32Property object to an Int32 object.</returns>
       <param name="attribRef">The <see cref="T:System.Printing.IndexedProperties.PrintInt32Property" />  that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintInt32Property.op_Implicit(System.Printing.IndexedProperties.PrintInt32Property)~System.Int32">
       <summary>Provides implicit conversion to an <see cref="T:System.Int32" /> from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintInt32Property" />.</summary>
-      <returns>An <see cref="T:System.Int32" />.</returns>
+      <returns>The converted PrintInt32Property object to an Int32 object.</returns>
       <param name="attribRef">A pointer to the <see cref="T:System.Printing.IndexedProperties.PrintInt32Property" />  that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintInt32Property.Value">
@@ -1858,12 +1866,12 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintJobStatusProperty.op_Implicit(System.Printing.IndexedProperties.PrintJobStatusProperty|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.Printing.PrintJobStatus">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintJobStatusProperty" /> to a <see cref="T:System.Printing.PrintJobStatus" /> value.</summary>
-      <returns>A <see cref="T:System.Printing.PrintJobStatus" />.</returns>
+      <returns>A <see cref="T:System.Printing.PrintJobStatus" /> that is the converted value of the <see cref="T:System.Printing.IndexedProperties.PrintJobStatusProperty" />.</returns>
       <param name="attribRef">The <see cref="T:System.Printing.IndexedProperties.PrintJobStatusProperty" />  that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintJobStatusProperty.op_Implicit(System.Printing.IndexedProperties.PrintJobStatusProperty)~System.Printing.PrintJobStatus">
       <summary>Provides implicit conversion to a <see cref="T:System.Printing.PrintJobStatus" /> value from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintJobStatusProperty" />.</summary>
-      <returns>A <see cref="T:System.Printing.PrintJobStatus" />.</returns>
+      <returns>A <see cref="T:System.Printing.PrintJobStatus" /> that is the converted value of the pointer.</returns>
       <param name="attribRef">A pointer to the <see cref="T:System.Printing.IndexedProperties.PrintJobStatusProperty" />  that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintJobStatusProperty.Value">
@@ -1884,12 +1892,12 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintPortProperty.op_Implicit(System.Printing.IndexedProperties.PrintPortProperty|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.Printing.PrintPort">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintPortProperty" /> to a <see cref="T:System.Printing.PrintPort" /> value.</summary>
-      <returns>A <see cref="T:System.Printing.PrintPort" />.</returns>
+      <returns>The converted PrintPort value form a PrintPortProperty object.</returns>
       <param name="attribRef">The <see cref="T:System.Printing.IndexedProperties.PrintPortProperty" />  that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintPortProperty.op_Implicit(System.Printing.IndexedProperties.PrintPortProperty)~System.Printing.PrintPort">
       <summary>Provides implicit conversion to a <see cref="T:System.Printing.PrintPort" /> value from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintPortProperty" />.</summary>
-      <returns>A <see cref="T:System.Printing.PrintPort" />.</returns>
+      <returns>The converted PrintPort value form a PrintPortProperty object.</returns>
       <param name="attribRef">A pointer to the <see cref="T:System.Printing.IndexedProperties.PrintPortProperty" />  that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintPortProperty.Value">
@@ -1910,12 +1918,12 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintProcessorProperty.op_Implicit(System.Printing.IndexedProperties.PrintProcessorProperty|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.Printing.PrintProcessor">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintProcessorProperty" /> to a <see cref="T:System.Printing.PrintProcessor" /> value.</summary>
-      <returns>A <see cref="T:System.Printing.PrintProcessor" />.</returns>
+      <returns>A <see cref="T:System.Printing.PrintProcessor" /> value of the <see cref="T:System.Printing.IndexedProperties.PrintProcessorProperty" />.</returns>
       <param name="attribRef">The <see cref="T:System.Printing.IndexedProperties.PrintProcessorProperty" />  that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintProcessorProperty.op_Implicit(System.Printing.IndexedProperties.PrintProcessorProperty)~System.Printing.PrintProcessor">
       <summary>Provides implicit conversion to a <see cref="T:System.Printing.PrintProcessor" /> value from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintProcessorProperty" />.</summary>
-      <returns>A <see cref="T:System.Printing.PrintProcessor" />.</returns>
+      <returns>A <see cref="T:System.Printing.PrintProcessor" /> value of the <see cref="T:System.Printing.IndexedProperties.PrintProcessorProperty" />.</returns>
       <param name="attribRef">A pointer to the <see cref="T:System.Printing.IndexedProperties.PrintProcessorProperty" />  that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintProcessorProperty.Value">
@@ -2044,12 +2052,12 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintQueueProperty.op_Implicit(System.Printing.IndexedProperties.PrintQueueProperty|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.Printing.PrintQueue">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintQueueProperty" /> to a <see cref="T:System.Printing.PrintQueue" /> value.</summary>
-      <returns>A <see cref="T:System.Printing.PrintQueue" />.</returns>
+      <returns>A <see cref="T:System.Printing.PrintQueue" /> that is the converted value of the <see cref="T:System.Printing.IndexedProperties.PrintQueueProperty" />.</returns>
       <param name="attribRef">The <see cref="T:System.Printing.IndexedProperties.PrintQueueProperty" />  that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintQueueProperty.op_Implicit(System.Printing.IndexedProperties.PrintQueueProperty)~System.Printing.PrintQueue">
       <summary>Provides implicit conversion to a <see cref="T:System.Printing.PrintQueue" /> value from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintQueueProperty" />.</summary>
-      <returns>A <see cref="T:System.Printing.PrintQueue" />.</returns>
+      <returns>A <see cref="T:System.Printing.PrintQueue" /> that is the converted value of the <see cref="T:System.Printing.IndexedProperties.PrintQueueProperty" />.</returns>
       <param name="attribRef">A pointer to the <see cref="T:System.Printing.IndexedProperties.PrintQueueProperty" />  that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintQueueProperty.Value">
@@ -2123,12 +2131,12 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintServerProperty.op_Implicit(System.Printing.IndexedProperties.PrintServerProperty|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.Printing.PrintServer">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintServerProperty" /> to a <see cref="T:System.Printing.PrintServer" /> value.</summary>
-      <returns>A <see cref="T:System.Printing.PrintServer" />.</returns>
+      <returns>The <see cref="T:System.Printing.PrintServer" /> that is the converted value.</returns>
       <param name="attribRef">The <see cref="T:System.Printing.IndexedProperties.PrintServerProperty" />  that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintServerProperty.op_Implicit(System.Printing.IndexedProperties.PrintServerProperty)~System.Printing.PrintServer">
       <summary>Provides implicit conversion to a <see cref="T:System.Printing.PrintServer" /> value from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintServerProperty" />.</summary>
-      <returns>A <see cref="T:System.Printing.PrintServer" />.</returns>
+      <returns>The <see cref="T:System.Printing.PrintServer" /> that is the converted value.</returns>
       <param name="attribRef">A pointer to the <see cref="T:System.Printing.IndexedProperties.PrintServerProperty" />  that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintServerProperty.Value">
@@ -2150,12 +2158,12 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintStreamProperty.op_Implicit(System.Printing.IndexedProperties.PrintStreamProperty|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.IO.Stream">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintStreamProperty" /> to a <see cref="T:System.IO.Stream" /> value.</summary>
-      <returns>A <see cref="T:System.IO.Stream" />.</returns>
+      <returns>A <see cref="T:System.IO.Stream" /> value of a <see cref="T:System.Printing.IndexedProperties.PrintStreamProperty" />.</returns>
       <param name="attributeRef">The <see cref="T:System.Printing.IndexedProperties.PrintStreamProperty" />  that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintStreamProperty.op_Implicit(System.Printing.IndexedProperties.PrintStreamProperty)~System.IO.Stream">
       <summary>Provides implicit conversion to a <see cref="T:System.IO.Stream" /> value from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintStreamProperty" />. </summary>
-      <returns>A <see cref="T:System.IO.Stream" />.</returns>
+      <returns>A <see cref="T:System.IO.Stream" /> value of a <see cref="T:System.Printing.IndexedProperties.PrintStreamProperty" />.</returns>
       <param name="attributeRef">A pointer to the <see cref="T:System.Printing.IndexedProperties.PrintStreamProperty" />  that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintStreamProperty.Value">
@@ -2176,12 +2184,12 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintStringProperty.op_Implicit(System.Printing.IndexedProperties.PrintStringProperty|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.String">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintStringProperty" /> to a <see cref="T:System.String" /> value.</summary>
-      <returns>A <see cref="T:System.String" />.</returns>
+      <returns>An implicit conversion to a String value from a pointer to a PrintStringProperty object.</returns>
       <param name="attributeRef">The <see cref="T:System.Printing.IndexedProperties.PrintStringProperty" />  that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintStringProperty.op_Implicit(System.Printing.IndexedProperties.PrintStringProperty)~System.String">
       <summary>Provides implicit conversion to a <see cref="T:System.String" /> value from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintStringProperty" />.</summary>
-      <returns>A <see cref="T:System.String" />.</returns>
+      <returns>An implicit conversion to a String value from a pointer to a PrintStringProperty object.</returns>
       <param name="attributeRef">A pointer to the <see cref="T:System.Printing.IndexedProperties.PrintStringProperty" />  that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintStringProperty.Value">
@@ -2202,17 +2210,17 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintSystemTypeProperty.op_Implicit(System.Printing.IndexedProperties.PrintSystemTypeProperty|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.Type">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintSystemTypeProperty" /> to a <see cref="T:System.Type" /> value.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>A converted Type value form a  PrintSystemTypeProperty object.</returns>
       <param name="attribRef">The <see cref="T:System.Printing.IndexedProperties.PrintSystemTypeProperty" />  that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintSystemTypeProperty.op_Implicit(System.Printing.IndexedProperties.PrintSystemTypeProperty)~System.Type">
       <summary>Provides implicit conversion to a <see cref="T:System.Type" /> value from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintSystemTypeProperty" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>A converted Type value form a  PrintSystemTypeProperty object.</returns>
       <param name="attribRef">A pointer to the <see cref="T:System.Printing.IndexedProperties.PrintSystemTypeProperty" />  that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintSystemTypeProperty.Value">
       <summary>Gets or sets the value of the property that the <see cref="T:System.Printing.IndexedProperties.PrintSystemTypeProperty" /> represents.</summary>
-      <returns>An <see cref="T:System.Object" />. </returns>
+      <returns>The value of the property that the <see cref="T:System.Printing.IndexedProperties.PrintSystemTypeProperty" /> represents.</returns>
     </member>
     <member name="T:System.Printing.IndexedProperties.PrintThreadPriorityProperty">
       <summary>Represents a <see cref="T:System.Threading.ThreadPriority" /> property (and its value) of a printing system hardware or software component. </summary>
@@ -2254,12 +2262,12 @@
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintTicketProperty.op_Implicit(System.Printing.IndexedProperties.PrintTicketProperty|System.Runtime.CompilerServices.IsImplicitlyDereferenced)~System.Printing.PrintTicket">
       <summary>Provides implicit conversion from a <see cref="T:System.Printing.IndexedProperties.PrintTicketProperty" /> to a <see cref="T:System.Printing.PrintTicket" /> value.</summary>
-      <returns>A <see cref="T:System.Printing.PrintTicket" />.</returns>
+      <returns>A converted PrintTicketProperty object to a PrintTicket value.</returns>
       <param name="attribRef">The <see cref="T:System.Printing.IndexedProperties.PrintTicketProperty" />  that is converted.</param>
     </member>
     <member name="M:System.Printing.IndexedProperties.PrintTicketProperty.op_Implicit(System.Printing.IndexedProperties.PrintTicketProperty)~System.Printing.PrintTicket">
       <summary>Provides implicit conversion to a <see cref="T:System.Printing.PrintTicket" /> value from a pointer to a <see cref="T:System.Printing.IndexedProperties.PrintTicketProperty" />.</summary>
-      <returns>A <see cref="T:System.Printing.PrintTicket" />.</returns>
+      <returns>A converted PrintTicketProperty object to a PrintTicket value.</returns>
       <param name="attribRef">A pointer to the <see cref="T:System.Printing.IndexedProperties.PrintTicketProperty" />  that is converted.</param>
     </member>
     <member name="P:System.Printing.IndexedProperties.PrintTicketProperty.Value">

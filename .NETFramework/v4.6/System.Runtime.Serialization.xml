@@ -10,16 +10,34 @@
     <member name="M:System.Runtime.Serialization.CollectionDataContractAttribute.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.CollectionDataContractAttribute" /> class. </summary>
     </member>
-    <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsItemNameSetExplicitly"></member>
-    <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsKeyNameSetExplicitly"></member>
-    <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsNameSetExplicitly"></member>
-    <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsNamespaceSetExplicitly"></member>
+    <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsItemNameSetExplicitly">
+      <summary>Gets whether <see cref="P:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName" /> has been explicitly set.</summary>
+      <returns>Returns true if the item name has been explicitly set; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsKeyNameSetExplicitly">
+      <summary>Gets whether <see cref="P:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName" /> has been explicitly set.</summary>
+      <returns>Returns true if the key name has been explicitly set; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsNameSetExplicitly">
+      <summary>Gets whether <see cref="P:System.Runtime.Serialization.CollectionDataContractAttribute.Name" /> has been explicitly set.</summary>
+      <returns>Returns true if the name has been explicitly set; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsNamespaceSetExplicitly">
+      <summary>Gets whether <see cref="P:System.Runtime.Serialization.CollectionDataContractAttribute.Namespace" /> has been explicitly set.</summary>
+      <returns>Returns true if the item namespace has been explicitly set; otherwise, false.</returns>
+    </member>
     <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference">
       <summary>Gets or sets a value that indicates whether to preserve object reference data.</summary>
       <returns>true to keep object reference data; otherwise, false. The default is false.</returns>
     </member>
-    <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsReferenceSetExplicitly"></member>
-    <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsValueNameSetExplicitly"></member>
+    <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsReferenceSetExplicitly">
+      <summary>Gets whether reference has been explicitly set.</summary>
+      <returns>Returns true if the reference has been explicitly set; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsValueNameSetExplicitly">
+      <summary>Gets whether <see cref="P:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName" /> has been explicitly set.</summary>
+      <returns>Returns true if the value name has been explicitly set; otherwise, false.</returns>
+    </member>
     <member name="P:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName">
       <summary>Gets or sets a custom name for a collection element.</summary>
       <returns>The name to apply to collection elements.</returns>
@@ -40,19 +58,43 @@
       <summary>Gets or sets the custom name for a dictionary value name.</summary>
       <returns>The name to use instead of the default dictionary value name.</returns>
     </member>
+    <member name="T:System.Runtime.Serialization.ContractNamespaceAttribute">
+      <summary>Specifies the CLR namespace and XML namespace of the data contract. </summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.ContractNamespaceAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.ContractNamespaceAttribute" /> class using the supplied namespace. </summary>
+      <param name="contractNamespace">The namespace of the contract.</param>
+    </member>
+    <member name="P:System.Runtime.Serialization.ContractNamespaceAttribute.ClrNamespace">
+      <summary>Gets or sets the CLR namespace of the data contract type. </summary>
+      <returns>The CLR-legal namespace of a type.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.ContractNamespaceAttribute.ContractNamespace">
+      <summary>Gets the namespace of the data contract members.</summary>
+      <returns>The namespace of the data contract members.</returns>
+    </member>
     <member name="T:System.Runtime.Serialization.DataContractAttribute">
       <summary>Specifies that the type defines or implements a data contract and is serializable by a serializer, such as the <see cref="T:System.Runtime.Serialization.DataContractSerializer" />. To make their type serializable, type authors must define a data contract for their type. </summary>
     </member>
     <member name="M:System.Runtime.Serialization.DataContractAttribute.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.DataContractAttribute" /> class. </summary>
     </member>
-    <member name="P:System.Runtime.Serialization.DataContractAttribute.IsNameSetExplicitly"></member>
-    <member name="P:System.Runtime.Serialization.DataContractAttribute.IsNamespaceSetExplicitly"></member>
+    <member name="P:System.Runtime.Serialization.DataContractAttribute.IsNameSetExplicitly">
+      <summary>Gets whether <see cref="P:System.Runtime.Serialization.DataContractAttribute.Name" /> has been explicitly set.</summary>
+      <returns>Returns true if the name has been explicitly set; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataContractAttribute.IsNamespaceSetExplicitly">
+      <summary>Gets whether <see cref="P:System.Runtime.Serialization.DataContractAttribute.Namespace" /> has been explicitly set.</summary>
+      <returns>Returns true if the namespace has been explicitly set; otherwise, false.</returns>
+    </member>
     <member name="P:System.Runtime.Serialization.DataContractAttribute.IsReference">
       <summary>Gets or sets a value that indicates whether to preserve object reference data.</summary>
       <returns>true to keep object reference data using standard XML; otherwise, false. The default is false.</returns>
     </member>
-    <member name="P:System.Runtime.Serialization.DataContractAttribute.IsReferenceSetExplicitly"></member>
+    <member name="P:System.Runtime.Serialization.DataContractAttribute.IsReferenceSetExplicitly">
+      <summary>Gets whether <see cref="P:System.Runtime.Serialization.DataContractAttribute.IsReference" /> has been explicitly set.</summary>
+      <returns>true if the reference has been explicitly set; otherwise, false.</returns>
+    </member>
     <member name="P:System.Runtime.Serialization.DataContractAttribute.Name">
       <summary>Gets or sets the name of the data contract for the type.</summary>
       <returns>The local name of a data contract. The default is the name of the class that the attribute is applied to. </returns>
@@ -322,6 +364,16 @@
       <param name="graph">The object to write.</param>
       <filterpriority>2</filterpriority>
     </member>
+    <member name="T:System.Runtime.Serialization.DataContractSerializerSettings">
+      <summary>Specifies data contract serializer settings.</summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.DataContractSerializerSettings.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.DataContractSerializerSettings" /> class.</summary>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataContractSerializerSettings.DataContractResolver">
+      <summary>Gets or sets the component used to dynamically map xsi:type declarations to known contract types.</summary>
+      <returns>The component used to dynamically map xsi:type declarations to known contract types.</returns>
+    </member>
     <member name="P:System.Runtime.Serialization.DataContractSerializerSettings.DataContractSurrogate">
       <summary>Gets or sets a serialization surrogate.</summary>
       <returns>The serialization surrogate.</returns>
@@ -329,6 +381,30 @@
     <member name="P:System.Runtime.Serialization.DataContractSerializerSettings.IgnoreExtensionDataObject">
       <summary>Gets or sets a value that specifies whether to ignore data supplied by an extension of the class when the class is being serialized or deserialized.</summary>
       <returns>True to ignore data supplied by an extension of the class when the class is being serialized or deserialized; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataContractSerializerSettings.KnownTypes">
+      <summary>Gets or sets a collection of types that may be present in the object graph serialized using this instance of the DataContractSerializerSettings.</summary>
+      <returns>A collection of types that may be present in the object graph serialized using this instance of the DataContractSerializerSettings.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataContractSerializerSettings.MaxItemsInObjectGraph">
+      <summary>Gets or sets the maximum number of items in an object graph to serialize or deserialize.</summary>
+      <returns>The maximum number of items in an object graph to serialize or deserialize.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataContractSerializerSettings.PreserveObjectReferences">
+      <summary>Gets or sets a value that specifies whether to use non-standard XML constructs to preserve object reference data.</summary>
+      <returns>True to use non-standard XML constructs to preserve object reference data; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataContractSerializerSettings.RootName">
+      <summary>Gets or sets the root name of the selected object.</summary>
+      <returns>The root name of the selected object.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataContractSerializerSettings.RootNamespace">
+      <summary>Gets or sets the root namespace for the specified object.</summary>
+      <returns>The root namespace for the specified object.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataContractSerializerSettings.SerializeReadOnlyTypes">
+      <summary>Gets or sets a value that specifies whether to serialize read only types.</summary>
+      <returns>True to serialize read only types; otherwise, false.</returns>
     </member>
     <member name="T:System.Runtime.Serialization.DataMemberAttribute">
       <summary>When applied to the member of a type, specifies that the member is part of a data contract and is serializable by the <see cref="T:System.Runtime.Serialization.DataContractSerializer" />.</summary>
@@ -340,7 +416,10 @@
       <summary>Gets or sets a value that specifies whether to serialize the default value for a field or property being serialized. </summary>
       <returns>true if the default value for a member should be generated in the serialization stream; otherwise, false. The default is true.</returns>
     </member>
-    <member name="P:System.Runtime.Serialization.DataMemberAttribute.IsNameSetExplicitly"></member>
+    <member name="P:System.Runtime.Serialization.DataMemberAttribute.IsNameSetExplicitly">
+      <summary>Gets whether <see cref="P:System.Runtime.Serialization.DataMemberAttribute.Name" /> has been explicitly set.</summary>
+      <returns>Returns true if the name has been explicitly set; otherwise, false.</returns>
+    </member>
     <member name="P:System.Runtime.Serialization.DataMemberAttribute.IsRequired">
       <summary>Gets or sets a value that instructs the serialization engine that the member must be present when reading or deserializing.</summary>
       <returns>true, if the member is required; otherwise, false.</returns>
@@ -354,13 +433,51 @@
       <summary>Gets or sets the order of serialization and deserialization of a member.</summary>
       <returns>The numeric order of serialization or deserialization.</returns>
     </member>
+    <member name="T:System.Runtime.Serialization.DateTimeFormat">
+      <summary>Specifies date-time format options.</summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.DateTimeFormat.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.DateTimeFormat" /> class using the format string.</summary>
+      <param name="formatString">The format string.</param>
+    </member>
+    <member name="M:System.Runtime.Serialization.DateTimeFormat.#ctor(System.String,System.IFormatProvider)">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.DateTimeFormat" /> class using the format string and format provider.</summary>
+      <param name="formatString">The format sting.</param>
+      <param name="formatProvider">The format provider.</param>
+    </member>
+    <member name="P:System.Runtime.Serialization.DateTimeFormat.DateTimeStyles">
+      <summary>Gets or sets the formatting options that customize string parsing for some date and time parsing methods.</summary>
+      <returns>The formatting options that customize string parsing for some date and time parsing methods.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.DateTimeFormat.FormatProvider">
+      <summary>Gets an object that controls formatting.</summary>
+    </member>
+    <member name="P:System.Runtime.Serialization.DateTimeFormat.FormatString">
+      <summary>Gets the format strings to control the formatting produced when a date or time is represented as a string.</summary>
+      <returns>The format strings to control the formatting produced when a date or time is represented as a string.</returns>
+    </member>
+    <member name="T:System.Runtime.Serialization.EmitTypeInformation">
+      <summary>Specifies how often to emit type information.</summary>
+    </member>
+    <member name="F:System.Runtime.Serialization.EmitTypeInformation.Always">
+      <summary>Always to emit type information.</summary>
+    </member>
+    <member name="F:System.Runtime.Serialization.EmitTypeInformation.AsNeeded">
+      <summary>As needed emit type information.</summary>
+    </member>
+    <member name="F:System.Runtime.Serialization.EmitTypeInformation.Never">
+      <summary>Never to emit type information.</summary>
+    </member>
     <member name="T:System.Runtime.Serialization.EnumMemberAttribute">
       <summary>Specifies that the field is an enumeration member and should be serialized.</summary>
     </member>
     <member name="M:System.Runtime.Serialization.EnumMemberAttribute.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.EnumMemberAttribute" /> class. </summary>
     </member>
-    <member name="P:System.Runtime.Serialization.EnumMemberAttribute.IsValueSetExplicitly"></member>
+    <member name="P:System.Runtime.Serialization.EnumMemberAttribute.IsValueSetExplicitly">
+      <summary>Gets whether the <see cref="P:System.Runtime.Serialization.EnumMemberAttribute.Value" /> has been explicitly set.</summary>
+      <returns>true if the value has been explicitly set; otherwise, false.</returns>
+    </member>
     <member name="P:System.Runtime.Serialization.EnumMemberAttribute.Value">
       <summary>Gets or sets the value associated with the enumeration member the attribute is applied to. </summary>
       <returns>The value associated with the enumeration member.</returns>
@@ -444,6 +561,12 @@
       <summary>Gets or sets the structure that contains extra data.</summary>
       <returns>An <see cref="T:System.Runtime.Serialization.ExtensionDataObject" /> that contains data that is not recognized as belonging to the data contract.</returns>
     </member>
+    <member name="T:System.Runtime.Serialization.IgnoreDataMemberAttribute">
+      <summary>When applied to the member of a type, specifies that the member is not part of a data contract and is not serialized.</summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.IgnoreDataMemberAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.IgnoreDataMemberAttribute" /> class. </summary>
+    </member>
     <member name="T:System.Runtime.Serialization.ImportOptions">
       <summary>Represents the options that can be set on an <see cref="T:System.Runtime.Serialization.XsdDataContractImporter" />. </summary>
     </member>
@@ -487,10 +610,44 @@
       <summary>Gets a <see cref="T:System.Collections.Generic.IList`1" /> containing types referenced in generated code. </summary>
       <returns>A <see cref="T:System.Collections.Generic.IList`1" /> that contains the referenced types. </returns>
     </member>
+    <member name="T:System.Runtime.Serialization.InvalidDataContractException">
+      <summary>The exception that is thrown when the <see cref="T:System.Runtime.Serialization.DataContractSerializer" /> or <see cref="T:System.Runtime.Serialization.NetDataContractSerializer" /> encounters an invalid data contract during serialization and deserialization. </summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.InvalidDataContractException.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.InvalidDataContractException" /> class.  </summary>
+    </member>
     <member name="M:System.Runtime.Serialization.InvalidDataContractException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.InvalidDataContractException" /> class with the specified <see cref="T:System.Runtime.Serialization.SerializationInfo" /> and <see cref="T:System.Runtime.Serialization.StreamingContext" />. </summary>
       <param name="info">A <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that contains data needed to serialize and deserialize an object. </param>
       <param name="context">A <see cref="T:System.Runtime.Serialization.StreamingContext" /> that specifies user context during serialization and deserialization.</param>
+    </member>
+    <member name="M:System.Runtime.Serialization.InvalidDataContractException.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.InvalidDataContractException" /> class with the specified error message. </summary>
+      <param name="message">A description of the error. </param>
+    </member>
+    <member name="M:System.Runtime.Serialization.InvalidDataContractException.#ctor(System.String,System.Exception)">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.InvalidDataContractException" /> class with the specified error message and inner exception. </summary>
+      <param name="message">A description of the error. </param>
+      <param name="innerException">The original <see cref="T:System.Exception" />. </param>
+    </member>
+    <member name="T:System.Runtime.Serialization.KnownTypeAttribute">
+      <summary>Specifies types that should be recognized by the <see cref="T:System.Runtime.Serialization.DataContractSerializer" /> when serializing or deserializing a given type. </summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.KnownTypeAttribute" /> class with the name of a method that returns an <see cref="T:System.Collections.IEnumerable" /> of known types. </summary>
+      <param name="methodName">The name of the method that returns an <see cref="T:System.Collections.IEnumerable" /> of types used when serializing or deserializing data.</param>
+    </member>
+    <member name="M:System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.KnownTypeAttribute" /> class with the specified type. </summary>
+      <param name="type">The <see cref="T:System.Type" /> that is included as a known type when serializing or deserializing data.</param>
+    </member>
+    <member name="P:System.Runtime.Serialization.KnownTypeAttribute.MethodName">
+      <summary>Gets the name of a method that will return a list of types that should be recognized during serialization or deserialization. </summary>
+      <returns>A <see cref="T:System.String" /> that contains the name of the method on the type defined by the <see cref="T:System.Runtime.Serialization.KnownTypeAttribute" /> class. </returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.KnownTypeAttribute.Type">
+      <summary>Gets the type that should be recognized during serialization or deserialization by the <see cref="T:System.Runtime.Serialization.DataContractSerializer" />. </summary>
+      <returns>The <see cref="T:System.Type" /> that is used during serialization or deserialization. </returns>
     </member>
     <member name="T:System.Runtime.Serialization.NetDataContractSerializer">
       <summary>Serializes and deserializes an instance of a type into XML stream or document using the supplied .NET Framework types. This class cannot be inherited.</summary>
@@ -680,6 +837,130 @@
       <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">the type being serialized does not conform to data contract rules. For example, the <see cref="T:System.Runtime.Serialization.DataContractAttribute" /> attribute has not been applied to the type.</exception>
       <exception cref="T:System.Runtime.Serialization.SerializationException">there is a problem with the instance being serialized.</exception>
       <exception cref="T:System.ServiceModel.QuotaExceededException">the maximum number of object to serialize has been exceeded. Check the <see cref="P:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph" /> property.</exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:System.Runtime.Serialization.XmlObjectSerializer">
+      <summary>Provides the base class used to serialize objects as XML streams or documents. This class is abstract.</summary>
+      <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">the type being serialized does not conform to data contract rules. For example, the <see cref="T:System.Runtime.Serialization.DataContractAttribute" /> attribute has not been applied to the type.</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">there is a problem with the instance being serialized. </exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> class.  </summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject(System.Xml.XmlDictionaryReader)">
+      <summary>Gets a value that specifies whether the <see cref="T:System.Xml.XmlDictionaryReader" /> is positioned over an XML element that can be read.</summary>
+      <returns>true if the reader can read the data; otherwise, false.</returns>
+      <param name="reader">An <see cref="T:System.Xml.XmlDictionaryReader" /> used to read the XML stream or document.</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject(System.Xml.XmlReader)">
+      <summary>Gets a value that specifies whether the <see cref="T:System.Xml.XmlReader" /> is positioned over an XML element that can be read. </summary>
+      <returns>true if the reader is positioned over the starting element; otherwise, false.</returns>
+      <param name="reader">An <see cref="T:System.Xml.XmlReader" /> used to read the XML stream or document.</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.ReadObject(System.IO.Stream)">
+      <summary>Reads the XML stream or document with a <see cref="T:System.IO.Stream" /> and returns the deserialized object.</summary>
+      <returns>The deserialized object.</returns>
+      <param name="stream">A <see cref="T:System.IO.Stream" /> used to read the XML stream or document.</param>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.ReadObject(System.Xml.XmlDictionaryReader)">
+      <summary>Reads the XML document or stream with an <see cref="T:System.Xml.XmlDictionaryReader" /> and returns the deserialized object.</summary>
+      <returns>The deserialized object.</returns>
+      <param name="reader">An <see cref="T:System.Xml.XmlDictionaryReader" /> used to read the XML document.</param>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.ReadObject(System.Xml.XmlDictionaryReader,System.Boolean)">
+      <summary>Reads the XML stream or document with an <see cref="T:System.Xml.XmlDictionaryReader" /> and returns the deserialized object; it also enables you to specify whether the serializer can read the data before attempting to read it.</summary>
+      <returns>The deserialized object.</returns>
+      <param name="reader">An <see cref="T:System.Xml.XmlDictionaryReader" /> used to read the XML document.</param>
+      <param name="verifyObjectName">true to check whether the enclosing XML element name and namespace correspond to the root name and root namespace; otherwise, false to skip the verification.</param>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.ReadObject(System.Xml.XmlReader)">
+      <summary>Reads the XML document or stream with an <see cref="T:System.Xml.XmlReader" /> and returns the deserialized object.</summary>
+      <returns>The deserialized object.</returns>
+      <param name="reader">An <see cref="T:System.Xml.XmlReader" /> used to read the XML stream or document.</param>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.ReadObject(System.Xml.XmlReader,System.Boolean)">
+      <summary>Reads the XML document or stream with an <see cref="T:System.Xml.XmlReader" /> and returns the deserialized object; it also enables you to specify whether the serializer can read the data before attempting to read it.</summary>
+      <returns>The deserialized object.</returns>
+      <param name="reader">An <see cref="T:System.Xml.XmlReader" /> used to read the XML document or stream.</param>
+      <param name="verifyObjectName">true to check whether the enclosing XML element name and namespace correspond to the root name and root namespace; false to skip the verification.</param>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject(System.Xml.XmlDictionaryWriter)">
+      <summary>Writes the end of the object data as a closing XML element to the XML document or stream with an <see cref="T:System.Xml.XmlDictionaryWriter" />.</summary>
+      <param name="writer">An <see cref="T:System.Xml.XmlDictionaryWriter" /> used to write the XML document or stream.</param>
+      <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">the type being serialized does not conform to data contract rules. For example, the <see cref="T:System.Runtime.Serialization.DataContractAttribute" /> attribute has not been applied to the type.</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">there is a problem with the instance being serialized.</exception>
+      <exception cref="T:System.ServiceModel.QuotaExceededException">the maximum number of objects to serialize has been exceeded. Check the <see cref="P:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph" /> property.</exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject(System.Xml.XmlWriter)">
+      <summary>Writes the end of the object data as a closing XML element to the XML document or stream with an <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="writer">An <see cref="T:System.Xml.XmlWriter" /> used to write the XML document or stream.</param>
+      <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">the type being serialized does not conform to data contract rules. For example, the <see cref="T:System.Runtime.Serialization.DataContractAttribute" /> attribute has not been applied to the type.</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">there is a problem with the instance being serialized.</exception>
+      <exception cref="T:System.ServiceModel.QuotaExceededException">the maximum number of objects to serialize has been exceeded. Check the <see cref="P:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph" /> property.</exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.WriteObject(System.IO.Stream,System.Object)">
+      <summary>Writes the complete content (start, content, and end) of the object to the XML document or stream with the specified <see cref="T:System.IO.Stream" />.</summary>
+      <param name="stream">A <see cref="T:System.IO.Stream" /> used to write the XML document or stream.</param>
+      <param name="graph">The object that contains the data to write to the stream.</param>
+      <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">the type being serialized does not conform to data contract rules. For example, the <see cref="T:System.Runtime.Serialization.DataContractAttribute" /> attribute has not been applied to the type.</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">there is a problem with the instance being serialized.</exception>
+      <exception cref="T:System.ServiceModel.QuotaExceededException">the maximum number of objects to serialize has been exceeded. Check the <see cref="P:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph" /> property.</exception>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.WriteObject(System.Xml.XmlDictionaryWriter,System.Object)">
+      <summary>Writes the complete content (start, content, and end) of the object to the XML document or stream with the specified <see cref="T:System.Xml.XmlDictionaryWriter" />.</summary>
+      <param name="writer">An <see cref="T:System.Xml.XmlDictionaryWriter" /> used to write the content to the XML document or stream.</param>
+      <param name="graph">The object that contains the content to write.</param>
+      <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">the type being serialized does not conform to data contract rules. For example, the <see cref="T:System.Runtime.Serialization.DataContractAttribute" /> attribute has not been applied to the type.</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">there is a problem with the instance being serialized.</exception>
+      <exception cref="T:System.ServiceModel.QuotaExceededException">the maximum number of objects to serialize has been exceeded. Check the <see cref="P:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph" /> property.</exception>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.WriteObject(System.Xml.XmlWriter,System.Object)">
+      <summary>Writes the complete content (start, content, and end) of the object to the XML document or stream with the specified <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="writer">An <see cref="T:System.Xml.XmlWriter" /> used to write the XML document or stream.</param>
+      <param name="graph">The object that contains the content to write.</param>
+      <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">the type being serialized does not conform to data contract rules. For example, the <see cref="T:System.Runtime.Serialization.DataContractAttribute" /> attribute has not been applied to the type.</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">there is a problem with the instance being serialized.</exception>
+      <exception cref="T:System.ServiceModel.QuotaExceededException">the maximum number of objects to serialize has been exceeded. Check the <see cref="P:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph" /> property.</exception>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent(System.Xml.XmlDictionaryWriter,System.Object)">
+      <summary>Writes only the content of the object to the XML document or stream using the specified <see cref="T:System.Xml.XmlDictionaryWriter" />.</summary>
+      <param name="writer">An <see cref="T:System.Xml.XmlDictionaryWriter" /> used to write the XML document or stream.</param>
+      <param name="graph">The object that contains the content to write.</param>
+      <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">the type being serialized does not conform to data contract rules. For example, the <see cref="T:System.Runtime.Serialization.DataContractAttribute" /> attribute has not been applied to the type.</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">there is a problem with the instance being serialized.</exception>
+      <exception cref="T:System.ServiceModel.QuotaExceededException">the maximum number of objects to serialize has been exceeded. Check the <see cref="P:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph" /> property.</exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent(System.Xml.XmlWriter,System.Object)">
+      <summary>Writes only the content of the object to the XML document or stream with the specified <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="writer">An <see cref="T:System.Xml.XmlWriter" /> used to write the XML document or stream.</param>
+      <param name="graph">The object that contains the content to write.</param>
+      <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">the type being serialized does not conform to data contract rules. For example, the <see cref="T:System.Runtime.Serialization.DataContractAttribute" /> attribute has not been applied to the type.</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">there is a problem with the instance being serialized.</exception>
+      <exception cref="T:System.ServiceModel.QuotaExceededException">the maximum number of objects to serialize has been exceeded. Check the <see cref="P:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph" /> property.</exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject(System.Xml.XmlDictionaryWriter,System.Object)">
+      <summary>Writes the start of the object's data as an opening XML element using the specified <see cref="T:System.Xml.XmlDictionaryWriter" />.</summary>
+      <param name="writer">An <see cref="T:System.Xml.XmlDictionaryWriter" /> used to write the XML document.</param>
+      <param name="graph">The object to serialize.</param>
+      <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">the type being serialized does not conform to data contract rules. For example, the <see cref="T:System.Runtime.Serialization.DataContractAttribute" /> attribute has not been applied to the type.</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">there is a problem with the instance being serialized.</exception>
+      <exception cref="T:System.ServiceModel.QuotaExceededException">the maximum number of objects to serialize has been exceeded. Check the <see cref="P:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph" /> property.</exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject(System.Xml.XmlWriter,System.Object)">
+      <summary>Writes the start of the object's data as an opening XML element using the specified <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="writer">An <see cref="T:System.Xml.XmlWriter" /> used to write the XML document.</param>
+      <param name="graph">The object to serialize.</param>
+      <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">the type being serialized does not conform to data contract rules. For example, the <see cref="T:System.Runtime.Serialization.DataContractAttribute" /> attribute has not been applied to the type.</exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">there is a problem with the instance being serialized.</exception>
+      <exception cref="T:System.ServiceModel.QuotaExceededException">the maximum number of objects to serialize has been exceeded. Check the <see cref="P:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph" /> property.</exception>
       <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Runtime.Serialization.XmlSerializableServices">
@@ -1315,13 +1596,47 @@
       <param name="writer">The <see cref="T:System.Xml.XmlWriter" /> used to write the XML start element.</param>
       <param name="graph">The object to write.</param>
     </member>
+    <member name="T:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings">
+      <summary>Specifies <see cref="T:System.Runtime.Serialization.Json.DataContractJsonSerializer" /> settings.</summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings" /> class.</summary>
+    </member>
     <member name="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.DataContractSurrogate">
       <summary>Gets or sets a surrogate type that is currently active for given IDataContractSurrogate instance.</summary>
       <returns>The surrogate type that is currently active for given IDataContractSurrogate instance.</returns>
     </member>
+    <member name="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.DateTimeFormat">
+      <summary>Gets or sets a DateTimeFormat that defines the culturally appropriate format of displaying dates and times.</summary>
+      <returns>The DateTimeFormat that defines the culturally appropriate format of displaying dates and times.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.EmitTypeInformation">
+      <summary>Gets or sets the data contract JSON serializer settings to emit type information.</summary>
+      <returns>The data contract JSON serializer settings to emit type information.</returns>
+    </member>
     <member name="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.IgnoreExtensionDataObject">
       <summary>Gets or sets a value that specifies whether to ignore data supplied by an extension of the class when the class is being serialized or deserialized.</summary>
       <returns>True to ignore data supplied by an extension of the class when the class is being serialized or deserialized; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.KnownTypes">
+      <summary>Gets or sets a collection of types that may be present in the object graph serialized using this instance the DataContractJsonSerializerSettings.</summary>
+      <returns>A collection of types that may be present in the object graph serialized using this instance the DataContractJsonSerializerSettings.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.MaxItemsInObjectGraph">
+      <summary>Gets or sets the maximum number of items in an object graph to serialize or deserialize.</summary>
+      <returns>The maximum number of items in an object graph to serialize or deserialize.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.RootName">
+      <summary>Gets or sets the root name of the selected object.</summary>
+      <returns>The root name of the selected object.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.SerializeReadOnlyTypes">
+      <summary>Gets or sets a value that specifies whether to serialize read only types.</summary>
+      <returns>True to serialize read only types; otherwise false.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Json.DataContractJsonSerializerSettings.UseSimpleDictionaryFormat">
+      <summary>Gets or sets a value that specifies whether to use a simple dictionary format.</summary>
+      <returns>True to use a simple dictionary format; otherwise, false.</returns>
     </member>
     <member name="T:System.Runtime.Serialization.Json.IXmlJsonReaderInitializer">
       <summary>Specifies the interface for initializing a JavaScript Object Notation (JSON) reader when reusing them to read from a particular stream or buffer.</summary>
@@ -1501,6 +1816,28 @@
       <param name="session">The <see cref="T:System.Xml.XmlBinaryWriterSession" /> to use.</param>
       <param name="ownsStream">If true, stream is closed by the writer when done; otherwise false.</param>
     </member>
+    <member name="T:System.Xml.IXmlDictionary">
+      <summary>An interface that defines the contract that an Xml dictionary must implement to be used by <see cref="T:System.Xml.XmlDictionaryReader" /> and <see cref="T:System.Xml.XmlDictionaryWriter" /> implementations.</summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Xml.IXmlDictionary.TryLookup(System.Int32,System.Xml.XmlDictionaryString@)">
+      <summary>Attempts to look up an entry in the dictionary.</summary>
+      <returns>true if key is in the dictionary, otherwise false.</returns>
+      <param name="key">Key to look up.</param>
+      <param name="result">If <paramref name="key" /> is defined, the <see cref="T:System.Xml.XmlDictionaryString" /> that is mapped to the key; otherwise null.</param>
+    </member>
+    <member name="M:System.Xml.IXmlDictionary.TryLookup(System.String,System.Xml.XmlDictionaryString@)">
+      <summary>Checks the dictionary for a specified string value.</summary>
+      <returns>true if value is in the dictionary, otherwise false.</returns>
+      <param name="value">String value being checked for.</param>
+      <param name="result">The corresponding <see cref="T:System.Xml.XmlDictionaryString" />, if found; otherwise null.</param>
+    </member>
+    <member name="M:System.Xml.IXmlDictionary.TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString@)">
+      <summary>Checks the dictionary for a specified <see cref="T:System.Xml.XmlDictionaryString" />.</summary>
+      <returns>true if <see cref="T:System.Xml.XmlDictionaryString" /> is in the dictionary, otherwise false.</returns>
+      <param name="value">The <see cref="T:System.Xml.XmlDictionaryString" /> being checked for.</param>
+      <param name="result">The matching <see cref="T:System.Xml.XmlDictionaryString" />, if found; otherwise null.</param>
+    </member>
     <member name="T:System.Xml.IXmlMtomReaderInitializer">
       <summary>Specifies implementation requirements for XML MTOM readers that derive from this interface.</summary>
       <filterpriority>2</filterpriority>
@@ -1569,6 +1906,11 @@
       <param name="stream">The stream to write to.</param>
       <param name="encoding">The character encoding of the stream.</param>
       <param name="ownsStream">If true, stream is closed by the writer when done; otherwise false.</param>
+    </member>
+    <member name="T:System.Xml.OnXmlDictionaryReaderClose">
+      <summary>delegate for a callback method when closing the reader.</summary>
+      <param name="reader">The <see cref="T:System.Xml.XmlDictionaryReader" /> that fires the OnClose event.</param>
+      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Xml.UniqueId">
       <summary>A unique identifier optimized for Guids.</summary>
@@ -1734,6 +2076,25 @@
       <param name="result">When this method returns, contains a string if an entry is found; otherwise, null. This parameter is passed uninitialized.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="value" /> is null.</exception>
+    </member>
+    <member name="T:System.Xml.XmlBinaryWriterSession">
+      <summary>Enables using a dynamic dictionary to compress common strings that appear in a message and maintain state.</summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Xml.XmlBinaryWriterSession.#ctor">
+      <summary>Creates an instance of this class. </summary>
+    </member>
+    <member name="M:System.Xml.XmlBinaryWriterSession.Reset">
+      <summary>Clears out the internal collections.</summary>
+    </member>
+    <member name="M:System.Xml.XmlBinaryWriterSession.TryAdd(System.Xml.XmlDictionaryString,System.Int32@)">
+      <summary>Tries to add an <see cref="T:System.Xml.XmlDictionaryString" /> to the internal collection.</summary>
+      <returns>true if the string could be added; otherwise, false.</returns>
+      <param name="value">The <see cref="T:System.Xml.XmlDictionaryString" /> to add.</param>
+      <param name="key">The key of the <see cref="T:System.Xml.XmlDictionaryString" /> that was successfully added.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="value" /> is null.</exception>
+      <exception cref="T:System.InvalidOperationException">An entry with key = <paramref name="key" /> already exists.</exception>
     </member>
     <member name="T:System.Xml.XmlDictionary">
       <summary>Implements a dictionary used to optimize Windows Communication Foundation (WCF)'s XML reader/writer implementations.</summary>
@@ -2854,6 +3215,43 @@
     </member>
     <member name="F:System.Xml.XmlDictionaryReaderQuotaTypes.MaxStringContentLength">
       <summary>Specifies the maximum string length returned by the reader.</summary>
+    </member>
+    <member name="T:System.Xml.XmlDictionaryString">
+      <summary>Represents an entry stored in a <see cref="T:System.Xml.XmlDictionary" />.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryString.#ctor(System.Xml.IXmlDictionary,System.String,System.Int32)">
+      <summary>Creates an instance of this class. </summary>
+      <param name="dictionary">The <see cref="T:System.Xml.IXmlDictionary" /> containing this instance.</param>
+      <param name="value">The string that is the value of the dictionary entry.</param>
+      <param name="key">The integer that is the key of the dictionary entry.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="dictionary" /> is null.</exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="value" /> is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="key" /> is less than 0 or greater than <see cref="F:System.Int32.MaxValue" /> / 4.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDictionaryString.Dictionary">
+      <summary>Represents the <see cref="T:System.Xml.IXmlDictionary" /> passed to the constructor of this instance of <see cref="T:System.Xml.XmlDictionaryString" />.</summary>
+      <returns>The <see cref="T:System.Xml.IXmlDictionary" /> for this dictionary entry.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDictionaryString.Empty">
+      <summary>Gets an <see cref="T:System.Xml.XmlDictionaryString" /> representing the empty string.</summary>
+      <returns>An <see cref="T:System.Xml.XmlDictionaryString" /> representing the empty string.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDictionaryString.Key">
+      <summary>Gets the integer key for this instance of the class.  </summary>
+      <returns>The integer key for this instance of the class. </returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Xml.XmlDictionaryString.ToString">
+      <summary>Displays a text representation of this object.</summary>
+      <returns>The string value for this instance of the class. </returns>
+    </member>
+    <member name="P:System.Xml.XmlDictionaryString.Value">
+      <summary>Gets the string value for this instance of the class.  </summary>
+      <returns>The string value for this instance of the class. </returns>
+      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Xml.XmlDictionaryWriter">
       <summary>Represents an abstract class that Windows Communication Foundation (WCF) derives from <see cref="T:System.Xml.XmlWriter" /> to do serialization and deserialization.</summary>

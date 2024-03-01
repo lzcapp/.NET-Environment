@@ -6135,5 +6135,8 @@
       <summary>Validates the parameters.</summary>
       <returns>true if the parameters are all valid.</returns>
     </member>
+    <member name="T:System.Deployment.Internal.CodeSigning.RSAPKCS1SHA256SignatureDescription">
+      <summary>Creates <see cref="T:System.Security.Cryptography.RSAPKCS1SignatureFormatter" /> and <see cref="T:System.Security.Cryptography.RSAPKCS1SignatureDeformatter" /> objects.</summary>
+    </member>
   </members>
 </doc>

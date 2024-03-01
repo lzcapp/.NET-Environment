@@ -1988,7 +1988,10 @@
       <exception cref="T:System.ArgumentNullException">
         <paramref name="instance" /> is null.</exception>
     </member>
-    <member name="P:System.Xaml.XamlObjectEventArgs.ElementLineNumber"></member>
+    <member name="P:System.Xaml.XamlObjectEventArgs.ElementLineNumber">
+      <summary>Gets or sets the number of element lines.</summary>
+      <returns>The number of element lines.</returns>
+    </member>
     <member name="P:System.Xaml.XamlObjectEventArgs.ElementLinePosition"></member>
     <member name="P:System.Xaml.XamlObjectEventArgs.Instance">
       <summary>Gets the object instance that is relevant to the event data.</summary>

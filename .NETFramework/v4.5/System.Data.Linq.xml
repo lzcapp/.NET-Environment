@@ -57,21 +57,20 @@
     <member name="T:System.Data.Linq.ChangeAction">
       <summary>Describes the type of change the entity will undergo when changes are submitted to the database.</summary>
     </member>
-    <member name="F:System.Data.Linq.ChangeAction.None">
-      <summary>The entity will not be submitted.</summary>
-    </member>
     <member name="F:System.Data.Linq.ChangeAction.Delete">
       <summary>The entity will be deleted.</summary>
     </member>
     <member name="F:System.Data.Linq.ChangeAction.Insert">
       <summary>The entity will be inserted.</summary>
     </member>
+    <member name="F:System.Data.Linq.ChangeAction.None">
+      <summary>The entity will not be submitted.</summary>
+    </member>
     <member name="F:System.Data.Linq.ChangeAction.Update">
       <summary>The entity will be updated.</summary>
     </member>
     <member name="T:System.Data.Linq.ChangeConflictCollection">
       <summary>Returns a collection of objects involved in concurrency conflicts.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.ChangeConflictCollection.Clear">
       <summary>Removes all conflicts from the collection.</summary>
@@ -155,7 +154,6 @@
     </member>
     <member name="T:System.Data.Linq.ChangeSet">
       <summary>Provides a container to hold changes.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Data.Linq.ChangeSet.Deletes">
       <summary>Gets a list of entities that have been deleted from the <see cref="T:System.Data.Linq.ChangeSet" />.</summary>
@@ -415,11 +413,11 @@
     <member name="T:System.Data.Linq.ConflictMode">
       <summary>Specifies when concurrency conflicts should be reported.</summary>
     </member>
-    <member name="F:System.Data.Linq.ConflictMode.FailOnFirstConflict">
-      <summary>Specifies that attempts to update the database should stop immediately when the first concurrency conflict error is detected.</summary>
-    </member>
     <member name="F:System.Data.Linq.ConflictMode.ContinueOnConflict">
       <summary>Specifies that all updates to the database should be tried, and that concurrency conflicts should be accumulated and returned at the end of the process.</summary>
+    </member>
+    <member name="F:System.Data.Linq.ConflictMode.FailOnFirstConflict">
+      <summary>Specifies that attempts to update the database should stop immediately when the first concurrency conflict error is detected.</summary>
     </member>
     <member name="T:System.Data.Linq.DataContext">
       <summary>Represents the main entry point for the LINQ to SQL framework.</summary>
@@ -445,7 +443,6 @@
     <member name="P:System.Data.Linq.DataContext.ChangeConflicts">
       <summary>Gets a collection of objects that caused concurrency conflicts when <see cref="M:System.Data.Linq.DataContext.SubmitChanges" /> was called.</summary>
       <returns>A collection of objects that caused concurrency conflicts.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Data.Linq.DataContext.CommandTimeout">
       <summary>Gets or sets a value that increases the time-out period for queries that would otherwise time out during the default time-out period.</summary>
@@ -476,11 +473,9 @@
     </member>
     <member name="M:System.Data.Linq.DataContext.DeleteDatabase">
       <summary>Deletes the associated database.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DataContext.Dispose">
       <summary>Releases all resources used by the current instance of the <see cref="T:System.Data.Linq.DataContext" /> class.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DataContext.Dispose(System.Boolean)">
       <summary>Releases the unmanaged resources used by the <see cref="T:System.Data.Linq.DataContext" /> class and optionally releases the managed resource.</summary>
@@ -491,7 +486,6 @@
       <returns>The number of rows modified by the executed command.</returns>
       <param name="command">The SQL command to be executed.</param>
       <param name="parameters">The array of parameters to be passed to the command. Note the following behavior:If the number of objects in the array is less than the highest number identified in the command string, an exception is thrown.If the array contains objects that are not referenced in the command string, no exception is thrown.If any one of the parameters is null, it is converted to DBNull.Value.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DataContext.ExecuteDynamicDelete(System.Object)">
       <summary>Executes, inside delete override methods, to redelegate to LINQ to SQL the task of generating and executing dynamic SQL for delete operations.</summary>
@@ -518,7 +512,6 @@
       <param name="query">The SQL query to be executed.</param>
       <param name="parameters">The array of parameters to be passed to the command. Note the following behavior:If the number of objects in the array is less than the highest number identified in the command string, an exception is thrown.If the array contains objects that are not referenced in the command string, no exception is thrown.If a parameter is null, it is converted to DBNull.Value.</param>
       <typeparam name="TResult">The type of the elements in the returned collection.</typeparam>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DataContext.ExecuteQuery(System.Type,System.String,System.Object[])">
       <summary>Executes SQL queries directly on the database.</summary>
@@ -526,7 +519,6 @@
       <param name="elementType">The type of the <see cref="T:System.Collections.Generic.IEnumerable`1" /> to be returned.The algorithm for matching columns in the result of the query to fields or properties in the object works as follows:If a field or property is mapped to a particular column name, that column name is expected in the resultset.If a field or property is not mapped, a column with the same name as the field or property is expected in the resultset.The comparison is performed by looking for a case-sensitive match first. If this match is not found, a subsequent search occurs for a case-insensitive match.The query must return all the tracked fields and properties of the object (except those that are loaded on a deferred basis) when all the following conditions are true:<paramref name="T" /> is an entity explicitly tracked by the <see cref="T:System.Data.Linq.DataContext" />.<see cref="P:System.Data.Linq.DataContext.ObjectTrackingEnabled" /> is true.The entity has a primary key.Otherwise an exception is thrown.</param>
       <param name="query">The SQL query to be executed.</param>
       <param name="parameters">The array of parameters to be passed to the command. Note the following behavior:If the number of objects in the array is less than the highest number identified in the command string, an exception is thrown.If the array contains objects that are not referenced in the command string, no exception is thrown.If a parameter is null, it is converted to DBNull.Value.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DataContext.GetChangeSet">
       <summary>Gets the modified objects tracked by <see cref="T:System.Data.Linq.DataContext" />.</summary>
@@ -536,19 +528,16 @@
       <summary>Gets the information about SQL commands generated by LINQ to SQL.</summary>
       <returns>The requested command information object.</returns>
       <param name="query">The query whose SQL command information is to be retrieved.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DataContext.GetTable``1">
       <summary>Returns a collection of objects of a particular type, where the type is defined by the <paramref name="TEntity" /> parameter.</summary>
       <returns>A collection of objects defined by the <paramref name="TEntity" /> parameter. </returns>
       <typeparam name="TEntity">The type of the objects to be returned.</typeparam>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DataContext.GetTable(System.Type)">
       <summary>Returns a collection of objects of a particular type, where the type is defined by the <paramref name="type" /> parameter.</summary>
       <returns>A collection of objects defined by the <paramref name="type" /> parameter.</returns>
       <param name="type">The type of the objects to be returned.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Data.Linq.DataContext.LoadOptions">
       <summary>Gets or sets the <see cref="T:System.Data.Linq.DataLoadOptions" /> associated with this <see cref="T:System.Data.Linq.DataContext" />.</summary>
@@ -561,30 +550,25 @@
     <member name="P:System.Data.Linq.DataContext.Mapping">
       <summary>Gets the <see cref="T:System.Data.Linq.Mapping.MetaModel" /> on which the mapping is based.</summary>
       <returns>The mapping between a database and domain objects.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Data.Linq.DataContext.ObjectTrackingEnabled">
       <summary>Gets or sets a value that indicates whether object tracking is enabled.</summary>
       <returns>true if the object tracking is enabled; otherwise, false. The default is true.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DataContext.Refresh(System.Data.Linq.RefreshMode,System.Collections.IEnumerable)">
       <summary>Refreshes a collection of entity objects according to the specified mode.</summary>
       <param name="mode">A value that specifies how optimistic concurrency conflicts are handled.</param>
       <param name="entities">The collection of entities to be refreshed.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DataContext.Refresh(System.Data.Linq.RefreshMode,System.Object)">
       <summary>Refreshes an entity object according to the specified mode.</summary>
       <param name="mode">A value that specifies how optimistic concurrency conflicts are handled.</param>
       <param name="entity">The object to be refreshed.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DataContext.Refresh(System.Data.Linq.RefreshMode,System.Object[])">
       <summary>Refreshes an array of entity objects according to the specified mode.</summary>
       <param name="mode">A value that specifies how optimistic concurrency conflicts are handled.</param>
       <param name="entities">The array of entity objects to be refreshed.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DataContext.SubmitChanges">
       <summary>Computes the set of modified objects to be inserted, updated, or deleted, and executes the appropriate commands to implement the changes to the database.</summary>
@@ -596,18 +580,17 @@
     <member name="P:System.Data.Linq.DataContext.Transaction">
       <summary>Gets or sets a local transaction for the .NET Framework to use to access the database.</summary>
       <returns>The transaction object used by the <see cref="T:System.Data.Linq.DataContext" /> when executing queries and commands.</returns>
-      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Data.Linq.DataContext.Translate(System.Data.Common.DbDataReader)">
+      <summary>Converts an existing <see cref="T:System.Data.Common.DbDataReader" /> to objects.</summary>
+      <returns>A list of objects returned by the conversion.</returns>
+      <param name="reader">The <see cref="T:System.Data.IDataReader" /> to be converted.</param>
     </member>
     <member name="M:System.Data.Linq.DataContext.Translate``1(System.Data.Common.DbDataReader)">
       <summary>Converts an existing <see cref="T:System.Data.Common.DbDataReader" /> to objects.</summary>
       <returns>A collection of objects returned by the conversion.</returns>
       <param name="reader">The <see cref="T:System.Data.IDataReader" /> to be converted.</param>
       <typeparam name="TResult">The type of the <see cref="T:System.Collections.Generic.IEnumerable`1" /> to be returned.</typeparam>
-    </member>
-    <member name="M:System.Data.Linq.DataContext.Translate(System.Data.Common.DbDataReader)">
-      <summary>Converts an existing <see cref="T:System.Data.Common.DbDataReader" /> to objects.</summary>
-      <returns>A list of objects returned by the conversion.</returns>
-      <param name="reader">The <see cref="T:System.Data.IDataReader" /> to be converted.</param>
     </member>
     <member name="M:System.Data.Linq.DataContext.Translate(System.Type,System.Data.Common.DbDataReader)">
       <summary>Converts an existing <see cref="T:System.Data.Common.DbDataReader" /> to objects.</summary>
@@ -629,7 +612,6 @@
     <member name="M:System.Data.Linq.DataLoadOptions.AssociateWith(System.Linq.Expressions.LambdaExpression)">
       <summary>Filters the objects retrieved for a particular relationship.</summary>
       <param name="expression">Identifies the query to be used on a particular one-to-many field or property. Note the following:If the expression does not start with a field or property that represents a one-to-many relationship, an exception is thrown.If an operator other than a valid operator appears in the expression, an exception is thrown. Valid operators are as follows:WhereOrderByThenByOrderByDescendingThenByDescendingTake</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DataLoadOptions.LoadWith``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
       <summary>Specifies which sub-objects to retrieve when a query is submitted for an object of type T.</summary>
@@ -639,11 +621,9 @@
     <member name="M:System.Data.Linq.DataLoadOptions.LoadWith(System.Linq.Expressions.LambdaExpression)">
       <summary>Retrieves specified data related to the main target by using a lambda expression.</summary>
       <param name="expression">A lambda expression that identifies the related material.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Data.Linq.DBConvert">
       <summary>Used internally to convert one type to another.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DBConvert.ChangeType``1(System.Object)">
       <summary>Changes the specified value to the current type.</summary>
@@ -659,7 +639,6 @@
     </member>
     <member name="T:System.Data.Linq.DuplicateKeyException">
       <summary>Thrown when an attempt is made to add an object to the identity cache by using a key that is already being used.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.DuplicateKeyException.#ctor(System.Object)">
       <summary>Initializes a new instance of the <see cref="T:System.Data.Linq.DuplicateKeyException" /> class.</summary>
@@ -863,7 +842,6 @@
     </member>
     <member name="T:System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException">
       <summary>Represents errors that occur when an attempt is made to change a foreign key when the entity is already loaded.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException" /> class with a system-supplied message that describes the error.</summary>
@@ -910,7 +888,6 @@
     </member>
     <member name="T:System.Data.Linq.ITable">
       <summary>Used for weakly typed query scenarios.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.ITable.Attach(System.Object)">
       <summary>Attaches an entity to the <see cref="T:System.Data.Linq.DataContext" /> in an unmodified state.</summary>
@@ -1049,7 +1026,6 @@
     </member>
     <member name="T:System.Data.Linq.ModifiedMemberInfo">
       <summary>Holds values of members that have been modified in LINQ to SQL applications.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Data.Linq.ModifiedMemberInfo.CurrentValue">
       <summary>Gets the current value of the modified member.</summary>
@@ -1065,7 +1041,6 @@
     </member>
     <member name="T:System.Data.Linq.ObjectChangeConflict">
       <summary>Represents an update attempt with one or more optimistic concurrency conflicts.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Data.Linq.ObjectChangeConflict.IsDeleted">
       <summary>Gets a value that indicates whether the object in conflict has been deleted from the database.</summary>
@@ -1097,13 +1072,12 @@
     </member>
     <member name="T:System.Data.Linq.RefreshMode">
       <summary>Defines how the <see cref="Overload:System.Data.Linq.DataContext.Refresh" /> method handles optimistic concurrency conflicts.</summary>
-      <filterpriority>2</filterpriority>
-    </member>
-    <member name="F:System.Data.Linq.RefreshMode.KeepCurrentValues">
-      <summary>Forces the <see cref="Overload:System.Data.Linq.DataContext.Refresh" /> method to swap the original value with the values retrieved from the database. No current value is modified.</summary>
     </member>
     <member name="F:System.Data.Linq.RefreshMode.KeepChanges">
       <summary>Forces the <see cref="Overload:System.Data.Linq.DataContext.Refresh" /> method to keep the current value that has been changed, but updates the other values with the database values.</summary>
+    </member>
+    <member name="F:System.Data.Linq.RefreshMode.KeepCurrentValues">
+      <summary>Forces the <see cref="Overload:System.Data.Linq.DataContext.Refresh" /> method to swap the original value with the values retrieved from the database. No current value is modified.</summary>
     </member>
     <member name="F:System.Data.Linq.RefreshMode.OverwriteCurrentValues">
       <summary>Forces the <see cref="Overload:System.Data.Linq.DataContext.Refresh" /> method to override all the current values with the values from the database.</summary>
@@ -1145,7 +1119,6 @@
       <summary>Puts all entities from the collection into a pending delete state.</summary>
       <param name="entities">The entities to delete.</param>
       <typeparam name="TSubEntity">The type of the elements to delete.</typeparam>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.Table`1.DeleteOnSubmit(`0)">
       <summary>Puts an entity from this table into a pending delete state.</summary>
@@ -1154,13 +1127,11 @@
     <member name="M:System.Data.Linq.Table`1.GetEnumerator">
       <summary>Gets an enumerator that iterates through the collection.</summary>
       <returns>An enumerator that can be used to iterate through the collection.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.Table`1.GetModifiedMembers(`0)">
       <summary>Returns an array of modified members that contain their current and original values.</summary>
       <returns>An array of modified members that contain their current and original values.</returns>
       <param name="entity">The entity from which to get the array.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.Table`1.GetNewBindingList">
       <summary>Creates a new list for binding to a data source.</summary>
@@ -1170,7 +1141,6 @@
       <summary>Returns a <see cref="T:System.Data.Linq.Table`1" /> instance that contains the original state of the entity.</summary>
       <returns>A <see cref="T:System.Data.Linq.Table`1" /> instance that contains the original state of the entity.</returns>
       <param name="entity">The entity whose original state is to be returned.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Data.Linq.Table`1.InsertAllOnSubmit``1(System.Collections.Generic.IEnumerable{``0})">
       <summary>Adds all entities of a collection to the <see cref="T:System.Data.Linq.DataContext" /> in a pending insert state.</summary>
@@ -1273,21 +1243,20 @@
       <returns>An <see cref="T:System.Linq.IQueryable" /> that can evaluate the query represented by the specified expression tree.</returns>
       <param name="expression">The query expression from which the evaluation is performed.</param>
     </member>
-    <member name="M:System.Data.Linq.Table`1.System#Linq#IQueryProvider#Execute(System.Linq.Expressions.Expression)">
-      <summary>Executes the query represented by a specified expression tree.</summary>
-      <returns>The value that results from executing the specified query.</returns>
-      <param name="expression">The query expression to execute.</param>
-    </member>
     <member name="M:System.Data.Linq.Table`1.System#Linq#IQueryProvider#Execute``1(System.Linq.Expressions.Expression)">
       <summary>Executes the strongly-typed query represented by a specified expression tree.</summary>
       <returns>The value that results from executing the specified query.</returns>
       <param name="expression">The query expression to execute.</param>
       <typeparam name="TResult">The type of the data in the table.</typeparam>
     </member>
+    <member name="M:System.Data.Linq.Table`1.System#Linq#IQueryProvider#Execute(System.Linq.Expressions.Expression)">
+      <summary>Executes the query represented by a specified expression tree.</summary>
+      <returns>The value that results from executing the specified query.</returns>
+      <param name="expression">The query expression to execute.</param>
+    </member>
     <member name="M:System.Data.Linq.Table`1.ToString">
       <summary>Returns a string that represents the table.</summary>
       <returns>A string representation of the table.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Data.Linq.Mapping.AssociationAttribute">
       <summary>Designates a property to represent a database association, such as a foreign key relationship.</summary>
@@ -1328,11 +1297,11 @@
     <member name="T:System.Data.Linq.Mapping.AutoSync">
       <summary>Instructs the runtime how to retrieve the value after an insert or update operation.</summary>
     </member>
-    <member name="F:System.Data.Linq.Mapping.AutoSync.Default">
-      <summary>Automatically selects the value.</summary>
-    </member>
     <member name="F:System.Data.Linq.Mapping.AutoSync.Always">
       <summary>Always returns the value.</summary>
+    </member>
+    <member name="F:System.Data.Linq.Mapping.AutoSync.Default">
+      <summary>Automatically selects the value.</summary>
     </member>
     <member name="F:System.Data.Linq.Mapping.AutoSync.Never">
       <summary>Never returns the value.</summary>

@@ -188,16 +188,13 @@
     </member>
     <member name="T:System.ServiceModel.Configuration.PersistenceProviderElement">
       <summary>Represents a persistence service configuration element that specifies the type of the persistence provider implementation to use, as well as the time-out to use for persistence operations. Additional attributes that appear in this element are passed into the constructor for the specified persistence provider.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.ServiceModel.Configuration.PersistenceProviderElement.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Configuration.PersistenceProviderElement" /> class.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.ServiceModel.Configuration.PersistenceProviderElement.BehaviorType">
       <summary>Gets the type of behavior.</summary>
       <returns>The type of behavior.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.ServiceModel.Configuration.PersistenceProviderElement.CreateBehavior">
       <summary>Creates a custom behavior based on the settings of this configuration element.</summary>
@@ -216,7 +213,6 @@
     <member name="P:System.ServiceModel.Configuration.PersistenceProviderElement.PersistenceOperationTimeout">
       <summary>Gets or sets the time-out used for persistence operations.</summary>
       <returns>A <see cref="T:System.Timespan" /> that specifies the time-out used for persistence operations.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.ServiceModel.Configuration.PersistenceProviderElement.PersistenceProviderArguments">
       <summary>Gets additional attributes of this <see cref="T:System.ServiceModel.Configuration.PersistenceProviderElement" />.</summary>
@@ -234,7 +230,6 @@
     <member name="P:System.ServiceModel.Configuration.PersistenceProviderElement.Type">
       <summary>Gets or sets the type of the persistence provider to be used by the service.</summary>
       <returns>The type of the persistence provider to be used by the service.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.ServiceModel.Configuration.PersistenceProviderElement.Unmerge(System.Configuration.ConfigurationElement,System.Configuration.ConfigurationElement,System.Configuration.ConfigurationSaveMode)">
       <summary>Modifies this configuration element object to remove all values that should not be saved.</summary>
@@ -244,26 +239,21 @@
     </member>
     <member name="T:System.ServiceModel.Configuration.WorkflowRuntimeElement">
       <summary>Represents a configuration element that specifies settings for an instance of <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> for hosting workflow-based Windows Communication Foundation (WCF) services.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.ServiceModel.Configuration.WorkflowRuntimeElement.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Configuration.WorkflowRuntimeElement" /> class.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.BehaviorType">
       <summary>Gets the type of this behavior element.</summary>
       <returns>The type of the behavior.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.CachedInstanceExpiration">
       <summary>Gets or sets a value that specifies the time that a cached instance will expire.</summary>
       <returns>The time that a cached instance will expire.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.CommonParameters">
       <summary>Gets the collection of common parameters used by services.</summary>
       <returns>A NameValueConfigurationCollection that contains common parameters used by services. The default is null.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.ServiceModel.Configuration.WorkflowRuntimeElement.CreateBehavior">
       <summary>Creates a custom behavior based on the settings of this configuration element.</summary>
@@ -272,12 +262,10 @@
     <member name="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.EnablePerformanceCounters">
       <summary>Gets or sets a value that indicates whether performance counters are enabled.</summary>
       <returns>true if performance counters are enabled; otherwise, false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.Name">
       <summary>Gets or sets the name of the workflow runtime engine.</summary>
       <returns>A string that contains the name of the workflow runtime engine.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.Properties">
       <summary>Gets a <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> instance that contains a collection of <see cref="T:System.Configuration.ConfigurationProperty" /> objects that can be attributes or <see cref="T:System.Configuration.ConfigurationElement" /> objects of this configuration element.</summary>
@@ -286,12 +274,10 @@
     <member name="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.Services">
       <summary>Gets the collection of services that will be added to the <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> engine.</summary>
       <returns>The collection of services that will be added to the <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> engine.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.ValidateOnCreate">
       <summary>Gets or sets a value that indicates whether validation will occur on creation of the workflow instance.</summary>
       <returns>true if validation will occur on creation; otherwise, false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.ServiceModel.Description.DurableOperationAttribute">
       <summary>Specifies the local execution behavior of a durable service method.</summary>
@@ -375,7 +361,6 @@
       <param name="serviceHostBase">Not implemented.</param>
       <param name="endpoints">Not implemented.</param>
       <param name="bindingParameters">Not implemented.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.ServiceModel.Description.PersistenceProviderBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)">
       <summary>Not implemented in <see cref="T:System.ServiceModel.Description.PersistenceProviderBehavior" />.</summary>
@@ -398,11 +383,11 @@
     <member name="T:System.ServiceModel.Description.UnknownExceptionAction">
       <summary>Specifies how a durable service will handle an unknown exception.</summary>
     </member>
-    <member name="F:System.ServiceModel.Description.UnknownExceptionAction.TerminateInstance">
-      <summary>The service will close all channels and remove its state information from its persistence store.</summary>
-    </member>
     <member name="F:System.ServiceModel.Description.UnknownExceptionAction.AbortInstance">
       <summary>The service will abruptly stop and leave existing state information in its persistence store. Any changes to instance state during the operation which threw the unknown exception will be lost.</summary>
+    </member>
+    <member name="F:System.ServiceModel.Description.UnknownExceptionAction.TerminateInstance">
+      <summary>The service will close all channels and remove its state information from its persistence store.</summary>
     </member>
     <member name="T:System.ServiceModel.Description.WorkflowRuntimeBehavior">
       <summary>Defines the behavior for the <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> associated with a <see cref="T:System.ServiceModel.WorkflowServiceHost" />.</summary>
@@ -986,7 +971,6 @@
     </member>
     <member name="T:System.Workflow.Activities.OperationInfoBase">
       <summary>The base class used for storing information for a contract operation defined in a workflow service.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationInfoBase.#ctor">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Activities.OperationInfoBase" /> class. </summary>
@@ -994,13 +978,11 @@
     <member name="M:System.Workflow.Activities.OperationInfoBase.Clone">
       <summary>When implemented in a derived class, creates a deep copy of the <see cref="T:System.Workflow.Activities.OperationInfoBase" /> instance.</summary>
       <returns>The copy of the <see cref="T:System.Workflow.Activities.OperationInfoBase" /> object.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationInfoBase.Equals(System.Object)">
       <summary>Determines if the specified <see cref="T:System.object" /> is equal to the current instance.</summary>
       <returns>True if <paramref name="obj" /> is equal, otherwise False.</returns>
       <param name="obj">The object to compare with the current instance.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationInfoBase.GetContractFullName(System.IServiceProvider)">
       <summary>Returns the full name of the contract that implements this operation. </summary>
@@ -1015,7 +997,6 @@
     <member name="M:System.Workflow.Activities.OperationInfoBase.GetHashCode">
       <summary>Generates a number corresponding to the value of the object to support the use of a hash table.</summary>
       <returns>An <see cref="T:System.Int32" /> representing the hash code value of the object.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationInfoBase.GetIsOneWay(System.IServiceProvider)">
       <summary>true if this operation is one-way, false if it is two-way.</summary>
@@ -1035,157 +1016,125 @@
     <member name="P:System.Workflow.Activities.OperationInfoBase.Name">
       <summary>When implemented in a derived class, gets or sets the name associated with this instance.</summary>
       <returns>A string representing the object's name.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationInfoBase.PrincipalPermissionName">
       <summary>Gets or sets the user name associated with the security context of the operation.</summary>
       <returns>A string representing the user name associated with the security context of the operation.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationInfoBase.PrincipalPermissionRole">
       <summary>Gets or sets the user role (e.g. Administrator) associated with the security context of the operation.</summary>
       <returns>A string representing the user role associated with the security context of the operation.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.OperationParameterInfo">
       <summary>Contains information about an operation parameter.  </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfo.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfo.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> class. </summary>
       <param name="parameterName">Represents the parameter name.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationParameterInfo.Attributes">
       <summary>Gets or sets the attributes of the associated operation parameter.</summary>
       <returns>The <see cref="T:System.Reflection.ParameterAttributes" /> of the associated operation parameter.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Activities.OperationParameterInfo.AttributesProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.OperationParameterInfo.Attributes" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfo.Clone">
       <summary>Creates a shallow copy of the <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> instance.</summary>
       <returns>The copy of the object.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfo.Equals(System.Object)">
       <summary>Determines whether two <see cref="T:System.Object" /> instances are equal.</summary>
       <returns>true if <paramref name="obj" /> is equal, otherwise false.</returns>
       <param name="obj">The <see cref="T:System.Object" /> to compare with the current object.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfo.GetHashCode">
       <summary>Generates a number corresponding to the value of the object to support the use of a hash table.</summary>
       <returns>An <see cref="T:System.Int32" /> representing the hash code value of the object.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationParameterInfo.IsIn">
       <summary>true if the associated operation parameter is an In parameter; otherwise false.</summary>
       <returns>true if the associated operation parameter is an In parameter; otherwise false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationParameterInfo.IsLcid">
       <summary>true if the associated operation parameter is a locale identifier; otherwise false.</summary>
       <returns>true if the associated operation parameter is a locale identifier; otherwise false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationParameterInfo.IsOptional">
       <summary>true if the associated operation parameter is an optional parameter; otherwise false.</summary>
       <returns>true if the associated operation parameter is an optional parameter; otherwise false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationParameterInfo.IsOut">
       <summary>true if the associated operation parameter is an Out parameter; otherwise false.</summary>
       <returns>true if the associated operation parameter is an Out parameter; otherwise false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationParameterInfo.IsRetval">
       <summary>true if the associated operation parameter is the return value for the operation; otherwise false.</summary>
       <returns>true if the associated operation parameter is the return value for the operation; otherwise false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationParameterInfo.Name">
       <summary>Gets or sets the name of the associated operation parameter.</summary>
       <returns>A string representing the name of the associated operation parameter.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Activities.OperationParameterInfo.NameProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.OperationParameterInfo.Name" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationParameterInfo.ParameterType">
       <summary>Gets or sets the type of the associated operation parameter.</summary>
       <returns>A <see cref="T:System.Type" /> object representing the type of the associated operation parameter.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Activities.OperationParameterInfo.ParameterTypeProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.OperationParameterInfo.ParameterType" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationParameterInfo.Position">
       <summary>Gets or sets the signature position of the associated operation parameter.</summary>
       <returns>An <see cref="T:System.Int32" /> representing the signature position of the associated operation parameter.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Activities.OperationParameterInfo.PositionProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="P:System.Workflow.Activities.OperationParameterInfo.Position" /> property.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Activities.OperationParameterInfoCollection">
       <summary>A collection of <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> objects.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfoCollection.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfoCollection.#ctor(System.Workflow.Activities.OperationInfoBase)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" /> class. </summary>
       <param name="owner">The <see cref="T:System.Workflow.Activities.OperationInfoBase" /> that uses this collection to define parameter information for the service operation that it represents.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfoCollection.Add(System.Workflow.Activities.OperationParameterInfo)">
       <summary>Adds an <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> to the end of the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />.</summary>
       <param name="item">The <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> to be added.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfoCollection.Clear">
       <summary>Removes all elements from the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfoCollection.Contains(System.Workflow.Activities.OperationParameterInfo)">
       <summary>Determines whether an element is in the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />.</summary>
       <returns>true if <paramref name="item" /> is found in the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />, otherwise false.</returns>
       <param name="item">The item to search for. </param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationParameterInfoCollection.Count">
       <summary>Gets the number of elements contained in the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />.</summary>
       <returns>An <see cref="T:System.Int32" /> representing the number of elements contained in the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfoCollection.GetEnumerator">
       <summary>Returns an enumerator that can iterate through the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />. </summary>
       <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can iterate through the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfoCollection.IndexOf(System.Workflow.Activities.OperationParameterInfo)">
       <summary>Returns the zero-based index of the first occurrence of an <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> object in the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />.</summary>
       <returns>An <see cref="T:System.Int32" /> representing the zero-based index of the first occurrence of an <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> object in the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />.</returns>
       <param name="item">The <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> to locate in the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfoCollection.Insert(System.Int32,System.Workflow.Activities.OperationParameterInfo)">
       <summary>Inserts an <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> into the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" /> at the specified index.</summary>
       <param name="index">The zero-based index at which <paramref name="item" /> should be inserted.</param>
       <param name="item">The <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> to insert.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Activities.OperationParameterInfoCollection.Item(System.Int32)">
       <summary>Gets or sets the element at the specified index.  In C#, this property is the indexer for the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" /> class. </summary>
@@ -1201,12 +1150,10 @@
       <summary>Removes the first occurrence of a specific <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> from the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />.</summary>
       <returns>true if the item was successfully removed, otherwise false.</returns>
       <param name="item">The <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> to remove.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfoCollection.RemoveAt(System.Int32)">
       <summary>Removes the element at the specified index of the <see cref="T:System.Workflow.Activities.OperationParameterInfoCollection" />.</summary>
       <param name="index">The zero-based index of the <see cref="T:System.Workflow.Activities.OperationParameterInfo" /> to remove.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Activities.OperationParameterInfoCollection.System#Collections#Generic#ICollection{T}#Add(System.Workflow.Activities.OperationParameterInfo)">
       <summary>Adds an item to the ICollection&lt;T&gt;.</summary>

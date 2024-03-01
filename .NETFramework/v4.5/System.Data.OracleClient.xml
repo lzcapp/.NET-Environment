@@ -2031,6 +2031,11 @@
       <returns>A new Int32 structure whose value equals the <see cref="P:System.Data.OracleClient.OracleNumber.Value" /> of the <see cref="T:System.Data.OracleClient.OracleNumber" /> structure.</returns>
       <param name="x">The <see cref="T:System.Data.OracleClient.OracleNumber" /> structure to be converted. </param>
     </member>
+    <member name="M:System.Data.OracleClient.OracleNumber.op_Explicit(System.Data.OracleClient.OracleNumber)~System.Double">
+      <summary>Converts the <see cref="T:System.Data.OracleClient.OracleNumber" /> structure to <see cref="T:System.Double" />.</summary>
+      <returns>A new Double structure whose value equals the <see cref="P:System.Data.OracleClient.OracleNumber.Value" /> of the <see cref="T:System.Data.OracleClient.OracleNumber" /> structure.</returns>
+      <param name="x">The <see cref="T:System.Data.OracleClient.OracleNumber" /> structure to be converted. </param>
+    </member>
     <member name="M:System.Data.OracleClient.OracleNumber.op_Explicit(System.Data.OracleClient.OracleNumber)~System.Int64">
       <summary>Converts the <see cref="T:System.Data.OracleClient.OracleNumber" /> structure to <see cref="T:System.Int64" />.</summary>
       <returns>A new Int64 structure whose value equals the <see cref="P:System.Data.OracleClient.OracleNumber.Value" /> of the <see cref="T:System.Data.OracleClient.OracleNumber" /> structure.</returns>
@@ -2039,11 +2044,6 @@
     <member name="M:System.Data.OracleClient.OracleNumber.op_Explicit(System.Data.OracleClient.OracleNumber)~System.Decimal">
       <summary>Converts the <see cref="T:System.Data.OracleClient.OracleNumber" /> structure to <see cref="T:System.Decimal" />.</summary>
       <returns>A new Decimal structure whose value equals the <see cref="P:System.Data.OracleClient.OracleNumber.Value" /> of the <see cref="T:System.Data.OracleClient.OracleNumber" /> structure.</returns>
-      <param name="x">The <see cref="T:System.Data.OracleClient.OracleNumber" /> structure to be converted. </param>
-    </member>
-    <member name="M:System.Data.OracleClient.OracleNumber.op_Explicit(System.Data.OracleClient.OracleNumber)~System.Double">
-      <summary>Converts the <see cref="T:System.Data.OracleClient.OracleNumber" /> structure to <see cref="T:System.Double" />.</summary>
-      <returns>A new Double structure whose value equals the <see cref="P:System.Data.OracleClient.OracleNumber.Value" /> of the <see cref="T:System.Data.OracleClient.OracleNumber" /> structure.</returns>
       <param name="x">The <see cref="T:System.Data.OracleClient.OracleNumber" /> structure to be converted. </param>
     </member>
     <member name="M:System.Data.OracleClient.OracleNumber.op_Explicit(System.Decimal)~System.Data.OracleClient.OracleNumber">
@@ -2969,6 +2969,9 @@
     <member name="F:System.Data.OracleClient.OracleType.Blob">
       <summary>An Oracle BLOB data type that contains binary data with a maximum size of 4 gigabytes. Use the OracleClient <see cref="T:System.Data.OracleClient.OracleLob" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
     </member>
+    <member name="F:System.Data.OracleClient.OracleType.Byte">
+      <summary>An integral type representing unsigned 8-bit integers with values between 0 and 255. This is not a native Oracle data type, but is provided to improve performance when binding input parameters. Use the .NET Framework <see cref="T:System.Byte" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
+    </member>
     <member name="F:System.Data.OracleClient.OracleType.Char">
       <summary>An Oracle CHAR data type that contains a fixed-length character string with a maximum size of 2,000 bytes. Use the .NET Framework <see cref="T:System.String" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleString" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
     </member>
@@ -2980,6 +2983,18 @@
     </member>
     <member name="F:System.Data.OracleClient.OracleType.DateTime">
       <summary>An Oracle DATE data type that contains a fixed-length representation of a date and time, ranging from January 1, 4712 B.C. to December 31, A.D. 4712, with the default format dd-mmm-yy. For A.D. dates, DATE maps to <see cref="T:System.DateTime" />. To bind B.C. dates, use a String parameter and the Oracle TO_DATE or TO_CHAR conversion functions for input and output parameters respectively. Use the .NET Framework <see cref="T:System.DateTime" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleDateTime" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
+    </member>
+    <member name="F:System.Data.OracleClient.OracleType.Double">
+      <summary>A double-precision floating-point value. This is not a native Oracle data type, but is provided to improve performance when binding input parameters. For information about conversion of Oracle numeric values to common language runtime (CLR) data types, see <see cref="T:System.Data.OracleClient.OracleNumber" />. Use the .NET Framework <see cref="T:System.Double" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleNumber" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
+    </member>
+    <member name="F:System.Data.OracleClient.OracleType.Float">
+      <summary>A single-precision floating-point value. This is not a native Oracle data type, but is provided to improve performance when binding input parameters. For information about conversion of Oracle numeric values to common language runtime data types, see <see cref="T:System.Data.OracleClient.OracleNumber" />. Use the .NET Framework <see cref="T:System.Single" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleNumber" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
+    </member>
+    <member name="F:System.Data.OracleClient.OracleType.Int16">
+      <summary>An integral type representing signed 16-bit integers with values between -32768 and 32767. This is not a native Oracle data type, but is provided to improve performance when binding input parameters. For information about conversion of Oracle numeric values to common language runtime (CLR) data types, see <see cref="T:System.Data.OracleClient.OracleNumber" />. Use the .NET Framework <see cref="T:System.Int16" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleNumber" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
+    </member>
+    <member name="F:System.Data.OracleClient.OracleType.Int32">
+      <summary>An integral type representing signed 32-bit integers with values between -2147483648 and 2147483647. This is not a native Oracle data type, but is provided for performance when binding input parameters. For information about conversion of Oracle numeric values to common language runtime data types, see <see cref="T:System.Data.OracleClient.OracleNumber" />. Use the .NET Framework <see cref="T:System.Int32" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleNumber" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
     </member>
     <member name="F:System.Data.OracleClient.OracleType.IntervalDayToSecond">
       <summary>An Oracle INTERVAL DAY TO SECOND data type (Oracle 9i or later) that contains an interval of time in days, hours, minutes, and seconds, and has a fixed size of 11 bytes. Use the .NET Framework <see cref="T:System.TimeSpan" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleTimeSpan" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
@@ -3011,6 +3026,9 @@
     <member name="F:System.Data.OracleClient.OracleType.RowId">
       <summary>The base64 string representation of an Oracle ROWID data type. Use the .NET Framework <see cref="T:System.String" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleString" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
     </member>
+    <member name="F:System.Data.OracleClient.OracleType.SByte">
+      <summary>An integral type representing signed 8 bit integers with values between -128 and 127. This is not a native Oracle data type, but is provided to improve performance when binding input parameters. Use the .NET Framework <see cref="T:System.SByte" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
+    </member>
     <member name="F:System.Data.OracleClient.OracleType.Timestamp">
       <summary>An Oracle TIMESTAMP (Oracle 9i or later) that contains date and time (including seconds), and ranges in size from 7 to 11 bytes. Use the .NET Framework <see cref="T:System.DateTime" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleDateTime" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
     </member>
@@ -3020,32 +3038,14 @@
     <member name="F:System.Data.OracleClient.OracleType.TimestampWithTZ">
       <summary>An Oracle TIMESTAMP WITH TIMEZONE (Oracle 9i or later) that contains date, time, and a specified time zone, and has a fixed size of 13 bytes. Use the .NET Framework <see cref="T:System.DateTime" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleDateTime" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
     </member>
-    <member name="F:System.Data.OracleClient.OracleType.VarChar">
-      <summary>An Oracle VARCHAR2 data type that contains a variable-length character string with a maximum size of 4,000 bytes. Use the .NET Framework <see cref="T:System.String" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleString" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
-    </member>
-    <member name="F:System.Data.OracleClient.OracleType.Byte">
-      <summary>An integral type representing unsigned 8-bit integers with values between 0 and 255. This is not a native Oracle data type, but is provided to improve performance when binding input parameters. Use the .NET Framework <see cref="T:System.Byte" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
-    </member>
     <member name="F:System.Data.OracleClient.OracleType.UInt16">
       <summary>An integral type representing unsigned 16-bit integers with values between 0 and 65535. This is not a native Oracle data type, but is provided to improve performance when binding input parameters. For information about conversion of Oracle numeric values to common language runtime (CLR) data types, see <see cref="T:System.Data.OracleClient.OracleNumber" />. Use the .NET Framework <see cref="T:System.UInt16" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleNumber" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
     </member>
     <member name="F:System.Data.OracleClient.OracleType.UInt32">
       <summary>An integral type representing unsigned 32-bit integers with values between 0 and 4294967295. This is not a native Oracle data type, but is provided to improve performance when binding input parameters. For information about conversion of Oracle numeric values to common language runtime (CLR) data types, see <see cref="T:System.Data.OracleClient.OracleNumber" />. Use the .NET Framework <see cref="T:System.UInt32" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleNumber" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
     </member>
-    <member name="F:System.Data.OracleClient.OracleType.SByte">
-      <summary>An integral type representing signed 8 bit integers with values between -128 and 127. This is not a native Oracle data type, but is provided to improve performance when binding input parameters. Use the .NET Framework <see cref="T:System.SByte" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
-    </member>
-    <member name="F:System.Data.OracleClient.OracleType.Int16">
-      <summary>An integral type representing signed 16-bit integers with values between -32768 and 32767. This is not a native Oracle data type, but is provided to improve performance when binding input parameters. For information about conversion of Oracle numeric values to common language runtime (CLR) data types, see <see cref="T:System.Data.OracleClient.OracleNumber" />. Use the .NET Framework <see cref="T:System.Int16" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleNumber" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
-    </member>
-    <member name="F:System.Data.OracleClient.OracleType.Int32">
-      <summary>An integral type representing signed 32-bit integers with values between -2147483648 and 2147483647. This is not a native Oracle data type, but is provided for performance when binding input parameters. For information about conversion of Oracle numeric values to common language runtime data types, see <see cref="T:System.Data.OracleClient.OracleNumber" />. Use the .NET Framework <see cref="T:System.Int32" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleNumber" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
-    </member>
-    <member name="F:System.Data.OracleClient.OracleType.Float">
-      <summary>A single-precision floating-point value. This is not a native Oracle data type, but is provided to improve performance when binding input parameters. For information about conversion of Oracle numeric values to common language runtime data types, see <see cref="T:System.Data.OracleClient.OracleNumber" />. Use the .NET Framework <see cref="T:System.Single" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleNumber" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
-    </member>
-    <member name="F:System.Data.OracleClient.OracleType.Double">
-      <summary>A double-precision floating-point value. This is not a native Oracle data type, but is provided to improve performance when binding input parameters. For information about conversion of Oracle numeric values to common language runtime (CLR) data types, see <see cref="T:System.Data.OracleClient.OracleNumber" />. Use the .NET Framework <see cref="T:System.Double" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleNumber" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
+    <member name="F:System.Data.OracleClient.OracleType.VarChar">
+      <summary>An Oracle VARCHAR2 data type that contains a variable-length character string with a maximum size of 4,000 bytes. Use the .NET Framework <see cref="T:System.String" /> or OracleClient <see cref="T:System.Data.OracleClient.OracleString" /> data type in <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
     </member>
   </members>
 </doc>

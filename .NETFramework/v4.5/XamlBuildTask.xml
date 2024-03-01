@@ -293,23 +293,23 @@
     <member name="T:Microsoft.Build.Tasks.Xaml.MemberVisibility">
       <summary>Specifies the member visibility options.</summary>
     </member>
-    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.Public">
-      <summary>The public visibility.</summary>
-    </member>
-    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.Private">
-      <summary>The private visibility.</summary>
+    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.Assembly">
+      <summary>The assembly visibility.</summary>
     </member>
     <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.Family">
       <summary>The family visibility.</summary>
     </member>
-    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.Assembly">
-      <summary>The assembly visibility.</summary>
+    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.FamilyAndAssembly">
+      <summary>The family and assembly visibility.</summary>
     </member>
     <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.FamilyOrAssembly">
       <summary>The family or assembly visibility.</summary>
     </member>
-    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.FamilyAndAssembly">
-      <summary>The family and assembly visibility.</summary>
+    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.Private">
+      <summary>The private visibility.</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Xaml.MemberVisibility.Public">
+      <summary>The public visibility.</summary>
     </member>
     <member name="T:Microsoft.Build.Tasks.Xaml.NamedObject">
       <summary>Represents a named object.</summary>

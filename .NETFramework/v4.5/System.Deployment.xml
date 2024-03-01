@@ -335,14 +335,14 @@
     <member name="T:System.Deployment.Application.DeploymentProgressState">
       <summary>Specifies the current stage of a ClickOnce download operation.</summary>
     </member>
-    <member name="F:System.Deployment.Application.DeploymentProgressState.DownloadingDeploymentInformation">
-      <summary>ClickOnce is downloading the deployment manifest.</summary>
+    <member name="F:System.Deployment.Application.DeploymentProgressState.DownloadingApplicationFiles">
+      <summary>ClickOnce is downloading the DLLs and data files that comprised the application.</summary>
     </member>
     <member name="F:System.Deployment.Application.DeploymentProgressState.DownloadingApplicationInformation">
       <summary>ClickOnce is downloading the application manifest.</summary>
     </member>
-    <member name="F:System.Deployment.Application.DeploymentProgressState.DownloadingApplicationFiles">
-      <summary>ClickOnce is downloading the DLLs and data files that comprised the application.</summary>
+    <member name="F:System.Deployment.Application.DeploymentProgressState.DownloadingDeploymentInformation">
+      <summary>ClickOnce is downloading the deployment manifest.</summary>
     </member>
     <member name="T:System.Deployment.Application.DeploymentServiceCom">
       <summary>Provides internal services for the ClickOnce deployment API. </summary>

@@ -202,5 +202,8 @@
       <returns>A new <see cref="T:System.Activities.Statements.Sequence" /> activity composed of a <see cref="T:System.ServiceModel.Activities.Send" /> and a <see cref="T:System.ServiceModel.Activities.ReceiveReply" /> pair.</returns>
       <param name="target">The workflow UI element that is the visual container of the new activity.</param>
     </member>
+    <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+      <summary>Provides infrastructure support for XAML markup compilers and developer tools.</summary>
+    </member>
   </members>
 </doc>

@@ -487,23 +487,23 @@
     <member name="F:System.ServiceModel.Routing.Configuration.FilterType.Action">
       <summary>Use <see cref="T:System.ServiceModel.Dispatcher.ActionMessageFilter" /> to filter on an action.</summary>
     </member>
-    <member name="F:System.ServiceModel.Routing.Configuration.FilterType.EndpointAddress">
-      <summary>Use <see cref="T:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter" /> with <see cref="P:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison" /> set to false to filter on the address.</summary>
-    </member>
-    <member name="F:System.ServiceModel.Routing.Configuration.FilterType.PrefixEndpointAddress">
-      <summary>Use <see cref="T:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter" /> with <see cref="P:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison" /> set to false to filter on the address using longest prefix matching.</summary>
-    </member>
     <member name="F:System.ServiceModel.Routing.Configuration.FilterType.And">
       <summary>Use <see cref="T:System.ServiceModel.Dispatcher.StrictAndMessageFilter" /> to filter on two message filters, ANDed together.</summary>
     </member>
     <member name="F:System.ServiceModel.Routing.Configuration.FilterType.Custom">
       <summary>Use a user-defined filter.</summary>
     </member>
+    <member name="F:System.ServiceModel.Routing.Configuration.FilterType.EndpointAddress">
+      <summary>Use <see cref="T:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter" /> with <see cref="P:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison" /> set to false to filter on the address.</summary>
+    </member>
     <member name="F:System.ServiceModel.Routing.Configuration.FilterType.EndpointName">
       <summary>Use the <see cref="T:System.ServiceModel.Dispatcher.EndpointNameMessageFilter" /> to filter on the name of the service endpoint.</summary>
     </member>
     <member name="F:System.ServiceModel.Routing.Configuration.FilterType.MatchAll">
       <summary>Use the <see cref="T:System.ServiceModel.Dispatcher.MatchAllMessageFilter" /> to match all messages.</summary>
+    </member>
+    <member name="F:System.ServiceModel.Routing.Configuration.FilterType.PrefixEndpointAddress">
+      <summary>Use <see cref="T:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter" /> with <see cref="P:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison" /> set to false to filter on the address using longest prefix matching.</summary>
     </member>
     <member name="F:System.ServiceModel.Routing.Configuration.FilterType.XPath">
       <summary>Use the <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" /> to filter on an XPath expression.</summary>

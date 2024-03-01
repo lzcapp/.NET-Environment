@@ -311,7 +311,7 @@
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.ApplicationName">
       <summary>This property is not used by this class.</summary>
-      <returns>Always <see cref="F:System.String.Empty" />.</returns>
+      <returns>The name of the application using the custom membership provider.</returns>
     </member>
     <member name="M:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.ChangePassword(System.String,System.String,System.String)">
       <summary>This method is not used by this class.</summary>
@@ -432,7 +432,7 @@
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.MaxInvalidPasswordAttempts">
       <summary>This property is not used by this class.</summary>
-      <returns>Always <see cref="F:System.Int32.MaxValue" />.</returns>
+      <returns>The number of invalid password attempts allowed before the membership user is locked out.</returns>
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.MinRequiredNonAlphanumericCharacters">
       <summary>This property is not used by this class.</summary>
@@ -444,11 +444,11 @@
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.PasswordAttemptWindow">
       <summary>This property is not used by this class.</summary>
-      <returns>Always <see cref="F:System.Int32.MaxValue" />.</returns>
+      <returns>The number of minutes in which a maximum number of invalid password or password-answer attempts are allowed before the membership user is locked out.</returns>
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.PasswordFormat">
       <summary>This property is not used by this class.</summary>
-      <returns>Always <see cref="F:System.Web.Security.MembershipPasswordFormat.Hashed" />.</returns>
+      <returns>The format for storing passwords in the store data.</returns>
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.PasswordStrengthRegularExpression">
       <summary>This property is not used by this class.</summary>
@@ -525,7 +525,7 @@
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientRoleProvider.ApplicationName">
       <summary>This property is not used by this class.</summary>
-      <returns>Always <see cref="F:System.String.Empty" />.</returns>
+      <returns>The name of the application for the provider.</returns>
     </member>
     <member name="M:System.Web.ClientServices.Providers.ClientRoleProvider.CreateRole(System.String)">
       <summary>This method is not used by this class.</summary>
@@ -615,7 +615,7 @@
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientSettingsProvider.ApplicationName">
       <summary>This property is not used by this class.</summary>
-      <returns>Always <see cref="F:System.String.Empty" />.</returns>
+      <returns>The name of the application for the provider.</returns>
     </member>
     <member name="M:System.Web.ClientServices.Providers.ClientSettingsProvider.GetPreviousVersion(System.Configuration.SettingsContext,System.Configuration.SettingsProperty)">
       <summary>Gets the previous version of the specified property.</summary>
@@ -676,7 +676,7 @@
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider.ApplicationName">
       <summary>This property is not used by this class.</summary>
-      <returns>Always <see cref="F:System.String.Empty" />.</returns>
+      <returns>The name of the application using the custom membership provider.</returns>
     </member>
     <member name="M:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider.ChangePassword(System.String,System.String,System.String)">
       <summary>This method is not used by this class.</summary>
@@ -786,7 +786,7 @@
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider.MaxInvalidPasswordAttempts">
       <summary>This property is not used by this class.</summary>
-      <returns>Always <see cref="F:System.Int32.MaxValue" />.</returns>
+      <returns>The number of invalid password attempts allowed before the membership user is locked out.</returns>
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider.MinRequiredNonAlphanumericCharacters">
       <summary>This property is not used by this class.</summary>
@@ -798,11 +798,11 @@
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider.PasswordAttemptWindow">
       <summary>This property is not used by this class.</summary>
-      <returns>Always <see cref="F:System.Int32.MaxValue" />.</returns>
+      <returns>The number of minutes in which a maximum number of invalid password or password-answer attempts are allowed before the membership user is locked out.</returns>
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider.PasswordFormat">
       <summary>This property is not used by this class.</summary>
-      <returns>Always <see cref="F:System.Web.Security.MembershipPasswordFormat.Hashed" />.</returns>
+      <returns>The format for storing passwords in the store data.</returns>
     </member>
     <member name="P:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider.PasswordStrengthRegularExpression">
       <summary>This property is not used by this class.</summary>
@@ -1066,6 +1066,9 @@
     <member name="T:System.Web.DynamicData.DynamicDataSourceOperation">
       <summary>Describes the type of operation that is being performed by the data source object.</summary>
     </member>
+    <member name="F:System.Web.DynamicData.DynamicDataSourceOperation.ContextCreate">
+      <summary>The data source object is creating the data context object.</summary>
+    </member>
     <member name="F:System.Web.DynamicData.DynamicDataSourceOperation.Delete">
       <summary>The data source object is performing a delete operation.</summary>
     </member>
@@ -1077,9 +1080,6 @@
     </member>
     <member name="F:System.Web.DynamicData.DynamicDataSourceOperation.Update">
       <summary>The data source object is performing an update operation.</summary>
-    </member>
-    <member name="F:System.Web.DynamicData.DynamicDataSourceOperation.ContextCreate">
-      <summary>The data source object is creating the data context object.</summary>
     </member>
     <member name="T:System.Web.DynamicData.DynamicValidatorEventArgs">
       <summary>Base class for <see cref="T:System.Web.DynamicData.DynamicValidator" /> classes that contain event data.</summary>
@@ -1259,7 +1259,7 @@
       <returns>An object that implements <see cref="T:System.Collections.Generic.IEnumerable`1" /> that represents the types supported by the converter.</returns>
     </member>
     <member name="T:System.Web.Script.Serialization.JavaScriptSerializer">
-      <summary>Provides serialization and deserialization functionality for AJAX-enabled applications.</summary>
+      <summary>Json.NET should be used serialization and deserialization. Provides serialization and deserialization functionality for AJAX-enabled applications.</summary>
     </member>
     <member name="M:System.Web.Script.Serialization.JavaScriptSerializer.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Web.Script.Serialization.JavaScriptSerializer" /> class that has no type resolver.</summary>
@@ -1469,11 +1469,11 @@
     <member name="T:System.Web.UI.AjaxFrameworkMode">
       <summary>Specifies how client scripts of the Microsoft Ajax client library are included on the client.</summary>
     </member>
-    <member name="F:System.Web.UI.AjaxFrameworkMode.Enabled">
-      <summary>Specifies that the <see cref="T:System.Web.UI.ScriptManager" /> control automatically includes the MicrosoftAjax.js script file, which is a combined script file of every core framework script (legacy behavior).</summary>
-    </member>
     <member name="F:System.Web.UI.AjaxFrameworkMode.Disabled">
       <summary>Specifies that all Microsoft Ajax script features are disabled and that the <see cref="T:System.Web.UI.ScriptManager" /> control does not reference any scripts automatically.</summary>
+    </member>
+    <member name="F:System.Web.UI.AjaxFrameworkMode.Enabled">
+      <summary>Specifies that the <see cref="T:System.Web.UI.ScriptManager" /> control automatically includes the MicrosoftAjax.js script file, which is a combined script file of every core framework script (legacy behavior).</summary>
     </member>
     <member name="F:System.Web.UI.AjaxFrameworkMode.Explicit">
       <summary>Specifies that you will explicitly include script references to individual framework core script file that your page requires, and that you will include references to the dependencies that each script file requires.</summary>
@@ -1608,7 +1608,6 @@
     <member name="P:System.Web.UI.ExtenderControl.Visible">
       <summary>Overrides the <see cref="P:System.Web.UI.Control.Visible" /> property to prevent setting this value.</summary>
       <returns>true if the extender control is rendered on the page; otherwise, false. </returns>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="T:System.Web.UI.HistoryEventArgs">
       <summary>Provides data for the <see cref="E:System.Web.UI.ScriptManager.Navigate" /> event.</summary>
@@ -1779,11 +1778,11 @@
     <member name="T:System.Web.UI.RegisteredScriptType">
       <summary>Specifies the type of client script block that is represented by a <see cref="T:System.Web.UI.RegisteredScript" /> object.</summary>
     </member>
-    <member name="F:System.Web.UI.RegisteredScriptType.ClientScriptInclude">
-      <summary>A client script that executes every time that an asynchronous postback occurs.</summary>
-    </member>
     <member name="F:System.Web.UI.RegisteredScriptType.ClientScriptBlock">
       <summary>A block of client code that executes one time during initial page rendering. A client script block of this type does not execute during partial-page updates.</summary>
+    </member>
+    <member name="F:System.Web.UI.RegisteredScriptType.ClientScriptInclude">
+      <summary>A client script that executes every time that an asynchronous postback occurs.</summary>
     </member>
     <member name="F:System.Web.UI.RegisteredScriptType.ClientStartupScript">
       <summary>A client script that is associated with a control that executes when the control starts.</summary>
@@ -2016,7 +2015,7 @@
       <returns>A reference to the composite script.</returns>
     </member>
     <member name="P:System.Web.UI.ScriptManager.EmptyPageUrl">
-      <summary>Gets or sets a URL to a blank Web page..</summary>
+      <summary>Gets or sets a URL to a blank Web page.</summary>
       <returns>The URL to use if the target Web page is empty.</returns>
     </member>
     <member name="P:System.Web.UI.ScriptManager.EnableCdn">
@@ -2050,7 +2049,7 @@
     </member>
     <member name="P:System.Web.UI.ScriptManager.EnableSecureHistoryState">
       <summary>Gets or sets a value that indicates whether to encrypt the history state string.</summary>
-      <returns>true if the history state string should be encrypted; otherwise, false.</returns>
+      <returns>true if the history state string should be encrypted; otherwise, false. The default value is true.</returns>
     </member>
     <member name="M:System.Web.UI.ScriptManager.GetCurrent(System.Web.UI.Page)">
       <summary>Gets the <see cref="T:System.Web.UI.ScriptManager" /> instance for a given <see cref="T:System.Web.UI.Page" /> object.</summary>
@@ -2135,7 +2134,7 @@
       <param name="e">An object that represents the composite script reference.</param>
     </member>
     <member name="M:System.Web.UI.ScriptManager.OnResolveScriptReference(System.Web.UI.ScriptReferenceEventArgs)">
-      <summary>Raises the <see cref="E:System.Web.UI.ScriptManager.ResolveScriptReference" /> event for each script reference that is managed by the <see cref="T:System.Web.UI.ScriptManager" /> control</summary>
+      <summary>Raises the <see cref="E:System.Web.UI.ScriptManager.ResolveScriptReference" /> event for each script reference that is managed by the <see cref="T:System.Web.UI.ScriptManager" /> control.</summary>
       <param name="e">An object that represents the current script.</param>
     </member>
     <member name="P:System.Web.UI.ScriptManager.ProfileService">
@@ -2188,7 +2187,7 @@
       <param name="page">The page object that is registering the client script block.</param>
       <param name="type">The type of the client script block. This parameter is usually specified by using the typeof operator (C#) or the GetType operator (Visual Basic) to retrieve the type of the control that is registering the script.</param>
       <param name="key">A unique identifier for the script block.</param>
-      <param name="script">The script.</param>
+      <param name="script">The script to register.</param>
       <param name="addScriptTags">true to enclose the script block in &lt;script&gt; and &lt;/script&gt; tags; otherwise, false.</param>
       <exception cref="T:System.ArgumentNullException">The script block <paramref name="type" /> is null.- or -The page that is registering the script block is null.</exception>
     </member>
@@ -2309,7 +2308,7 @@
       <param name="control">The control that is registering the onsubmit statement.</param>
       <param name="type">The type of the client script statement. This parameter is usually specified by using the typeof operator (C#) or the GetType operator (Visual Basic) to retrieve the type of the control that is registering the script.</param>
       <param name="key">A unique identifier for the script statement.</param>
-      <param name="script">The script.</param>
+      <param name="script">The script to register.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="control" /> is null.- or -<paramref name="type" /> is null.</exception>
       <exception cref="T:System.ArgumentException">
@@ -2320,7 +2319,7 @@
       <param name="page">The page object that is registering the onsubmit statement.</param>
       <param name="type">The type of the client script statement. This parameter is usually specified by using the typeof operator (C#) or the GetType operator (Visual Basic) to retrieve the type of the control that is registering the script.</param>
       <param name="key">A unique identifier for the script statement.</param>
-      <param name="script">The script.</param>
+      <param name="script">The script to register.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="page" /> is null.- or -<paramref name="type" /> is null.</exception>
     </member>
@@ -2348,7 +2347,7 @@
       <param name="control">The control that is registering the client script block.</param>
       <param name="type">The type of the client script block. This parameter is usually specified by using the typeof operator (C#) or the GetType operator (Visual Basic) to retrieve the type of the control that is registering the script.</param>
       <param name="key">A unique identifier for the script block.</param>
-      <param name="script">The script.</param>
+      <param name="script">The script to register.</param>
       <param name="addScriptTags">true to enclose the script block with &lt;script&gt; and &lt;/script&gt; tags; otherwise, false.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="control" /> is null.- or -<paramref name="type" /> is null.</exception>
@@ -2360,7 +2359,7 @@
       <param name="page">The page object that is registering the client script block.</param>
       <param name="type">The type of the client script block. This parameter is usually specified by using the typeof operator (C#) or the GetType operator (Visual Basic) to retrieve the type of the control that is registering the script.</param>
       <param name="key">A unique identifier for the script block.</param>
-      <param name="script">The script.</param>
+      <param name="script">The script to register.</param>
       <param name="addScriptTags">true to enclose the script block with &lt;script&gt; and &lt;/script&gt; tags; otherwise, false.</param>
     </member>
     <member name="M:System.Web.UI.ScriptManager.Render(System.Web.UI.HtmlTextWriter)">
@@ -2428,7 +2427,6 @@
       <summary>Overrides the <see cref="P:System.Web.UI.Control.Visible" /> property that is inherited from the base <see cref="T:System.Web.UI.Control" /> class to prevent setting this value.</summary>
       <returns>true in all cases.</returns>
       <exception cref="T:System.NotImplementedException">A value is assigned to the <see cref="P:System.Web.UI.ScriptManager.Visible" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="T:System.Web.UI.ScriptManagerProxy">
       <summary>Enables nested components such as content pages and user controls to add script and service references to pages when a <see cref="T:System.Web.UI.ScriptManager" /> control is already defined in a parent element.</summary>
@@ -2472,7 +2470,6 @@
       <summary>Overrides the <see cref="P:System.Web.UI.Control.Visible" /> property inherited from the base <see cref="T:System.Web.UI.Control" /> class to prevent setting this value.</summary>
       <returns>true if the control is rendered on the page; otherwise, false.</returns>
       <exception cref="T:System.NotImplementedException">A value is assigned to the <see cref="P:System.Web.UI.ScriptManagerProxy.Visible" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="T:System.Web.UI.ScriptMode">
       <summary>Specifies whether <see cref="T:System.Web.UI.ScriptManager" /> and <see cref="T:System.Web.UI.ScriptReference" /> objects refer to the debug or release version of client scripts.</summary>
@@ -2480,11 +2477,11 @@
     <member name="F:System.Web.UI.ScriptMode.Auto">
       <summary>In the <see cref="T:System.Web.UI.ScriptManager" /> control, the version of client scripts to use is determined at run time based on the application-level &lt;compilation&gt; element of the Web.config file, unless it is overridden in an instance of the <see cref="T:System.Web.UI.ScriptReference" /> control. In the <see cref="T:System.Web.UI.ScriptReference" /> control, when applied to a standalone script file, <see cref="F:System.Web.UI.ScriptMode.Auto" /> is equivalent to <see cref="F:System.Web.UI.ScriptMode.Release" />. When applied to a script reference in an assembly, <see cref="F:System.Web.UI.ScriptMode.Auto" /> is equivalent to <see cref="F:System.Web.UI.ScriptMode.Inherit" />.</summary>
     </member>
-    <member name="F:System.Web.UI.ScriptMode.Inherit">
-      <summary>In the <see cref="T:System.Web.UI.ScriptManager" /> control, <see cref="F:System.Web.UI.ScriptMode.Inherit" /> is equivalent to <see cref="F:System.Web.UI.ScriptMode.Auto" />. In the <see cref="T:System.Web.UI.ScriptReference" /> control, the <see cref="P:System.Web.UI.ScriptManager.ScriptMode" /> value from <see cref="T:System.Web.UI.ScriptManager" /> determines which version of the client script to use.</summary>
-    </member>
     <member name="F:System.Web.UI.ScriptMode.Debug">
       <summary>In the <see cref="T:System.Web.UI.ScriptManager" /> control, the debug version of the client script is used on the Web page unless overridden in an instance of the <see cref="T:System.Web.UI.ScriptReference" /> control. In the <see cref="T:System.Web.UI.ScriptReference" /> control, the debug version of the client script is used on the Web page.</summary>
+    </member>
+    <member name="F:System.Web.UI.ScriptMode.Inherit">
+      <summary>In the <see cref="T:System.Web.UI.ScriptManager" /> control, <see cref="F:System.Web.UI.ScriptMode.Inherit" /> is equivalent to <see cref="F:System.Web.UI.ScriptMode.Auto" />. In the <see cref="T:System.Web.UI.ScriptReference" /> control, the <see cref="P:System.Web.UI.ScriptManager.ScriptMode" /> value from <see cref="T:System.Web.UI.ScriptManager" /> determines which version of the client script to use.</summary>
     </member>
     <member name="F:System.Web.UI.ScriptMode.Release">
       <summary>In the <see cref="T:System.Web.UI.ScriptManager" /> control, the release version of the client script is used on the Web page unless overridden by setting the <see cref="P:System.Web.UI.ScriptReference.ScriptMode" /> property of a <see cref="T:System.Web.UI.ScriptReference" /> instance to <see cref="F:System.Web.UI.ScriptMode.Debug" />. In the <see cref="T:System.Web.UI.ScriptReference" /> control, the release version of the client script is used on the Web page.</summary>
@@ -2831,7 +2828,6 @@
       <summary>Overrides the <see cref="P:System.Web.UI.Control.Visible" /> property of the <see cref="T:System.Web.UI.Control" /> class to prevent this value from being set.</summary>
       <returns>true if the control is rendered on the page; otherwise, false. </returns>
       <exception cref="T:System.NotImplementedException">A value is assigned to the Visible property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="T:System.Web.UI.UpdatePanel">
       <summary>Enables sections of a page to be partially rendered without a postback.</summary>
@@ -3603,14 +3599,14 @@
     <member name="T:System.Web.UI.WebControls.InsertItemPosition">
       <summary>Specifies the location of the <see cref="P:System.Web.UI.WebControls.ListView.InsertItemTemplate" /> template when it is rendered as part of the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
     </member>
-    <member name="F:System.Web.UI.WebControls.InsertItemPosition.None">
-      <summary>The <see cref="P:System.Web.UI.WebControls.ListView.InsertItemTemplate" /> template is not rendered.</summary>
-    </member>
     <member name="F:System.Web.UI.WebControls.InsertItemPosition.FirstItem">
       <summary>The <see cref="P:System.Web.UI.WebControls.ListView.InsertItemTemplate" /> template is rendered as the first item in the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
     </member>
     <member name="F:System.Web.UI.WebControls.InsertItemPosition.LastItem">
       <summary>The <see cref="P:System.Web.UI.WebControls.ListView.InsertItemTemplate" /> template is rendered as the last item in the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
+    </member>
+    <member name="F:System.Web.UI.WebControls.InsertItemPosition.None">
+      <summary>The <see cref="P:System.Web.UI.WebControls.ListView.InsertItemTemplate" /> template is not rendered.</summary>
     </member>
     <member name="T:System.Web.UI.WebControls.IPageableItemContainer">
       <summary>Defines members that a data-bound control must implement in order to have paging functionality provided by the <see cref="T:System.Web.UI.WebControls.DataPager" /> control.</summary>
@@ -4325,7 +4321,6 @@
       <returns>
         <see cref="F:System.String.Empty" />, which indicates that the property is not set.</returns>
       <exception cref="T:System.NotSupportedException">An attempt was made to set the <see cref="P:System.Web.UI.WebControls.ListView.AccessKey" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="M:System.Web.UI.WebControls.ListView.AddControlToContainer(System.Web.UI.Control,System.Web.UI.Control,System.Int32)">
       <summary>Adds the specified control to the specified container.</summary>
@@ -4342,28 +4337,24 @@
       <returns>
         <see cref="F:System.Drawing.Color.Empty" />, which indicates that the property is not set.</returns>
       <exception cref="T:System.NotSupportedException">An attempt was made to set the <see cref="P:System.Web.UI.WebControls.ListView.BackColor" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="P:System.Web.UI.WebControls.ListView.BorderColor">
       <summary>Overrides the <see cref="P:System.Web.UI.WebControls.WebControl.BorderColor" /> property. Setting this property is not supported by the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
       <returns>
         <see cref="F:System.Drawing.Color.Empty" />, which indicates that the property is not set.</returns>
       <exception cref="T:System.NotSupportedException">An attempt was made to set the <see cref="P:System.Web.UI.WebControls.ListView.BorderColor" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="P:System.Web.UI.WebControls.ListView.BorderStyle">
       <summary>Overrides the <see cref="P:System.Web.UI.WebControls.WebControl.BorderStyle" /> property. Setting this property is not supported by the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
       <returns>
         <see cref="F:System.Web.UI.WebControls.BorderStyle.NotSet" />, which indicates that the property is not set.</returns>
       <exception cref="T:System.NotSupportedException">An attempt was made to set the <see cref="P:System.Web.UI.WebControls.ListView.BorderStyle" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="P:System.Web.UI.WebControls.ListView.BorderWidth">
       <summary>Overrides the <see cref="P:System.Web.UI.WebControls.WebControl.BorderWidth" /> property. Setting this property is not supported by the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
       <returns>
         <see cref="F:System.Web.UI.WebControls.Unit.Empty" />, which indicates that this property is not set.</returns>
       <exception cref="T:System.NotSupportedException">An attempt was made to set the <see cref="P:System.Web.UI.WebControls.ListView.BorderWidth" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="P:System.Web.UI.WebControls.ListView.ClientIDRowSuffix">
       <summary>Gets or sets the name of the data field whose value is used to uniquely identify each data row of a <see cref="T:System.Web.UI.WebControls.ListView" /> control when the <see cref="P:System.Web.UI.Control.ClientIDMode" /> property is set to <see cref="F:System.Web.UI.ClientIDMode.Predictable" />.</summary>
@@ -4454,7 +4445,6 @@
       <returns>
         <see cref="F:System.String.Empty" />, which indicates that this property is not set.</returns>
       <exception cref="T:System.NotSupportedException">An attempt was made to set the <see cref="P:System.Web.UI.WebControls.ListView.CssClass" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="P:System.Web.UI.WebControls.ListView.DataKeyNames">
       <summary>Gets or sets an array that contains the names of the primary key fields for the items displayed in a <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
@@ -4526,14 +4516,12 @@
       <summary>Overrides the <see cref="P:System.Web.UI.WebControls.WebControl.Font" /> property. This property is not supported by the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
       <returns>This property is not supported, and throws a <see cref="T:System.NotSupportedException" /> error.</returns>
       <exception cref="T:System.NotSupportedException">An attempt was made to access the <see cref="P:System.Web.UI.WebControls.ListView.Font" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="P:System.Web.UI.WebControls.ListView.ForeColor">
       <summary>Overrides the <see cref="P:System.Web.UI.WebControls.WebControl.ForeColor" /> property. Setting this property is not supported by the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
       <returns>
         <see cref="F:System.Drawing.Color.Empty" />, which indicates that the property is not set.</returns>
       <exception cref="T:System.NotSupportedException">An attempt was made to set the <see cref="P:System.Web.UI.WebControls.ListView.ForeColor" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="P:System.Web.UI.WebControls.ListView.GroupItemCount">
       <summary>Gets or sets the number of items to display per group in a <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
@@ -4558,7 +4546,6 @@
       <returns>
         <see cref="F:System.Web.UI.WebControls.Unit.Empty" />, which indicates that the property is not set.</returns>
       <exception cref="T:System.NotSupportedException">An attempt was made to set the <see cref="P:System.Web.UI.WebControls.ListView.Height" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="P:System.Web.UI.WebControls.ListView.InsertItem">
       <summary>Gets the insert item of a <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
@@ -4943,14 +4930,12 @@
       <summary>Overrides the <see cref="P:System.Web.UI.WebControls.WebControl.TabIndex" /> property. Setting this property is not supported by the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
       <returns>0, which indicates that the property is not set.</returns>
       <exception cref="T:System.NotSupportedException">An attempt was made to set the <see cref="P:System.Web.UI.WebControls.ListView.TabIndex" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="P:System.Web.UI.WebControls.ListView.ToolTip">
       <summary>Overrides the <see cref="P:System.Web.UI.WebControls.WebControl.ToolTip" /> property. Setting this property is not supported by the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
       <returns>
         <see cref="F:System.String.Empty" />, which indicates that the property is not set.</returns>
       <exception cref="T:System.NotSupportedException">An attempt was made to set the <see cref="P:System.Web.UI.WebControls.ListView.ToolTip" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="M:System.Web.UI.WebControls.ListView.UpdateItem(System.Int32,System.Boolean)">
       <summary>Updates the record at the specified index in the data source.</summary>
@@ -4968,7 +4953,6 @@
       <returns>
         <see cref="F:System.Web.UI.WebControls.Unit.Empty" />, which indicates that the property is not set.</returns>
       <exception cref="T:System.NotSupportedException">An attempt was made to set the <see cref="P:System.Web.UI.WebControls.ListView.Width" /> property.</exception>
-      <filterpriority>1</filterpriority>
     </member>
     <member name="T:System.Web.UI.WebControls.ListViewCancelEventArgs">
       <summary>Provides data for the <see cref="E:System.Web.UI.WebControls.ListView.ItemCanceling" /> event.</summary>
@@ -5189,11 +5173,11 @@
     <member name="F:System.Web.UI.WebControls.ListViewItemType.DataItem">
       <summary>A data item in the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
     </member>
-    <member name="F:System.Web.UI.WebControls.ListViewItemType.InsertItem">
-      <summary>An insert item in the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
-    </member>
     <member name="F:System.Web.UI.WebControls.ListViewItemType.EmptyItem">
       <summary>An empty item in the <see cref="T:System.Web.UI.WebControls.ListView" /> control. The empty item is displayed when the <see cref="T:System.Web.UI.WebControls.ListView" /> control has no records to display, or when a group in the <see cref="T:System.Web.UI.WebControls.ListView" /> control has no more records to display.</summary>
+    </member>
+    <member name="F:System.Web.UI.WebControls.ListViewItemType.InsertItem">
+      <summary>An insert item in the <see cref="T:System.Web.UI.WebControls.ListView" /> control.</summary>
     </member>
     <member name="T:System.Web.UI.WebControls.ListViewPagedDataSource">
       <summary>Encapsulates the paging-related properties of a <see cref="T:System.Web.UI.WebControls.ListView" /> control. </summary>
@@ -6346,14 +6330,14 @@
     <member name="T:System.Web.UI.WebControls.Expressions.RangeType">
       <summary>Specifies the type of numeric comparison to use in an instance of the <see cref="T:System.Web.UI.WebControls.Expressions.RangeExpression" /> class.</summary>
     </member>
-    <member name="F:System.Web.UI.WebControls.Expressions.RangeType.None">
-      <summary>Specifies that the search does not have a boundary.</summary>
-    </member>
     <member name="F:System.Web.UI.WebControls.Expressions.RangeType.Exclusive">
       <summary>Specifies a greater-than-or-less-than comparison. Corresponds to the &gt; or &lt; operator.</summary>
     </member>
     <member name="F:System.Web.UI.WebControls.Expressions.RangeType.Inclusive">
       <summary>Specifies an equal-to-or-greater-than comparison or an equal-to-or-less-than comparison. Corresponds to the &gt;= or &lt;= operator.</summary>
+    </member>
+    <member name="F:System.Web.UI.WebControls.Expressions.RangeType.None">
+      <summary>Specifies that the search does not have a boundary.</summary>
     </member>
     <member name="T:System.Web.UI.WebControls.Expressions.SearchExpression">
       <summary>Provides a way to search a field or fields for string values and compare them to a specified string value.</summary>
@@ -6388,11 +6372,11 @@
     <member name="F:System.Web.UI.WebControls.Expressions.SearchType.Contains">
       <summary>Indicates that a search should determine whether the search string matches a string anywhere in a field. </summary>
     </member>
-    <member name="F:System.Web.UI.WebControls.Expressions.SearchType.StartsWith">
-      <summary>Indicates that a search should determine whether the search string matches a string at the beginning of a field.</summary>
-    </member>
     <member name="F:System.Web.UI.WebControls.Expressions.SearchType.EndsWith">
       <summary>Indicates that a search should determine whether the search string matches a string at the end of a field.</summary>
+    </member>
+    <member name="F:System.Web.UI.WebControls.Expressions.SearchType.StartsWith">
+      <summary>Indicates that a search should determine whether the search string matches a string at the beginning of a field.</summary>
     </member>
     <member name="T:System.Web.UI.WebControls.Expressions.ThenBy">
       <summary>Provides a way to apply a sort expression to an <see cref="T:System.Linq.IQueryable" /> data source object after an <see cref="T:System.Web.UI.WebControls.Expressions.OrderByExpression" /> expression is applied.</summary>

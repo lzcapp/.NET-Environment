@@ -105,6 +105,14 @@
       <summary>Expires the password for this account. This will force the user to change his/her password at the next logon.</summary>
       <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalOperationException">An exception occurred when saving the changes to the store. </exception>
     </member>
+    <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByBadPasswordAttempt``1(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
+      <summary>Returns a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> collection of objects that have a bad password attempt within the specified date and time range.  This is the template function for extended classes that wish to implement this functionality.</summary>
+      <returns>A <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> that contains one or more objects of the appropriate principal type, or an empty collection if no matches are found.</returns>
+      <param name="context">The <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> that specifies the server or domain against which operations are performed.</param>
+      <param name="time">A <see cref="T:System.DateTime" /> object that identifies the date and time of the password set. This parameter is used with the type parameter to determine the range of time in which the returned objects have a password set recorded.</param>
+      <param name="type">A <see cref="T:System.DirectoryServices.AccountManagement.MatchType" /> enumeration value that specifies the type of match that is applied to the <paramref name="time" /> parameter.  </param>
+      <typeparam name="T"></typeparam>
+    </member>
     <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByBadPasswordAttempt(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
       <summary>Returns a collection of authentication principal objects that have an incorrect password try recorded in the specified date and time range. </summary>
       <returns>A <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> that contains one or more <see cref="T:System.DirectoryServices.AccountManagement.AuthenticablePrincipal" /> objects, or an empty collection if no results are found. </returns>
@@ -112,8 +120,8 @@
       <param name="time">A <see cref="T:System.DateTime" /> object that identifies the date and time of the incorrect password try. This parameter is used with the type parameter to determine the range of time in which the returned objects have an incorrect logon try recorded. </param>
       <param name="type">A <see cref="T:System.DirectoryServices.AccountManagement.MatchType" /> enumeration value that specifies the type of match that is applied to the <paramref name="time" /> parameter.  </param>
     </member>
-    <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByBadPasswordAttempt``1(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
-      <summary>Returns a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> collection of objects that have a bad password attempt within the specified date and time range.  This is the template function for extended classes that wish to implement this functionality.</summary>
+    <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByExpirationTime``1(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
+      <summary>Returns a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> collection of objects that have an expiration time within the specified date and time range.  This is the template function for extended classes that wish to implement this functionality.</summary>
       <returns>A <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> that contains one or more objects of the appropriate principal type, or an empty collection if no matches are found.</returns>
       <param name="context">The <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> that specifies the server or domain against which operations are performed.</param>
       <param name="time">A <see cref="T:System.DateTime" /> object that identifies the date and time of the password set. This parameter is used with the type parameter to determine the range of time in which the returned objects have a password set recorded.</param>
@@ -127,19 +135,6 @@
       <param name="time">A <see cref="T:System.DateTime" /> object that identifies the date and time of the account expiration. This parameter is used with the type parameter to determine the range of time in which the returned objects have an account expiration recorded.</param>
       <param name="type">A <see cref="T:System.DirectoryServices.AccountManagement.MatchType" /> enumeration value that specifies the type of match that is applied to the <paramref name="time" /> parameter.  </param>
     </member>
-    <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByExpirationTime``1(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
-      <summary>Returns a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> collection of objects that have an expiration time within the specified date and time range.  This is the template function for extended classes that wish to implement this functionality.</summary>
-      <returns>A <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> that contains one or more objects of the appropriate principal type, or an empty collection if no matches are found.</returns>
-      <param name="context">The <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> that specifies the server or domain against which operations are performed.</param>
-      <param name="time">A <see cref="T:System.DateTime" /> object that identifies the date and time of the password set. This parameter is used with the type parameter to determine the range of time in which the returned objects have a password set recorded.</param>
-      <param name="type">A <see cref="T:System.DirectoryServices.AccountManagement.MatchType" /> enumeration value that specifies the type of match that is applied to the <paramref name="time" /> parameter.  </param>
-      <typeparam name="T"></typeparam>
-    </member>
-    <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByLockoutTime``1(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
-      <summary>Returns a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> collection of objects that have a lockout time within the specified date and time range.  This is the template function for extended classes that wish to implement this functionality.</summary>
-      <returns>A <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> that contains one or more objects of the appropriate principal type, or an empty collection if no matches are found.</returns>
-      <typeparam name="T"></typeparam>
-    </member>
     <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByLockoutTime(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
       <summary>Returns a collection of authentication principal objects that have an account lockout time recorded in the specified date and time range. </summary>
       <returns>A <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> that contains one or more <see cref="T:System.DirectoryServices.AccountManagement.AuthenticablePrincipal" /> objects. </returns>
@@ -147,12 +142,10 @@
       <param name="time">A <see cref="T:System.DateTime" /> object that identifies the date and time of the account lockout. This parameter is used with the type parameter to determine the range of time in which the returned objects have an account lockout recorded.</param>
       <param name="type">A <see cref="T:System.DirectoryServices.AccountManagement.MatchType" /> enumeration value that specifies the type of match that is applied to the <paramref name="time" /> parameter.</param>
     </member>
-    <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByLogonTime(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
-      <summary>Returns a collection of authentication principal objects that have an account logon recorded in the specified date and time range. </summary>
-      <returns>A <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> that contains one or more <see cref="T:System.DirectoryServices.AccountManagement.AuthenticablePrincipal" /> objects. </returns>
-      <param name="context">The <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> that specifies the server or domain against which operations are performed.</param>
-      <param name="time">A <see cref="T:System.DateTime" /> object that identifies the date and time of the logon record. This parameter is used with the type parameter to determine the range of time in which the returned objects have an account logon recorded.</param>
-      <param name="type">A <see cref="T:System.DirectoryServices.AccountManagement.MatchType" /> enumeration value that specifies the type of match that is applied to the <paramref name="time" /> parameter.</param>
+    <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByLockoutTime``1(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
+      <summary>Returns a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> collection of objects that have a lockout time within the specified date and time range.  This is the template function for extended classes that wish to implement this functionality.</summary>
+      <returns>A <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> that contains one or more objects of the appropriate principal type, or an empty collection if no matches are found.</returns>
+      <typeparam name="T"></typeparam>
     </member>
     <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByLogonTime``1(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
       <summary>Returns a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> collection of objects that have a logon time within the specified date and time range.  This is the template function for extended classes that wish to implement this functionality.</summary>
@@ -161,13 +154,12 @@
       <param name="type">A <see cref="T:System.DirectoryServices.AccountManagement.MatchType" /> enumeration value that specifies the type of match that is applied to the <paramref name="time" /> parameter.  </param>
       <typeparam name="T"></typeparam>
     </member>
-    <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByPasswordSetTime``1(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
-      <summary>Returns a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> collection of objects that have a password set time within the specified date and time range.  This is the template function for extended classes that wish to implement this functionality.</summary>
-      <returns>A <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> that contains one or more objects of the appropriate principal type, or an empty collection if no matches are found.</returns>
+    <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByLogonTime(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
+      <summary>Returns a collection of authentication principal objects that have an account logon recorded in the specified date and time range. </summary>
+      <returns>A <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> that contains one or more <see cref="T:System.DirectoryServices.AccountManagement.AuthenticablePrincipal" /> objects. </returns>
       <param name="context">The <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> that specifies the server or domain against which operations are performed.</param>
-      <param name="time">A <see cref="T:System.DateTime" /> object that identifies the date and time of the password set. This parameter is used with the type parameter to determine the range of time in which the returned objects have a password set recorded.</param>
-      <param name="type">A <see cref="T:System.DirectoryServices.AccountManagement.MatchType" /> enumeration value that specifies the type of match that is applied to the <paramref name="time" /> parameter.  </param>
-      <typeparam name="T"></typeparam>
+      <param name="time">A <see cref="T:System.DateTime" /> object that identifies the date and time of the logon record. This parameter is used with the type parameter to determine the range of time in which the returned objects have an account logon recorded.</param>
+      <param name="type">A <see cref="T:System.DirectoryServices.AccountManagement.MatchType" /> enumeration value that specifies the type of match that is applied to the <paramref name="time" /> parameter.</param>
     </member>
     <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByPasswordSetTime(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
       <summary>Returns a collection of authentication principal objects that have an account password set recorded in the specified date and time range. </summary>
@@ -175,6 +167,14 @@
       <param name="context">The <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> that specifies the server or domain against which operations are performed.</param>
       <param name="time">A <see cref="T:System.DateTime" /> object that identifies the date and time of the password set. This parameter is used with the type parameter to determine the range of time in which the returned objects have a password set recorded.</param>
       <param name="type">A <see cref="T:System.DirectoryServices.AccountManagement.MatchType" /> enumeration value that specifies the type of match that is applied to the <paramref name="time" /> parameter.  </param>
+    </member>
+    <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.FindByPasswordSetTime``1(System.DirectoryServices.AccountManagement.PrincipalContext,System.DateTime,System.DirectoryServices.AccountManagement.MatchType)">
+      <summary>Returns a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> collection of objects that have a password set time within the specified date and time range.  This is the template function for extended classes that wish to implement this functionality.</summary>
+      <returns>A <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearchResult'1" /> that contains one or more objects of the appropriate principal type, or an empty collection if no matches are found.</returns>
+      <param name="context">The <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> that specifies the server or domain against which operations are performed.</param>
+      <param name="time">A <see cref="T:System.DateTime" /> object that identifies the date and time of the password set. This parameter is used with the type parameter to determine the range of time in which the returned objects have a password set recorded.</param>
+      <param name="type">A <see cref="T:System.DirectoryServices.AccountManagement.MatchType" /> enumeration value that specifies the type of match that is applied to the <paramref name="time" /> parameter.  </param>
+      <typeparam name="T"></typeparam>
     </member>
     <member name="P:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.HomeDirectory">
       <summary>Gets or sets the home directory for this account. </summary>
@@ -329,32 +329,32 @@
     <member name="F:System.DirectoryServices.AccountManagement.ContextOptions.Negotiate">
       <summary>The client is authenticated by using either Kerberos or NTLM. When the user name and password are not provided, the Account Management API binds to the object by using the security context of the calling thread, which is either the security context of the user account under which the application is running or of the client user account that the calling thread represents.</summary>
     </member>
-    <member name="F:System.DirectoryServices.AccountManagement.ContextOptions.SimpleBind">
-      <summary>The client is authenticated by using the Basic authentication.</summary>
+    <member name="F:System.DirectoryServices.AccountManagement.ContextOptions.Sealing">
+      <summary>The data is encrypted by using Kerberos.</summary>
     </member>
     <member name="F:System.DirectoryServices.AccountManagement.ContextOptions.SecureSocketLayer">
       <summary>The channel is encrypted by using the Secure Sockets Layer (SSL). Active Directory requires that the Certificate Services be installed to support SSL. </summary>
     </member>
+    <member name="F:System.DirectoryServices.AccountManagement.ContextOptions.ServerBind">
+      <summary>Specify this flag when you use the domain context type if the application is binding to a specific server name. </summary>
+    </member>
     <member name="F:System.DirectoryServices.AccountManagement.ContextOptions.Signing">
       <summary>The integrity of the data is verified. This flag can only be used with the Negotiate context option and is not available with the simple bind option. </summary>
     </member>
-    <member name="F:System.DirectoryServices.AccountManagement.ContextOptions.Sealing">
-      <summary>The data is encrypted by using Kerberos.</summary>
-    </member>
-    <member name="F:System.DirectoryServices.AccountManagement.ContextOptions.ServerBind">
-      <summary>Specify this flag when you use the domain context type if the application is binding to a specific server name. </summary>
+    <member name="F:System.DirectoryServices.AccountManagement.ContextOptions.SimpleBind">
+      <summary>The client is authenticated by using the Basic authentication.</summary>
     </member>
     <member name="T:System.DirectoryServices.AccountManagement.ContextType">
       <summary>Specifies the type of store to which the principal belongs. </summary>
     </member>
-    <member name="F:System.DirectoryServices.AccountManagement.ContextType.Machine">
-      <summary>The computer store. This represents the SAM store.</summary>
+    <member name="F:System.DirectoryServices.AccountManagement.ContextType.ApplicationDirectory">
+      <summary>The application directory store. This represents the AD LDS store.</summary>
     </member>
     <member name="F:System.DirectoryServices.AccountManagement.ContextType.Domain">
       <summary>The domain store. This represents the AD DS store. </summary>
     </member>
-    <member name="F:System.DirectoryServices.AccountManagement.ContextType.ApplicationDirectory">
-      <summary>The application directory store. This represents the AD LDS store.</summary>
+    <member name="F:System.DirectoryServices.AccountManagement.ContextType.Machine">
+      <summary>The computer store. This represents the SAM store.</summary>
     </member>
     <member name="T:System.DirectoryServices.AccountManagement.DirectoryObjectClassAttribute">
       <summary>Represents the schema object that is used to create an object of this type in the directory. This attribute is required for principal extensions and can only be set on classes. </summary>
@@ -458,11 +458,11 @@
     <member name="T:System.DirectoryServices.AccountManagement.GroupScope">
       <summary>Specifies the scope of the group principal.</summary>
     </member>
-    <member name="F:System.DirectoryServices.AccountManagement.GroupScope.Local">
-      <summary>The scope of the group is local. This group type is supported on AD DS and AD LDS.</summary>
-    </member>
     <member name="F:System.DirectoryServices.AccountManagement.GroupScope.Global">
       <summary>The group's scope is global. This group type is supported on AD DS. When a global group is specified with an AD LDS directory, a <see cref="F:System.DirectoryServices.AccountManagement.GroupScope.Local" /> group is created instead. </summary>
+    </member>
+    <member name="F:System.DirectoryServices.AccountManagement.GroupScope.Local">
+      <summary>The scope of the group is local. This group type is supported on AD DS and AD LDS.</summary>
     </member>
     <member name="F:System.DirectoryServices.AccountManagement.GroupScope.Universal">
       <summary>The scope of the group is universal. This group type is supported on AD DS and AD LDS. </summary>
@@ -470,32 +470,29 @@
     <member name="T:System.DirectoryServices.AccountManagement.IdentityType">
       <summary>Specifies the format of the identity.</summary>
     </member>
-    <member name="F:System.DirectoryServices.AccountManagement.IdentityType.SamAccountName">
-      <summary>The identity is a Security Account Manager (SAM) name. </summary>
+    <member name="F:System.DirectoryServices.AccountManagement.IdentityType.DistinguishedName">
+      <summary>The identity is a Distinguished Name (DN).</summary>
+    </member>
+    <member name="F:System.DirectoryServices.AccountManagement.IdentityType.Guid">
+      <summary>The identity is a Globally Unique Identifier (GUID). </summary>
     </member>
     <member name="F:System.DirectoryServices.AccountManagement.IdentityType.Name">
       <summary>The identity is a name. </summary>
     </member>
-    <member name="F:System.DirectoryServices.AccountManagement.IdentityType.UserPrincipalName">
-      <summary>The identity is a User Principal Name (UPN). </summary>
-    </member>
-    <member name="F:System.DirectoryServices.AccountManagement.IdentityType.DistinguishedName">
-      <summary>The identity is a Distinguished Name (DN).</summary>
+    <member name="F:System.DirectoryServices.AccountManagement.IdentityType.SamAccountName">
+      <summary>The identity is a Security Account Manager (SAM) name. </summary>
     </member>
     <member name="F:System.DirectoryServices.AccountManagement.IdentityType.Sid">
       <summary>The identity is a Security Identifier (SID) in Security Descriptor Definition Language (SDDL) format. </summary>
     </member>
-    <member name="F:System.DirectoryServices.AccountManagement.IdentityType.Guid">
-      <summary>The identity is a Globally Unique Identifier (GUID). </summary>
+    <member name="F:System.DirectoryServices.AccountManagement.IdentityType.UserPrincipalName">
+      <summary>The identity is a User Principal Name (UPN). </summary>
     </member>
     <member name="T:System.DirectoryServices.AccountManagement.MatchType">
       <summary>The <see cref="T:System.DirectoryServices.AccountManagement.MatchType" /> enumeration specifies the type of comparison used in a search.</summary>
     </member>
     <member name="F:System.DirectoryServices.AccountManagement.MatchType.Equals">
       <summary>The search results include values that equal the supplied value. If the supplied value specifies a date and time, the returned collection includes objects that have the same date and time. </summary>
-    </member>
-    <member name="F:System.DirectoryServices.AccountManagement.MatchType.NotEquals">
-      <summary>The search results include values that are not equal to the supplied value. If the supplied value specifies a date and time, the returned collection includes objects that do not include the specified date and time.</summary>
     </member>
     <member name="F:System.DirectoryServices.AccountManagement.MatchType.GreaterThan">
       <summary>The search results include values that are greater than the supplied value. If the supplied value specifies a date and time, the returned collection includes objects that are dated after the specified date and time.</summary>
@@ -508,6 +505,9 @@
     </member>
     <member name="F:System.DirectoryServices.AccountManagement.MatchType.LessThanOrEquals">
       <summary>The search results include values that are less than or equal to the supplied value. If the supplied value specifies a date and time, the returned collection includes objects that are dated prior to or on the specified date and time.</summary>
+    </member>
+    <member name="F:System.DirectoryServices.AccountManagement.MatchType.NotEquals">
+      <summary>The search results include values that are not equal to the supplied value. If the supplied value specifies a date and time, the returned collection includes objects that do not include the specified date and time.</summary>
     </member>
     <member name="T:System.DirectoryServices.AccountManagement.MultipleMatchesException">
       <summary>This exception is thrown by methods that expect to match a single principal object when there are multiple matches to the search query.</summary>
@@ -577,7 +577,7 @@
     <member name="M:System.DirectoryServices.AccountManagement.Principal.CheckDisposedOrDeleted">
       <summary>Determines whether the <see cref="M:System.DirectoryServices.AccountManagement.Principal.Dispose" /> or <see cref="M:System.DirectoryServices.AccountManagement.Principal.Delete" /> methods have been called on this class. This method is called by classes that derive from this principal class. </summary>
       <exception cref="T:System.ObjectDisposedException">The <see cref="M:System.DirectoryServices.AccountManagement.Principal.Dispose" /> method has been called on this principal object.</exception>
-      <exception cref="T:System.InvalidOperationsException">The <see cref="M:System.DirectoryServices.AccountManagement.Principal.Delete" /> method has been called on this principal object.</exception>
+      <exception cref="T:System.InvalidOperationException">The <see cref="M:System.DirectoryServices.AccountManagement.Principal.Delete" /> method has been called on this principal object.</exception>
     </member>
     <member name="P:System.DirectoryServices.AccountManagement.Principal.Context">
       <summary>Gets a principal context that is associated with the principal. </summary>
@@ -593,7 +593,7 @@
     </member>
     <member name="M:System.DirectoryServices.AccountManagement.Principal.Delete">
       <summary>Deletes the principal object from the store. </summary>
-      <exception cref="T:System.InvalidOperationsException">The object that is not persisted in the store.The object has already been deleted. The target context type must match the context type of the current principal.</exception>
+      <exception cref="T:System.InvalidOperationException">The object that is not persisted in the store.The object has already been deleted. The target context type must match the context type of the current principal.</exception>
     </member>
     <member name="P:System.DirectoryServices.AccountManagement.Principal.Description">
       <summary>Gets or sets the description of the principal. </summary>
@@ -702,19 +702,19 @@
       <summary>Gets or sets the name of this principal. </summary>
       <returns>The name of the principal or null if the name attribute is not set. </returns>
       <exception cref="T:System.ArgumentNullException">The application tried to set the name to null.</exception>
-      <exception cref="T:System.InvlaidOperationException">The underlying store does not support this property. </exception>
+      <exception cref="T:System.InvalidOperationException">The underlying store does not support this property. </exception>
     </member>
     <member name="P:System.DirectoryServices.AccountManagement.Principal.SamAccountName">
       <summary>Gets or sets the SAM account name for this principal. </summary>
       <returns>The SAM account name for this principal or null if no name has been set. </returns>
       <exception cref="T:System.ArgumentNullException">The application tried to set the SAM account name to null.</exception>
-      <exception cref="T:System.InvlaidOperationException">The application tried to set the SAM account name on a persisted principal. </exception>
+      <exception cref="T:System.InvalidOperationException">The application tried to set the SAM account name on a persisted principal. </exception>
     </member>
     <member name="M:System.DirectoryServices.AccountManagement.Principal.Save">
       <summary>Saves the changes that were made on the principal object to the store. If this is a new principal object, this method inserts it into the store.</summary>
       <exception cref="T:System.InvalidOperationException">The principal has not yet been associated with a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> object.This type of principal cannot be inserted in the store. </exception>
-      <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalOperationException">An exception occurred when saving changes to the store, or updating the group membership in the store. </exception>
-      <exception cref="T:System&gt;DirectoryServices.AccountManagement.PrincipalExistsException">The principal already occurs in the store. </exception>
+      <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalOperationException">An exception occurred when saving changes tnso the store, or updating the group membership in the store. </exception>
+      <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalExistsException">The principal already occurs in the store. </exception>
       <exception cref="T:System.DirectoryServices.AccountManagement.PasswordException">The password does not meet complexity requirements. </exception>
     </member>
     <member name="M:System.DirectoryServices.AccountManagement.Principal.Save(System.DirectoryServices.AccountManagement.PrincipalContext)">
@@ -722,7 +722,7 @@
       <param name="context">The <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> that specifies the server or domain against which operations are performed.</param>
       <exception cref="T:System.InvalidOperationException">The principal has not yet been associated with a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> object.  This type of principal cannot be inserted in the store. </exception>
       <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalOperationException">An exception occurred when saving changes to the store, or updating the group membership in the store. </exception>
-      <exception cref="T:System&gt;DirectoryServices.AccountManagement.PrincipalExistsException">The principal already occurs in the store. </exception>
+      <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalExistsException">The principal already occurs in the store. </exception>
       <exception cref="T:System.DirectoryServices.AccountManagement.PasswordException">The password does not meet complexity requirements. </exception>
     </member>
     <member name="P:System.DirectoryServices.AccountManagement.Principal.Sid">
@@ -740,7 +740,7 @@
     <member name="P:System.DirectoryServices.AccountManagement.Principal.UserPrincipalName">
       <summary>Gets or sets the user principal name (UPN) associated with this principal. </summary>
       <returns>The UPN associated with this principal or null if no if the UPN has not been set. </returns>
-      <exception cref="T:System.InvlaidOperationException">The underlying store does not support this property. </exception>
+      <exception cref="T:System.Inval&gt;DidOperationException">The underlying store does not support this property. </exception>
     </member>
     <member name="T:System.DirectoryServices.AccountManagement.PrincipalCollection">
       <summary>A mutable collection of objects derived from the <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> class.  This class is designed to be used for multi-valued properties that contain Principals.  Manipulating the contents of this collection changes the contents of the corresponding store property, which is made permanent when <see cref="M:System.DirectoryServices.AccountManagement.Principal.Save" /> is called on the corresponding principal object.</summary>

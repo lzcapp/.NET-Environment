@@ -2284,14 +2284,14 @@
     <member name="T:System.Activities.ActivityInstanceState">
       <summary>Describes the state of an activity instance.</summary>
     </member>
-    <member name="F:System.Activities.ActivityInstanceState.Executing">
-      <summary>Specifies that the activity is in an executing state.</summary>
+    <member name="F:System.Activities.ActivityInstanceState.Canceled">
+      <summary>Specifies that the activity is in a canceled state.</summary>
     </member>
     <member name="F:System.Activities.ActivityInstanceState.Closed">
       <summary>Specifies that the activity is in a closed state.</summary>
     </member>
-    <member name="F:System.Activities.ActivityInstanceState.Canceled">
-      <summary>Specifies that the activity is in a canceled state.</summary>
+    <member name="F:System.Activities.ActivityInstanceState.Executing">
+      <summary>Specifies that the activity is in an executing state.</summary>
     </member>
     <member name="F:System.Activities.ActivityInstanceState.Faulted">
       <summary>Specifies that the activity is in a faulted state.</summary>
@@ -2511,11 +2511,11 @@
     <member name="F:System.Activities.ArgumentDirection.In">
       <summary>An <see cref="T:System.Activities.Argument" /> that represents the flow of data into a workflow or activity.</summary>
     </member>
-    <member name="F:System.Activities.ArgumentDirection.Out">
-      <summary>An <see cref="T:System.Activities.Argument" /> that represents the flow of data out of a workflow or activity.</summary>
-    </member>
     <member name="F:System.Activities.ArgumentDirection.InOut">
       <summary>An <see cref="T:System.Activities.Argument" /> that represents the flow of data into and out of a workflow or activity.</summary>
+    </member>
+    <member name="F:System.Activities.ArgumentDirection.Out">
+      <summary>An <see cref="T:System.Activities.Argument" /> that represents the flow of data out of a workflow or activity.</summary>
     </member>
     <member name="T:System.Activities.AsyncCodeActivity">
       <summary>Manages asynchronous code activity execution from start to completion. This is an abstract class.</summary>
@@ -2659,26 +2659,26 @@
     <member name="T:System.Activities.BookmarkOptions">
       <summary>Specifies the options for a <see cref="T:System.Activities.Bookmark" />.</summary>
     </member>
-    <member name="F:System.Activities.BookmarkOptions.None">
-      <summary>Default <see cref="T:System.Activities.Bookmark" /> options,</summary>
-    </member>
     <member name="F:System.Activities.BookmarkOptions.MultipleResume">
       <summary>A <see cref="T:System.Activities.Bookmark" /> that can be resumed multiple times.</summary>
     </member>
     <member name="F:System.Activities.BookmarkOptions.NonBlocking">
       <summary>A <see cref="T:System.Activities.Bookmark" /> that does not block the workflow.</summary>
     </member>
+    <member name="F:System.Activities.BookmarkOptions.None">
+      <summary>Default <see cref="T:System.Activities.Bookmark" /> options,</summary>
+    </member>
     <member name="T:System.Activities.BookmarkResumptionResult">
       <summary>Defines an enumeration whose members represent the outcome of bookmark scheduling requests.</summary>
-    </member>
-    <member name="F:System.Activities.BookmarkResumptionResult.Success">
-      <summary>The bookmark resumption was successfully scheduled.</summary>
     </member>
     <member name="F:System.Activities.BookmarkResumptionResult.NotFound">
       <summary>The bookmark resumption was not scheduled because the bookmark could not be found.</summary>
     </member>
     <member name="F:System.Activities.BookmarkResumptionResult.NotReady">
       <summary>The bookmark resumption was not scheduled because the runtime has not yet created the bookmark. The host should wait until another idle point to try resumption again.</summary>
+    </member>
+    <member name="F:System.Activities.BookmarkResumptionResult.Success">
+      <summary>The bookmark resumption was successfully scheduled.</summary>
     </member>
     <member name="T:System.Activities.BookmarkScope">
       <summary>Scopes a set of <see cref="T:System.Activities.Bookmark" /> objects that are categorized as operating under the same protocol.</summary>
@@ -5060,11 +5060,11 @@
     <member name="F:System.Activities.PersistableIdleAction.None">
       <summary>Specifies that no action is taken.</summary>
     </member>
-    <member name="F:System.Activities.PersistableIdleAction.Unload">
-      <summary>Specifies that the <see cref="T:System.Activities.WorkflowApplication" /> should persist and unload the workflow.</summary>
-    </member>
     <member name="F:System.Activities.PersistableIdleAction.Persist">
       <summary>Specifies that the <see cref="T:System.Activities.WorkflowApplication" /> should persist the workflow.</summary>
+    </member>
+    <member name="F:System.Activities.PersistableIdleAction.Unload">
+      <summary>Specifies that the <see cref="T:System.Activities.WorkflowApplication" /> should persist and unload the workflow.</summary>
     </member>
     <member name="T:System.Activities.RegistrationContext">
       <summary>Provides access to the current collection of workflow execution properties. </summary>
@@ -5362,14 +5362,14 @@
     <member name="T:System.Activities.VariableModifiers">
       <summary>Specifies the way the workflow runtime treats <see cref="T:System.Activities.Variable" /> objects.</summary>
     </member>
+    <member name="F:System.Activities.VariableModifiers.Mapped">
+      <summary>The <see cref="T:System.Activities.Variable" /> is mapped for persistence.</summary>
+    </member>
     <member name="F:System.Activities.VariableModifiers.None">
       <summary>No modifiers are specified for the <see cref="T:System.Activities.Variable" />.</summary>
     </member>
     <member name="F:System.Activities.VariableModifiers.ReadOnly">
       <summary>The value for the <see cref="T:System.Activities.Variable" /> cannot be changed.</summary>
-    </member>
-    <member name="F:System.Activities.VariableModifiers.Mapped">
-      <summary>The <see cref="T:System.Activities.Variable" /> is mapped for persistence.</summary>
     </member>
     <member name="T:System.Activities.VersionMismatchException">
       <summary>Specifies information about a version mismatch exception.</summary>
@@ -6214,7 +6214,7 @@
       <param name="innerException">An exception that has a causal relationship to the application unloaded exception. The application unloaded exception is thrown in response to the inner exception and can use information from the exception to handle the error more appropriately.</param>
     </member>
     <member name="T:System.Activities.WorkflowDataContext">
-      <summary>Represents the data context of the current workflow environment and provides a bridge to bring workflow arguments and variables into the scope of  data binding.</summary>
+      <summary>Represents the data context of the current workflow environment and provides a bridge to bring workflow arguments and variables into the scope of Windows Presentation Foundation (WPF) data binding.</summary>
     </member>
     <member name="M:System.Activities.WorkflowDataContext.Dispose">
       <summary>Releases the resources used by the <see cref="T:System.Activities.WorkflowDataContext" />.</summary>
@@ -6227,13 +6227,13 @@
       <summary>Occurs when a property value changes.</summary>
     </member>
     <member name="T:System.Activities.WorkflowIdentity">
-      <summary>Specifies information about a workflow identity.</summary>
+      <summary>Maps a persisted workflow instance to its corresponding workflow definition.</summary>
     </member>
     <member name="M:System.Activities.WorkflowIdentity.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Activities.WorkflowIdentity" /> class.</summary>
     </member>
     <member name="M:System.Activities.WorkflowIdentity.#ctor(System.String,System.Version,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:System.Activities.WorkflowIdentity" /> class using the name, version and package.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.Activities.WorkflowIdentity" /> class using the name, version, and package.</summary>
       <param name="name">The workflow identity name.</param>
       <param name="version">The workflow identity version.</param>
       <param name="package">The workflow identity package.</param>
@@ -6282,14 +6282,14 @@
     <member name="T:System.Activities.WorkflowIdentityFilter">
       <summary>Specifies the workflow identity filter.</summary>
     </member>
-    <member name="F:System.Activities.WorkflowIdentityFilter.Exact">
-      <summary>The exact workflow identity filter.</summary>
-    </member>
     <member name="F:System.Activities.WorkflowIdentityFilter.Any">
       <summary>Specifies any workflow identity filter.</summary>
     </member>
     <member name="F:System.Activities.WorkflowIdentityFilter.AnyRevision">
       <summary>Specifies any revision of workflow identity filter.</summary>
+    </member>
+    <member name="F:System.Activities.WorkflowIdentityFilter.Exact">
+      <summary>The exact workflow identity filter.</summary>
     </member>
     <member name="T:System.Activities.WorkflowInspectionServices">
       <summary>Provides methods for working with the runtime metadata for an activity tree. </summary>
@@ -10680,17 +10680,17 @@
     <member name="T:System.Activities.Hosting.WorkflowInstanceState">
       <summary>Specifies the state of a <see cref="T:System.Activities.Hosting.WorkflowInstance" />.</summary>
     </member>
+    <member name="F:System.Activities.Hosting.WorkflowInstanceState.Aborted">
+      <summary>The <see cref="T:System.Activities.Hosting.WorkflowInstance" /> is aborted.</summary>
+    </member>
+    <member name="F:System.Activities.Hosting.WorkflowInstanceState.Complete">
+      <summary>The <see cref="T:System.Activities.Hosting.WorkflowInstance" /> is complete.</summary>
+    </member>
     <member name="F:System.Activities.Hosting.WorkflowInstanceState.Idle">
       <summary>The <see cref="T:System.Activities.Hosting.WorkflowInstance" /> is idle. </summary>
     </member>
     <member name="F:System.Activities.Hosting.WorkflowInstanceState.Runnable">
       <summary>The <see cref="T:System.Activities.Hosting.WorkflowInstance" /> can be run.</summary>
-    </member>
-    <member name="F:System.Activities.Hosting.WorkflowInstanceState.Complete">
-      <summary>The <see cref="T:System.Activities.Hosting.WorkflowInstance" /> is complete.</summary>
-    </member>
-    <member name="F:System.Activities.Hosting.WorkflowInstanceState.Aborted">
-      <summary>The <see cref="T:System.Activities.Hosting.WorkflowInstance" /> is aborted.</summary>
     </member>
     <member name="T:System.Activities.Persistence.PersistenceIOParticipant">
       <summary>A derived vclass of the <see cref="T:System.Activities.Persistence.PersistenceParticipant" /> class with methods that perform input and output operations in addition to the persisting and loading of workflow instances through the persistence process.</summary>
@@ -12804,11 +12804,11 @@ A <see cref="T:System.WorkflowModel.InArgument`1" /> that contains the <see cref
     <member name="T:System.Activities.Tracking.ImplementationVisibility">
       <summary>Describes the visibility modes within a tracking profile.</summary>
     </member>
-    <member name="F:System.Activities.Tracking.ImplementationVisibility.RootScope">
-      <summary>Only the root activity and its implementation for the workflow is emitted.</summary>
-    </member>
     <member name="F:System.Activities.Tracking.ImplementationVisibility.All">
       <summary>All tracking records are emitted.</summary>
+    </member>
+    <member name="F:System.Activities.Tracking.ImplementationVisibility.RootScope">
+      <summary>Only the root activity and its implementation for the workflow is emitted.</summary>
     </member>
     <member name="T:System.Activities.Tracking.TrackingParticipant">
       <summary>The base class for workflow extensions that interact with the workflow tracking infrastructure and access tracking records.</summary>

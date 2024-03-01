@@ -438,14 +438,14 @@
     <member name="T:System.IdentityModel.Services.CookieHandlerMode">
       <summary>Specifies the cookie handler modes that are supported.Defines the possible values of the <see cref="P:System.IdentityModel.Services.CookieHandlerElement.Mode" /> property. This property defines the kind of cookie handler that a <see cref="T:System.IdentityModel.Services.CookieHandlerElement" /> object configures. For more information, see the <see cref="T:System.IdentityModel.Services.CookieHandlerElement" /> class.</summary>
     </member>
-    <member name="F:System.IdentityModel.Services.CookieHandlerMode.Default">
-      <summary>Specifies that the default type of cookie handler is used. For the <see cref="T:System.IdentityModel.Services.CookieHandlerElement" /> class the default is a chunked cookie handler.</summary>
-    </member>
     <member name="F:System.IdentityModel.Services.CookieHandlerMode.Chunked">
       <summary>Specifies a chunked cookie handler; a cookie handler that is an instance of or that derives from the <see cref="T:System.IdentityModel.Services.ChunkedCookieHandler" /> class.</summary>
     </member>
     <member name="F:System.IdentityModel.Services.CookieHandlerMode.Custom">
       <summary>Specifies a custom cookie handler; a custom cookie handler that derives from the <see cref="T:System.IdentityModel.Services.CookieHandler" /> class.</summary>
+    </member>
+    <member name="F:System.IdentityModel.Services.CookieHandlerMode.Default">
+      <summary>Specifies that the default type of cookie handler is used. For the <see cref="T:System.IdentityModel.Services.CookieHandlerElement" /> class the default is a chunked cookie handler.</summary>
     </member>
     <member name="T:System.IdentityModel.Services.ErrorEventArgs">
       <summary>Provides data for the <see cref="E:System.IdentityModel.Services.SessionAuthenticationModule.SignOutError" /> event.</summary>
@@ -524,6 +524,8 @@
       <param name="principal">The principal associated with this request.</param>
       <param name="sts">The security token service (STS) to use to issue tokens.</param>
       <param name="response">The outgoing HTTP response.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="request" /> is null.-or-<paramref name="principal" /> is null.-or-<paramref name="sts" /> is null.-or-<paramref name="response" /> is null.</exception>
     </member>
     <member name="M:System.IdentityModel.Services.FederatedPassiveSecurityTokenServiceOperations.ProcessRequest(System.Web.HttpRequest,System.Security.Claims.ClaimsPrincipal,System.IdentityModel.SecurityTokenService,System.Web.HttpResponse,System.IdentityModel.Services.WSFederationSerializer)">
       <summary>Processes an incoming WS-Federation Passive Protocol request by using the specified WS-Federation serializer.</summary>
@@ -532,6 +534,8 @@
       <param name="sts">The security token service (STS) to use to issue tokens.</param>
       <param name="response">The outgoing HTTP response.</param>
       <param name="federationSerializer">The serializer to use for handling WS-Federation Passive Protocol messages.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="request" /> is null.-or-<paramref name="principal" /> is null.-or-<paramref name="sts" /> is null.-or-<paramref name="response" /> is null.</exception>
     </member>
     <member name="M:System.IdentityModel.Services.FederatedPassiveSecurityTokenServiceOperations.ProcessSignInRequest(System.IdentityModel.Services.SignInRequestMessage,System.Security.Claims.ClaimsPrincipal,System.IdentityModel.SecurityTokenService)">
       <summary>Processes an incoming WS-Federation Passive Protocol SignIn request.</summary>
@@ -539,6 +543,8 @@
       <param name="requestMessage">The incoming sign-in request message.</param>
       <param name="principal">The principal associated with the request.</param>
       <param name="sts">The security token service (STS) to use to issue tokens.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="requestMessage" /> is null.-or-<paramref name="principal" /> is null.-or-<paramref name="sts" /> is null.</exception>
     </member>
     <member name="M:System.IdentityModel.Services.FederatedPassiveSecurityTokenServiceOperations.ProcessSignInRequest(System.IdentityModel.Services.SignInRequestMessage,System.Security.Claims.ClaimsPrincipal,System.IdentityModel.SecurityTokenService,System.IdentityModel.Services.WSFederationSerializer)">
       <summary>Processes an incoming WS-Federation Passive Protocol SignIn request by using the specified WS-Federation serializer.</summary>
@@ -547,11 +553,15 @@
       <param name="principal">The principal associated with the request.</param>
       <param name="sts">The security token service (STS) to use to issue tokens.</param>
       <param name="federationSerializer">The serializer to use for handling WS-Federation Passive Protocol messages.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="requestMessage" /> is null.-or-<paramref name="principal" /> is null.-or-<paramref name="sts" /> is null.</exception>
     </member>
     <member name="M:System.IdentityModel.Services.FederatedPassiveSecurityTokenServiceOperations.ProcessSignInResponse(System.IdentityModel.Services.SignInResponseMessage,System.Web.HttpResponse)">
       <summary>Processes a sign-in response message.</summary>
       <param name="signInResponseMessage">The sign-in response message to be processed.</param>
       <param name="httpResponse">The outgoing HTTP response.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="signInResponseMessage" /> is null.-or-<paramref name="httpResponse" /> is null.</exception>
     </member>
     <member name="M:System.IdentityModel.Services.FederatedPassiveSecurityTokenServiceOperations.ProcessSignOutRequest(System.IdentityModel.Services.FederationMessage,System.Security.Claims.ClaimsPrincipal,System.String,System.Web.HttpResponse)">
       <summary>Processes an incoming WS-Federation Passive Protocol SignOut request.</summary>
@@ -559,6 +569,10 @@
       <param name="principal">The principal associated with the request.</param>
       <param name="reply">The reply URL to be redirected to after sign-out.</param>
       <param name="httpResponse">The outgoing HTTP response.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="httpRequest" /> is null.-or-<paramref name="principal" /> is null.-or-<paramref name="httpResponse" /> is null.</exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="httpRequest" /> is not an instance of <see cref="T:System.IdentityModel.Services.SignOutRequestMessage" /> or of <see cref="T:System.IdentityModel.Services.SignOutCleanupRequestMessage" />.</exception>
     </member>
     <member name="T:System.IdentityModel.Services.FederatedSessionExpiredException">
       <summary>The exception that is thrown when a session has expired.</summary>
@@ -775,7 +789,7 @@
       <param name="context">The application object which contains this module.</param>
     </member>
     <member name="M:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration">
-      <summary>When overridden in a derived class, initializes module properties based on values in the <see cref="T:System.IdentityModel.Services.FederationConfiguration" /> object that is in effect for it.</summary>
+      <summary>When overridden in a derived class, initializes module properties based on values in the <see cref="T:System.IdentityModel.Services.Configuration.FederationConfiguration" /> object that is in effect for it.</summary>
     </member>
     <member name="T:System.IdentityModel.Services.MachineKeyTransform">
       <summary>Protects session tokens with the cryptographic material specified in the &lt;machineKey&gt; section of the web.config or machine.config configuration file.</summary>
@@ -1260,7 +1274,7 @@
     <member name="M:System.IdentityModel.Services.SignOutCleanupRequestMessage.Write(System.IO.TextWriter)">
       <summary>Writes the message in query string form to the specified text writer.</summary>
       <param name="writer">The writer to which to write the message.</param>
-      <exception cref="T:System.ArgumentNullExcetion">
+      <exception cref="T:System.ArgumentNullException">
         <paramref name="writer" /> is null.</exception>
     </member>
     <member name="T:System.IdentityModel.Services.SignOutRequestMessage">
@@ -1740,22 +1754,22 @@
       <param name="trustMessage">The WS-Trust message to check.</param>
     </member>
     <member name="M:System.IdentityModel.Services.WSFederationSerializer.CreateRequest(System.IdentityModel.Services.FederationMessage,System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext)">
-      <summary>Converts a WS-Federation Sign-In Request message to a <see cref="T:System.IdentityModel.SecurityTokenService.RequestSecurityToken" /> object that the security token service (the SecurityTokenService class) can consume.</summary>
-      <returns>A <see cref="T:System.IdentityModel.SecurityTokenService.RequestSecurityToken" /> object that represents the converted Sign-In Request message.</returns>
+      <summary>Converts a WS-Federation Sign-In Request message to a <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> object that the security token service (the <see cref="T:System.IdentityModel.SecurityTokenService" /> class) can consume.</summary>
+      <returns>A <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> object that represents the converted Sign-In Request message.</returns>
       <param name="message">The message to convert. This should be an instance of <see cref="T:System.IdentityModel.Services.SignInRequestMessage" />.</param>
       <param name="context">The current serialization context.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="message" /> is null.-or-<paramref name="context" /> is null.</exception>
-      <exception cref="T:System.ArgumentException">The message is not of type <see cref="T:System.IdentityModel.Services.SignInRequestMessage" />.-or-The <see cref="T:System.IdentityModel.Services.SignInRequestMessage" /> object is missing required information to construct a valid <see cref="T:System.IdentityModel.SecurityTokenService.RequestSecurityToken" /> object.</exception>
+      <exception cref="T:System.ArgumentException">The message is not of type <see cref="T:System.IdentityModel.Services.SignInRequestMessage" />.-or-The <see cref="T:System.IdentityModel.Services.SignInRequestMessage" /> object is missing required information to construct a valid <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> object.</exception>
     </member>
     <member name="M:System.IdentityModel.Services.WSFederationSerializer.CreateResponse(System.IdentityModel.Services.FederationMessage,System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext)">
-      <summary>Converts a WS-Federation Sign-In Response message object to a <see cref="T:System.IdentityModel.SecurityTokenService.RequestSecurityTokenResponse" /> object.</summary>
-      <returns>A <see cref="T:System.IdentityModel.SecurityTokenService.RequestSecurityTokenResponse" /> object that represents the converted Sign-In Response message.</returns>
+      <summary>Converts a WS-Federation Sign-In Response message object to a <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse" /> object.</summary>
+      <returns>A <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse" /> object that represents the converted Sign-In Response message.</returns>
       <param name="message">The message to convert. This should be an instance of <see cref="T:System.IdentityModel.Services.SignInResponseMessage" />.</param>
       <param name="context">The current serialization context.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="message" /> is null.-or-<paramref name="context" /> is null.</exception>
-      <exception cref="T:System.ArgumentException">The message is not of type <see cref="T:System.IdentityModel.Services.SignInResponseMessage" />. -or-The <see cref="T:System.IdentityModel.Services.SignInResponseMessage" /> object is missing required information to construct a valid <see cref="T:System.IdentityModel.SecurityTokenService.RequestSecurityTokenResponse" /> object.</exception>
+      <exception cref="T:System.ArgumentException">The message is not of type <see cref="T:System.IdentityModel.Services.SignInResponseMessage" />. -or-The <see cref="T:System.IdentityModel.Services.SignInResponseMessage" /> object is missing required information to construct a valid <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse" /> object.</exception>
     </member>
     <member name="M:System.IdentityModel.Services.WSFederationSerializer.GetReferencedRequest(System.String)">
       <summary>Gets the wreq string from a referenced URL.</summary>
@@ -2109,7 +2123,7 @@
       <returns>A string that contains the URL to return to following sign out. Sets the wreply parameter on a WS-Federation sign-out request. Optional.</returns>
     </member>
     <member name="T:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler">
-      <summary>Handles machine key session tokens.</summary>
+      <summary>Processes session tokens by using signing and encryption keys specified in the ASP.NET &lt;machineKey&gt; element in a configuration file.</summary>
     </member>
     <member name="M:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler" /> class.</summary>

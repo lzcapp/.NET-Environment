@@ -349,7 +349,7 @@
       <returns>Returns <see cref="T:System.Net.DecompressionMethods" />.The automatic decompression method used by the handler. The default value is <see cref="F:System.Net.DecompressionMethods.None" />.</returns>
     </member>
     <member name="P:System.Net.Http.HttpClientHandler.ClientCertificateOptions">
-      <summary>Gets or sets the collection of security certificates that are associated with this handler.</summary>
+      <summary>Gets or sets a value that indicates if the certificate is automatically picked from the certificate store or if the caller is allowed to pass in a specific client certificate.</summary>
       <returns>Returns <see cref="T:System.Net.Http.ClientCertificateOption" />.The collection of security certificates associated with this handler.</returns>
     </member>
     <member name="P:System.Net.Http.HttpClientHandler.CookieContainer">

@@ -180,6 +180,10 @@
       <summary>Gets or sets a value that indicates whether the generated assembly is a XAML browser application (XBAP).</summary>
       <returns>true if the generated assembly is a XAML browser application (XBAP); otherwise, false.</returns>
     </member>
+    <member name="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.IsRunningInVisualStudio">
+      <summary>Gets or sets a value that indicates whether the task is running in Visual Studio.</summary>
+      <returns>true if the task is running in Visual Studio; otherwise, false.</returns>
+    </member>
     <member name="P:Microsoft.Build.Tasks.Windows.MarkupCompilePass1.KnownReferencePaths">
       <summary>Gets or sets the paths of referenced assemblies that do not change during the build procedure.</summary>
       <returns>The paths of referenced assemblies that do not change during the build procedure.</returns>

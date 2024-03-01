@@ -185,12 +185,10 @@
       <summary>Gets whether the references are the same.</summary>
       <returns>true if the references are equal, false otherwise.</returns>
       <param name="obj">The reference to compare.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Framework.BuildEventContext.GetHashCode">
       <summary>Gets a code comprised of the <see cref="P:Microsoft.Build.Framework.BuildEventContext.ProjectContextId" /> and the <see cref="P:Microsoft.Build.Framework.BuildEventContext.NodeId" />.</summary>
       <returns>An integer value representing the hash code.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:Microsoft.Build.Framework.BuildEventContext.Invalid">
       <summary>Gets whether the context where the event occurred is valid.</summary>
@@ -827,7 +825,6 @@
     </member>
     <member name="E:Microsoft.Build.Framework.IEventSource.AnyEventRaised">
       <summary>Occurs when a build raises any other type of build event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:Microsoft.Build.Framework.IEventSource.BuildFinished">
       <summary>Occurs when a build finishes.</summary>
@@ -837,7 +834,6 @@
     </member>
     <member name="E:Microsoft.Build.Framework.IEventSource.CustomEventRaised">
       <summary>Occurs when a build raises a custom event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:Microsoft.Build.Framework.IEventSource.ErrorRaised">
       <summary>Occurs when a build raises an error.</summary>
@@ -853,7 +849,6 @@
     </member>
     <member name="E:Microsoft.Build.Framework.IEventSource.StatusEventRaised">
       <summary>Occurs when a build raises a status event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:Microsoft.Build.Framework.IEventSource.TargetFinished">
       <summary>Occurs when a target finishes building.</summary>
@@ -926,7 +921,6 @@
     <member name="P:Microsoft.Build.Framework.ITask.BuildEngine">
       <summary>Gets or sets the build engine associated with the task.</summary>
       <returns>The build engine associated with the task.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Framework.ITask.Execute">
       <summary>Executes a task.</summary>
@@ -935,7 +929,6 @@
     <member name="P:Microsoft.Build.Framework.ITask.HostObject">
       <summary>Gets or sets any host object that is associated with the task.</summary>
       <returns>The host object associated with the task.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:Microsoft.Build.Framework.ITaskFactory">
       <summary>Interface that a task factory Instance should implement.  </summary>
@@ -996,18 +989,15 @@
     <member name="M:Microsoft.Build.Framework.ITaskItem.CloneCustomMetadata">
       <summary>Gets the collection of custom metadata.</summary>
       <returns>The collection of custom metadata.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Framework.ITaskItem.CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)">
       <summary>Copies the custom metadata entries to another item.</summary>
       <param name="destinationItem">The item to copy the metadata entries to.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:Microsoft.Build.Framework.ITaskItem.GetMetadata(System.String)">
       <summary>Gets the value of the specified metadata entry.</summary>
       <returns>The value of the <paramref name="attributeName" /> metadata.</returns>
       <param name="metadataName">The name of the metadata entry.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:Microsoft.Build.Framework.ITaskItem.ItemSpec">
       <summary>Gets or sets the item specification.</summary>
@@ -1115,7 +1105,6 @@
       <summary>Sets the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with information about the exception.</summary>
       <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
       <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:Microsoft.Build.Framework.LoggerException.HelpKeyword">
       <summary>Gets the F1-help keyword associated with this error.</summary>
@@ -1124,8 +1113,11 @@
     <member name="T:Microsoft.Build.Framework.LoggerVerbosity">
       <summary>Specifies the available verbosity levels of a <see cref="T:Microsoft.Build.Utilities.Logger" />. </summary>
     </member>
-    <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Quiet">
-      <summary>Quiet verbosity, which displays a build summary.</summary>
+    <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Detailed">
+      <summary>Detailed verbosity, which displays errors, warnings, messages with <see cref="T:Microsoft.Build.Framework.MessageImportance" /> values of <see cref="F:Microsoft.Build.Framework.MessageImportance.High" /> or <see cref="F:Microsoft.Build.Framework.MessageImportance.Normal" />, all status events, and a build summary.</summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Diagnostic">
+      <summary>Diagnostic verbosity, which displays all errors, warnings, messages, status events, and a build summary.</summary>
     </member>
     <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Minimal">
       <summary>Minimal verbosity, which displays errors, warnings, messages with <see cref="T:Microsoft.Build.Framework.MessageImportance" /> values of <see cref="F:Microsoft.Build.Framework.MessageImportance.High" />, and a build summary.</summary>
@@ -1133,11 +1125,8 @@
     <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Normal">
       <summary>Normal verbosity, which displays errors, warnings, messages with <see cref="T:Microsoft.Build.Framework.MessageImportance" /> values of <see cref="F:Microsoft.Build.Framework.MessageImportance.High" />, some status events, and a build summary.</summary>
     </member>
-    <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Detailed">
-      <summary>Detailed verbosity, which displays errors, warnings, messages with <see cref="T:Microsoft.Build.Framework.MessageImportance" /> values of <see cref="F:Microsoft.Build.Framework.MessageImportance.High" /> or <see cref="F:Microsoft.Build.Framework.MessageImportance.Normal" />, all status events, and a build summary.</summary>
-    </member>
-    <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Diagnostic">
-      <summary>Diagnostic verbosity, which displays all errors, warnings, messages, status events, and a build summary.</summary>
+    <member name="F:Microsoft.Build.Framework.LoggerVerbosity.Quiet">
+      <summary>Quiet verbosity, which displays a build summary.</summary>
     </member>
     <member name="T:Microsoft.Build.Framework.MessageImportance">
       <summary>Specifies constants that define the importance of a build message. </summary>
@@ -1145,11 +1134,11 @@
     <member name="F:Microsoft.Build.Framework.MessageImportance.High">
       <summary>A high importance message.</summary>
     </member>
-    <member name="F:Microsoft.Build.Framework.MessageImportance.Normal">
-      <summary>A normal importance message.</summary>
-    </member>
     <member name="F:Microsoft.Build.Framework.MessageImportance.Low">
       <summary>A low importance message.</summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.MessageImportance.Normal">
+      <summary>A normal importance message.</summary>
     </member>
     <member name="T:Microsoft.Build.Framework.OutputAttribute">
       <summary>Defines the metadata attribute that task authors use to identify task properties that output data from the task. </summary>
@@ -1295,11 +1284,11 @@
     <member name="T:Microsoft.Build.Framework.RegisteredTaskObjectLifetime">
       <summary>Defines the lifetime of a registered task object.</summary>
     </member>
-    <member name="F:Microsoft.Build.Framework.RegisteredTaskObjectLifetime.Build">
-      <summary>The registered object will be disposed when the build ends.</summary>
-    </member>
     <member name="F:Microsoft.Build.Framework.RegisteredTaskObjectLifetime.AppDomain">
       <summary>The registered object will be disposed when the AppDomain in which the build was launched is unloaded</summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.RegisteredTaskObjectLifetime.Build">
+      <summary>The registered object will be disposed when the build ends.</summary>
     </member>
     <member name="T:Microsoft.Build.Framework.RequiredAttribute">
       <summary>Defines the metadata attribute that task authors use to identify required task properties. Task properties with this attribute must have a set value when the task is run. </summary>
@@ -1842,11 +1831,11 @@
     <member name="T:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation">
       <summary>Determines whether the default value for a property is set at the bottom or the top of the project file. </summary>
     </member>
-    <member name="F:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation.BeforeContext">
-      <summary>The default value for a property is set at the top of the project file (usually via an import of a .props file).</summary>
-    </member>
     <member name="F:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation.AfterContext">
       <summary>The default value for a property is set at the bottom of the project file (usually via an import of a .targets file, where the property definition is conditional on whether the property has not already been defined.)</summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation.BeforeContext">
+      <summary>The default value for a property is set at the top of the project file (usually via an import of a .props file).</summary>
     </member>
     <member name="T:Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty">
       <summary>Represents the schema of an enumeration property.</summary>
@@ -2194,11 +2183,11 @@
     <member name="T:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode">
       <summary>Describes a subsequent definition for a rule with the same name. </summary>
     </member>
-    <member name="F:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode.Replace">
-      <summary>A subsequent definition for a rule (with the same name) that entirely overrides a previous definition.</summary>
-    </member>
     <member name="F:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode.Extend">
       <summary>A subsequent definition for a rule (with the same name) that adds properties to a previous definition.</summary>
+    </member>
+    <member name="F:Microsoft.Build.Framework.XamlTypes.RuleOverrideMode.Replace">
+      <summary>A subsequent definition for a rule (with the same name) that entirely overrides a previous definition.</summary>
     </member>
     <member name="T:Microsoft.Build.Framework.XamlTypes.RuleSchema">
       <summary>The RuleSchema provides a strongly-typed identity handle to the underlying schema data model.</summary>

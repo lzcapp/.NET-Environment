@@ -26,11 +26,11 @@
     <member name="F:System.Windows.Automation.AsyncContentLoadedState.Beginning">
       <summary>Specifies that asynchronous loading of the content into the UI Automation element is beginning.</summary>
     </member>
-    <member name="F:System.Windows.Automation.AsyncContentLoadedState.Progress">
-      <summary>Specifies that asynchronous loading of the content into the UI Automation element is in progress. UI Automation providers should specify the percent complete so that client applications will know how much more content remains.</summary>
-    </member>
     <member name="F:System.Windows.Automation.AsyncContentLoadedState.Completed">
       <summary>Specifies that asynchronous loading of the content into the UI Automation element is complete.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.AsyncContentLoadedState.Progress">
+      <summary>Specifies that asynchronous loading of the content into the UI Automation element is in progress. UI Automation providers should specify the percent complete so that client applications will know how much more content remains.</summary>
     </member>
     <member name="T:System.Windows.Automation.AutomationElementIdentifiers">
       <summary>Contains values used as identifiers by UI Automation providers.</summary>
@@ -214,7 +214,7 @@
     </member>
     <member name="M:System.Windows.Automation.AutomationEvent.LookupById(System.Int32)">
       <summary>Retrieves an <see cref="T:System.Windows.Automation.AutomationEvent" /> that encapsulates the specified numerical identifier.</summary>
-      <returns>A new <see cref="T:System.Windows.Automation.AutomationEvent" />.</returns>
+      <returns>An <see cref="T:System.Windows.Automation.AutomationEvent" /> that encapsulates the specified numerical identifier.</returns>
       <param name="id">Identifier of the event.</param>
     </member>
     <member name="T:System.Windows.Automation.AutomationEventArgs">
@@ -460,23 +460,23 @@
     <member name="T:System.Windows.Automation.DockPosition">
       <summary>Contains values that specify the dock position of an object, represented by a <see cref="T:System.Windows.Automation.DockPattern" />, within a docking container.</summary>
     </member>
-    <member name="F:System.Windows.Automation.DockPosition.Top">
-      <summary>Indicates that the UI Automation element is docked along the top edge of the docking container. </summary>
-    </member>
-    <member name="F:System.Windows.Automation.DockPosition.Left">
-      <summary>Indicates that the UI Automation element is docked along the left edge of the docking container. </summary>
-    </member>
     <member name="F:System.Windows.Automation.DockPosition.Bottom">
       <summary>Indicates that the UI Automation element is docked along the bottom edge of the docking container. </summary>
-    </member>
-    <member name="F:System.Windows.Automation.DockPosition.Right">
-      <summary>Indicates that the UI Automation element is docked along the right edge of the docking container. </summary>
     </member>
     <member name="F:System.Windows.Automation.DockPosition.Fill">
       <summary>Indicates that the UI Automation element is docked along all edges of the docking container and fills all available space within the container. </summary>
     </member>
+    <member name="F:System.Windows.Automation.DockPosition.Left">
+      <summary>Indicates that the UI Automation element is docked along the left edge of the docking container. </summary>
+    </member>
     <member name="F:System.Windows.Automation.DockPosition.None">
       <summary>Indicates that the UI Automation element is not docked to any edge of the docking container. </summary>
+    </member>
+    <member name="F:System.Windows.Automation.DockPosition.Right">
+      <summary>Indicates that the UI Automation element is docked along the right edge of the docking container. </summary>
+    </member>
+    <member name="F:System.Windows.Automation.DockPosition.Top">
+      <summary>Indicates that the UI Automation element is docked along the top edge of the docking container. </summary>
     </member>
     <member name="T:System.Windows.Automation.ElementNotAvailableException">
       <summary>Contains information about the exception that is raised when an attempt is made to access an UI Automation element corresponding to a part of the user interface that is no longer available.</summary>
@@ -550,11 +550,11 @@
     <member name="F:System.Windows.Automation.ExpandCollapseState.Expanded">
       <summary>All child nodes, controls or content of the UI Automation element are displayed. </summary>
     </member>
-    <member name="F:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded">
-      <summary>Some, but not all, child nodes, controls, or content of the UI Automation element are displayed. </summary>
-    </member>
     <member name="F:System.Windows.Automation.ExpandCollapseState.LeafNode">
       <summary>The UI Automation element has no child nodes, controls, or content to display. </summary>
+    </member>
+    <member name="F:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded">
+      <summary>Some, but not all, child nodes, controls, or content of the UI Automation element are displayed. </summary>
     </member>
     <member name="T:System.Windows.Automation.GridItemPatternIdentifiers">
       <summary>Contains values used as identifiers by <see cref="T:System.Windows.Automation.Provider.IGridItemProvider" />.</summary>
@@ -644,11 +644,11 @@
     <member name="T:System.Windows.Automation.OrientationType">
       <summary>Contains values that specify the orientation of a control.</summary>
     </member>
-    <member name="F:System.Windows.Automation.OrientationType.None">
-      <summary>Specifies that the control has no orientation.</summary>
-    </member>
     <member name="F:System.Windows.Automation.OrientationType.Horizontal">
       <summary>Specifies that the control has horizontal orientation.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.OrientationType.None">
+      <summary>Specifies that the control has no orientation.</summary>
     </member>
     <member name="F:System.Windows.Automation.OrientationType.Vertical">
       <summary>Specifies that the control has vertical orientation.</summary>
@@ -705,14 +705,14 @@
     <member name="T:System.Windows.Automation.RowOrColumnMajor">
       <summary>Contains values that specify whether data in a table should be read primarily by row or by column.</summary>
     </member>
-    <member name="F:System.Windows.Automation.RowOrColumnMajor.RowMajor">
-      <summary>Specifies that data in the table should be read row by row. </summary>
-    </member>
     <member name="F:System.Windows.Automation.RowOrColumnMajor.ColumnMajor">
       <summary>Specifies that data in the table should be read column by column </summary>
     </member>
     <member name="F:System.Windows.Automation.RowOrColumnMajor.Indeterminate">
       <summary>Specifies that the best way to present the data is indeterminate.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.RowOrColumnMajor.RowMajor">
+      <summary>Specifies that data in the table should be read row by row. </summary>
     </member>
     <member name="T:System.Windows.Automation.ScrollAmount">
       <summary>Contains values used by <see cref="T:System.Windows.Automation.ScrollPattern" /> to indicate the direction and distance to scroll.</summary>
@@ -720,14 +720,14 @@
     <member name="F:System.Windows.Automation.ScrollAmount.LargeDecrement">
       <summary>Specifies that scrolling is done in large decrements, equivalent to PageUp or clicking on a blank part of a scrollbar. If PageUp is not a relevant amount for the control and/or no scrollbar exists, the value represents an amount equal to the current visible window. </summary>
     </member>
-    <member name="F:System.Windows.Automation.ScrollAmount.SmallDecrement">
-      <summary>Specifies that scrolling is done in small decrements, equivalent to pressing an arrow key or clicking the arrow button on a scrollbar. </summary>
+    <member name="F:System.Windows.Automation.ScrollAmount.LargeIncrement">
+      <summary>Specifies that scrolling is done in large increments, equivalent to a PageDown or clicking on the track of a scrollbar component. If a PageDown is not a relevant amount for the control and/or no scrollbar exists, the value represents an amount equal to the current visible region. </summary>
     </member>
     <member name="F:System.Windows.Automation.ScrollAmount.NoAmount">
       <summary>Specifies that scrolling should not be performed.</summary>
     </member>
-    <member name="F:System.Windows.Automation.ScrollAmount.LargeIncrement">
-      <summary>Specifies that scrolling is done in large increments, equivalent to a PageDown or clicking on the track of a scrollbar component. If a PageDown is not a relevant amount for the control and/or no scrollbar exists, the value represents an amount equal to the current visible region. </summary>
+    <member name="F:System.Windows.Automation.ScrollAmount.SmallDecrement">
+      <summary>Specifies that scrolling is done in small decrements, equivalent to pressing an arrow key or clicking the arrow button on a scrollbar. </summary>
     </member>
     <member name="F:System.Windows.Automation.ScrollAmount.SmallIncrement">
       <summary>Specifies that scrolling is done in small increments, equivalent to pressing an arrow key or clicking the arrow button on a scrollbar. </summary>
@@ -834,14 +834,14 @@
     <member name="F:System.Windows.Automation.StructureChangeType.ChildRemoved">
       <summary>A child element was removed from the UI Automation element tree.</summary>
     </member>
-    <member name="F:System.Windows.Automation.StructureChangeType.ChildrenInvalidated">
-      <summary>Child elements were invalidated in the UI Automation element tree. This might mean that one or more children were added or removed, depending on the UI Automation providers implementation.</summary>
-    </member>
     <member name="F:System.Windows.Automation.StructureChangeType.ChildrenBulkAdded">
       <summary>Child elements were added to the UI Automation element tree.</summary>
     </member>
     <member name="F:System.Windows.Automation.StructureChangeType.ChildrenBulkRemoved">
       <summary>Child elements were removed from the UI Automation element tree.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.StructureChangeType.ChildrenInvalidated">
+      <summary>Child elements were invalidated in the UI Automation element tree. This might mean that one or more children were added or removed, depending on the UI Automation providers implementation.</summary>
     </member>
     <member name="F:System.Windows.Automation.StructureChangeType.ChildrenReordered">
       <summary>The order of the child elements in the UI Automation element tree changed.</summary>
@@ -849,14 +849,14 @@
     <member name="T:System.Windows.Automation.SupportedTextSelection">
       <summary>Contains values that specify whether a text provider supports selection and, if so, whether it supports a single, continuous selection or multiple, disjoint selections.</summary>
     </member>
+    <member name="F:System.Windows.Automation.SupportedTextSelection.Multiple">
+      <summary>Supports multiple, disjoint text selections.</summary>
+    </member>
     <member name="F:System.Windows.Automation.SupportedTextSelection.None">
       <summary>Does not support text selections.</summary>
     </member>
     <member name="F:System.Windows.Automation.SupportedTextSelection.Single">
       <summary>Supports a single, continuous text selection.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.SupportedTextSelection.Multiple">
-      <summary>Supports multiple, disjoint text selections.</summary>
     </member>
     <member name="T:System.Windows.Automation.SynchronizedInputPatternIdentifiers">
       <summary>Contains values used as identifiers by <see cref="T:System.Windows.Automation.Provider.ISynchronizedInputProvider" />.</summary>
@@ -876,23 +876,23 @@
     <member name="T:System.Windows.Automation.SynchronizedInputType">
       <summary>Contains values that specify the type of synchronized input. </summary>
     </member>
-    <member name="F:System.Windows.Automation.SynchronizedInputType.KeyUp">
-      <summary>A key has been released.</summary>
-    </member>
     <member name="F:System.Windows.Automation.SynchronizedInputType.KeyDown">
       <summary>A key has been pressed.</summary>
     </member>
-    <member name="F:System.Windows.Automation.SynchronizedInputType.MouseLeftButtonUp">
-      <summary>The left mouse button has been released.</summary>
+    <member name="F:System.Windows.Automation.SynchronizedInputType.KeyUp">
+      <summary>A key has been released.</summary>
     </member>
     <member name="F:System.Windows.Automation.SynchronizedInputType.MouseLeftButtonDown">
       <summary>The left mouse button has been pressed.</summary>
     </member>
-    <member name="F:System.Windows.Automation.SynchronizedInputType.MouseRightButtonUp">
-      <summary>The right mouse button has been released.</summary>
+    <member name="F:System.Windows.Automation.SynchronizedInputType.MouseLeftButtonUp">
+      <summary>The left mouse button has been released.</summary>
     </member>
     <member name="F:System.Windows.Automation.SynchronizedInputType.MouseRightButtonDown">
       <summary>The right mouse button has been pressed.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.SynchronizedInputType.MouseRightButtonUp">
+      <summary>The right mouse button has been released.</summary>
     </member>
     <member name="T:System.Windows.Automation.TableItemPatternIdentifiers">
       <summary>Contains values used as identifiers by <see cref="T:System.Windows.Automation.Provider.ITableItemProvider" />.</summary>
@@ -1041,14 +1041,14 @@
     <member name="T:System.Windows.Automation.ToggleState">
       <summary>Contains values that specify the <see cref="T:System.Windows.Automation.ToggleState" /> of a UI Automation element.</summary>
     </member>
+    <member name="F:System.Windows.Automation.ToggleState.Indeterminate">
+      <summary>The UI Automation element is in an indeterminate state.</summary>
+    </member>
     <member name="F:System.Windows.Automation.ToggleState.Off">
       <summary>The UI Automation element is not selected, checked, marked or otherwise activated.</summary>
     </member>
     <member name="F:System.Windows.Automation.ToggleState.On">
       <summary>The UI Automation element is selected, checked, marked or otherwise activated.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.ToggleState.Indeterminate">
-      <summary>The UI Automation element is in an indeterminate state.</summary>
     </member>
     <member name="T:System.Windows.Automation.TransformPatternIdentifiers">
       <summary>Contains values used as identifiers for <see cref="T:System.Windows.Automation.Provider.ITransformProvider" />.</summary>
@@ -1068,8 +1068,8 @@
     <member name="T:System.Windows.Automation.TreeScope">
       <summary>Contains values that specify the scope of elements within the UI Automation tree.</summary>
     </member>
-    <member name="F:System.Windows.Automation.TreeScope.Element">
-      <summary>Specifies that the search include the element itself. </summary>
+    <member name="F:System.Windows.Automation.TreeScope.Ancestors">
+      <summary>Specifies that the search include the element's ancestors, including the parent. Not supported.</summary>
     </member>
     <member name="F:System.Windows.Automation.TreeScope.Children">
       <summary>Specifies that the search include the element's immediate children. </summary>
@@ -1077,11 +1077,11 @@
     <member name="F:System.Windows.Automation.TreeScope.Descendants">
       <summary>Specifies that the search include the element's descendants, including children.</summary>
     </member>
+    <member name="F:System.Windows.Automation.TreeScope.Element">
+      <summary>Specifies that the search include the element itself. </summary>
+    </member>
     <member name="F:System.Windows.Automation.TreeScope.Parent">
       <summary>Specifies that the search include the element's parent. Not supported.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.TreeScope.Ancestors">
-      <summary>Specifies that the search include the element's ancestors, including the parent. Not supported.</summary>
     </member>
     <member name="F:System.Windows.Automation.TreeScope.Subtree">
       <summary>Specifies that the search include the root of the search and all descendants.</summary>
@@ -1118,20 +1118,20 @@
     <member name="T:System.Windows.Automation.WindowInteractionState">
       <summary>Contains values that specify the current state of the window for purposes of user or programmatic interaction.</summary>
     </member>
-    <member name="F:System.Windows.Automation.WindowInteractionState.Running">
-      <summary>Indicates that the window is running. This does not guarantee that the window is responding or ready for user interaction.</summary>
+    <member name="F:System.Windows.Automation.WindowInteractionState.BlockedByModalWindow">
+      <summary>Indicates that the window is blocked by a modal window. </summary>
     </member>
     <member name="F:System.Windows.Automation.WindowInteractionState.Closing">
       <summary>Indicates that the window is closing. </summary>
     </member>
+    <member name="F:System.Windows.Automation.WindowInteractionState.NotResponding">
+      <summary>Indicates that the window is not responding. </summary>
+    </member>
     <member name="F:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction">
       <summary>Indicates that the window is ready for user interaction.</summary>
     </member>
-    <member name="F:System.Windows.Automation.WindowInteractionState.BlockedByModalWindow">
-      <summary>Indicates that the window is blocked by a modal window. </summary>
-    </member>
-    <member name="F:System.Windows.Automation.WindowInteractionState.NotResponding">
-      <summary>Indicates that the window is not responding. </summary>
+    <member name="F:System.Windows.Automation.WindowInteractionState.Running">
+      <summary>Indicates that the window is running. This does not guarantee that the window is responding or ready for user interaction.</summary>
     </member>
     <member name="T:System.Windows.Automation.WindowPatternIdentifiers">
       <summary>Contains values used as identifiers by <see cref="T:System.Windows.Automation.Provider.IWindowProvider" />. </summary>
@@ -1166,29 +1166,23 @@
     <member name="T:System.Windows.Automation.WindowVisualState">
       <summary>Contains values that specify the visual state of a window.</summary>
     </member>
-    <member name="F:System.Windows.Automation.WindowVisualState.Normal">
-      <summary>Specifies that the window is normal (restored). </summary>
-    </member>
     <member name="F:System.Windows.Automation.WindowVisualState.Maximized">
       <summary>Specifies that the window is maximized. </summary>
     </member>
     <member name="F:System.Windows.Automation.WindowVisualState.Minimized">
       <summary>Specifies that the window is minimized.</summary>
     </member>
+    <member name="F:System.Windows.Automation.WindowVisualState.Normal">
+      <summary>Specifies that the window is normal (restored). </summary>
+    </member>
     <member name="T:System.Windows.Automation.Text.AnimationStyle">
       <summary>Represents values for <see cref="F:System.Windows.Automation.TextPattern.AnimationStyleAttribute" />.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.AnimationStyle.None">
-      <summary>Specifies that there is no animation style.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.AnimationStyle.LasVegasLights">
-      <summary>Specifies that the bounding rectangle displays a border of alternating icons of different colors.</summary>
     </member>
     <member name="F:System.Windows.Automation.Text.AnimationStyle.BlinkingBackground">
       <summary>Specifies that the font and background alternate between assigned colors and contrasting colors.</summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.AnimationStyle.SparkleText">
-      <summary>Specifies that the background displays flashing, multi-colored icons.</summary>
+    <member name="F:System.Windows.Automation.Text.AnimationStyle.LasVegasLights">
+      <summary>Specifies that the bounding rectangle displays a border of alternating icons of different colors.</summary>
     </member>
     <member name="F:System.Windows.Automation.Text.AnimationStyle.MarchingBlackAnts">
       <summary>Specifies that the bounding rectangle displays moving black dashes.</summary>
@@ -1196,32 +1190,38 @@
     <member name="F:System.Windows.Automation.Text.AnimationStyle.MarchingRedAnts">
       <summary>Specifies that the bounding rectangle displays moving red dashes.</summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.AnimationStyle.Shimmer">
-      <summary>Specifies that the font alternates between solid and blurred.</summary>
+    <member name="F:System.Windows.Automation.Text.AnimationStyle.None">
+      <summary>Specifies that there is no animation style.</summary>
     </member>
     <member name="F:System.Windows.Automation.Text.AnimationStyle.Other">
       <summary>Specifies that the animation style is one not explicitly itemized in the <see cref="T:System.Windows.Automation.Text.AnimationStyle" /> enumeration.</summary>
     </member>
+    <member name="F:System.Windows.Automation.Text.AnimationStyle.Shimmer">
+      <summary>Specifies that the font alternates between solid and blurred.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.AnimationStyle.SparkleText">
+      <summary>Specifies that the background displays flashing, multi-colored icons.</summary>
+    </member>
     <member name="T:System.Windows.Automation.Text.BulletStyle">
       <summary>Values for <see cref="F:System.Windows.Automation.TextPattern.BulletStyleAttribute" />. </summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.BulletStyle.None">
-      <summary>No bullet style. </summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.BulletStyle.HollowRoundBullet">
-      <summary>Hollow round bullets. </summary>
+    <member name="F:System.Windows.Automation.Text.BulletStyle.DashBullet">
+      <summary>Dash bullets. </summary>
     </member>
     <member name="F:System.Windows.Automation.Text.BulletStyle.FilledRoundBullet">
       <summary>Solid round bullets.</summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.BulletStyle.HollowSquareBullet">
-      <summary>Hollow square bullets.</summary>
-    </member>
     <member name="F:System.Windows.Automation.Text.BulletStyle.FilledSquareBullet">
       <summary>Solid square bullets. </summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.BulletStyle.DashBullet">
-      <summary>Dash bullets. </summary>
+    <member name="F:System.Windows.Automation.Text.BulletStyle.HollowRoundBullet">
+      <summary>Hollow round bullets. </summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.BulletStyle.HollowSquareBullet">
+      <summary>Hollow square bullets.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.BulletStyle.None">
+      <summary>No bullet style. </summary>
     </member>
     <member name="F:System.Windows.Automation.Text.BulletStyle.Other">
       <summary>Another bullet style not explicitly specified in the <see cref="T:System.Windows.Automation.Text.BulletStyle" /> enumeration. </summary>
@@ -1229,32 +1229,35 @@
     <member name="T:System.Windows.Automation.Text.CapStyle">
       <summary>Represents values for <see cref="F:System.Windows.Automation.TextPattern.CapStyleAttribute" />. </summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.CapStyle.None">
-      <summary>Indicates that there is no capitalization style; uppercase and lowercase letters render normally.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.CapStyle.SmallCap">
-      <summary>Indicates that the capitalization style is small caps; lowercase letters are replaced with uppercase letters of the same approximate height as the font's x-height.</summary>
-    </member>
     <member name="F:System.Windows.Automation.Text.CapStyle.AllCap">
       <summary>Indicates that the capitalization style is all caps; all lowercase letters are replaced with uppercase letters.</summary>
     </member>
     <member name="F:System.Windows.Automation.Text.CapStyle.AllPetiteCaps">
       <summary>Indicates that the capitalization style is all petite caps; uppercase and lowercase letters are replaced with uppercase letters slightly smaller than small caps.</summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.CapStyle.PetiteCaps">
-      <summary>Indicates that the capitalization style is petite caps; lowercase letters are replaced with uppercase letters slightly smaller than small caps.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.CapStyle.Unicase">
-      <summary>Indicates that the capitalization style is unicase; uppercase and lowercase letters are rendered in a way determined by the type designer. A unicase alphabet is one that does not specify case for its letters.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.CapStyle.Titling">
-      <summary>Indicates that the capitalization style is title case; uppercase and lowercase letters are rendered with letters specifically designed for titles.</summary>
+    <member name="F:System.Windows.Automation.Text.CapStyle.None">
+      <summary>Indicates that there is no capitalization style; uppercase and lowercase letters render normally.</summary>
     </member>
     <member name="F:System.Windows.Automation.Text.CapStyle.Other">
       <summary>Indicates that the capitalization style is a style not explicitly specified in the <see cref="T:System.Windows.Automation.Text.CapStyle" /> enumeration. </summary>
     </member>
+    <member name="F:System.Windows.Automation.Text.CapStyle.PetiteCaps">
+      <summary>Indicates that the capitalization style is petite caps; lowercase letters are replaced with uppercase letters slightly smaller than small caps.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.CapStyle.SmallCap">
+      <summary>Indicates that the capitalization style is small caps; lowercase letters are replaced with uppercase letters of the same approximate height as the font's x-height.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.CapStyle.Titling">
+      <summary>Indicates that the capitalization style is title case; uppercase and lowercase letters are rendered with letters specifically designed for titles.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.CapStyle.Unicase">
+      <summary>Indicates that the capitalization style is unicase; uppercase and lowercase letters are rendered in a way determined by the type designer. A unicase alphabet is one that does not specify case for its letters.</summary>
+    </member>
     <member name="T:System.Windows.Automation.Text.FlowDirections">
       <summary>Values for <see cref="F:System.Windows.Automation.TextPattern.TextFlowDirectionsAttribute" />. </summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.FlowDirections.BottomToTop">
+      <summary>Bottom to top. </summary>
     </member>
     <member name="F:System.Windows.Automation.Text.FlowDirections.Default">
       <summary>Top to bottom, left to right, horizontal.</summary>
@@ -1262,29 +1265,32 @@
     <member name="F:System.Windows.Automation.Text.FlowDirections.RightToLeft">
       <summary>Right to left. </summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.FlowDirections.BottomToTop">
-      <summary>Bottom to top. </summary>
-    </member>
     <member name="F:System.Windows.Automation.Text.FlowDirections.Vertical">
       <summary>Vertical. </summary>
     </member>
     <member name="T:System.Windows.Automation.Text.HorizontalTextAlignment">
       <summary>Values for <see cref="F:System.Windows.Automation.TextPattern.HorizontalTextAlignmentAttribute" /></summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.HorizontalTextAlignment.Left">
-      <summary>Aligned left.</summary>
-    </member>
     <member name="F:System.Windows.Automation.Text.HorizontalTextAlignment.Centered">
       <summary>Centered.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.HorizontalTextAlignment.Right">
-      <summary>Aligned right. </summary>
     </member>
     <member name="F:System.Windows.Automation.Text.HorizontalTextAlignment.Justified">
       <summary>Justified. </summary>
     </member>
+    <member name="F:System.Windows.Automation.Text.HorizontalTextAlignment.Left">
+      <summary>Aligned left.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.HorizontalTextAlignment.Right">
+      <summary>Aligned right. </summary>
+    </member>
     <member name="T:System.Windows.Automation.Text.OutlineStyles">
       <summary>Values for <see cref="F:System.Windows.Automation.TextPattern.OutlineStylesAttribute" />. </summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.OutlineStyles.Embossed">
+      <summary>Embossed.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.OutlineStyles.Engraved">
+      <summary>Engraved.</summary>
     </member>
     <member name="F:System.Windows.Automation.Text.OutlineStyles.None">
       <summary>No outline style. </summary>
@@ -1295,29 +1301,8 @@
     <member name="F:System.Windows.Automation.Text.OutlineStyles.Shadow">
       <summary>Shadowed.</summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.OutlineStyles.Engraved">
-      <summary>Engraved.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.OutlineStyles.Embossed">
-      <summary>Embossed.</summary>
-    </member>
     <member name="T:System.Windows.Automation.Text.TextDecorationLineStyle">
       <summary>Values for <see cref="F:System.Windows.Automation.TextPattern.UnderlineStyleAttribute" />.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.None">
-      <summary>No text decoration line style.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.Single">
-      <summary>Single line.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.WordsOnly">
-      <summary>Words only. </summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.Double">
-      <summary>Double line.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.Dot">
-      <summary>Dotted line. </summary>
     </member>
     <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.Dash">
       <summary>Dashed line. </summary>
@@ -1328,20 +1313,26 @@
     <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.DashDotDot">
       <summary>Alternating dash-dot-dot line. </summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.Wavy">
-      <summary>Wavy line. </summary>
+    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.Dot">
+      <summary>Dotted line. </summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.ThickSingle">
-      <summary>Thick single line. </summary>
+    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.Double">
+      <summary>Double line.</summary>
     </member>
     <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.DoubleWavy">
       <summary>Double wavy line. </summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.ThickWavy">
-      <summary>Thick wavy line.</summary>
-    </member>
     <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.LongDash">
       <summary>Long-dashed line.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.None">
+      <summary>No text decoration line style.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.Other">
+      <summary>Another text decoration line style not explicitly specified in the <see cref="T:System.Windows.Automation.Text.TextDecorationLineStyle" /> enumeration. </summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.Single">
+      <summary>Single line.</summary>
     </member>
     <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.ThickDash">
       <summary>Thick dashed line. </summary>
@@ -1358,17 +1349,26 @@
     <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.ThickLongDash">
       <summary>Thick long-dash line. </summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.Other">
-      <summary>Another text decoration line style not explicitly specified in the <see cref="T:System.Windows.Automation.Text.TextDecorationLineStyle" /> enumeration. </summary>
+    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.ThickSingle">
+      <summary>Thick single line. </summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.ThickWavy">
+      <summary>Thick wavy line.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.Wavy">
+      <summary>Wavy line. </summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.TextDecorationLineStyle.WordsOnly">
+      <summary>Words only. </summary>
     </member>
     <member name="T:System.Windows.Automation.Text.TextPatternRangeEndpoint">
       <summary>Allows the endpoints to be identified when calling methods of <see cref="T:System.Windows.Automation.Text.TextPatternRange" />. Each <see cref="T:System.Windows.Automation.Text.TextPatternRange" /> has two endpoints (<see cref="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start" /> and <see cref="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.End" />). </summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start">
-      <summary>Identifies the starting point of the range. </summary>
-    </member>
     <member name="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.End">
       <summary> Identifies the ending point of the range. </summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start">
+      <summary>Identifies the starting point of the range. </summary>
     </member>
     <member name="T:System.Windows.Automation.Text.TextUnit">
       <summary>Represents pre-defined units of text for the purposes of navigation within a document. </summary>
@@ -1376,23 +1376,23 @@
     <member name="F:System.Windows.Automation.Text.TextUnit.Character">
       <summary>Specifies that the text unit is one character in length.</summary>
     </member>
+    <member name="F:System.Windows.Automation.Text.TextUnit.Document">
+      <summary>Specifies that the text unit is an entire document in length.</summary>
+    </member>
     <member name="F:System.Windows.Automation.Text.TextUnit.Format">
       <summary>Specifies that the text unit is the length of a single, common format specification, such as bold, italic, or similar.</summary>
-    </member>
-    <member name="F:System.Windows.Automation.Text.TextUnit.Word">
-      <summary>Specifies that the text unit is one word in length.</summary>
     </member>
     <member name="F:System.Windows.Automation.Text.TextUnit.Line">
       <summary>Specifies that the text unit is one line in length.</summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.TextUnit.Paragraph">
-      <summary>Specifies that the text unit is one paragraph in length.</summary>
-    </member>
     <member name="F:System.Windows.Automation.Text.TextUnit.Page">
       <summary>Specifies that the text unit is one document-specific page in length.</summary>
     </member>
-    <member name="F:System.Windows.Automation.Text.TextUnit.Document">
-      <summary>Specifies that the text unit is an entire document in length.</summary>
+    <member name="F:System.Windows.Automation.Text.TextUnit.Paragraph">
+      <summary>Specifies that the text unit is one paragraph in length.</summary>
+    </member>
+    <member name="F:System.Windows.Automation.Text.TextUnit.Word">
+      <summary>Specifies that the text unit is one word in length.</summary>
     </member>
   </members>
 </doc>

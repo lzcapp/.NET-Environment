@@ -4883,7 +4883,8 @@
       <exception cref="T:System.ObjectDisposedException">The object has been disposed.</exception>
     </member>
     <member name="P:System.DirectoryServices.ActiveDirectory.Domain.DomainModeLevel">
-      <returns>Returns <see cref="T:System.Int32" />.</returns>
+      <summary>Gets the mode level that this domain is operating in.</summary>
+      <returns>The domain mode level.</returns>
     </member>
     <member name="M:System.DirectoryServices.ActiveDirectory.Domain.FindAllDiscoverableDomainControllers">
       <summary>Finds all of the discoverable domain controllers in this domain.</summary>
@@ -5065,7 +5066,10 @@
       <exception cref="T:System.ObjectDisposedException">The object has been disposed.</exception>
       <exception cref="T:System.UnauthorizedAccessException">The specified account does not have permission to perform this operation.</exception>
     </member>
-    <member name="M:System.DirectoryServices.ActiveDirectory.Domain.RaiseDomainFunctionalityLevel(System.Int32)"></member>
+    <member name="M:System.DirectoryServices.ActiveDirectory.Domain.RaiseDomainFunctionalityLevel(System.Int32)">
+      <summary>Raises the functionality level for the domain.</summary>
+      <param name="domainMode">A value representing the new level.</param>
+    </member>
     <member name="M:System.DirectoryServices.ActiveDirectory.Domain.RepairTrustRelationship(System.DirectoryServices.ActiveDirectory.Domain)">
       <summary>Repairs a trust relationship.</summary>
       <param name="targetDomain">An <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> object that represents the domain with which the trust exists.</param>
@@ -5544,7 +5548,7 @@
       <summary>Indicates the mode that a domain is operating in.</summary>
     </member>
     <member name="F:System.DirectoryServices.ActiveDirectory.DomainMode.Unknown">
-      <summary />
+      <summary>The domain mode is in an unknown state.</summary>
     </member>
     <member name="F:System.DirectoryServices.ActiveDirectory.DomainMode.Windows2000MixedDomain">
       <summary>The domain is operating in Windows 2000 mixed mode.</summary>
@@ -5731,7 +5735,8 @@
       <exception cref="T:System.ObjectDisposedException">The object has been disposed.</exception>
     </member>
     <member name="P:System.DirectoryServices.ActiveDirectory.Forest.ForestModeLevel">
-      <returns>Returns <see cref="T:System.Int32" />.</returns>
+      <summary>Gets the operating mode level of the forest.</summary>
+      <returns>The operating mode level of the forest.</returns>
     </member>
     <member name="M:System.DirectoryServices.ActiveDirectory.Forest.GetAllTrustRelationships">
       <summary>Gets a collection of the trust relationships of the current forest.</summary>
@@ -5828,7 +5833,10 @@
       <exception cref="T:System.ObjectDisposedException">The object has been disposed.</exception>
       <exception cref="T:System.UnauthorizedAccessException">The specified account does not have permission to perform this operation.</exception>
     </member>
-    <member name="M:System.DirectoryServices.ActiveDirectory.Forest.RaiseForestFunctionalityLevel(System.Int32)"></member>
+    <member name="M:System.DirectoryServices.ActiveDirectory.Forest.RaiseForestFunctionalityLevel(System.Int32)">
+      <summary>Raises the forest functionality level to the given setting.</summary>
+      <param name="forestMode">Raise to this level.</param>
+    </member>
     <member name="M:System.DirectoryServices.ActiveDirectory.Forest.RepairTrustRelationship(System.DirectoryServices.ActiveDirectory.Forest)">
       <summary>Repairs a trust relationship.</summary>
       <param name="targetForest">A <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> object that represents the forest object with which the trust exists.</param>

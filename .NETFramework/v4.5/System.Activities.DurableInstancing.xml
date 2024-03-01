@@ -7,32 +7,32 @@
     <member name="T:System.Activities.DurableInstancing.InstanceCompletionAction">
       <summary>Contains options that specify whether the persistence provider should keep or delete the state information for an instance in the persistence store after the instance completes. </summary>
     </member>
-    <member name="F:System.Activities.DurableInstancing.InstanceCompletionAction.DeleteNothing">
-      <summary>Specifies that data and metadata for a workflow instance must be kept in the persistence database even after the workflow instance completes.</summary>
-    </member>
     <member name="F:System.Activities.DurableInstancing.InstanceCompletionAction.DeleteAll">
       <summary>Specifies that data and metadata for a workflow instance must be deleted from the persistence store after the workflow instance completes.</summary>
+    </member>
+    <member name="F:System.Activities.DurableInstancing.InstanceCompletionAction.DeleteNothing">
+      <summary>Specifies that data and metadata for a workflow instance must be kept in the persistence database even after the workflow instance completes.</summary>
     </member>
     <member name="T:System.Activities.DurableInstancing.InstanceEncodingOption">
       <summary>Contains options that specify whether the persistence provider should encode the instance state information using the GZip algorithm before saving the state information into the persistence store. </summary>
     </member>
-    <member name="F:System.Activities.DurableInstancing.InstanceEncodingOption.None">
-      <summary>Specifies that instance data is not compressed.</summary>
-    </member>
     <member name="F:System.Activities.DurableInstancing.InstanceEncodingOption.GZip">
       <summary>Specifies that instance data is compressed using the GZip algorithm.</summary>
+    </member>
+    <member name="F:System.Activities.DurableInstancing.InstanceEncodingOption.None">
+      <summary>Specifies that instance data is not compressed.</summary>
     </member>
     <member name="T:System.Activities.DurableInstancing.InstanceLockedExceptionAction">
       <summary>Contains options that specify what action the SQL persistence provider should take when it receives an exception when trying to lock an instance. </summary>
     </member>
-    <member name="F:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry">
-      <summary>Specifies that the persistence provider does not reattempt to lock an instance if the instance is already locked by another host. </summary>
+    <member name="F:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry">
+      <summary>Specifies that the persistence provider reattempts to lock an instance with an exponentially increasing delay between successive attempts. The persistence provider passes the <see cref="T:System.Runtime.Persistence.InstanceLockedException" /> to the caller at the end of the sequence (after retrying predefined number of times).</summary>
     </member>
     <member name="F:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry">
       <summary>Specifies that the persistence provider reattempts to lock the instance with a linear retry interval. The persistence provider passes the <see cref="T:System.Runtime.Persistence.InstanceLockedException" /> to the caller at the end of the sequence (after retrying predefined number of times).</summary>
     </member>
-    <member name="F:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry">
-      <summary>Specifies that the persistence provider reattempts to lock an instance with an exponentially increasing delay between successive attempts. The persistence provider passes the <see cref="T:System.Runtime.Persistence.InstanceLockedException" /> to the caller at the end of the sequence (after retrying predefined number of times).</summary>
+    <member name="F:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry">
+      <summary>Specifies that the persistence provider does not reattempt to lock an instance if the instance is already locked by another host. </summary>
     </member>
     <member name="T:System.Activities.DurableInstancing.SqlWorkflowInstanceStore">
       <summary>Derives from the abstract <see cref="T:System.Runtime.Persistence.InstanceStore" /> class of the persistence functionality and provides implementation to allow saving instance state information to and loading instance state information from an SQL Server 2005 or SQL Server 2008 database.</summary>

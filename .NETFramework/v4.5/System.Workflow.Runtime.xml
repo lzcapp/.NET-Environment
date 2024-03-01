@@ -96,7 +96,6 @@
     </member>
     <member name="T:System.Workflow.Runtime.CorrelationProperty">
       <summary>Represents a name and value pair used to correlate messages to specific receiving activities.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.CorrelationProperty.#ctor(System.String,System.Object)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.CorrelationProperty" /> class. </summary>
@@ -104,30 +103,24 @@
       <param name="value">The value of the correlation set property.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="name" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.CorrelationProperty.Name">
       <summary>Gets the name of the property used in the correlation set.</summary>
       <returns>The name of the property used in the correlation set.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.CorrelationProperty.Value">
       <summary>Gets the value of the correlation set property.</summary>
       <returns>The value of the correlation set property.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.CorrelationToken">
       <summary>Manages the subscriptions of the <see cref="T:System.Workflow.Runtime.CorrelationProperty" /> to the owner activities. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.CorrelationToken.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.CorrelationToken" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.CorrelationToken.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.CorrelationToken" /> class using the name of the <see cref="T:System.Workflow.Runtime.CorrelationToken" />.</summary>
       <param name="name">The name of the <see cref="T:System.Workflow.Runtime.CorrelationToken" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.CorrelationToken.Initialize(System.Workflow.ComponentModel.Activity,System.Collections.Generic.ICollection{System.Workflow.Runtime.CorrelationProperty})">
       <summary>Fires correlation initialized events.</summary>
@@ -135,27 +128,22 @@
       <param name="propertyValues">A collection of property values in the <see cref="T:System.Workflow.Runtime.CorrelationToken" />.</param>
       <exception cref="T:System.InvalidOperationException">
         <see cref="T:System.Workflow.Runtime.CorrelationToken" /> was already initialized.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.CorrelationToken.Initialized">
       <summary>Gets a value indicating whether the <see cref="T:System.Workflow.Runtime.CorrelationToken" /> is initialized.</summary>
       <returns>true if the <see cref="T:System.Workflow.Runtime.CorrelationToken" /> is initialized; otherwise, false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.CorrelationToken.Name">
       <summary>Gets or sets the name of the <see cref="T:System.Workflow.Runtime.CorrelationToken" />.</summary>
       <returns>The name of the <see cref="T:System.Workflow.Runtime.CorrelationToken" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.CorrelationToken.OwnerActivityName">
       <summary>Gets or sets the name of the <see cref="T:System.Workflow.ComponentModel.Activity" /> that owns the correlation token.</summary>
       <returns>The name of the <see cref="T:System.Workflow.ComponentModel.Activity" /> that owns the correlation token.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.CorrelationToken.Properties">
       <summary>Gets the collection of <see cref="T:System.Workflow.Runtime.CorrelationProperty" /> objects in the <see cref="T:System.Workflow.Runtime.CorrelationToken" />.</summary>
       <returns>A collection of <see cref="T:System.Workflow.Runtime.CorrelationProperty" /> objects.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.CorrelationToken.SubscribeForCorrelationTokenInitializedEvent(System.Workflow.ComponentModel.Activity,System.Workflow.ComponentModel.IActivityEventListener{System.Workflow.Runtime.CorrelationTokenEventArgs})">
       <summary>Subscribes the <see cref="T:System.Workflow.Runtime.CorrelationToken" /> to the initialized event.</summary>
@@ -163,7 +151,6 @@
       <param name="dataChangeListener">The <see cref="T:System.Workflow.Runtime.CorrelationTokenEventArgs" /> that is listening for a change in event data.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="activity" /> or <paramref name="dataChangeListener" /> are null references (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.CorrelationToken.UnsubscribeFromCorrelationTokenInitializedEvent(System.Workflow.ComponentModel.Activity,System.Workflow.ComponentModel.IActivityEventListener{System.Workflow.Runtime.CorrelationTokenEventArgs})">
       <summary>Unsubscribes the <see cref="T:System.Workflow.Runtime.CorrelationToken" /> from the initialized event.</summary>
@@ -171,19 +158,15 @@
       <param name="dataChangeListener">The <see cref="T:System.Workflow.Runtime.CorrelationTokenEventArgs" /> that is listening for a change in event data.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="activity" /> or <paramref name="dataChangeListener" /> are null references (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.CorrelationTokenCollection">
       <summary>Represents a collection of <see cref="T:System.Workflow.Runtime.CorrelationToken" /> classes. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.CorrelationTokenCollection.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.CorrelationTokenCollection" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Runtime.CorrelationTokenCollection.CorrelationTokenCollectionProperty">
       <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="T:System.Workflow.Runtime.CorrelationTokenCollection" />.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.CorrelationTokenCollection.GetCorrelationToken(System.Workflow.ComponentModel.Activity,System.String,System.String)">
       <summary>Gets the specified <see cref="T:System.Workflow.Runtime.CorrelationToken" />.</summary>
@@ -193,59 +176,48 @@
       <param name="ownerActivityName">The name of the activity associated with the <see cref="T:System.Workflow.Runtime.CorrelationTokenCollection" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="activity" />, <paramref name="correlationTokenName" />, or <paramref name="ownerActivityName" /> are null references (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.CorrelationTokenCollection.GetItem(System.String)">
       <summary>Gets the <see cref="T:System.Workflow.Runtime.CorrelationToken" /> with the specified key.</summary>
       <returns>The <see cref="T:System.Workflow.Runtime.CorrelationToken" /> with the specified key.</returns>
       <param name="key">The key for the <see cref="T:System.Workflow.Runtime.CorrelationToken" /> to retrieve. </param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.CorrelationTokenEventArgs">
       <summary>Contains the event data associated with the <see cref="T:System.Workflow.Runtime.CorrelationToken" />. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.CorrelationTokenEventArgs.CorrelationToken">
       <summary>Gets the current <see cref="T:System.Workflow.Runtime.CorrelationToken" />.</summary>
       <returns>The current <see cref="T:System.Workflow.Runtime.CorrelationToken" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.CorrelationTokenEventArgs.IsInitializing">
       <summary>Gets a value that indicates whether the <see cref="M:System.Workflow.Runtime.CorrelationToken.Initialize(System.Workflow.ComponentModel.Activity,System.Collections.Generic.ICollection{System.Workflow.Runtime.CorrelationProperty})" /> method has been executed.</summary>
       <returns>true if the <see cref="M:System.Workflow.Runtime.CorrelationToken.Initialize(System.Workflow.ComponentModel.Activity,System.Collections.Generic.ICollection{System.Workflow.Runtime.CorrelationProperty})" /> method has been executed; otherwise, false.  </returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.IPendingWork">
       <summary>Provides methods to participate in a work batch.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.IPendingWork.Commit(System.Transactions.Transaction,System.Collections.ICollection)">
       <summary>Commits the list of work items by using the specified <see cref="T:System.Transactions.Transaction" /> object.</summary>
       <param name="transaction">The <see cref="T:System.Transactions.Transaction" /> associated with the pending work.</param>
       <param name="items">The work items to be committed.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.IPendingWork.Complete(System.Boolean,System.Collections.ICollection)">
       <summary>Called when the transaction has completed.</summary>
       <param name="succeeded">true if the transaction succeeded; otherwise, false.</param>
       <param name="items">An <see cref="T:System.Collections.ICollection" /> of work items.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.IPendingWork.MustCommit(System.Collections.ICollection)">
       <summary>Allows the items in the work batch to assert whether they must commit immediately.</summary>
       <returns>true if any item in the collection must be committed immediately; otherwise, false.</returns>
       <param name="items">An <see cref="T:System.Collections.ICollection" /> of work items.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.IWorkBatch">
       <summary>Provides methods to add work to a work batch. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.IWorkBatch.Add(System.Workflow.Runtime.IPendingWork,System.Object)">
       <summary>Adds a pending work item to a work batch.</summary>
       <param name="work">An <see cref="T:System.Workflow.Runtime.IPendingWork" /> object associated with the <paramref name="workItem" />.</param>
       <param name="workItem">An object on which work is to be performed.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.ServicesExceptionNotHandledEventArgs">
       <summary>Provides data for the <see cref="E:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled" /> event.</summary>
@@ -260,7 +232,6 @@
     </member>
     <member name="T:System.Workflow.Runtime.TimerEventSubscription">
       <summary>Represents a subscription to a timer event.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.TimerEventSubscription.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> class. </summary>
@@ -269,94 +240,77 @@
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> class by using the specified <see cref="T:System.Guid" /> of a workflow instance and the specified expiration <see cref="T:System.DateTime" />. </summary>
       <param name="workflowInstanceId">The <see cref="T:System.Guid" /> of the workflow instance associated with this subscription.</param>
       <param name="expiresAt">A <see cref="T:System.DateTime" /> that represents the time in Universal Coordinated Time (UTC) at which the timer associated with this subscription is expected to expire.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.TimerEventSubscription.#ctor(System.Guid,System.Guid,System.DateTime)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> class by using the specified subscription Id, the specified <see cref="T:System.Guid" /> of a workflow instance, and the specified expiration <see cref="T:System.DateTime" />.</summary>
       <param name="timerId">The <see cref="T:System.Guid" /> for this subscription.</param>
       <param name="workflowInstanceId">The <see cref="T:System.Guid" /> of the workflow instance for which this subscription was created.</param>
       <param name="expiresAt">A <see cref="T:System.DateTime" /> that represents the time in Universal Coordinated Time (UTC) at which the timer for this subscription is expected to expire.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt">
       <summary>Gets the expected expiration time of the timer associated with this subscription.</summary>
       <returns>A <see cref="T:System.DateTime" /> that represents the time in Universal Coordinated Time (UTC) at which the timer associated with this subscription is expected to expire.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.TimerEventSubscription.QueueName">
       <summary>Represents the name of the <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> that the <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> sends a message to when the timer subscription expires.</summary>
       <returns>The <see cref="T:System.IComparable" /> interface for a <see cref="T:System.Guid" /> object.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.TimerEventSubscription.SubscriptionId">
       <summary>Unique identifier that represents a timer event</summary>
       <returns>
         <see cref="T:System.Guid" /> representing the unique identifier for a timer event</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.TimerEventSubscription.WorkflowInstanceId">
       <summary>Identifier of the workflow associated with the timer subscription</summary>
       <returns>
         <see cref="T:System.Guid" /> representing the unique identifier for the workflow associated with the timer subscription.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.TimerEventSubscriptionCollection">
       <summary>Represents an ordered list of <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> objects.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.TimerEventSubscriptionCollection.Add(System.Workflow.Runtime.TimerEventSubscription)">
       <summary>Adds a <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> to the timer queue.</summary>
       <param name="item">The <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> to add to the timer queue.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="item" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.TimerEventSubscriptionCollection.CopyTo(System.Array,System.Int32)">
       <summary>Copies the <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" /> elements to an existing one-dimensional <see cref="T:System.Array" />, starting at the specified array index.</summary>
       <param name="array">The one-dimensional <see cref="T:System.Array" /> that is the destination of the elements copied from the <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" />. The <see cref="T:System.Array" /> must have zero-based indexing.</param>
       <param name="index">The zero-based index in <paramref name="array" /> at which copying begins.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.TimerEventSubscriptionCollection.Count">
       <summary>Gets the number of <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> objects in the timer queue.</summary>
       <returns>The number of <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> objects in the queue.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.TimerEventSubscriptionCollection.GetEnumerator">
       <summary>Returns an enumerator that iterates through the <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" />.</summary>
       <returns>An <see cref="T:System.Collections.IEnumerator" /> for the <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.TimerEventSubscriptionCollection.IsSynchronized">
       <summary>Gets a value that indicates whether the access to the <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" /> is synchronized (thread safe).</summary>
       <returns>Always returns true indicating that access to the <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" /> is synchronized (thread safe).</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.TimerEventSubscriptionCollection.Peek">
       <summary>Returns the <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> at the beginning of the timer queue without removing it.</summary>
       <returns>The <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> at the beginning of the timer queue or a null reference (Nothing in Visual Basic) if the timer queue is empty.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.TimerEventSubscriptionCollection.Remove(System.Guid)">
       <summary>Removes the <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> that has the specified subscription id from the timer queue.</summary>
       <param name="timerSubscriptionId">The <see cref="T:System.Guid" /> of the <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> to remove.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.TimerEventSubscriptionCollection.Remove(System.Workflow.Runtime.TimerEventSubscription)">
       <summary>Removes the <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> from the timer queue.</summary>
       <param name="item">The <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> to remove from the timer queue.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="item" /> is a null reference (Nothing in Visual Basic).</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.TimerEventSubscriptionCollection.SyncRoot">
       <summary>Gets an object that can be used to synchronize access to the <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" />.</summary>
       <returns>An object used to synchronize access to the <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Runtime.TimerEventSubscriptionCollection.TimerCollectionProperty">
       <summary>Timer queue associated with a workflow instance. This queue contains time ordered <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> objects for a workflow.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.WorkflowCompletedEventArgs">
       <summary>Provides data for the <see cref="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted" /> event.</summary>
@@ -371,17 +325,14 @@
     </member>
     <member name="T:System.Workflow.Runtime.WorkflowEnvironment">
       <summary>Represents the transactional environment of the workflow instance that is running on the current thread.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch">
       <summary>Gets the current work batch.</summary>
       <returns>The <see cref="T:System.Workflow.Runtime.IWorkBatch" /> that represents the current work batch. </returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.WorkflowEnvironment.WorkflowInstanceId">
       <summary>Gets the <see cref="T:System.Guid" /> of the workflow instance associated with the current thread.</summary>
       <returns>The <see cref="T:System.Guid" /> that identifies the current workflow instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.WorkflowEventArgs">
       <summary>Provides data for workflow events.</summary>
@@ -401,7 +352,6 @@
       <summary>Applies changes to the workflow instance specified by the <see cref="T:System.Workflow.ComponentModel.WorkflowChanges" /> object.</summary>
       <param name="workflowChanges">A <see cref="T:System.Workflow.ComponentModel.WorkflowChanges" /> specifying dynamic updates for the workflow instance.</param>
       <exception cref="T:System.InvalidOperationException">The workflow runtime engine is not running.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowInstance.EnqueueItem(System.IComparable,System.Object,System.Workflow.Runtime.IPendingWork,System.Object)">
       <summary>Posts a message to the specified workflow queue synchronously.</summary>
@@ -427,22 +377,18 @@
       <summary>Returns a value that indicates whether the specified object is equal to the <see cref="T:System.Workflow.Runtime.WorkflowInstance" />.</summary>
       <returns>true if the specified object is equal to this <see cref="T:System.Workflow.Runtime.WorkflowInstance" />; otherwise, false.</returns>
       <param name="obj">The object to compare.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowInstance.GetHashCode">
       <summary>Returns the hash code for this workflow instance.</summary>
       <returns>The hash code for this <see cref="T:System.Workflow.Runtime.WorkflowInstance" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowInstance.GetWorkflowDefinition">
       <summary>Retrieves the root activity for this workflow instance.</summary>
       <returns>An <see cref="T:System.Workflow.ComponentModel.Activity" /> object.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowInstance.GetWorkflowNextTimerExpiration">
       <summary>Returns the next point in time that this <see cref="T:System.Workflow.Runtime.WorkflowInstance" /> is scheduled to be delivered a timer message.</summary>
       <returns>A DateTime value that represents the next <see cref="P:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt" /> time this <see cref="T:System.Workflow.Runtime.WorkflowInstance" /> will be delivered a timer message. </returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowInstance.GetWorkflowQueueData">
       <summary>Gets a collection of <see cref="T:System.Workflow.Runtime.WorkflowQueueInfo" /> objects that contains the pending items and subscribed activities for the workflow queues associated with this workflow instance.</summary>
@@ -460,7 +406,6 @@
     <member name="M:System.Workflow.Runtime.WorkflowInstance.ReloadTrackingProfiles">
       <summary>Reload the tracking profiles for this workflow instance.</summary>
       <exception cref="T:System.InvalidOperationException">The workflow runtime engine is not running.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowInstance.Resume">
       <summary>Resumes execution of a previously suspended workflow instance.</summary>
@@ -498,25 +443,21 @@
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.WorkflowOwnershipException" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor(System.Guid)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.WorkflowOwnershipException" /> class by using a specified workflow instance <see cref="T:System.Guid" />.</summary>
       <param name="instanceId">The <see cref="T:System.Guid" /> of the workflow instance for which this exception occurred.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor(System.Guid,System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.WorkflowOwnershipException" /> class by using a specified workflow instance <see cref="T:System.Guid" /> and a specified error message.</summary>
       <param name="instanceId">The <see cref="T:System.Guid" /> of the workflow instance for which this exception occurred.</param>
       <param name="message">The message that describes the error.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor(System.Guid,System.String,System.Exception)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.WorkflowOwnershipException" /> class by using a specified workflow instance <see cref="T:System.Guid" />, a specified error message, and a reference to the inner exception that is the cause of this exception.</summary>
       <param name="instanceId">The <see cref="T:System.Guid" /> of the workflow instance for which this exception occurred.</param>
       <param name="message">The message that describes the error.</param>
       <param name="innerException">The exception that is the cause of the current exception. If the <paramref name="innerException" /> parameter is not a null reference (Nothing in Visual Basic), the current exception is raised in a catch block that handles the inner exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Initializes a new instance of the WorkflowOwnershipException class with serialized data.</summary>
@@ -526,13 +467,11 @@
     <member name="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.WorkflowOwnershipException" /> class by using a specified error message.</summary>
       <param name="message">The message that describes the error.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor(System.String,System.Exception)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.WorkflowOwnershipException" /> class by using a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
       <param name="message">The message that describes the error.</param>
       <param name="innerException">The exception that is the cause of the current exception. If the <paramref name="innerException" /> parameter is not a null reference (Nothing in Visual Basic), the current exception is raised in a catch block that handles the inner exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowOwnershipException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Sets the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object with the <see cref="T:System.Guid" /> of the workflow instance associated with this exception, and additional exception information.</summary>
@@ -540,7 +479,6 @@
       <param name="context">A <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="info" /> is a null reference (Nothing in Visual Basic)</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.WorkflowOwnershipException.InstanceId">
       <summary>Gets the <see cref="T:System.Guid" /> of the workflow instance for which this exception was thrown.</summary>
@@ -549,7 +487,6 @@
     </member>
     <member name="T:System.Workflow.Runtime.WorkflowQueue">
       <summary>Represents a workflow queue.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.WorkflowQueue.Count">
       <summary>Gets the number of items contained in the <see cref="T:System.Workflow.Runtime.WorkflowQueue" />.</summary>
@@ -619,7 +556,6 @@
     </member>
     <member name="T:System.Workflow.Runtime.WorkflowQueueInfo">
       <summary>Contains information about a <see cref="T:System.Workflow.Runtime.WorkflowQueue" />.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.WorkflowQueueInfo.Items">
       <summary>Gets a collection of the unconsumed items in the workflow queue.</summary>
@@ -635,7 +571,6 @@
     </member>
     <member name="T:System.Workflow.Runtime.WorkflowQueuingService">
       <summary>Provides the services for management of <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> objects.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowQueuingService.CreateWorkflowQueue(System.IComparable,System.Boolean)">
       <summary>Creates a <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> by using the specified name and transactional scope.</summary>
@@ -669,7 +604,6 @@
     </member>
     <member name="F:System.Workflow.Runtime.WorkflowQueuingService.PendingMessagesProperty">
       <summary>Contains the unconsumed items in the workflow queues associated with this <see cref="T:System.Workflow.Runtime.WorkflowQueuingService" />.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.WorkflowRuntime">
       <summary>Represents the configurable execution environment provided by the workflow run-time engine for workflows.</summary>
@@ -761,7 +695,6 @@
       <returns>Services that implement or derive from the specified generic type. </returns>
       <typeparam name="T">The service type.</typeparam>
       <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> is disposed.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowRuntime.GetAllServices(System.Type)">
       <summary>Retrieves all the services that are added to the workflow run-time engine that implement or derive from the specified <see cref="T:System.Type" />.</summary>
@@ -770,7 +703,6 @@
       <exception cref="T:System.ArgumentNullException">
         <paramref name="serviceType" /> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> is disposed.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.WorkflowRuntime.GetLoadedWorkflows">
       <summary>Gets a collection that contains all the workflow instances currently loaded in memory.</summary>
@@ -878,20 +810,20 @@
     <member name="T:System.Workflow.Runtime.WorkflowStatus">
       <summary>Specifies the status of a workflow instance.</summary>
     </member>
-    <member name="F:System.Workflow.Runtime.WorkflowStatus.Running">
-      <summary>The workflow instance is running.</summary>
-    </member>
     <member name="F:System.Workflow.Runtime.WorkflowStatus.Completed">
       <summary>The workflow instance has completed.</summary>
+    </member>
+    <member name="F:System.Workflow.Runtime.WorkflowStatus.Created">
+      <summary>The workflow instance has been created by a call to one of the overloaded <see cref="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Type)" /> methods.</summary>
+    </member>
+    <member name="F:System.Workflow.Runtime.WorkflowStatus.Running">
+      <summary>The workflow instance is running.</summary>
     </member>
     <member name="F:System.Workflow.Runtime.WorkflowStatus.Suspended">
       <summary>The workflow instance has been suspended by a <see cref="T:System.Workflow.ComponentModel.SuspendActivity" /> activity, by a call to <see cref="M:System.Workflow.Runtime.WorkflowInstance.Suspend(System.String)" />,or by the workflow runtime engine.</summary>
     </member>
     <member name="F:System.Workflow.Runtime.WorkflowStatus.Terminated">
       <summary>The workflow instance has been terminated by a </summary>
-    </member>
-    <member name="F:System.Workflow.Runtime.WorkflowStatus.Created">
-      <summary>The workflow instance has been created by a call to one of the overloaded <see cref="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Type)" /> methods.</summary>
     </member>
     <member name="T:System.Workflow.Runtime.WorkflowSuspendedEventArgs">
       <summary>Provides data for the <see cref="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended" /> event.</summary>
@@ -909,36 +841,29 @@
     </member>
     <member name="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection">
       <summary>Represents a section, within a configuration file, that defines settings for the workflow run-time engine.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection" /> class.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.CommonParameters">
       <summary>Gets the collection of common parameters used by services.</summary>
       <returns>The common parameters used by services. The default is a null reference (Nothing in Visual Basic).</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.EnablePerformanceCounters">
       <summary>Gets or sets a value that indicates whether performance counters are enabled.</summary>
       <returns>true if performance counters are enabled; otherwise false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.Name">
       <summary>Gets or sets the name of the workflow run-time engine.</summary>
       <returns>The name of the workflow run-time engine. </returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.Services">
       <summary>Gets the collection of services that are added to the workflow run-time engine when it is initialized.</summary>
       <returns>The services to be added to the workflow run-time engine.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate">
       <summary>Gets or sets a value that indicates whether validation occurs on the creation of the workflow instance.</summary>
       <returns>true if validation occurs on creation; otherwise, false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.WorkflowDefinitionCacheCapacity">
       <summary>Gets the number of workflow definitions that can be cached by the runtime.</summary>
@@ -946,11 +871,9 @@
     </member>
     <member name="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement">
       <summary>Represents a configuration element for a service to be added to the workflow runtime engine.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.OnDeserializeUnrecognizedAttribute(System.String,System.String)">
       <summary>Called when an unknown attribute is encountered while deserializing the <see cref="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement" />. </summary>
@@ -962,28 +885,23 @@
     <member name="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.Parameters">
       <summary>Gets the parameters for this service.</summary>
       <returns>A <see cref="T:System.Collections.Specialized.NameValueCollection" /> that specifies the parameters for the service.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.Type">
       <summary>Gets or sets the assembly-qualified type name of the service.</summary>
       <returns>The assembly-qualified type name of the service.</returns>
       <exception cref="T:System.ArgumentNullException">An attempt to set <see cref="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement.Type" /> to a null reference is made.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection">
       <summary>Represents the collection of services to be added to the workflow runtime engine.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection.Add(System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement)">
       <summary>Adds a <see cref="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement" /> to this <see cref="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection" />.</summary>
       <param name="serviceSettings">A <see cref="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement" /> that represents a service to be initialized and activated by the workflow runtime engine.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="serviceSettings" /> is a null reference (Nothing in Visual Basic)</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection.CreateNewElement">
       <summary>Creates a new <see cref="T:System.Configuration.ConfigurationElement" />.</summary>
@@ -996,58 +914,46 @@
     </member>
     <member name="T:System.Workflow.Runtime.DebugEngine.ActivityHandlerDescriptor">
       <summary>Specifies the code-beside handler information in the <see cref="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.BeforeHandlerInvoked(System.Guid,System.Guid,System.String,System.Workflow.Runtime.DebugEngine.ActivityHandlerDescriptor)" /> and <see cref="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.UpdateHandlerMethodsForActivity(System.Guid,System.Guid,System.String,System.Collections.Generic.List{System.Workflow.Runtime.DebugEngine.ActivityHandlerDescriptor})" /> methods.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Runtime.DebugEngine.ActivityHandlerDescriptor.Name">
       <summary>The <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> representing the name of the handler method.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="F:System.Workflow.Runtime.DebugEngine.ActivityHandlerDescriptor.Token">
       <summary>The <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> representing the CLR metadata token identifier for the handler method.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.DebugEngine.DebugController">
       <summary>Relays workflow instance creation, execution and termination events to the debugger process. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.DebugController.AttachToConduit(System.Uri)">
       <summary>Establishes the communication channel between the <see cref="T:System.Workflow.Runtime.DebugEngine.DebugController" /> object running in the workflow host application and the debugger process.</summary>
       <param name="url">A <see cref="T:System.Uri" /> of the remoting object running in the debugger process with which the <see cref="T:System.Workflow.Runtime.DebugEngine.DebugController" /> communicates.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.DebugController.InitializeLifetimeService">
       <summary>Establishes a lifetime lease for the <see cref="T:System.Workflow.Runtime.DebugEngine.DebugController" /> object.</summary>
       <returns>An <see cref="T:System.Object" /> that implements <see cref="T:System.Runtime.Remoting.Lifetime.ILease" /> and is used to control the lifetime policy for the <see cref="T:System.Workflow.Runtime.DebugEngine.DebugController" /> object. </returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.DebugEngine.DebugEngineCallback">
       <summary>References a callback method that is invoked by the workflow expression evaluation component. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.DebugEngine.IExpressionEvaluationFrame">
       <summary>Defines the interface implemented by the workflow expression evaluation component that provides a context frame for expression evaluation.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IExpressionEvaluationFrame.CreateEvaluationFrame(System.Workflow.Runtime.DebugEngine.IInstanceTable,System.Workflow.Runtime.DebugEngine.DebugEngineCallback)">
       <summary>Creates a stack frame for workflow expression evaluation.</summary>
       <param name="instanceTable">An object that implements <see cref="T:System.Workflow.Runtime.DebugEngine.IInstanceTable" />. Not used.</param>
       <param name="callback">The default <see cref="T:System.Workflow.Runtime.DebugEngine.DebugEngineCallback" /> implemented by the workflow runtime.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.DebugEngine.IInstanceTable">
       <summary>Reserved for future use.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IInstanceTable.GetActivity(System.String,System.String)">
       <summary>Reserved for future use.</summary>
       <returns>The <see cref="T:System.Workflow.ComponentModel.Activity" /> specified by <paramref name="activityName" /> in the workflow with an id of <paramref name="instanceId" />. </returns>
       <param name="instanceId">Unique identifier of the workflow containing the activity</param>
       <param name="activityName">Name of the <see cref="T:System.Workflow.ComponentModel.Activity" /></param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger">
       <summary>Defines the interface that receives workflow instance creation, execution, and termination status information from a <see cref="T:System.Workflow.Runtime.DebugEngine.DebugController" /> object running inside the workflow host application.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.ActivityStatusChanged(System.Guid,System.Guid,System.Guid,System.String,System.String,System.Workflow.ComponentModel.ActivityExecutionStatus,System.Int32)">
       <summary>Called when the <see cref="P:System.Workflow.ComponentModel.Activity.ExecutionStatus" /> of an activity within the workflow changes.</summary>
@@ -1058,14 +964,12 @@
       <param name="hierarchicalActivityId">A <see cref="T:System.String" /> containing the qualified name of the parent activity.</param>
       <param name="status">The <see cref="P:System.Workflow.ComponentModel.Activity.ExecutionStatus" /> of the current activity.</param>
       <param name="stateReaderId">An <see cref="T:System.Int32" /> containing the activity execution context ID associated with the current activity.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.AssemblyLoaded(System.Guid,System.String,System.Boolean)">
       <summary>Called when an assembly is loaded in the app domain corresponding to the <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> in the workflow host application.</summary>
       <param name="programId">An internally generated <see cref="T:System.Guid" /> associated with a <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> instance.</param>
       <param name="assemblyPath">A <see cref="T:System.String" /> containing the path on disk from where the assembly is loaded</param>
       <param name="fromGlobalAssemblyCache">A <see cref="T:System.Boolean" /> that indicates whether the assembly is loaded from the global assembly cache.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.BeforeActivityStatusChanged(System.Guid,System.Guid,System.Guid,System.String,System.String,System.Workflow.ComponentModel.ActivityExecutionStatus,System.Int32)">
       <summary>Called before the <see cref="P:System.Workflow.ComponentModel.Activity.ExecutionStatus" /> of an activity within the workflow changes.</summary>
@@ -1076,7 +980,6 @@
       <param name="hierarchicalActivityId">A <see cref="T:System.String" /> containing the qualified name of the parent activity.</param>
       <param name="status">The <see cref="P:System.Workflow.ComponentModel.Activity.ExecutionStatus" /> of the current activity.</param>
       <param name="stateReaderId">An <see cref="T:System.Int32" /> containing the activity execution context ID associated with the current activity.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.BeforeHandlerInvoked(System.Guid,System.Guid,System.String,System.Workflow.Runtime.DebugEngine.ActivityHandlerDescriptor)">
       <summary>Called before a handler in the code-beside is about to be invoked.</summary>
@@ -1084,7 +987,6 @@
       <param name="scheduleTypeId">An internally generated <see cref="T:System.Guid" /> associated with a workflow type. </param>
       <param name="activityQualifiedName">A <see cref="T:System.String" /> containing the fully qualified name of the current activity.</param>
       <param name="handlerMethod">An <see cref="T:System.Workflow.Runtime.DebugEngine.ActivityHandlerDescriptor" /> that contains the information regarding the code-beside handler method that is about to be invoked.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.HandlerInvoked(System.Guid,System.Guid,System.Int32,System.String)">
       <summary>Called after a handler in the code-beside is invoked.</summary>
@@ -1092,27 +994,23 @@
       <param name="instanceId">A <see cref="T:System.Guid" /> associated with the currently running workflow instance.</param>
       <param name="threadId">An <see cref="T:System.Int32" /> containing the ID of the thread on which the handler was invoked.</param>
       <param name="activityQualifiedName">A <see cref="T:System.String" /> containing the fully qualified name of the current activity.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.InstanceCompleted(System.Guid,System.Guid)">
       <summary>Called when a workflow instance completes.</summary>
       <param name="programId">An internally generated <see cref="T:System.Guid" /> associated with a <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> instance.</param>
       <param name="instanceId">A <see cref="T:System.Guid" /> associated with the currently running workflow instance.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.InstanceCreated(System.Guid,System.Guid,System.Guid)">
       <summary>Called when a workflow instance is created.</summary>
       <param name="programId">An internally generated <see cref="T:System.Guid" /> associated with a <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> instance.</param>
       <param name="instanceId">A <see cref="T:System.Guid" /> associated with the currently running workflow instance.</param>
       <param name="scheduleTypeId">An internally generated <see cref="T:System.Guid" /> associated with a workflow type. </param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.InstanceDynamicallyUpdated(System.Guid,System.Guid,System.Guid)">
       <summary>Called when the workflow instance is dynamically updated with a workflow change.</summary>
       <param name="programId">An internally generated <see cref="T:System.Guid" /> associated with a <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> instance.</param>
       <param name="instanceId">A <see cref="T:System.Guid" /> associated with the currently running workflow instance.</param>
       <param name="scheduleTypeId">An internally generated <see cref="T:System.Guid" /> associated with a workflow type. </param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.ScheduleTypeLoaded(System.Guid,System.Guid,System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String)">
       <summary>Called when a new workflow type is loaded by the workflow runtime engine in the workflow host application.</summary>
@@ -1125,7 +1023,6 @@
       <param name="scheduleNamespace">A <see cref="T:System.String" /> containing the fully qualified name of the workflow type.</param>
       <param name="scheduleName">A <see cref="T:System.String" /> containing the workflow type name.</param>
       <param name="workflowMarkup">A <see cref="T:System.String" /> containing the XAML serialized format of the workflow type.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.SetInitialActivityStatus(System.Guid,System.Guid,System.Guid,System.String,System.String,System.Workflow.ComponentModel.ActivityExecutionStatus,System.Int32)">
       <summary>Called to set the initial status of the activities in a workflow. </summary>
@@ -1136,7 +1033,6 @@
       <param name="hierarchicalActivityId">A <see cref="T:System.String" /> containing the qualified name of the parent activity.</param>
       <param name="status">The <see cref="P:System.Workflow.ComponentModel.Activity.ExecutionStatus" /> of the current activity.</param>
       <param name="stateReaderId">An <see cref="T:System.Int32" /> containing the activity execution context ID associated with the current activity.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.UpdateHandlerMethodsForActivity(System.Guid,System.Guid,System.String,System.Collections.Generic.List{System.Workflow.Runtime.DebugEngine.ActivityHandlerDescriptor})">
       <summary>Called when an activity enters the Executing state.</summary>
@@ -1144,58 +1040,47 @@
       <param name="scheduleTypeId">An internally generated <see cref="T:System.Guid" /> associated with a workflow type. </param>
       <param name="activityQualifiedName">A <see cref="T:System.String" /> containing the fully qualified name of the current activity.</param>
       <param name="handlerMethods">A <see cref="T:System.Collections.Generic.List`1" /> of handlers associated with an activity.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.DebugEngine.IWorkflowDebuggerService">
       <summary>Notifies workflow debugger that code condition evaluation events have occurred.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebuggerService.NotifyHandlerInvoked">
       <summary>Called after a code condition handler is invoked.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.IWorkflowDebuggerService.NotifyHandlerInvoking(System.Delegate)">
       <summary>Called before a code condition handler is invoked.</summary>
       <param name="delegateHandler">The code condition handler that will be invoked.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingAttribute">
       <summary>Specifies the debug stepping behavior for composite activities whose child activities can execute concurrently.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingAttribute.#ctor(System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingAttribute" /> class by using a <see cref="T:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption" /> enumeration value.</summary>
       <param name="steppingOption">A <see cref="T:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption" /> enumeration value specifying the stepping behavior for the concurrently executing child activities.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingAttribute.SteppingOption">
       <summary>Gets the stepping behavior for the composite activity.</summary>
       <returns>A <see cref="T:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption" /> enumeration value.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption">
       <summary>Specifies how the workflow debugger will step through concurrently executing child activities of a composite activity.</summary>
-      <filterpriority>2</filterpriority>
-    </member>
-    <member name="F:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption.Sequential">
-      <summary>The child activities will be debugged sequentially.</summary>
     </member>
     <member name="F:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption.Concurrent">
       <summary>The child activities will be debugged concurrently.</summary>
     </member>
+    <member name="F:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption.Sequential">
+      <summary>The child activities will be debugged sequentially.</summary>
+    </member>
     <member name="T:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService">
       <summary>Represents the default version of <see cref="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" /> created by the workflow runtime engine if no other WorkflowCommitWorkBatch service is added.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.#ctor">
       <summary>Initializes a <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService" /> class.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.#ctor(System.Collections.Specialized.NameValueCollection)">
       <summary>Initializes a SharedConnectionWorkflowCommitWorkBatchService class using a collection of parameters for initialization.</summary>
       <param name="parameters">
         <see cref="T:System.Collections.Specialized.NameValueCollection" />. The constructor is invoked when the workflow runtime engine loads services from an application configuration file. The valid key is <see cref="P:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.EnableRetries" />. This requests the <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService" /> to retry in case of a failed database connection.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.CommitWorkBatch(System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback)">
       <summary>Creates a work batch if one does not exist.</summary>
@@ -1204,7 +1089,6 @@
     <member name="P:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.EnableRetries">
       <summary>Gets and sets a value specifying whether the <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService" /> will retry committing a work batch. </summary>
       <returns>true if the service should retry committing the work batch; otherwise, false. The default is false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.OnStopped">
       <summary>Represents the method called when the workflow runtime raises the <see cref="E:System.Workflow.Runtime.WorkflowRuntime.Stopped" /> event.</summary>
@@ -1214,11 +1098,9 @@
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.DefaultWorkflowLoaderService">
       <summary>Represents the default version of <see cref="T:System.Workflow.Runtime.Hosting.WorkflowLoaderService" /> created by the workflow runtime engine if no other workflow loader service is added.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.DefaultWorkflowLoaderService.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowLoaderService" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.DefaultWorkflowLoaderService.CreateInstance(System.Type)">
       <summary>Creates a root activity definition tree by using the specified workflow <see cref="T:System.Type" />.</summary>
@@ -1235,11 +1117,9 @@
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService">
       <summary>Creates and manages the threads that run workflow instances on the workflow runtime engine. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService" /> class.  </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.#ctor(System.Collections.Specialized.NameValueCollection)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService" /> class.  </summary>
@@ -1250,14 +1130,12 @@
       <exception cref="T:System.FormatException">One of the parameters cannot be converted to a double-precision floating point number that matches <see cref="P:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.MaxSimultaneousWorkflows" />. </exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
         <see cref="P:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.MaxSimultaneousWorkflows" /> is less than 1.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.#ctor(System.Int32)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService" /> class by using the specified maximum number of workflow instances that the service can run simultaneously. </summary>
       <param name="maxSimultaneousWorkflows">An integer that determines the maximum number of workflow instances that can be stored in the thread pool queue.</param>
       <exception cref="T:System.ArgumentOutOfRangeException">
         <paramref name="maxSimultaneousWorkflows" /> is less than 1.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.Cancel(System.Guid)">
       <summary>Cancels the specified existing workflow instance work item.</summary>
@@ -1268,7 +1146,6 @@
     <member name="P:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.MaxSimultaneousWorkflows">
       <summary>Gets the maximum number of workflow instances that can be stored in the thread pool queue.</summary>
       <returns>An integer that represents the maximum number of workflow instances that can be stored in the thread pool queue.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService.OnStarted">
       <summary>Notifies the <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService" /> that a workflow instance has started to run.</summary>
@@ -1321,7 +1198,6 @@
       <param name="workflowInstanceId">The <see cref="T:System.Guid" /> for the workflow instance to run.</param>
       <exception cref="T:System.ArgumentException">
         <paramref name="workflowInstanceId" /> is an empty GUID.</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService.Schedule(System.Threading.WaitCallback,System.Guid)">
       <summary>Adds a workflow instance to the pending work items queue using the specified workflow instance using the specified multicast delegate. </summary>
@@ -1346,11 +1222,9 @@
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.PersistenceException">
       <summary>The exception that is thrown when the persistence service cannot fulfill a request. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.PersistenceException.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.PersistenceException" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.PersistenceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.PersistenceException" /> class by using the specified <see cref="T:System.Runtime.Serialization.SerializationInfo" /> and the specified <see cref="T:System.Runtime.Serialization.StreamingContext" />. </summary>
@@ -1360,28 +1234,23 @@
     <member name="M:System.Workflow.Runtime.Hosting.PersistenceException.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.PersistenceException" /> class by using the specified message.</summary>
       <param name="message">A description of the cause of the exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.PersistenceException.#ctor(System.String,System.Exception)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.PersistenceException" /> by using the specified message and <see cref="T:System.Exception" />.</summary>
       <param name="message">A description of the cause of the exception.</param>
       <param name="innerException">The exception that caused the <see cref="T:System.Workflow.Runtime.Hosting.PersistenceException" /> to be thrown.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService">
       <summary>Represents the shared-connection version of the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" /> service used by the runtime. In this context, shared-connection means that the service uses the same SQL connection for both the tracking and persistence services. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService.#ctor(System.Collections.Specialized.NameValueCollection)">
       <summary>Initializes a <see cref="T:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService" /> class.</summary>
       <param name="parameters">
         <see cref="T:System.Collections.Specialized.NameValueCollection" />. The constructor is invoked when the workflow runtime engine loads services from an application configuration file. The valid key is <paramref name="EnableRetries" />. This requests that the <see cref="T:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService" /> retry in case of a failed database connection.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService.#ctor(System.String)">
       <summary>Initializes a <see cref="T:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService" /> class using a database connection string.</summary>
       <param name="connectionString">Database connection string.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService.CommitWorkBatch(System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback)">
       <summary>Creates a transaction if one does not exist.</summary>
@@ -1390,7 +1259,6 @@
     <member name="P:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService.EnableRetries">
       <summary>Gets and sets a value specifying whether the <see cref="T:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService" /> will retry committing a work batch.</summary>
       <returns>true if the service should retry committing the work batch; otherwise, false. The default is false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService.OnStopped">
       <summary>Represents the method called when the workflow runtime raises the <see cref="E:System.Workflow.Runtime.WorkflowRuntime.Stopped" /> event.</summary>
@@ -1400,32 +1268,26 @@
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription">
       <summary>Describes the workflow instances that are stored in the <see cref="T:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" />.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription.IsBlocked">
       <summary>Gets a value that shows whether the workflow instance is blocked.</summary>
       <returns>true if the workflow instance is blocked; otherwise, false.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription.NextTimerExpiration">
       <summary>Gets the time in UTC format at which the next timer will expire.</summary>
       <returns>The time in UTC format at which the next timer will expire.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription.Status">
       <summary>Gets the status of the workflow instance.</summary>
       <returns>The status of the workflow instance.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription.SuspendOrTerminateDescription">
       <summary>Gets the description for the suspension or termination of the <see cref="T:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" />.</summary>
       <returns>The description for the suspension or termination of the <see cref="T:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription.WorkflowInstanceId">
       <summary>Gets the workflow instance identifier.</summary>
       <returns>The workflow instance identifier.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService">
       <summary>Represents a persistence service that uses a SQL database to store workflow state information.</summary>
@@ -1531,7 +1393,6 @@
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService">
       <summary>Allows custom logic for the commitment of work batches.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.#ctor">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" /> class. </summary>
@@ -1542,11 +1403,9 @@
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback">
       <summary>Commits a <see cref="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" /> work batch.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.WorkflowLoaderService">
       <summary>The abstract base class from which workflow loader services are derived.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.WorkflowLoaderService.#ctor">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowLoaderService" /> class. </summary>
@@ -1564,7 +1423,6 @@
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.WorkflowPersistenceService">
       <summary>The abstract base class from which all persistence services are derived.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.WorkflowPersistenceService.#ctor">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowPersistenceService" /> class. </summary>
@@ -1626,7 +1484,6 @@
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService">
       <summary>Represents the abstract base class from which the workflow runtime engine core services are derived.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.#ctor">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" /> class.</summary>
@@ -1662,23 +1519,21 @@
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState">
       <summary>Specifies the state of the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />.</summary>
-      <filterpriority>2</filterpriority>
     </member>
-    <member name="F:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Stopped">
-      <summary>Indicates that the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" /> has stopped.</summary>
+    <member name="F:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Started">
+      <summary>Indicates that the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" /> has started. </summary>
     </member>
     <member name="F:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Starting">
       <summary>Indicates that the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" /> is starting. <see cref="M:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start" /> changes the state of the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" /> to <see cref="F:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Starting" />.</summary>
     </member>
-    <member name="F:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Started">
-      <summary>Indicates that the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" /> has started. </summary>
+    <member name="F:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Stopped">
+      <summary>Indicates that the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" /> has stopped.</summary>
     </member>
     <member name="F:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Stopping">
       <summary>Indicates that the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" /> is stopping. <see cref="M:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop" /> changes the state of the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" /> to <see cref="F:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Stopping" />.</summary>
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.WorkflowSchedulerService">
       <summary>Provides a mechanism to implement your own thread pool to execute the workflow and manage in-memory timer registration and events.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.WorkflowSchedulerService.#ctor">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowSchedulerService" /> class.  </summary>
@@ -1701,11 +1556,9 @@
     </member>
     <member name="T:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule">
       <summary>Provides a mechanism for routing the workflow instance ID to and from a <see cref="T:System.Workflow.Activities.WorkflowWebService" /> to a cookie in the Web client. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule.System#Web#IHttpModule#Dispose">
       <summary>Releases the resources used by the <see cref="T:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule" />.</summary>
@@ -1958,15 +1811,12 @@
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.IProfileNotification">
       <summary>Provides a notification mechanism for a tracking service to inform the runtime tracking infrastructure about changes to the <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> for a particular workflow <see cref="T:System.Type" />. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileRemoved">
       <summary>Occurs when a <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> for a specific workflow Type is removed.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileUpdated">
       <summary>Occurs when a <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> for a specific workflow <see cref="T:System.Type" /> is updated.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.PreviousTrackingServiceAttribute">
       <summary>Indicates the type of the <see cref="T:System.Workflow.Runtime.Tracking.TrackingService" /> that was used prior to the current version.</summary>
@@ -1981,45 +1831,36 @@
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs">
       <summary>Provides data for the <see cref="E:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileRemoved" /> event. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs.#ctor(System.Type)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs" /> class that applies to the specified workflow <see cref="T:System.Type" />.</summary>
       <param name="workflowType">The workflow <see cref="T:System.Type" /> for which the <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> should be removed. </param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs.WorkflowType">
       <summary>Gets or sets the workflow <see cref="T:System.Type" /> for which the <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> should be removed.</summary>
       <returns>The <see cref="T:System.Type" /> of a workflow.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs">
       <summary>Provides the data for the <see cref="E:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileUpdated" /> event. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs" /> class.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs.#ctor(System.Type,System.Workflow.Runtime.Tracking.TrackingProfile)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs" /> class that specifies a new <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> for the specified workflow <see cref="T:System.Type" />.</summary>
       <param name="workflowType">The <see cref="T:System.Type" /> of workflow for which the <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> has changed.</param>
       <param name="profile">The new <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" />.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs.TrackingProfile">
       <summary>Gets or sets the new <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> for the workflow Type.</summary>
       <returns>A <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> for the workflow type.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs.WorkflowType">
       <summary>Gets or sets the <see cref="T:System.Type" /> of the workflow whose <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> should be updated.</summary>
       <returns>The <see cref="T:System.Type" /> of a workflow.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.SqlTrackingQuery">
       <summary>Contains methods and properties that are used to manage queries to the tracking data that is contained in the SQL database used by a <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingService" />.</summary>
@@ -2118,15 +1959,12 @@
     <member name="P:System.Workflow.Runtime.Tracking.SqlTrackingService.ProfileChangeCheckInterval">
       <summary>Gets or sets a value that specifies the interval at which the database should be checked for changes to one or more of its tracking profiles.</summary>
       <returns>The interval length in milliseconds. The default is 60000.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Runtime.Tracking.SqlTrackingService.ProfileRemoved">
       <summary>Occurs when the <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingService" /> detects that a <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> has been deleted. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="E:System.Workflow.Runtime.Tracking.SqlTrackingService.ProfileUpdated">
       <summary>Occurs when the <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingService" /> detects that a <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> has been changed. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.SqlTrackingService.UseDefaultProfile">
       <summary>Gets or sets a value specifying whether a default <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> should be used for workflow types that do not have a tracking profile.</summary>
@@ -2204,7 +2042,6 @@
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.TrackingChannel">
       <summary>The abstract base class that represents a tracking channel.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.TrackingChannel.#ctor">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Runtime.Tracking.TrackingChannel" /> class. </summary>
@@ -2304,7 +2141,6 @@
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.TrackingParameters">
       <summary>Contains information about the workflow instance associated with a <see cref="T:System.Workflow.Runtime.Tracking.TrackingChannel" />. This class cannot be inherited.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.TrackingParameters.#ctor(System.Guid,System.Type,System.Workflow.ComponentModel.Activity,System.Collections.Generic.IList{System.String},System.Guid,System.Guid,System.Guid,System.Guid)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Tracking.TrackingParameters" /> class. </summary>
@@ -2316,47 +2152,38 @@
       <param name="contextGuid">A number that identifies the <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> of the root activity of the workflow instance associated with the tracking channel.</param>
       <param name="callerContextGuid">A number that identifies the <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> of the activity that invoked the workflow instance associated with the tracking channel.</param>
       <param name="callerParentContextGuid">A number that identifies the parent <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> of the activity that invoked the workflow instance associated with the tracking channel.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.TrackingParameters.CallerContextGuid">
       <summary>Gets the context ID of the caller activity.</summary>
       <returns>A <see cref="T:System.Guid" /> that contains the context ID of the caller <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.TrackingParameters.CallerInstanceId">
       <summary>Gets the <see cref="T:System.Guid" /> of the workflow instance that called the workflow instance associated with the tracking channel.</summary>
       <returns>The <see cref="T:System.Guid" /> of the workflow instance that called the workflow instance associated with the tracking channel.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.TrackingParameters.CallerParentContextGuid">
       <summary>Gets the context ID of the caller's parent activity.</summary>
       <returns>A <see cref="T:System.Guid" /> that contains the context ID of the caller's parent <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.TrackingParameters.CallPath">
       <summary>Gets a list of strings, each of which represents the <see cref="P:System.Workflow.ComponentModel.Activity.QualifiedName" /> of an activity in the call chain of the workflow instance associated with the tracking channel. </summary>
       <returns>A list of strings, each of which represents the <see cref="P:System.Workflow.ComponentModel.Activity.QualifiedName" /> of an activity in the call chain of the workflow instance associated with the tracking channel.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.TrackingParameters.ContextGuid">
       <summary>Gets the context ID of the associated activity.</summary>
       <returns>A <see cref="T:System.Guid" /> that contains the context ID of the <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.TrackingParameters.InstanceId">
       <summary>Gets the <see cref="T:System.Guid" /> of the workflow instance associated with the tracking channel.</summary>
       <returns>The <see cref="T:System.Guid" /> of the workflow instance associated with the tracking channel.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.TrackingParameters.RootActivity">
       <summary>Gets the root activity of the workflow instance associated with the tracking channel.</summary>
       <returns>An <see cref="T:System.Workflow.ComponentModel.Activity" /> that represents the root activity of the workflow instance associated with the tracking channel.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.TrackingParameters.WorkflowType">
       <summary>Gets the <see cref="T:System.Type" /> of the workflow instance associated with the tracking channel.</summary>
       <returns>The <see cref="T:System.Type" /> of the workflow instance associated with the tracking channel.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.TrackingProfile">
       <summary>Defines points of interest in the potential execution path of a root workflow instance about which a tracking service should be notified.</summary>
@@ -2382,29 +2209,24 @@
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.TrackingProfileCache">
       <summary>Provides a method that a host application can use to clear the tracking profile cache.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.TrackingProfileCache.Clear">
       <summary>Clears the tracking profile cache maintained by the runtime tracking infrastructure of all tracking profiles.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.TrackingProfileDeserializationException">
       <summary>The exception that is thrown when an XML document cannot be deserialized into a <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> by a <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfileSerializer" />.</summary>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.TrackingProfileDeserializationException.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfileDeserializationException" /> class. </summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.TrackingProfileDeserializationException.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfileDeserializationException" /> class with a specified error message.</summary>
       <param name="message">The message that describes the error.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.TrackingProfileDeserializationException.#ctor(System.String,System.Exception)">
       <summary>Initializes a new instance of the <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfileDeserializationException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
       <param name="message">The message that describes the error.</param>
       <param name="innerException">The exception that is the cause of the current exception. If the <paramref name="innerException" /> parameter is not a null reference (Nothing in Visual Basic), the current exception is raised in a catch block that handles the inner exception.</param>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.TrackingProfileDeserializationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Sets the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object with the collection of <see cref="T:System.Xml.Schema.ValidationEventArgs" /> associated with this exception, and additional exception information.</summary>
@@ -2412,12 +2234,10 @@
       <param name="context">A <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="info" /> is a null reference (Nothing in Visual Basic)</exception>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="P:System.Workflow.Runtime.Tracking.TrackingProfileDeserializationException.ValidationEventArgs">
       <summary>Gets a list that contains validation warnings and errors associated with this exception.</summary>
       <returns>A <see cref="T:System.Collections.IList" /> of <see cref="T:System.Xml.Schema.ValidationEventArgs" /> objects that contains validation warnings and errors associated with this exception. The default is an empty list.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.TrackingProfileSerializer">
       <summary>Provides methods to serialize and deserialize tracking profiles into and from XML documents by using the tracking profile XML schema definition (XSD).</summary>
@@ -2437,7 +2257,6 @@
     <member name="P:System.Workflow.Runtime.Tracking.TrackingProfileSerializer.Schema">
       <summary>Gets the tracking profile XML schema definition (XSD).</summary>
       <returns>The tracking profile XSD.</returns>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.TrackingProfileSerializer.Serialize(System.IO.TextWriter,System.Workflow.Runtime.Tracking.TrackingProfile)">
       <summary>Serializes the tracking profile into an XML document by using the tracking profile XML Schema definition (XSD).</summary>
@@ -2472,7 +2291,6 @@
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.TrackingService">
       <summary>Provides the basic interface between a tracking service and the run-time tracking infrastructure.</summary>
-      <filterpriority>2</filterpriority>
     </member>
     <member name="M:System.Workflow.Runtime.Tracking.TrackingService.#ctor">
       <summary>When implemented in a derived class, initializes a new instance of the <see cref="T:System.Workflow.Runtime.Tracking.TrackingService" /> class.</summary>
@@ -2520,44 +2338,44 @@
     <member name="T:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent">
       <summary>Specifies a type of workflow status event.</summary>
     </member>
-    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Created">
-      <summary>The workflow instance has been created.</summary>
-    </member>
-    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Completed">
-      <summary>The workflow instance has completed.</summary>
-    </member>
-    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle">
-      <summary>The workflow instance is idle.</summary>
-    </member>
-    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Suspended">
-      <summary>The workflow instance has been suspended.</summary>
-    </member>
-    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Resumed">
-      <summary>A previously suspended workflow instance has resumed running.</summary>
-    </member>
-    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Persisted">
-      <summary>The workflow instance has been persisted.</summary>
-    </member>
-    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Unloaded">
-      <summary>The workflow instance has been unloaded from memory.</summary>
-    </member>
-    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Loaded">
-      <summary>The workflow instance has been loaded into memory.</summary>
-    </member>
-    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Exception">
-      <summary>An unhandled exception has occurred.</summary>
-    </member>
-    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Terminated">
-      <summary>The workflow instance has been terminated.</summary>
-    </member>
     <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Aborted">
       <summary>The workflow instance has aborted.</summary>
     </member>
     <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Changed">
       <summary>A workflow change has occurred on the workflow instance.</summary>
     </member>
+    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Completed">
+      <summary>The workflow instance has completed.</summary>
+    </member>
+    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Created">
+      <summary>The workflow instance has been created.</summary>
+    </member>
+    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Exception">
+      <summary>An unhandled exception has occurred.</summary>
+    </member>
+    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle">
+      <summary>The workflow instance is idle.</summary>
+    </member>
+    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Loaded">
+      <summary>The workflow instance has been loaded into memory.</summary>
+    </member>
+    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Persisted">
+      <summary>The workflow instance has been persisted.</summary>
+    </member>
+    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Resumed">
+      <summary>A previously suspended workflow instance has resumed running.</summary>
+    </member>
     <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Started">
       <summary>The workflow instance has been started.</summary>
+    </member>
+    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Suspended">
+      <summary>The workflow instance has been suspended.</summary>
+    </member>
+    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Terminated">
+      <summary>The workflow instance has been terminated.</summary>
+    </member>
+    <member name="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Unloaded">
+      <summary>The workflow instance has been unloaded from memory.</summary>
     </member>
     <member name="T:System.Workflow.Runtime.Tracking.TrackingWorkflowExceptionEventArgs">
       <summary>Contains data associated with an exception that occurs during the execution of a workflow instance.</summary>

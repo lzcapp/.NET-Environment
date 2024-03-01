@@ -7,29 +7,26 @@
     <member name="T:System.Printing.Collation">
       <summary>Specifies whether a printer collates output when it prints multiple copies of a multi-page print job. </summary>
     </member>
-    <member name="F:System.Printing.Collation.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
-    </member>
     <member name="F:System.Printing.Collation.Collated">
       <summary>Collated output.</summary>
     </member>
     <member name="F:System.Printing.Collation.Uncollated">
       <summary>Uncollated output.</summary>
     </member>
+    <member name="F:System.Printing.Collation.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
+    </member>
     <member name="T:System.Printing.ConflictStatus">
       <summary>Specifies whether any changes were made to a merged <see cref="T:System.Printing.PrintTicket" /> to ensure a viable <see cref="T:System.Printing.PrintTicket" />.</summary>
-    </member>
-    <member name="F:System.Printing.ConflictStatus.NoConflict">
-      <summary>No conflicts were found between the initial merged print ticket and the supported printer functions.</summary>
     </member>
     <member name="F:System.Printing.ConflictStatus.ConflictResolved">
       <summary>One or more conflicts were found and all conflicts were resolved.</summary>
     </member>
+    <member name="F:System.Printing.ConflictStatus.NoConflict">
+      <summary>No conflicts were found between the initial merged print ticket and the supported printer functions.</summary>
+    </member>
     <member name="T:System.Printing.DeviceFontSubstitution">
       <summary>Specifies whether device font substitution is enabled on a printer.</summary>
-    </member>
-    <member name="F:System.Printing.DeviceFontSubstitution.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="F:System.Printing.DeviceFontSubstitution.Off">
       <summary>Device font substitution is disabled.</summary>
@@ -37,47 +34,47 @@
     <member name="F:System.Printing.DeviceFontSubstitution.On">
       <summary>Device font substitution is enabled.</summary>
     </member>
+    <member name="F:System.Printing.DeviceFontSubstitution.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
+    </member>
     <member name="T:System.Printing.Duplexing">
       <summary>Specifies whether a printer uses one-sided printing or some type of two-sided (duplex) printing.</summary>
-    </member>
-    <member name="F:System.Printing.Duplexing.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="F:System.Printing.Duplexing.OneSided">
       <summary>Output prints on only one side of each sheet. </summary>
     </member>
+    <member name="F:System.Printing.Duplexing.TwoSidedLongEdge">
+      <summary>Output prints on both sides of each sheet, which flips along the edge parallel to the <see cref="P:System.Printing.PrintDocumentImageableArea.MediaSizeHeight" />.</summary>
+    </member>
     <member name="F:System.Printing.Duplexing.TwoSidedShortEdge">
       <summary>Output prints on both sides of each sheet, which flips along the edge parallel to <see cref="P:System.Printing.PrintDocumentImageableArea.MediaSizeWidth" />.</summary>
     </member>
-    <member name="F:System.Printing.Duplexing.TwoSidedLongEdge">
-      <summary>Output prints on both sides of each sheet, which flips along the edge parallel to the <see cref="P:System.Printing.PrintDocumentImageableArea.MediaSizeHeight" />.</summary>
+    <member name="F:System.Printing.Duplexing.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="T:System.Printing.InputBin">
       <summary>Specifies the input bin that is used as the source of blank paper or other print media.</summary>
     </member>
-    <member name="F:System.Printing.InputBin.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema. </summary>
-    </member>
     <member name="F:System.Printing.InputBin.AutoSelect">
       <summary>The automatic selection of an input bin according to the page size and media output type.</summary>
-    </member>
-    <member name="F:System.Printing.InputBin.Cassette">
-      <summary>A removable paper bin is used.</summary>
-    </member>
-    <member name="F:System.Printing.InputBin.Tractor">
-      <summary>A tractor feed (also called a pin feed) of continuous-feed paper is used.</summary>
     </member>
     <member name="F:System.Printing.InputBin.AutoSheetFeeder">
       <summary>The automatic sheet feeder is used.</summary>
     </member>
+    <member name="F:System.Printing.InputBin.Cassette">
+      <summary>A removable paper bin is used.</summary>
+    </member>
     <member name="F:System.Printing.InputBin.Manual">
       <summary>The manual input bin is used.</summary>
     </member>
+    <member name="F:System.Printing.InputBin.Tractor">
+      <summary>A tractor feed (also called a pin feed) of continuous-feed paper is used.</summary>
+    </member>
+    <member name="F:System.Printing.InputBin.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema. </summary>
+    </member>
     <member name="T:System.Printing.OutputColor">
       <summary>Specifies how to print content that contains color or shades of gray.</summary>
-    </member>
-    <member name="F:System.Printing.OutputColor.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="F:System.Printing.OutputColor.Color">
       <summary>Output that prints in color.</summary>
@@ -88,11 +85,11 @@
     <member name="F:System.Printing.OutputColor.Monochrome">
       <summary>Output that prints in a single color and with the same degree of intensity.</summary>
     </member>
+    <member name="F:System.Printing.OutputColor.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
+    </member>
     <member name="T:System.Printing.OutputQuality">
       <summary>Specifies the types of output quality for a print device.</summary>
-    </member>
-    <member name="F:System.Printing.OutputQuality.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="F:System.Printing.OutputQuality.Automatic">
       <summary>Automatically selects a quality type that is based on the contents of a print job.</summary>
@@ -115,17 +112,20 @@
     <member name="F:System.Printing.OutputQuality.Text">
       <summary>Text quality.</summary>
     </member>
+    <member name="F:System.Printing.OutputQuality.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
+    </member>
     <member name="T:System.Printing.PageBorderless">
       <summary>Specifies whether a print device prints to the edge of the media or provides an unprinted margin around the edge.</summary>
-    </member>
-    <member name="F:System.Printing.PageBorderless.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined.</summary>
     </member>
     <member name="F:System.Printing.PageBorderless.Borderless">
       <summary>Borderless printing, that is, the device prints to the edge of the print media.</summary>
     </member>
     <member name="F:System.Printing.PageBorderless.None">
       <summary>Printing with a border, that is, the device provides an unprinted margin around the edge of the print media.</summary>
+    </member>
+    <member name="F:System.Printing.PageBorderless.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined.</summary>
     </member>
     <member name="T:System.Printing.PageImageableArea">
       <summary>Represents the area of a page that can be printed. </summary>
@@ -187,8 +187,11 @@
     <member name="T:System.Printing.PageMediaSizeName">
       <summary>Specifies the page size or roll width of the paper or other print media.</summary>
     </member>
-    <member name="F:System.Printing.PageMediaSizeName.Unknown">
-      <summary>Unknown paper size</summary>
+    <member name="F:System.Printing.PageMediaSizeName.BusinessCard">
+      <summary>Business card</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.CreditCard">
+      <summary>Credit card</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.ISOA0">
       <summary>A0</summary>
@@ -205,29 +208,29 @@
     <member name="F:System.Printing.PageMediaSizeName.ISOA3">
       <summary>A3</summary>
     </member>
-    <member name="F:System.Printing.PageMediaSizeName.ISOA3Rotated">
-      <summary>A3 Rotated</summary>
-    </member>
     <member name="F:System.Printing.PageMediaSizeName.ISOA3Extra">
       <summary>A3 Extra</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.ISOA3Rotated">
+      <summary>A3 Rotated</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.ISOA4">
       <summary>A4</summary>
     </member>
-    <member name="F:System.Printing.PageMediaSizeName.ISOA4Rotated">
-      <summary>A4 Rotated</summary>
-    </member>
     <member name="F:System.Printing.PageMediaSizeName.ISOA4Extra">
       <summary>A4 Extra</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.ISOA4Rotated">
+      <summary>A4 Rotated</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.ISOA5">
       <summary>A5</summary>
     </member>
-    <member name="F:System.Printing.PageMediaSizeName.ISOA5Rotated">
-      <summary>A5 Rotated</summary>
-    </member>
     <member name="F:System.Printing.PageMediaSizeName.ISOA5Extra">
       <summary>A5 Extra</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.ISOA5Rotated">
+      <summary>A5 Rotated</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.ISOA6">
       <summary>A6</summary>
@@ -313,11 +316,11 @@
     <member name="F:System.Printing.PageMediaSizeName.ISOC6">
       <summary>C6</summary>
     </member>
-    <member name="F:System.Printing.PageMediaSizeName.ISOC6Envelope">
-      <summary>C6 Envelope</summary>
-    </member>
     <member name="F:System.Printing.PageMediaSizeName.ISOC6C5Envelope">
       <summary>C6C5 Envelope</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.ISOC6Envelope">
+      <summary>C6 Envelope</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.ISOC7">
       <summary>C7</summary>
@@ -337,8 +340,71 @@
     <member name="F:System.Printing.PageMediaSizeName.ISOSRA3">
       <summary>SRA 3</summary>
     </member>
+    <member name="F:System.Printing.PageMediaSizeName.Japan2LPhoto">
+      <summary>2L Photo</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanChou3Envelope">
+      <summary>Chou 3 Envelope</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanChou3EnvelopeRotated">
+      <summary>Chou 3 Envelope Rotated</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanChou4Envelope">
+      <summary>Chou 4 Envelope</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanChou4EnvelopeRotated">
+      <summary>Chou 4 Envelope Rotated</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanDoubleHagakiPostcard">
+      <summary>Double Hagaki Postcard</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanDoubleHagakiPostcardRotated">
+      <summary>Double Hagaki Postcard Rotated</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanHagakiPostcard">
+      <summary>Hagaki Postcard</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanHagakiPostcardRotated">
+      <summary>Hagaki Postcard Rotated</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanKaku2Envelope">
+      <summary>Kaku 2 Envelope</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanKaku2EnvelopeRotated">
+      <summary>Kaku 2 Envelope Rotated</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanKaku3Envelope">
+      <summary>Kaku 3 Envelope</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanKaku3EnvelopeRotated">
+      <summary>Kaku 3 Envelope Rotated</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanLPhoto">
+      <summary>L Photo</summary>
+    </member>
     <member name="F:System.Printing.PageMediaSizeName.JapanQuadrupleHagakiPostcard">
       <summary>Quadruple Hagaki Postcard</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanYou1Envelope">
+      <summary>You 1 Envelope</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanYou2Envelope">
+      <summary>You 2 Envelope</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanYou3Envelope">
+      <summary>You 3 Envelope</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanYou4Envelope">
+      <summary>You 4 Envelope</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanYou4EnvelopeRotated">
+      <summary>You 4 Envelope Rotated</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanYou6Envelope">
+      <summary>You 6 Envelope</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.JapanYou6EnvelopeRotated">
+      <summary>You 6 Envelope Rotated</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.JISB0">
       <summary>Japanese Industrial Standard B0</summary>
@@ -382,47 +448,32 @@
     <member name="F:System.Printing.PageMediaSizeName.JISB9">
       <summary>Japanese Industrial Standard B9</summary>
     </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanChou3Envelope">
-      <summary>Chou 3 Envelope</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanChou3EnvelopeRotated">
-      <summary>Chou 3 Envelope Rotated</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanChou4Envelope">
-      <summary>Chou 4 Envelope</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanChou4EnvelopeRotated">
-      <summary>Chou 4 Envelope Rotated</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanHagakiPostcard">
-      <summary>Hagaki Postcard</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanHagakiPostcardRotated">
-      <summary>Hagaki Postcard Rotated</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanKaku2Envelope">
-      <summary>Kaku 2 Envelope</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanKaku2EnvelopeRotated">
-      <summary>Kaku 2 Envelope Rotated</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanKaku3Envelope">
-      <summary>Kaku 3 Envelope</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanKaku3EnvelopeRotated">
-      <summary>Kaku 3 Envelope Rotated</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanYou4Envelope">
-      <summary>You 4 Envelope</summary>
-    </member>
     <member name="F:System.Printing.PageMediaSizeName.NorthAmerica10x11">
       <summary>10 x 11</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.NorthAmerica10x12">
+      <summary>10 x 12</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.NorthAmerica10x14">
       <summary>10 x 14</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.NorthAmerica11x17">
       <summary>11 x 17</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.NorthAmerica14x17">
+      <summary>14 x 17</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.NorthAmerica4x6">
+      <summary>4 x 6</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.NorthAmerica4x8">
+      <summary>4 x 8</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.NorthAmerica5x7">
+      <summary>5 x 7</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.NorthAmerica8x10">
+      <summary>8 x 10</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.NorthAmerica9x11">
       <summary>9 x 11</summary>
@@ -469,14 +520,14 @@
     <member name="F:System.Printing.PageMediaSizeName.NorthAmericaLetter">
       <summary>Letter </summary>
     </member>
-    <member name="F:System.Printing.PageMediaSizeName.NorthAmericaLetterRotated">
-      <summary>Letter Rotated</summary>
-    </member>
     <member name="F:System.Printing.PageMediaSizeName.NorthAmericaLetterExtra">
       <summary>Letter Extra</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.NorthAmericaLetterPlus">
       <summary>Letter Plus</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.NorthAmericaLetterRotated">
+      <summary>Letter Rotated</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.NorthAmericaMonarchEnvelope">
       <summary>Monarch Envelope</summary>
@@ -490,9 +541,6 @@
     <member name="F:System.Printing.PageMediaSizeName.NorthAmericaNumber10EnvelopeRotated">
       <summary>#10 Envelope Rotated</summary>
     </member>
-    <member name="F:System.Printing.PageMediaSizeName.NorthAmericaNumber9Envelope">
-      <summary>#9 Envelope</summary>
-    </member>
     <member name="F:System.Printing.PageMediaSizeName.NorthAmericaNumber11Envelope">
       <summary>#11 Envelope</summary>
     </member>
@@ -501,6 +549,9 @@
     </member>
     <member name="F:System.Printing.PageMediaSizeName.NorthAmericaNumber14Envelope">
       <summary>#14 Envelope</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.NorthAmericaNumber9Envelope">
+      <summary>#9 Envelope</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.NorthAmericaPersonalEnvelope">
       <summary>Personal Envelope</summary>
@@ -523,11 +574,11 @@
     <member name="F:System.Printing.PageMediaSizeName.NorthAmericaTabloidExtra">
       <summary>Tabloid Extra</summary>
     </member>
-    <member name="F:System.Printing.PageMediaSizeName.OtherMetricA4Plus">
-      <summary>A4 Plus</summary>
-    </member>
     <member name="F:System.Printing.PageMediaSizeName.OtherMetricA3Plus">
       <summary>A3 Plus</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.OtherMetricA4Plus">
+      <summary>A4 Plus</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.OtherMetricFolio">
       <summary>Folio</summary>
@@ -537,12 +588,6 @@
     </member>
     <member name="F:System.Printing.PageMediaSizeName.OtherMetricItalianEnvelope">
       <summary>Italian Envelope</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.PRC1Envelope">
-      <summary>People's Republic of China #1 Envelope</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.PRC1EnvelopeRotated">
-      <summary>People's Republic of China #1 Envelope Rotated</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.PRC10Envelope">
       <summary>People's Republic of China #10 Envelope</summary>
@@ -556,6 +601,12 @@
     <member name="F:System.Printing.PageMediaSizeName.PRC16KRotated">
       <summary>People's Republic of China 16K Rotated</summary>
     </member>
+    <member name="F:System.Printing.PageMediaSizeName.PRC1Envelope">
+      <summary>People's Republic of China #1 Envelope</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.PRC1EnvelopeRotated">
+      <summary>People's Republic of China #1 Envelope Rotated</summary>
+    </member>
     <member name="F:System.Printing.PageMediaSizeName.PRC2Envelope">
       <summary>People's Republic of China #2 Envelope</summary>
     </member>
@@ -565,11 +616,11 @@
     <member name="F:System.Printing.PageMediaSizeName.PRC32K">
       <summary>People's Republic of China 32K</summary>
     </member>
-    <member name="F:System.Printing.PageMediaSizeName.PRC32KRotated">
-      <summary>People's Republic of China 32K Rotated</summary>
-    </member>
     <member name="F:System.Printing.PageMediaSizeName.PRC32KBig">
       <summary>People's Republic of China 32K Big</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaSizeName.PRC32KRotated">
+      <summary>People's Republic of China 32K Rotated</summary>
     </member>
     <member name="F:System.Printing.PageMediaSizeName.PRC3Envelope">
       <summary>People's Republic of China #3 Envelope</summary>
@@ -646,71 +697,17 @@
     <member name="F:System.Printing.PageMediaSizeName.Roll54Inch">
       <summary>54-inch wide roll</summary>
     </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanDoubleHagakiPostcard">
-      <summary>Double Hagaki Postcard</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanDoubleHagakiPostcardRotated">
-      <summary>Double Hagaki Postcard Rotated</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanLPhoto">
-      <summary>L Photo</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.Japan2LPhoto">
-      <summary>2L Photo</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanYou1Envelope">
-      <summary>You 1 Envelope</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanYou2Envelope">
-      <summary>You 2 Envelope</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanYou3Envelope">
-      <summary>You 3 Envelope</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanYou4EnvelopeRotated">
-      <summary>You 4 Envelope Rotated</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanYou6Envelope">
-      <summary>You 6 Envelope</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.JapanYou6EnvelopeRotated">
-      <summary>You 6 Envelope Rotated</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.NorthAmerica4x6">
-      <summary>4 x 6</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.NorthAmerica4x8">
-      <summary>4 x 8</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.NorthAmerica5x7">
-      <summary>5 x 7</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.NorthAmerica8x10">
-      <summary>8 x 10</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.NorthAmerica10x12">
-      <summary>10 x 12</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.NorthAmerica14x17">
-      <summary>14 x 17</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.BusinessCard">
-      <summary>Business card</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaSizeName.CreditCard">
-      <summary>Credit card</summary>
+    <member name="F:System.Printing.PageMediaSizeName.Unknown">
+      <summary>Unknown paper size</summary>
     </member>
     <member name="T:System.Printing.PageMediaType">
       <summary>Specifies types of printing paper or other media.</summary>
     </member>
-    <member name="F:System.Printing.PageMediaType.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
+    <member name="F:System.Printing.PageMediaType.Archival">
+      <summary>Archive-quality media.</summary>
     </member>
     <member name="F:System.Printing.PageMediaType.AutoSelect">
       <summary>The print device selects the media.</summary>
-    </member>
-    <member name="F:System.Printing.PageMediaType.Archival">
-      <summary>Archive-quality media.</summary>
     </member>
     <member name="F:System.Printing.PageMediaType.BackPrintFilm">
       <summary>Specialty back-printing film.</summary>
@@ -744,6 +741,9 @@
     </member>
     <member name="F:System.Printing.PageMediaType.MultiPartForm">
       <summary>Individual multipart forms.</summary>
+    </member>
+    <member name="F:System.Printing.PageMediaType.None">
+      <summary>Unknown or unlisted media.</summary>
     </member>
     <member name="F:System.Printing.PageMediaType.Photographic">
       <summary>Standard photographic media.</summary>
@@ -790,26 +790,23 @@
     <member name="F:System.Printing.PageMediaType.TShirtTransfer">
       <summary>Media that is used to transfer an image to a T-shirt.</summary>
     </member>
-    <member name="F:System.Printing.PageMediaType.None">
-      <summary>Unknown or unlisted media.</summary>
+    <member name="F:System.Printing.PageMediaType.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="T:System.Printing.PageOrder">
       <summary>Specifies whether a print device prints multi-page documents from front-to-back or back-to-front.</summary>
     </member>
-    <member name="F:System.Printing.PageOrder.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
+    <member name="F:System.Printing.PageOrder.Reverse">
+      <summary>Output prints in back-to-front order.</summary>
     </member>
     <member name="F:System.Printing.PageOrder.Standard">
       <summary>Output prints in front-to-back order.</summary>
     </member>
-    <member name="F:System.Printing.PageOrder.Reverse">
-      <summary>Output prints in back-to-front order.</summary>
+    <member name="F:System.Printing.PageOrder.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="T:System.Printing.PageOrientation">
       <summary>Specifies how pages of content are oriented on print media.</summary>
-    </member>
-    <member name="F:System.Printing.PageOrientation.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="F:System.Printing.PageOrientation.Landscape">
       <summary>Content of the imageable area is rotated on the page 90 degrees counterclockwise from standard (portrait) orientation.</summary>
@@ -823,11 +820,11 @@
     <member name="F:System.Printing.PageOrientation.ReversePortrait">
       <summary>Content of the imageable area is upside down relative to standard (portrait) orientation.</summary>
     </member>
+    <member name="F:System.Printing.PageOrientation.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
+    </member>
     <member name="T:System.Printing.PageQualitativeResolution">
       <summary>Specifies the page resolution as a qualitative, non-numerical, value. </summary>
-    </member>
-    <member name="F:System.Printing.PageQualitativeResolution.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="F:System.Printing.PageQualitativeResolution.Default">
       <summary>The default qualitative resolution for the printer.</summary>
@@ -843,6 +840,9 @@
     </member>
     <member name="F:System.Printing.PageQualitativeResolution.Other">
       <summary>Other quality. </summary>
+    </member>
+    <member name="F:System.Printing.PageQualitativeResolution.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="T:System.Printing.PageResolution">
       <summary>Defines the page resolution of printed output as either a qualitative value or as dots per inch, or both.</summary>
@@ -896,11 +896,8 @@
     <member name="T:System.Printing.PagesPerSheetDirection">
       <summary>Specifies the arrangement of pages when more than one page of content appears on a single side of print media.</summary>
     </member>
-    <member name="F:System.Printing.PagesPerSheetDirection.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
-    </member>
-    <member name="F:System.Printing.PagesPerSheetDirection.RightBottom">
-      <summary>Pages appear in rows, from left to right and top to bottom relative to page orientation.</summary>
+    <member name="F:System.Printing.PagesPerSheetDirection.BottomLeft">
+      <summary>Pages appear in columns, from top to bottom and right to left relative to page orientation.</summary>
     </member>
     <member name="F:System.Printing.PagesPerSheetDirection.BottomRight">
       <summary>Pages appear in columns, from top to bottom and left to right relative to page orientation.</summary>
@@ -908,26 +905,26 @@
     <member name="F:System.Printing.PagesPerSheetDirection.LeftBottom">
       <summary>Pages appear in rows, from right to left and top to bottom relative to page orientation.</summary>
     </member>
-    <member name="F:System.Printing.PagesPerSheetDirection.BottomLeft">
-      <summary>Pages appear in columns, from top to bottom and right to left relative to page orientation.</summary>
+    <member name="F:System.Printing.PagesPerSheetDirection.LeftTop">
+      <summary>Pages appear in rows, from right to left and bottom to top relative to page orientation.</summary>
+    </member>
+    <member name="F:System.Printing.PagesPerSheetDirection.RightBottom">
+      <summary>Pages appear in rows, from left to right and top to bottom relative to page orientation.</summary>
     </member>
     <member name="F:System.Printing.PagesPerSheetDirection.RightTop">
       <summary>Pages appear in rows, from left to right and bottom to top relative to page orientation.</summary>
     </member>
-    <member name="F:System.Printing.PagesPerSheetDirection.TopRight">
-      <summary>Pages appear in columns, from bottom to top and left to right relative to page orientation.</summary>
-    </member>
-    <member name="F:System.Printing.PagesPerSheetDirection.LeftTop">
-      <summary>Pages appear in rows, from right to left and bottom to top relative to page orientation.</summary>
-    </member>
     <member name="F:System.Printing.PagesPerSheetDirection.TopLeft">
       <summary>Pages appear in columns, from bottom to top and right to left relative to page orientation.</summary>
     </member>
+    <member name="F:System.Printing.PagesPerSheetDirection.TopRight">
+      <summary>Pages appear in columns, from bottom to top and left to right relative to page orientation.</summary>
+    </member>
+    <member name="F:System.Printing.PagesPerSheetDirection.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
+    </member>
     <member name="T:System.Printing.PhotoPrintingIntent">
       <summary>Specifies the quality of output when a photograph is printed. The printer driver translates the <see cref="T:System.Printing.PhotoPrintingIntent" /> into quantitative values for resolution and other quality factors.</summary>
-    </member>
-    <member name="F:System.Printing.PhotoPrintingIntent.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="F:System.Printing.PhotoPrintingIntent.None">
       <summary>No photo-printing intent. The user sets specific quantitative properties.</summary>
@@ -940,6 +937,9 @@
     </member>
     <member name="F:System.Printing.PhotoPrintingIntent.PhotoStandard">
       <summary>Standard quality photo printing.</summary>
+    </member>
+    <member name="F:System.Printing.PhotoPrintingIntent.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="T:System.Printing.PrintCapabilities">
       <summary>Defines the capabilities of a printer.</summary>
@@ -1489,20 +1489,20 @@
     <member name="T:System.Printing.PrintTicketScope">
       <summary>Specifies whether a <see cref="T:System.Printing.PrintTicket" /> applies to an entire print job, one document within the print job, or just a page within the print job. </summary>
     </member>
-    <member name="F:System.Printing.PrintTicketScope.PageScope">
-      <summary>A single page.</summary>
-    </member>
     <member name="F:System.Printing.PrintTicketScope.DocumentScope">
       <summary>A single document.</summary>
     </member>
     <member name="F:System.Printing.PrintTicketScope.JobScope">
       <summary>An entire print job.</summary>
     </member>
+    <member name="F:System.Printing.PrintTicketScope.PageScope">
+      <summary>A single page.</summary>
+    </member>
     <member name="T:System.Printing.Stapling">
       <summary>Specifies whether, and where, a printer staples a multi-page document.</summary>
     </member>
-    <member name="F:System.Printing.Stapling.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
+    <member name="F:System.Printing.Stapling.None">
+      <summary>The document is not stapled.</summary>
     </member>
     <member name="F:System.Printing.Stapling.SaddleStitch">
       <summary>Multiple staples along the fold line. Also called saddle-stitch stapling.</summary>
@@ -1513,6 +1513,9 @@
     <member name="F:System.Printing.Stapling.StapleBottomRight">
       <summary>A single staple in the lower-right corner.</summary>
     </member>
+    <member name="F:System.Printing.Stapling.StapleDualBottom">
+      <summary>Two staples along the lower edge.</summary>
+    </member>
     <member name="F:System.Printing.Stapling.StapleDualLeft">
       <summary>Two staples along the left edge.</summary>
     </member>
@@ -1522,26 +1525,23 @@
     <member name="F:System.Printing.Stapling.StapleDualTop">
       <summary>Two staples along the upper edge.</summary>
     </member>
-    <member name="F:System.Printing.Stapling.StapleDualBottom">
-      <summary>Two staples along the lower edge.</summary>
-    </member>
     <member name="F:System.Printing.Stapling.StapleTopLeft">
       <summary>A single staple in the upper-left corner.</summary>
     </member>
     <member name="F:System.Printing.Stapling.StapleTopRight">
       <summary>A single staple in the upper-right corner.</summary>
     </member>
-    <member name="F:System.Printing.Stapling.None">
-      <summary>The document is not stapled.</summary>
+    <member name="F:System.Printing.Stapling.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the Print Schema.</summary>
     </member>
     <member name="T:System.Printing.TrueTypeFontMode">
       <summary>Specifies how a printer handles text that is formatted with a TrueType font. </summary>
     </member>
-    <member name="F:System.Printing.TrueTypeFontMode.Unknown">
-      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined. in the Print Schema.</summary>
-    </member>
     <member name="F:System.Printing.TrueTypeFontMode.Automatic">
       <summary>The printer driver decides the best method for handling TrueType fonts.</summary>
+    </member>
+    <member name="F:System.Printing.TrueTypeFontMode.DownloadAsNativeTrueTypeFont">
+      <summary>The printer driver downloads the TrueType font.</summary>
     </member>
     <member name="F:System.Printing.TrueTypeFontMode.DownloadAsOutlineFont">
       <summary>The printer driver downloads the TrueType font as an outline font.</summary>
@@ -1549,11 +1549,11 @@
     <member name="F:System.Printing.TrueTypeFontMode.DownloadAsRasterFont">
       <summary>The printer driver creates a raster font for each size of the TrueType font that it needs and downloads them all.</summary>
     </member>
-    <member name="F:System.Printing.TrueTypeFontMode.DownloadAsNativeTrueTypeFont">
-      <summary>The printer driver downloads the TrueType font.</summary>
-    </member>
     <member name="F:System.Printing.TrueTypeFontMode.RenderAsBitmap">
       <summary>The printer driver downloads each area of text as a graphic.</summary>
+    </member>
+    <member name="F:System.Printing.TrueTypeFontMode.Unknown">
+      <summary>The feature (whose options are represented by this enumeration) is set to an option not defined. in the Print Schema.</summary>
     </member>
     <member name="T:System.Printing.ValidationResult">
       <summary>Represents a merged <see cref="T:System.Printing.PrintTicket" /> that is guaranteed to be viable, with a report of any settings that were changed to make it viable. </summary>
@@ -1590,11 +1590,11 @@
     <member name="T:System.Printing.Interop.BaseDevModeType">
       <summary>Specifies the type of default DEVMODE structure to use as the base DEVMODE for conversions of managed <see cref="T:System.Printing.PrintTicket" /> objects to unmanaged DEVMODE structures. </summary>
     </member>
-    <member name="F:System.Printing.Interop.BaseDevModeType.UserDefault">
-      <summary>The user's default DEVMODE structure. </summary>
-    </member>
     <member name="F:System.Printing.Interop.BaseDevModeType.PrinterDefault">
       <summary>The printer's default DEVMODE structure. </summary>
+    </member>
+    <member name="F:System.Printing.Interop.BaseDevModeType.UserDefault">
+      <summary>The user's default DEVMODE structure. </summary>
     </member>
     <member name="T:System.Printing.Interop.PrintTicketConverter">
       <summary>Converts managed <see cref="T:System.Printing.PrintTicket" /> objects to unmanaged Graphics Device Interface (GDI) DEVMODE structures, and vice versa. </summary>
@@ -1868,27 +1868,27 @@
     </member>
     <member name="M:System.Windows.Xps.Packaging.IXpsFixedPageReader.GetColorContext(System.Uri)">
       <summary>Gets the color context for the resource that has the specified uniform resource identifier (URI).</summary>
-      <returns>An <see cref="T:System.Windows.Xps.Packaging.XpsColorContext" /> for the resource.</returns>
+      <returns>An <see cref="T:System.Windows.Xps.Packaging.XpsColorContext" />.</returns>
       <param name="uri">The URI of the resource.</param>
     </member>
     <member name="M:System.Windows.Xps.Packaging.IXpsFixedPageReader.GetFont(System.Uri)">
       <summary>Gets the font that has the specified uniform resource identifier (URI).</summary>
-      <returns>An <see cref="T:System.Windows.Xps.Packaging.XpsFont" />.</returns>
+      <returns>The font that has the specified Uri.</returns>
       <param name="uri">The URI of the font.</param>
     </member>
     <member name="M:System.Windows.Xps.Packaging.IXpsFixedPageReader.GetImage(System.Uri)">
       <summary>Gets the image that has the specified uniform resource identifier (URI).</summary>
-      <returns>An <see cref="T:System.Windows.Xps.Packaging.XpsImage" />.</returns>
+      <returns>The image that has the specified Uri.</returns>
       <param name="uri">The URI of the image.</param>
     </member>
     <member name="M:System.Windows.Xps.Packaging.IXpsFixedPageReader.GetResource(System.Uri)">
       <summary>Gets the resource that has the specified uniform resource identifier (URI).</summary>
-      <returns>An <see cref="T:System.Windows.Xps.Packaging.XpsResource" />.</returns>
+      <returns>The resource that has the specified Uri.</returns>
       <param name="resourceUri">The URI of the resource.</param>
     </member>
     <member name="M:System.Windows.Xps.Packaging.IXpsFixedPageReader.GetResourceDictionary(System.Uri)">
       <summary>Gets the resource dictionary that has the specified uniform resource identifier (URI).</summary>
-      <returns>An <see cref="T:System.Windows.Xps.Packaging.XpsResourceDictionary" />.</returns>
+      <returns>The resource dictionary that has the specified Uri.</returns>
       <param name="uri">The URI of the resource dictionary.</param>
     </member>
     <member name="P:System.Windows.Xps.Packaging.IXpsFixedPageReader.Images">
@@ -2023,6 +2023,9 @@
     <member name="T:System.Windows.Xps.Packaging.PackageInterleavingOrder">
       <summary>Provides values that specify the order in which the major parts of a package are streamed.</summary>
     </member>
+    <member name="F:System.Windows.Xps.Packaging.PackageInterleavingOrder.ImagesLast">
+      <summary>The streaming order is: resource (other than images), page, document, document sequence, and images.</summary>
+    </member>
     <member name="F:System.Windows.Xps.Packaging.PackageInterleavingOrder.None">
       <summary>The streaming order is specified by the packaging system.</summary>
     </member>
@@ -2032,41 +2035,38 @@
     <member name="F:System.Windows.Xps.Packaging.PackageInterleavingOrder.ResourceLast">
       <summary>The streaming order is: document sequence, document, page, and resource.</summary>
     </member>
-    <member name="F:System.Windows.Xps.Packaging.PackageInterleavingOrder.ImagesLast">
-      <summary>The streaming order is: resource (other than images), page, document, document sequence, and images.</summary>
-    </member>
     <member name="T:System.Windows.Xps.Packaging.PackagingAction">
       <summary>Identifies the types of events that occur during the serialization of a package.</summary>
-    </member>
-    <member name="F:System.Windows.Xps.Packaging.PackagingAction.None">
-      <summary>No action has been taken.</summary>
     </member>
     <member name="F:System.Windows.Xps.Packaging.PackagingAction.AddingDocumentSequence">
       <summary>A document sequence is being added.</summary>
     </member>
-    <member name="F:System.Windows.Xps.Packaging.PackagingAction.DocumentSequenceCompleted">
-      <summary>A document sequence has been added, but not necessarily committed.</summary>
-    </member>
     <member name="F:System.Windows.Xps.Packaging.PackagingAction.AddingFixedDocument">
       <summary>A document is being added.</summary>
-    </member>
-    <member name="F:System.Windows.Xps.Packaging.PackagingAction.FixedDocumentCompleted">
-      <summary>A document has been added, but not necessarily committed.</summary>
     </member>
     <member name="F:System.Windows.Xps.Packaging.PackagingAction.AddingFixedPage">
       <summary>A page is being added.</summary>
     </member>
+    <member name="F:System.Windows.Xps.Packaging.PackagingAction.DocumentSequenceCompleted">
+      <summary>A document sequence has been added, but not necessarily committed.</summary>
+    </member>
+    <member name="F:System.Windows.Xps.Packaging.PackagingAction.FixedDocumentCompleted">
+      <summary>A document has been added, but not necessarily committed.</summary>
+    </member>
     <member name="F:System.Windows.Xps.Packaging.PackagingAction.FixedPageCompleted">
       <summary>A page has been added, but not necessarily committed.</summary>
-    </member>
-    <member name="F:System.Windows.Xps.Packaging.PackagingAction.ResourceAdded">
-      <summary>A resource has been added, but not necessarily committed.</summary>
     </member>
     <member name="F:System.Windows.Xps.Packaging.PackagingAction.FontAdded">
       <summary>A font has been added, but not necessarily committed.</summary>
     </member>
     <member name="F:System.Windows.Xps.Packaging.PackagingAction.ImageAdded">
       <summary>An image has been added, but not necessarily committed.</summary>
+    </member>
+    <member name="F:System.Windows.Xps.Packaging.PackagingAction.None">
+      <summary>No action has been taken.</summary>
+    </member>
+    <member name="F:System.Windows.Xps.Packaging.PackagingAction.ResourceAdded">
+      <summary>A resource has been added, but not necessarily committed.</summary>
     </member>
     <member name="F:System.Windows.Xps.Packaging.PackagingAction.XpsDocumentCommitted">
       <summary>The document is committed.</summary>
@@ -2178,14 +2178,14 @@
     <member name="T:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions">
       <summary>Specifies the parts of the XPS <see cref="T:System.IO.Packaging.Package" /> that are excluded from the range of a digital signature.</summary>
     </member>
-    <member name="F:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.None">
-      <summary>No parts are excluded.</summary>
+    <member name="F:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.Annotations">
+      <summary>The Annotations part is excluded.</summary>
     </member>
     <member name="F:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.CoreMetadata">
       <summary>The Core Properties part is excluded.</summary>
     </member>
-    <member name="F:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.Annotations">
-      <summary>The Annotations part is excluded.</summary>
+    <member name="F:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.None">
+      <summary>No parts are excluded.</summary>
     </member>
     <member name="F:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.SignatureOrigin">
       <summary>The Signature Origin part is excluded.</summary>
@@ -2325,11 +2325,11 @@
     <member name="T:System.Windows.Xps.Packaging.XpsImageType">
       <summary>Specifies graphical formats for images that can be included in an <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</summary>
     </member>
-    <member name="F:System.Windows.Xps.Packaging.XpsImageType.PngImageType">
-      <summary>PNG</summary>
-    </member>
     <member name="F:System.Windows.Xps.Packaging.XpsImageType.JpegImageType">
       <summary>JPEG</summary>
+    </member>
+    <member name="F:System.Windows.Xps.Packaging.XpsImageType.PngImageType">
+      <summary>PNG</summary>
     </member>
     <member name="F:System.Windows.Xps.Packaging.XpsImageType.TiffImageType">
       <summary>TIFF</summary>
@@ -2368,11 +2368,11 @@
     <member name="T:System.Windows.Xps.Packaging.XpsResourceSharing">
       <summary>Specifies whether resources can be shared between pages and documents in an <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />. </summary>
     </member>
-    <member name="F:System.Windows.Xps.Packaging.XpsResourceSharing.ShareResources">
-      <summary>The resources can be shared. </summary>
-    </member>
     <member name="F:System.Windows.Xps.Packaging.XpsResourceSharing.NoResourceSharing">
       <summary>The resources can not be shared. </summary>
+    </member>
+    <member name="F:System.Windows.Xps.Packaging.XpsResourceSharing.ShareResources">
+      <summary>The resources can be shared. </summary>
     </member>
     <member name="T:System.Windows.Xps.Packaging.XpsSignatureDefinition">
       <summary>Represents an <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> digital signature.</summary>
@@ -2579,17 +2579,17 @@
     <member name="T:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies">
       <summary>Specifies the granularity at which font glyph subsets are saved in an XPS document.</summary>
     </member>
-    <member name="F:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.None">
-      <summary>No subsetting.  Store all glyphs for all fonts used in the document.</summary>
-    </member>
-    <member name="F:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerPage">
-      <summary>Store all glyphs that are used in the text by each page.</summary>
+    <member name="F:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitEntireSequence">
+      <summary>Store all glyphs that are used in the text by each document sequence.</summary>
     </member>
     <member name="F:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerDocument">
       <summary>Store all glyphs that are used in the text by each document.</summary>
     </member>
-    <member name="F:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitEntireSequence">
-      <summary>Store all glyphs that are used in the text by each document sequence.</summary>
+    <member name="F:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerPage">
+      <summary>Store all glyphs that are used in the text by each page.</summary>
+    </member>
+    <member name="F:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.None">
+      <summary>No subsetting.  Store all glyphs for all fonts used in the document.</summary>
     </member>
     <member name="T:System.Windows.Xps.Serialization.FontTypeConverter">
       <summary>Provides type converters for converting <see cref="T:System.Windows.Media.GlyphRun" /> objects to and from objects of other types.</summary>
@@ -2703,17 +2703,17 @@
     <member name="T:System.Windows.Xps.Serialization.PrintTicketLevel">
       <summary>Specifies whether a <see cref="T:System.Printing.PrintTicket" /> applies to an entire sequence of documents, to just one document, or to just one page. </summary>
     </member>
-    <member name="F:System.Windows.Xps.Serialization.PrintTicketLevel.None">
-      <summary>An unknown or unspecified level.</summary>
+    <member name="F:System.Windows.Xps.Serialization.PrintTicketLevel.FixedDocumentPrintTicket">
+      <summary>A document.</summary>
     </member>
     <member name="F:System.Windows.Xps.Serialization.PrintTicketLevel.FixedDocumentSequencePrintTicket">
       <summary>A sequence of documents.</summary>
     </member>
-    <member name="F:System.Windows.Xps.Serialization.PrintTicketLevel.FixedDocumentPrintTicket">
-      <summary>A document.</summary>
-    </member>
     <member name="F:System.Windows.Xps.Serialization.PrintTicketLevel.FixedPagePrintTicket">
       <summary>A page.</summary>
+    </member>
+    <member name="F:System.Windows.Xps.Serialization.PrintTicketLevel.None">
+      <summary>An unknown or unspecified level.</summary>
     </member>
     <member name="T:System.Windows.Xps.Serialization.SerializationState">
       <summary>Do not use. </summary>
@@ -3001,9 +3001,6 @@
     <member name="T:System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel">
       <summary>Specifies the scope of a writing progress indicator for XML Paper Specification (XPS) content. </summary>
     </member>
-    <member name="F:System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel.None">
-      <summary>There is no interpretation for the progress value.</summary>
-    </member>
     <member name="F:System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel.FixedDocumentSequenceWritingProgress">
       <summary>An entire sequence of one or more documents.</summary>
     </member>
@@ -3012,6 +3009,9 @@
     </member>
     <member name="F:System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel.FixedPageWritingProgress">
       <summary>A single page.</summary>
+    </member>
+    <member name="F:System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel.None">
+      <summary>There is no interpretation for the progress value.</summary>
     </member>
   </members>
 </doc>

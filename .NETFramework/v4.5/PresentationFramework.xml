@@ -562,14 +562,8 @@
     <member name="T:System.Windows.BaseValueSource">
       <summary>Identifies the property system source of a particular dependency property value.</summary>
     </member>
-    <member name="F:System.Windows.BaseValueSource.Unknown">
-      <summary>Source is not known. This is the default value.</summary>
-    </member>
     <member name="F:System.Windows.BaseValueSource.Default">
       <summary>Source is the default value, as defined by property metadata. </summary>
-    </member>
-    <member name="F:System.Windows.BaseValueSource.Inherited">
-      <summary>Source is a value through property value inheritance.</summary>
     </member>
     <member name="F:System.Windows.BaseValueSource.DefaultStyle">
       <summary>Source is from a setter in the default style. The default style comes from the current theme. </summary>
@@ -577,17 +571,14 @@
     <member name="F:System.Windows.BaseValueSource.DefaultStyleTrigger">
       <summary>Source is from a trigger in the default style. The default style comes from the current theme.</summary>
     </member>
-    <member name="F:System.Windows.BaseValueSource.Style">
-      <summary>Source is from a style setter of a non-theme style.</summary>
-    </member>
-    <member name="F:System.Windows.BaseValueSource.TemplateTrigger">
-      <summary>Source is a trigger-based value in a template that is from a non-theme style. </summary>
-    </member>
-    <member name="F:System.Windows.BaseValueSource.StyleTrigger">
-      <summary>Source is a trigger-based value of a non-theme style.</summary>
-    </member>
     <member name="F:System.Windows.BaseValueSource.ImplicitStyleReference">
       <summary>Source is an implicit style reference (style was based on detected type or based type). This value is only returned for the Style property itself, not for properties that are set through setters or triggers of such a style.</summary>
+    </member>
+    <member name="F:System.Windows.BaseValueSource.Inherited">
+      <summary>Source is a value through property value inheritance.</summary>
+    </member>
+    <member name="F:System.Windows.BaseValueSource.Local">
+      <summary>Source is a locally set value.</summary>
     </member>
     <member name="F:System.Windows.BaseValueSource.ParentTemplate">
       <summary>Source is based on a parent template being used by an element.</summary>
@@ -595,8 +586,17 @@
     <member name="F:System.Windows.BaseValueSource.ParentTemplateTrigger">
       <summary>Source is a trigger-based value from a parent template that created the element.</summary>
     </member>
-    <member name="F:System.Windows.BaseValueSource.Local">
-      <summary>Source is a locally set value.</summary>
+    <member name="F:System.Windows.BaseValueSource.Style">
+      <summary>Source is from a style setter of a non-theme style.</summary>
+    </member>
+    <member name="F:System.Windows.BaseValueSource.StyleTrigger">
+      <summary>Source is a trigger-based value of a non-theme style.</summary>
+    </member>
+    <member name="F:System.Windows.BaseValueSource.TemplateTrigger">
+      <summary>Source is a trigger-based value in a template that is from a non-theme style. </summary>
+    </member>
+    <member name="F:System.Windows.BaseValueSource.Unknown">
+      <summary>Source is not known. This is the default value.</summary>
     </member>
     <member name="T:System.Windows.ColorConvertedBitmapExtension">
       <summary>Implements a markup extension that enables <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" /> creation. A <see cref="T:System.Windows.Media.Imaging.ColorConvertedBitmap" /> does not have an embedded profile, the profile instead being based on source and destination values.</summary>
@@ -616,14 +616,14 @@
     <member name="T:System.Windows.ColumnSpaceDistribution">
       <summary>Describes how to distribute space in columnated flow content.</summary>
     </member>
+    <member name="F:System.Windows.ColumnSpaceDistribution.Between">
+      <summary>Space is distributed evenly between all columns.</summary>
+    </member>
     <member name="F:System.Windows.ColumnSpaceDistribution.Left">
       <summary>Space is distributed before the first column.</summary>
     </member>
     <member name="F:System.Windows.ColumnSpaceDistribution.Right">
       <summary>Space is distributed after the last column.</summary>
-    </member>
-    <member name="F:System.Windows.ColumnSpaceDistribution.Between">
-      <summary>Space is distributed evenly between all columns.</summary>
     </member>
     <member name="T:System.Windows.ComponentResourceKey">
       <summary>Defines or references resource keys based on class names in external assemblies, as well as an additional identifier.</summary>
@@ -1113,32 +1113,32 @@
     <member name="T:System.Windows.FigureHorizontalAnchor">
       <summary>Describes a position reference for a figure in a horizontal direction.</summary>
     </member>
-    <member name="F:System.Windows.FigureHorizontalAnchor.PageLeft">
-      <summary>Anchor the figure to the left of the page area.</summary>
-    </member>
-    <member name="F:System.Windows.FigureHorizontalAnchor.PageCenter">
-      <summary>Anchor the figure in the center of the page area.</summary>
-    </member>
-    <member name="F:System.Windows.FigureHorizontalAnchor.PageRight">
-      <summary>Anchor the figure to the right of the page area.</summary>
-    </member>
-    <member name="F:System.Windows.FigureHorizontalAnchor.ContentLeft">
-      <summary>Anchor the figure to the left of the page content area.</summary>
-    </member>
-    <member name="F:System.Windows.FigureHorizontalAnchor.ContentCenter">
-      <summary>Anchor the figure in the center of the page content area.</summary>
-    </member>
-    <member name="F:System.Windows.FigureHorizontalAnchor.ContentRight">
-      <summary>Anchor the figure to the right of the page content area.</summary>
+    <member name="F:System.Windows.FigureHorizontalAnchor.ColumnCenter">
+      <summary>Anchor the figure in the center of the column content area.</summary>
     </member>
     <member name="F:System.Windows.FigureHorizontalAnchor.ColumnLeft">
       <summary>Anchor the figure to the left of the column content area.</summary>
     </member>
-    <member name="F:System.Windows.FigureHorizontalAnchor.ColumnCenter">
-      <summary>Anchor the figure in the center of the column content area.</summary>
-    </member>
     <member name="F:System.Windows.FigureHorizontalAnchor.ColumnRight">
       <summary>Anchor the figure to the right of the column content area.</summary>
+    </member>
+    <member name="F:System.Windows.FigureHorizontalAnchor.ContentCenter">
+      <summary>Anchor the figure in the center of the page content area.</summary>
+    </member>
+    <member name="F:System.Windows.FigureHorizontalAnchor.ContentLeft">
+      <summary>Anchor the figure to the left of the page content area.</summary>
+    </member>
+    <member name="F:System.Windows.FigureHorizontalAnchor.ContentRight">
+      <summary>Anchor the figure to the right of the page content area.</summary>
+    </member>
+    <member name="F:System.Windows.FigureHorizontalAnchor.PageCenter">
+      <summary>Anchor the figure in the center of the page area.</summary>
+    </member>
+    <member name="F:System.Windows.FigureHorizontalAnchor.PageLeft">
+      <summary>Anchor the figure to the left of the page area.</summary>
+    </member>
+    <member name="F:System.Windows.FigureHorizontalAnchor.PageRight">
+      <summary>Anchor the figure to the right of the page area.</summary>
     </member>
     <member name="T:System.Windows.FigureLength">
       <summary>Describes the height or width of a <see cref="T:System.Windows.Documents.Figure" />.</summary>
@@ -1249,9 +1249,6 @@
     <member name="F:System.Windows.FigureUnitType.Auto">
       <summary>Default value when the <see cref="T:System.Windows.FigureLength" /> is not specified which creates a value for the width or height of the <see cref="T:System.Windows.Documents.Figure" /> that is calculated without constraints. Note: When <see cref="T:System.Windows.FigureUnitType" /> is set to <see cref="F:System.Windows.FigureUnitType.Auto" />, the <see cref="P:System.Windows.FigureLength.Value" /> property of <see cref="T:System.Windows.FigureLength" /> is set to 1. </summary>
     </member>
-    <member name="F:System.Windows.FigureUnitType.Pixel">
-      <summary>The value of the width or height of the <see cref="T:System.Windows.Documents.Figure" /> is expressed in pixels (96 pixels-per-inch).</summary>
-    </member>
     <member name="F:System.Windows.FigureUnitType.Column">
       <summary>The value of the width or height of the <see cref="T:System.Windows.Documents.Figure" /> is expressed as a fraction (including fractions greater then 1) of the width of the column the <see cref="T:System.Windows.Documents.Figure" /> is in.</summary>
     </member>
@@ -1261,26 +1258,29 @@
     <member name="F:System.Windows.FigureUnitType.Page">
       <summary>The value of the width or height of the <see cref="T:System.Windows.Documents.Figure" /> is expressed as a fraction (including fractions greater then 1) of the page width of that the <see cref="T:System.Windows.Documents.Figure" /> is in. Note: Note: When <see cref="T:System.Windows.FigureUnitType" /> is set to <see cref="F:System.Windows.FigureUnitType.Page" />, the <see cref="P:System.Windows.FigureLength.Value" /> property of <see cref="T:System.Windows.FigureLength" /> must be set to a value between 0 and 1.</summary>
     </member>
+    <member name="F:System.Windows.FigureUnitType.Pixel">
+      <summary>The value of the width or height of the <see cref="T:System.Windows.Documents.Figure" /> is expressed in pixels (96 pixels-per-inch).</summary>
+    </member>
     <member name="T:System.Windows.FigureVerticalAnchor">
       <summary> Describes the point of reference of a figure in the vertical direction. </summary>
     </member>
-    <member name="F:System.Windows.FigureVerticalAnchor.PageTop">
-      <summary> Anchor the figure to the top of the page area. </summary>
-    </member>
-    <member name="F:System.Windows.FigureVerticalAnchor.PageCenter">
-      <summary> Anchor the figure to the center of the page area. </summary>
-    </member>
-    <member name="F:System.Windows.FigureVerticalAnchor.PageBottom">
-      <summary> Anchor the figure to the bottom of the page area. </summary>
-    </member>
-    <member name="F:System.Windows.FigureVerticalAnchor.ContentTop">
-      <summary> Anchor the figure to the top of the page content area. </summary>
+    <member name="F:System.Windows.FigureVerticalAnchor.ContentBottom">
+      <summary> Anchor the figure to the bottom of the page content area. </summary>
     </member>
     <member name="F:System.Windows.FigureVerticalAnchor.ContentCenter">
       <summary> Anchor the figure to the center of the page content area. </summary>
     </member>
-    <member name="F:System.Windows.FigureVerticalAnchor.ContentBottom">
-      <summary> Anchor the figure to the bottom of the page content area. </summary>
+    <member name="F:System.Windows.FigureVerticalAnchor.ContentTop">
+      <summary> Anchor the figure to the top of the page content area. </summary>
+    </member>
+    <member name="F:System.Windows.FigureVerticalAnchor.PageBottom">
+      <summary> Anchor the figure to the bottom of the page area. </summary>
+    </member>
+    <member name="F:System.Windows.FigureVerticalAnchor.PageCenter">
+      <summary> Anchor the figure to the center of the page area. </summary>
+    </member>
+    <member name="F:System.Windows.FigureVerticalAnchor.PageTop">
+      <summary> Anchor the figure to the top of the page area. </summary>
     </member>
     <member name="F:System.Windows.FigureVerticalAnchor.ParagraphTop">
       <summary> Anchor the figure to the top of the current paragraph. </summary>
@@ -2465,38 +2465,38 @@
     <member name="T:System.Windows.FrameworkPropertyMetadataOptions">
       <summary>Specifies the types of framework-level property behavior that pertain to a particular dependency property in the Windows Presentation Foundation (WPF) property system.</summary>
     </member>
-    <member name="F:System.Windows.FrameworkPropertyMetadataOptions.None">
-      <summary>No options are specified; the dependency property uses the default behavior of the Windows Presentation Foundation (WPF) property system.</summary>
+    <member name="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange">
+      <summary>The arrange pass of layout composition is affected by value changes to this dependency property. </summary>
     </member>
     <member name="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure">
       <summary>The measure pass of layout compositions is affected by value changes to this dependency property. </summary>
     </member>
-    <member name="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange">
-      <summary>The arrange pass of layout composition is affected by value changes to this dependency property. </summary>
+    <member name="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange">
+      <summary>The arrange pass on the parent element is affected by value changes to this dependency property.</summary>
     </member>
     <member name="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure">
       <summary>The measure pass on the parent element is affected by value changes to this dependency property.</summary>
     </member>
-    <member name="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange">
-      <summary>The arrange pass on the parent element is affected by value changes to this dependency property.</summary>
-    </member>
     <member name="F:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender">
       <summary>Some aspect of rendering or layout composition (other than measure or arrange) is affected by value changes to this dependency property.</summary>
-    </member>
-    <member name="F:System.Windows.FrameworkPropertyMetadataOptions.Inherits">
-      <summary>The values of this dependency property are inherited by child elements.</summary>
-    </member>
-    <member name="F:System.Windows.FrameworkPropertyMetadataOptions.OverridesInheritanceBehavior">
-      <summary>The values of this dependency property span separated trees for purposes of property value inheritance. </summary>
-    </member>
-    <member name="F:System.Windows.FrameworkPropertyMetadataOptions.NotDataBindable">
-      <summary>Data binding to this dependency property is not allowed.</summary>
     </member>
     <member name="F:System.Windows.FrameworkPropertyMetadataOptions.BindsTwoWayByDefault">
       <summary>The <see cref="T:System.Windows.Data.BindingMode" /> for data bindings on this dependency property defaults to <see cref="F:System.Windows.Data.BindingMode.TwoWay" />.</summary>
     </member>
+    <member name="F:System.Windows.FrameworkPropertyMetadataOptions.Inherits">
+      <summary>The values of this dependency property are inherited by child elements.</summary>
+    </member>
     <member name="F:System.Windows.FrameworkPropertyMetadataOptions.Journal">
       <summary>The values of this dependency property should be saved or restored by journaling processes, or when navigating by Uniform resource identifiers (URIs). </summary>
+    </member>
+    <member name="F:System.Windows.FrameworkPropertyMetadataOptions.None">
+      <summary>No options are specified; the dependency property uses the default behavior of the Windows Presentation Foundation (WPF) property system.</summary>
+    </member>
+    <member name="F:System.Windows.FrameworkPropertyMetadataOptions.NotDataBindable">
+      <summary>Data binding to this dependency property is not allowed.</summary>
+    </member>
+    <member name="F:System.Windows.FrameworkPropertyMetadataOptions.OverridesInheritanceBehavior">
+      <summary>The values of this dependency property span separated trees for purposes of property value inheritance. </summary>
     </member>
     <member name="F:System.Windows.FrameworkPropertyMetadataOptions.SubPropertiesDoNotAffectRender">
       <summary>The subproperties on the value of this dependency property do not affect any aspect of rendering.</summary>
@@ -2740,11 +2740,11 @@
     <member name="T:System.Windows.HorizontalAlignment">
       <summary>Indicates where an element should be displayed on the horizontal axis relative to the allocated layout slot of the parent element. </summary>
     </member>
-    <member name="F:System.Windows.HorizontalAlignment.Left">
-      <summary>An element aligned to the left of the layout slot for the parent element. </summary>
-    </member>
     <member name="F:System.Windows.HorizontalAlignment.Center">
       <summary>An element aligned to the center of the layout slot for the parent element. </summary>
+    </member>
+    <member name="F:System.Windows.HorizontalAlignment.Left">
+      <summary>An element aligned to the left of the layout slot for the parent element. </summary>
     </member>
     <member name="F:System.Windows.HorizontalAlignment.Right">
       <summary>An element aligned to the right of the layout slot for the parent element. </summary>
@@ -2765,23 +2765,23 @@
     <member name="F:System.Windows.InheritanceBehavior.Default">
       <summary>Property value inheritance lookup will query the current element and continue walking up the element tree to the page root.</summary>
     </member>
-    <member name="F:System.Windows.InheritanceBehavior.SkipToAppNow">
-      <summary>Property value inheritance lookup will not query the current element or any further.</summary>
-    </member>
-    <member name="F:System.Windows.InheritanceBehavior.SkipToAppNext">
-      <summary>Property value inheritance lookup will query the current element but not any further.</summary>
-    </member>
-    <member name="F:System.Windows.InheritanceBehavior.SkipToThemeNow">
-      <summary>Property value inheritance lookup will not query the current element or any further.</summary>
-    </member>
-    <member name="F:System.Windows.InheritanceBehavior.SkipToThemeNext">
+    <member name="F:System.Windows.InheritanceBehavior.SkipAllNext">
       <summary>Property value inheritance lookup will query the current element but not any further.</summary>
     </member>
     <member name="F:System.Windows.InheritanceBehavior.SkipAllNow">
       <summary>Property value inheritance lookup will not query the current element or any further.</summary>
     </member>
-    <member name="F:System.Windows.InheritanceBehavior.SkipAllNext">
+    <member name="F:System.Windows.InheritanceBehavior.SkipToAppNext">
       <summary>Property value inheritance lookup will query the current element but not any further.</summary>
+    </member>
+    <member name="F:System.Windows.InheritanceBehavior.SkipToAppNow">
+      <summary>Property value inheritance lookup will not query the current element or any further.</summary>
+    </member>
+    <member name="F:System.Windows.InheritanceBehavior.SkipToThemeNext">
+      <summary>Property value inheritance lookup will query the current element but not any further.</summary>
+    </member>
+    <member name="F:System.Windows.InheritanceBehavior.SkipToThemeNow">
+      <summary>Property value inheritance lookup will not query the current element or any further.</summary>
     </member>
     <member name="T:System.Windows.LengthConverter">
       <summary>Converts instances of other types to and from instances of a <see cref="T:System.Double" /> that represent an object's length.</summary>
@@ -3059,53 +3059,50 @@
     <member name="F:System.Windows.MessageBoxButton.OKCancel">
       <summary>The message box displays OK and Cancel buttons.</summary>
     </member>
-    <member name="F:System.Windows.MessageBoxButton.YesNoCancel">
-      <summary>The message box displays Yes, No, and Cancel buttons.</summary>
-    </member>
     <member name="F:System.Windows.MessageBoxButton.YesNo">
       <summary>The message box displays Yes and No buttons.</summary>
+    </member>
+    <member name="F:System.Windows.MessageBoxButton.YesNoCancel">
+      <summary>The message box displays Yes, No, and Cancel buttons.</summary>
     </member>
     <member name="T:System.Windows.MessageBoxImage">
       <summary>Specifies the icon that is displayed by a message box.</summary>
     </member>
-    <member name="F:System.Windows.MessageBoxImage.None">
-      <summary>No icon is displayed.</summary>
+    <member name="F:System.Windows.MessageBoxImage.Asterisk">
+      <summary>The message box contains a symbol consisting of a lowercase letter i in a circle.</summary>
     </member>
-    <member name="F:System.Windows.MessageBoxImage.Hand">
-      <summary>The message box contains a symbol consisting of a white X in a circle with a red background.</summary>
-    </member>
-    <member name="F:System.Windows.MessageBoxImage.Question">
-      <summary>The message box contains a symbol consisting of a question mark in a circle.</summary>
+    <member name="F:System.Windows.MessageBoxImage.Error">
+      <summary>The message box contains a symbol consisting of white X in a circle with a red background.</summary>
     </member>
     <member name="F:System.Windows.MessageBoxImage.Exclamation">
       <summary>The message box contains a symbol consisting of an exclamation point in a triangle with a yellow background.</summary>
     </member>
-    <member name="F:System.Windows.MessageBoxImage.Asterisk">
+    <member name="F:System.Windows.MessageBoxImage.Hand">
+      <summary>The message box contains a symbol consisting of a white X in a circle with a red background.</summary>
+    </member>
+    <member name="F:System.Windows.MessageBoxImage.Information">
       <summary>The message box contains a symbol consisting of a lowercase letter i in a circle.</summary>
     </member>
-    <member name="F:System.Windows.MessageBoxImage.Stop">
-      <summary>The message box contains a symbol consisting of white X in a circle with a red background.</summary>
+    <member name="F:System.Windows.MessageBoxImage.None">
+      <summary>No icon is displayed.</summary>
     </member>
-    <member name="F:System.Windows.MessageBoxImage.Error">
+    <member name="F:System.Windows.MessageBoxImage.Question">
+      <summary>The message box contains a symbol consisting of a question mark in a circle.</summary>
+    </member>
+    <member name="F:System.Windows.MessageBoxImage.Stop">
       <summary>The message box contains a symbol consisting of white X in a circle with a red background.</summary>
     </member>
     <member name="F:System.Windows.MessageBoxImage.Warning">
       <summary>The message box contains a symbol consisting of an exclamation point in a triangle with a yellow background.</summary>
     </member>
-    <member name="F:System.Windows.MessageBoxImage.Information">
-      <summary>The message box contains a symbol consisting of a lowercase letter i in a circle.</summary>
-    </member>
     <member name="T:System.Windows.MessageBoxOptions">
       <summary>Specifies special display options for a message box.</summary>
     </member>
-    <member name="F:System.Windows.MessageBoxOptions.None">
-      <summary>No options are set.</summary>
-    </member>
-    <member name="F:System.Windows.MessageBoxOptions.ServiceNotification">
-      <summary>The message box is displayed on the currently active desktop even if a user is not logged on to the computer. Specifies that the message box is displayed from a Microsoft .NET Framework windows service application in order to notify the user of an event. </summary>
-    </member>
     <member name="F:System.Windows.MessageBoxOptions.DefaultDesktopOnly">
       <summary>The message box is displayed on the default desktop of the interactive window station. Specifies that the message box is displayed from a Microsoft .NET Framework windows service application in order to notify the user of an event. </summary>
+    </member>
+    <member name="F:System.Windows.MessageBoxOptions.None">
+      <summary>No options are set.</summary>
     </member>
     <member name="F:System.Windows.MessageBoxOptions.RightAlign">
       <summary>The message box text and title bar caption are right-aligned.</summary>
@@ -3113,8 +3110,17 @@
     <member name="F:System.Windows.MessageBoxOptions.RtlReading">
       <summary>All text, buttons, icons, and title bars are displayed right-to-left.</summary>
     </member>
+    <member name="F:System.Windows.MessageBoxOptions.ServiceNotification">
+      <summary>The message box is displayed on the currently active desktop even if a user is not logged on to the computer. Specifies that the message box is displayed from a Microsoft .NET Framework windows service application in order to notify the user of an event. </summary>
+    </member>
     <member name="T:System.Windows.MessageBoxResult">
       <summary>Specifies which message box button that a user clicks. <see cref="T:System.Windows.MessageBoxResult" /> is returned by the <see cref="Overload:System.Windows.MessageBox.Show" /> method.</summary>
+    </member>
+    <member name="F:System.Windows.MessageBoxResult.Cancel">
+      <summary>The result value of the message box is Cancel.</summary>
+    </member>
+    <member name="F:System.Windows.MessageBoxResult.No">
+      <summary>The result value of the message box is No.</summary>
     </member>
     <member name="F:System.Windows.MessageBoxResult.None">
       <summary>The message box returns no result.</summary>
@@ -3122,14 +3128,8 @@
     <member name="F:System.Windows.MessageBoxResult.OK">
       <summary>The result value of the message box is OK.</summary>
     </member>
-    <member name="F:System.Windows.MessageBoxResult.Cancel">
-      <summary>The result value of the message box is Cancel.</summary>
-    </member>
     <member name="F:System.Windows.MessageBoxResult.Yes">
       <summary>The result value of the message box is Yes.</summary>
-    </member>
-    <member name="F:System.Windows.MessageBoxResult.No">
-      <summary>The result value of the message box is No.</summary>
     </member>
     <member name="T:System.Windows.MultiDataTrigger">
       <summary>Represents a trigger that applies property values or performs actions when the bound data meet a set of conditions. </summary>
@@ -3298,9 +3298,6 @@
     <member name="T:System.Windows.ResizeMode">
       <summary>Specifies whether a window can be resized and, if so, how it can be resized. Used by the <see cref="P:System.Windows.Window.ResizeMode" /> property.</summary>
     </member>
-    <member name="F:System.Windows.ResizeMode.NoResize">
-      <summary>A window cannot be resized. The Minimize and Maximize buttons are not displayed in the title bar.</summary>
-    </member>
     <member name="F:System.Windows.ResizeMode.CanMinimize">
       <summary>A window can only be minimized and restored. The Minimize and Maximize buttons are both shown, but only the Minimize button is enabled.</summary>
     </member>
@@ -3309,6 +3306,9 @@
     </member>
     <member name="F:System.Windows.ResizeMode.CanResizeWithGrip">
       <summary>A window can be resized. The Minimize and Maximize buttons are both shown and enabled. A resize grip appears in the bottom-right corner of the window.</summary>
+    </member>
+    <member name="F:System.Windows.ResizeMode.NoResize">
+      <summary>A window cannot be resized. The Minimize and Maximize buttons are not displayed in the title bar.</summary>
     </member>
     <member name="T:System.Windows.ResourceDictionary">
       <summary>Provides a hash table / dictionary implementation that contains WPF resources used by components and other elements of a WPF application. </summary>
@@ -3434,14 +3434,14 @@
     <member name="T:System.Windows.ResourceDictionaryLocation">
       <summary>Specifies the locations where theme resource dictionaries are located.</summary>
     </member>
+    <member name="F:System.Windows.ResourceDictionaryLocation.ExternalAssembly">
+      <summary>Theme dictionaries exist in assemblies external to the one defining the types being themed.</summary>
+    </member>
     <member name="F:System.Windows.ResourceDictionaryLocation.None">
       <summary>No theme dictionaries exist.</summary>
     </member>
     <member name="F:System.Windows.ResourceDictionaryLocation.SourceAssembly">
       <summary>Theme dictionaries exist in the assembly that defines the types being themed.</summary>
-    </member>
-    <member name="F:System.Windows.ResourceDictionaryLocation.ExternalAssembly">
-      <summary>Theme dictionaries exist in assemblies external to the one defining the types being themed.</summary>
     </member>
     <member name="T:System.Windows.ResourceKey">
       <summary>Provides an abstract base class for various resource keys. </summary>
@@ -3604,14 +3604,14 @@
     <member name="T:System.Windows.ShutdownMode">
       <summary>Specifies how an application will shutdown. Used by the <see cref="P:System.Windows.Application.ShutdownMode" /> property.</summary>
     </member>
+    <member name="F:System.Windows.ShutdownMode.OnExplicitShutdown">
+      <summary>An application shuts down only when <see cref="M:System.Windows.Application.Shutdown" /> is called.</summary>
+    </member>
     <member name="F:System.Windows.ShutdownMode.OnLastWindowClose">
       <summary>An application shuts down when either the last window closes, or <see cref="M:System.Windows.Application.Shutdown" /> is called.</summary>
     </member>
     <member name="F:System.Windows.ShutdownMode.OnMainWindowClose">
       <summary>An application shuts down when either the main window closes, or <see cref="M:System.Windows.Application.Shutdown" /> is called.</summary>
-    </member>
-    <member name="F:System.Windows.ShutdownMode.OnExplicitShutdown">
-      <summary>An application shuts down only when <see cref="M:System.Windows.Application.Shutdown" /> is called.</summary>
     </member>
     <member name="T:System.Windows.SizeChangedEventArgs">
       <summary>Provides data related to the <see cref="E:System.Windows.FrameworkElement.SizeChanged" /> event. </summary>
@@ -6098,17 +6098,17 @@
     <member name="T:System.Windows.VerticalAlignment">
       <summary>Describes how a child element is vertically positioned or stretched within a parent's layout slot. </summary>
     </member>
-    <member name="F:System.Windows.VerticalAlignment.Top">
-      <summary>The child element is aligned to the top of the parent's layout slot. </summary>
+    <member name="F:System.Windows.VerticalAlignment.Bottom">
+      <summary>The child element is aligned to the bottom of the parent's layout slot. </summary>
     </member>
     <member name="F:System.Windows.VerticalAlignment.Center">
       <summary>The child element is aligned to the center of the parent's layout slot. </summary>
     </member>
-    <member name="F:System.Windows.VerticalAlignment.Bottom">
-      <summary>The child element is aligned to the bottom of the parent's layout slot. </summary>
-    </member>
     <member name="F:System.Windows.VerticalAlignment.Stretch">
       <summary>The child element stretches to fill the parent's layout slot. </summary>
+    </member>
+    <member name="F:System.Windows.VerticalAlignment.Top">
+      <summary>The child element is aligned to the top of the parent's layout slot. </summary>
     </member>
     <member name="T:System.Windows.VisualState">
       <summary>Represents the visual appearance of the control when it is in a specific state.</summary>
@@ -6594,26 +6594,26 @@
     <member name="T:System.Windows.WindowStartupLocation">
       <summary>Specifies the position that a <see cref="T:System.Windows.Window" /> will be shown in when it is first opened. Used by the <see cref="P:System.Windows.Window.WindowStartupLocation" /> property.</summary>
     </member>
-    <member name="F:System.Windows.WindowStartupLocation.Manual">
-      <summary>The startup location of a <see cref="T:System.Windows.Window" /> is set from code, or defers to the default Windows location.</summary>
+    <member name="F:System.Windows.WindowStartupLocation.CenterOwner">
+      <summary>The startup location of a <see cref="T:System.Windows.Window" /> is the center of the <see cref="T:System.Windows.Window" /> that owns it, as specified by the <see cref="P:System.Windows.Window.Owner" /> property.</summary>
     </member>
     <member name="F:System.Windows.WindowStartupLocation.CenterScreen">
       <summary>The startup location of a <see cref="T:System.Windows.Window" /> is the center of the screen that contains the mouse cursor.</summary>
     </member>
-    <member name="F:System.Windows.WindowStartupLocation.CenterOwner">
-      <summary>The startup location of a <see cref="T:System.Windows.Window" /> is the center of the <see cref="T:System.Windows.Window" /> that owns it, as specified by the <see cref="P:System.Windows.Window.Owner" /> property.</summary>
+    <member name="F:System.Windows.WindowStartupLocation.Manual">
+      <summary>The startup location of a <see cref="T:System.Windows.Window" /> is set from code, or defers to the default Windows location.</summary>
     </member>
     <member name="T:System.Windows.WindowState">
       <summary>Specifies whether a window is minimized, maximized, or restored. Used by the <see cref="P:System.Windows.Window.WindowState" /> property.</summary>
     </member>
-    <member name="F:System.Windows.WindowState.Normal">
-      <summary>The window is restored.</summary>
+    <member name="F:System.Windows.WindowState.Maximized">
+      <summary>The window is maximized.</summary>
     </member>
     <member name="F:System.Windows.WindowState.Minimized">
       <summary>The window is minimized.</summary>
     </member>
-    <member name="F:System.Windows.WindowState.Maximized">
-      <summary>The window is maximized.</summary>
+    <member name="F:System.Windows.WindowState.Normal">
+      <summary>The window is restored.</summary>
     </member>
     <member name="T:System.Windows.WindowStyle">
       <summary>Specifies the type of border that a <see cref="T:System.Windows.Window" /> has. Used by the <see cref="P:System.Windows.Window.WindowStyle" /> property.</summary>
@@ -6633,17 +6633,17 @@
     <member name="T:System.Windows.WrapDirection">
       <summary>Specifies the allowable directions that content can wrap around an object. </summary>
     </member>
-    <member name="F:System.Windows.WrapDirection.None">
-      <summary>Content that does not flow around the object. </summary>
+    <member name="F:System.Windows.WrapDirection.Both">
+      <summary>Content that flows around both sides of the object. </summary>
     </member>
     <member name="F:System.Windows.WrapDirection.Left">
       <summary>Content that only flows around the left side of the object. </summary>
     </member>
+    <member name="F:System.Windows.WrapDirection.None">
+      <summary>Content that does not flow around the object. </summary>
+    </member>
     <member name="F:System.Windows.WrapDirection.Right">
       <summary>Content that only flows around the right side of the object. </summary>
-    </member>
-    <member name="F:System.Windows.WrapDirection.Both">
-      <summary>Content that flows around both sides of the object. </summary>
     </member>
     <member name="T:System.Windows.Annotations.Annotation">
       <summary>Represents a user annotation in the Microsoft Annotations Framework.</summary>
@@ -6723,11 +6723,11 @@
     <member name="F:System.Windows.Annotations.AnnotationAction.Added">
       <summary>The component was added to the annotation.</summary>
     </member>
-    <member name="F:System.Windows.Annotations.AnnotationAction.Removed">
-      <summary>The component was removed from the annotation.</summary>
-    </member>
     <member name="F:System.Windows.Annotations.AnnotationAction.Modified">
       <summary>The component was modified within the annotation.</summary>
+    </member>
+    <member name="F:System.Windows.Annotations.AnnotationAction.Removed">
+      <summary>The component was removed from the annotation.</summary>
     </member>
     <member name="T:System.Windows.Annotations.AnnotationAuthorChangedEventArgs">
       <summary> Provides data for the <see cref="E:System.Windows.Annotations.Annotation.AuthorChanged" /> event. </summary>
@@ -8261,7 +8261,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.FrameworkContentElementAutomationPeer.GetAutomationIdCore">
       <summary>Gets the string that uniquely identifies the <see cref="T:System.Windows.FrameworkContentElement" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ContentElementAutomationPeer" />. This method is called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationId" />.</summary>
-      <returns>The <see cref="T:System.Windows.Automation.AutomationIdentifier" />.</returns>
+      <returns>The string that uniquely identifies the <see cref="T:System.Windows.FrameworkContentElement" />.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.FrameworkContentElementAutomationPeer.GetHelpTextCore">
       <summary>Gets the string that describes the functionality of the <see cref="T:System.Windows.FrameworkContentElement" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ContentElementAutomationPeer" />. This method is called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetHelpText" />.</summary>
@@ -8755,7 +8755,7 @@
     </member>
     <member name="P:System.Windows.Automation.Peers.ItemAutomationPeer.ItemsControlAutomationPeer">
       <summary>Gets the <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" /> that is associated with the <see cref="T:System.Windows.Controls.ItemsControl" /> that holds the <see cref="P:System.Windows.Controls.ItemsControl.Items" /> collection.</summary>
-      <returns>The <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" />.</returns>
+      <returns>The <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" /> that is associated with the <see cref="T:System.Windows.Controls.ItemsControl" /> object.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.ItemAutomationPeer.SetFocusCore">
       <summary>Sets the keyboard input focus on the specified <see cref="T:System.Windows.UIElement" />. The <see cref="T:System.Windows.UIElement" /> corresponds to the data item in the <see cref="P:System.Windows.Controls.ItemsControl.Items" /> collection that is associated with this <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" />. </summary>
@@ -9118,7 +9118,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.RadioButtonAutomationPeer.GetAutomationControlTypeCore">
       <summary>Gets the control type for the <see cref="T:System.Windows.Controls.RadioButton" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.RadioButtonAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />..</summary>
-      <returns>A <see cref="F:System.Windows.Automation.Peers.AutomationControlType.RadioButton" />.</returns>
+      <returns>The control type for the <see cref="T:System.Windows.Controls.RadioButton" /> object.</returns>
     </member>
     <member name="M:System.Windows.Automation.Peers.RadioButtonAutomationPeer.GetClassNameCore">
       <summary>Gets the name of the <see cref="T:System.Windows.ContentElement" /> that is associated with this <see cref="T:System.Windows.Automation.Peers.ContentElementAutomationPeer" />. Called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
@@ -9463,7 +9463,7 @@
     </member>
     <member name="M:System.Windows.Automation.Peers.TabControlAutomationPeer.CreateItemAutomationPeer(System.Object)">
       <summary>Creates a new <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" />.</summary>
-      <returns>A new <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" />.</returns>
+      <returns>The created <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" /> object.</returns>
       <param name="item">The <see cref="T:System.Windows.Controls.TabItem" /> that is associated with the new <see cref="T:System.Windows.Automation.Peers.TabItemAutomationPeer" />.</param>
     </member>
     <member name="M:System.Windows.Automation.Peers.TabControlAutomationPeer.GetAutomationControlTypeCore">
@@ -10083,15 +10083,15 @@
     </member>
     <member name="P:System.Windows.Baml2006.Baml2006Reader.System#Xaml#IXamlLineInfo#HasLineInfo">
       <summary>See <see cref="P:System.Xaml.IXamlLineInfo.HasLineInfo" />.</summary>
-      <returns>See <see cref="P:System.Xaml.IXamlLineInfo.HasLineInfo" />.</returns>
+      <returns>true if line information is available; otherwise, false.</returns>
     </member>
     <member name="P:System.Windows.Baml2006.Baml2006Reader.System#Xaml#IXamlLineInfo#LineNumber">
       <summary>See <see cref="P:System.Xaml.IXamlLineInfo.LineNumber" />.</summary>
-      <returns>See <see cref="P:System.Xaml.IXamlLineInfo.LineNumber" />.</returns>
+      <returns>The line number to report.</returns>
     </member>
     <member name="P:System.Windows.Baml2006.Baml2006Reader.System#Xaml#IXamlLineInfo#LinePosition">
       <summary>See <see cref="P:System.Xaml.IXamlLineInfo.LinePosition" />.</summary>
-      <returns>See <see cref="P:System.Xaml.IXamlLineInfo.LinePosition" />.</returns>
+      <returns>The line position to report.</returns>
     </member>
     <member name="P:System.Windows.Baml2006.Baml2006Reader.Type">
       <summary>Gets the <see cref="T:System.Xaml.XamlType" /> of the current node.</summary>
@@ -10592,7 +10592,7 @@
       <summary>Builds the visual tree for the <see cref="T:System.Windows.Controls.Calendar" /> control when a new template is applied.</summary>
     </member>
     <member name="M:System.Windows.Controls.Calendar.OnCreateAutomationPeer">
-      <summary>Returns a <see cref="T:System.Windows.Automation.Peers.CalendarAutomationPeer" /> for use by the  automation infrastructure.</summary>
+      <summary>Returns a <see cref="T:System.Windows.Automation.Peers.CalendarAutomationPeer" /> for use by the Silverlight automation infrastructure.</summary>
       <returns>A <see cref="T:System.Windows.Automation.Peers.CalendarAutomationPeer" /> for the <see cref="T:System.Windows.Controls.Calendar" /> object.</returns>
     </member>
     <member name="M:System.Windows.Controls.Calendar.OnDisplayDateChanged(System.Windows.Controls.CalendarDateChangedEventArgs)">
@@ -10720,14 +10720,14 @@
     <member name="T:System.Windows.Controls.CalendarMode">
       <summary>Specifies whether a <see cref="T:System.Windows.Controls.Calendar" /> displays a month, year, or decade.</summary>
     </member>
+    <member name="F:System.Windows.Controls.CalendarMode.Decade">
+      <summary>The <see cref="T:System.Windows.Controls.Calendar" /> displays a decade at a time.</summary>
+    </member>
     <member name="F:System.Windows.Controls.CalendarMode.Month">
       <summary>The <see cref="T:System.Windows.Controls.Calendar" /> displays a month at a time.</summary>
     </member>
     <member name="F:System.Windows.Controls.CalendarMode.Year">
       <summary>The <see cref="T:System.Windows.Controls.Calendar" /> displays a year at a time.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.CalendarMode.Decade">
-      <summary>The <see cref="T:System.Windows.Controls.Calendar" /> displays a decade at a time.</summary>
     </member>
     <member name="T:System.Windows.Controls.CalendarModeChangedEventArgs">
       <summary>Provides data for the <see cref="E:System.Windows.Controls.Calendar.DisplayModeChanged" /> event.</summary>
@@ -10748,17 +10748,17 @@
     <member name="T:System.Windows.Controls.CalendarSelectionMode">
       <summary>Specifies whether a single or multiple dates can be selected in a <see cref="T:System.Windows.Controls.Calendar" />.</summary>
     </member>
-    <member name="F:System.Windows.Controls.CalendarSelectionMode.SingleDate">
-      <summary>A single date can be selected. Use the <see cref="P:System.Windows.Controls.Calendar.SelectedDate" /> property to retrieve the selected date.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.CalendarSelectionMode.SingleRange">
-      <summary>A single range of dates can be selected. Use the <see cref="P:System.Windows.Controls.Calendar.SelectedDates" /> property to retrieve the selected dates.</summary>
-    </member>
     <member name="F:System.Windows.Controls.CalendarSelectionMode.MultipleRange">
       <summary>Multiple non-contiguous ranges of dates can be selected. Use the <see cref="P:System.Windows.Controls.Calendar.SelectedDates" /> property to retrieve the selected dates.</summary>
     </member>
     <member name="F:System.Windows.Controls.CalendarSelectionMode.None">
       <summary>No selections are allowed.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.CalendarSelectionMode.SingleDate">
+      <summary>A single date can be selected. Use the <see cref="P:System.Windows.Controls.Calendar.SelectedDate" /> property to retrieve the selected date.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.CalendarSelectionMode.SingleRange">
+      <summary>A single range of dates can be selected. Use the <see cref="P:System.Windows.Controls.Calendar.SelectedDates" /> property to retrieve the selected dates.</summary>
     </member>
     <member name="T:System.Windows.Controls.Canvas">
       <summary>Defines an area within which you can explicitly position child elements by using coordinates that are relative to the <see cref="T:System.Windows.Controls.Canvas" /> area.</summary>
@@ -10856,11 +10856,11 @@
     <member name="T:System.Windows.Controls.CharacterCasing">
       <summary>Specifies the case of characters typed manually into a <see cref="T:System.Windows.Controls.TextBox" /> control. </summary>
     </member>
-    <member name="F:System.Windows.Controls.CharacterCasing.Normal">
-      <summary>Characters typed into a <see cref="T:System.Windows.Controls.TextBox" /> are not converted.</summary>
-    </member>
     <member name="F:System.Windows.Controls.CharacterCasing.Lower">
       <summary>Characters typed into a <see cref="T:System.Windows.Controls.TextBox" /> are converted to lowercase.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.CharacterCasing.Normal">
+      <summary>Characters typed into a <see cref="T:System.Windows.Controls.TextBox" /> are not converted.</summary>
     </member>
     <member name="F:System.Windows.Controls.CharacterCasing.Upper">
       <summary>Characters typed into a <see cref="T:System.Windows.Controls.TextBox" /> are converted to uppercase.</summary>
@@ -10909,14 +10909,14 @@
     <member name="T:System.Windows.Controls.ClickMode">
       <summary>Specifies when the <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> event should be raised. </summary>
     </member>
-    <member name="F:System.Windows.Controls.ClickMode.Release">
-      <summary>Specifies that the <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> event should be raised when a button is pressed and released.</summary>
+    <member name="F:System.Windows.Controls.ClickMode.Hover">
+      <summary>Specifies that the <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> event should be raised when the mouse hovers over a control.</summary>
     </member>
     <member name="F:System.Windows.Controls.ClickMode.Press">
       <summary>Specifies that the <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> event should be raised as soon as a button is pressed.</summary>
     </member>
-    <member name="F:System.Windows.Controls.ClickMode.Hover">
-      <summary>Specifies that the <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> event should be raised when the mouse hovers over a control.</summary>
+    <member name="F:System.Windows.Controls.ClickMode.Release">
+      <summary>Specifies that the <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> event should be raised when a button is pressed and released.</summary>
     </member>
     <member name="T:System.Windows.Controls.ColumnDefinition">
       <summary>Defines column-specific properties that apply to <see cref="T:System.Windows.Controls.Grid" /> elements. </summary>
@@ -11093,7 +11093,7 @@
     </member>
     <member name="M:System.Windows.Controls.ComboBox.GetContainerForItemOverride">
       <summary>Creates or identifies the element used to display the specified item.</summary>
-      <returns>A <see cref="T:System.Windows.Controls.ComboBoxItem" />.</returns>
+      <returns>The element used to display the specified item.</returns>
     </member>
     <member name="P:System.Windows.Controls.ComboBox.HandlesScrolling">
       <summary>Gets a value that indicates whether a combo box supports scrolling.</summary>
@@ -13219,14 +13219,14 @@
     <member name="T:System.Windows.Controls.DataGridClipboardCopyMode">
       <summary>Defines constants that specify whether users can copy data from a <see cref="T:System.Windows.Controls.DataGrid" /> control to the Clipboard and whether column header values are included.</summary>
     </member>
-    <member name="F:System.Windows.Controls.DataGridClipboardCopyMode.None">
-      <summary>Clipboard support is disabled.</summary>
-    </member>
     <member name="F:System.Windows.Controls.DataGridClipboardCopyMode.ExcludeHeader">
       <summary>Users can copy the text values of selected cells to the Clipboard, and column header values are not included. </summary>
     </member>
     <member name="F:System.Windows.Controls.DataGridClipboardCopyMode.IncludeHeader">
       <summary>Users can copy the text values of selected cells to the Clipboard, and column header values are included. </summary>
+    </member>
+    <member name="F:System.Windows.Controls.DataGridClipboardCopyMode.None">
+      <summary>Clipboard support is disabled.</summary>
     </member>
     <member name="T:System.Windows.Controls.DataGridColumn">
       <summary>Represents a <see cref="T:System.Windows.Controls.DataGrid" /> column.</summary>
@@ -13681,11 +13681,11 @@
     <member name="F:System.Windows.Controls.DataGridHeadersVisibility.Column">
       <summary>Only column headers are visible.</summary>
     </member>
-    <member name="F:System.Windows.Controls.DataGridHeadersVisibility.Row">
-      <summary>Only row headers are visible.</summary>
-    </member>
     <member name="F:System.Windows.Controls.DataGridHeadersVisibility.None">
       <summary>No headers are visible.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.DataGridHeadersVisibility.Row">
+      <summary>Only row headers are visible.</summary>
     </member>
     <member name="T:System.Windows.Controls.DataGridHyperlinkColumn">
       <summary>Represents a <see cref="T:System.Windows.Controls.DataGrid" /> column that hosts <see cref="T:System.Uri" /> elements in its cells.</summary>
@@ -14222,11 +14222,11 @@
     <member name="T:System.Windows.Controls.DataGridSelectionMode">
       <summary>Defines constants that specify whether single or multiple item selections are supported by a <see cref="T:System.Windows.Controls.DataGrid" /> control.</summary>
     </member>
-    <member name="F:System.Windows.Controls.DataGridSelectionMode.Single">
-      <summary>Only one item in the <see cref="T:System.Windows.Controls.DataGrid" /> can be selected at a time.</summary>
-    </member>
     <member name="F:System.Windows.Controls.DataGridSelectionMode.Extended">
       <summary>Multiple items in the <see cref="T:System.Windows.Controls.DataGrid" /> can be selected at the same time.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.DataGridSelectionMode.Single">
+      <summary>Only one item in the <see cref="T:System.Windows.Controls.DataGrid" /> can be selected at a time.</summary>
     </member>
     <member name="T:System.Windows.Controls.DataGridSelectionUnit">
       <summary>Defines constants that specify whether cells, rows, or both, are used for selection in a <see cref="T:System.Windows.Controls.DataGrid" /> control.</summary>
@@ -14234,11 +14234,11 @@
     <member name="F:System.Windows.Controls.DataGridSelectionUnit.Cell">
       <summary>Only cells are selectable. Clicking a cell selects the cell. Clicking a row or column header does nothing.</summary>
     </member>
-    <member name="F:System.Windows.Controls.DataGridSelectionUnit.FullRow">
-      <summary>Only full rows are selectable. Clicking a cell or a row header selects the full row.</summary>
-    </member>
     <member name="F:System.Windows.Controls.DataGridSelectionUnit.CellOrRowHeader">
       <summary>Cells and rows are selectable. Clicking a cell selects only the cell. Clicking a row header selects the full row.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.DataGridSelectionUnit.FullRow">
+      <summary>Only full rows are selectable. Clicking a cell or a row header selects the full row.</summary>
     </member>
     <member name="T:System.Windows.Controls.DataGridSortingEventArgs">
       <summary>Provides data for the <see cref="E:System.Windows.Controls.DataGrid.Sorting" /> event. </summary>
@@ -14635,17 +14635,17 @@
     <member name="T:System.Windows.Controls.Dock">
       <summary>Specifies the <see cref="T:System.Windows.Controls.Dock" /> position of a child element that is inside a <see cref="T:System.Windows.Controls.DockPanel" />.</summary>
     </member>
+    <member name="F:System.Windows.Controls.Dock.Bottom">
+      <summary>A child element that is positioned at the bottom of the <see cref="T:System.Windows.Controls.DockPanel" />.</summary>
+    </member>
     <member name="F:System.Windows.Controls.Dock.Left">
       <summary>A child element that is positioned on the left side of the <see cref="T:System.Windows.Controls.DockPanel" />.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.Dock.Top">
-      <summary>A child element that is positioned at the top of the <see cref="T:System.Windows.Controls.DockPanel" />. </summary>
     </member>
     <member name="F:System.Windows.Controls.Dock.Right">
       <summary>A child element that is positioned on the right side of the <see cref="T:System.Windows.Controls.DockPanel" />.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Dock.Bottom">
-      <summary>A child element that is positioned at the bottom of the <see cref="T:System.Windows.Controls.DockPanel" />.</summary>
+    <member name="F:System.Windows.Controls.Dock.Top">
+      <summary>A child element that is positioned at the top of the <see cref="T:System.Windows.Controls.DockPanel" />. </summary>
     </member>
     <member name="T:System.Windows.Controls.DockPanel">
       <summary>Defines an area where you can arrange child elements either horizontally or vertically, relative to each other. </summary>
@@ -15014,14 +15014,14 @@
     <member name="F:System.Windows.Controls.ExpandDirection.Down">
       <summary>The <see cref="T:System.Windows.Controls.Expander" /> control opens down.</summary>
     </member>
-    <member name="F:System.Windows.Controls.ExpandDirection.Up">
-      <summary>The <see cref="T:System.Windows.Controls.Expander" /> control opens up.</summary>
-    </member>
     <member name="F:System.Windows.Controls.ExpandDirection.Left">
       <summary>The <see cref="T:System.Windows.Controls.Expander" /> control opens left.</summary>
     </member>
     <member name="F:System.Windows.Controls.ExpandDirection.Right">
       <summary>The <see cref="T:System.Windows.Controls.Expander" /> control opens right. </summary>
+    </member>
+    <member name="F:System.Windows.Controls.ExpandDirection.Up">
+      <summary>The <see cref="T:System.Windows.Controls.Expander" /> control opens up.</summary>
     </member>
     <member name="T:System.Windows.Controls.Expander">
       <summary>Represents the control that displays a header that has a collapsible window that displays content.</summary>
@@ -15507,11 +15507,11 @@
     <member name="F:System.Windows.Controls.FlowDocumentReaderViewingMode.Page">
       <summary>Indicates that the <see cref="T:System.Windows.Controls.FlowDocumentReader" /> should show content one page at a time.</summary>
     </member>
-    <member name="F:System.Windows.Controls.FlowDocumentReaderViewingMode.TwoPage">
-      <summary>Indicates that the <see cref="T:System.Windows.Controls.FlowDocumentReader" /> should show content two pages at a time, similar to an open book.</summary>
-    </member>
     <member name="F:System.Windows.Controls.FlowDocumentReaderViewingMode.Scroll">
       <summary>Indicates that the <see cref="T:System.Windows.Controls.FlowDocumentReader" /> should show content in continuous scrolling mode.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.FlowDocumentReaderViewingMode.TwoPage">
+      <summary>Indicates that the <see cref="T:System.Windows.Controls.FlowDocumentReader" /> should show content two pages at a time, similar to an open book.</summary>
     </member>
     <member name="T:System.Windows.Controls.FlowDocumentScrollViewer">
       <summary>Provides a control for viewing flow content in a continuous scrolling mode.</summary>
@@ -16471,11 +16471,11 @@
     <member name="T:System.Windows.Controls.GridViewColumnHeaderRole">
       <summary>Defines the state or role of a <see cref="T:System.Windows.Controls.GridViewColumnHeader" /> control.</summary>
     </member>
-    <member name="F:System.Windows.Controls.GridViewColumnHeaderRole.Normal">
-      <summary>The column header displays above its associated column.</summary>
-    </member>
     <member name="F:System.Windows.Controls.GridViewColumnHeaderRole.Floating">
       <summary>The column header is the object of a drag-and-drop operation to move a column.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.GridViewColumnHeaderRole.Normal">
+      <summary>The column header displays above its associated column.</summary>
     </member>
     <member name="F:System.Windows.Controls.GridViewColumnHeaderRole.Padding">
       <summary>The column header is the last header in the row of column headers and is used for padding.</summary>
@@ -17148,7 +17148,7 @@
     </member>
     <member name="P:System.Windows.Controls.InkCanvas.Background">
       <summary>Gets or sets a <see cref="T:System.Windows.Media.Brush" />. The brush is used to fill the border area surrounding a <see cref="T:System.Windows.Controls.InkCanvas" />.  </summary>
-      <returns>A <see cref="T:System.Windows.Media.Brush" />.</returns>
+      <returns>A <see cref="T:System.Windows.Media.Brush" /> used to fill the border area surrounding a <see cref="T:System.Windows.Controls.InkCanvas" />.</returns>
     </member>
     <member name="F:System.Windows.Controls.InkCanvas.BackgroundProperty">
       <summary>Identifies the <see cref="P:System.Windows.Controls.InkCanvas.Background" /> dependency property. </summary>
@@ -17517,26 +17517,26 @@
     <member name="T:System.Windows.Controls.InkCanvasEditingMode">
       <summary>Specifies the editing mode for the <see cref="T:System.Windows.Controls.InkCanvas" /></summary>
     </member>
-    <member name="F:System.Windows.Controls.InkCanvasEditingMode.None">
-      <summary>Indicates that no action is taken when the pen sends data to the <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.InkCanvasEditingMode.Ink">
-      <summary>Indicates that ink appears on the <see cref="T:System.Windows.Controls.InkCanvas" /> when the pen sends data to it.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.InkCanvasEditingMode.GestureOnly">
-      <summary>Indicates that the <see cref="T:System.Windows.Controls.InkCanvas" /> responds to gestures, and does not receive ink.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.InkCanvasEditingMode.InkAndGesture">
-      <summary>Indicates that the <see cref="T:System.Windows.Controls.InkCanvas" /> responds to gestures, and receives ink.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.InkCanvasEditingMode.Select">
-      <summary>Indicates that the pen selects strokes and elements on the <see cref="T:System.Windows.Controls.InkCanvas" />. </summary>
-    </member>
     <member name="F:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint">
       <summary>Indicates that the pen erases part of a stroke when the pen intersects the stroke.</summary>
     </member>
     <member name="F:System.Windows.Controls.InkCanvasEditingMode.EraseByStroke">
       <summary>Indicates that the pen erases an entire stroke when the pen intersects the stroke.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.InkCanvasEditingMode.GestureOnly">
+      <summary>Indicates that the <see cref="T:System.Windows.Controls.InkCanvas" /> responds to gestures, and does not receive ink.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.InkCanvasEditingMode.Ink">
+      <summary>Indicates that ink appears on the <see cref="T:System.Windows.Controls.InkCanvas" /> when the pen sends data to it.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.InkCanvasEditingMode.InkAndGesture">
+      <summary>Indicates that the <see cref="T:System.Windows.Controls.InkCanvas" /> responds to gestures, and receives ink.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.InkCanvasEditingMode.None">
+      <summary>Indicates that no action is taken when the pen sends data to the <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.InkCanvasEditingMode.Select">
+      <summary>Indicates that the pen selects strokes and elements on the <see cref="T:System.Windows.Controls.InkCanvas" />. </summary>
     </member>
     <member name="T:System.Windows.Controls.InkCanvasGestureEventArgs">
       <summary>Provides data for the <see cref="E:System.Windows.Controls.InkCanvas.Gesture" /> event. </summary>
@@ -17610,35 +17610,35 @@
     <member name="T:System.Windows.Controls.InkCanvasSelectionHitResult">
       <summary>Identifies the various parts of a selection adorner on an <see cref="T:System.Windows.Controls.InkCanvas" />.</summary>
     </member>
-    <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.None">
-      <summary>No part of the selection adorner.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.TopLeft">
-      <summary>The upper left handle of the selection adorner.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.Top">
-      <summary>The upper middle handle of the selection adorner.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.TopRight">
-      <summary>The upper right handle of the selection adorner.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.Right">
-      <summary>The middle handle on the right edge of the selection adorner.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.BottomRight">
-      <summary>The lower right handle of the selection adorner.</summary>
-    </member>
     <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.Bottom">
       <summary>The lower middle handle of the selection adorner.</summary>
     </member>
     <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.BottomLeft">
       <summary>The lower left handle of the selection adorner.</summary>
     </member>
+    <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.BottomRight">
+      <summary>The lower right handle of the selection adorner.</summary>
+    </member>
     <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.Left">
       <summary>The middle handle on the left edge of the selection adorner.</summary>
     </member>
+    <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.None">
+      <summary>No part of the selection adorner.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.Right">
+      <summary>The middle handle on the right edge of the selection adorner.</summary>
+    </member>
     <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.Selection">
       <summary>The area within the bounds of the selection adorner.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.Top">
+      <summary>The upper middle handle of the selection adorner.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.TopLeft">
+      <summary>The upper left handle of the selection adorner.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.InkCanvasSelectionHitResult.TopRight">
+      <summary>The upper right handle of the selection adorner.</summary>
     </member>
     <member name="T:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs">
       <summary>Provides data for the <see cref="E:System.Windows.Controls.InkCanvas.StrokeCollected" /> event. </summary>
@@ -18569,7 +18569,7 @@
     </member>
     <member name="M:System.Windows.Controls.ListBox.GetContainerForItemOverride">
       <summary>Creates or identifies the element used to display a specified item. </summary>
-      <returns>A <see cref="T:System.Windows.Controls.ListBoxItem" />.</returns>
+      <returns>The element used to display a specified item.</returns>
     </member>
     <member name="P:System.Windows.Controls.ListBox.HandlesScrolling">
       <summary>Gets a value that indicates whether the <see cref="T:System.Windows.Controls.ListBox" /> supports scrolling.</summary>
@@ -18956,17 +18956,17 @@
     <member name="T:System.Windows.Controls.MediaState">
       <summary>Specifies the states that can be applied to a <see cref="T:System.Windows.Controls.MediaElement" /> for the <see cref="P:System.Windows.Controls.MediaElement.LoadedBehavior" /> and <see cref="P:System.Windows.Controls.MediaElement.UnloadedBehavior" /> properties.</summary>
     </member>
-    <member name="F:System.Windows.Controls.MediaState.Manual">
-      <summary>The state used to control a <see cref="T:System.Windows.Controls.MediaElement" /> manually. Interactive methods like <see cref="M:System.Windows.Controls.MediaElement.Play" /> and <see cref="M:System.Windows.Controls.MediaElement.Pause" /> can be used. Media will preroll but not play when the <see cref="T:System.Windows.Controls.MediaElement" /> is assigned valid media source.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.MediaState.Play">
-      <summary>The state used to play the media. . Media will preroll automatically being playback when the <see cref="T:System.Windows.Controls.MediaElement" /> is assigned valid media source.</summary>
-    </member>
     <member name="F:System.Windows.Controls.MediaState.Close">
       <summary>The state used to close the media. All media resources are released (including video memory).</summary>
     </member>
+    <member name="F:System.Windows.Controls.MediaState.Manual">
+      <summary>The state used to control a <see cref="T:System.Windows.Controls.MediaElement" /> manually. Interactive methods like <see cref="M:System.Windows.Controls.MediaElement.Play" /> and <see cref="M:System.Windows.Controls.MediaElement.Pause" /> can be used. Media will preroll but not play when the <see cref="T:System.Windows.Controls.MediaElement" /> is assigned valid media source.</summary>
+    </member>
     <member name="F:System.Windows.Controls.MediaState.Pause">
       <summary>The state used to pause the media. Media will preroll but remains paused when the <see cref="T:System.Windows.Controls.MediaElement" /> is assigned valid media source.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.MediaState.Play">
+      <summary>The state used to play the media. . Media will preroll automatically being playback when the <see cref="T:System.Windows.Controls.MediaElement" /> is assigned valid media source.</summary>
     </member>
     <member name="F:System.Windows.Controls.MediaState.Stop">
       <summary>The state used to stop the media. Media will preroll but not play when the <see cref="T:System.Windows.Controls.MediaElement" /> is assigned valid media source. Media resources are not released.</summary>
@@ -19056,7 +19056,7 @@
     </member>
     <member name="M:System.Windows.Controls.MenuItem.GetContainerForItemOverride">
       <summary>Creates or identifies the element used to display a specified item.</summary>
-      <returns>A <see cref="T:System.Windows.Controls.MenuItem" />.</returns>
+      <returns>The element used to display a specified item.</returns>
     </member>
     <member name="P:System.Windows.Controls.MenuItem.HandlesScrolling">
       <summary>Gets whether the control supports scrolling.</summary>
@@ -19304,17 +19304,17 @@
     <member name="T:System.Windows.Controls.MenuItemRole">
       <summary> Defines the different roles that a <see cref="T:System.Windows.Controls.MenuItem" /> can have. </summary>
     </member>
-    <member name="F:System.Windows.Controls.MenuItemRole.TopLevelItem">
-      <summary> Top-level menu item that can invoke commands. </summary>
-    </member>
-    <member name="F:System.Windows.Controls.MenuItemRole.TopLevelHeader">
-      <summary> Header for top-level menus. </summary>
+    <member name="F:System.Windows.Controls.MenuItemRole.SubmenuHeader">
+      <summary> Header for a submenu. </summary>
     </member>
     <member name="F:System.Windows.Controls.MenuItemRole.SubmenuItem">
       <summary> Menu item in a submenu that can invoke commands. </summary>
     </member>
-    <member name="F:System.Windows.Controls.MenuItemRole.SubmenuHeader">
-      <summary> Header for a submenu. </summary>
+    <member name="F:System.Windows.Controls.MenuItemRole.TopLevelHeader">
+      <summary> Header for top-level menus. </summary>
+    </member>
+    <member name="F:System.Windows.Controls.MenuItemRole.TopLevelItem">
+      <summary> Top-level menu item that can invoke commands. </summary>
     </member>
     <member name="T:System.Windows.Controls.MenuScrollingVisibilityConverter">
       <summary>Represents a data-binding converter to handle the visibility of repeat buttons in scrolling menus.</summary>
@@ -19364,11 +19364,11 @@
     <member name="T:System.Windows.Controls.OverflowMode">
       <summary> Specifies how <see cref="T:System.Windows.Controls.ToolBar" /> items are placed in the main toolbar panel and in the overflow panel. </summary>
     </member>
-    <member name="F:System.Windows.Controls.OverflowMode.AsNeeded">
-      <summary> Item moves between the main panel and overflow panel, depending on the available space. </summary>
-    </member>
     <member name="F:System.Windows.Controls.OverflowMode.Always">
       <summary> Item is permanently placed in the overflow panel. </summary>
+    </member>
+    <member name="F:System.Windows.Controls.OverflowMode.AsNeeded">
+      <summary> Item moves between the main panel and overflow panel, depending on the available space. </summary>
     </member>
     <member name="F:System.Windows.Controls.OverflowMode.Never">
       <summary> Item is never allowed to overflow. </summary>
@@ -19567,14 +19567,14 @@
     <member name="F:System.Windows.Controls.PageRangeSelection.AllPages">
       <summary>All pages.</summary>
     </member>
-    <member name="F:System.Windows.Controls.PageRangeSelection.UserPages">
-      <summary>A user-specified range of pages.</summary>
-    </member>
     <member name="F:System.Windows.Controls.PageRangeSelection.CurrentPage">
       <summary>The current page.</summary>
     </member>
     <member name="F:System.Windows.Controls.PageRangeSelection.SelectedPages">
       <summary>The selected pages.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.PageRangeSelection.UserPages">
+      <summary>A user-specified range of pages.</summary>
     </member>
     <member name="T:System.Windows.Controls.Panel">
       <summary>Provides a base class for all <see cref="T:System.Windows.Controls.Panel" /> elements. Use <see cref="T:System.Windows.Controls.Panel" /> elements to position and arrange child objects in Windows Presentation Foundation (WPF) applications. </summary>
@@ -19689,23 +19689,23 @@
     <member name="T:System.Windows.Controls.PanningMode">
       <summary>Specifies how <see cref="T:System.Windows.Controls.ScrollViewer" /> reacts to touch manipulation.  </summary>
     </member>
-    <member name="F:System.Windows.Controls.PanningMode.None">
-      <summary>The <see cref="T:System.Windows.Controls.ScrollViewer" /> does not respond to touch input.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.PanningMode.HorizontalOnly">
-      <summary>The <see cref="T:System.Windows.Controls.ScrollViewer" /> scrolls horizontally only.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.PanningMode.VerticalOnly">
-      <summary>The <see cref="T:System.Windows.Controls.ScrollViewer" /> scrolls vertically only.</summary>
-    </member>
     <member name="F:System.Windows.Controls.PanningMode.Both">
       <summary>The <see cref="T:System.Windows.Controls.ScrollViewer" /> scrolls horizontally and vertically.</summary>
     </member>
     <member name="F:System.Windows.Controls.PanningMode.HorizontalFirst">
       <summary>The <see cref="T:System.Windows.Controls.ScrollViewer" /> scrolls when the user moves a finger horizontally first.  If the user moves the vertically first, the movement is treated as mouse events.  After the <see cref="T:System.Windows.Controls.ScrollViewer" /> begins to scroll, it will scroll horizontally and vertically.</summary>
     </member>
+    <member name="F:System.Windows.Controls.PanningMode.HorizontalOnly">
+      <summary>The <see cref="T:System.Windows.Controls.ScrollViewer" /> scrolls horizontally only.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.PanningMode.None">
+      <summary>The <see cref="T:System.Windows.Controls.ScrollViewer" /> does not respond to touch input.</summary>
+    </member>
     <member name="F:System.Windows.Controls.PanningMode.VerticalFirst">
       <summary>The <see cref="T:System.Windows.Controls.ScrollViewer" /> scrolls when the user moves a finger vertically first.  If the user moves the horizontally first, the movement is treated as mouse events.  After the <see cref="T:System.Windows.Controls.ScrollViewer" /> begins to scroll, it will scroll horizontally and vertically.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.PanningMode.VerticalOnly">
+      <summary>The <see cref="T:System.Windows.Controls.ScrollViewer" /> scrolls vertically only.</summary>
     </member>
     <member name="T:System.Windows.Controls.PasswordBox">
       <summary>Represents a control designed for entering and handling passwords.</summary>
@@ -20204,11 +20204,11 @@
     <member name="T:System.Windows.Controls.ScrollBarVisibility">
       <summary>Specifies the visibility of a <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> for scrollable content.</summary>
     </member>
-    <member name="F:System.Windows.Controls.ScrollBarVisibility.Disabled">
-      <summary>A <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> does not appear even when the viewport cannot display all of the content. The dimension of the content is set to the corresponding dimension of the <see cref="T:System.Windows.Controls.ScrollViewer" /> parent. For a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />, the width of the content is set to the <see cref="P:System.Windows.Controls.ScrollViewer.ViewportWidth" /> of the <see cref="T:System.Windows.Controls.ScrollViewer" />. For a vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />, the height of the content is set to the <see cref="P:System.Windows.Controls.ScrollViewer.ViewportHeight" /> of the <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
-    </member>
     <member name="F:System.Windows.Controls.ScrollBarVisibility.Auto">
       <summary>A <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> appears and the dimension of the <see cref="T:System.Windows.Controls.ScrollViewer" /> is applied to the content when the viewport cannot display all of the content. For a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />, the width of the content is set to the <see cref="P:System.Windows.Controls.ScrollViewer.ViewportWidth" /> of the <see cref="T:System.Windows.Controls.ScrollViewer" />. For a vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />, the height of the content is set to the <see cref="P:System.Windows.Controls.ScrollViewer.ViewportHeight" /> of the <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.ScrollBarVisibility.Disabled">
+      <summary>A <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> does not appear even when the viewport cannot display all of the content. The dimension of the content is set to the corresponding dimension of the <see cref="T:System.Windows.Controls.ScrollViewer" /> parent. For a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />, the width of the content is set to the <see cref="P:System.Windows.Controls.ScrollViewer.ViewportWidth" /> of the <see cref="T:System.Windows.Controls.ScrollViewer" />. For a vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />, the height of the content is set to the <see cref="P:System.Windows.Controls.ScrollViewer.ViewportHeight" /> of the <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
     </member>
     <member name="F:System.Windows.Controls.ScrollBarVisibility.Hidden">
       <summary>A <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> does not appear even when the viewport cannot display all of the content. The dimension of the <see cref="T:System.Windows.Controls.ScrollViewer" /> is not applied to the content.</summary>
@@ -20285,7 +20285,7 @@
     </member>
     <member name="P:System.Windows.Controls.ScrollContentPresenter.AdornerLayer">
       <summary>Gets the <see cref="T:System.Windows.Documents.AdornerLayer" /> on which adorners are rendered.</summary>
-      <returns>An <see cref="T:System.Windows.Documents.AdornerLayer" />.</returns>
+      <returns>The <see cref="T:System.Windows.Documents.AdornerLayer" /> on which adorners are rendered.</returns>
     </member>
     <member name="P:System.Windows.Controls.ScrollContentPresenter.CanContentScroll">
       <summary>Indicates whether the content, if it supports <see cref="T:System.Windows.Controls.Primitives.IScrollInfo" />, should be allowed to control scrolling.   </summary>
@@ -20387,11 +20387,11 @@
     <member name="T:System.Windows.Controls.ScrollUnit">
       <summary>Specifies the type of unit that is used by the <see cref="P:System.Windows.Controls.VirtualizingPanel.ScrollUnit" /> attached property.</summary>
     </member>
-    <member name="F:System.Windows.Controls.ScrollUnit.Pixel">
-      <summary>The <see cref="P:System.Windows.Controls.VirtualizingPanel.ScrollUnit" /> is measured in terms of device-independent units (1/96th inch per unit).</summary>
-    </member>
     <member name="F:System.Windows.Controls.ScrollUnit.Item">
       <summary>The <see cref="P:System.Windows.Controls.VirtualizingPanel.ScrollUnit" /> is measured in terms of the items that are displayed in the panel.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.ScrollUnit.Pixel">
+      <summary>The <see cref="P:System.Windows.Controls.VirtualizingPanel.ScrollUnit" /> is measured in terms of device-independent units (1/96th inch per unit).</summary>
     </member>
     <member name="T:System.Windows.Controls.ScrollViewer">
       <summary>Represents a scrollable area that can contain other visible elements. </summary>
@@ -20552,7 +20552,7 @@
     </member>
     <member name="M:System.Windows.Controls.ScrollViewer.OnCreateAutomationPeer">
       <summary>Provides an appropriate <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> implementation for this control, as part of the Windows Presentation Foundation (WPF) automation infrastructure.</summary>
-      <returns>An <see cref="T:System.Windows.Automation.Peers.AutomationPeer" />.</returns>
+      <returns>The appropriate <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> implementation for this control.</returns>
     </member>
     <member name="M:System.Windows.Controls.ScrollViewer.OnKeyDown(System.Windows.Input.KeyEventArgs)">
       <summary>Responds to specific keyboard input and invokes associated scrolling behavior.</summary>
@@ -20814,29 +20814,29 @@
     <member name="T:System.Windows.Controls.SelectionMode">
       <summary>Defines the selection behavior for a <see cref="T:System.Windows.Controls.ListBox" />. </summary>
     </member>
-    <member name="F:System.Windows.Controls.SelectionMode.Single">
-      <summary>The user can select only one item at a time. </summary>
+    <member name="F:System.Windows.Controls.SelectionMode.Extended">
+      <summary>The user can select multiple consecutive items while holding down the SHIFT key. </summary>
     </member>
     <member name="F:System.Windows.Controls.SelectionMode.Multiple">
       <summary>The user can select multiple items without holding down a modifier key.</summary>
     </member>
-    <member name="F:System.Windows.Controls.SelectionMode.Extended">
-      <summary>The user can select multiple consecutive items while holding down the SHIFT key. </summary>
+    <member name="F:System.Windows.Controls.SelectionMode.Single">
+      <summary>The user can select only one item at a time. </summary>
     </member>
     <member name="T:System.Windows.Controls.SelectiveScrollingOrientation">
       <summary>Specifies the direction that <see cref="T:System.Windows.Controls.Primitives.SelectiveScrollingGrid" /> panels can scroll.</summary>
     </member>
-    <member name="F:System.Windows.Controls.SelectiveScrollingOrientation.None">
-      <summary>The panel does not scroll.</summary>
+    <member name="F:System.Windows.Controls.SelectiveScrollingOrientation.Both">
+      <summary>The panel scrolls in both the horizontal and vertical direction.</summary>
     </member>
     <member name="F:System.Windows.Controls.SelectiveScrollingOrientation.Horizontal">
       <summary>The panel scrolls in the horizontal direction only.</summary>
     </member>
+    <member name="F:System.Windows.Controls.SelectiveScrollingOrientation.None">
+      <summary>The panel does not scroll.</summary>
+    </member>
     <member name="F:System.Windows.Controls.SelectiveScrollingOrientation.Vertical">
       <summary>The panel scrolls in the vertical direction only.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.SelectiveScrollingOrientation.Both">
-      <summary>The panel scrolls in both the horizontal and vertical direction.</summary>
     </member>
     <member name="T:System.Windows.Controls.Separator">
       <summary> Control that is used to separate items in items controls. </summary>
@@ -21122,14 +21122,14 @@
     <member name="T:System.Windows.Controls.SpellingReform">
       <summary>Specifies the spelling reform rules used by the spellchecker of the text editing control (i.e. <see cref="T:System.Windows.Controls.TextBox" /> or <see cref="T:System.Windows.Controls.RichTextBox" />).</summary>
     </member>
+    <member name="F:System.Windows.Controls.SpellingReform.Postreform">
+      <summary>Use spelling rules from after the spelling reform.</summary>
+    </member>
     <member name="F:System.Windows.Controls.SpellingReform.PreAndPostreform">
       <summary>Use spelling rules from both before and after the spelling reform.</summary>
     </member>
     <member name="F:System.Windows.Controls.SpellingReform.Prereform">
       <summary>Use spelling rules from before the spelling reform.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.SpellingReform.Postreform">
-      <summary>Use spelling rules from after the spelling reform.</summary>
     </member>
     <member name="T:System.Windows.Controls.StackPanel">
       <summary>Arranges child elements into a single line that can be oriented horizontally or vertically. </summary>
@@ -21362,23 +21362,23 @@
     <member name="T:System.Windows.Controls.StickyNoteType">
       <summary>Specifies whether a <see cref="T:System.Windows.Controls.StickyNoteControl" /> accepts text or ink. </summary>
     </member>
-    <member name="F:System.Windows.Controls.StickyNoteType.Text">
-      <summary>A text sticky note.</summary>
-    </member>
     <member name="F:System.Windows.Controls.StickyNoteType.Ink">
       <summary>An ink sticky note.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.StickyNoteType.Text">
+      <summary>A text sticky note.</summary>
     </member>
     <member name="T:System.Windows.Controls.StretchDirection">
       <summary>Describes how scaling applies to content and restricts scaling to named axis types. </summary>
     </member>
-    <member name="F:System.Windows.Controls.StretchDirection.UpOnly">
-      <summary>The content scales upward only when it is smaller than the parent. If the content is larger, no scaling downward is performed. </summary>
+    <member name="F:System.Windows.Controls.StretchDirection.Both">
+      <summary>The content stretches to fit the parent according to the <see cref="T:System.Windows.Media.Stretch" /> mode. </summary>
     </member>
     <member name="F:System.Windows.Controls.StretchDirection.DownOnly">
       <summary>The content scales downward only when it is larger than the parent. If the content is smaller, no scaling upward is performed. </summary>
     </member>
-    <member name="F:System.Windows.Controls.StretchDirection.Both">
-      <summary>The content stretches to fit the parent according to the <see cref="T:System.Windows.Media.Stretch" /> mode. </summary>
+    <member name="F:System.Windows.Controls.StretchDirection.UpOnly">
+      <summary>The content scales upward only when it is smaller than the parent. If the content is larger, no scaling downward is performed. </summary>
     </member>
     <member name="T:System.Windows.Controls.StyleSelector">
       <summary>Provides a way to apply styles based on custom logic.</summary>
@@ -21424,7 +21424,7 @@
     </member>
     <member name="M:System.Windows.Controls.TabControl.GetContainerForItemOverride">
       <summary>Creates or identifies the element used to display the specified item.</summary>
-      <returns>A <see cref="T:System.Windows.Controls.TabItem" />.</returns>
+      <returns>The element used to display the specified item.</returns>
     </member>
     <member name="M:System.Windows.Controls.TabControl.IsItemItsOwnContainerOverride(System.Object)">
       <summary>Determines if the specified item is (or is eligible to be) its own ItemContainer. </summary>
@@ -23013,7 +23013,7 @@
     </member>
     <member name="M:System.Windows.Controls.TreeViewItem.GetContainerForItemOverride">
       <summary>Creates a new <see cref="T:System.Windows.Controls.TreeViewItem" /> to use to display the object.</summary>
-      <returns>A new <see cref="T:System.Windows.Controls.TreeViewItem" />.</returns>
+      <returns>A new <see cref="T:System.Windows.Controls.TreeViewItem" /> to use to display the object.</returns>
     </member>
     <member name="P:System.Windows.Controls.TreeViewItem.IsExpanded">
       <summary>Gets or sets whether the nested items in a <see cref="T:System.Windows.Controls.TreeViewItem" /> are expanded or collapsed.  </summary>
@@ -23245,23 +23245,23 @@
     <member name="T:System.Windows.Controls.UndoAction">
       <summary> How the undo stack caused or is affected by a text change. </summary>
     </member>
-    <member name="F:System.Windows.Controls.UndoAction.None">
-      <summary> This change will not affect the undo stack at all </summary>
-    </member>
-    <member name="F:System.Windows.Controls.UndoAction.Merge">
-      <summary> This change will merge into the previous undo unit </summary>
-    </member>
-    <member name="F:System.Windows.Controls.UndoAction.Undo">
-      <summary> This change is the result of a call to Undo() </summary>
-    </member>
-    <member name="F:System.Windows.Controls.UndoAction.Redo">
-      <summary> This change is the result of a call to Redo() </summary>
-    </member>
     <member name="F:System.Windows.Controls.UndoAction.Clear">
       <summary> This change will clear the undo stack </summary>
     </member>
     <member name="F:System.Windows.Controls.UndoAction.Create">
       <summary> This change will create a new undo unit </summary>
+    </member>
+    <member name="F:System.Windows.Controls.UndoAction.Merge">
+      <summary> This change will merge into the previous undo unit </summary>
+    </member>
+    <member name="F:System.Windows.Controls.UndoAction.None">
+      <summary> This change will not affect the undo stack at all </summary>
+    </member>
+    <member name="F:System.Windows.Controls.UndoAction.Redo">
+      <summary> This change is the result of a call to Redo() </summary>
+    </member>
+    <member name="F:System.Windows.Controls.UndoAction.Undo">
+      <summary> This change is the result of a call to Undo() </summary>
     </member>
     <member name="T:System.Windows.Controls.UserControl">
       <summary>Provides a simple way to create a control.</summary>
@@ -23528,17 +23528,17 @@
     <member name="T:System.Windows.Controls.ValidationStep">
       <summary>Specifies when a <see cref="T:System.Windows.Controls.ValidationRule" /> runs.</summary>
     </member>
-    <member name="F:System.Windows.Controls.ValidationStep.RawProposedValue">
-      <summary>Runs the <see cref="T:System.Windows.Controls.ValidationRule" /> before any conversion occurs.</summary>
+    <member name="F:System.Windows.Controls.ValidationStep.CommittedValue">
+      <summary>Runs the <see cref="T:System.Windows.Controls.ValidationRule" /> after the value has been committed to the source.</summary>
     </member>
     <member name="F:System.Windows.Controls.ValidationStep.ConvertedProposedValue">
       <summary>Runs the <see cref="T:System.Windows.Controls.ValidationRule" /> after the value is converted.</summary>
     </member>
+    <member name="F:System.Windows.Controls.ValidationStep.RawProposedValue">
+      <summary>Runs the <see cref="T:System.Windows.Controls.ValidationRule" /> before any conversion occurs.</summary>
+    </member>
     <member name="F:System.Windows.Controls.ValidationStep.UpdatedValue">
       <summary>Runs the <see cref="T:System.Windows.Controls.ValidationRule" /> after the source is updated.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.ValidationStep.CommittedValue">
-      <summary>Runs the <see cref="T:System.Windows.Controls.ValidationRule" /> after the value has been committed to the source.</summary>
     </member>
     <member name="T:System.Windows.Controls.ViewBase">
       <summary>Represents the base class for views that define the appearance of data in a <see cref="T:System.Windows.Controls.ListView" /> control.</summary>
@@ -23758,23 +23758,23 @@
     <member name="T:System.Windows.Controls.VirtualizationCacheLengthUnit">
       <summary>Specifies the type of unit that is used by the <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLength" /> attached property.</summary>
     </member>
-    <member name="F:System.Windows.Controls.VirtualizationCacheLengthUnit.Pixel">
-      <summary>The <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLength" /> is measured in terms of device-independent units (1/96th inch per unit).</summary>
-    </member>
     <member name="F:System.Windows.Controls.VirtualizationCacheLengthUnit.Item">
       <summary>The <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLength" /> is measured in terms of the items that are displayed in the panel.</summary>
     </member>
     <member name="F:System.Windows.Controls.VirtualizationCacheLengthUnit.Page">
       <summary>The <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLength" /> is measured in terms of a page, which is equal to the size of the panel's viewport.</summary>
     </member>
+    <member name="F:System.Windows.Controls.VirtualizationCacheLengthUnit.Pixel">
+      <summary>The <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLength" /> is measured in terms of device-independent units (1/96th inch per unit).</summary>
+    </member>
     <member name="T:System.Windows.Controls.VirtualizationMode">
       <summary>Specifies the method the <see cref="T:System.Windows.Controls.VirtualizingStackPanel" /> uses to manage virtualizing its child items.</summary>
     </member>
-    <member name="F:System.Windows.Controls.VirtualizationMode.Standard">
-      <summary>Create and discard the item containers.</summary>
-    </member>
     <member name="F:System.Windows.Controls.VirtualizationMode.Recycling">
       <summary>Reuse the item containers.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.VirtualizationMode.Standard">
+      <summary>Create and discard the item containers.</summary>
     </member>
     <member name="T:System.Windows.Controls.VirtualizingPanel">
       <summary>Provides a framework for <see cref="T:System.Windows.Controls.Panel" /> elements that virtualize their child data collection. This is an abstract class.</summary>
@@ -24374,14 +24374,14 @@
     <member name="T:System.Windows.Controls.Primitives.AutoToolTipPlacement">
       <summary>Describes the means by which the automatic <see cref="T:System.Windows.Controls.ToolTip" /> is positioned on a <see cref="T:System.Windows.Controls.Slider" /> control.</summary>
     </member>
+    <member name="F:System.Windows.Controls.Primitives.AutoToolTipPlacement.BottomRight">
+      <summary>For a horizontal <see cref="T:System.Windows.Controls.Slider" /> show the automatic <see cref="T:System.Windows.Controls.ToolTip" /> at the bottom edge of the <see cref="T:System.Windows.Controls.Primitives.Thumb" />. For a vertical <see cref="T:System.Windows.Controls.Slider" /> show the automatic <see cref="T:System.Windows.Controls.ToolTip" /> at the right edge of the <see cref="T:System.Windows.Controls.Primitives.Thumb" />.</summary>
+    </member>
     <member name="F:System.Windows.Controls.Primitives.AutoToolTipPlacement.None">
       <summary>No automatic <see cref="T:System.Windows.Controls.ToolTip" /></summary>
     </member>
     <member name="F:System.Windows.Controls.Primitives.AutoToolTipPlacement.TopLeft">
       <summary>For a horizontal <see cref="T:System.Windows.Controls.Slider" /> show the automatic <see cref="T:System.Windows.Controls.ToolTip" /> at the top edge of the <see cref="T:System.Windows.Controls.Primitives.Thumb" />. For a vertical <see cref="T:System.Windows.Controls.Slider" /> show the automatic <see cref="T:System.Windows.Controls.ToolTip" /> at the left edge of the <see cref="T:System.Windows.Controls.Primitives.Thumb" />.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.Primitives.AutoToolTipPlacement.BottomRight">
-      <summary>For a horizontal <see cref="T:System.Windows.Controls.Slider" /> show the automatic <see cref="T:System.Windows.Controls.ToolTip" /> at the bottom edge of the <see cref="T:System.Windows.Controls.Primitives.Thumb" />. For a vertical <see cref="T:System.Windows.Controls.Slider" /> show the automatic <see cref="T:System.Windows.Controls.ToolTip" /> at the right edge of the <see cref="T:System.Windows.Controls.Primitives.Thumb" />.</summary>
     </member>
     <member name="T:System.Windows.Controls.Primitives.BulletDecorator">
       <summary>Represents a layout control that aligns a bullet and another visual object.</summary>
@@ -25317,11 +25317,11 @@
     <member name="T:System.Windows.Controls.Primitives.GeneratorDirection">
       <summary>Specifies the direction in which item generation will occur. <see cref="T:System.Windows.Controls.Primitives.GeneratorDirection" /> is used by <see cref="Overload:System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt" />.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Primitives.GeneratorDirection.Forward">
-      <summary>Specifies to generate items in a forward direction.</summary>
-    </member>
     <member name="F:System.Windows.Controls.Primitives.GeneratorDirection.Backward">
       <summary>Specifies to generate items in a backward direction.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.Primitives.GeneratorDirection.Forward">
+      <summary>Specifies to generate items in a forward direction.</summary>
     </member>
     <member name="T:System.Windows.Controls.Primitives.GeneratorPosition">
       <summary>
@@ -25368,17 +25368,17 @@
     <member name="T:System.Windows.Controls.Primitives.GeneratorStatus">
       <summary>Used by <see cref="T:System.Windows.Controls.ItemContainerGenerator" /> to indicate the status of its item generation.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Primitives.GeneratorStatus.NotStarted">
-      <summary>The generator has not tried to generate content.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.Primitives.GeneratorStatus.GeneratingContainers">
-      <summary>The generator is generating containers.</summary>
-    </member>
     <member name="F:System.Windows.Controls.Primitives.GeneratorStatus.ContainersGenerated">
       <summary>The generator has finished generating containers.</summary>
     </member>
     <member name="F:System.Windows.Controls.Primitives.GeneratorStatus.Error">
       <summary>The generator has finished generating containers, but encountered one or more errors.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.Primitives.GeneratorStatus.GeneratingContainers">
+      <summary>The generator is generating containers.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.Primitives.GeneratorStatus.NotStarted">
+      <summary>The generator has not tried to generate content.</summary>
     </member>
     <member name="T:System.Windows.Controls.Primitives.GridViewRowPresenterBase">
       <summary>Represents the base class for classes that define the layout for a row of data where different data items are displayed in different columns.</summary>
@@ -25675,7 +25675,7 @@
     </member>
     <member name="M:System.Windows.Controls.Primitives.MenuBase.GetContainerForItemOverride">
       <summary>Creates or identifies the element used to display the specified item.</summary>
-      <returns>A <see cref="T:System.Windows.Controls.MenuItem" />.</returns>
+      <returns>The element used to display the specified item.</returns>
     </member>
     <member name="M:System.Windows.Controls.Primitives.MenuBase.HandleMouseButton(System.Windows.Input.MouseButtonEventArgs)">
       <summary>Called when a mouse button is pressed or released. </summary>
@@ -25756,8 +25756,8 @@
     <member name="F:System.Windows.Controls.Primitives.PlacementMode.Absolute">
       <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control relative to the upper-left corner of the screen and at an offset that is defined by the <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> and <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> property values. If the screen edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control then repositions itself to align with the edge.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Primitives.PlacementMode.Relative">
-      <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control relative to the upper-left corner of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> and at an offset that is defined by the <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> and <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> property values. If the screen edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control repositions itself to align with the screen edge.</summary>
+    <member name="F:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint">
+      <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control relative to the upper-left corner of the screen and at an offset that is defined by the <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> and <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> property values. If the screen edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control extends in the opposite direction from the axis defined by the <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> or <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />=.</summary>
     </member>
     <member name="F:System.Windows.Controls.Primitives.PlacementMode.Bottom">
       <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control where the control  aligns its upper edge with the lower edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> and aligns its left edge with the left edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If the lower screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control repositions itself so that its lower edge aligns with the upper edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If the upper screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control then repositions itself so that its upper edge aligns with the upper screen-edge.</summary>
@@ -25765,14 +25765,11 @@
     <member name="F:System.Windows.Controls.Primitives.PlacementMode.Center">
       <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control where it is centered over the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If a screen edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control repositions itself to align with the screen edge. </summary>
     </member>
-    <member name="F:System.Windows.Controls.Primitives.PlacementMode.Right">
-      <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control that aligns its left edge with the right edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> and aligns its upper edge with the upper edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If the right screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control repositions itself so that its left edge aligns with the left edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If the left screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control repositions itself so that its left edge aligns with the left screen-edge. If the upper or lower screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control then repositions itself to align with the obscuring screen edge.</summary>
+    <member name="F:System.Windows.Controls.Primitives.PlacementMode.Custom">
+      <summary>A position and repositioning behavior for the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control that is defined by the  <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacementCallback" /> delegate specified by the <see cref="P:System.Windows.Controls.Primitives.Popup.CustomPopupPlacementCallback" /> property.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint">
-      <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control relative to the upper-left corner of the screen and at an offset that is defined by the <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> and <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> property values. If the screen edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control extends in the opposite direction from the axis defined by the <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> or <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />=.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.Primitives.PlacementMode.RelativePoint">
-      <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control relative to the upper-left corner of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> and at an offset that is defined by the <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> and <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> property values. If a screen edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the <see cref="T:System.Windows.Controls.Primitives.Popup" /> extends in the opposite direction from the direction from the axis defined by the <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> or <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />. If the opposite screen edge also obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control then aligns with this screen edge.</summary>
+    <member name="F:System.Windows.Controls.Primitives.PlacementMode.Left">
+      <summary>A <see cref="T:System.Windows.Controls.Primitives.Popup" /> control that aligns its right edge with the left edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> and aligns its upper edge with the upper edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If the left screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the <see cref="T:System.Windows.Controls.Primitives.Popup" /> repositions itself so that its left edge aligns with the right edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If the right screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the right edge of the control aligns with the right screen-edge. If the upper or lower screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control repositions itself to align with the obscuring screen edge.</summary>
     </member>
     <member name="F:System.Windows.Controls.Primitives.PlacementMode.Mouse">
       <summary>A postion of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control that aligns its upper edge with the lower edge of the bounding box of the mouse and aligns its left edge with the left edge of the bounding box of the mouse. If the lower screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, it repositions itself to align with the upper edge of the bounding box of the mouse. If the upper screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control repositions itself to align with the upper screen-edge. </summary>
@@ -25780,14 +25777,17 @@
     <member name="F:System.Windows.Controls.Primitives.PlacementMode.MousePoint">
       <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control relative to the tip of the mouse cursor and at an offset that is defined by the <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> and <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> property values. If a horizontal or vertical screen edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, it opens in the opposite direction from the obscuring edge. If the opposite screen edge also obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, it then aligns with the obscuring screen edge.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Primitives.PlacementMode.Left">
-      <summary>A <see cref="T:System.Windows.Controls.Primitives.Popup" /> control that aligns its right edge with the left edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> and aligns its upper edge with the upper edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If the left screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the <see cref="T:System.Windows.Controls.Primitives.Popup" /> repositions itself so that its left edge aligns with the right edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If the right screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the right edge of the control aligns with the right screen-edge. If the upper or lower screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control repositions itself to align with the obscuring screen edge.</summary>
+    <member name="F:System.Windows.Controls.Primitives.PlacementMode.Relative">
+      <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control relative to the upper-left corner of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> and at an offset that is defined by the <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> and <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> property values. If the screen edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control repositions itself to align with the screen edge.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.Primitives.PlacementMode.RelativePoint">
+      <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control relative to the upper-left corner of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> and at an offset that is defined by the <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> and <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" /> property values. If a screen edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the <see cref="T:System.Windows.Controls.Primitives.Popup" /> extends in the opposite direction from the direction from the axis defined by the <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> or <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />. If the opposite screen edge also obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control then aligns with this screen edge.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.Primitives.PlacementMode.Right">
+      <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control that aligns its left edge with the right edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> and aligns its upper edge with the upper edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If the right screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control repositions itself so that its left edge aligns with the left edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If the left screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control repositions itself so that its left edge aligns with the left screen-edge. If the upper or lower screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control then repositions itself to align with the obscuring screen edge.</summary>
     </member>
     <member name="F:System.Windows.Controls.Primitives.PlacementMode.Top">
       <summary>A position of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control that aligns its lower edge with the upper edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> and aligns its left edge with the left edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If the upper screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the control repositions itself so that its upper edge aligns with the lower edge of the <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. If the lower screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, the lower edge of the control aligns with the lower screen-edge. If the left or right screen-edge obscures the <see cref="T:System.Windows.Controls.Primitives.Popup" />, it then repositions itself to align with the obscuring screen.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.Primitives.PlacementMode.Custom">
-      <summary>A position and repositioning behavior for the <see cref="T:System.Windows.Controls.Primitives.Popup" /> control that is defined by the  <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacementCallback" /> delegate specified by the <see cref="P:System.Windows.Controls.Primitives.Popup.CustomPopupPlacementCallback" /> property.</summary>
     </member>
     <member name="T:System.Windows.Controls.Primitives.Popup">
       <summary>Represents a pop-up window that has content.</summary>
@@ -25948,26 +25948,26 @@
     <member name="T:System.Windows.Controls.Primitives.PopupAnimation">
       <summary>Describes how a <see cref="T:System.Windows.Controls.Primitives.Popup" /> control animates when it opens.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Primitives.PopupAnimation.None">
-      <summary>The <see cref="T:System.Windows.Controls.Primitives.Popup" /> control appears without animation. </summary>
-    </member>
     <member name="F:System.Windows.Controls.Primitives.PopupAnimation.Fade">
       <summary>The <see cref="T:System.Windows.Controls.Primitives.Popup" /> control gradually appears, or fades in. This effect is created by increasing the opacity of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> window over time.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Primitives.PopupAnimation.Slide">
-      <summary>The <see cref="T:System.Windows.Controls.Primitives.Popup" /> control slides down or up into place. By default, a <see cref="T:System.Windows.Controls.Primitives.Popup" /> slides down. However, if the screen does not provide enough room for the <see cref="T:System.Windows.Controls.Primitives.Popup" /> to slide down, it slides up instead.</summary>
+    <member name="F:System.Windows.Controls.Primitives.PopupAnimation.None">
+      <summary>The <see cref="T:System.Windows.Controls.Primitives.Popup" /> control appears without animation. </summary>
     </member>
     <member name="F:System.Windows.Controls.Primitives.PopupAnimation.Scroll">
       <summary>The <see cref="T:System.Windows.Controls.Primitives.Popup" /> control scrolls from the upper-left corner of its parent. If the screen does not provide enough room to allow the <see cref="T:System.Windows.Controls.Primitives.Popup" /> default behavior, the <see cref="T:System.Windows.Controls.Primitives.Popup" /> scrolls from the lower-right corner instead.</summary>
     </member>
+    <member name="F:System.Windows.Controls.Primitives.PopupAnimation.Slide">
+      <summary>The <see cref="T:System.Windows.Controls.Primitives.Popup" /> control slides down or up into place. By default, a <see cref="T:System.Windows.Controls.Primitives.Popup" /> slides down. However, if the screen does not provide enough room for the <see cref="T:System.Windows.Controls.Primitives.Popup" /> to slide down, it slides up instead.</summary>
+    </member>
     <member name="T:System.Windows.Controls.Primitives.PopupPrimaryAxis">
       <summary>Describes the direction to move a <see cref="T:System.Windows.Controls.Primitives.Popup" /> control to increase the amount of the <see cref="T:System.Windows.Controls.Primitives.Popup" /> that is visible.</summary>
     </member>
-    <member name="F:System.Windows.Controls.Primitives.PopupPrimaryAxis.None">
-      <summary>A <see cref="T:System.Windows.Controls.Primitives.Popup" /> control changes position according to default <see cref="T:System.Windows.Controls.Primitives.Popup" /> behavior. </summary>
-    </member>
     <member name="F:System.Windows.Controls.Primitives.PopupPrimaryAxis.Horizontal">
       <summary>A <see cref="T:System.Windows.Controls.Primitives.Popup" /> control changes position by moving along the horizontal axis of the screen before moving along the vertical axis. </summary>
+    </member>
+    <member name="F:System.Windows.Controls.Primitives.PopupPrimaryAxis.None">
+      <summary>A <see cref="T:System.Windows.Controls.Primitives.Popup" /> control changes position according to default <see cref="T:System.Windows.Controls.Primitives.Popup" /> behavior. </summary>
     </member>
     <member name="F:System.Windows.Controls.Primitives.PopupPrimaryAxis.Vertical">
       <summary>A <see cref="T:System.Windows.Controls.Primitives.Popup" /> control changes position by moving along the vertical axis of the screen before moving along the horizontal axis.</summary>
@@ -26483,7 +26483,7 @@
     </member>
     <member name="M:System.Windows.Controls.Primitives.StatusBar.GetContainerForItemOverride">
       <summary>Creates a new <see cref="T:System.Windows.Controls.Primitives.StatusBarItem" />.</summary>
-      <returns>A new <see cref="T:System.Windows.Controls.Primitives.StatusBarItem" />.</returns>
+      <returns>The element used to display the specified item.</returns>
     </member>
     <member name="M:System.Windows.Controls.Primitives.StatusBar.IsItemItsOwnContainerOverride(System.Object)">
       <summary>Determines if the specified item is (or is eligible to be) its own container.</summary>
@@ -27045,32 +27045,32 @@
     <member name="T:System.Windows.Controls.Primitives.TickBarPlacement">
       <summary>Specifies the placement of a <see cref="T:System.Windows.Controls.Primitives.TickBar" /> with respect to the <see cref="T:System.Windows.Controls.Primitives.Track" /> of a <see cref="T:System.Windows.Controls.Slider" /> control.</summary>
     </member>
+    <member name="F:System.Windows.Controls.Primitives.TickBarPlacement.Bottom">
+      <summary>The tick bar is positioned below the <see cref="T:System.Windows.Controls.Primitives.Track" /> of the <see cref="T:System.Windows.Controls.Slider" />.</summary>
+    </member>
     <member name="F:System.Windows.Controls.Primitives.TickBarPlacement.Left">
       <summary>The tick bar is positioned to the left of the <see cref="T:System.Windows.Controls.Primitives.Track" /> of the <see cref="T:System.Windows.Controls.Slider" />.</summary>
-    </member>
-    <member name="F:System.Windows.Controls.Primitives.TickBarPlacement.Top">
-      <summary>The tick bar is positioned above the <see cref="T:System.Windows.Controls.Primitives.Track" /> of the <see cref="T:System.Windows.Controls.Slider" />. </summary>
     </member>
     <member name="F:System.Windows.Controls.Primitives.TickBarPlacement.Right">
       <summary>The tick bar is positioned to the right of the <see cref="T:System.Windows.Controls.Primitives.Track" /> of the <see cref="T:System.Windows.Controls.Slider" />. </summary>
     </member>
-    <member name="F:System.Windows.Controls.Primitives.TickBarPlacement.Bottom">
-      <summary>The tick bar is positioned below the <see cref="T:System.Windows.Controls.Primitives.Track" /> of the <see cref="T:System.Windows.Controls.Slider" />.</summary>
+    <member name="F:System.Windows.Controls.Primitives.TickBarPlacement.Top">
+      <summary>The tick bar is positioned above the <see cref="T:System.Windows.Controls.Primitives.Track" /> of the <see cref="T:System.Windows.Controls.Slider" />. </summary>
     </member>
     <member name="T:System.Windows.Controls.Primitives.TickPlacement">
       <summary>Specifies the position of tick marks in a <see cref="T:System.Windows.Controls.Slider" /> control with respect to the <see cref="T:System.Windows.Controls.Primitives.Track" /> that the control implements.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.Primitives.TickPlacement.Both">
+      <summary>Tick marks appear above and below the <see cref="T:System.Windows.Controls.Primitives.Track" /> bar for a horizontal <see cref="T:System.Windows.Controls.Slider" />, or to the left and right of the <see cref="T:System.Windows.Controls.Primitives.Track" /> for a vertical <see cref="T:System.Windows.Controls.Slider" />.</summary>
+    </member>
+    <member name="F:System.Windows.Controls.Primitives.TickPlacement.BottomRight">
+      <summary>Tick marks appear below the <see cref="T:System.Windows.Controls.Primitives.Track" /> for a horizontal <see cref="T:System.Windows.Controls.Slider" />, or to the right of the <see cref="T:System.Windows.Controls.Primitives.Track" /> for a vertical <see cref="T:System.Windows.Controls.Slider" />. </summary>
     </member>
     <member name="F:System.Windows.Controls.Primitives.TickPlacement.None">
       <summary>No tick marks appear. </summary>
     </member>
     <member name="F:System.Windows.Controls.Primitives.TickPlacement.TopLeft">
       <summary>Tick marks appear above the <see cref="T:System.Windows.Controls.Primitives.Track" /> for a horizontal <see cref="T:System.Windows.Controls.Slider" />, or to the left of the <see cref="T:System.Windows.Controls.Primitives.Track" /> for a vertical <see cref="T:System.Windows.Controls.Slider" />. </summary>
-    </member>
-    <member name="F:System.Windows.Controls.Primitives.TickPlacement.BottomRight">
-      <summary>Tick marks appear below the <see cref="T:System.Windows.Controls.Primitives.Track" /> for a horizontal <see cref="T:System.Windows.Controls.Slider" />, or to the right of the <see cref="T:System.Windows.Controls.Primitives.Track" /> for a vertical <see cref="T:System.Windows.Controls.Slider" />. </summary>
-    </member>
-    <member name="F:System.Windows.Controls.Primitives.TickPlacement.Both">
-      <summary>Tick marks appear above and below the <see cref="T:System.Windows.Controls.Primitives.Track" /> bar for a horizontal <see cref="T:System.Windows.Controls.Slider" />, or to the left and right of the <see cref="T:System.Windows.Controls.Primitives.Track" /> for a vertical <see cref="T:System.Windows.Controls.Slider" />.</summary>
     </member>
     <member name="T:System.Windows.Controls.Primitives.ToggleButton">
       <summary>Base class for controls that can switch states, such as <see cref="T:System.Windows.Controls.CheckBox" />. </summary>
@@ -27899,20 +27899,20 @@
     <member name="T:System.Windows.Data.BindingMode">
       <summary>Describes the direction of the data flow in a binding.</summary>
     </member>
-    <member name="F:System.Windows.Data.BindingMode.TwoWay">
-      <summary>Causes changes to either the source property or the target property to automatically update the other. This type of binding is appropriate for editable forms or other fully-interactive UI scenarios.</summary>
-    </member>
-    <member name="F:System.Windows.Data.BindingMode.OneWay">
-      <summary>Updates the binding target (target) property when the binding source (source) changes. This type of binding is appropriate if the control being bound is implicitly read-only. For instance, you may bind to a source such as a stock ticker. Or perhaps your target property has no control interface provided for making changes, such as a data-bound background color of a table. If there is no need to monitor the changes of the target property, using the <see cref="F:System.Windows.Data.BindingMode.OneWay" /> binding mode avoids the overhead of the <see cref="F:System.Windows.Data.BindingMode.TwoWay" /> binding mode.</summary>
+    <member name="F:System.Windows.Data.BindingMode.Default">
+      <summary>Uses the default <see cref="P:System.Windows.Data.Binding.Mode" /> value of the binding target. The default value varies for each dependency property. In general, user-editable control properties, such as those of text boxes and check boxes, default to two-way bindings, whereas most other properties default to one-way bindings. A programmatic way to determine whether a dependency property binds one-way or two-way by default is to get the property metadata of the property using <see cref="M:System.Windows.DependencyProperty.GetMetadata(System.Type)" /> and then check the Boolean value of the <see cref="P:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault" /> property.</summary>
     </member>
     <member name="F:System.Windows.Data.BindingMode.OneTime">
       <summary>Updates the binding target when the application starts or when the data context changes. This type of binding is appropriate if you are using data where either a snapshot of the current state is appropriate to use or the data is truly static. This type of binding is also useful if you want to initialize your target property with some value from a source property and the data context is not known in advance. This is essentially a simpler form of <see cref="F:System.Windows.Data.BindingMode.OneWay" /> binding that provides better performance in cases where the source value does not change.</summary>
     </member>
+    <member name="F:System.Windows.Data.BindingMode.OneWay">
+      <summary>Updates the binding target (target) property when the binding source (source) changes. This type of binding is appropriate if the control being bound is implicitly read-only. For instance, you may bind to a source such as a stock ticker. Or perhaps your target property has no control interface provided for making changes, such as a data-bound background color of a table. If there is no need to monitor the changes of the target property, using the <see cref="F:System.Windows.Data.BindingMode.OneWay" /> binding mode avoids the overhead of the <see cref="F:System.Windows.Data.BindingMode.TwoWay" /> binding mode.</summary>
+    </member>
     <member name="F:System.Windows.Data.BindingMode.OneWayToSource">
       <summary>Updates the source property when the target property changes.</summary>
     </member>
-    <member name="F:System.Windows.Data.BindingMode.Default">
-      <summary>Uses the default <see cref="P:System.Windows.Data.Binding.Mode" /> value of the binding target. The default value varies for each dependency property. In general, user-editable control properties, such as those of text boxes and check boxes, default to two-way bindings, whereas most other properties default to one-way bindings. A programmatic way to determine whether a dependency property binds one-way or two-way by default is to get the property metadata of the property using <see cref="M:System.Windows.DependencyProperty.GetMetadata(System.Type)" /> and then check the Boolean value of the <see cref="P:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault" /> property.</summary>
+    <member name="F:System.Windows.Data.BindingMode.TwoWay">
+      <summary>Causes changes to either the source property or the target property to automatically update the other. This type of binding is appropriate for editable forms or other fully-interactive UI scenarios.</summary>
     </member>
     <member name="T:System.Windows.Data.BindingOperations">
       <summary>Provides static methods to manipulate bindings, including <see cref="T:System.Windows.Data.Binding" />, <see cref="T:System.Windows.Data.MultiBinding" />, and <see cref="T:System.Windows.Data.PriorityBinding" /> objects.</summary>
@@ -28045,29 +28045,29 @@
     <member name="T:System.Windows.Data.BindingStatus">
       <summary>Describes the status of a binding.</summary>
     </member>
-    <member name="F:System.Windows.Data.BindingStatus.Unattached">
-      <summary>The binding has not yet been attached to its target property.</summary>
-    </member>
-    <member name="F:System.Windows.Data.BindingStatus.Inactive">
-      <summary>The binding has not been activated.</summary>
-    </member>
     <member name="F:System.Windows.Data.BindingStatus.Active">
       <summary>The binding has been successfully activated. This means that the binding has been attached to its binding target (target) property and has located the binding source (source), resolved the Path and/or XPath, and begun transferring values.</summary>
-    </member>
-    <member name="F:System.Windows.Data.BindingStatus.Detached">
-      <summary>The binding has been detached from its target property.</summary>
     </member>
     <member name="F:System.Windows.Data.BindingStatus.AsyncRequestPending">
       <summary>The binding is waiting for an asynchronous operation to complete.</summary>
     </member>
+    <member name="F:System.Windows.Data.BindingStatus.Detached">
+      <summary>The binding has been detached from its target property.</summary>
+    </member>
+    <member name="F:System.Windows.Data.BindingStatus.Inactive">
+      <summary>The binding has not been activated.</summary>
+    </member>
     <member name="F:System.Windows.Data.BindingStatus.PathError">
       <summary>The binding was unable to resolve the source path.</summary>
     </member>
-    <member name="F:System.Windows.Data.BindingStatus.UpdateTargetError">
-      <summary>The binding could not successfully return a source value to update the target value. For more information, see the remarks on <see cref="P:System.Windows.Data.BindingBase.FallbackValue" />.</summary>
+    <member name="F:System.Windows.Data.BindingStatus.Unattached">
+      <summary>The binding has not yet been attached to its target property.</summary>
     </member>
     <member name="F:System.Windows.Data.BindingStatus.UpdateSourceError">
       <summary>The binding was unable to send the value to the source property.</summary>
+    </member>
+    <member name="F:System.Windows.Data.BindingStatus.UpdateTargetError">
+      <summary>The binding could not successfully return a source value to update the target value. For more information, see the remarks on <see cref="P:System.Windows.Data.BindingBase.FallbackValue" />.</summary>
     </member>
     <member name="T:System.Windows.Data.CollectionContainer">
       <summary>Holds an existing collection structure, such as an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> or a <see cref="T:System.Data.DataSet" />, to be used inside a <see cref="T:System.Windows.Data.CompositeCollection" />.</summary>
@@ -29413,17 +29413,17 @@
     <member name="T:System.Windows.Data.RelativeSourceMode">
       <summary>Describes the location of the binding source relative to the position of the binding target.</summary>
     </member>
+    <member name="F:System.Windows.Data.RelativeSourceMode.FindAncestor">
+      <summary>Refers to the ancestor in the parent chain of the data-bound element. You can use this to bind to an ancestor of a specific type or its subclasses. This is the mode you use if you want to specify <see cref="P:System.Windows.Data.RelativeSource.AncestorType" /> and/or <see cref="P:System.Windows.Data.RelativeSource.AncestorLevel" />.</summary>
+    </member>
     <member name="F:System.Windows.Data.RelativeSourceMode.PreviousData">
       <summary>Allows you to bind the previous data item (not that control that contains the data item) in the list of data items being displayed.</summary>
-    </member>
-    <member name="F:System.Windows.Data.RelativeSourceMode.TemplatedParent">
-      <summary>Refers to the element to which the template (in which the data-bound element exists) is applied. This is similar to setting a <see cref="T:System.Windows.TemplateBindingExtension" /> and is only applicable if the <see cref="T:System.Windows.Data.Binding" /> is within a template.</summary>
     </member>
     <member name="F:System.Windows.Data.RelativeSourceMode.Self">
       <summary>Refers to the element on which you are setting the binding and allows you to bind one property of that element to another property on the same element.</summary>
     </member>
-    <member name="F:System.Windows.Data.RelativeSourceMode.FindAncestor">
-      <summary>Refers to the ancestor in the parent chain of the data-bound element. You can use this to bind to an ancestor of a specific type or its subclasses. This is the mode you use if you want to specify <see cref="P:System.Windows.Data.RelativeSource.AncestorType" /> and/or <see cref="P:System.Windows.Data.RelativeSource.AncestorLevel" />.</summary>
+    <member name="F:System.Windows.Data.RelativeSourceMode.TemplatedParent">
+      <summary>Refers to the element to which the template (in which the data-bound element exists) is applied. This is similar to setting a <see cref="T:System.Windows.TemplateBindingExtension" /> and is only applicable if the <see cref="T:System.Windows.Data.Binding" /> is within a template.</summary>
     </member>
     <member name="T:System.Windows.Data.UpdateSourceExceptionFilterCallback">
       <summary>Represents the method that handles exceptions that are thrown during the update of the binding source value. This must be used with the <see cref="T:System.Windows.Controls.ExceptionValidationRule" />.</summary>
@@ -29437,14 +29437,14 @@
     <member name="F:System.Windows.Data.UpdateSourceTrigger.Default">
       <summary>The default <see cref="T:System.Windows.Data.UpdateSourceTrigger" /> value of the binding target property. The default value for most dependency properties is <see cref="F:System.Windows.Data.UpdateSourceTrigger.PropertyChanged" />, while the <see cref="P:System.Windows.Controls.TextBox.Text" /> property has a default value of <see cref="F:System.Windows.Data.UpdateSourceTrigger.LostFocus" />.</summary>
     </member>
-    <member name="F:System.Windows.Data.UpdateSourceTrigger.PropertyChanged">
-      <summary>Updates the binding source immediately whenever the binding target property changes.</summary>
+    <member name="F:System.Windows.Data.UpdateSourceTrigger.Explicit">
+      <summary>Updates the binding source only when you call the <see cref="M:System.Windows.Data.BindingExpression.UpdateSource" /> method.</summary>
     </member>
     <member name="F:System.Windows.Data.UpdateSourceTrigger.LostFocus">
       <summary>Updates the binding source whenever the binding target element loses focus.</summary>
     </member>
-    <member name="F:System.Windows.Data.UpdateSourceTrigger.Explicit">
-      <summary>Updates the binding source only when you call the <see cref="M:System.Windows.Data.BindingExpression.UpdateSource" /> method.</summary>
+    <member name="F:System.Windows.Data.UpdateSourceTrigger.PropertyChanged">
+      <summary>Updates the binding source immediately whenever the binding target property changes.</summary>
     </member>
     <member name="T:System.Windows.Data.ValueConversionAttribute">
       <summary>Represents an attribute that allows the author of a value converter to specify the data types involved in the implementation of the converter.</summary>
@@ -31424,7 +31424,7 @@
     </member>
     <member name="P:System.Windows.Documents.LinkTargetCollection.Item(System.Int32)">
       <summary>Gets or sets the <see cref="T:System.Windows.Documents.LinkTarget" /> at the specified index.</summary>
-      <returns>A <see cref="T:System.Windows.Documents.LinkTarget" />.</returns>
+      <returns>The <see cref="T:System.Windows.Documents.LinkTarget" /> at the specified index.</returns>
       <param name="index">The index of the target being written or read.</param>
     </member>
     <member name="M:System.Windows.Documents.LinkTargetCollection.Remove(System.Windows.Documents.LinkTarget)">
@@ -33135,20 +33135,20 @@
     <member name="T:System.Windows.Documents.TextPointerContext">
       <summary>Determines the category of content that is adjacent to a <see cref="T:System.Windows.Documents.TextPointer" /> in a specified <see cref="T:System.Windows.Documents.LogicalDirection" />.</summary>
     </member>
+    <member name="F:System.Windows.Documents.TextPointerContext.ElementEnd">
+      <summary>The <see cref="T:System.Windows.Documents.TextPointer" /> is adjacent to the closing tag of a <see cref="T:System.Windows.Documents.TextElement" />.</summary>
+    </member>
+    <member name="F:System.Windows.Documents.TextPointerContext.ElementStart">
+      <summary>The <see cref="T:System.Windows.Documents.TextPointer" /> is adjacent to the opening tag of a <see cref="T:System.Windows.Documents.TextElement" />.</summary>
+    </member>
+    <member name="F:System.Windows.Documents.TextPointerContext.EmbeddedElement">
+      <summary>The <see cref="T:System.Windows.Documents.TextPointer" /> is adjacent to an embedded <see cref="T:System.Windows.UIElement" /> or <see cref="T:System.Windows.ContentElement" />.</summary>
+    </member>
     <member name="F:System.Windows.Documents.TextPointerContext.None">
       <summary>The <see cref="T:System.Windows.Documents.TextPointer" /> is adjacent to the beginning or end of content.</summary>
     </member>
     <member name="F:System.Windows.Documents.TextPointerContext.Text">
       <summary>The <see cref="T:System.Windows.Documents.TextPointer" /> is adjacent to text.</summary>
-    </member>
-    <member name="F:System.Windows.Documents.TextPointerContext.EmbeddedElement">
-      <summary>The <see cref="T:System.Windows.Documents.TextPointer" /> is adjacent to an embedded <see cref="T:System.Windows.UIElement" /> or <see cref="T:System.Windows.ContentElement" />.</summary>
-    </member>
-    <member name="F:System.Windows.Documents.TextPointerContext.ElementStart">
-      <summary>The <see cref="T:System.Windows.Documents.TextPointer" /> is adjacent to the opening tag of a <see cref="T:System.Windows.Documents.TextElement" />.</summary>
-    </member>
-    <member name="F:System.Windows.Documents.TextPointerContext.ElementEnd">
-      <summary>The <see cref="T:System.Windows.Documents.TextPointer" /> is adjacent to the closing tag of a <see cref="T:System.Windows.Documents.TextElement" />.</summary>
     </member>
     <member name="T:System.Windows.Documents.TextRange">
       <summary>Represents a selection of content between two <see cref="T:System.Windows.Documents.TextPointer" /> positions.</summary>
@@ -34901,9 +34901,6 @@
     <member name="T:System.Windows.Documents.Serialization.WritingProgressChangeLevel">
       <summary>Specifies the scope of a <see cref="E:System.Windows.Documents.Serialization.SerializerWriter.WritingProgressChanged" /> event.</summary>
     </member>
-    <member name="F:System.Windows.Documents.Serialization.WritingProgressChangeLevel.None">
-      <summary>The output progress is unspecified.</summary>
-    </member>
     <member name="F:System.Windows.Documents.Serialization.WritingProgressChangeLevel.FixedDocumentSequenceWritingProgress">
       <summary>The output progress of a multiple document sequence.</summary>
     </member>
@@ -34912,6 +34909,9 @@
     </member>
     <member name="F:System.Windows.Documents.Serialization.WritingProgressChangeLevel.FixedPageWritingProgress">
       <summary>The output progress of a single page.</summary>
+    </member>
+    <member name="F:System.Windows.Documents.Serialization.WritingProgressChangeLevel.None">
+      <summary>The output progress is unspecified.</summary>
     </member>
     <member name="T:System.Windows.Input.CommandConverter">
       <summary>Converts an <see cref="T:System.Windows.Input.ICommand" /> object to and from other types.</summary>
@@ -35090,23 +35090,23 @@
     <member name="T:System.Windows.Input.KeyboardNavigationMode">
       <summary>Specifies the possible values for changes in focus when logical and directional navigation occurs.</summary>
     </member>
+    <member name="F:System.Windows.Input.KeyboardNavigationMode.Contained">
+      <summary>Depending on the direction of the navigation, focus returns to the first or the last item when the end or the beginning of the container is reached, but does not move past the beginning or end of the container.</summary>
+    </member>
     <member name="F:System.Windows.Input.KeyboardNavigationMode.Continue">
       <summary>Each element receives keyboard focus, as long as it is a navigation stop.  Navigation leaves the containing element when an edge is reached.</summary>
-    </member>
-    <member name="F:System.Windows.Input.KeyboardNavigationMode.Once">
-      <summary>The container and all of its child elements as a whole receive focus only once. Either the first tree child or the or the last focused element in the group receives focus</summary>
     </member>
     <member name="F:System.Windows.Input.KeyboardNavigationMode.Cycle">
       <summary>Depending on the direction of the navigation, the focus returns to the first or the last item when the end or the beginning of the container is reached.  Focus cannot leave the container using logical navigation.</summary>
     </member>
+    <member name="F:System.Windows.Input.KeyboardNavigationMode.Local">
+      <summary>Tab Indexes are considered on local subtree only inside this container and behave like <see cref="F:System.Windows.Input.KeyboardNavigationMode.Continue" /> after that.</summary>
+    </member>
     <member name="F:System.Windows.Input.KeyboardNavigationMode.None">
       <summary>No keyboard navigation is allowed inside this container.</summary>
     </member>
-    <member name="F:System.Windows.Input.KeyboardNavigationMode.Contained">
-      <summary>Depending on the direction of the navigation, focus returns to the first or the last item when the end or the beginning of the container is reached, but does not move past the beginning or end of the container.</summary>
-    </member>
-    <member name="F:System.Windows.Input.KeyboardNavigationMode.Local">
-      <summary>Tab Indexes are considered on local subtree only inside this container and behave like <see cref="F:System.Windows.Input.KeyboardNavigationMode.Continue" /> after that.</summary>
+    <member name="F:System.Windows.Input.KeyboardNavigationMode.Once">
+      <summary>The container and all of its child elements as a whole receive focus only once. Either the first tree child or the or the last focused element in the group receives focus</summary>
     </member>
     <member name="T:System.Windows.Interop.ActiveXHost">
       <summary>Hosts an ActiveX control as an element within Windows Presentation Foundation (WPF) content. </summary>
@@ -36088,11 +36088,11 @@
     <member name="T:System.Windows.Markup.XamlWriterState">
       <summary>Describes possible writing states for a custom XAML writer.</summary>
     </member>
-    <member name="F:System.Windows.Markup.XamlWriterState.Starting">
-      <summary>The <see cref="T:System.Windows.Markup.XamlWriter" /> has started its operation.</summary>
-    </member>
     <member name="F:System.Windows.Markup.XamlWriterState.Finished">
       <summary>The <see cref="T:System.Windows.Markup.XamlWriter" /> has completed its operation.</summary>
+    </member>
+    <member name="F:System.Windows.Markup.XamlWriterState.Starting">
+      <summary>The <see cref="T:System.Windows.Markup.XamlWriter" /> has started its operation.</summary>
     </member>
     <member name="T:System.Windows.Markup.XmlAttributeProperties">
       <summary>Encapsulates the XML language-related attributes of a <see cref="T:System.Windows.DependencyObject" />. </summary>
@@ -36159,7 +36159,6 @@
     </member>
     <member name="F:System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMapsProperty">
       <summary>Identifies the <see cref="P:System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMaps" /> attached property.</summary>
-      <returns>The identifier for the <see cref="P:System.Windows.Markup.XmlAttributeProperties.XmlNamespaceMaps" /> attached property.</returns>
     </member>
     <member name="P:System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition">
       <summary>Gets or sets the attached property value that stores xmlns definitions for use by the WPF XAML parser for .NET Framework 3.0 and .NET Framework 3.5.</summary>
@@ -36167,15 +36166,13 @@
     </member>
     <member name="F:System.Windows.Markup.XmlAttributeProperties.XmlnsDefinitionProperty">
       <summary>Identifies the <see cref="P:System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition" /> attached property.</summary>
-      <returns>The identifier for the <see cref="P:System.Windows.Markup.XmlAttributeProperties.XmlnsDefinition" /> attached property.</returns>
     </member>
     <member name="P:System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary">
       <summary>Gets or sets the attached property value that stores xmlns dictionaries for use by the WPF XAML parser for .NET Framework 3.0 and .NET Framework 3.5.</summary>
-      <returns>The <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</returns>
+      <returns>The attached property value that stores xmlns dictionaries.</returns>
     </member>
     <member name="F:System.Windows.Markup.XmlAttributeProperties.XmlnsDictionaryProperty">
       <summary>Identifies the <see cref="P:System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary" /> attached property.</summary>
-      <returns>The identifier for the <see cref="P:System.Windows.Markup.XmlAttributeProperties.XmlnsDictionary" /> attached property.</returns>
     </member>
     <member name="P:System.Windows.Markup.XmlAttributeProperties.XmlSpace">
       <summary>Gets or sets the mapped value of the xml:space property.</summary>
@@ -36183,7 +36180,6 @@
     </member>
     <member name="F:System.Windows.Markup.XmlAttributeProperties.XmlSpaceProperty">
       <summary>Identifies the <see cref="P:System.Windows.Markup.XmlAttributeProperties.XmlSpace" /> attached property.</summary>
-      <returns>The identifier for the <see cref="P:System.Windows.Markup.XmlAttributeProperties.XmlSpace" /> attached property.</returns>
     </member>
     <member name="T:System.Windows.Markup.XmlnsDictionary">
       <summary>Represents a dictionary that contains xmlns mappings for XAML namespaces in WPF. </summary>
@@ -36654,11 +36650,11 @@
     <member name="T:System.Windows.Markup.Localizer.BamlLocalizerError">
       <summary>Specifies error conditions that may be encountered by the <see cref="T:System.Windows.Markup.Localizer.BamlLocalizer" />.</summary>
     </member>
-    <member name="F:System.Windows.Markup.Localizer.BamlLocalizerError.DuplicateUid">
-      <summary>More than one element has the same <see cref="P:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid" /> value.</summary>
-    </member>
     <member name="F:System.Windows.Markup.Localizer.BamlLocalizerError.DuplicateElement">
       <summary>The localized BAML  contains more than one reference to the same element.</summary>
+    </member>
+    <member name="F:System.Windows.Markup.Localizer.BamlLocalizerError.DuplicateUid">
+      <summary>More than one element has the same <see cref="P:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid" /> value.</summary>
     </member>
     <member name="F:System.Windows.Markup.Localizer.BamlLocalizerError.IncompleteElementPlaceholder">
       <summary>The element's substitution contains incomplete child placeholders.</summary>
@@ -36859,7 +36855,7 @@
     </member>
     <member name="M:System.Windows.Media.Animation.DiscreteThicknessKeyFrame.CreateInstanceCore">
       <summary>Creates a new instance of <see cref="T:System.Windows.Media.Animation.DiscreteThicknessKeyFrame" />.</summary>
-      <returns>A new <see cref="T:System.Windows.Media.Animation.DiscreteThicknessKeyFrame" />.</returns>
+      <returns>The new instance.</returns>
     </member>
     <member name="M:System.Windows.Media.Animation.DiscreteThicknessKeyFrame.InterpolateValueCore(System.Windows.Thickness,System.Double)">
       <summary>Interpolates, between the previous key frame value and the value of the current key frame using discrete interpolation. </summary>
@@ -36923,7 +36919,7 @@
     </member>
     <member name="M:System.Windows.Media.Animation.LinearThicknessKeyFrame.CreateInstanceCore">
       <summary>Creates a new instance of <see cref="T:System.Windows.Media.Animation.LinearThicknessKeyFrame" />.</summary>
-      <returns>A new <see cref="T:System.Windows.Media.Animation.LinearThicknessKeyFrame" />.</returns>
+      <returns>The new instance.</returns>
     </member>
     <member name="M:System.Windows.Media.Animation.LinearThicknessKeyFrame.InterpolateValueCore(System.Windows.Thickness,System.Double)">
       <summary>Interpolates, in a linear fashion, between the previous key frame value and the value of the current key frame, using the supplied progress increment. </summary>
@@ -37007,7 +37003,7 @@
     </member>
     <member name="M:System.Windows.Media.Animation.SplineThicknessKeyFrame.CreateInstanceCore">
       <summary>Creates a new instance of <see cref="T:System.Windows.Media.Animation.SplineThicknessKeyFrame" />.</summary>
-      <returns>A new <see cref="T:System.Windows.Media.Animation.SplineThicknessKeyFrame" />.</returns>
+      <returns>The new instance.</returns>
     </member>
     <member name="M:System.Windows.Media.Animation.SplineThicknessKeyFrame.InterpolateValueCore(System.Windows.Thickness,System.Double)">
       <summary>Uses splined interpolation to transition between the previous key frame value and the value of the current key frame.</summary>
@@ -37347,13 +37343,13 @@
       <summary>Identifies the <see cref="P:System.Windows.Media.Animation.Storyboard.TargetName" /> attached property.  </summary>
       <returns>The identifier for the <see cref="P:System.Windows.Media.Animation.Storyboard.TargetName" /> attached property.</returns>
     </member>
-    <member name="P:System.Windows.Media.Animation.Storyboard.TargetProperty">
-      <summary>Gets or sets the property that should be animated. </summary>
-      <returns>The property to animate.</returns>
-    </member>
     <member name="F:System.Windows.Media.Animation.Storyboard.TargetProperty">
       <summary>Identifies the <see cref="P:System.Windows.Media.Animation.Storyboard.Target" /> attached property.</summary>
       <returns>The identifier for the <see cref="P:System.Windows.Media.Animation.Storyboard.Target" /> attached property.</returns>
+    </member>
+    <member name="P:System.Windows.Media.Animation.Storyboard.TargetProperty">
+      <summary>Gets or sets the property that should be animated. </summary>
+      <returns>The property to animate.</returns>
     </member>
     <member name="F:System.Windows.Media.Animation.Storyboard.TargetPropertyProperty">
       <summary>Identifies the <see cref="P:System.Windows.Media.Animation.Storyboard.TargetProperty" /> attached property. </summary>
@@ -38067,14 +38063,14 @@
     <member name="T:System.Windows.Navigation.NavigationMode">
       <summary>Specifies the type of navigation that is taking place <see cref="T:System.Windows.Navigation.NavigationMode" /> is used by the <see cref="P:System.Windows.Navigation.NavigatingCancelEventArgs.NavigationMode" /> property.</summary>
     </member>
-    <member name="F:System.Windows.Navigation.NavigationMode.New">
-      <summary>Navigating to new content. This occurs when the Navigate method is called, or when Source property is set.</summary>
-    </member>
     <member name="F:System.Windows.Navigation.NavigationMode.Back">
       <summary>Navigating back to the most recent content in back navigation history. This occurs when the GoBack method is called.</summary>
     </member>
     <member name="F:System.Windows.Navigation.NavigationMode.Forward">
       <summary>Navigating to the most recent content on forward navigation history. This occurs when the GoForward method is called.</summary>
+    </member>
+    <member name="F:System.Windows.Navigation.NavigationMode.New">
+      <summary>Navigating to new content. This occurs when the Navigate method is called, or when Source property is set.</summary>
     </member>
     <member name="F:System.Windows.Navigation.NavigationMode.Refresh">
       <summary>Reloading the current content. This occurs when the Refresh method is called.</summary>
@@ -38219,11 +38215,11 @@
     <member name="F:System.Windows.Navigation.NavigationUIVisibility.Automatic">
       <summary>The navigation chrome is visible when a <see cref="T:System.Windows.Controls.Frame" /> uses its own journal (see <see cref="P:System.Windows.Controls.Frame.JournalOwnership" />).</summary>
     </member>
-    <member name="F:System.Windows.Navigation.NavigationUIVisibility.Visible">
-      <summary>The navigation chrome is visible.</summary>
-    </member>
     <member name="F:System.Windows.Navigation.NavigationUIVisibility.Hidden">
       <summary>The navigation chrome is not visible.</summary>
+    </member>
+    <member name="F:System.Windows.Navigation.NavigationUIVisibility.Visible">
+      <summary>The navigation chrome is visible.</summary>
     </member>
     <member name="T:System.Windows.Navigation.NavigationWindow">
       <summary>Represents a window that supports content navigation.</summary>
@@ -38773,11 +38769,11 @@
     <member name="T:System.Windows.Shell.JumpItemRejectionReason">
       <summary>Describes why a <see cref="T:System.Windows.Shell.JumpItem" /> could not be added to the Jump List by the Windows shell.</summary>
     </member>
-    <member name="F:System.Windows.Shell.JumpItemRejectionReason.None">
-      <summary>The reason is not specified.</summary>
-    </member>
     <member name="F:System.Windows.Shell.JumpItemRejectionReason.InvalidItem">
       <summary>The <see cref="T:System.Windows.Shell.JumpItem" /> references an invalid file path, or the operating system does not support Jump Lists.</summary>
+    </member>
+    <member name="F:System.Windows.Shell.JumpItemRejectionReason.None">
+      <summary>The reason is not specified.</summary>
     </member>
     <member name="F:System.Windows.Shell.JumpItemRejectionReason.NoRegisteredHandler">
       <summary>The application is not registered to handle the file name extension of the <see cref="T:System.Windows.Shell.JumpItem" />.</summary>
@@ -38930,41 +38926,23 @@
     <member name="T:System.Windows.Shell.NonClientFrameEdges">
       <summary>Specifies constants that indicate which edges of the window frame are not owned by the client.</summary>
     </member>
-    <member name="F:System.Windows.Shell.NonClientFrameEdges.None">
-      <summary>All edges are owned by the client (value = 0).</summary>
+    <member name="F:System.Windows.Shell.NonClientFrameEdges.Bottom">
+      <summary>The bottom edge is not owned by the client (value = 8).</summary>
     </member>
     <member name="F:System.Windows.Shell.NonClientFrameEdges.Left">
       <summary>The left edge is not owned by the client (value = 1).</summary>
     </member>
-    <member name="F:System.Windows.Shell.NonClientFrameEdges.Top">
-      <summary>The top edge is not owned by the client (value = 2).</summary>
+    <member name="F:System.Windows.Shell.NonClientFrameEdges.None">
+      <summary>All edges are owned by the client (value = 0).</summary>
     </member>
     <member name="F:System.Windows.Shell.NonClientFrameEdges.Right">
       <summary>The right edge is not owned by the client (value = 4).</summary>
     </member>
-    <member name="F:System.Windows.Shell.NonClientFrameEdges.Bottom">
-      <summary>The bottom edge is not owned by the client (value = 8).</summary>
+    <member name="F:System.Windows.Shell.NonClientFrameEdges.Top">
+      <summary>The top edge is not owned by the client (value = 2).</summary>
     </member>
     <member name="T:System.Windows.Shell.ResizeGripDirection">
       <summary>Specifies constants that indicate the direction of the resize grip behavior on an input element.</summary>
-    </member>
-    <member name="F:System.Windows.Shell.ResizeGripDirection.None">
-      <summary>No resize behavior is specified.</summary>
-    </member>
-    <member name="F:System.Windows.Shell.ResizeGripDirection.TopLeft">
-      <summary>The window resizes from its top-left corner.</summary>
-    </member>
-    <member name="F:System.Windows.Shell.ResizeGripDirection.Top">
-      <summary>The window resizes from its top edge.</summary>
-    </member>
-    <member name="F:System.Windows.Shell.ResizeGripDirection.TopRight">
-      <summary>The window resizes from its top-right corner.</summary>
-    </member>
-    <member name="F:System.Windows.Shell.ResizeGripDirection.Right">
-      <summary>The window resizes from its right edge.</summary>
-    </member>
-    <member name="F:System.Windows.Shell.ResizeGripDirection.BottomRight">
-      <summary>The window resizes from its bottom-right corner.</summary>
     </member>
     <member name="F:System.Windows.Shell.ResizeGripDirection.Bottom">
       <summary>The window resizes from its bottom edge.</summary>
@@ -38972,8 +38950,26 @@
     <member name="F:System.Windows.Shell.ResizeGripDirection.BottomLeft">
       <summary>The window resizes from its bottom-left corner.</summary>
     </member>
+    <member name="F:System.Windows.Shell.ResizeGripDirection.BottomRight">
+      <summary>The window resizes from its bottom-right corner.</summary>
+    </member>
     <member name="F:System.Windows.Shell.ResizeGripDirection.Left">
       <summary>The windows resizes from its left edge.</summary>
+    </member>
+    <member name="F:System.Windows.Shell.ResizeGripDirection.None">
+      <summary>No resize behavior is specified.</summary>
+    </member>
+    <member name="F:System.Windows.Shell.ResizeGripDirection.Right">
+      <summary>The window resizes from its right edge.</summary>
+    </member>
+    <member name="F:System.Windows.Shell.ResizeGripDirection.Top">
+      <summary>The window resizes from its top edge.</summary>
+    </member>
+    <member name="F:System.Windows.Shell.ResizeGripDirection.TopLeft">
+      <summary>The window resizes from its top-left corner.</summary>
+    </member>
+    <member name="F:System.Windows.Shell.ResizeGripDirection.TopRight">
+      <summary>The window resizes from its top-right corner.</summary>
     </member>
     <member name="T:System.Windows.Shell.TaskbarItemInfo">
       <summary>Represents information about how the taskbar thumbnail is displayed.</summary>
@@ -39032,17 +39028,17 @@
     <member name="T:System.Windows.Shell.TaskbarItemProgressState">
       <summary>Specifies the state of the progress indicator in the Windows taskbar.</summary>
     </member>
-    <member name="F:System.Windows.Shell.TaskbarItemProgressState.None">
-      <summary>No progress indicator is displayed in the taskbar button.</summary>
+    <member name="F:System.Windows.Shell.TaskbarItemProgressState.Error">
+      <summary>A red progress indicator is displayed in the taskbar button.</summary>
     </member>
     <member name="F:System.Windows.Shell.TaskbarItemProgressState.Indeterminate">
       <summary>A pulsing green indicator is displayed in the taskbar button.</summary>
     </member>
+    <member name="F:System.Windows.Shell.TaskbarItemProgressState.None">
+      <summary>No progress indicator is displayed in the taskbar button.</summary>
+    </member>
     <member name="F:System.Windows.Shell.TaskbarItemProgressState.Normal">
       <summary>A green progress indicator is displayed in the taskbar button.</summary>
-    </member>
-    <member name="F:System.Windows.Shell.TaskbarItemProgressState.Error">
-      <summary>A red progress indicator is displayed in the taskbar button.</summary>
     </member>
     <member name="F:System.Windows.Shell.TaskbarItemProgressState.Paused">
       <summary>A yellow progress indicator is displayed in the taskbar button.</summary>
@@ -39220,6 +39216,7 @@
     <member name="P:System.Windows.Shell.WindowChrome.NonClientFrameEdges">
       <summary>Gets or sets a value that indicates which edges of the window frame are not owned by the client.</summary>
       <returns>A bitwise combination of the enumeration values that specify which edges of the frame are not owned by the client.The registered default is <see cref="F:System.Windows.Shell.NonClientFrameEdges.None" />. For more information about what can influence the value, see Dependency Property Value Precedence.</returns>
+      <exception cref="T:System.ArgumentException">‘Left, Right, Top, Bottom’ is not a valid value. At least one edge must belong to the client.</exception>
     </member>
     <member name="F:System.Windows.Shell.WindowChrome.NonClientFrameEdgesProperty">
       <summary>Identifies the <see cref="P:System.Windows.Shell.WindowChrome.NonClientFrameEdges" /> dependency property.</summary>

@@ -321,14 +321,14 @@
     <member name="T:System.Runtime.DurableInstancing.InstanceKeyState">
       <summary>Contains a list of valid states for instance keys.</summary>
     </member>
-    <member name="F:System.Runtime.DurableInstancing.InstanceKeyState.Unknown">
-      <summary>The instance key is not associated with any instance.</summary>
-    </member>
     <member name="F:System.Runtime.DurableInstancing.InstanceKeyState.Associated">
       <summary>The instance key is associated with a non-completed instance.</summary>
     </member>
     <member name="F:System.Runtime.DurableInstancing.InstanceKeyState.Completed">
       <summary>The instance key was associated with an instance, which is no longer active.</summary>
+    </member>
+    <member name="F:System.Runtime.DurableInstancing.InstanceKeyState.Unknown">
+      <summary>The instance key is not associated with any instance.</summary>
     </member>
     <member name="T:System.Runtime.DurableInstancing.InstanceKeyView">
       <summary>Provides a view into instance key information.</summary>
@@ -920,17 +920,17 @@
     <member name="T:System.Runtime.DurableInstancing.InstanceState">
       <summary>This enumeration contains a list of states of an instance.</summary>
     </member>
-    <member name="F:System.Runtime.DurableInstancing.InstanceState.Unknown">
-      <summary>Indicates that the instance is in Unknown state.</summary>
-    </member>
-    <member name="F:System.Runtime.DurableInstancing.InstanceState.Uninitialized">
-      <summary>Indicates that the instance is uninitialized. An uninitialized instance is an instance that has never been persisted.</summary>
+    <member name="F:System.Runtime.DurableInstancing.InstanceState.Completed">
+      <summary>Indicates that the instance is in completed state. A completed instance cannot be persisted again in the future.</summary>
     </member>
     <member name="F:System.Runtime.DurableInstancing.InstanceState.Initialized">
       <summary>Indicates that the instance is initialized. An initialized instance is an instance that has been persisted at least once and can be persisted again in the future.</summary>
     </member>
-    <member name="F:System.Runtime.DurableInstancing.InstanceState.Completed">
-      <summary>Indicates that the instance is in completed state. A completed instance cannot be persisted again in the future.</summary>
+    <member name="F:System.Runtime.DurableInstancing.InstanceState.Uninitialized">
+      <summary>Indicates that the instance is uninitialized. An uninitialized instance is an instance that has never been persisted.</summary>
+    </member>
+    <member name="F:System.Runtime.DurableInstancing.InstanceState.Unknown">
+      <summary>Indicates that the instance is in Unknown state.</summary>
     </member>
     <member name="T:System.Runtime.DurableInstancing.InstanceStore">
       <summary>Represents an instance store. </summary>
@@ -1089,11 +1089,11 @@
     <member name="T:System.Runtime.DurableInstancing.InstanceValueConsistency">
       <summary>Describes the consistency guarantee of the instance values contained in a specified dictionary.</summary>
     </member>
-    <member name="F:System.Runtime.DurableInstancing.InstanceValueConsistency.None">
-      <summary>Indicates that there is no consistency guarantee.</summary>
-    </member>
     <member name="F:System.Runtime.DurableInstancing.InstanceValueConsistency.InDoubt">
       <summary>Indicates that the consistency of the instance value is in doubt.</summary>
+    </member>
+    <member name="F:System.Runtime.DurableInstancing.InstanceValueConsistency.None">
+      <summary>Indicates that there is no consistency guarantee.</summary>
     </member>
     <member name="F:System.Runtime.DurableInstancing.InstanceValueConsistency.Partial">
       <summary>Indicates that the consistency of the instance value is partial.</summary>

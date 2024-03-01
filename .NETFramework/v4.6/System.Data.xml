@@ -11563,8 +11563,15 @@
       <summary>Exposes the <see cref="M:System.Collections.IEnumerable.GetEnumerator" /> method, which supports a simple iteration over a collection by a .NET Framework data provider.</summary>
       <filterpriority>2</filterpriority>
     </member>
-    <member name="M:System.Data.Common.DbEnumerator.#ctor(System.Data.Common.DbDataReader)"></member>
-    <member name="M:System.Data.Common.DbEnumerator.#ctor(System.Data.Common.DbDataReader,System.Boolean)"></member>
+    <member name="M:System.Data.Common.DbEnumerator.#ctor(System.Data.Common.DbDataReader)">
+      <summary>Initializes a new instance of the <see cref="T:System.Data.Common.DbEnumerator" /> class with the give n data reader.</summary>
+      <param name="reader">The DataReader through which to iterate.</param>
+    </member>
+    <member name="M:System.Data.Common.DbEnumerator.#ctor(System.Data.Common.DbDataReader,System.Boolean)">
+      <summary>Initializes a new instance of the <see cref="T:System.Data.Common.DbEnumerator" /> class using the specified reader and indicates whether to automatically close the reader after iterating through its data.</summary>
+      <param name="reader">The DataReader through which to iterate.</param>
+      <param name="closeReader">true to automatically close the DataReader after iterating through its data; otherwise, false.</param>
+    </member>
     <member name="M:System.Data.Common.DbEnumerator.#ctor(System.Data.IDataReader)">
       <summary>Initializes a new instance of the <see cref="T:System.Data.Common.DbEnumerator" /> class using the specified DataReader.</summary>
       <param name="reader">The DataReader through which to iterate. </param>
@@ -16532,18 +16539,20 @@
     <member name="F:System.Data.SqlClient.SortOrder.Unspecified">
       <summary>The default. No sort order is specified.</summary>
     </member>
-    <member name="T:System.Data.SqlClient.SqlAuthenticationMethod"></member>
+    <member name="T:System.Data.SqlClient.SqlAuthenticationMethod">
+      <summary>Enumerates the SQL authentication method used by the client.</summary>
+    </member>
     <member name="F:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryIntegrated">
-      <summary />
+      <summary>The authentication method uses Active Directory service.</summary>
     </member>
     <member name="F:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryPassword">
-      <summary />
+      <summary>The authentication method uses the Active Directory password.</summary>
     </member>
     <member name="F:System.Data.SqlClient.SqlAuthenticationMethod.NotSpecified">
-      <summary />
+      <summary>The authentication method is NotSpecified.</summary>
     </member>
     <member name="F:System.Data.SqlClient.SqlAuthenticationMethod.SqlPassword">
-      <summary />
+      <summary>The authentication method is SqlPassword.</summary>
     </member>
     <member name="T:System.Data.SqlClient.SqlBulkCopy">
       <summary>Lets you efficiently bulk load a SQL Server table with data from another source.</summary>
@@ -16629,7 +16638,10 @@
     <member name="M:System.Data.SqlClient.SqlBulkCopy.System#IDisposable#Dispose">
       <summary>Releases all resources used by the current instance of the <see cref="T:System.Data.SqlClient.SqlBulkCopy" /> class.</summary>
     </member>
-    <member name="M:System.Data.SqlClient.SqlBulkCopy.WriteToServer(System.Data.Common.DbDataReader)"></member>
+    <member name="M:System.Data.SqlClient.SqlBulkCopy.WriteToServer(System.Data.Common.DbDataReader)">
+      <summary>Copies all rows from the supplied <see cref="T:System.Data.Common.DbDataReader" /> array to a destination table specified by the <see cref="P:System.Data.SqlClient.SqlBulkCopy.DestinationTableName" /> property of the <see cref="T:System.Data.SqlClient.SqlBulkCopy" /> object.</summary>
+      <param name="reader">A <see cref="T:System.Data.Common.DbDataReader" /> whose rows will be copied to the destination table.</param>
+    </member>
     <member name="M:System.Data.SqlClient.SqlBulkCopy.WriteToServer(System.Data.DataRow[])">
       <summary>Copies all rows from the supplied <see cref="T:System.Data.DataRow" /> array to a destination table specified by the <see cref="P:System.Data.SqlClient.SqlBulkCopy.DestinationTableName" /> property of the <see cref="T:System.Data.SqlClient.SqlBulkCopy" /> object.</summary>
       <param name="rows">An array of <see cref="T:System.Data.DataRow" /> objects that will be copied to the destination table.</param>
@@ -16678,8 +16690,17 @@
         <IPermission class="System.Data.SqlClient.SqlClientPermission, System.Data, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
       </PermissionSet>
     </member>
-    <member name="M:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync(System.Data.Common.DbDataReader)"></member>
-    <member name="M:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync(System.Data.Common.DbDataReader,System.Threading.CancellationToken)"></member>
+    <member name="M:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync(System.Data.Common.DbDataReader)">
+      <summary>The asynchronous version of <see cref="M:System.Data.SqlClient.SqlBulkCopy.WriteToServer(System.Data.Common.DbDataReader)" />, which copies all rows from the supplied <see cref="T:System.Data.Common.DbDataReader" /> array to a destination table specified by the <see cref="P:System.Data.SqlClient.SqlBulkCopy.DestinationTableName" /> property of the <see cref="T:System.Data.SqlClient.SqlBulkCopy" /> object.</summary>
+      <returns>A task representing the asynchronous operation.</returns>
+      <param name="reader">A <see cref="T:System.Data.Common.DbDataReader" /> whose rows will be copied to the destination table.</param>
+    </member>
+    <member name="M:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync(System.Data.Common.DbDataReader,System.Threading.CancellationToken)">
+      <summary>The asynchronous version of <see cref="M:System.Data.SqlClient.SqlBulkCopy.WriteToServer(System.Data.Common.DbDataReader)" />, which copies all rows from the supplied <see cref="T:System.Data.Common.DbDataReader" /> array to a destination table specified by the <see cref="P:System.Data.SqlClient.SqlBulkCopy.DestinationTableName" /> property of the <see cref="T:System.Data.SqlClient.SqlBulkCopy" /> object.</summary>
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task" />.</returns>
+      <param name="reader">A <see cref="T:System.Data.Common.DbDataReader" /> whose rows will be copied to the destination table.</param>
+      <param name="cancellationToken">The cancellation instruction. A <see cref="P:System.Threading.CancellationToken.None" /> value in this parameter makes this method equivalent to <see cref="M:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync(System.Data.Common.DbDataReader)" />.</param>
+    </member>
     <member name="M:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync(System.Data.DataRow[])">
       <summary>The asynchronous version of <see cref="M:System.Data.SqlClient.SqlBulkCopy.WriteToServer(System.Data.DataRow[])" />, which copies all rows from the supplied <see cref="T:System.Data.DataRow" /> array to a destination table specified by the <see cref="P:System.Data.SqlClient.SqlBulkCopy.DestinationTableName" /> property of the <see cref="T:System.Data.SqlClient.SqlBulkCopy" /> object.</summary>
       <returns>A task representing the asynchronous operation.</returns>
@@ -17069,14 +17090,46 @@
         <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
       </PermissionSet>
     </member>
-    <member name="T:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider"></member>
-    <member name="M:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider.#ctor"></member>
-    <member name="M:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider.DecryptColumnEncryptionKey(System.String,System.String,System.Byte[])"></member>
-    <member name="M:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider.EncryptColumnEncryptionKey(System.String,System.String,System.Byte[])"></member>
-    <member name="T:System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider"></member>
-    <member name="M:System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.#ctor"></member>
-    <member name="M:System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey(System.String,System.String,System.Byte[])"></member>
-    <member name="M:System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.EncryptColumnEncryptionKey(System.String,System.String,System.Byte[])"></member>
+    <member name="T:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider">
+      <summary>The implementation of the key store provider for Windows Certificate Store. This class enables using certificates stored in the Windows Certificate Store as column master keys.</summary>
+    </member>
+    <member name="M:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider.#ctor">
+      <summary>Key store provider for Windows Certificate Store.</summary>
+    </member>
+    <member name="M:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider.DecryptColumnEncryptionKey(System.String,System.String,System.Byte[])">
+      <summary>Decrypts the specified encrypted value of a column encryption key. The encrypted value is expected to be encrypted using the certificate with the specified key path and using the specified algorithm. The format of the key path should be “Local Machine/My/&lt;certificate_thumbrint&gt;” or “Current User/My/&lt;certificate_thumbprint&gt;”.</summary>
+      <returns>Returns <see cref="T:System.Byte" />. The decrypted column encryption key.</returns>
+      <param name="masterKeyPath">The master key path.</param>
+      <param name="encryptionAlgorithm">The encryption algorithm. Currently, the only valid value is: RSA_OAEP</param>
+      <param name="encryptedColumnEncryptionKey">The encrypted column encryption key.</param>
+    </member>
+    <member name="M:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider.EncryptColumnEncryptionKey(System.String,System.String,System.Byte[])">
+      <summary>Encrypts a column encryption key using the certificate with the specified key path and using the specified algorithm. The format of the key path should be “Local Machine/My/&lt;certificate_thumbrint&gt;” or “Current User/My/&lt;certificate_thumbprint&gt;”.</summary>
+      <returns>Returns <see cref="T:System.Byte" />. The encrypted column encryption key.</returns>
+      <param name="masterKeyPath">The master key path.</param>
+      <param name="encryptionAlgorithm">The encryption algorithm. Currently, the only valid value is: RSA_OAEP</param>
+      <param name="columnEncryptionKey">The encrypted column encryption key.</param>
+    </member>
+    <member name="T:System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider">
+      <summary>Base class for all key store providers. A custom provider must derive from this class and override its member functions and then register it using SqlConnection.RegisterColumnEncryptionKeyStoreProviders().</summary>
+    </member>
+    <member name="M:System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.#ctor">
+      <summary>Initializes a new instance of the SqlColumnEncryptionKeyStoreProviderClass.</summary>
+    </member>
+    <member name="M:System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey(System.String,System.String,System.Byte[])">
+      <summary>Decrypts the specified encrypted value of a column encryption key. The encrypted value is expected to be encrypted using the column master key with the specified key path and using the specified algorithm.</summary>
+      <returns>Returns <see cref="T:System.Byte" />. The decrypted column encryption key.</returns>
+      <param name="masterKeyPath">The master key path.</param>
+      <param name="encryptionAlgorithm">The encryption algorithm.</param>
+      <param name="encryptedColumnEncryptionKey">The encrypted column encryption key.</param>
+    </member>
+    <member name="M:System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.EncryptColumnEncryptionKey(System.String,System.String,System.Byte[])">
+      <summary>Encrypts a column encryption key using the column master key with the specified key path and using the specified algorithm.</summary>
+      <returns>Returns <see cref="T:System.Byte" />. The encrypted column encryption key.</returns>
+      <param name="masterKeyPath">The master key path.</param>
+      <param name="encryptionAlgorithm">The encryption algorithm.</param>
+      <param name="columnEncryptionKey">The encrypted column encryption key.</param>
+    </member>
     <member name="T:System.Data.SqlClient.SqlCommand">
       <summary>Represents a Transact-SQL statement or stored procedure to execute against a SQL Server database. This class cannot be inherited.</summary>
       <filterpriority>1</filterpriority>
@@ -17099,7 +17152,13 @@
       <param name="connection">A <see cref="T:System.Data.SqlClient.SqlConnection" /> that represents the connection to an instance of SQL Server. </param>
       <param name="transaction">The <see cref="T:System.Data.SqlClient.SqlTransaction" /> in which the <see cref="T:System.Data.SqlClient.SqlCommand" /> executes. </param>
     </member>
-    <member name="M:System.Data.SqlClient.SqlCommand.#ctor(System.String,System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.Data.SqlClient.SqlCommandColumnEncryptionSetting)"></member>
+    <member name="M:System.Data.SqlClient.SqlCommand.#ctor(System.String,System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.Data.SqlClient.SqlCommandColumnEncryptionSetting)">
+      <summary>Initializes a new instance of the <see cref="T:System.Data.SqlClient.SqlCommand" /> class with specified command text, connection, transaction, and encryption setting.</summary>
+      <param name="cmdText">The text of the query.</param>
+      <param name="connection">A <see cref="T:System.Data.SqlClient.SqlConnection" /> that represents the connection to an instance of SQL Server.</param>
+      <param name="transaction">The <see cref="T:System.Data.SqlClient.SqlTransaction" /> in which the <see cref="T:System.Data.SqlClient.SqlCommand" /> executes.</param>
+      <param name="columnEncryptionSetting">The encryption setting. For more information, see Always Encrypted.</param>
+    </member>
     <member name="M:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery">
       <summary>Initiates the asynchronous execution of the Transact-SQL statement or stored procedure that is described by this <see cref="T:System.Data.SqlClient.SqlCommand" />.</summary>
       <returns>An <see cref="T:System.IAsyncResult" /> that can be used to poll or wait for results, or both; this value is also needed when invoking <see cref="M:System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(System.IAsyncResult)" />, which returns the number of affected rows.</returns>
@@ -17242,7 +17301,10 @@
         <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" PathDiscovery="*AllFiles*" />
       </PermissionSet>
     </member>
-    <member name="P:System.Data.SqlClient.SqlCommand.ColumnEncryptionSetting"></member>
+    <member name="P:System.Data.SqlClient.SqlCommand.ColumnEncryptionSetting">
+      <summary>Gets or sets the column encryption setting for this command.</summary>
+      <returns>The column encryption setting for this command.</returns>
+    </member>
     <member name="P:System.Data.SqlClient.SqlCommand.CommandText">
       <summary>Gets or sets the Transact-SQL statement, table name or stored procedure to execute at the data source.</summary>
       <returns>The Transact-SQL statement or stored procedure to execute. The default is an empty string.</returns>
@@ -17665,18 +17727,20 @@
       <param name="quotedIdentifier">The identifier that will have its embedded quotes removed.</param>
       <filterpriority>1</filterpriority>
     </member>
-    <member name="T:System.Data.SqlClient.SqlCommandColumnEncryptionSetting"></member>
+    <member name="T:System.Data.SqlClient.SqlCommandColumnEncryptionSetting">
+      <summary>Specifies how data will be sent and received when reading and writing encrypted columns. Depending on your specific query, performance impact may be reduced by bypassing the Always Encrypted driver’s processing when non-encrypted columns are being used. Note that these settings cannot be used to bypass encryption and gain access to plaintext data.</summary>
+    </member>
     <member name="F:System.Data.SqlClient.SqlCommandColumnEncryptionSetting.Disabled">
-      <summary />
+      <summary>Disables Always Encrypted for the query.</summary>
     </member>
     <member name="F:System.Data.SqlClient.SqlCommandColumnEncryptionSetting.Enabled">
-      <summary />
+      <summary>Enables Always Encrypted for the query.</summary>
     </member>
     <member name="F:System.Data.SqlClient.SqlCommandColumnEncryptionSetting.ResultSetOnly">
-      <summary />
+      <summary>Specifies that only the results of the command should be processed by the Always Encrypted routine in the driver. Use this value when the command has no parameters that require encryption.</summary>
     </member>
     <member name="F:System.Data.SqlClient.SqlCommandColumnEncryptionSetting.UseConnectionSetting">
-      <summary />
+      <summary>Specifies that the command should default to the Always Encrypted setting in the connection string.</summary>
     </member>
     <member name="T:System.Data.SqlClient.SqlConnection">
       <summary>Represents an open connection to a SQL Server database. This class cannot be inherited.</summary>
@@ -17694,7 +17758,10 @@
       <param name="connectionString">A connection string that does not use any of the following connection string keywords: Integrated Security = true, UserId, or Password; or that does not use ContextConnection = true.</param>
       <param name="credential">A <see cref="T:System.Data.SqlClient.SqlCredential" /> object. If <paramref name="credential" /> is null, <see cref="M:System.Data.SqlClient.SqlConnection.#ctor(System.String,System.Data.SqlClient.SqlCredential)" /> is functionally equivalent to <see cref="M:System.Data.SqlClient.SqlConnection.#ctor(System.String)" />.</param>
     </member>
-    <member name="P:System.Data.SqlClient.SqlConnection.AccessToken"></member>
+    <member name="P:System.Data.SqlClient.SqlConnection.AccessToken">
+      <summary>Gets or sets the access token for the connection.</summary>
+      <returns>The access token for the connection.</returns>
+    </member>
     <member name="M:System.Data.SqlClient.SqlConnection.BeginTransaction">
       <summary>Starts a database transaction.</summary>
       <returns>An object representing the new transaction.</returns>
@@ -17807,7 +17874,10 @@
         <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
       </PermissionSet>
     </member>
-    <member name="P:System.Data.SqlClient.SqlConnection.ColumnEncryptionTrustedMasterKeyPaths"></member>
+    <member name="P:System.Data.SqlClient.SqlConnection.ColumnEncryptionTrustedMasterKeyPaths">
+      <summary>Allows you to set a list of trusted key paths for a database server. If while processing an application query the driver receives a key path that is not on the list, the query will fail. This property provides additional protection against security attacks that involve a compromised SQL Server providing fake key paths, which may lead to leaking key store credentials.</summary>
+      <returns>The list of trusted master key paths for the column encryption.</returns>
+    </member>
     <member name="P:System.Data.SqlClient.SqlConnection.ConnectionString">
       <summary>Gets or sets the string used to open a SQL Server database.</summary>
       <returns>The connection string that includes the source database name, and other parameters needed to establish the initial connection. The default value is an empty string.</returns>
@@ -17916,7 +17986,10 @@
         <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
       </PermissionSet>
     </member>
-    <member name="M:System.Data.SqlClient.SqlConnection.RegisterColumnEncryptionKeyStoreProviders(System.Collections.Generic.IDictionary{System.String,System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider})"></member>
+    <member name="M:System.Data.SqlClient.SqlConnection.RegisterColumnEncryptionKeyStoreProviders(System.Collections.Generic.IDictionary{System.String,System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider})">
+      <summary>Registers the column encryption key store providers.</summary>
+      <param name="customProviders">The custom providers</param>
+    </member>
     <member name="M:System.Data.SqlClient.SqlConnection.ResetStatistics">
       <summary>If statistics gathering is enabled, all values are reset to zero.</summary>
       <filterpriority>2</filterpriority>
@@ -17960,12 +18033,14 @@
         <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
       </PermissionSet>
     </member>
-    <member name="T:System.Data.SqlClient.SqlConnectionColumnEncryptionSetting"></member>
+    <member name="T:System.Data.SqlClient.SqlConnectionColumnEncryptionSetting">
+      <summary>Specifies that Always Encrypted functionality is enabled in a connection. Note that these settings cannot be used to bypass encryption and gain access to plaintext data.</summary>
+    </member>
     <member name="F:System.Data.SqlClient.SqlConnectionColumnEncryptionSetting.Disabled">
-      <summary />
+      <summary>Specifies the connection does not use Always Encrypted. Should be used if no queries sent over the connection access encrypted columns.</summary>
     </member>
     <member name="F:System.Data.SqlClient.SqlConnectionColumnEncryptionSetting.Enabled">
-      <summary />
+      <summary>Enables Always Encrypted functionality for the connection. Query parameters that correspond to encrypted columns will be transparently encrypted and query results from encrypted columns will be transparently decrypted.</summary>
     </member>
     <member name="T:System.Data.SqlClient.SqlConnectionStringBuilder">
       <summary>Provides a simple way to create and manage the contents of connection strings used by the <see cref="T:System.Data.SqlClient.SqlConnection" /> class. </summary>
@@ -18014,7 +18089,10 @@
         <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="ControlEvidence" />
       </PermissionSet>
     </member>
-    <member name="P:System.Data.SqlClient.SqlConnectionStringBuilder.Authentication"></member>
+    <member name="P:System.Data.SqlClient.SqlConnectionStringBuilder.Authentication">
+      <summary>Gets the authentication of the connection string.</summary>
+      <returns>The authentication of the connection string.</returns>
+    </member>
     <member name="M:System.Data.SqlClient.SqlConnectionStringBuilder.Clear">
       <summary>Clears the contents of the <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" /> instance.</summary>
       <filterpriority>2</filterpriority>
@@ -18022,7 +18100,10 @@
         <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" PathDiscovery="*AllFiles*" />
       </PermissionSet>
     </member>
-    <member name="P:System.Data.SqlClient.SqlConnectionStringBuilder.ColumnEncryptionSetting"></member>
+    <member name="P:System.Data.SqlClient.SqlConnectionStringBuilder.ColumnEncryptionSetting">
+      <summary>Gets the column encryption settings for the connection string builder.</summary>
+      <returns>The column encryption settings for the connection string builder.</returns>
+    </member>
     <member name="P:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectionReset">
       <summary>Obsolete. Gets or sets a Boolean value that indicates whether the connection is reset when drawn from the connection pool.</summary>
       <returns>The value of the <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectionReset" /> property, or true if no value has been supplied.</returns>
@@ -19543,7 +19624,10 @@
       <returns>One of the <see cref="T:System.Data.ParameterDirection" /> values. The default is Input.</returns>
       <exception cref="T:System.ArgumentException">The property was not set to one of the valid <see cref="T:System.Data.ParameterDirection" /> values.</exception>
     </member>
-    <member name="P:System.Data.SqlClient.SqlParameter.ForceColumnEncryption"></member>
+    <member name="P:System.Data.SqlClient.SqlParameter.ForceColumnEncryption">
+      <summary>Enforces encryption of a parameter when using Always Encrypted. If SQL Server informs the driver that the parameter does not need to be encrypted, the query using the parameter will fail. This property provides additional protection against security attacks that involve a compromised SQL Server providing incorrect encryption metadata to the client, which may lead to data disclosure.</summary>
+      <returns>true if the parameter has a force column encryption; otherwise, false.</returns>
+    </member>
     <member name="P:System.Data.SqlClient.SqlParameter.IsNullable">
       <summary>Gets or sets a value that indicates whether the parameter accepts null values. <see cref="P:System.Data.SqlClient.SqlParameter.IsNullable" /> is not used to validate the parameter’s value and will not prevent sending or receiving a null value when executing a command.</summary>
       <returns>true if null values are accepted; otherwise false. The default is false.</returns>
@@ -22189,7 +22273,9 @@
       <param name="asyncResult">A reference to the outstanding asynchronous I/O request. </param>
       <exception cref="T:System.ArgumentException">The <see cref="T:System.IAsyncResult" /> object did not come from the corresponding BeginWrite method.</exception>
     </member>
-    <member name="M:System.Data.SqlTypes.SqlFileStream.Finalize"></member>
+    <member name="M:System.Data.SqlTypes.SqlFileStream.Finalize">
+      <summary>Ensures that resources are freed and other cleanup operations are performed when the garbage collector reclaims the <see cref="T:System.Data.SqlTypes.SqlFileStream" />.</summary>
+    </member>
     <member name="M:System.Data.SqlTypes.SqlFileStream.Flush">
       <summary>clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
     </member>

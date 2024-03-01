@@ -330,20 +330,20 @@
     <member name="T:System.Device.Location.GeoPositionPermission">
       <summary>Indicates whether the calling application has permission to access location data.</summary>
     </member>
-    <member name="F:System.Device.Location.GeoPositionPermission.Unknown">
-      <summary>Location permissions are not known. This status can occur while the provider is being initialized.</summary>
+    <member name="F:System.Device.Location.GeoPositionPermission.Denied">
+      <summary>Location permissions are denied.</summary>
     </member>
     <member name="F:System.Device.Location.GeoPositionPermission.Granted">
       <summary>Location permissions are granted.</summary>
     </member>
-    <member name="F:System.Device.Location.GeoPositionPermission.Denied">
-      <summary>Location permissions are denied.</summary>
+    <member name="F:System.Device.Location.GeoPositionPermission.Unknown">
+      <summary>Location permissions are not known. This status can occur while the provider is being initialized.</summary>
     </member>
     <member name="T:System.Device.Location.GeoPositionStatus">
       <summary>Indicates the ability of the location provider to provide location updates.</summary>
     </member>
-    <member name="F:System.Device.Location.GeoPositionStatus.Ready">
-      <summary>A location provider is ready to supply new data.</summary>
+    <member name="F:System.Device.Location.GeoPositionStatus.Disabled">
+      <summary>The location provider is disabled. On Windows 7, this is the case when the Sensor and Location platform has been disabled by group policy. </summary>
     </member>
     <member name="F:System.Device.Location.GeoPositionStatus.Initializing">
       <summary>The location provider is initializing.  For example, a GPS that is still obtaining a fix has this status.</summary>
@@ -351,8 +351,8 @@
     <member name="F:System.Device.Location.GeoPositionStatus.NoData">
       <summary>No location data is available from any location provider. </summary>
     </member>
-    <member name="F:System.Device.Location.GeoPositionStatus.Disabled">
-      <summary>The location provider is disabled. On Windows 7, this is the case when the Sensor and Location platform has been disabled by group policy. </summary>
+    <member name="F:System.Device.Location.GeoPositionStatus.Ready">
+      <summary>A location provider is ready to supply new data.</summary>
     </member>
     <member name="T:System.Device.Location.GeoPositionStatusChangedEventArgs">
       <summary>Contains data for a GeoPositionStatusChanged event.</summary>

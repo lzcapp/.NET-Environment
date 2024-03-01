@@ -308,8 +308,8 @@
       <returns>true if task execution succeeded; otherwise, false.</returns>
     </member>
     <member name="P:Microsoft.Build.Tasks.AssignProjectConfiguration.OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration">
-      <summary>Gets or sets a switch that specifies whether references should be built, even if they were disabled in the project configuration.</summary>
-      <returns>Returns true if references should be built; false otherwise. Defaults to false.</returns>
+      <summary>Specifies whether references should be built, even if they were disabled in the project configuration.</summary>
+      <returns>Returns true. if references should be built; false otherwise. Defaults to true.</returns>
     </member>
     <member name="P:Microsoft.Build.Tasks.AssignProjectConfiguration.OutputType">
       <summary>Gets or sets the output type for the project.</summary>
@@ -2472,6 +2472,10 @@
       <summary>Gets or sets a Boolean value that specifies whether the ResolveAssemblyReference task should ignore additional installed assembly tables found in the RedistList directory underneath the provided <see cref="P:Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkDirectories" /> (true) or should search for and use these installed assembly tables (false).</summary>
       <returns>true if the task should ignore the additional installed assembly tables; false if the task should search for and use the additional installed assembly tables.</returns>
     </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreTargetFrameworkAttributeVersionMismatch">
+      <summary>Gets or sets a flag indicating whether to ignore the framework attribute when checking if an assembly is compatible with the targeted framework.</summary>
+      <returns>Returns the flag.</returns>
+    </member>
     <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreVersionForFrameworkReferences">
       <summary>Gets or sets a flag indicating whether to ignore the version information on the framework assembly and actually resolve the framework assembly from the currently targeted framework. Flag applies if the primary reference is a framework assembly.</summary>
       <returns>Returns the flag.</returns>
@@ -2869,6 +2873,10 @@
     <member name="P:Microsoft.Build.Tasks.ResolveSDKReference.LogResolutionErrorsAsWarnings">
       <summary>Specifies whether problems resolving SDKs are logged as warnings or errors. If the resolution problem is logged as an error the build will fail. If the resolution problem is logged as a warning we will warn and continue.</summary>
       <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveSDKReference.Prefer32Bit">
+      <summary>The value of the Prefer32Bit flag used in the build</summary>
+      <returns>Returns the flag.</returns>
     </member>
     <member name="P:Microsoft.Build.Tasks.ResolveSDKReference.References">
       <summary>References may be passed in so that the SDKNames can be resolved. Once resolved, the sdkroot paths can be appended to the references so RAR can find the assembly correctly in the sdk location.</summary>
@@ -3638,14 +3646,14 @@
     <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessageSeverity">
       <summary>This enumeration provides three levels of importance for build messages.</summary>
     </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessageSeverity.Error">
+      <summary>Indicates that the message corresponds to a build error.</summary>
+    </member>
     <member name="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessageSeverity.Info">
       <summary>Indicates that the message corresponds to build information.</summary>
     </member>
     <member name="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessageSeverity.Warning">
       <summary>Indicates that the message corresponds to a build warning.</summary>
-    </member>
-    <member name="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessageSeverity.Error">
-      <summary>Indicates that the message corresponds to a build error.</summary>
     </member>
     <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults">
       <summary>Represents the results of the <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder" /> build operation.</summary>
@@ -3727,14 +3735,14 @@
     <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation">
       <summary>Specifies the way that required components will be published.</summary>
     </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.Absolute">
+      <summary>Specifies that products be located at a specific location.</summary>
+    </member>
     <member name="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.HomeSite">
       <summary>Specifies that products be found according to the redistributable vendor's designated URL.</summary>
     </member>
     <member name="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.Relative">
       <summary>Specifies that products be located relative to the generated bootstrapper.</summary>
-    </member>
-    <member name="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.Absolute">
-      <summary>Specifies that products be located at a specific location.</summary>
     </member>
     <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder">
       <summary>Exposes functionality that you must have to create a bootstrapper.</summary>
@@ -4273,6 +4281,9 @@
     <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags">
       <summary>This class represents the attributes that the <see cref="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.GetFullName(Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags)" /> function returns.</summary>
     </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags.All">
+      <summary>Include all attributes.</summary>
+    </member>
     <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags.Default">
       <summary>Include the Name, Version, Culture, and PublicKeyToken attributes.</summary>
     </member>
@@ -4281,9 +4292,6 @@
     </member>
     <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags.Type">
       <summary>Include the Name, Version, Culture, PublicKeyToken, and Type attributes.</summary>
-    </member>
-    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags.All">
-      <summary>Include all attributes.</summary>
     </member>
     <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest">
       <summary>Describes a Win32 assembly manifest.</summary>
@@ -4388,9 +4396,6 @@
     <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType">
       <summary>This class represents the type of an assembly reference.</summary>
     </member>
-    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType.Unspecified">
-      <summary>Assembly type is unspecified and will be determined by the <see cref="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.UpdateFileInfo" /> method.</summary>
-    </member>
     <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType.ClickOnceManifest">
       <summary>Specifies a ClickOnce manifest.</summary>
     </member>
@@ -4399,6 +4404,9 @@
     </member>
     <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType.NativeAssembly">
       <summary>Specifies a Win32 native assembly.</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType.Unspecified">
+      <summary>Assembly type is unspecified and will be determined by the <see cref="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.UpdateFileInfo" /> method.</summary>
     </member>
     <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference">
       <summary>Describes base functionality common to both file references and assembly references.</summary>
@@ -5044,14 +5052,14 @@
     <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType">
       <summary>Specifies the type of output message as either an error, warning, or informational.</summary>
     </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType.Error">
+      <summary>Indicates an error.</summary>
+    </member>
     <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType.Info">
       <summary>Indicates an informational message.</summary>
     </member>
     <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType.Warning">
       <summary>Indicates a warning.</summary>
-    </member>
-    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType.Error">
-      <summary>Indicates an error.</summary>
     </member>
     <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub">
       <summary>Represents a proxy in a ClickOnce application manifest. .</summary>
@@ -5261,11 +5269,11 @@
     <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit">
       <summary>Specifies the units for the update interval.</summary>
     </member>
-    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit.Hours">
-      <summary>Update interval is in hours.</summary>
-    </member>
     <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit.Days">
       <summary>Update interval is in days.</summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit.Hours">
+      <summary>Update interval is in hours.</summary>
     </member>
     <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit.Weeks">
       <summary>Update interval is in weeks.</summary>
@@ -5996,14 +6004,14 @@
     <member name="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.Integer">
       <summary>Indicates an integer type.</summary>
     </member>
+    <member name="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.ITaskItemArray">
+      <summary>Indicates a task item array type.</summary>
+    </member>
     <member name="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.String">
       <summary>Indicates a string type.</summary>
     </member>
     <member name="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.StringArray">
       <summary>Indicates an array of strings type.</summary>
-    </member>
-    <member name="F:Microsoft.Build.Tasks.Xaml.CommandLineToolSwitchType.ITaskItemArray">
-      <summary>Indicates a task item array type.</summary>
     </member>
     <member name="T:Microsoft.Build.Tasks.Xaml.PropertyRelation">
       <summary>Expresses a relationship between an argument and a property.</summary>

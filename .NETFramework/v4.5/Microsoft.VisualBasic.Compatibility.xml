@@ -208,7 +208,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ButtonArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ButtonArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.Button" /> control.</param>
     </member>
     <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ButtonArray.CausesValidationChanged">
@@ -267,7 +267,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ButtonArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ButtonArray.GetIndex(System.Windows.Forms.Button)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.Button" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ButtonArray" />.</summary>
@@ -497,7 +497,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.CheckBoxArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.CheckBoxArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.CheckBoxArray.GetIndex(System.Windows.Forms.CheckBox)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.CheckBox" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.CheckBoxArray" />.</summary>
@@ -650,7 +650,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.CheckedListBoxArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.CheckedListBoxArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.CheckedListBox" /> control.</param>
     </member>
     <member name="E:Microsoft.VisualBasic.Compatibility.VB6.CheckedListBoxArray.CausesValidationChanged">
@@ -721,7 +721,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.CheckedListBoxArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.CheckedListBoxArray.GetIndex(System.Windows.Forms.CheckedListBox)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.CheckedListBox" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.CheckedListBoxArray" />.</summary>
@@ -877,12 +877,12 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ColorDialogArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ColorDialogArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.ColorDialog" /> control.</param>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ColorDialogArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ColorDialogArray.GetIndex(System.Windows.Forms.ColorDialog)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.ColorDialog" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ColorDialogArray" />.</summary>
@@ -1022,7 +1022,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ComboBoxArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ComboBoxArray.GetIndex(System.Windows.Forms.ComboBox)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.ComboBox" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ComboBoxArray" />.</summary>
@@ -1352,7 +1352,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.DirListBoxArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.DirListBoxArray.GetIndex(Microsoft.VisualBasic.Compatibility.VB6.DirListBox)">
       <summary>Gets the index of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBox" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DirListBoxArray" />.</summary>
@@ -1585,7 +1585,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.DriveListBoxArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DriveListBoxArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DriveListBox" /> control.</param>
     </member>
     <member name="E:Microsoft.VisualBasic.Compatibility.VB6.DriveListBoxArray.CausesValidationChanged">
@@ -1650,7 +1650,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.DriveListBoxArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.DriveListBoxArray.GetIndex(Microsoft.VisualBasic.Compatibility.VB6.DriveListBox)">
       <summary>Gets the index of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DriveListBox" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DriveListBoxArray" />.</summary>
@@ -1951,7 +1951,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.FileListBoxArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.FileListBoxArray.GetIndex(Microsoft.VisualBasic.Compatibility.VB6.FileListBox)">
       <summary>Gets the index of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBox" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FileListBoxArray" />.</summary>
@@ -2127,12 +2127,12 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.FontDialogArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FontDialogArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.FontDialog" /> control.</param>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.FontDialogArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.FontDialogArray.GetIndex(System.Windows.Forms.FontDialog)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.FontDialog" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.FontDialogArray" />.</summary>
@@ -2168,11 +2168,11 @@
     <member name="T:Microsoft.VisualBasic.Compatibility.VB6.FormShowConstants">
       <summary>Provides constants for compatibility with the Visual Basic 6.0 Show method.</summary>
     </member>
-    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.FormShowConstants.Modeless">
-      <summary>Equivalent to the Visual Basic 6.0 constant vbModeless.</summary>
-    </member>
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.FormShowConstants.Modal">
       <summary>Equivalent to the Visual Basic 6.0 constant vbModal.</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.FormShowConstants.Modeless">
+      <summary>Equivalent to the Visual Basic 6.0 constant vbModeless.</summary>
     </member>
     <member name="T:Microsoft.VisualBasic.Compatibility.VB6.GroupBoxArray">
       <summary>Provides a control array of <see cref="T:System.Windows.Forms.GroupBox" /> controls.</summary>
@@ -2257,7 +2257,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.GroupBoxArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.GroupBoxArray.GetIndex(System.Windows.Forms.GroupBox)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.GroupBox" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.GroupBoxArray" />.</summary>
@@ -2430,7 +2430,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.HScrollBarArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>This method must be overridden. The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.HScrollBarArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.HScrollBarArray.GetIndex(System.Windows.Forms.HScrollBar)">
       <summary>Gets the index of an <see cref="T:System.Windows.Forms.HScrollBar" /> in an <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.HScrollBarArray" />.</summary>
@@ -2570,7 +2570,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ImageListArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ImageListArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ImageListArray.GetIndex(System.Windows.Forms.ImageList)">
       <summary>Gets the index of an <see cref="T:System.Windows.Forms.ImageList" /> in an <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ImageListArray" />.</summary>
@@ -2683,7 +2683,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.LabelArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>This method must be overridden. The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.LabelArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.LabelArray.GetIndex(System.Windows.Forms.Label)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.Label" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.LabelArray" />.</summary>
@@ -2830,7 +2830,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ListBoxArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ListBoxArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.ListBox" /> control.</param>
     </member>
     <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ListBoxArray.CausesValidationChanged">
@@ -2910,7 +2910,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ListBoxArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ListBoxArray.GetIndex(System.Windows.Forms.ListBox)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.ListBox" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ListBoxArray" />.</summary>
@@ -3192,7 +3192,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ListViewArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ListViewArray.GetIndex(System.Windows.Forms.ListView)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.ListView" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ListViewArray" />.</summary>
@@ -3366,11 +3366,11 @@
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants.ResBitmap">
       <summary>Equivalent to the Visual Basic 6.0 constant vbResBitmap.</summary>
     </member>
-    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants.ResIcon">
-      <summary>Equivalent to the Visual Basic 6.0 constant vbResIcon.</summary>
-    </member>
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants.ResCursor">
       <summary>Equivalent to the Visual Basic 6.0 constant vbResCursor.</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.LoadResConstants.ResIcon">
+      <summary>Equivalent to the Visual Basic 6.0 constant vbResIcon.</summary>
     </member>
     <member name="T:Microsoft.VisualBasic.Compatibility.VB6.MaskedTextBoxArray">
       <summary>Provides a control array of <see cref="T:System.Windows.Forms.MaskedTextBox" /> controls.</summary>
@@ -3455,7 +3455,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MaskedTextBoxArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MaskedTextBoxArray.GetIndex(System.Windows.Forms.MaskedTextBox)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.MaskedTextBox" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MaskedTextBoxArray" />.</summary>
@@ -3637,7 +3637,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MenuItemArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MenuItemArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.MenuItemArray.GetIndex(System.Windows.Forms.MenuItem)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.MenuItem" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.MenuItemArray" />.</summary>
@@ -3682,11 +3682,11 @@
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants.LeftButton">
       <summary>Equivalent to the Visual Basic 6.0 constant vbLeftButton.</summary>
     </member>
-    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants.RightButton">
-      <summary>Equivalent to the Visual Basic 6.0 constant vbRightButton.</summary>
-    </member>
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants.MiddleButton">
       <summary>Equivalent to the Visual Basic 6.0 constant vbMiddleButton.</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.MouseButtonConstants.RightButton">
+      <summary>Equivalent to the Visual Basic 6.0 constant vbRightButton.</summary>
     </member>
     <member name="T:Microsoft.VisualBasic.Compatibility.VB6.OpenFileDialogArray">
       <summary>Provides a control array of <see cref="T:System.Windows.Forms.OpenFileDialog" /> controls.</summary>
@@ -3708,7 +3708,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.OpenFileDialogArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.OpenFileDialogArray.GetIndex(System.Windows.Forms.OpenFileDialog)">
       <summary>Gets the index of an <see cref="T:System.Windows.Forms.OpenFileDialog" /> in an <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.OpenFileDialogArray" />.</summary>
@@ -3768,7 +3768,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.PanelArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.PanelArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.Panel" /> control.</param>
     </member>
     <member name="E:Microsoft.VisualBasic.Compatibility.VB6.PanelArray.CausesValidationChanged">
@@ -3830,7 +3830,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.PanelArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.PanelArray.GetIndex(System.Windows.Forms.Panel)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.Panel" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.PanelArray" />.</summary>
@@ -4036,7 +4036,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.PictureBoxArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.PictureBoxArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.PictureBoxArray.GetIndex(System.Windows.Forms.PictureBox)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.PictureBox" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.PictureBoxArray" />.</summary>
@@ -4176,7 +4176,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.PrintDialogArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.PrintDialogArray.GetIndex(System.Windows.Forms.PrintDialog)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.PrintDialog" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.PrintDialogArray" />.</summary>
@@ -4227,7 +4227,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ProgressBarArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ProgressBarArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.ProgressBar" /> control.</param>
     </member>
     <member name="E:Microsoft.VisualBasic.Compatibility.VB6.ProgressBarArray.ChangeUICues">
@@ -4277,7 +4277,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ProgressBarArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ProgressBarArray.GetIndex(System.Windows.Forms.ProgressBar)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.ProgressBar" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ProgressBarArray" />.</summary>
@@ -4424,7 +4424,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.RadioButtonArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.RadioButtonArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.RadioButton" /> control.</param>
     </member>
     <member name="E:Microsoft.VisualBasic.Compatibility.VB6.RadioButtonArray.CausesValidationChanged">
@@ -4486,7 +4486,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.RadioButtonArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.RadioButtonArray.GetIndex(System.Windows.Forms.RadioButton)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.RadioButton" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.RadioButtonArray" />.</summary>
@@ -4645,7 +4645,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.RichTextBoxArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.RichTextBoxArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.RichTextBox" /> control.</param>
     </member>
     <member name="E:Microsoft.VisualBasic.Compatibility.VB6.RichTextBoxArray.CausesValidationChanged">
@@ -4698,7 +4698,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.RichTextBoxArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.RichTextBoxArray.GetIndex(System.Windows.Forms.RichTextBox)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.RichTextBox" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.RichTextBoxArray" />.</summary>
@@ -4877,7 +4877,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.GetIndex(System.Windows.Forms.SaveFileDialog)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.SaveFileDialog" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray" />.</summary>
@@ -4913,11 +4913,14 @@
     <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode">
       <summary>Provides constants for compatibility with the ScaleMode constants in Visual Basic 6.0.</summary>
     </member>
-    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Points">
-      <summary>Equivalent to the Visual Basic 6.0 constant vbPoints.</summary>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Centimeters">
+      <summary>Equivalent to the Visual Basic 6.0 constant vbCentimeters.</summary>
     </member>
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Characters">
       <summary>Equivalent to the Visual Basic 6.0 constant vbCharacters.</summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Himetric">
+      <summary>Equivalent to the Visual Basic 6.0 constant vbHimetric.</summary>
     </member>
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Inches">
       <summary>Equivalent to the Visual Basic 6.0 constant vbInches.</summary>
@@ -4925,23 +4928,20 @@
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Millimeters">
       <summary>Equivalent to the Visual Basic 6.0 constant vbMillimeters.</summary>
     </member>
-    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Centimeters">
-      <summary>Equivalent to the Visual Basic 6.0 constant vbCentimeters.</summary>
-    </member>
-    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Himetric">
-      <summary>Equivalent to the Visual Basic 6.0 constant vbHimetric.</summary>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ScaleMode.Points">
+      <summary>Equivalent to the Visual Basic 6.0 constant vbPoints.</summary>
     </member>
     <member name="T:Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants">
       <summary>Provides constants for compatibility with the shift parameter mask constants in Visual Basic 6.0.</summary>
     </member>
-    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants.ShiftMask">
-      <summary>Equivalent to the Visual Basic 6.0 constant vbShiftMask.</summary>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants.AltMask">
+      <summary>Equivalent to the Visual Basic 6.0 constant vbAltMask.</summary>
     </member>
     <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants.CtrlMask">
       <summary>Equivalent to the Visual Basic 6.0 constant vbCtrlMask.</summary>
     </member>
-    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants.AltMask">
-      <summary>Equivalent to the Visual Basic 6.0 constant vbAltMask.</summary>
+    <member name="F:Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants.ShiftMask">
+      <summary>Equivalent to the Visual Basic 6.0 constant vbShiftMask.</summary>
     </member>
     <member name="T:Microsoft.VisualBasic.Compatibility.VB6.StatusBarArray">
       <summary>Provides a control array of <see cref="T:System.Windows.Forms.StatusBar" /> controls</summary>
@@ -4958,7 +4958,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.StatusBarArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.StatusBarArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.StatusBar" /> control.</param>
     </member>
     <member name="E:Microsoft.VisualBasic.Compatibility.VB6.StatusBarArray.CausesValidationChanged">
@@ -5020,7 +5020,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.StatusBarArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.StatusBarArray.GetIndex(System.Windows.Forms.StatusBar)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.StatusBar" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.StatusBarArray" />.</summary>
@@ -5238,7 +5238,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.StatusStripArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.StatusStripArray.GetIndex(System.Windows.Forms.StatusStrip)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.StatusStrip" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.StatusStripArray" />.</summary>
@@ -5402,7 +5402,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.Support.CopyArray(System.Array)">
       <summary>Duplicates Visual Basic 6.0 functionality of assigning an Array to a Variant.</summary>
-      <returns>A <see cref="T:System.Array" />.</returns>
+      <returns>The array to copy.</returns>
       <param name="SourceArray">A <see cref="T:System.Array" />.</param>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.Support.CursorToIPicture(System.Windows.Forms.Cursor)">
@@ -5545,7 +5545,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.Support.GetActiveControl">
       <summary>Gets the control that currently has focus.</summary>
-      <returns>A <see cref="T:System.Windows.Forms.Control" />.</returns>
+      <returns>The control that currently has focus.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.Support.GetCancel(System.Windows.Forms.Button)">
       <summary>Gets a value that indicates whether a <see cref="T:System.Windows.Forms.Button" /> is the cancel button on a form.</summary>
@@ -5588,7 +5588,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.Support.IFontToFont(System.Object)">
       <summary>Converts a Visual Basic 6.0 stdFont object to a <see cref="T:System.Drawing.Font" />.</summary>
-      <returns>A <see cref="T:System.Drawing.Font" />.</returns>
+      <returns>A specified object to convert.</returns>
       <param name="objFnt">An <see cref="T:System.Object" /> that contains a Visual Basic 6.0 stdFont.</param>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.Support.ImageToIPicture(System.Drawing.Image)">
@@ -5638,13 +5638,13 @@
       <param name="b">An <see cref="T:System.Object" /> expression.</param>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.Support.IPictureDispToImage(System.Object)">
-      <summary>Gets a <see cref="T:System.Drawing.Image" /> for a given OLE IPictureDisp object.</summary>
-      <returns>A <see cref="T:System.Drawing.Image" />.</returns>
+      <summary>Gets an <see cref="T:System.Drawing.Image" /> for a given OLE IPictureDisp object.</summary>
+      <returns>An image object.</returns>
       <param name="pict">An OLE IPictureDisp object.</param>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.Support.IPictureToImage(System.Object)">
-      <summary>Gets a <see cref="T:System.Drawing.Image" /> for a given OLE IPicture object.</summary>
-      <returns>A <see cref="T:System.Drawing.Image" />.</returns>
+      <summary>Gets an <see cref="T:System.Drawing.Image" /> for a given OLE IPicture object.</summary>
+      <returns>A converted object to image.</returns>
       <param name="pict">An OLE IPicture object.</param>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.Support.LoadResData(System.Object,System.Object)">
@@ -5828,7 +5828,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.TabControl" /> control.</param>
     </member>
     <member name="E:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.CausesValidationChanged">
@@ -5896,7 +5896,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray.GetIndex(System.Windows.Forms.TabControl)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.TabControl" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TabControlArray" />.</summary>
@@ -6070,7 +6070,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.TextBoxArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TextBoxArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.TextBox" /> control.</param>
     </member>
     <member name="E:Microsoft.VisualBasic.Compatibility.VB6.TextBoxArray.CausesValidationChanged">
@@ -6132,7 +6132,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.TextBoxArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.TextBoxArray.GetIndex(System.Windows.Forms.TextBox)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.TextBox" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TextBoxArray" />.</summary>
@@ -6299,7 +6299,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.TimerArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TimerArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.TimerArray.GetIndex(System.Windows.Forms.Timer)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.Timer" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TimerArray" />.</summary>
@@ -6415,7 +6415,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ToolBarArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ToolBarArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ToolBarArray.GetIndex(System.Windows.Forms.ToolBar)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.ToolBar" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ToolBarArray" />.</summary>
@@ -6624,7 +6624,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ToolStripArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ToolStripArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ToolStripArray.GetIndex(System.Windows.Forms.ToolStrip)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.ToolStrip" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ToolStripArray" />.</summary>
@@ -6839,7 +6839,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ToolStripMenuItemArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ToolStripMenuItemArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.ToolStripMenuItemArray.GetIndex(System.Windows.Forms.ToolStripMenuItem)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ToolStripMenuItemArray" />.</summary>
@@ -7021,7 +7021,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.TreeViewArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>This method must be overridden. The <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TreeViewArray" /> class is the base class for all control arrays that are used in applications upgraded from Visual Basic 6.0. Because this class is not typically used to create an instance of the class, this Protected method is usually not called directly but is instead called by a derived class.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.TreeViewArray.GetIndex(System.Windows.Forms.TreeView)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.TreeView" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.TreeViewArray" />.</summary>
@@ -7186,7 +7186,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.VScrollBarArray.CanExtend(System.Object)">
       <summary>Gets a value that determines whether a control is a member of a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.VScrollBarArray" />.</summary>
-      <returns>true if <paramref name="target" /> is a member of the control array; otherwise false.</returns>
+      <returns>true if <paramref name="target" /> is a member of the control array; otherwise, false.</returns>
       <param name="target">A <see cref="T:System.Windows.Forms.VScrollBar" /> control.</param>
     </member>
     <member name="E:Microsoft.VisualBasic.Compatibility.VB6.VScrollBarArray.CausesValidationChanged">
@@ -7236,7 +7236,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.VScrollBarArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.VScrollBarArray.GetIndex(System.Windows.Forms.VScrollBar)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.VScrollBar" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.VScrollBarArray" />.</summary>
@@ -7400,7 +7400,7 @@
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.GetControlInstanceType">
       <summary>Overrides <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
-      <returns>A <see cref="T:System.Type" />.</returns>
+      <returns>The type of a control in a control array.</returns>
     </member>
     <member name="M:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.GetIndex(System.Windows.Forms.WebBrowser)">
       <summary>Gets the index of a <see cref="T:System.Windows.Forms.WebBrowser" /> in a <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray" />.</summary>

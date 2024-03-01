@@ -920,20 +920,20 @@
     <member name="T:System.Data.Services.Client.EntityStates">
       <summary>Represents the enumeration that identifies the state of an entity being tracked by the <see cref="T:System.Data.Services.Client.DataServiceContext" />.  </summary>
     </member>
-    <member name="F:System.Data.Services.Client.EntityStates.Detached">
-      <summary>The entity was detached since the last call to <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" />.</summary>
-    </member>
-    <member name="F:System.Data.Services.Client.EntityStates.Unchanged">
-      <summary>The entity is unchanged since the last call to <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" />.</summary>
-    </member>
     <member name="F:System.Data.Services.Client.EntityStates.Added">
       <summary>The entity was added since the last call to <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" />.</summary>
     </member>
     <member name="F:System.Data.Services.Client.EntityStates.Deleted">
       <summary>The entity was deleted since the last call to <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" />.</summary>
     </member>
+    <member name="F:System.Data.Services.Client.EntityStates.Detached">
+      <summary>The entity was detached since the last call to <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" />.</summary>
+    </member>
     <member name="F:System.Data.Services.Client.EntityStates.Modified">
       <summary>The entity was modified since the last call to <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" />.</summary>
+    </member>
+    <member name="F:System.Data.Services.Client.EntityStates.Unchanged">
+      <summary>The entity is unchanged since the last call to <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" />.</summary>
     </member>
     <member name="T:System.Data.Services.Client.LinkDescriptor">
       <summary>Provides a description of modifications done to entities by operations returned in a <see cref="T:System.Data.Services.Client.DataServiceResponse" />. </summary>
@@ -969,14 +969,14 @@
     <member name="F:System.Data.Services.Client.MergeOption.AppendOnly">
       <summary>Append new entities only. Existing entities or their original values will not be modified. No client-side changes are lost in this merge. This is the default behavior.</summary>
     </member>
+    <member name="F:System.Data.Services.Client.MergeOption.NoTracking">
+      <summary>Objects are always loaded from persisted storage. Any property changes made to objects in the object context are overwritten by the data source values.</summary>
+    </member>
     <member name="F:System.Data.Services.Client.MergeOption.OverwriteChanges">
       <summary>All current values on the client are overwritten with current values from the data service regardless of whether they have been changed on the client. </summary>
     </member>
     <member name="F:System.Data.Services.Client.MergeOption.PreserveChanges">
       <summary>Current values that have been changed on the client are not modified, but any unchanged values are updated with current values from the data service. No client-side changes are lost in this merge.</summary>
-    </member>
-    <member name="F:System.Data.Services.Client.MergeOption.NoTracking">
-      <summary>Objects are always loaded from persisted storage. Any property changes made to objects in the object context are overwritten by the data source values.</summary>
     </member>
     <member name="T:System.Data.Services.Client.MimeTypePropertyAttribute">
       <summary>Annotates a property on a class that has been annotated with the <see cref="T:System.Data.Services.Client.MediaEntryAttribute" />. </summary>
@@ -1074,14 +1074,14 @@
     <member name="T:System.Data.Services.Client.SaveChangesOptions">
       <summary>Indicates change options when <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" /> is called.  </summary>
     </member>
-    <member name="F:System.Data.Services.Client.SaveChangesOptions.None">
-      <summary>Pending changes are saved by using multiple requests to the server, but the operation stops on the first failure (default).</summary>
-    </member>
     <member name="F:System.Data.Services.Client.SaveChangesOptions.Batch">
       <summary>All pending changes are saved in a single batch request.</summary>
     </member>
     <member name="F:System.Data.Services.Client.SaveChangesOptions.ContinueOnError">
       <summary>Pending changes are saved by using multiple requests to the server, and the operation continues after an error occurs.</summary>
+    </member>
+    <member name="F:System.Data.Services.Client.SaveChangesOptions.None">
+      <summary>Pending changes are saved by using multiple requests to the server, but the operation stops on the first failure (default).</summary>
     </member>
     <member name="F:System.Data.Services.Client.SaveChangesOptions.ReplaceOnUpdate">
       <summary>Pending updates are made by replacing all values of the entity in the data source with values from the updated entity (HTTP PUT) instead of just updating changed values (HTTP MERGE), which is the default behavior. </summary>
@@ -1101,11 +1101,11 @@
     <member name="T:System.Data.Services.Client.TrackingMode">
       <summary>Determines whether changes that are made to a <see cref="T:System.Data.Services.Client.DataServiceCollection`1" /> are tracked.</summary>
     </member>
-    <member name="F:System.Data.Services.Client.TrackingMode.None">
-      <summary>Changes made to items in the <see cref="T:System.Data.Services.Client.DataServiceCollection`1" /> are not tracked automatically by the client. </summary>
-    </member>
     <member name="F:System.Data.Services.Client.TrackingMode.AutoChangeTracking">
       <summary>Changes to items in the <see cref="T:System.Data.Services.Client.DataServiceCollection`1" /> are automatically tracked by the client.</summary>
+    </member>
+    <member name="F:System.Data.Services.Client.TrackingMode.None">
+      <summary>Changes made to items in the <see cref="T:System.Data.Services.Client.DataServiceCollection`1" /> are not tracked automatically by the client. </summary>
     </member>
     <member name="T:System.Data.Services.Common.DataServiceEntityAttribute">
       <summary>Marks a class as an entity type in WCF Data Services.</summary>
@@ -1203,9 +1203,6 @@
     <member name="T:System.Data.Services.Common.SyndicationItemProperty">
       <summary>Enumeration type used to identify the syndication item element. </summary>
     </member>
-    <member name="F:System.Data.Services.Common.SyndicationItemProperty.CustomProperty">
-      <summary>Custom property element.</summary>
-    </member>
     <member name="F:System.Data.Services.Common.SyndicationItemProperty.AuthorEmail">
       <summary>Author email element.</summary>
     </member>
@@ -1224,8 +1221,8 @@
     <member name="F:System.Data.Services.Common.SyndicationItemProperty.ContributorUri">
       <summary>Contributor URI element.</summary>
     </member>
-    <member name="F:System.Data.Services.Common.SyndicationItemProperty.Updated">
-      <summary>Updated element.</summary>
+    <member name="F:System.Data.Services.Common.SyndicationItemProperty.CustomProperty">
+      <summary>Custom property element.</summary>
     </member>
     <member name="F:System.Data.Services.Common.SyndicationItemProperty.Published">
       <summary>Published resource element.</summary>
@@ -1239,14 +1236,17 @@
     <member name="F:System.Data.Services.Common.SyndicationItemProperty.Title">
       <summary>Title element.</summary>
     </member>
+    <member name="F:System.Data.Services.Common.SyndicationItemProperty.Updated">
+      <summary>Updated element.</summary>
+    </member>
     <member name="T:System.Data.Services.Common.SyndicationTextContentKind">
       <summary>Enumeration used to identify text content of syndication item. </summary>
     </member>
-    <member name="F:System.Data.Services.Common.SyndicationTextContentKind.Plaintext">
-      <summary>Plain text content.</summary>
-    </member>
     <member name="F:System.Data.Services.Common.SyndicationTextContentKind.Html">
       <summary>HTML content.</summary>
+    </member>
+    <member name="F:System.Data.Services.Common.SyndicationTextContentKind.Plaintext">
+      <summary>Plain text content.</summary>
     </member>
     <member name="F:System.Data.Services.Common.SyndicationTextContentKind.Xhtml">
       <summary>XHTML content.</summary>

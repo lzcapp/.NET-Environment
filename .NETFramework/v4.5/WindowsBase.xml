@@ -615,14 +615,14 @@
     <member name="T:System.ComponentModel.NewItemPlaceholderPosition">
       <summary>Specifies where the placeholder for a new item appears in the collection.</summary>
     </member>
-    <member name="F:System.ComponentModel.NewItemPlaceholderPosition.None">
-      <summary>The collection does not use a new item placeholder. The position of items that are added depends on the underlying collection.  Usually, they are added at the end of the collection.</summary>
-    </member>
     <member name="F:System.ComponentModel.NewItemPlaceholderPosition.AtBeginning">
       <summary>The placeholder for a new item appears at the beginning of the collection.  New items are at the beginning of the collection, after the new item placeholder. </summary>
     </member>
     <member name="F:System.ComponentModel.NewItemPlaceholderPosition.AtEnd">
       <summary>The placeholder for a new item appears at the end of the collection. New items are added at the end of the collection, before the new item placeholder.</summary>
+    </member>
+    <member name="F:System.ComponentModel.NewItemPlaceholderPosition.None">
+      <summary>The collection does not use a new item placeholder. The position of items that are added depends on the underlying collection.  Usually, they are added at the end of the collection.</summary>
     </member>
     <member name="T:System.ComponentModel.PropertyChangedEventManager">
       <summary>Provides a <see cref="T:System.Windows.WeakEventManager" /> implementation so that you can use the "weak event listener" pattern to attach listeners for the <see cref="E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged" /> event.</summary>
@@ -707,11 +707,14 @@
     <member name="T:System.ComponentModel.PropertyFilterOptions">
       <summary>Specifies which properties should be reported by type descriptors, specifically the <see cref="M:System.ComponentModel.TypeDescriptor.GetProperties(System.Object)" /> method. This enumeration is used to specify the value of the <see cref="P:System.ComponentModel.PropertyFilterAttribute.Filter" /> property.</summary>
     </member>
-    <member name="F:System.ComponentModel.PropertyFilterOptions.None">
-      <summary>Return no properties</summary>
+    <member name="F:System.ComponentModel.PropertyFilterOptions.All">
+      <summary>Return all properties.</summary>
     </member>
     <member name="F:System.ComponentModel.PropertyFilterOptions.Invalid">
       <summary>Return only those properties that are not valid given the current context of the object. See Remarks.</summary>
+    </member>
+    <member name="F:System.ComponentModel.PropertyFilterOptions.None">
+      <summary>Return no properties</summary>
     </member>
     <member name="F:System.ComponentModel.PropertyFilterOptions.SetValues">
       <summary>Return only those properties that have local values currently set.</summary>
@@ -721,9 +724,6 @@
     </member>
     <member name="F:System.ComponentModel.PropertyFilterOptions.Valid">
       <summary>Return any property that is valid on the  object in the current scope. See Remarks.</summary>
-    </member>
-    <member name="F:System.ComponentModel.PropertyFilterOptions.All">
-      <summary>Return all properties.</summary>
     </member>
     <member name="T:System.ComponentModel.SortDescription">
       <summary>Defines the direction and the property name to be used as the criteria for sorting a collection.</summary>
@@ -804,8 +804,8 @@
     <member name="T:System.Diagnostics.PresentationTraceLevel">
       <summary>Describes the level of detail to trace about a particular object.</summary>
     </member>
-    <member name="F:System.Diagnostics.PresentationTraceLevel.None">
-      <summary>Traces no available additional information.</summary>
+    <member name="F:System.Diagnostics.PresentationTraceLevel.High">
+      <summary>Traces all additional information.</summary>
     </member>
     <member name="F:System.Diagnostics.PresentationTraceLevel.Low">
       <summary>Traces some additional information.</summary>
@@ -813,8 +813,8 @@
     <member name="F:System.Diagnostics.PresentationTraceLevel.Medium">
       <summary>Traces a medium amount of additional information.</summary>
     </member>
-    <member name="F:System.Diagnostics.PresentationTraceLevel.High">
-      <summary>Traces all additional information.</summary>
+    <member name="F:System.Diagnostics.PresentationTraceLevel.None">
+      <summary>Traces no available additional information.</summary>
     </member>
     <member name="T:System.Diagnostics.PresentationTraceSources">
       <summary>Provides debug tracing support that is specifically targeted for Windows Presentation Foundation (WPF) applications. </summary>
@@ -947,17 +947,17 @@
     <member name="T:System.IO.Packaging.CompressionOption">
       <summary>Specifies the compression level for content that is stored in a <see cref="T:System.IO.Packaging.PackagePart" />. </summary>
     </member>
-    <member name="F:System.IO.Packaging.CompressionOption.NotCompressed">
-      <summary>Compression is turned off. </summary>
-    </member>
-    <member name="F:System.IO.Packaging.CompressionOption.Normal">
-      <summary>Compression is optimized for a balance between size and performance. </summary>
+    <member name="F:System.IO.Packaging.CompressionOption.Fast">
+      <summary>Compression is optimized for performance. </summary>
     </member>
     <member name="F:System.IO.Packaging.CompressionOption.Maximum">
       <summary>Compression is optimized for size. </summary>
     </member>
-    <member name="F:System.IO.Packaging.CompressionOption.Fast">
-      <summary>Compression is optimized for performance. </summary>
+    <member name="F:System.IO.Packaging.CompressionOption.Normal">
+      <summary>Compression is optimized for a balance between size and performance. </summary>
+    </member>
+    <member name="F:System.IO.Packaging.CompressionOption.NotCompressed">
+      <summary>Compression is turned off. </summary>
     </member>
     <member name="F:System.IO.Packaging.CompressionOption.SuperFast">
       <summary>Compression is optimized for high performance.</summary>
@@ -2184,20 +2184,14 @@
     <member name="T:System.IO.Packaging.TargetMode">
       <summary>Specifies whether the target of a <see cref="T:System.IO.Packaging.PackageRelationship" /> is inside or outside the <see cref="T:System.IO.Packaging.Package" />. </summary>
     </member>
-    <member name="F:System.IO.Packaging.TargetMode.Internal">
-      <summary>The relationship references a part that is inside the package. </summary>
-    </member>
     <member name="F:System.IO.Packaging.TargetMode.External">
       <summary>The relationship references a resource that is external to the package. </summary>
     </member>
+    <member name="F:System.IO.Packaging.TargetMode.Internal">
+      <summary>The relationship references a part that is inside the package. </summary>
+    </member>
     <member name="T:System.IO.Packaging.VerifyResult">
       <summary>Specifies the result of a certificate or signature verification.</summary>
-    </member>
-    <member name="F:System.IO.Packaging.VerifyResult.Success">
-      <summary>The verification was successful.</summary>
-    </member>
-    <member name="F:System.IO.Packaging.VerifyResult.InvalidSignature">
-      <summary>The signature is not valid.</summary>
     </member>
     <member name="F:System.IO.Packaging.VerifyResult.CertificateRequired">
       <summary>The X.509 certificate is not available to verify the signature.</summary>
@@ -2205,11 +2199,17 @@
     <member name="F:System.IO.Packaging.VerifyResult.InvalidCertificate">
       <summary>The X.509 certificate is not valid.</summary>
     </member>
-    <member name="F:System.IO.Packaging.VerifyResult.ReferenceNotFound">
-      <summary>A reference relationship to the signature was not found.</summary>
+    <member name="F:System.IO.Packaging.VerifyResult.InvalidSignature">
+      <summary>The signature is not valid.</summary>
     </member>
     <member name="F:System.IO.Packaging.VerifyResult.NotSigned">
       <summary>The specified package or part has no signature.</summary>
+    </member>
+    <member name="F:System.IO.Packaging.VerifyResult.ReferenceNotFound">
+      <summary>A reference relationship to the signature was not found.</summary>
+    </member>
+    <member name="F:System.IO.Packaging.VerifyResult.Success">
+      <summary>The verification was successful.</summary>
     </member>
     <member name="T:System.IO.Packaging.ZipPackage">
       <summary>Implements a derived subclass of the abstract <see cref="T:System.IO.Packaging.Package" /> base class—the <see cref="T:System.IO.Packaging.ZipPackage" /> class uses a ZIP archive as the container store. This class cannot be inherited.</summary>
@@ -2314,47 +2314,47 @@
     <member name="T:System.Security.Permissions.MediaPermissionAudio">
       <summary>Specifies the permission level for audio.</summary>
     </member>
+    <member name="F:System.Security.Permissions.MediaPermissionAudio.AllAudio">
+      <summary>Permission that allows unrestricted audio playback.</summary>
+    </member>
     <member name="F:System.Security.Permissions.MediaPermissionAudio.NoAudio">
       <summary>Permission that denies all audio playback.</summary>
-    </member>
-    <member name="F:System.Security.Permissions.MediaPermissionAudio.SiteOfOriginAudio">
-      <summary>Permission that only allows audio playback of files that are located at the application's site of origin.</summary>
     </member>
     <member name="F:System.Security.Permissions.MediaPermissionAudio.SafeAudio">
       <summary>Permission that allows safe, limited audio playback, which includes denying stream access to the image file.</summary>
     </member>
-    <member name="F:System.Security.Permissions.MediaPermissionAudio.AllAudio">
-      <summary>Permission that allows unrestricted audio playback.</summary>
+    <member name="F:System.Security.Permissions.MediaPermissionAudio.SiteOfOriginAudio">
+      <summary>Permission that only allows audio playback of files that are located at the application's site of origin.</summary>
     </member>
     <member name="T:System.Security.Permissions.MediaPermissionImage">
       <summary>Specifies the permission level for images.</summary>
     </member>
+    <member name="F:System.Security.Permissions.MediaPermissionImage.AllImage">
+      <summary>Permission that allows unrestricted image display.</summary>
+    </member>
     <member name="F:System.Security.Permissions.MediaPermissionImage.NoImage">
       <summary>Permission that denies all images to be displayed.</summary>
-    </member>
-    <member name="F:System.Security.Permissions.MediaPermissionImage.SiteOfOriginImage">
-      <summary>Permission that only allows display of images that are located at the application's site of origin.</summary>
     </member>
     <member name="F:System.Security.Permissions.MediaPermissionImage.SafeImage">
       <summary>Permission that allows safe, limited image display, which includes denying stream access to the image file.</summary>
     </member>
-    <member name="F:System.Security.Permissions.MediaPermissionImage.AllImage">
-      <summary>Permission that allows unrestricted image display.</summary>
+    <member name="F:System.Security.Permissions.MediaPermissionImage.SiteOfOriginImage">
+      <summary>Permission that only allows display of images that are located at the application's site of origin.</summary>
     </member>
     <member name="T:System.Security.Permissions.MediaPermissionVideo">
       <summary>Specifies the permission level for video.</summary>
     </member>
+    <member name="F:System.Security.Permissions.MediaPermissionVideo.AllVideo">
+      <summary>Permission that allows unrestricted video playback.</summary>
+    </member>
     <member name="F:System.Security.Permissions.MediaPermissionVideo.NoVideo">
       <summary>Permission that denies all video playback.</summary>
-    </member>
-    <member name="F:System.Security.Permissions.MediaPermissionVideo.SiteOfOriginVideo">
-      <summary>Permission that only allows video playback of files that are located at the application's site of origin.</summary>
     </member>
     <member name="F:System.Security.Permissions.MediaPermissionVideo.SafeVideo">
       <summary>Permission that allows safe, limited video playback, which includes denying stream access to the image file.</summary>
     </member>
-    <member name="F:System.Security.Permissions.MediaPermissionVideo.AllVideo">
-      <summary>Permission that allows unrestricted video playback.</summary>
+    <member name="F:System.Security.Permissions.MediaPermissionVideo.SiteOfOriginVideo">
+      <summary>Permission that only allows video playback of files that are located at the application's site of origin.</summary>
     </member>
     <member name="T:System.Security.Permissions.WebBrowserPermission">
       <summary>The <see cref="T:System.Security.Permissions.WebBrowserPermission" /> object controls the ability to create the WebBrowser control.</summary>
@@ -2435,17 +2435,17 @@
     <member name="T:System.Security.RightsManagement.AuthenticationType">
       <summary>Specifies the method of rights management authentication.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.AuthenticationType.Windows">
-      <summary>Windows authentication in a corporate domain environment.</summary>
+    <member name="F:System.Security.RightsManagement.AuthenticationType.Internal">
+      <summary>Implicit authentication to any requesting user.</summary>
     </member>
     <member name="F:System.Security.RightsManagement.AuthenticationType.Passport">
       <summary>Windows Live ID authentication.</summary>
     </member>
+    <member name="F:System.Security.RightsManagement.AuthenticationType.Windows">
+      <summary>Windows authentication in a corporate domain environment.</summary>
+    </member>
     <member name="F:System.Security.RightsManagement.AuthenticationType.WindowsPassport">
       <summary>Either Windows authentication or Windows Live ID authentication.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.AuthenticationType.Internal">
-      <summary>Implicit authentication to any requesting user.</summary>
     </member>
     <member name="T:System.Security.RightsManagement.ContentGrant">
       <summary>Represents a right granted to a user to access information in a rights managed document.</summary>
@@ -2481,17 +2481,20 @@
     <member name="T:System.Security.RightsManagement.ContentRight">
       <summary>Specifies rights that can be granted to users for accessing content in a rights managed document.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.ContentRight.View">
-      <summary>The user can view the protected content.</summary>
+    <member name="F:System.Security.RightsManagement.ContentRight.DocumentEdit">
+      <summary>The user can edit the document that contains the protected content.</summary>
     </member>
     <member name="F:System.Security.RightsManagement.ContentRight.Edit">
       <summary>The user can edit and encrypt the protected content.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.ContentRight.Print">
-      <summary>The user can print the protected content.</summary>
+    <member name="F:System.Security.RightsManagement.ContentRight.Export">
+      <summary>The user can export the protected content.</summary>
     </member>
     <member name="F:System.Security.RightsManagement.ContentRight.Extract">
       <summary>The user can extract (copy and paste) the protected content.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.ContentRight.Forward">
+      <summary>The user can forward the protected content to another user.</summary>
     </member>
     <member name="F:System.Security.RightsManagement.ContentRight.ObjectModel">
       <summary>The user can control programmed access to the protected content.</summary>
@@ -2499,11 +2502,8 @@
     <member name="F:System.Security.RightsManagement.ContentRight.Owner">
       <summary>The user is the content owner.  The owner can edit and encrypt the protected content, and decrypt the signed <see cref="T:System.Security.RightsManagement.PublishLicense" />.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.ContentRight.ViewRightsData">
-      <summary>The user can decrypt and view the rights specified in the signed <see cref="T:System.Security.RightsManagement.PublishLicense" />.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.ContentRight.Forward">
-      <summary>The user can forward the protected content to another user.</summary>
+    <member name="F:System.Security.RightsManagement.ContentRight.Print">
+      <summary>The user can print the protected content.</summary>
     </member>
     <member name="F:System.Security.RightsManagement.ContentRight.Reply">
       <summary>The user can reply to the sender of the protected content.</summary>
@@ -2514,11 +2514,11 @@
     <member name="F:System.Security.RightsManagement.ContentRight.Sign">
       <summary>The user can digitally sign the protected content.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.ContentRight.DocumentEdit">
-      <summary>The user can edit the document that contains the protected content.</summary>
+    <member name="F:System.Security.RightsManagement.ContentRight.View">
+      <summary>The user can view the protected content.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.ContentRight.Export">
-      <summary>The user can export the protected content.</summary>
+    <member name="F:System.Security.RightsManagement.ContentRight.ViewRightsData">
+      <summary>The user can decrypt and view the rights specified in the signed <see cref="T:System.Security.RightsManagement.PublishLicense" />.</summary>
     </member>
     <member name="T:System.Security.RightsManagement.ContentUser">
       <summary>Represents a user or user-group for granting access to rights managed content.     </summary>
@@ -2738,104 +2738,23 @@
     <member name="T:System.Security.RightsManagement.RightsManagementFailureCode">
       <summary>Specifies error conditions that can occur when performing a rights management operation. </summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.Success">
-      <summary>Operation has competed successfully.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.Aborted">
+      <summary>Asynchronous operation canceled, or a non-recoverable error has occurred.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidLicense">
-      <summary>The license structure in one of the certificates is invalid. </summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ActivationFailed">
+      <summary>License activation failed; rights management services are not properly configured.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InfoNotInLicense">
-      <summary>When creating a bound license, an issuance license, not an end-use license, was specified.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.AdEntryNotFound">
+      <summary>The current user was not found in the Active Directory (AD) for certification under Windows authentication.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidLicenseSignature">
-      <summary>Rights management signed digital certificate cannot be validated. (The signed certificate may have been tampered.)</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.AlreadyInProgress">
+      <summary>The requested operation is already in progress.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.EncryptionNotPermitted">
-      <summary>Encryption is not permitted. </summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.RightNotGranted">
-      <summary>The current user does not have rights to access the protected content.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidVersion">
-      <summary>The rights management version is incorrect.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidEncodingType">
-      <summary>The specified encoding type is invalid. </summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidNumericalValue">
-      <summary>The numeric value specified is invalid.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidAlgorithmType">
-      <summary>The algorithm type specified is invalid.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.EnvironmentNotLoaded">
-      <summary>The <see cref="T:System.Security.RightsManagement.SecureEnvironment" /> cannot load.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.EnvironmentCannotLoad">
-      <summary>The <see cref="T:System.Security.RightsManagement.SecureEnvironment" /> cannot load.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.TooManyLoadedEnvironments">
-      <summary>Too many <see cref="T:System.Security.RightsManagement.SecureEnvironment" /> instance have been created.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.IncompatibleObjects">
-      <summary>An object type passed is incompatible with this operation.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.LibraryFail">
-      <summary>A library operation failed.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.EnablingPrincipalFailure">
-      <summary>The specified principal cannot be enabled</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InfoNotPresent">
-      <summary>Some information is missing.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.AuthenticationFailed">
+      <summary>Possible authentication error (HTTP error 401) returned by an Internet request. Or, the current user does not have valid domain credentials in a silent user activation attempt. Or, the certification server in silent user activation is not in the local intranet or trusted sites zone.</summary>
     </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BadGetInfoQuery">
       <summary>An invalid constant was passed.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.KeyTypeUnsupported">
-      <summary>The key type specified in a key/value pair is not supported.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.CryptoOperationUnsupported">
-      <summary>A cryptographic operation that was requested is not supported. For example, passing an RMS encrypting object for decrypting purposes.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ClockRollbackDetected">
-      <summary>Clock rollback has been detected.  Protected content cannot be accessed.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.QueryReportsNoResults">
-      <summary>No instances of the requested attribute exist. </summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.UnexpectedException">
-      <summary>An unspecified error occurred.  Also thrown when an application runs in debug mode. </summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindValidityTimeViolated">
-      <summary>The defined time period for the protected content has expired; access is no longer permitted.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BrokenCertChain">
-      <summary>The rights management certificate chain is broken.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindPolicyViolation">
-      <summary>The current user does not have rights to access the protected content.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ManifestPolicyViolation">
-      <summary>An operation is in violation of the rights management manifest policy.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedLicense">
-      <summary>The current user does not have rights to access the protected content.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedIssuer">
-      <summary>The current user does not have rights to access the protected content.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedPrincipal">
-      <summary>The current user does not have rights to access the protected content.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedResource">
-      <summary>The current user does not have rights to access the protected content.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedModule">
-      <summary>Rights management services are not properly configured.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindContentNotInEndUseLicense">
-      <summary>The specified resource is not contained in any WORK node of the license.</summary>
     </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindAccessPrincipalNotEnabling">
       <summary>The access condition is not matched to the enabling principal that is handed into the bind.</summary>
@@ -2843,143 +2762,122 @@
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindAccessUnsatisfied">
       <summary>The current user does not satisfy the conditions defined in the End Use License (EUL).</summary>
     </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindContentNotInEndUseLicense">
+      <summary>The specified resource is not contained in any WORK node of the license.</summary>
+    </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindIndicatedPrincipalMissing">
       <summary>The enabling principal does not match the issued principal of the End Use License (EUL).</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindMachineNotFoundInGroupIdentity">
-      <summary>The current machine is not defined within the rights managed group identity.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.LibraryUnsupportedPlugIn">
-      <summary>The specified library plug-in is not supported.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevocationListStale">
-      <summary>The license requires that a new revocation list must be acquired.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindNoApplicableRevocationList">
-      <summary>The current user does not have rights to access the protected content.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidHandle">
-      <summary>Either the environment or the enabling principal handle is invalid. </summary>
     </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindIntervalTimeViolated">
       <summary>The defined time period for the protected content has expired; access is no longer permitted.</summary>
     </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindMachineNotFoundInGroupIdentity">
+      <summary>The current machine is not defined within the rights managed group identity.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindNoApplicableRevocationList">
+      <summary>The current user does not have rights to access the protected content.</summary>
+    </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindNoSatisfiedRightsGroup">
       <summary>The specified rights group is not contained in the End Use License (EUL).</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindPolicyViolation">
+      <summary>The current user does not have rights to access the protected content.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevocationListStale">
+      <summary>The license requires that a new revocation list must be acquired.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedIssuer">
+      <summary>The current user does not have rights to access the protected content.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedLicense">
+      <summary>The current user does not have rights to access the protected content.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedModule">
+      <summary>Rights management services are not properly configured.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedPrincipal">
+      <summary>The current user does not have rights to access the protected content.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindRevokedResource">
+      <summary>The current user does not have rights to access the protected content.</summary>
     </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindSpecifiedWorkMissing">
       <summary>The End Use License (EUL) contains no WORK node.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NoMoreData">
-      <summary>No license or certificate exists at the specified index. </summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BindValidityTimeViolated">
+      <summary>The defined time period for the protected content has expired; access is no longer permitted.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.LicenseAcquisitionFailed">
-      <summary>An End Use License (EUL) could not be acquired from the rights management server.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.BrokenCertChain">
+      <summary>The rights management certificate chain is broken.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.IdMismatch">
-      <summary>The content ID from the license does not match the content ID the license storage session</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ClockRollbackDetected">
+      <summary>Clock rollback has been detected.  Protected content cannot be accessed.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.TooManyCertificates">
-      <summary>The number of certificates has exceeded the maximum number allowed.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.CryptoOperationUnsupported">
+      <summary>A cryptographic operation that was requested is not supported. For example, passing an RMS encrypting object for decrypting purposes.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NoDistributionPointUrlFound">
-      <summary>The protected content is corrupted.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.DebuggerDetected">
+      <summary>Cannot open or publish content with restricted permissions because a debugger has been detected. </summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.AlreadyInProgress">
-      <summary>The requested operation is already in progress.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.EmailNotVerified">
+      <summary>The user's email address cannot be verified.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.EnablingPrincipalFailure">
+      <summary>The specified principal cannot be enabled</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.EncryptionNotPermitted">
+      <summary>Encryption is not permitted. </summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.EnvironmentCannotLoad">
+      <summary>The <see cref="T:System.Security.RightsManagement.SecureEnvironment" /> cannot load.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.EnvironmentNotLoaded">
+      <summary>The <see cref="T:System.Security.RightsManagement.SecureEnvironment" /> cannot load.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ExpiredOfficialIssuanceLicenseTemplate">
+      <summary>The authorized time period defined in the issuance license template has expired; access is no longer permitted.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.GlobalOptionAlreadySet">
+      <summary>The option specified has already been set.  </summary>
     </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.GroupIdentityNotSet">
       <summary>A user name was not specified for the client session</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.RecordNotFound">
-      <summary>The specified license was not found. </summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.HidCorrupted">
+      <summary>The Hardware ID (HID) used in a machine activation attempt is incorrectly formatted. Rights management services are not properly configured.  </summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NoConnect">
-      <summary>Rights management cannot connect to the URI specified for the license server.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.HidInvalid">
+      <summary>The Hardware ID (HID) used in a machine activation attempt is invalid. Rights management services are not properly configured.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NoLicense">
-      <summary>A required license is not available.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.IdMismatch">
+      <summary>The content ID from the license does not match the content ID the license storage session</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NeedsMachineActivation">
-      <summary>The computer must be activated before the user can be activated. </summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.IncompatibleObjects">
+      <summary>An object type passed is incompatible with this operation.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NeedsGroupIdentityActivation">
-      <summary>The user is not activated, or no Rights Account Certificate (RAC) was submitted and none was found in the license store to match the license associated with this session.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InfoNotInLicense">
+      <summary>When creating a bound license, an issuance license, not an end-use license, was specified.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ActivationFailed">
-      <summary>License activation failed; rights management services are not properly configured.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.Aborted">
-      <summary>Asynchronous operation canceled, or a non-recoverable error has occurred.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.OutOfQuota">
-      <summary>The license server's maximum quota of End Use Licenses (EULs) has been reached.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.AuthenticationFailed">
-      <summary>Possible authentication error (HTTP error 401) returned by an Internet request. Or, the current user does not have valid domain credentials in a silent user activation attempt. Or, the certification server in silent user activation is not in the local intranet or trusted sites zone.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ServerError">
-      <summary>Rights management services are not properly configured.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InfoNotPresent">
+      <summary>Some information is missing.</summary>
     </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InstallationFailed">
       <summary>An installation operation failed.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.HidCorrupted">
-      <summary>The Hardware ID (HID) used in a machine activation attempt is incorrectly formatted. Rights management services are not properly configured.  </summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidAlgorithmType">
+      <summary>The algorithm type specified is invalid.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidServerResponse">
-      <summary>Rights management services are not properly configured.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ServiceNotFound">
-      <summary>Rights management services are not properly configured.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.UseDefault">
-      <summary>If a request is made for computer activation or a rights account certificate, receiving <see cref="F:System.Security.RightsManagement.RightsManagementFailureCode.UseDefault" /> indicates that the application should pass null into the ActServInfo parameter</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ServerNotFound">
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidClientLicensorCertificate">
       <summary>Rights management services are not properly configured.</summary>
     </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidEmail">
       <summary>RMS Server email address verification failed.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ValidityTimeViolation">
-      <summary>The defined time period for the protected content has expired; access is no longer permitted.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidEncodingType">
+      <summary>The specified encoding type is invalid. </summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.OutdatedModule">
-      <summary>Rights management services are not properly configured.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ServiceMoved">
-      <summary>Rights management services are not properly configured.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ServiceGone">
-      <summary>Rights management services are not properly configured.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.AdEntryNotFound">
-      <summary>The current user was not found in the Active Directory (AD) for certification under Windows authentication.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NotAChain">
-      <summary>Rights managed content is corrupted.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.RequestDenied">
-      <summary>The Rights Management server does not allow temporary certification of the current user.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NotSet">
-      <summary>The item requested to delete does not exist. </summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.MetadataNotSet">
-      <summary>The specified metadata could net be set.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.RevocationInfoNotSet">
-      <summary>Certificate or license revocation information has not been set.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidTimeInfo">
-      <summary>The time information specified is invalid.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.RightNotSet">
-      <summary>The requested right was not specified when the content was published with rights management.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.LicenseBindingToWindowsIdentityFailed">
-      <summary>The current user credentials are not valid for acquiring a license.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidHandle">
+      <summary>Either the environment or the enabling principal handle is invalid. </summary>
     </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidIssuanceLicenseTemplate">
       <summary>The Rights Management Services template contains one or more errors.</summary>
@@ -2987,38 +2885,140 @@
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidKeyLength">
       <summary>The key length specified in a key/value pair is invalid.   </summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ExpiredOfficialIssuanceLicenseTemplate">
-      <summary>The authorized time period defined in the issuance license template has expired; access is no longer permitted.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidLicense">
+      <summary>The license structure in one of the certificates is invalid. </summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidClientLicensorCertificate">
-      <summary>Rights management services are not properly configured.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.HidInvalid">
-      <summary>The Hardware ID (HID) used in a machine activation attempt is invalid. Rights management services are not properly configured.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.EmailNotVerified">
-      <summary>The user's email address cannot be verified.</summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.DebuggerDetected">
-      <summary>Cannot open or publish content with restricted permissions because a debugger has been detected. </summary>
-    </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidLockboxType">
-      <summary>Rights management services are not properly configured.</summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidLicenseSignature">
+      <summary>Rights management signed digital certificate cannot be validated. (The signed certificate may have been tampered.)</summary>
     </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidLockboxPath">
       <summary>Rights management services are not properly configured.</summary>
     </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidLockboxType">
+      <summary>Rights management services are not properly configured.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidNumericalValue">
+      <summary>The numeric value specified is invalid.</summary>
+    </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidRegistryPath">
       <summary>The specified registry path is invalid.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidServerResponse">
+      <summary>Rights management services are not properly configured.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidTimeInfo">
+      <summary>The time information specified is invalid.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.InvalidVersion">
+      <summary>The rights management version is incorrect.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.KeyTypeUnsupported">
+      <summary>The key type specified in a key/value pair is not supported.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.LibraryFail">
+      <summary>A library operation failed.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.LibraryUnsupportedPlugIn">
+      <summary>The specified library plug-in is not supported.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.LicenseAcquisitionFailed">
+      <summary>An End Use License (EUL) could not be acquired from the rights management server.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.LicenseBindingToWindowsIdentityFailed">
+      <summary>The current user credentials are not valid for acquiring a license.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ManifestPolicyViolation">
+      <summary>An operation is in violation of the rights management manifest policy.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.MetadataNotSet">
+      <summary>The specified metadata could net be set.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NeedsGroupIdentityActivation">
+      <summary>The user is not activated, or no Rights Account Certificate (RAC) was submitted and none was found in the license store to match the license associated with this session.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NeedsMachineActivation">
+      <summary>The computer must be activated before the user can be activated. </summary>
     </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NoAesCryptoProvider">
       <summary>Rights management services are not properly configured.</summary>
     </member>
-    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.GlobalOptionAlreadySet">
-      <summary>The option specified has already been set.  </summary>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NoConnect">
+      <summary>Rights management cannot connect to the URI specified for the license server.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NoDistributionPointUrlFound">
+      <summary>The protected content is corrupted.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NoLicense">
+      <summary>A required license is not available.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NoMoreData">
+      <summary>No license or certificate exists at the specified index. </summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NotAChain">
+      <summary>Rights managed content is corrupted.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.NotSet">
+      <summary>The item requested to delete does not exist. </summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.OutdatedModule">
+      <summary>Rights management services are not properly configured.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.OutOfQuota">
+      <summary>The license server's maximum quota of End Use Licenses (EULs) has been reached.</summary>
     </member>
     <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.OwnerLicenseNotFound">
       <summary>The document does not contain an Owner License.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.QueryReportsNoResults">
+      <summary>No instances of the requested attribute exist. </summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.RecordNotFound">
+      <summary>The specified license was not found. </summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.RequestDenied">
+      <summary>The Rights Management server does not allow temporary certification of the current user.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.RevocationInfoNotSet">
+      <summary>Certificate or license revocation information has not been set.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.RightNotGranted">
+      <summary>The current user does not have rights to access the protected content.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.RightNotSet">
+      <summary>The requested right was not specified when the content was published with rights management.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ServerError">
+      <summary>Rights management services are not properly configured.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ServerNotFound">
+      <summary>Rights management services are not properly configured.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ServiceGone">
+      <summary>Rights management services are not properly configured.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ServiceMoved">
+      <summary>Rights management services are not properly configured.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ServiceNotFound">
+      <summary>Rights management services are not properly configured.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.Success">
+      <summary>Operation has competed successfully.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.TooManyCertificates">
+      <summary>The number of certificates has exceeded the maximum number allowed.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.TooManyLoadedEnvironments">
+      <summary>Too many <see cref="T:System.Security.RightsManagement.SecureEnvironment" /> instance have been created.</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.UnexpectedException">
+      <summary>An unspecified error occurred.  Also thrown when an application runs in debug mode. </summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.UseDefault">
+      <summary>If a request is made for computer activation or a rights account certificate, receiving <see cref="F:System.Security.RightsManagement.RightsManagementFailureCode.UseDefault" /> indicates that the application should pass null into the ActServInfo parameter</summary>
+    </member>
+    <member name="F:System.Security.RightsManagement.RightsManagementFailureCode.ValidityTimeViolation">
+      <summary>The defined time period for the protected content has expired; access is no longer permitted.</summary>
     </member>
     <member name="T:System.Security.RightsManagement.SecureEnvironment">
       <summary>Represents a secure client session for user activation, license binding, and other rights management operations.</summary>
@@ -4680,14 +4680,14 @@
       <param name="size1">The first instance of <see cref="T:System.Windows.Size" /> to compare.</param>
       <param name="size2">The second instance of <see cref="T:System.Windows.Size" /> to compare.</param>
     </member>
-    <member name="M:System.Windows.Size.op_Explicit(System.Windows.Size)~System.Windows.Vector">
-      <summary>Explicitly converts an instance of <see cref="T:System.Windows.Size" /> to an instance of <see cref="T:System.Windows.Vector" />. </summary>
-      <returns>A <see cref="T:System.Windows.Vector" /> equal in value to this instance of <see cref="T:System.Windows.Size" />.</returns>
-      <param name="size">The <see cref="T:System.Windows.Size" /> value to be converted.</param>
-    </member>
     <member name="M:System.Windows.Size.op_Explicit(System.Windows.Size)~System.Windows.Point">
       <summary>Explicitly converts an instance of <see cref="T:System.Windows.Size" /> to an instance of <see cref="T:System.Windows.Point" />. </summary>
       <returns>A <see cref="T:System.Windows.Point" /> equal in value to this instance of <see cref="T:System.Windows.Size" />.</returns>
+      <param name="size">The <see cref="T:System.Windows.Size" /> value to be converted.</param>
+    </member>
+    <member name="M:System.Windows.Size.op_Explicit(System.Windows.Size)~System.Windows.Vector">
+      <summary>Explicitly converts an instance of <see cref="T:System.Windows.Size" /> to an instance of <see cref="T:System.Windows.Vector" />. </summary>
+      <returns>A <see cref="T:System.Windows.Vector" /> equal in value to this instance of <see cref="T:System.Windows.Size" />.</returns>
       <param name="size">The <see cref="T:System.Windows.Size" /> value to be converted.</param>
     </member>
     <member name="M:System.Windows.Size.op_Inequality(System.Windows.Size,System.Windows.Size)">
@@ -5469,11 +5469,8 @@
     <member name="T:System.Windows.Input.FocusNavigationDirection">
       <summary>Specifies the direction within a user interface (UI) in which a desired focus change request is attempted. The direction is either based on tab order or by relative direction in layout.</summary>
     </member>
-    <member name="F:System.Windows.Input.FocusNavigationDirection.Next">
-      <summary>Move focus to the next focusable element in tab order. Not supported for <see cref="M:System.Windows.UIElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)" />.</summary>
-    </member>
-    <member name="F:System.Windows.Input.FocusNavigationDirection.Previous">
-      <summary>Move focus to the previous focusable element in tab order. Not supported for <see cref="M:System.Windows.UIElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)" />.</summary>
+    <member name="F:System.Windows.Input.FocusNavigationDirection.Down">
+      <summary>Move focus to another focusable element downwards from the currently focused element.</summary>
     </member>
     <member name="F:System.Windows.Input.FocusNavigationDirection.First">
       <summary>Move focus to the first focusable element in tab order. Not supported for <see cref="M:System.Windows.UIElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)" />.</summary>
@@ -5484,44 +5481,71 @@
     <member name="F:System.Windows.Input.FocusNavigationDirection.Left">
       <summary>Move focus to another focusable element to the left of the currently focused element.</summary>
     </member>
+    <member name="F:System.Windows.Input.FocusNavigationDirection.Next">
+      <summary>Move focus to the next focusable element in tab order. Not supported for <see cref="M:System.Windows.UIElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)" />.</summary>
+    </member>
+    <member name="F:System.Windows.Input.FocusNavigationDirection.Previous">
+      <summary>Move focus to the previous focusable element in tab order. Not supported for <see cref="M:System.Windows.UIElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)" />.</summary>
+    </member>
     <member name="F:System.Windows.Input.FocusNavigationDirection.Right">
       <summary>Move focus to another focusable element to the right of the currently focused element.</summary>
     </member>
     <member name="F:System.Windows.Input.FocusNavigationDirection.Up">
       <summary>Move focus to another focusable element upwards from the currently focused element.</summary>
     </member>
-    <member name="F:System.Windows.Input.FocusNavigationDirection.Down">
-      <summary>Move focus to another focusable element downwards from the currently focused element.</summary>
-    </member>
     <member name="T:System.Windows.Input.Key">
       <summary>Specifies the possible key values on a keyboard. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.None">
-      <summary>No key pressed. </summary>
+    <member name="F:System.Windows.Input.Key.A">
+      <summary>The A key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Cancel">
-      <summary>The Cancel key. </summary>
+    <member name="F:System.Windows.Input.Key.AbntC1">
+      <summary>The ABNT_C1 (Brazilian) key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.AbntC2">
+      <summary>The ABNT_C2 (Brazilian) key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Add">
+      <summary>The Add key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Apps">
+      <summary>The Application key (Microsoft Natural Keyboard). </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Attn">
+      <summary>The ATTN key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.B">
+      <summary>The B key. </summary>
     </member>
     <member name="F:System.Windows.Input.Key.Back">
       <summary>The Backspace key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Tab">
-      <summary>The Tab key. </summary>
+    <member name="F:System.Windows.Input.Key.BrowserBack">
+      <summary>The Browser Back key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.LineFeed">
-      <summary>The Linefeed key. </summary>
+    <member name="F:System.Windows.Input.Key.BrowserFavorites">
+      <summary>The Browser Favorites key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Clear">
-      <summary>The Clear key. </summary>
+    <member name="F:System.Windows.Input.Key.BrowserForward">
+      <summary>The Browser Forward key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Return">
-      <summary>The Return key. </summary>
+    <member name="F:System.Windows.Input.Key.BrowserHome">
+      <summary>The Browser Home key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Enter">
-      <summary>The Enter key. </summary>
+    <member name="F:System.Windows.Input.Key.BrowserRefresh">
+      <summary>The Browser Refresh key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Pause">
-      <summary>The Pause key. </summary>
+    <member name="F:System.Windows.Input.Key.BrowserSearch">
+      <summary>The Browser Search key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.BrowserStop">
+      <summary>The Browser Stop key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.C">
+      <summary>The C key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Cancel">
+      <summary>The Cancel key. </summary>
     </member>
     <member name="F:System.Windows.Input.Key.Capital">
       <summary>The Caps Lock key. </summary>
@@ -5529,95 +5553,14 @@
     <member name="F:System.Windows.Input.Key.CapsLock">
       <summary>The Caps Lock key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.KanaMode">
-      <summary>The IME Kana mode key. </summary>
+    <member name="F:System.Windows.Input.Key.Clear">
+      <summary>The Clear key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.HangulMode">
-      <summary>The IME Hangul mode key. </summary>
+    <member name="F:System.Windows.Input.Key.CrSel">
+      <summary>The CRSEL key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.JunjaMode">
-      <summary>The IME Junja mode key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.FinalMode">
-      <summary>The IME Final mode key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.HanjaMode">
-      <summary>The IME Hanja mode key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.KanjiMode">
-      <summary>The IME Kanji mode key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Escape">
-      <summary>The ESC key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.ImeConvert">
-      <summary>The IME Convert key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.ImeNonConvert">
-      <summary>The IME NonConvert key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.ImeAccept">
-      <summary>The IME Accept key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.ImeModeChange">
-      <summary>The IME Mode change request. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Space">
-      <summary>The Spacebar key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Prior">
-      <summary>The Page Up key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.PageUp">
-      <summary>The Page Up key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Next">
-      <summary>The Page Down key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.PageDown">
-      <summary>The Page Down key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.End">
-      <summary>The End key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Home">
-      <summary>The Home key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Left">
-      <summary>The Left Arrow key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Up">
-      <summary>The Up Arrow key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Right">
-      <summary>The Right Arrow key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Down">
-      <summary>The Down Arrow key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Select">
-      <summary>The Select key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Print">
-      <summary>The Print key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Execute">
-      <summary>The Execute key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Snapshot">
-      <summary>The Print Screen key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.PrintScreen">
-      <summary>The Print Screen key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Insert">
-      <summary>The Insert key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Delete">
-      <summary>The Delete key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Help">
-      <summary>The Help key. </summary>
+    <member name="F:System.Windows.Input.Key.D">
+      <summary>The D key. </summary>
     </member>
     <member name="F:System.Windows.Input.Key.D0">
       <summary>The 0 (zero) key. </summary>
@@ -5649,170 +5592,89 @@
     <member name="F:System.Windows.Input.Key.D9">
       <summary>The 9 key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.A">
-      <summary>The A key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeAlphanumeric">
+      <summary>The DBE_ALPHANUMERIC key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.B">
-      <summary>The B key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeCodeInput">
+      <summary>The DBE_CODEINPUT key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.C">
-      <summary>The C key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeDbcsChar">
+      <summary>The DBE_DBCSCHAR key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.D">
-      <summary>The D key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeDetermineString">
+      <summary>The DBE_DETERMINESTRING key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.E">
-      <summary>The E key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeEnterDialogConversionMode">
+      <summary>The DBE_ENTERDLGCONVERSIONMODE key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.F">
-      <summary>The F key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeEnterImeConfigureMode">
+      <summary>The DBE_ENTERIMECONFIGMODE key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.G">
-      <summary>The G key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeEnterWordRegisterMode">
+      <summary>The DBE_ENTERWORDREGISTERMODE key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.H">
-      <summary>The H key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeFlushString">
+      <summary>The DBE_FLUSHSTRING key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.I">
-      <summary>The I key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeHiragana">
+      <summary>The DBE_HIRAGANA key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.J">
-      <summary>The J key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeKatakana">
+      <summary>The DBE_KATAKANA key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.K">
-      <summary>The K key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeNoCodeInput">
+      <summary>The DBE_NOCODEINPUT key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.L">
-      <summary>The L key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeNoRoman">
+      <summary>The DBE_NOROMAN key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.M">
-      <summary>The M key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeRoman">
+      <summary>The DBE_ROMAN key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.N">
-      <summary>The N key. </summary>
+    <member name="F:System.Windows.Input.Key.DbeSbcsChar">
+      <summary>The DBE_SBCSCHAR key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.O">
-      <summary>The O key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.P">
-      <summary>The P key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Q">
-      <summary>The Q key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.R">
-      <summary>The R key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.S">
-      <summary>The S key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.T">
-      <summary>The T key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.U">
-      <summary>The U key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.V">
-      <summary>The V key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.W">
-      <summary>The W key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.X">
-      <summary>The X key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Y">
-      <summary>The Y key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Z">
-      <summary>The Z key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.LWin">
-      <summary>The left Windows logo key (Microsoft Natural Keyboard). </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.RWin">
-      <summary>The right Windows logo key (Microsoft Natural Keyboard). </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Apps">
-      <summary>The Application key (Microsoft Natural Keyboard). </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Sleep">
-      <summary>The Computer Sleep key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.NumPad0">
-      <summary>The 0 key on the numeric keypad. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.NumPad1">
-      <summary>The 1 key on the numeric keypad. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.NumPad2">
-      <summary>The 2 key on the numeric keypad. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.NumPad3">
-      <summary>The 3 key on the numeric keypad. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.NumPad4">
-      <summary>The 4 key on the numeric keypad. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.NumPad5">
-      <summary>The 5 key on the numeric keypad. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.NumPad6">
-      <summary>The 6 key on the numeric keypad. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.NumPad7">
-      <summary>The 7 key on the numeric keypad. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.NumPad8">
-      <summary>The 8 key on the numeric keypad. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.NumPad9">
-      <summary>The 9 key on the numeric keypad. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Multiply">
-      <summary>The Multiply key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Add">
-      <summary>The Add key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Separator">
-      <summary>The Separator key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Subtract">
-      <summary>The Subtract key. </summary>
+    <member name="F:System.Windows.Input.Key.DeadCharProcessed">
+      <summary>The key is used with another key to create a single combined character.</summary>
     </member>
     <member name="F:System.Windows.Input.Key.Decimal">
       <summary>The Decimal key. </summary>
     </member>
+    <member name="F:System.Windows.Input.Key.Delete">
+      <summary>The Delete key. </summary>
+    </member>
     <member name="F:System.Windows.Input.Key.Divide">
       <summary>The Divide key. </summary>
     </member>
+    <member name="F:System.Windows.Input.Key.Down">
+      <summary>The Down Arrow key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.E">
+      <summary>The E key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.End">
+      <summary>The End key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Enter">
+      <summary>The Enter key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.EraseEof">
+      <summary>The ERASE EOF key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Escape">
+      <summary>The ESC key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Execute">
+      <summary>The Execute key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.ExSel">
+      <summary>The EXSEL key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.F">
+      <summary>The F key. </summary>
+    </member>
     <member name="F:System.Windows.Input.Key.F1">
       <summary>The F1 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.F2">
-      <summary>The F2 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.F3">
-      <summary>The F3 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.F4">
-      <summary>The F4 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.F5">
-      <summary>The F5 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.F6">
-      <summary>The F6 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.F7">
-      <summary>The F7 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.F8">
-      <summary>The F8 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.F9">
-      <summary>The F9 key. </summary>
     </member>
     <member name="F:System.Windows.Input.Key.F10">
       <summary>The F10 key. </summary>
@@ -5844,6 +5706,9 @@
     <member name="F:System.Windows.Input.Key.F19">
       <summary>The F19 key. </summary>
     </member>
+    <member name="F:System.Windows.Input.Key.F2">
+      <summary>The F2 key. </summary>
+    </member>
     <member name="F:System.Windows.Input.Key.F20">
       <summary>The F20 key. </summary>
     </member>
@@ -5859,77 +5724,86 @@
     <member name="F:System.Windows.Input.Key.F24">
       <summary>The F24 key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.NumLock">
-      <summary>The Num Lock key. </summary>
+    <member name="F:System.Windows.Input.Key.F3">
+      <summary>The F3 key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Scroll">
-      <summary>The Scroll Lock key. </summary>
+    <member name="F:System.Windows.Input.Key.F4">
+      <summary>The F4 key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.LeftShift">
-      <summary>The left Shift key. </summary>
+    <member name="F:System.Windows.Input.Key.F5">
+      <summary>The F5 key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.RightShift">
-      <summary>The right Shift key. </summary>
+    <member name="F:System.Windows.Input.Key.F6">
+      <summary>The F6 key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.LeftCtrl">
-      <summary>The left CTRL key. </summary>
+    <member name="F:System.Windows.Input.Key.F7">
+      <summary>The F7 key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.RightCtrl">
-      <summary>The right CTRL key. </summary>
+    <member name="F:System.Windows.Input.Key.F8">
+      <summary>The F8 key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.LeftAlt">
-      <summary>The left ALT key. </summary>
+    <member name="F:System.Windows.Input.Key.F9">
+      <summary>The F9 key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.RightAlt">
-      <summary>The right ALT key. </summary>
+    <member name="F:System.Windows.Input.Key.FinalMode">
+      <summary>The IME Final mode key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.BrowserBack">
-      <summary>The Browser Back key. </summary>
+    <member name="F:System.Windows.Input.Key.G">
+      <summary>The G key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.BrowserForward">
-      <summary>The Browser Forward key. </summary>
+    <member name="F:System.Windows.Input.Key.H">
+      <summary>The H key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.BrowserRefresh">
-      <summary>The Browser Refresh key. </summary>
+    <member name="F:System.Windows.Input.Key.HangulMode">
+      <summary>The IME Hangul mode key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.BrowserStop">
-      <summary>The Browser Stop key. </summary>
+    <member name="F:System.Windows.Input.Key.HanjaMode">
+      <summary>The IME Hanja mode key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.BrowserSearch">
-      <summary>The Browser Search key. </summary>
+    <member name="F:System.Windows.Input.Key.Help">
+      <summary>The Help key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.BrowserFavorites">
-      <summary>The Browser Favorites key. </summary>
+    <member name="F:System.Windows.Input.Key.Home">
+      <summary>The Home key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.BrowserHome">
-      <summary>The Browser Home key. </summary>
+    <member name="F:System.Windows.Input.Key.I">
+      <summary>The I key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.VolumeMute">
-      <summary>The Volume Mute key. </summary>
+    <member name="F:System.Windows.Input.Key.ImeAccept">
+      <summary>The IME Accept key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.VolumeDown">
-      <summary>The Volume Down key. </summary>
+    <member name="F:System.Windows.Input.Key.ImeConvert">
+      <summary>The IME Convert key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.VolumeUp">
-      <summary>The Volume Up key. </summary>
+    <member name="F:System.Windows.Input.Key.ImeModeChange">
+      <summary>The IME Mode change request. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.MediaNextTrack">
-      <summary>The Media Next Track key. </summary>
+    <member name="F:System.Windows.Input.Key.ImeNonConvert">
+      <summary>The IME NonConvert key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.MediaPreviousTrack">
-      <summary>The Media Previous Track key. </summary>
+    <member name="F:System.Windows.Input.Key.ImeProcessed">
+      <summary>A special key masking the real key being processed by an IME. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.MediaStop">
-      <summary>The Media Stop key. </summary>
+    <member name="F:System.Windows.Input.Key.Insert">
+      <summary>The Insert key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.MediaPlayPause">
-      <summary>The Media Play Pause key. </summary>
+    <member name="F:System.Windows.Input.Key.J">
+      <summary>The J key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.LaunchMail">
-      <summary>The Launch Mail key. </summary>
+    <member name="F:System.Windows.Input.Key.JunjaMode">
+      <summary>The IME Junja mode key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.SelectMedia">
-      <summary>The Select Media key. </summary>
+    <member name="F:System.Windows.Input.Key.K">
+      <summary>The K key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.KanaMode">
+      <summary>The IME Kana mode key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.KanjiMode">
+      <summary>The IME Kanji mode key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.L">
+      <summary>The L key. </summary>
     </member>
     <member name="F:System.Windows.Input.Key.LaunchApplication1">
       <summary>The Launch Application1 key. </summary>
@@ -5937,170 +5811,296 @@
     <member name="F:System.Windows.Input.Key.LaunchApplication2">
       <summary>The Launch Application2 key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Oem1">
-      <summary>The OEM 1 key. </summary>
+    <member name="F:System.Windows.Input.Key.LaunchMail">
+      <summary>The Launch Mail key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.OemSemicolon">
-      <summary>The OEM Semicolon key. </summary>
+    <member name="F:System.Windows.Input.Key.Left">
+      <summary>The Left Arrow key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.OemPlus">
-      <summary>The OEM Addition key. </summary>
+    <member name="F:System.Windows.Input.Key.LeftAlt">
+      <summary>The left ALT key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.OemComma">
-      <summary>The OEM Comma key. </summary>
+    <member name="F:System.Windows.Input.Key.LeftCtrl">
+      <summary>The left CTRL key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.OemMinus">
-      <summary>The OEM Minus key. </summary>
+    <member name="F:System.Windows.Input.Key.LeftShift">
+      <summary>The left Shift key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.OemPeriod">
-      <summary>The OEM Period key. </summary>
+    <member name="F:System.Windows.Input.Key.LineFeed">
+      <summary>The Linefeed key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Oem2">
-      <summary>The OEM 2 key. </summary>
+    <member name="F:System.Windows.Input.Key.LWin">
+      <summary>The left Windows logo key (Microsoft Natural Keyboard). </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.OemQuestion">
-      <summary>The OEM Question key. </summary>
+    <member name="F:System.Windows.Input.Key.M">
+      <summary>The M key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Oem3">
-      <summary>The OEM 3 key. </summary>
+    <member name="F:System.Windows.Input.Key.MediaNextTrack">
+      <summary>The Media Next Track key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.OemTilde">
-      <summary>The OEM Tilde key. </summary>
+    <member name="F:System.Windows.Input.Key.MediaPlayPause">
+      <summary>The Media Play Pause key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.AbntC1">
-      <summary>The ABNT_C1 (Brazilian) key. </summary>
+    <member name="F:System.Windows.Input.Key.MediaPreviousTrack">
+      <summary>The Media Previous Track key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.AbntC2">
-      <summary>The ABNT_C2 (Brazilian) key. </summary>
+    <member name="F:System.Windows.Input.Key.MediaStop">
+      <summary>The Media Stop key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Oem4">
-      <summary>The OEM 4 key. </summary>
+    <member name="F:System.Windows.Input.Key.Multiply">
+      <summary>The Multiply key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.OemOpenBrackets">
-      <summary>The OEM Open Brackets key. </summary>
+    <member name="F:System.Windows.Input.Key.N">
+      <summary>The N key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Oem5">
-      <summary>The OEM 5 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.OemPipe">
-      <summary>The OEM Pipe key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Oem6">
-      <summary>The OEM 6 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.OemCloseBrackets">
-      <summary>The OEM Close Brackets key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Oem7">
-      <summary>The OEM 7 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.OemQuotes">
-      <summary>The OEM Quotes key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Oem8">
-      <summary>The OEM 8 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Oem102">
-      <summary>The OEM 102 key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.OemBackslash">
-      <summary>The OEM Backslash key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.ImeProcessed">
-      <summary>A special key masking the real key being processed by an IME. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.System">
-      <summary>A special key masking the real key being processed as a system key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.OemAttn">
-      <summary>The OEM ATTN key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.DbeAlphanumeric">
-      <summary>The DBE_ALPHANUMERIC key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.OemFinish">
-      <summary>The OEM FINISH key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.DbeKatakana">
-      <summary>The DBE_KATAKANA key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.OemCopy">
-      <summary>The OEM COPY key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.DbeHiragana">
-      <summary>The DBE_HIRAGANA key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.OemAuto">
-      <summary>The OEM AUTO key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.DbeSbcsChar">
-      <summary>The DBE_SBCSCHAR key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.OemEnlw">
-      <summary>The OEM ENLW key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.DbeDbcsChar">
-      <summary>The DBE_DBCSCHAR key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.OemBackTab">
-      <summary>The OEM BACKTAB key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.DbeRoman">
-      <summary>The DBE_ROMAN key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Attn">
-      <summary>The ATTN key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.DbeNoRoman">
-      <summary>The DBE_NOROMAN key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.CrSel">
-      <summary>The CRSEL key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.DbeEnterWordRegisterMode">
-      <summary>The DBE_ENTERWORDREGISTERMODE key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.ExSel">
-      <summary>The EXSEL key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.DbeEnterImeConfigureMode">
-      <summary>The DBE_ENTERIMECONFIGMODE key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.EraseEof">
-      <summary>The ERASE EOF key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.DbeFlushString">
-      <summary>The DBE_FLUSHSTRING key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Play">
-      <summary>The PLAY key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.DbeCodeInput">
-      <summary>The DBE_CODEINPUT key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.Zoom">
-      <summary>The ZOOM key. </summary>
-    </member>
-    <member name="F:System.Windows.Input.Key.DbeNoCodeInput">
-      <summary>The DBE_NOCODEINPUT key. </summary>
+    <member name="F:System.Windows.Input.Key.Next">
+      <summary>The Page Down key. </summary>
     </member>
     <member name="F:System.Windows.Input.Key.NoName">
       <summary>A constant reserved for future use. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.DbeDetermineString">
-      <summary>The DBE_DETERMINESTRING key. </summary>
+    <member name="F:System.Windows.Input.Key.None">
+      <summary>No key pressed. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.Pa1">
-      <summary>The PA1 key. </summary>
+    <member name="F:System.Windows.Input.Key.NumLock">
+      <summary>The Num Lock key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.DbeEnterDialogConversionMode">
-      <summary>The DBE_ENTERDLGCONVERSIONMODE key. </summary>
+    <member name="F:System.Windows.Input.Key.NumPad0">
+      <summary>The 0 key on the numeric keypad. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.NumPad1">
+      <summary>The 1 key on the numeric keypad. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.NumPad2">
+      <summary>The 2 key on the numeric keypad. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.NumPad3">
+      <summary>The 3 key on the numeric keypad. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.NumPad4">
+      <summary>The 4 key on the numeric keypad. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.NumPad5">
+      <summary>The 5 key on the numeric keypad. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.NumPad6">
+      <summary>The 6 key on the numeric keypad. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.NumPad7">
+      <summary>The 7 key on the numeric keypad. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.NumPad8">
+      <summary>The 8 key on the numeric keypad. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.NumPad9">
+      <summary>The 9 key on the numeric keypad. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.O">
+      <summary>The O key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Oem1">
+      <summary>The OEM 1 key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Oem102">
+      <summary>The OEM 102 key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Oem2">
+      <summary>The OEM 2 key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Oem3">
+      <summary>The OEM 3 key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Oem4">
+      <summary>The OEM 4 key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Oem5">
+      <summary>The OEM 5 key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Oem6">
+      <summary>The OEM 6 key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Oem7">
+      <summary>The OEM 7 key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Oem8">
+      <summary>The OEM 8 key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemAttn">
+      <summary>The OEM ATTN key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemAuto">
+      <summary>The OEM AUTO key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemBackslash">
+      <summary>The OEM Backslash key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemBackTab">
+      <summary>The OEM BACKTAB key. </summary>
     </member>
     <member name="F:System.Windows.Input.Key.OemClear">
       <summary>The OEM Clear key. </summary>
     </member>
-    <member name="F:System.Windows.Input.Key.DeadCharProcessed">
-      <summary>The key is used with another key to create a single combined character.</summary>
+    <member name="F:System.Windows.Input.Key.OemCloseBrackets">
+      <summary>The OEM Close Brackets key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemComma">
+      <summary>The OEM Comma key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemCopy">
+      <summary>The OEM COPY key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemEnlw">
+      <summary>The OEM ENLW key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemFinish">
+      <summary>The OEM FINISH key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemMinus">
+      <summary>The OEM Minus key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemOpenBrackets">
+      <summary>The OEM Open Brackets key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemPeriod">
+      <summary>The OEM Period key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemPipe">
+      <summary>The OEM Pipe key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemPlus">
+      <summary>The OEM Addition key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemQuestion">
+      <summary>The OEM Question key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemQuotes">
+      <summary>The OEM Quotes key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemSemicolon">
+      <summary>The OEM Semicolon key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.OemTilde">
+      <summary>The OEM Tilde key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.P">
+      <summary>The P key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Pa1">
+      <summary>The PA1 key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.PageDown">
+      <summary>The Page Down key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.PageUp">
+      <summary>The Page Up key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Pause">
+      <summary>The Pause key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Play">
+      <summary>The PLAY key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Print">
+      <summary>The Print key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.PrintScreen">
+      <summary>The Print Screen key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Prior">
+      <summary>The Page Up key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Q">
+      <summary>The Q key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.R">
+      <summary>The R key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Return">
+      <summary>The Return key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Right">
+      <summary>The Right Arrow key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.RightAlt">
+      <summary>The right ALT key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.RightCtrl">
+      <summary>The right CTRL key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.RightShift">
+      <summary>The right Shift key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.RWin">
+      <summary>The right Windows logo key (Microsoft Natural Keyboard). </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.S">
+      <summary>The S key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Scroll">
+      <summary>The Scroll Lock key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Select">
+      <summary>The Select key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.SelectMedia">
+      <summary>The Select Media key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Separator">
+      <summary>The Separator key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Sleep">
+      <summary>The Computer Sleep key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Snapshot">
+      <summary>The Print Screen key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Space">
+      <summary>The Spacebar key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Subtract">
+      <summary>The Subtract key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.System">
+      <summary>A special key masking the real key being processed as a system key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.T">
+      <summary>The T key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Tab">
+      <summary>The Tab key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.U">
+      <summary>The U key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Up">
+      <summary>The Up Arrow key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.V">
+      <summary>The V key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.VolumeDown">
+      <summary>The Volume Down key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.VolumeMute">
+      <summary>The Volume Mute key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.VolumeUp">
+      <summary>The Volume Up key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.W">
+      <summary>The W key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.X">
+      <summary>The X key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Y">
+      <summary>The Y key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Z">
+      <summary>The Z key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Key.Zoom">
+      <summary>The ZOOM key. </summary>
     </member>
     <member name="T:System.Windows.Input.KeyConverter">
       <summary>Converts a <see cref="T:System.Windows.Input.Key" /> object to and from other types.</summary>
@@ -6187,14 +6187,14 @@
     <member name="T:System.Windows.Input.ModifierKeys">
       <summary>Specifies the set of modifier keys. </summary>
     </member>
-    <member name="F:System.Windows.Input.ModifierKeys.None">
-      <summary>No modifiers are pressed. </summary>
-    </member>
     <member name="F:System.Windows.Input.ModifierKeys.Alt">
       <summary>The ALT key. </summary>
     </member>
     <member name="F:System.Windows.Input.ModifierKeys.Control">
       <summary>The CTRL key. </summary>
+    </member>
+    <member name="F:System.Windows.Input.ModifierKeys.None">
+      <summary>No modifiers are pressed. </summary>
     </member>
     <member name="F:System.Windows.Input.ModifierKeys.Shift">
       <summary>The SHIFT key. </summary>
@@ -7236,7 +7236,7 @@
     </member>
     <member name="P:System.Windows.Threading.DispatcherHookEventArgs.Dispatcher">
       <summary>Gets the <see cref="T:System.Windows.Threading.Dispatcher" /> associated with this event. </summary>
-      <returns>The <see cref="T:System.Windows.Threading.Dispatcher" />.</returns>
+      <returns>The <see cref="T:System.Windows.Threading.Dispatcher" /> associated with this event.</returns>
     </member>
     <member name="P:System.Windows.Threading.DispatcherHookEventArgs.Operation">
       <summary>Gets the <see cref="T:System.Windows.Threading.DispatcherOperation" /> associated with this event. </summary>
@@ -7368,9 +7368,6 @@
     <member name="T:System.Windows.Threading.DispatcherOperationStatus">
       <summary>Describes the possible values for the status of a <see cref="T:System.Windows.Threading.DispatcherOperation" />. </summary>
     </member>
-    <member name="F:System.Windows.Threading.DispatcherOperationStatus.Pending">
-      <summary>The operation is pending and is still in the <see cref="T:System.Windows.Threading.Dispatcher" /> queue.</summary>
-    </member>
     <member name="F:System.Windows.Threading.DispatcherOperationStatus.Aborted">
       <summary>The operation has aborted. </summary>
     </member>
@@ -7380,44 +7377,47 @@
     <member name="F:System.Windows.Threading.DispatcherOperationStatus.Executing">
       <summary>The operation started executing, but has not completed. </summary>
     </member>
+    <member name="F:System.Windows.Threading.DispatcherOperationStatus.Pending">
+      <summary>The operation is pending and is still in the <see cref="T:System.Windows.Threading.Dispatcher" /> queue.</summary>
+    </member>
     <member name="T:System.Windows.Threading.DispatcherPriority">
       <summary>Describes the priorities at which operations can be invoked by way of the <see cref="T:System.Windows.Threading.Dispatcher" />. </summary>
-    </member>
-    <member name="F:System.Windows.Threading.DispatcherPriority.Invalid">
-      <summary>The enumeration value is -1.  This is an invalid priority.</summary>
-    </member>
-    <member name="F:System.Windows.Threading.DispatcherPriority.Inactive">
-      <summary>The enumeration value is 0.  Operations are not processed.</summary>
-    </member>
-    <member name="F:System.Windows.Threading.DispatcherPriority.SystemIdle">
-      <summary>The enumeration value is 1.  Operations are processed when the system is idle.</summary>
     </member>
     <member name="F:System.Windows.Threading.DispatcherPriority.ApplicationIdle">
       <summary>The enumeration value is 2.  Operations are processed when the application is idle. </summary>
     </member>
-    <member name="F:System.Windows.Threading.DispatcherPriority.ContextIdle">
-      <summary>The enumeration value is 3.  Operations are processed after background operations have completed.</summary>
-    </member>
     <member name="F:System.Windows.Threading.DispatcherPriority.Background">
       <summary>The enumeration value is 4.  Operations are processed after all other non-idle operations are completed.</summary>
     </member>
-    <member name="F:System.Windows.Threading.DispatcherPriority.Input">
-      <summary>The enumeration value is 5.  Operations are processed at the same priority as input.</summary>
-    </member>
-    <member name="F:System.Windows.Threading.DispatcherPriority.Loaded">
-      <summary>The enumeration value is 6.  Operations are processed when layout and render has finished but just before items at input priority are serviced. Specifically this is used when raising the Loaded event.</summary>
-    </member>
-    <member name="F:System.Windows.Threading.DispatcherPriority.Render">
-      <summary>The enumeration value is 7.  Operations processed at the same priority as rendering.</summary>
+    <member name="F:System.Windows.Threading.DispatcherPriority.ContextIdle">
+      <summary>The enumeration value is 3.  Operations are processed after background operations have completed.</summary>
     </member>
     <member name="F:System.Windows.Threading.DispatcherPriority.DataBind">
       <summary>The enumeration value is 8.  Operations are processed at the same priority as data binding.</summary>
     </member>
+    <member name="F:System.Windows.Threading.DispatcherPriority.Inactive">
+      <summary>The enumeration value is 0.  Operations are not processed.</summary>
+    </member>
+    <member name="F:System.Windows.Threading.DispatcherPriority.Input">
+      <summary>The enumeration value is 5.  Operations are processed at the same priority as input.</summary>
+    </member>
+    <member name="F:System.Windows.Threading.DispatcherPriority.Invalid">
+      <summary>The enumeration value is -1.  This is an invalid priority.</summary>
+    </member>
+    <member name="F:System.Windows.Threading.DispatcherPriority.Loaded">
+      <summary>The enumeration value is 6.  Operations are processed when layout and render has finished but just before items at input priority are serviced. Specifically this is used when raising the Loaded event.</summary>
+    </member>
     <member name="F:System.Windows.Threading.DispatcherPriority.Normal">
       <summary>The enumeration value is 9.  Operations are processed at normal priority.  This is the typical application priority.</summary>
     </member>
+    <member name="F:System.Windows.Threading.DispatcherPriority.Render">
+      <summary>The enumeration value is 7.  Operations processed at the same priority as rendering.</summary>
+    </member>
     <member name="F:System.Windows.Threading.DispatcherPriority.Send">
       <summary>The enumeration value is 10.  Operations are processed before other asynchronous operations.  This is the highest priority. </summary>
+    </member>
+    <member name="F:System.Windows.Threading.DispatcherPriority.SystemIdle">
+      <summary>The enumeration value is 1.  Operations are processed when the system is idle.</summary>
     </member>
     <member name="T:System.Windows.Threading.DispatcherPriorityAwaitable">
       <summary>Represents an awaitable object that asynchronously yields control back to the current dispatcher and provides an opportunity for the dispatcher to process other events</summary>

@@ -247,11 +247,11 @@
     <member name="T:System.Globalization.CultureAndRegionModifiers">
       <summary>Specifies constants that define a <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> object. </summary>
     </member>
-    <member name="F:System.Globalization.CultureAndRegionModifiers.None">
-      <summary>A specific, supplemental custom culture.</summary>
-    </member>
     <member name="F:System.Globalization.CultureAndRegionModifiers.Neutral">
       <summary>A neutral custom culture.</summary>
+    </member>
+    <member name="F:System.Globalization.CultureAndRegionModifiers.None">
+      <summary>A specific, supplemental custom culture.</summary>
     </member>
     <member name="F:System.Globalization.CultureAndRegionModifiers.Replacement">
       <summary>A custom culture that replaces an existing .NET Framework culture or Windows locale.</summary>

@@ -52,20 +52,20 @@
     <member name="T:System.Runtime.Caching.CacheEntryRemovedReason">
       <summary>Specifies the reason why a cache entry was removed or an entry is about to be removed.</summary>
     </member>
-    <member name="F:System.Runtime.Caching.CacheEntryRemovedReason.Removed">
-      <summary>A cache entry was removed by using the <see cref="M:System.Runtime.Caching.ObjectCache.Remove(System.String,System.String)" /> or <see cref="M:System.Runtime.Caching.ObjectCache.Set(System.String,System.Object,System.DateTimeOffset,System.String)" /> method. </summary>
-    </member>
-    <member name="F:System.Runtime.Caching.CacheEntryRemovedReason.Expired">
-      <summary>A cache entry was removed because it expired. Expiration can be based on an absolute time or on a sliding expiration time.</summary>
-    </member>
-    <member name="F:System.Runtime.Caching.CacheEntryRemovedReason.Evicted">
-      <summary>A cache entry was removed to free memory in the cache. This occurs when a cache instance approaches cache-specific memory limits, or when a process or cache instance approaches computer-wide memory limits. </summary>
+    <member name="F:System.Runtime.Caching.CacheEntryRemovedReason.CacheSpecificEviction">
+      <summary>A cache entry was evicted for as reason that is defined by a particular cache implementation.</summary>
     </member>
     <member name="F:System.Runtime.Caching.CacheEntryRemovedReason.ChangeMonitorChanged">
       <summary>A cache entry was removed because a related dependency (such as a file or another cache entry) triggered eviction of the cache entry.</summary>
     </member>
-    <member name="F:System.Runtime.Caching.CacheEntryRemovedReason.CacheSpecificEviction">
-      <summary>A cache entry was evicted for as reason that is defined by a particular cache implementation.</summary>
+    <member name="F:System.Runtime.Caching.CacheEntryRemovedReason.Evicted">
+      <summary>A cache entry was removed to free memory in the cache. This occurs when a cache instance approaches cache-specific memory limits, or when a process or cache instance approaches computer-wide memory limits. </summary>
+    </member>
+    <member name="F:System.Runtime.Caching.CacheEntryRemovedReason.Expired">
+      <summary>A cache entry was removed because it expired. Expiration can be based on an absolute time or on a sliding expiration time.</summary>
+    </member>
+    <member name="F:System.Runtime.Caching.CacheEntryRemovedReason.Removed">
+      <summary>A cache entry was removed by using the <see cref="M:System.Runtime.Caching.ObjectCache.Remove(System.String,System.String)" /> or <see cref="M:System.Runtime.Caching.ObjectCache.Set(System.String,System.Object,System.DateTimeOffset,System.String)" /> method. </summary>
     </member>
     <member name="T:System.Runtime.Caching.CacheEntryUpdateArguments">
       <summary>Provides information about a cache entry that will be removed from the cache. </summary>
@@ -221,32 +221,32 @@
     <member name="T:System.Runtime.Caching.DefaultCacheCapabilities">
       <summary>Represents a set of features that a cache implementation provides.</summary>
     </member>
-    <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.None">
-      <summary>A cache implementation does not provide any of the features that are described in the <see cref="T:System.Runtime.Caching.DefaultCacheCapabilities" /> enumeration.</summary>
-    </member>
-    <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.InMemoryProvider">
-      <summary>A cache implementation runs at least partially in memory. A distributed cache would not set this flag, whereas an in-memory cache such as the <see cref="T:System.Runtime.Caching.MemoryCache" /> class would do so.</summary>
-    </member>
-    <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.OutOfProcessProvider">
-      <summary>A cache implementation runs out-of-process. A distributed cache would set this flag, whereas an in-memory cache such as the <see cref="T:System.Runtime.Caching.MemoryCache" /> class would not.</summary>
+    <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.AbsoluteExpirations">
+      <summary>A cache implementation supports the ability to automatically remove cache entries at a specific date and time.</summary>
     </member>
     <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.CacheEntryChangeMonitors">
       <summary>A cache implementation supports the ability to create change monitors that monitor entries.</summary>
     </member>
-    <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.AbsoluteExpirations">
-      <summary>A cache implementation supports the ability to automatically remove cache entries at a specific date and time.</summary>
-    </member>
-    <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.SlidingExpirations">
-      <summary>A cache implementation supports the ability to automatically remove cache entries that have not been accessed in a specified time span.</summary>
+    <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.CacheEntryRemovedCallback">
+      <summary>A cache implementation can raise a notification that an entry has been removed from the cache.</summary>
     </member>
     <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.CacheEntryUpdateCallback">
       <summary>A cache implementation can raise a notification that an entry is about to be removed from the cache. This setting also indicates that a cache implementation supports the ability to automatically replace the entry that is being removed with a new cache entry.</summary>
     </member>
-    <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.CacheEntryRemovedCallback">
-      <summary>A cache implementation can raise a notification that an entry has been removed from the cache.</summary>
-    </member>
     <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.CacheRegions">
       <summary>A cache implementation supports the ability to partition its storage into cache regions, and supports the ability to insert cache entries into those regions and to retrieve cache entries from those regions.</summary>
+    </member>
+    <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.InMemoryProvider">
+      <summary>A cache implementation runs at least partially in memory. A distributed cache would not set this flag, whereas an in-memory cache such as the <see cref="T:System.Runtime.Caching.MemoryCache" /> class would do so.</summary>
+    </member>
+    <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.None">
+      <summary>A cache implementation does not provide any of the features that are described in the <see cref="T:System.Runtime.Caching.DefaultCacheCapabilities" /> enumeration.</summary>
+    </member>
+    <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.OutOfProcessProvider">
+      <summary>A cache implementation runs out-of-process. A distributed cache would set this flag, whereas an in-memory cache such as the <see cref="T:System.Runtime.Caching.MemoryCache" /> class would not.</summary>
+    </member>
+    <member name="F:System.Runtime.Caching.DefaultCacheCapabilities.SlidingExpirations">
+      <summary>A cache implementation supports the ability to automatically remove cache entries that have not been accessed in a specified time span.</summary>
     </member>
     <member name="T:System.Runtime.Caching.FileChangeMonitor">
       <summary>Represents an object that monitors changes to files.</summary>
@@ -290,7 +290,7 @@
     </member>
     <member name="M:System.Runtime.Caching.MemoryCache.#ctor(System.String,System.Collections.Specialized.NameValueCollection)">
       <summary>Initializes a new instance of the <see cref="T:System.Runtime.Caching.MemoryCache" /> class. </summary>
-      <param name="name">The name to use to look up configuration information. Note   It is not required for configuration information to exist for every name.If a matching configuration entry exists, the configuration information is used to configure the <see cref="T:System.Runtime.Caching.MemoryCache" /> instance. If a matching configuration entry does not exist, the name can be accessed through the <see cref="P:System.Runtime.Caching.MemoryCache.Name" /> property, because the specified name is associated with the <see cref="T:System.Runtime.Caching.MemoryCache" /> instance. For information about memory cache configuration, see <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheElement" />.</param>
+      <param name="name">The name to use to look up configuration information. <paramref name="Note" />   It is not required for configuration information to exist for every name.If a matching configuration entry exists, the configuration information is used to configure the <see cref="T:System.Runtime.Caching.MemoryCache" /> instance. If a matching configuration entry does not exist, the name can be accessed through the <see cref="P:System.Runtime.Caching.MemoryCache.Name" /> property, because the specified name is associated with the <see cref="T:System.Runtime.Caching.MemoryCache" /> instance. For information about memory cache configuration, see <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheElement" />.</param>
       <param name="config">A collection of name/value pairs of configuration information to use for configuring the cache. </param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="name" /> is null. </exception>

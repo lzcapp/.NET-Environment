@@ -284,26 +284,26 @@
     <member name="T:System.Windows.Input.Manipulations.Manipulations2D">
       <summary>Represents the possible affine two-dimensional (2-D) manipulations.</summary>
     </member>
+    <member name="F:System.Windows.Input.Manipulations.Manipulations2D.All">
+      <summary>All available manipulations. </summary>
+    </member>
     <member name="F:System.Windows.Input.Manipulations.Manipulations2D.None">
       <summary>No manipulations. </summary>
+    </member>
+    <member name="F:System.Windows.Input.Manipulations.Manipulations2D.Rotate">
+      <summary>A rotation.</summary>
+    </member>
+    <member name="F:System.Windows.Input.Manipulations.Manipulations2D.Scale">
+      <summary>A scale in both directions.</summary>
+    </member>
+    <member name="F:System.Windows.Input.Manipulations.Manipulations2D.Translate">
+      <summary>A translation in the x and/or y axes.</summary>
     </member>
     <member name="F:System.Windows.Input.Manipulations.Manipulations2D.TranslateX">
       <summary>A translation in the x-axis.</summary>
     </member>
     <member name="F:System.Windows.Input.Manipulations.Manipulations2D.TranslateY">
       <summary>A translation in the y-axis.</summary>
-    </member>
-    <member name="F:System.Windows.Input.Manipulations.Manipulations2D.Translate">
-      <summary>A translation in the x and/or y axes.</summary>
-    </member>
-    <member name="F:System.Windows.Input.Manipulations.Manipulations2D.Scale">
-      <summary>A scale in both directions.</summary>
-    </member>
-    <member name="F:System.Windows.Input.Manipulations.Manipulations2D.Rotate">
-      <summary>A rotation.</summary>
-    </member>
-    <member name="F:System.Windows.Input.Manipulations.Manipulations2D.All">
-      <summary>All available manipulations. </summary>
     </member>
     <member name="T:System.Windows.Input.Manipulations.ManipulationVelocities2D">
       <summary>Represents a set of velocities calculated by the manipulation and inertia processors.</summary>

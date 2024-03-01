@@ -200,7 +200,7 @@
     </member>
     <member name="M:System.Xml.Xsl.Runtime.DodSequenceMerge.AddSequence(System.Collections.Generic.IList{System.Xml.XPath.XPathNavigator})">
       <summary>Adds a new sequence to the list of sequences to merge.</summary>
-      <param name="sequence">An instance of the <see cref="T:System.Xml.Xsl.Runtime.XPathNavigator" /> class.</param>
+      <param name="sequence">An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" />  class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.DodSequenceMerge.Create(System.Xml.Xsl.Runtime.XmlQueryRuntime)">
       <summary>Initializes this instance of <see cref="T:System.Xml.Xsl.Runtime.DodSequenceMerge" /> .</summary>
@@ -422,14 +422,14 @@
     <member name="T:System.Xml.Xsl.Runtime.IteratorResult">
       <summary>Iterators that use containment to control a nested iterator return one of the values in this enumeration.</summary>
     </member>
-    <member name="F:System.Xml.Xsl.Runtime.IteratorResult.NoMoreNodes">
-      <summary>Iteration is complete; there are no more nodes</summary>
+    <member name="F:System.Xml.Xsl.Runtime.IteratorResult.HaveCurrentNode">
+      <summary>Iteration is complete; there are no more nodes.</summary>
     </member>
     <member name="F:System.Xml.Xsl.Runtime.IteratorResult.NeedInputNode">
       <summary>The next node must be fetched from the contained iterator before iteration can continue.</summary>
     </member>
-    <member name="F:System.Xml.Xsl.Runtime.IteratorResult.HaveCurrentNode">
-      <summary>Iteration is complete; there are no more nodes.</summary>
+    <member name="F:System.Xml.Xsl.Runtime.IteratorResult.NoMoreNodes">
+      <summary>Iteration is complete; there are no more nodes</summary>
     </member>
     <member name="T:System.Xml.Xsl.Runtime.NamespaceIterator">
       <summary>Iterate over all namespace nodes.</summary>
@@ -549,8 +549,8 @@
     <member name="T:System.Xml.Xsl.Runtime.SetIteratorResult">
       <summary>Sets iterators for combinations of elements by Union, Intersection, or Difference, which use containment to control two nested iterators. This will return one of the enumeration values from <see cref="M:System.Xml.Xsl.Runtime.IdIterator.MoveNext" />.</summary>
     </member>
-    <member name="F:System.Xml.Xsl.Runtime.SetIteratorResult.NoMoreNodes">
-      <summary>Iteration is complete; there are no more nodes.</summary>
+    <member name="F:System.Xml.Xsl.Runtime.SetIteratorResult.HaveCurrentNode">
+      <summary>This iterator's <see cref="P:System.Xml.XPath.XPathNodeIterator.Current" /> property is set to the next node in the iteration.</summary>
     </member>
     <member name="F:System.Xml.Xsl.Runtime.SetIteratorResult.InitRightIterator">
       <summary>Initialize right-nested iterator.</summary>
@@ -561,8 +561,8 @@
     <member name="F:System.Xml.Xsl.Runtime.SetIteratorResult.NeedRightNode">
       <summary>The next node needs to be fetched from the right-nested iterator.</summary>
     </member>
-    <member name="F:System.Xml.Xsl.Runtime.SetIteratorResult.HaveCurrentNode">
-      <summary>This iterator's <see cref="P:System.Xml.XPath.XPathNodeIterator.Current" /> property is set to the next node in the iteration.</summary>
+    <member name="F:System.Xml.Xsl.Runtime.SetIteratorResult.NoMoreNodes">
+      <summary>Iteration is complete; there are no more nodes.</summary>
     </member>
     <member name="T:System.Xml.Xsl.Runtime.StringConcat">
       <summary>Concatenates strings when the number of strings is not known beforehand.</summary>
@@ -632,87 +632,87 @@
       <returns>The <see cref="T:System.Xml.Schema.XmlAtomicValue" /> object for the Boolean value.</returns>
       <param name="value">The Boolean value to convert.</param>
       <param name="index">A value of type Int32 that provides the index of the item to convert.</param>
-      <param name="runtime">An instance of the <see cref="System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
+      <param name="runtime">An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.BytesToAtomicValue(System.Byte[],System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
       <summary>Converts an array of bytes to an <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
       <returns>The <see cref="T:System.Xml.Schema.XmlAtomicValue" /> object for the Byte array.</returns>
       <param name="value">An array of Byte to convert.</param>
       <param name="index">A value of type Int32 that provides the index of the item to convert.</param>
-      <param name="runtime">An instance of the <see cref="System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
+      <param name="runtime">An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.DateTimeToAtomicValue(System.DateTime,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
       <summary>Converts a DateTime value to an <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
       <returns>The <see cref="T:System.Xml.Schema.XmlAtomicValue" /> object for the DateTime value.</returns>
       <param name="value">A value of type DateTime to convert.</param>
       <param name="index">A value of type Int32 that provides the index of the item to convert.</param>
-      <param name="runtime">An instance of the <see cref="System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
+      <param name="runtime">An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.DecimalToAtomicValue(System.Decimal,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
       <summary>Converts a decimal value to an <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
       <returns>The <see cref="T:System.Xml.Schema.XmlAtomicValue" /> object for the Decimal value.</returns>
       <param name="value">A value of type Decimal to convert.</param>
       <param name="index">A value of type Int32 that provides the index of the item to convert.</param>
-      <param name="runtime">An instance of the <see cref="System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
+      <param name="runtime">An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.DoubleToAtomicValue(System.Double,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
       <summary>Converts a Double value to an <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
       <returns>The <see cref="T:System.Xml.Schema.XmlAtomicValue" /> object for the Double value.</returns>
       <param name="value">A value of type Double to convert.</param>
       <param name="index">A value of type Int32 that provides the index of the item to convert.</param>
-      <param name="runtime">An instance of the <see cref="System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
+      <param name="runtime">An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.Int32ToAtomicValue(System.Int32,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
       <summary>Converts an Int32 value to an <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
       <returns>The <see cref="T:System.Xml.Schema.XmlAtomicValue" /> object for the Int32 value.</returns>
       <param name="value">A value of type Int32 to convert.</param>
       <param name="index">A value of type Int32 that provides the index of the item to convert.</param>
-      <param name="runtime">An instance of the <see cref="System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
+      <param name="runtime">An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />  class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.Int64ToAtomicValue(System.Int64,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
       <summary>Converts an Int64 value to an <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
       <returns>The <see cref="T:System.Xml.Schema.XmlAtomicValue" /> object for the Int64 value.</returns>
       <param name="value">A value of type Int64 to convert.</param>
       <param name="index">A value of type Int32 that provides the index of the item to convert.</param>
-      <param name="runtime">An instance of the <see cref="System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
+      <param name="runtime">An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.ItemsToNavigators(System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
       <summary>Converts a list or sequence of <see cref="T:System.Xml.XPath.XPathItem" /> objects to a sequence of <see cref="T:System.Xml.XPath.XPathNavigator" /> objects or values.</summary>
       <returns>A generic list of type <see cref="T:System.Xml.XPath.XPathNavigator" />.</returns>
-      <param name="listItems">A sequence of <see cref="System.Xml.XPath.XPathItem" /> instances.</param>
+      <param name="listItems">A sequence of <see cref="T:System.Xml.XPath.XPathItem" />  instances.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.NavigatorsToItems(System.Collections.Generic.IList{System.Xml.XPath.XPathNavigator})">
       <summary>Converts a sequence of <see cref="T:System.Xml.XPath.XPathNavigator" /> objects or values to a list or sequence of <see cref="T:System.Xml.XPath.XPathItem" /> objects.</summary>
       <returns>A generic list of type <see cref="T:System.Xml.XPath.XPathItem" />.</returns>
-      <param name="listNavigators">A sequence of <see cref="System.Xml.XPath.XPathNavigator" /> instances.</param>
+      <param name="listNavigators">A sequence of <see cref="T:System.Xml.XPath.XPathNavigator" />  instances.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.SingleToAtomicValue(System.Single,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
       <summary>Converts a Single value to an <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
       <returns>The <see cref="T:System.Xml.Schema.XmlAtomicValue" /> object for the Single value.</returns>
       <param name="value">A value of type Single to convert.</param>
       <param name="index">A value of type Int32 that provides the index of the item to convert.</param>
-      <param name="runtime">An instance of the <see cref="System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
+      <param name="runtime">An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />  class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.StringToAtomicValue(System.String,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
       <summary>Converts a string value to an <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
       <returns>The <see cref="T:System.Xml.Schema.XmlAtomicValue" /> object for the String value.</returns>
       <param name="value">A value of type String to convert.</param>
       <param name="index">A value of type Int32 that provides the index of the item to convert.</param>
-      <param name="runtime">An instance of the <see cref="System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
+      <param name="runtime">An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.TimeSpanToAtomicValue(System.TimeSpan,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
       <summary>Converts a <see cref="T:System.TimeSpan" /> value to an <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
       <returns>The <see cref="T:System.Xml.Schema.XmlAtomicValue" /> object for the TimeSpan value.</returns>
       <param name="value">A value of type <see cref="T:System.TimeSpan" /> to convert.</param>
       <param name="index">A value of type Int32 that provides the index of the item to convert.</param>
-      <param name="runtime">An instance of the <see cref="System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
+      <param name="runtime">An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.XmlQualifiedNameToAtomicValue(System.Xml.XmlQualifiedName,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)">
       <summary>Converts an <see cref="T:System.Xml.XmlQualifiedName" /> value to an <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
       <returns>The <see cref="T:System.Xml.Schema.XmlAtomicValue" /> object for the XmlQualifiedName value.</returns>
-      <param name="value">An instance of the <see cref="System.Xml.XmlQualifiedName" /> class to convert.</param>
+      <param name="value">An instance of the <see cref="T:System.Xml.XmlQualifiedName" /> class to convert.</param>
       <param name="index">A value of type Int32 that provides the index of the item to convert.</param>
-      <param name="runtime">An instance of the <see cref="System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
+      <param name="runtime">An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" /> class.</param>
     </member>
     <member name="T:System.Xml.Xsl.Runtime.XmlNavigatorFilter">
       <summary>XmlNavigatorFilter provides a flexible filtering abstraction over <see cref="T:System.Xml.XPath.XPathNavigator" />. Callers do not know what type of filtering will occur; they simply call <see cref="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToContent(System.Xml.XPath.XPathNavigator)" /> or <see cref="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowingSibling(System.Xml.XPath.XPathNavigator)" />. The filter implementation invokes the appropriate operation on the <see cref="T:System.Xml.XPath.XPathNavigator" /> in order to skip over filtered nodes.</summary>
@@ -723,48 +723,48 @@
     <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.IsFiltered(System.Xml.XPath.XPathNavigator)">
       <summary>Return true if the navigator's current node matches the filter condition.</summary>
       <returns>true if the current node matches the condition, otherwise returns false.</returns>
-      <param name="navigator">An instance of the <see cref="System.Xml.XPath.XPathNavigator" /> class.</param>
+      <param name="navigator">An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToContent(System.Xml.XPath.XPathNavigator)">
       <summary>Repositions the navigator to the first matching content node or attribute and skips over filtered nodes. If there are no matching nodes, the navigator does not move and the method returns false.</summary>
       <returns>true if the navigator is repositioned on a child element with a matching name, otherwise false.</returns>
-      <param name="navigator">An instance of the <see cref="System.Xml.XPath.XPathNavigator" /> class.</param>
+      <param name="navigator">An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowing(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)">
       <summary>Repositions the navigator to the following matching content node or attribute and skips over filtered nodes. If there are no matching nodes, the navigator does not move and the method returns false.</summary>
       <returns>true if the navigator is repositioned on the next element with a matching name, otherwise false.</returns>
-      <param name="navigator">An instance of the <see cref="System.Xml.XPath.XPathNavigator" /> class that identifies the beginning of the range over which navigation can move.</param>
-      <param name="navigatorEnd">An instance of the <see cref="System.Xml.XPath.XPathNavigator" /> class that identifies the end of the range over which navigation can move.</param>
+      <param name="navigator">An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" /> class that identifies the beginning of the range over which navigation can move.</param>
+      <param name="navigatorEnd">An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" /> class that identifies the end of the range over which navigation can move.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowingSibling(System.Xml.XPath.XPathNavigator)">
       <summary>Repositions the navigator to the sibling matching content node or descendent and skips over filtered nodes. If there are no matching nodes, the navigator does not move and the method returns false.</summary>
       <returns>true if the navigator is repositioned on the next element sibling with a matching name, otherwise false.</returns>
-      <param name="navigator">An instance of the <see cref="System.Xml.XPath.XPathNavigator" /> class.</param>
+      <param name="navigator">An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToNextContent(System.Xml.XPath.XPathNavigator)">
       <summary>Repositions the navigator to the next matching content node or attribute and skips over filtered nodes. If there are no matching nodes, the navigator does not move and the method returns false.</summary>
       <returns>true if the navigator is repositioned on the next element child with a matching name, otherwise false.</returns>
-      <param name="navigator">An instance of the <see cref="System.Xml.XPath.XPathNavigator" /> class.</param>
+      <param name="navigator">An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToPreviousSibling(System.Xml.XPath.XPathNavigator)">
       <summary>Repositions the navigator to the previous matching sibling node and skips over filtered nodes. If there are no matching nodes, the navigator does not move and the method returns false.</summary>
       <returns>true if the navigator is repositioned on the previous element sibling with a matching name, otherwise false.</returns>
-      <param name="navigator">An instance of the <see cref="System.Xml.XPath.XPathNavigator" /> class.</param>
+      <param name="navigator">An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" /> class.</param>
     </member>
     <member name="T:System.Xml.Xsl.Runtime.XmlQueryContext">
       <summary>The context of a query consists of all user-provided information that influences the operation of the query.</summary>
     </member>
     <member name="P:System.Xml.Xsl.Runtime.XmlQueryContext.DefaultDataSource">
       <summary>Returns the document that is queried by default if no data source is explicitly selected in the query.</summary>
-      <returns>An instance of the <see cref="System.Xml.Xpath.XPathNavigator" /> class.</returns>
+      <returns>An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" /> class.</returns>
     </member>
     <member name="P:System.Xml.Xsl.Runtime.XmlQueryContext.DefaultNameTable">
       <summary>Returns the name table used by the default data source, or null if there is no default data source.</summary>
-      <returns>An instance of the <see cref="System.Xml.XmlNameTable" /> class.</returns>
+      <returns>An instance of the <see cref="T:System.Xml.XmlNameTable" /> class.</returns>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQueryContext.GetDataSource(System.String,System.String)">
       <summary>Gets the data source specified by the <paramref name="uriRelative" /> and <paramref name="uriBase" /> from the T:System.Xml.XmlResolver that the user provided.</summary>
-      <returns>An instance of the T:<see cref="System.Xml.Xpath.XPathNavigator" /> class.</returns>
+      <returns>An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" />  class.</returns>
       <param name="uriRelative">A value of type string.</param>
       <param name="uriBase">A value of type string.</param>
     </member>
@@ -784,7 +784,7 @@
       <returns>Returns a generic list of type <see cref="T:System.Xml.XPath.XPathItem" />.</returns>
       <param name="name">A value of type string.</param>
       <param name="namespaceUri">A value of type string.</param>
-      <param name="args">A sequence of <see cref="System.Xml.XPath.XPathItem" /> instances.</param>
+      <param name="args">A sequence of <see cref="T:System.Xml.XPath.XPathItem" /> instances.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQueryContext.LateBoundFunctionExists(System.String,System.String)">
       <summary>Returns true if the late-bound object identified by <paramref name="namespaceUri" /> contains a method that matches <paramref name="name" />.</summary>
@@ -830,7 +830,7 @@
       <param name="item">An instance of the <see cref="T:System.Xml.XPath.XPathItem" /> class.</param>
     </member>
     <member name="F:System.Xml.Xsl.Runtime.XmlQueryItemSequence.Empty">
-      <summary>Returns a properly initialized, empty <see cref="T:XmlQueryItemSequence" />.</summary>
+      <summary>Returns a properly initialized, empty <see cref="T:System.Xml.Xsl.Runtime.XmlQueryItemSequence" />.</summary>
     </member>
     <member name="T:System.Xml.Xsl.Runtime.XmlQueryNodeSequence">
       <summary>A sequence of XML nodes that dynamically expands and allows random access to items.</summary>
@@ -909,7 +909,7 @@
       <param name="value">An instance of the <see cref="T:System.Xml.XPath.XPathItem" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#IEnumerable{T}#GetEnumerator">
-      <summary>Returns the <see cref="T:System.Collections.Generic.IEnumerator" /> of <see cref="T:System.Xml.XPathItem" /> implementation.</summary>
+      <summary>Returns the <see cref="T:System.Collections.Generic.IEnumerator`1" /> of <see cref="T:System.Xml.XPath.XPathItem" /> implementation.</summary>
       <returns>The IEnumerator&lt;XPathItem&gt; implementation.</returns>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQueryNodeSequence.System#Collections#Generic#IList{T}#IndexOf(System.Xml.XPath.XPathItem)">
@@ -1308,7 +1308,7 @@
     </member>
     <member name="P:System.Xml.Xsl.Runtime.XmlQueryRuntime.ExternalContext">
       <summary>Returns the object that manages external user context information, such as data sources, parameters, extension objects, and so on.</summary>
-      <returns>An instance of the <see cref="T:System.Xml.Xsl.XmlQueryContext" /> class.</returns>
+      <returns>An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQueryContext" /> class.</returns>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.FindIndex(System.Xml.XPath.XPathNavigator,System.Int32,System.Xml.Xsl.Runtime.XmlILIndex@)">
       <summary>Returns the index with the specified ID if it has already been created over the specified document, and returns true. Otherwise, creates a new, empty index and returns false.</summary>
@@ -1358,14 +1358,14 @@
       <param name="index">A value of type int.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.IsQNameEqual(System.Xml.XPath.XPathNavigator,System.Int32,System.Int32)">
-      <summary>Determines whether the <see cref="P:System.Xml.Xpath.LocalName" /> and <see cref="P:System.Xml.Xpath.NamespaceURI" /> properties of the specified <see cref="T:System.Xml.XPath.XPathNavigator" /> are equal to the names specified in the parameters.</summary>
+      <summary>Determines whether the <see cref="P:System.Xml.XPath.XPathNavigator.LocalName" /> and <see cref="P:System.Xml.XPath.XPathNavigator.NamespaceURI" /> properties of the specified <see cref="T:System.Xml.XPath.XPathNavigator" /> are equal to the names specified in the parameters.</summary>
       <returns>true if the names are equal; otherwise, false.</returns>
       <param name="navigator">An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" /> class.</param>
       <param name="indexLocalName">A value of type int.</param>
       <param name="indexNamespaceUri">A value of type int.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.IsQNameEqual(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)">
-      <summary>Compares the <see cref="P:System.Xml.Xpath.LocalName" /> and <see cref="P:System.Xml.Xpath.NamespaceURI" /> properties of two <see cref="T:System.Xml.XPath.XPathNavigator" /> instances to check if they are equal.</summary>
+      <summary>Compares the <see cref="P:System.Xml.XPath.XPathNavigator.LocalName" /> and <see cref="P:System.Xml.XPath.XPathNavigator.NamespaceURI" /> properties of two <see cref="T:System.Xml.XPath.XPathNavigator" /> instances to check if they are equal.</summary>
       <returns>true if the names are equal; otherwise, false.</returns>
       <param name="n1">An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" /> class.</param>
       <param name="n2">An instance of the <see cref="T:System.Xml.XPath.XPathNavigator" /> class.</param>
@@ -1373,7 +1373,7 @@
     <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType(System.Collections.Generic.IList{System.Xml.XPath.XPathItem},System.Int32)">
       <summary>Returns true if the type of every item in the specified sequence matches the XML type that the specified index identifies.</summary>
       <returns>true if the type of <paramref name="seq" /> is a subtype of the <paramref name="indexType" />; otherwise, false.</returns>
-      <param name="seq">An <see cref="T:System.Collections.Generic.IList" /> of <see cref="T:System.Xml.XPath.XPathItem" />objects.</param>
+      <param name="seq">An <see cref="T:System.Collections.Generic.IList`1" />  of <see cref="T:System.Xml.XPath.XPathItem" />objects.</param>
       <param name="indexType">The index.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType(System.Collections.Generic.IList{System.Xml.XPath.XPathItem},System.Xml.Schema.XmlTypeCode)">
@@ -1384,7 +1384,7 @@
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType(System.Xml.XPath.XPathItem,System.Int32)">
       <summary>Returns true if the type of the specified <see cref="T:System.Xml.XPath.XPathItem" /> object matches the specified XML type.</summary>
-      <returns>true if the type of the specified <see cref="T:System.Xml.XPathItem" /> matches the specified XML type; otherwise, false.</returns>
+      <returns>true if the type of the specified <see cref="T:System.Xml.XPath.XPathItem" /> matches the specified XML type; otherwise, false.</returns>
       <param name="item">An instance of the <see cref="T:System.Xml.XPath.XPathItem" /> class.</param>
       <param name="indexType">The index in the array of XML types..</param>
     </member>
@@ -1469,7 +1469,7 @@
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.#ctor(`0[],System.Int32)">
       <summary>Initializes a new instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> class. </summary>
-      <param name="array">An array of <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence" /> instances.</param>
+      <param name="array">An array of <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> instances.</param>
       <param name="size">The size of the array.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Add(`0)">
@@ -1486,7 +1486,7 @@
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.CopyTo(`0[],System.Int32)">
       <summary>Copies the contents of this sequence to the specified array, starting at the specified index in the array.</summary>
-      <param name="array">The array to copy the content of the <see cref="T:System.Collections.Generic.ICollection`1collection" /> to. </param>
+      <param name="array">The array to copy the content of the <see cref="T:System.Collections.Generic.ICollection`1" /> to. </param>
       <param name="index">A value of type int.</param>
     </member>
     <member name="P:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Count">
@@ -1495,7 +1495,7 @@
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.CreateOrReuse(System.Xml.Xsl.Runtime.XmlQuerySequence{`0})">
       <summary>Clears and reuses the specified <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> if it is available. If the <paramref name="seq" /> parameter is null, creates a new <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />.</summary>
-      <returns>An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence" /> class.</returns>
+      <returns>An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> class.</returns>
       <param name="seq">An <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" /> instance to be reused.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.CreateOrReuse(System.Xml.Xsl.Runtime.XmlQuerySequence{`0},`0)">
@@ -1505,7 +1505,7 @@
       <param name="item">An item to add. </param>
     </member>
     <member name="F:System.Xml.Xsl.Runtime.XmlQuerySequence`1.Empty">
-      <summary>Creates a new instance of <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence" />.</summary>
+      <summary>Creates a new instance of <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />.</summary>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XmlQuerySequence`1.GetEnumerator">
       <summary>Returns <see cref="T:System.Collections.Generic.IEnumerator`1" />.</summary>
@@ -1831,7 +1831,7 @@
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToNodeSet(System.Xml.XPath.XPathItem)">
       <summary>Converts the specified value to a node.</summary>
-      <returns>An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence" /> class.</returns>
+      <returns>An instance of the <see cref="T:System.Xml.Xsl.Runtime.XmlQuerySequence`1" />  class.</returns>
       <param name="item">An instance of the <see cref="T:System.Xml.XPath.XPathItem" /> class.</param>
     </member>
     <member name="M:System.Xml.Xsl.Runtime.XsltConvert.ToString(System.Collections.Generic.IList{System.Xml.XPath.XPathItem})">
